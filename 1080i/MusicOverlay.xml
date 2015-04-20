@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+        <control type="group">
+			<visible>!Window.IsActive(visualisation) + !Window.IsActive(karaoke)</visible>
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>1020</posy>
+				<width>1920</width>
+				<height>60</height>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+            
+            <control type="group" description="Music Overlay With Artwork Group">
+                <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
+
+                <control type="label">
+                    <posx>1320</posx>
+                    <width>1300</width>
+                    <include>OverlayInformationForMusicPlayer</include>
+                </control>
+                <control type="label">
+                    <posx>1330</posx>
+                    <width>400</width>
+                    <include>OverlayTimeForMusicPlayer</include>
+                </control>
+
+                <control type="group">
+                    <posx>1615</posx>
+                    <posy>806</posy>
+                    <include>PlayerMediaIconForPlayer</include>
+                </control>
+            </control>
+
+            <control type="group" description="Music Overlay Without Artwork Group">
+                <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
+
+                <control type="label">
+                    <posx>1520</posx>
+                    <width>1500</width>
+                    <include>OverlayInformationForMusicPlayer</include>
+                </control>
+                <control type="label">
+                    <posx>1530</posx>
+                    <width>400</width>
+                    <include>OverlayTimeForMusicPlayer</include>
+                </control>
+            </control>
+		</control>
+    </controls>
+</window>

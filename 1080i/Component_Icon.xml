@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="VisibilityForSquareIcon">
+		<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons)</visible>
+	</include>
+	
+	<include name="VisibilityForVerticalIcon">
+		<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)</visible>
+	</include>
+
+	<include name="VisibilityForHorizontalIcon">
+		<visible>!IsEmpty(ListItem.ChannelNumber)</visible>
+	</include>
+	
+	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>70</width>
+			<height>70</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+		</control>
+
+		<control type="image">
+			<posx>3</posx>
+			<posy>3</posy>
+			<width>64</width>
+			<height>64</height>
+			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	
+	<include name="SmallCircleThumbnailIcon" description="Small Circle Thumbnail Icon Without Shadow">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>90</width>
+			<height>90</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+		</control>
+		
+		<control type="image">
+			<posx>3</posx>
+			<posy>3</posy>
+			<width>84</width>
+			<height>84</height>
+			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	
+	<include name="DefaultCircleThumbnailIcon" description="Default Circle Thumbnail Icon Without Shadow">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>270</width>
+			<height>270</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+		</control>
+
+		<control type="image">
+			<posx>4</posx>
+			<posy>4</posy>
+			<width>262</width>
+			<height>262</height>
+			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	
+	<include name="DefaultCircleSortLetterIcon" description="Default Circle Sort Letter Icon Without Shadow">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>270</width>
+			<height>270</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+		</control>
+
+		<control type="label">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>270</width>
+			<height>270</height>
+			<align>center</align>
+			<font>NormalSortLetterFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<label>$VAR[ContentSortLetterLabel]</label>
+		</control>
+	</include>
+	
+	<include name="ShadowForDefaultCircleThumbnailIcon" description="Shadow For Circle Thumbnail Icon">
+		<control type="image">
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>330</width>
+			<height>330</height>
+			<texture background="true">elements/circle-shadow.png</texture>
+		</control>
+	</include>
+	
+	<include name="FadeMaskForDefaultCircleThumbnailIcon" description="Fade Mask For Circle Thumbnail Icon">
+		<control type="image">
+			<animation effect="fade" end="75" condition="true">conditional</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>270</width>
+			<height>270</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+		</control>
+	</include>
+	
+	<include name="OverlayForDefaultCircleThumbnailIcon" description="Overlay For Circle Thumbnail Icon">
+		<control type="group">
+			<posx>35</posx>
+			<posy>35</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+<!--
+	<include name="LargeCircleThumbnailIcon">
+		<control type="group">
+			<control type="image">
+				<posx>-40</posx>
+				<posy>-40</posy>
+				<width>462</width>
+				<height>462</height>
+				<texture background="true">elements/circle-shadow.png</texture>
+			</control>
+			
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>367</width>
+				<height>367</height>
+				<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+			</control>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>378</width>
+				<height>378</height>
+				<texture>elements/circle-border.png</texture>
+				<colordiffuse>MainColor</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+-->	
+	<include name="HugeCircleThumbnailIcon">
+		<control type="image">
+			<width>610</width>
+			<height>610</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>598</width>
+			<height>598</height>
+			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="HugeCircleSortLetterIcon">
+		<control type="image">
+			<width>610</width>
+			<height>610</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+		</control>
+
+		<control type="label">
+			<posx>125</posx>
+			<posy>215</posy>
+			<width>360</width>
+			<height>180</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>HugeSortLetterFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<label>$VAR[ContentSortLetterLabel]</label>
+		</control>
+	</include>
+
+	<include name="ShadowForHugeCircleThumbnailIcon">
+		<control type="image">
+			<posx>-70</posx>
+			<posy>-70</posy>
+			<width>750</width>
+			<height>750</height>
+			<texture background="true">elements/circle-shadow.png</texture>
+		</control>
+	</include>
+	
+	<include name="OverlayForHugeCircleThumbnailIcon">
+		<control type="group">
+			<posx>205</posx>
+			<posy>370</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+	
+	<include name="DefaultSquareThumbnailIcon">
+		<control type="image">
+			<posx>0</posx> 
+			<posy>0</posy>
+			<width>270</width>
+			<height>270</height>
+			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+		</control>
+
+		<control type="image">
+			<posx>4</posx>
+			<posy>4</posy>
+			<width>262</width>
+			<height>262</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+	
+	<include name="ShadowForDefaultSquareThumbnailIcon">
+		<control type="group">
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>330</width>
+			<height>330</height>
+			<texture border="30" background="true">elements/poster-shadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+
+	<include name="OverlayForDefaultSquareThumbnailIcon" description="Overlay For Square Thumbnail Icon">
+		<control type="group">
+			<posx>35</posx>
+			<posy>35</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+
+	<include name="SquareThumbnailIcon">
+		<control type="image">
+			<posx>0</posx> 
+			<posy>0</posy>
+			<width>362</width>
+			<height>362</height>
+			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+		</control>
+
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>350</width>
+			<height>350</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="OverlayForSquareThumbnailIcon">
+		<control type="group">
+			<posx>81</posx>
+			<posy>122</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+	
+	<include name="DefaultVerticalThumbnailIcon">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>270</width>
+			<height>405</height>
+			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+		</control>
+	
+		<control type="image">
+			<posx>4</posx>
+			<posy>4</posy>
+			<width>262</width>
+			<height>397</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="ShadowForDefaultVerticalThumbnailIcon">
+		<control type="group">
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>330</width>
+			<height>465</height>
+			<texture border="30" background="true">elements/poster-shadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+
+	<include name="OverlayForDefaultVerticalThumbnailIcon" description="Overlay For Vertical Thumbnail Icon">
+		<control type="group">
+			<posx>35</posx>
+			<posy>170</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+	
+	<include name="VerticalThumbnailIcon">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>312</width>
+			<height>462</height>
+			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+		</control>
+	
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>300</width>
+			<height>450</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="OverlayForVerticalThumbnailIcon">
+		<control type="group">
+			<posx>56</posx>
+			<posy>222</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+	
+	<include name="HorizontalThumbnailIcon">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>462</width>
+			<height>312</height>
+			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+		</control>
+
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>450</width>
+			<height>300</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="OverlayForHorizontalThumbnailIcon">
+		<control type="group">
+			<posx>131</posx>
+			<posy>72</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+	
+	<include name="SquarePosterIcon">
+		<control type="image">
+			<width>528</width>
+			<height>528</height>
+			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+		</control>
+			
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>516</width>
+			<height>516</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="ShadowForSquarePosterIcon">
+		<control type="group">
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>588</width>
+			<height>588</height>
+			<texture border="30" background="true">elements/poster-shadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+	
+	<include name="OverlayForSquarePosterIcon">
+		<control type="group">
+			<posx>164</posx>
+			<posy>295</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+	
+	<include name="VerticalPosterIcon">
+		<control type="image">
+			<width>528</width>
+			<height>772</height>
+			<texture colordiffuse="MainColor" fallback="white.png">elements/poster-mask.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+			
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>516</width>
+			<height>760</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="ShadowForVerticalPosterIcon">
+		<control type="group">
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>588</width>
+			<height>832</height>
+			<texture border="30" background="true">elements/poster-shadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+	
+	<include name="OverlayForVerticalPosterIcon">
+		<control type="group">
+			<posx>164</posx>
+			<posy>439</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+	
+	<include name="HorizontalPosterIcon">
+		<control type="image">
+			<width>772</width>
+			<height>528</height>
+			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+		</control>
+			
+		<control type="image">
+			<posx>6</posx>
+			<posy>6</posy>
+			<width>760</width>
+			<height>516</height>
+			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+		</control>
+	</include>
+
+	<include name="ShadowForHorizontalPosterIcon">
+		<control type="group">
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>832</width>
+			<height>588</height>
+			<texture border="30" background="true">elements/poster-shadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+	
+	<include name="OverlayForHorizontalPosterIcon">
+		<control type="group">
+			<posx>286</posx>
+			<posy>295</posy>
+			<include>DefaultOverlayMediaFlag</include>
+		</control>
+	</include>
+</includes>

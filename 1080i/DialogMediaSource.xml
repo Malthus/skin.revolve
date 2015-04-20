@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="129">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="label" id="2" description="Heading Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>13406</label>
+			</control>
+
+			<control type="label" description="Paths Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>15311</label>
+			</control>
+
+			<control type="list" id="10" description="Media Sources List">
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<height>340</height>
+				<onleft>9000</onleft>
+				<onright>-</onright>
+				<onup>12</onup>
+				<ondown>12</ondown>
+
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(10)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(10)</visible>
+						<include>NormalItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="label" description="Name Label">
+				<posx>560</posx>
+				<posy>500</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>31400</label>
+			</control>
+
+			<control type="edit" id="12" description="Name For Selected Source Edit Box">
+				<posx>560</posx>
+				<posy>540</posy>
+				<width>1240</width>
+				<onleft>9001</onleft>
+				<onright>-</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+			
+			<control type="grouplist" id="9000">
+				<posx>40</posx>
+				<posy>120</posy>
+				<onleft>-</onleft>
+				<onright>10</onright>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+
+				<control type="button" id="11" description="Browse For Location Button">
+					<label>1024</label>
+				</control>
+
+				<control type="button" id="13" description="Add New Source Button">
+					<label>1026</label>
+				</control>
+
+				<control type="button" id="14" description="Delete Source Button">
+					<label>117</label>
+				</control>
+			</control>
+		
+			<control type="grouplist" id="9001">
+				<posx>40</posx>
+				<posy>500</posy>
+				<onleft>-</onleft>
+				<onright>12</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+
+				<control type="button" id="18" description="Ok Button">
+					<label>186</label>
+				</control>
+
+				<control type="button" id="19" description="Cancel Button">
+					<label>222</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

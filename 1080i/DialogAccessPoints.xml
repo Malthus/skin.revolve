@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="141">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Dialog Thumbnail Icon">
+				<posx>150</posx>
+				<posy>20</posy>
+				<include>DefaultCircleThumbnailIcon</include>
+			</control>
+
+			<control type="label" description="Access Points Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>1046</label>
+			</control>
+
+			<control type="list" id="3" description="Selection List">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>520</height>
+				<onleft>5</onleft>
+				<onright>-</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+
+				<include>ItemsForNormalList</include>
+			</control>
+		</control>
+	</controls>
+</window>

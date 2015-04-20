@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1101">
+	<defaultcontrol>400</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    <onload condition="IsEmpty(Window.Property(MyHubMenuTitle))">RunScript(special://skin/scripts/CustomMyHub.py,$INFO[Skin.String(Dialog.MyHubMenuTitle)],$INFO[Skin.String(Dialog.MyHubIdentifier)],false)</onload>
+
+	<controls>
+		<include>GlobalBackground</include>
+
+		<control type="fixedlist" id="400" description="Invisible My Hubs Wraplist">
+			<visible allowhiddenfocus="true">true</visible>
+			<posx>0</posx>
+			<posy>60</posy>
+			<width>1920</width>
+			<height>1000</height>
+			<defaultcontrol>1</defaultcontrol>
+			<focusposition>4</focusposition>
+			<onup>400</onup>
+			<ondown>400</ondown>
+			<onleft>Noop</onleft>
+			<onright>Noop</onright>
+
+            <include>InvisibleItemsForMenu</include>
+		
+			<content>
+				<item id="1" description="Item 01">
+                    <visible>!IsEmpty(Window.Property(MyHub01Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub01Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub01Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub01Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub01Option.Action)])</onclick>
+				</item>
+				<item id="2" description="Item 02">
+                    <visible>!IsEmpty(Window.Property(MyHub02Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub02Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub02Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub02Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub02Option.Action)])</onclick>
+				</item>
+				<item id="3" description="Item 03">
+                    <visible>!IsEmpty(Window.Property(MyHub03Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub03Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub03Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub03Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub03Option.Action)])</onclick>
+				</item>
+				<item id="4" description="Item 04">
+                    <visible>!IsEmpty(Window.Property(MyHub04Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub04Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub04Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub04Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub04Option.Action)])</onclick>
+				</item>
+				<item id="5" description="Item 05">
+                    <visible>!IsEmpty(Window.Property(MyHub05Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub05Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub05Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub05Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub05Option.Action)])</onclick>
+				</item>
+				<item id="6" description="Item 06">
+                    <visible>!IsEmpty(Window.Property(MyHub06Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub06Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub06Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub06Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub06Option.Action)])</onclick>
+				</item>
+				<item id="7" description="Item 07">
+                    <visible>!IsEmpty(Window.Property(MyHub07Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub07Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub07Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub07Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub07Option.Action)])</onclick>
+				</item>
+				<item id="8" description="Item 08">
+                    <visible>!IsEmpty(Window.Property(MyHub08Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub08Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub08Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub08Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub08Option.Action)])</onclick>
+				</item>
+				<item id="9" description="Item 09">
+                    <visible>!IsEmpty(Window.Property(MyHub09Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub09Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub09Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub09Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub09Option.Action)])</onclick>
+				</item>
+				<item id="10" description="Item 10">
+                    <visible>!IsEmpty(Window.Property(MyHub10Option.Name))</visible>
+					<label>$INFO[Window.Property(MyHub10Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyHub10Option.Subtitle)]</label2>
+                    <property name="Background">$INFO[Window.Property(MyHub10Option.BackgroundImage)]</property>
+					<onclick>PlayMedia($INFO[Window.Property(MyHub10Option.Action)])</onclick>
+				</item>
+			</content>
+		</control>
+
+        <control type="group" description="Revolve Menu">
+            <include>VisibilityForRevolveMenu</include>
+            <include>ListForRevolveMenu</include>
+            <include>RingForRevolveMenu</include>
+            <include>IconForRevolveMenu</include>
+            
+            <control type="label" description="My Items Menu Title">
+                <include>MarkupForTitleForRevolveMenu</include>
+                <label>$INFO[Window.Property(MyHubMenuTitle)]</label>
+            </control>
+		</control>
+        
+        <control type="group" description="Circle Menu">
+            <include>VisibilityForCircleMenu</include>
+            <include>CenterIconForCircleMenu</include>
+            <include>ListForCircleMenu</include>
+            
+            <control type="label" description="Settings Menu Title">
+                <include>MarkupForTitleForCircleMenu</include>
+                <label>$INFO[Window.Property(MyHubMenuTitle)]</label>
+            </control>
+        </control>
+	</controls>
+</window>

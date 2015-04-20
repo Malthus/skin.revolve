@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2001">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include>FifteenLinesDialog</include>
+
+			<control type="group" description="Dialog Icon">
+				<posx>150</posx>
+				<posy>20</posy>
+				<include>DefaultCircleThumbnailIcon</include>
+			</control>
+
+			<control type="label" description="Artist / Album Name Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<height>40</height>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>$VAR[ContentNameLabel]</label>
+			</control>
+			
+			<control type="list" id="20" description="Artist Information List">
+				<visible>Container.Content(Artists)</visible>
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>280</height>
+				<itemgap>0</itemgap>
+				<pagecontrol>21</pagecontrol>
+				
+				<include>ItemsForInfoListInDialog</include>
+				
+				<content>
+					<item description="Artist Born Date Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
+						<label>$LOCALIZE[21893]</label>
+						<label2>$INFO[ListItem.Property(Artist_Born)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Artist Died Date Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
+						<label>$LOCALIZE[21897]</label>
+						<label2>$INFO[ListItem.Property(Artist_Died)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Group Formed Date Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
+						<label>$LOCALIZE[21894]</label>
+						<label2>$INFO[ListItem.Property(Artist_Formed)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Group Disbanded Date Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
+						<label>$LOCALIZE[21896]</label>
+						<label2>$INFO[ListItem.Property(Artist_Disbanded)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Artist Years Active Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+						<label>$LOCALIZE[21898]</label>
+						<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Artist Genre Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
+						<label>$LOCALIZE[515]</label>
+						<label2>$INFO[ListItem.Property(Artist_Genre)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Artist Moods Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
+							<label>$LOCALIZE[175]</label>
+							<label>$INFO[ListItem.Property(Artist_Mood)]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Artist Styles Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Style))</visible>
+						<label>$LOCALIZE[176]</label>
+						<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Artist Instruments Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Instrument))</visible>
+						<label>$LOCALIZE[21892]</label>
+						<label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+			</control>
+			
+			<control type="scrollbar" id="21" description="Artist Information Scrollbar">
+				<visible>Control.IsVisible(20)</visible>
+				<posy>80</posy>
+				<height>280</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="list" id="22" description="Artist Information List">
+				<visible>Container.Content(Albums)</visible>
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>280</height>
+				<itemgap>0</itemgap>
+				<pagecontrol>23</pagecontrol>
+				
+				<include>ItemsForInfoListInDialog</include>
+				
+				<content>
+					<item description="Album Artist Label">
+						<visible>!IsEmpty(ListItem.Artist)</visible>
+						<label>$LOCALIZE[557]</label>
+						<label2>$INFO[ListItem.Artist]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Album Year Label">
+						<visible>!IsEmpty(ListItem.Year)</visible>
+						<label>$LOCALIZE[172]</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Album Type Label">
+						<visible>!IsEmpty(ListItem.Property(Album_Type))</visible>
+						<label>$LOCALIZE[564]</label>
+						<label2>$INFO[ListItem.Property(Album_Type)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Album Theme Label">
+						<visible>!IsEmpty(ListItem.Property(Album_Theme))</visible>
+							<label>$LOCALIZE[15111]</label>
+							<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Album Moods Label">
+						<visible>!IsEmpty(ListItem.Property(Album_Mood))</visible>
+						<label>$LOCALIZE[175]</label>
+						<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Album Styles Label">
+						<visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
+						<label>$LOCALIZE[176]</label>
+						<label2>$INFO[ListItem.Property(Album_Style)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Album Rating Label">
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+						<label>$LOCALIZE[563]</label>
+						<label2>$INFO[ListItem.Rating]</label2>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+			</control>
+
+			<control type="scrollbar" id="23" description="Album Information Scrollbar">
+				<visible>Control.IsVisible(22)</visible>
+				<posy>80</posy>
+				<height>280</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="textbox" id="4" description="Biography Or Review">
+				<posx>560</posx>
+				<posy>400</posy>
+				<width>1240</width>
+				<height>280</height>
+				<font>DescriptionFont</font>
+				<align>left</align>
+				<pagecontrol>24</pagecontrol>
+				<label>-</label>
+			</control>
+			
+			<control type="scrollbar" id="24" description="Biography Or Review Scrollbar">
+				<visible>Control.IsVisible(4)</visible>
+				<posy>400</posy>
+				<height>280</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onup>24</onup>
+				<ondown>24</ondown>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="list" id="50" description="Track Listing">
+				<posx>560</posx>
+				<posy>400</posy>
+				<width>1240</width>
+				<height>280</height>
+				<orientation>vertical</orientation>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>25</pagecontrol>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>9000</onleft>
+				<onright>25</onright>
+
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(50)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(50)</visible>
+						<include>NormalItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="scrollbar" id="25" description="Track Listing Scrollbar">
+				<visible>Control.IsVisible(50)</visible>
+				<posy>400</posy>
+				<height>280</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onup>25</onup>
+				<ondown>25</ondown>
+				<onleft>50</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="grouplist" id="9000">
+				<posx>40</posx>
+				<posy>400</posy>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>Noop</onleft>
+				<onright>50</onright>
+
+				<control type="button" id="5" description="Review/Track Listing Button">
+					<label>$LOCALIZE[206]</label>
+				</control>
+
+				<control type="button" id="6" description="Refresh Button">
+					<label>$LOCALIZE[184]</label>
+				</control>
+
+				<control type="button" id="10" description="Get Thumbnail Button">
+					<label>$LOCALIZE[13405]</label>
+				</control>
+
+				<control type="button" id="12" description="Get Fanart Button">
+					<label>$LOCALIZE[20413]</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

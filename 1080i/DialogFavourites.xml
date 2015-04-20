@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>GlobalBackground</include>
+
+		<control type="fixedlist" id="450" description="Invisible Favourites Wraplist">
+			<visible>true</visible>
+			<posx>0</posx>
+			<posy>60</posy>
+			<width>1920</width>
+			<height>1000</height>
+			<defaultcontrol>1</defaultcontrol>
+			<focusposition>4</focusposition>
+			<scrolltime>200</scrolltime>
+            <onup>450</onup>
+            <ondown>450</ondown>
+			<onleft>9000</onleft>
+			<onright>Noop</onright>
+
+            <include>InvisibleItemsForMenu</include>
+        </control>
+
+        <control type="group" description="Revolve Menu">
+            <visible>Skin.HasSetting(FavouritesMenu.Default)</visible>
+            <include>ListForRevolveMenu</include>
+            <include>RingForRevolveMenu</include>
+            
+       		<control type="group" description="Favourites Circle Image">
+                <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
+                <animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="400" reversible="false">WindowClose</animation>
+
+                <control type="image">
+                    <posx>-280</posx>
+                    <posy>330</posy>
+                    <width>662</width>
+                    <height>662</height>
+                    <texture background="true">circle/favourites.png</texture>
+                    <fadetime>500</fadetime>
+                    <colordiffuse>55000000</colordiffuse>
+                </control>
+            </control>
+            
+            <include>IconForRevolveMenu</include>
+
+            <control type="label" description="Favourites Menu Title">
+                <include>MarkupForTitleForRevolveMenu</include>
+                <label>$LOCALIZE[1036]</label>
+            </control>
+        </control>
+
+        <control type="group" description="Circle Menu">
+            <visible>!Skin.HasSetting(FavouritesMenu.Default)</visible>
+            <include>CenterIconForCircleMenu</include>
+            <include>ListForCircleMenu</include>
+            
+            <control type="label" description="Favourites Menu Title">
+                <include>MarkupForTitleForCircleMenu</include>
+                <label>$LOCALIZE[1036]</label> 
+            </control>
+        </control>
+        
+		<control type="group" id="9000">
+			<include>SideMenu</include>
+
+			<control type="grouplist" id="9001">
+				<posx>24</posx>
+				<posy>20</posy>
+				<width>482</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onleft>Noop</onleft>
+				<onright>450</onright>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<orientation>vertical</orientation>
+
+				<include>FavouritesMenuTypeButtonForSideMenu</include>
+			</control>
+
+			<control type="group" description="Player Controls">
+				<visible>Player.HasMedia</visible>
+				<posx>PosXForCircleControlsForPlayer</posx>
+				<posy>PosYForCircleControlsForPlayer</posy>
+				<include>CircleControlsForPlayer</include>
+			</control>
+		</control>
+	</controls>
+</window>

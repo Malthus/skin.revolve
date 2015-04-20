@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="56">
+	<defaultcontrol always="true">99</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>GlobalBackground</include>
+
+	    <control type="group">
+			<include>ButtonLeftRingForSettings</include>
+
+			<control type="list" id="99">
+				<posx>40</posx>
+				<posy>600</posy>
+				<width>480</width>
+				<height>300</height>
+				<orientation>vertical</orientation>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>0</scrolltime>
+				<onup>99</onup>
+				<ondown>99</ondown>
+				<onleft>Noop</onleft>
+				<onright>98</onright>
+
+				<itemlayout height="40">
+					<include>NormalItemsForButtonList</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(99)</visible>
+						<include>FocusedItemsForButtonList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(99)</visible>
+						<include>SelectedItemsForButtonList</include>
+					</control>
+				</focusedlayout>
+
+				<content>
+					<item id="1" description="Background Visuals Option">
+						<label>31122</label>
+						<onclick>Noop</onclick>
+					</item>
+
+					<item id="2" description="Home Menu Option">
+						<label>31120</label>
+						<onclick>Noop</onclick>
+					</item>
+
+					<item id="7" description="Default Add-ons Option">
+						<label>31125</label>
+						<onclick>Noop</onclick>
+					</item>
+
+					<item id="8" description="Miscellaneous Option">
+						<label>31132</label>
+						<onclick>Noop</onclick>
+					</item>
+
+					<item id="9" description="Debug Option">
+						<label>31133</label>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+			</control>
+
+			<control type="button" id="97" description="Settings Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>DefaultSettingsForSkinSettings</include>
+			</control>
+			
+			<control type="group" id="98">
+				<posx>700</posx>
+				<posy>100</posy>
+
+				<control type="grouplist" id="100" description="Control Area For Background Visuals">
+					<visible>Container(99).Hasfocus(1)</visible>
+					<width>1100</width>
+					<height>760</height>
+					<itemgap>0</itemgap>
+					<onup>100</onup>
+					<ondown>100</ondown>
+					<onleft>99</onleft>
+					<onright>Noop</onright>
+					<orientation>vertical</orientation>
+
+					<control type="radiobutton" id="101" description="Background Image and Picture Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>31131</label>
+						<selected>Skin.HasSetting(BackgroundImage.Active)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundImage.Active)</onclick>
+					</control>
+
+					<control type="radiobutton" id="102" description="Faded Background Image Option">
+						<enable>Skin.HasSetting(BackgroundImage.Active)</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31128]</label>
+						<selected>Skin.HasSetting(BackgroundImage.Faded)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundImage.Faded)</onclick>
+					</control>
+
+					<control type="radiobutton" id="103" description="Background Visualiser Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>31123</label>
+						<selected>Skin.HasSetting(BackgroundVisualiser.Active)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundVisualiser.Active)</onclick>
+					</control>
+
+					<control type="radiobutton" id="104" description="Faded Background Visualiser Option">
+						<enable>Skin.HasSetting(BackgroundVisualiser.Active)</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31129]</label>
+						<selected>Skin.HasSetting(BackgroundVisualiser.Faded)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundVisualiser.Faded)</onclick>
+					</control>
+
+					<control type="radiobutton" id="105" description="Background Video Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>31124</label>
+						<selected>Skin.HasSetting(BackgroundVideo.Active)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundVideo.Active)</onclick>
+					</control>
+
+					<control type="radiobutton" id="106" description="Faded Background Video Option">
+						<enable>Skin.HasSetting(BackgroundVideo.Active)</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31130]</label>
+						<selected>Skin.HasSetting(BackgroundVideo.Faded)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundVideo.Faded)</onclick>
+					</control>
+				</control>
+
+                <include>OptionsForHomeMenuSkinSettings</include>
+
+				<control type="grouplist" id="700" description="Control Area For Default Add-ons Options">
+					<visible>Container(99).Hasfocus(7)</visible>
+					<width>1100</width>
+					<height>760</height>
+					<itemgap>0</itemgap>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<onleft>99</onleft>
+					<onright>Noop</onright>
+					<orientation>vertical</orientation>
+
+					<control type="button" id="701" description="Lyrics Button">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31126]:</label>
+						<label2>$INFO[Skin.String(AddonLyrics)]</label2>
+						<onclick>Skin.SetAddon(AddonLyrics,xbmc.python.lyrics)</onclick>
+					</control>
+				</control>
+				
+				<control type="grouplist" id="800" description="Control Area For Background Visuals">
+					<visible>Container(99).Hasfocus(8)</visible>
+					<width>1100</width>
+					<height>760</height>
+					<itemgap>0</itemgap>
+					<onup>100</onup>
+					<ondown>100</ondown>
+					<onleft>99</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+
+					<control type="radiobutton" id="801" description="Visible Unfocused Side Menu Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31137]</label>
+						<selected>Skin.HasSetting(SideMenu.Visible)</selected>
+						<onclick>Skin.ToggleSetting(SideMenu.Visible)</onclick>
+					</control>
+					
+					<control type="radiobutton" id="802" description="Visible Unfocused Scroll Bar In View Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31143]</label>
+						<selected>Skin.HasSetting(ViewScrollbar.Visible)</selected>
+						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
+					</control>
+					
+					<control type="label" id="803" description="Spacer">
+						<width>1100</width>
+						<label>-</label>
+					</control>
+					
+					<control type="radiobutton" id="806" description="Visible OSD Player Icon Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31145]</label>
+						<selected>Skin.HasSetting(PlayerArtwork.Visible)</selected>
+						<onclick>Skin.ToggleSetting(PlayerArtwork.Visible)</onclick>
+					</control>
+					
+					<control type="radiobutton" id="804" description="Visible Media Icons Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31144]</label>
+						<selected>Skin.HasSetting(MediaIcons.Visible)</selected>
+						<onclick>Skin.ToggleSetting(MediaIcons.Visible)</onclick>
+					</control>
+					
+					<control type="label" id="808" description="Spacer">
+						<width>1100</width>
+						<label>-</label>
+					</control>
+					
+					<control type="radiobutton" id="805" description="Visible No Information Available Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31138]</label>
+						<selected>Skin.HasSetting(NoInformationLabel.Visible)</selected>
+						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
+					</control>
+				</control>
+
+				<control type="grouplist" id="900" description="Control Area for Debug Settings">
+					<visible>Container(99).Hasfocus(9)</visible>
+					<width>1100</width>
+					<height>760</height>
+					<itemgap>0</itemgap>
+					<onup>900</onup>
+					<ondown>900</ondown>
+					<onleft>99</onleft>
+					<onright>Noop</onright>
+					<orientation>vertical</orientation>
+
+					<control type="radiobutton" id="901" description="Debug Grid Setting">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31134]</label>
+						<selected>Skin.HasSetting(DebugGrid.Visible)</selected>
+						<onclick>Skin.ToggleSetting(DebugGrid.Visible)</onclick>
+					</control>
+
+					<control type="radiobutton" id="902" description="Debug Info Setting">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31135]</label>
+						<selected>Skin.HasSetting(DebugInfo.Visible)</selected>
+						<onclick>Skin.ToggleSetting(DebugInfo.Visible)</onclick>
+					</control>
+
+					<control type="label" id="903" description="Spacer">
+						<width>1100</width>
+						<label>-</label>
+					</control>
+
+					<control type="button" id="904" description="Reload Skin Button">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31871]</label>
+						<onclick>ReloadSkin()</onclick>
+					</control>
+					
+					<control type="label" id="905" description="Spacer">
+						<width>1100</width>
+						<label>-</label>
+					</control>
+
+					<control type="button" id="906" description="Reset Skin Setting Button">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31141]</label>
+						<onclick>SetFocus(97)</onclick>
+						<onclick>SetFocus(905)</onclick>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
+				<control type="image">
+					<posx>700</posx>
+					<posy>870</posy>
+					<width>1100</width>
+					<height>111</height>
+					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+				</control>
+                
+                <include>AnnotationsForHomeMenuSkinSettings</include>
+                
+				<control type="group" description="Settings Description Textbox">
+                    <visible>ControlGroup(100).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
+					<posx>720</posx>
+					<posy>880</posy>
+					<width>880</width>
+					<height>90</height>
+
+					<control type="textbox">
+						<visible>Control.HasFocus(101)</visible>
+						<font>AnnotationFont</font>
+						<label>31161</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(102)</visible>
+						<font>AnnotationFont</font>
+						<label>31162</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(103)</visible>
+						<font>AnnotationFont</font>
+						<label>31163</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(104)</visible>
+						<font>AnnotationFont</font>
+						<label>31164</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(105)</visible>
+						<font>AnnotationFont</font>
+						<label>31165</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(106)</visible>
+						<font>AnnotationFont</font>
+						<label>31166</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(701)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31190]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(801)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31184]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(802)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31188]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(804)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31194]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(805)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31186]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(806)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31191]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(901)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31192]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(902)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31193]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(904)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31196]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(906)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31195]</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

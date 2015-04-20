@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="147">
+	<defaultcontrol>61</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForFullWindowDialog</posy>
+			<include>FullWindowDialog</include>
+
+			<control type="label" id="1" description="Text Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<label>-</label>
+			</control>
+			
+			<control type="textbox" id="5" description="Text Area">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>800</height>
+				<align>left</align>
+			</control>
+
+			<control type="scrollbar" id="61">
+				<posx>1840</posx>
+				<posy>80</posy>
+				<width>40</width>
+				<height>800</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+		</control>
+	</controls>
+</window>

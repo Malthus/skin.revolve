@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="138">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForMessageDialogForProgressBar</posy>
+			<include>MessageDialogForProgressBar</include>
+
+			<control type="label" description="Busy Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<height>30</height>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>20186</label>
+			</control>
+			
+			<control type="group" description="Progress Bar">
+				<control type="image">
+					<posx>560</posx>
+					<posy>62</posy>
+					<width>1240</width>
+					<height>24</height>
+					<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="progress" id="10">
+					<posx>560</posx>
+					<posy>50</posy>
+					<width>1240</width>
+					<height>24</height>
+					<info>-</info>
+					<texturebg border="6">-</texturebg>
+					<midtexture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thin.png</midtexture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

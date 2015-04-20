@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="PlayerControlFrame" description="Player Control Frame">
+		<control type="group">
+			<control type="image">
+				<posx>-4</posx>
+				<posy>-4</posy>
+				<width>84</width>
+				<height>84</height>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+
+	<include name="StatusIconFrame" description="Status Icon Frame">
+		<control type="group">
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-10</posy>
+				<width>140</width>
+				<height>140</height>
+				<texture background="true">elements/circle-shadow.png</texture>
+			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>10</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosXForDialogIconFrame">230</constant>
+    <constant name="PosYForDialogIconFrame">20</constant>
+	<include name="DialogIconFrame" description="Dialog Icon Frame">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosXForBusyIconFrame">145</constant>
+    <constant name="PosYForBusyIconFrame">20</constant>
+	<include name="BusyIconFrame" description="Busy Icon Frame">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>270</width>
+				<height>270</height>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	<include name="TitledFullListFrame" description="Titled Full-Dialog List Frame">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>600</width>
+				<height>800</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-background.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>58</posy>
+				<width>592</width>
+				<height>704</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	<include name="TitledHalfListFrame" description="Titled Half-Dialog List Frame">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>600</width>
+				<height>390</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-background.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>-1</posx>
+				<posy>351</posy>
+				<width>602</width>
+				<height>40</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>58</posy>
+				<width>592</width>
+				<height>324</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+</includes>

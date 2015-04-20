@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2008">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="File Stacking Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>PosYForBusyIconFrame</posy>
+				<include>BusyIconFrame</include>
+				
+				<control type="image">
+					<width>262</width>
+					<height>262</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-stackofpapers.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<align>left</align>
+				<font>DialogTitleFont</font>
+				<info>ListItem.Label</info>
+			</control>
+
+			<control type="list" id="450" description="List of Stacked Parts">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>520</height>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				
+				<include>ItemsForNormalList</include>
+			</control>
+		</control>
+	</controls>
+</window>

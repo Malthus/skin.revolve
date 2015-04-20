@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1190">
+	<defaultcontrol always="true">34</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    <onload condition="IsEmpty(Window.Property(CustomOption.Customizable))">SetFocus(34,$INFO[Window.Property(CustomOption.Type)])</onload>
+    <onload condition="!IsEmpty(Window.Property(CustomOption.Customizable))">SetFocus(30)</onload>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForTenLinesDialog</posy>
+			<include>TenLinesDialog</include>
+
+			<control type="group" description="Editor Dialog Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>PosYForBusyIconFrame</posy>
+				<include>BusyIconFrame</include>
+				
+				<control type="image">
+				    <posx>3</posx>
+				    <posy>3</posy>
+					<width>256</width>
+					<height>256</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-pencil.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>31800</label>
+			</control>
+			
+			<control type="label" description="Custom Option Appearance Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[480]:</label>
+			</control>
+
+			<control type="button" id="30" description="Name For Custom Option Button">
+				<enable>!IsEmpty(Window.Property(CustomOption.Customizable))</enable>
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[551]: $INFO[Window.Property(CustomOption.Name)]</label>
+				<onup>42</onup>
+				<ondown>31</ondown>
+				<onleft>9000</onleft>
+				<onright>-</onright>
+                <onclick>Skin.SetString(Dialog.Input)</onclick>
+				<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Dialog.Input)])</onclick>
+                <onclick>Skin.Reset(Dialog.Input)</onclick>
+			</control>
+
+			<control type="button" id="31" description="Subtitle For Custom Option Button">
+				<enable>!IsEmpty(Window.Property(CustomOption.Customizable))</enable>
+				<posx>560</posx>
+				<posy>160</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[462]: $INFO[Window.Property(CustomOption.Subtitle)]</label>
+				<onup>30</onup>
+				<ondown>32</ondown>
+				<onleft>9000</onleft>
+				<onright>-</onright>
+                <onclick>Skin.SetString(Dialog.Input)</onclick>
+				<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Dialog.Input)])</onclick>
+                <onclick>Skin.Reset(Dialog.Input)</onclick>
+			</control>
+
+			<control type="button" id="32" description="Background Image For Custom Option Button">
+				<enable>!IsEmpty(Window.Property(CustomOption.Customizable))</enable>
+				<posx>560</posx>
+				<posy>200</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31802]: $INFO[Window.Property(CustomOption.BackgroundImage)]</label>
+				<onup>31</onup>
+				<ondown>34</ondown>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+                <onclick>Skin.SetImage(Dialog.Input)</onclick>
+				<onclick>SetProperty(CustomOption.BackgroundImage,$INFO[Skin.String(Dialog.Input)])</onclick>
+                <onclick>Skin.Reset(Dialog.Input)</onclick>
+			</control>
+
+			<control type="label" description="Custom Option Action Label">
+				<posx>560</posx>
+				<posy>280</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31906]:</label>
+			</control>
+
+			<control type="list" id="33" description="Predefined Option Types List">
+				<posx>560</posx>
+				<posy>320</posy>
+				<width>1240</width>
+				<height>40</height>
+				<itemgap>0</itemgap>
+				<align>left</align>
+				<scrolltime>0</scrolltime>
+				<onup>32</onup>
+				<ondown>36</ondown>
+				<onleft>9000</onleft>
+				<onright>34</onright>
+
+				<itemlayout height="0">
+				</itemlayout>
+				
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(34) | Control.HasFocus(35)</visible>
+						<control type="image">
+							<width>1240</width>
+							<height>40</height>
+							<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<width>1140</width>
+							<height>40</height>
+							<textcolor>BackgroundColor</textcolor>
+							<font>DialogTextFont</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					
+					<control type="group">
+						<visible>!Control.HasFocus(34) + !Control.HasFocus(35)</visible>
+						<control type="image">
+							<width>1240</width>
+							<height>40</height>
+							<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<width>1140</width>
+							<height>40</height>
+							<textcolor>MainColor</textcolor>
+							<font>DialogTextFont</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				
+				<content>
+					<item id="1" description="Custom Submenu Option">
+                        <visible>false</visible>
+						<label>$LOCALIZE[31803]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="2" description="Custom Items Option">
+						<label>$LOCALIZE[31804]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="3" description="Custom Action Option">
+						<label>$LOCALIZE[31805]</label>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+            </control>
+
+			<control type="button" id="34" description="Next Predefined Option Type Button">
+				<posx>1700</posx>
+				<posy>320</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturenofocus>
+				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturefocus>
+				<onup>32</onup>
+				<ondown>36</ondown>
+				<onleft>9000</onleft>
+				<onright>35</onright>
+				<onclick>Control.Move(33,1)</onclick>
+			</control>
+			
+			<control type="button" id="35" description="Previous Predefined Option Type Button">
+				<posx>1740</posx>
+				<posy>320</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangleup.png</texturenofocus>
+				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</texturefocus>
+				<onup>32</onup>
+				<ondown>36</ondown>
+				<onleft>34</onleft>
+				<onright>Noop</onright>
+				<onclick>Control.Move(33,-1)</onclick>
+			</control>
+
+            <control type="label" description="Custom Command Label">
+                <posx>560</posx>
+                <posy>400</posy>
+                <width>1240</width>
+                <font>DialogTextFont</font>
+                <align>left</align>
+                <label>$LOCALIZE[31910]:</label>
+            </control>
+
+            <control type="button" id="36" description="Custom Option Action Button">
+                <posx>560</posx>
+                <posy>440</posy>
+                <width>1240</width>
+                <font>DialogTextFont</font>
+                <align>left</align>
+                <scroll>true</scroll>
+                <label>$INFO[Window.Property(CustomOption.Action)]</label>
+                <onup>34</onup>
+                <ondown>30</ondown>
+                <onleft>9000</onleft>
+                <onright>Noop</onright>
+                <onclick>Skin.SetString(Dialog.Input)</onclick>
+                <onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(Dialog.Input)])</onclick>
+                <onclick>Skin.Reset(Dialog.Input)</onclick>
+            </control>
+
+			<control type="group" id="9000">
+                <defaultcontrol>22</defaultcontrol>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>Noop</onleft>
+				<onright>34</onright>
+
+				<control type="button" id="24" description="Edit Submenu Button">
+                    <visible>Container(33).HasFocus(1) + !IsEmpty(Window.Property(CustomOption.Name))</visible>
+                    <posx>40</posx>
+                    <posy>320</posy>
+					<label>$LOCALIZE[31806]</label>
+                    <onup>21</onup>
+                    <ondown>23</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>RunScript(special://skin/scripts/CustomDialogHubEditor.py,$INFO[Window.Property(CustomOption.Name)],$INFO[Window.Property(CustomOption.Parameter)])</onclick>
+				</control>
+
+				<control type="button" id="23" description="Choose Items Button">
+                    <visible>Container(33).HasFocus(2)</visible>
+                    <posx>40</posx>
+                    <posy>320</posy>
+					<label>$LOCALIZE[31807]</label>
+                    <onup>24</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>SetProperty(CustomItem.Parameter,CustomOption.Parameter,1193)</onclick>
+					<onclick>SetProperty(CustomItem.Action,CustomOption.Action,1193)</onclick>
+					<onclick>SetProperty(CustomItem.Window,1190,1193)</onclick>
+					<onclick>ActivateWindow(1193)</onclick>
+				</control>
+
+				<control type="button" id="22" description="Create Command Button">
+                    <visible>Container(33).HasFocus(3)</visible>
+                    <posx>40</posx>
+                    <posy>320</posy>
+					<label>$LOCALIZE[31808]</label>
+                    <onup>23</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>SetProperty(CustomAction.Action,CustomOption.Action,1191)</onclick>
+					<onclick>SetProperty(CustomAction.Window,1190,1191)</onclick>
+					<onclick>ActivateWindow(1191)</onclick>
+				</control>
+
+				<control type="button" id="20" description="Ok Button">
+                    <posx>40</posx>
+                    <posy>400</posy>
+					<label>$LOCALIZE[186]</label>
+                    <onup>22</onup>
+                    <ondown>21</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>Skin.SetString($INFO[Window.Property(CustomOption.Target)].Type,$INFO[Container(33).CurrentItem])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(CustomOption.Target)].Name,$INFO[Window.Property(CustomOption.Name)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(CustomOption.Target)].Subtitle,$INFO[Window.Property(CustomOption.Subtitle)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(CustomOption.Target)].BackgroundImage,$INFO[Window.Property(CustomOption.BackgroundImage)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(CustomOption.Target)].Parameter,$INFO[Window.Property(CustomOption.Name)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(CustomOption.Target)].Action,$INFO[Window.Property(CustomOption.Action)])</onclick>
+					<onclick>Close</onclick>
+				</control>
+
+				<control type="button" id="21" description="Cancel Button">
+                    <posx>40</posx>
+                    <posy>440</posy>
+					<label>$LOCALIZE[222]</label>
+                    <onup>20</onup>
+                    <ondown>24</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>Close</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

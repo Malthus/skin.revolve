@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="107">
+<!--	<defaultcontrol always="true">402</defaultcontrol> -->
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForSingleLineDialog</posy>
+			<include>SingleLineDialog</include>
+			
+			<control type="group" description="Dialog Icon Background">
+				<posx>230</posx>
+				<posy>20</posy>
+				<include>DialogIconFrame</include>
+			</control>
+			
+			<control type="label" id="401" description="Message Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<scroll>true</scroll>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="402" description="Message Content Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<scroll>true</scroll>
+				<label>-</label>
+			</control>
+			
+			<control type="image" id="400" description="File Icon">
+				<posx>233</posx>
+				<posy>23</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<texture diffuse="circlemask.png">DefaultFile.png</texture>
+			</control>
+
+			<control type="image" id="403" description="Info Icon">
+				<posx>233</posx>
+				<posy>23</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<visible>false</visible>
+				<texture diffuse="circlemask.png">DefaultIconInfo.png</texture>
+			</control>
+
+			<control type="image" id="404" description="Warning Icon">
+				<posx>233</posx>
+				<posy>23</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<visible>false</visible>
+				<texture diffuse="circlemask.png">DefaultIconWarning.png</texture>
+			</control>
+
+			<control type="image" id="405" description="Error Icon">
+				<posx>233</posx>
+				<posy>23</posy>
+				<width>96</width>
+				<height>96</height>
+				<aspectratio>keep</aspectratio>
+				<visible>false</visible>
+				<texture diffuse="circlemask.png">DefaultIconError.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

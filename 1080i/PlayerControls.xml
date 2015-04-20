@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="400">
+	<defaultcontrol always="true">403</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
+
+	<controls>
+		<include>GlobalOverlay</include>
+
+		<control type="image">
+			<posx>810</posx>
+			<posy>390</posy>
+			<width>300</width>
+			<height>300</height>
+			<texture diffuse="circlemask.png" background="true">white.png</texture>
+			<colordiffuse>MainColor</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		<control type="image">
+			<posx>815</posx>
+			<posy>395</posy>
+			<width>290</width>
+			<height>290</height>
+			<texture diffuse="circlemask.png" background="true">white.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		<control type="group" description="Player Controls">
+			<visible>Player.HasMedia</visible>
+			<posx>820</posx>
+			<posy>400</posy>
+			<include>CircleControlsForPlayer</include>
+		</control>
+	</controls>
+</window>

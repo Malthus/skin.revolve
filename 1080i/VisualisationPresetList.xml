@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="122">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="label" description="Visualization Preset List Header Label">
+				<posx>560</posx>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>31925</label>
+			</control>
+
+			<control type="list" id="2" description="Preset List">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>520</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+
+				<include>ItemsForNormalList</include>
+			</control>
+		</control>
+	</controls>
+</window>

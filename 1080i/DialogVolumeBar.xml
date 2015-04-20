@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="104">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<control type="group">
+				<visible>!Player.PassThrough</visible>
+				
+				<control type="image" description="Volume Logo Background">
+					<posx>290</posx>
+					<posy>40</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+				</control>
+				<control type="image" description="Volume Logo Border">
+					<posx>292</posx>
+					<posy>42</posy>
+					<width>96</width>
+					<height>96</height>
+					<texture colordiffuse="BackgroundColor">elements/circle-border.png</texture>
+					<aspectratio scalediffuse="false">keep</aspectratio>
+				</control>
+
+				<control type="image" description="Normal Volume Logo">
+					<posx>310</posx>
+					<posy>66</posy>
+					<width>60</width>
+					<height>53</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icons/volume-sound.png</texture>
+					<colordiffuse>BackgroundColor</colordiffuse>
+				</control>
+				
+				<control type="image">
+					<posx>430</posx>
+					<posy>76</posy>
+					<width>1215</width>
+					<height>28</height>
+					<texture border="6">controls/horizontalbar-thick.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>MainColor</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>432</posx>
+					<posy>78</posy>
+					<width>1210</width>
+					<height>24</height>
+					<texture border="6">controls/horizontalbar-thick.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="progress" id="1" description="Volume Control">
+					<posx>432</posx>
+					<posy>66</posy>
+					<width>1210</width>
+					<height>24</height>
+					<texturebg border="6">-</texturebg>
+					<midtexture border="6">controls/horizontalbar-thin.png</midtexture>
+					<colordiffuse>MainColor</colordiffuse>
+					<info>Player.Volume</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Player.PassThrough</visible>
+				
+				<posy>PosYForMessageBand</posy>
+				<include>MessageBand</include>
+
+				<control type="image" description="Red Volume Logo">
+					<posx>480</posx>
+					<posy>20</posy>
+					<width>60</width>
+					<height>53</height>
+					<texture>icons/volume-sound.png</texture>
+					<colordiffuse>Red</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				
+				<control type="label" description="Passthrough Label">
+					<posx>560</posx>
+					<posy>20</posy>
+					<label>29802</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

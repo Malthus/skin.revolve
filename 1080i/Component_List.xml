@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="NormalItemsForNormalList" description="Default Items For Normal List">
+		<control type="image">
+			<width>1240</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+			<height>40</height>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>1220</posx>
+			<width>1200</width>
+			<textcolor>MainColor</textcolor>
+			<align>right</align>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForNormalList" description="Focused Items For Normal List">
+		<control type="image">
+			<width>1240</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>1220</posx>
+			<width>1200</width>
+			<textcolor>BackgroundColor</textcolor>
+			<align>right</align>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForNormalList" description="Selected Items For Normal List">
+		<control type="image">
+			<width>1240</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>1220</posx>
+			<width>1200</width>
+			<textcolor>MainColor</textcolor>
+			<align>right</align>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="ItemsForNormalList" description="">
+		<itemlayout height="40">
+			<include>NormalItemsForNormalList</include>
+		</itemlayout>
+					
+		<focusedlayout height="40">
+			<include>FocusedItemsForNormalList</include>
+		</focusedlayout>
+	</include>
+
+	<include name="NormalItemsForButtonList" description="Default Items For Button List">
+		<control type="image">
+			<width>480</width>
+			<height>40</height>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>440</width>
+			<height>40</height>
+			<font>DefaultButtonFont</font>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForButtonList" description="Focused Items For Button List">
+		<control type="image">
+			<width>480</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>440</width>
+			<font>DefaultButtonFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForButtonList" description="Selected Items For Button List">
+		<control type="image">
+			<width>480</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>440</width>
+			<font>DefaultButtonFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="ItemsForButtonList" description="">
+		<itemlayout height="40">
+			<include>NormalItemsForButtonList</include>
+		</itemlayout>
+					
+		<focusedlayout height="40">
+			<include>FocusedItemsForButtonList</include>
+		</focusedlayout>
+	</include>
+
+	<include name="NormalItemsForLargeList" description="">
+		<control type="image">
+			<width>1240</width>
+			<height>60</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>1200</width>
+				<height>30</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>1200</width>
+				<height>30</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label2</info>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>10</posy>
+				<width>1200</width>
+				<height>40</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForLargeList" description="">
+		<control type="image">
+			<width>1240</width>
+			<height>60</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>1200</width>
+				<height>30</height>
+				<textcolor>BackgroundColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>1200</width>
+				<height>30</height>
+				<textcolor>BackgroundColor</textcolor>
+				<info>ListItem.Label2</info>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>10</posy>
+				<width>1200</width>
+				<height>40</height>
+				<textcolor>BackgroundColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForLargeList" description="">
+		<control type="image">
+			<width>1240</width>
+			<height>60</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>1200</width>
+				<height>30</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>1200</width>
+				<height>30</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label2</info>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>10</posy>
+				<width>1200</width>
+				<height>40</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	
+	<include name="ItemsForLargeList" description="">
+		<itemlayout height="60">
+			<include>NormalItemsForLargeList</include>
+		</itemlayout>
+					
+		<focusedlayout height="60">
+			<include>FocusedItemsForLargeList</include>
+		</focusedlayout>
+	</include>
+
+	<include name="NormalItemsForGroupList" description="Unfocused Items For File Manager">
+		<control type="image">
+			<width>588</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>548</width>
+			<height>40</height>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForGroupList" description="">
+		<control type="image">
+			<width>588</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>548</width>
+			<height>40</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForGroupList" description="Selected Items For Channel Groups">
+		<control type="image">
+			<width>588</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>548</width>
+			<height>40</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="ItemsForGroupList" description="List For Channel Groups">
+		<itemlayout height="100">
+			<include>NormalItemsForGroupList</include>
+		</itemlayout>
+					
+		<focusedlayout height="100">
+			<include>FocusedItemsForGroupList</include>
+		</focusedlayout>
+	</include>
+
+	<include name="NormalItemsForProfileList" description="">
+		<control type="image">
+			<width>1100</width>
+			<height>60</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>1060</width>
+				<height>30</height>
+				<font>DefaultButtonFont</font>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>1060</width>
+				<height>30</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label2</info>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>10</posy>
+				<width>1060</width>
+				<height>40</height>
+				<font>DefaultButtonFont</font>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForProfileList" description="">
+		<control type="image">
+			<width>1100</width>
+			<height>60</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>1060</width>
+				<height>30</height>
+				<font>DefaultButtonFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>1060</width>
+				<height>30</height>
+				<textcolor>BackgroundColor</textcolor>
+				<info>ListItem.Label2</info>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>10</posy>
+				<width>1060</width>
+				<height>40</height>
+				<font>DefaultButtonFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForProfileList" description="">
+		<control type="image">
+			<width>1100</width>
+			<height>60</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	
+		<control type="group">
+			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>1060</width>
+				<height>30</height>
+				<font>DefaultButtonFont</font>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>1060</width>
+				<height>30</height>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label2</info>
+			</control>
+		</control>
+		
+		<control type="group">
+			<visible>IsEmpty(ListItem.Label2)</visible>
+			<control type="label">
+				<posx>20</posx>
+				<posy>10</posy>
+				<width>1060</width>
+				<height>40</height>
+				<font>DefaultButtonFont</font>
+				<textcolor>MainColor</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</control>
+	</include>
+	
+	<include name="ItemsForProfileList" description="">
+		<itemlayout height="60">
+			<include>NormalItemsForProfileList</include>
+		</itemlayout>
+					
+		<focusedlayout height="60">
+			<include>FocusedItemsForProfileList</include>
+		</focusedlayout>
+	</include>	
+	
+	<include name="NormalItemsForLargeThumbnailList" description="">
+		<control type="image">
+			<width>1240</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>160</posx>
+			<posy>20</posy>
+			<width>1060</width>
+			<height>30</height>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>160</posx>
+			<posy>50</posy>
+			<width>1060</width>
+			<height>30</height>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForLargeThumbnailList" description="">
+		<control type="image">
+			<width>1240</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>160</posx>
+			<posy>20</posy>
+			<width>1060</width>
+			<height>30</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>160</posx>
+			<posy>50</posy>
+			<width>1060</width>
+			<height>30</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForLargeThumbnailList" description="">
+		<control type="image">
+			<width>1240</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>160</posx>
+			<posy>20</posy>
+			<width>1060</width>
+			<height>30</height>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>160</posx>
+			<posy>50</posy>
+			<width>1060</width>
+			<height>30</height>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="ItemsForLargeThumbnailList" description="">
+		<itemlayout height="100">
+			<include>NormalItemsForLargeThumbnailList</include>
+		</itemlayout>
+					
+		<focusedlayout height="100">
+			<include>FocusedItemsForLargeThumbnailList</include>
+		</focusedlayout>
+	</include>
+	
+	
+	<include name="ListFrameForFileManager" description="Half-Screen Frame For File Manager">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>900</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="30" fallback="white.png">poster.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>58</posy>
+				<width>892</width>
+				<height>804</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	<include name="NormalListItemForHalfWidthDialogList" description="Unfocused Items For File Manager">
+		<control type="image">
+			<width>588</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>730</width>
+			<height>40</height>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>50</posy>
+			<width>730</width>
+			<height>40</height>
+			<font>DetailListItemFont</font>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="FocusedListItemForHalfWidthDialogList" description="Focused Items For File Manager">
+		<control type="image">
+			<width>588</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>320</width>
+			<height>40</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>50</posy>
+			<width>320</width>
+			<height>40</height>
+			<font>DetailListItemFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="SelectedListItemForHalfWidthDialogList" description="Selected Items For File Manager">
+		<control type="image">
+			<width>588</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>730</width>
+			<height>40</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>50</posy>
+			<width>730</width>
+			<height>40</height>
+			<font>DetailListItemFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="ListItemForHalfWidthDialogList" description="List For File Manager">
+		<itemlayout height="100">
+			<include>NormalListItemForHalfWidthDialogList</include>
+		</itemlayout>
+					
+		<focusedlayout height="100">
+			<include>FocusedListItemForHalfWidthDialogList</include>
+		</focusedlayout>
+	</include>
+	
+	<include name="ItemsForLabelList" description="All Items For Label List">
+		<itemlayout height="40">
+			<control type="label">
+				<posx>0</posx>
+				<width>300</width>
+				<height>40</height>
+				<textcolor>TextColor</textcolor>
+				<align>left</align>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<posx>320</posx>
+				<width>900</width>
+				<height>40</height>
+				<textcolor>MainColor</textcolor>
+				<align>left</align>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			</control>
+		</itemlayout>
+					
+		<focusedlayout height="40">
+			<control type="label">
+				<posx>0</posx>
+				<width>300</width>
+				<height>40</height>
+				<textcolor>TextColor</textcolor>
+				<align>left</align>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<posx>320</posx>
+				<width>900</width>
+				<height>40</height>
+				<textcolor>MainColor</textcolor>
+				<align>left</align>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			</control>
+		</focusedlayout>
+	</include>
+</includes>

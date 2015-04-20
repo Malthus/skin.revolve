@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="139">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Picture Icon">
+				<posx>150</posx>
+				<posy>20</posy>
+				<include>DefaultCircleThumbnailIcon</include>
+			</control>
+
+			<control type="label" description="Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<height>40</height>
+				<label>13406</label>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+			</control>
+
+			<control type="group" description="Video Details Icons">
+				<posx>560</posx>
+				<posy>80</posy>
+				<include>HorizontalDialogListOfContentMediaFlag</include>
+			</control>
+
+			<control type="list" id="5" description="Picture Details List">
+				<posx>560</posx>
+				<posy>160</posy>
+				<width>1240</width>
+				<height>440</height>
+				<font>DialogTextFont</font>
+				<pagecontrol>6</pagecontrol>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>Noop</onleft>
+				<onright>6</onright>
+	
+				<itemlayout height="40">
+					<include>NormalItemsForInfoListInDialog</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(5)</visible>
+						<include>FocusedItemsForInfoListInDialog</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(5)</visible>
+						<include>NormalItemsForInfoListInDialog</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="scrollbar" id="6" description="Artist Information Scrollbar">
+				<visible>Control.IsVisible(5)</visible>
+				<posy>160</posy>
+				<height>440</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<onleft>5</onleft>
+				<onright>Noop</onright>
+			</control>
+		</control>
+	</controls>
+</window>

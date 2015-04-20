@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="607">
+	<defaultcontrol always="true">9</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Looking Glass Dialog Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>PosYForBusyIconFrame</posy>
+				<include>BusyIconFrame</include>
+
+				<control type="image">
+					<width>262</width>
+					<height>262</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-lookingglass.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="PVR Guide Search Header Label">
+<!-- 				<visible>!pvr.IsPlayingRadio</visible> -->
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>19142</label>
+			</control>
+			
+			<control type="edit" id="9" description="Search Edit Box">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>40</height>
+				<align>left</align>
+				<label>19133</label>
+				<onleft>9000</onleft>
+				<onright>-</onright>
+				<onup>24</onup>
+				<ondown>10</ondown>
+			</control>
+			<control type="textbox" description="Search Help Text">
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<height>80</height>
+				<font>AnnotationFont</font>
+				<label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
+			</control>
+			
+			<control type="radiobutton" id="10" description="Include Description Radiobutton">
+				<posx>560</posx>
+				<posy>200</posy>
+				<width>600</width>
+				<height>40</height>
+				<align>left</align>
+				<label>19134</label>
+				<onup>9</onup>
+				<ondown>18</ondown>
+				<onleft>9000</onleft>
+				<onright>11</onright>
+			</control>
+			<control type="radiobutton" id="11" description="Case Sensitive Radiobutton">
+				<posx>1200</posx>
+				<posy>200</posy>
+				<height>40</height>
+				<width>600</width>
+				<align>left</align>
+				<label>19135</label>
+				<onup>9</onup>
+				<ondown>20</ondown>
+				<onleft>10</onleft>
+				<onright>-</onright>
+			</control>
+			<control type="spincontrolex" id="18" description="Genre Selection Spinner">
+				<posx>560</posx>
+				<posy>240</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>515</label>
+				<onup>10</onup>
+				<ondown>12</ondown>
+				<onleft>9000</onleft>
+				<onright>20</onright>
+			</control>
+			<control type="radiobutton" id="20" description="Include Unknown Genres Radiobutton">
+				<posx>1200</posx>
+				<posy>240</posy>
+				<height>40</height>
+				<width>600</width>
+				<align>left</align>
+				<label>19132</label>
+				<onup>11</onup>
+				<ondown>13</ondown>
+				<onleft>18</onleft>
+				<onright>-</onright>
+			</control>
+			
+			<control type="spincontrolex" id="12" description="Minimum Duration Spinner">
+				<posx>560</posx>
+				<posy>320</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19130</label>
+				<onup>18</onup>
+				<ondown>14</ondown>
+				<onleft>9000</onleft>
+				<onright>13</onright>
+			</control>
+			<control type="spincontrolex" id="13" description="Maximum Duration Spinner">
+				<posx>1200</posx>
+				<posy>320</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19131</label>
+				<onup>20</onup>
+				<ondown>15</ondown>
+				<onright>-</onright>
+				<onleft>12</onleft>
+			</control>
+			<control type="edit" id="14" description="Start Date Edit Box">
+				<posx>560</posx>
+				<posy>360</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19128</label>
+				<onup>12</onup>
+				<ondown>16</ondown>
+				<onleft>9000</onleft>
+				<onright>15</onright>
+			</control>
+			<control type="edit" id="15" description="Stop Date Edit Box">
+				<posx>1200</posx>
+				<posy>360</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19129</label>
+				<onup>13</onup>
+				<ondown>17</ondown>
+				<onleft>14</onleft>
+				<onright>-</onright>
+			</control>
+			<control type="edit" id="16" description="Start Time Edit Box">
+				<posx>560</posx>
+				<posy>400</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19126</label>
+				<onup>14</onup>
+				<ondown>21</ondown>
+				<onright>17</onright>
+				<onleft>9000</onleft>
+			</control>
+			<control type="edit" id="17" description="Stop Time Edit Box">
+				<posx>1200</posx>
+				<posy>400</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19127</label>
+				<onup>15</onup>
+				<ondown>23</ondown>
+				<onleft>16</onleft>
+				<onright>-</onright>
+			</control>
+
+			<control type="spincontrolex" id="21" description="Groups Spinner">
+				<posx>560</posx>
+				<posy>480</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19141</label>
+				<onup>16</onup>
+				<ondown>19</ondown>
+				<onright>23</onright>
+				<onleft>9000</onleft>
+			</control>
+			<control type="spincontrolex" id="23" description="Channels Spinner">
+				<posx>1200</posx>
+				<posy>480</posy>
+				<width>600</width>
+				<height>40</height>
+				<label>19148</label>
+				<onup>17</onup>
+				<ondown>22</ondown>
+				<onleft>21</onleft>
+				<onright>-</onright>
+			</control>
+			<control type="radiobutton" id="19" description="Avoid Repeats Radiobutton">
+				<posx>560</posx>
+				<posy>520</posy>
+				<width>600</width>
+				<height>40</height>
+				<align>left</align>
+				<label>19121</label>
+				<onup>21</onup>
+				<ondown>24</ondown>
+				<onleft>9000</onleft>
+				<onright>22</onright>
+			</control>
+			<control type="radiobutton" id="22" description="FTA Only Radiobutton">
+				<posx>1200</posx>
+				<posy>520</posy>
+				<width>600</width>
+				<height>40</height>
+				<align>left</align>
+				<label>19123</label>
+				<onup>23</onup>
+				<ondown>27</ondown>
+				<onleft>19</onleft>
+				<onright>-</onright>
+			</control>
+			
+	        <control type="radiobutton" id="24" description="Ignore Timers Radiobutton">
+				<posx>560</posx>
+				<posy>560</posy>
+				<height>40</height>
+				<width>600</width>
+				<align>left</align>
+				<label>19124</label>
+				<onup>19</onup>
+				<ondown>9</ondown>
+				<onleft>9000</onleft>
+				<onright>27</onright>
+			</control>
+			<control type="radiobutton" id="27" description="Ignore Recordings Radiobutton">
+				<posx>1200</posx>
+				<posy>560</posy>
+				<height>40</height>
+				<width>600</width>
+				<align>left</align>
+				<label>19125</label>
+				<onup>22</onup>
+				<ondown>9</ondown>
+				<onleft>24</onleft>
+				<onright>-</onright>
+			</control>
+
+			<control type="grouplist" id="9000">
+				<posx>40</posx>
+				<posy>480</posy>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>-</onleft>
+				<onright>9</onright>
+
+				<control type="button" id="28" description="Defaults Button">
+					<label>409</label>
+				</control>
+				<control type="button" id="25" description="Cancel Button">
+					<label>222</label>
+				</control>
+				<control type="button" id="26" description="Search Button">
+					<label>137</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="2999">
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+<!--
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>	
+
+	<controls>
+		<control type="button" id="1" description="Default Revolve Skin Settings Initialisation">
+			<visible>!Skin.HasSetting(RevolveConfiguration)</visible>
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+			<include>DefaultSettingsForSkinSettings</include>
+			<onfocus>SetFocus(2)</onfocus>
+		</control>
+
+		<control type="button" id="1" description="Default Revolve Skin Settings Evasion">
+			<visible>Skin.HasSetting(RevolveConfiguration)</visible>
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+			<onfocus>SetFocus(2)</onfocus>
+		</control>
+	
+		<control type="button" id="2" description="Home Menu Launch">
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+			<onfocus>ReplaceWindow(home)</onfocus>
+		</control>
+	</controls>
+-->	
+</window>

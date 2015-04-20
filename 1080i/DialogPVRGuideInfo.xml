@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="602">
+	<defaultcontrol always="true">7</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Television Dialog Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>PosYForBusyIconFrame</posy>
+				<include>BusyIconFrame</include>
+
+				<control type="image">
+					<width>262</width>
+					<height>262</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-television.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+
+			<control type="label" description="PVR Guide Info Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label fallback="19047">$INFO[ListItem.Label]</label>
+			</control>
+			
+			<control type="list" id="49" description="Program Information List">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>200</height>
+				<itemgap>0</itemgap>
+				
+				<include>ItemsForLabelList</include>
+				
+				<content>
+					<item>
+						<visible>!IsEmpty(ListItem.OriginalTitle) + !stringcompare(ListItem.OriginalTitle,Listitem.Title)</visible>
+						<label>$LOCALIZE[20376]</label>
+						<label2>$INFO[ListItem.OriginalTitle]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[19148]:</label>
+						<label2>$INFO[ListItem.ChannelName]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.Studio)</visible>
+						<label>$LOCALIZE[572]</label>
+						<label2>$INFO[ListItem.Studio]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<label>$LOCALIZE[515]:</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+						<label>$LOCALIZE[562]</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.MPAA)</visible>
+						<label>$LOCALIZE[20074]</label>
+						<label2>$INFO[ListItem.MPAA]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[552]:</label>
+						<label2>$INFO[ListItem.StartDate]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<label>$LOCALIZE[142]</label>
+						<label2>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<label>$LOCALIZE[180]:</label>
+						<label2>$INFO[ListItem.Duration]</label2>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+			</control>
+			
+			<control type="textbox" description="Plot Text Box">
+				<posx>560</posx>
+				<posy>320</posy>
+				<width>1240</width>
+				<height>280</height>
+				<font>DescriptionFont</font>
+				<align>left</align>
+				<label>$INFO[ListItem.Plot]</label>
+			</control>
+			
+			<control type="grouplist" id="9000">
+				<posx>40</posx>
+				<posy>480</posy>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>-</onleft>
+				<onright>-</onright>
+
+				<control type="button" id="5" description="Play Button">
+					<label>19165</label>
+				</control>
+				<control type="button" id="6" description="Record Button">
+					<label>-</label>
+				</control>
+				<control type="button" id="7" description="Close Button">
+					<label>186</label>
+				</control>
+			</control>
+			
+<!--
+      <control type="label" description="Clock other windows">
+        <posx>30r</posx>
+        <posy>3</posy>
+        <width>195</width>
+        <height>75</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <font>size19</font>
+        <textcolor>White</textcolor>
+        <label>$INFO[System.Time]</label>
+      </control>
+    </control>
+  </controls>
+-->			
+		</control>
+	</controls>
+</window>

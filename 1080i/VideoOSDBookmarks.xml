@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="125">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Editor Dialog Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>PosYForBusyIconFrame</posy>
+				<include>BusyIconFrame</include>
+				
+				<control type="image">
+				    <posx>3</posx>
+				    <posy>3</posy>
+					<width>256</width>
+					<height>256</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-bookmark.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="Video Bookmarks Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>298</label>
+			</control>
+
+			<control type="panel" id="11">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>480</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<ondown>-</ondown>
+				<onup>-</onup>
+				<scrolltime>200</scrolltime>
+				<viewtype label="536">icon</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<orientation>horizontal</orientation>
+
+				<itemlayout height="240" width="310">
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>300</width>
+						<height>200</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>160</posx>
+						<posy>210</posy>
+						<width>300</width>
+						<height>30</height>
+						<align>center</align>
+						<font>SmallButtonFont</font>
+						<textcolor>MainColor</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+
+				<focusedlayout height="240" width="310">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>310</width>
+						<height>240</height>
+						<texture colordiffuse="MainColor">white.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>300</width>
+						<height>200</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>160</posx>
+						<posy>210</posy>
+						<width>300</width>
+						<height>30</height>
+						<align>center</align>
+						<font>SmallButtonFont</font>
+						<textcolor>BackgroundColor</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="label" description="Number of Bookmarks Label">
+				<posx>560</posx>
+				<posy>560</posy>
+				<font>DialogTextFont</font>
+				<label>$INFO[Container(11).NumItems] $LOCALIZE[31900] - $LOCALIZE[31903] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</label>
+			</control>
+			
+			<control type="grouplist" id="9000">
+				<posx>40</posx>
+				<posy>320</posy>
+				<width>480</width>
+				<height>120</height>
+				<itemgap>0</itemgap>
+				<align>center</align>
+				<orientation>vertical</orientation>
+				<onleft>-</onleft>
+				<onright>11</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+
+				<control type="button" id="2" description="Create Bookmark Button">
+					<label>294</label>
+				</control>
+
+				<control type="button" id="3" description="Clear Bookmark Button">
+					<label>296</label>
+				</control>
+
+				<control type="button" id="4" description="Clear Bookmark Button">
+					<visible>videoplayer.content(episodes)</visible>
+					<label>20406</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

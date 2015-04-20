@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="120">
+	<defaultcontrol always="true">15</defaultcontrol>
+
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(sliderdialog)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+
+			<control type="group" description="Current Control Label">
+				<visible>Window.IsActive(musicosd) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(addonsettings) + !Window.IsVisible(selectdialog)</visible>
+				<control type="label">
+					<posx>698</posx>
+					<posy>90</posy>
+					<width>520</width>
+					<height>20</height>
+					<align>center</align>
+					<font>DefaultInformationFont</font>
+					<label>$INFO[System.CurrentControl]</label>
+					<textcolor>MainColor</textcolor>
+				</control>
+				<control type="label">
+					<posx>702</posx>
+					<posy>90</posy>
+					<width>520</width>
+					<height>20</height>
+					<align>center</align>
+					<font>DefaultInformationFont</font>
+					<label>$INFO[System.CurrentControl]</label>
+					<textcolor>MainColor</textcolor>
+				</control>
+				<control type="label">
+					<posx>698</posx>
+					<posy>94</posy>
+					<width>520</width>
+					<height>20</height>
+					<align>center</align>
+					<font>DefaultInformationFont</font>
+					<label>$INFO[System.CurrentControl]</label>
+					<textcolor>MainColor</textcolor>
+				</control>
+				<control type="label">
+					<posx>702</posx>
+					<posy>94</posy>
+					<width>520</width>
+					<height>20</height>
+					<align>center</align>
+					<font>DefaultInformationFont</font>
+					<label>$INFO[System.CurrentControl]</label>
+					<textcolor>MainColor</textcolor>
+				</control>
+				<control type="label">
+					<posx>700</posx>
+					<posy>92</posy>
+					<width>520</width>
+					<height>20</height>
+					<align>center</align>
+					<font>DefaultInformationFont</font>
+					<label>$INFO[System.CurrentControl]</label>
+					<textcolor>BackgroundColor</textcolor>
+				</control>
+			</control>
+
+			<control type="grouplist" id="100">
+				<posx>160</posx>
+				<posy>0</posy>
+				<width>1600</width>
+				<height>90</height>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<onleft>19</onleft>
+				<onright>12</onright>
+				<onup>-</onup>
+				<ondown>-</ondown>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+					
+					<control type="button" id="12" description="Playlist Button">
+						<width>75</width>
+						<height>75</height>
+						<label>10517</label>
+						<font>-</font>
+						<texturefocus>controls/playlist-focus.png</texturefocus>
+						<texturenofocus>controls/playlist-nofocus.png</texturenofocus>
+						<onclick>ActivateWindow(musicplaylist)</onclick>
+					</control>
+				</control>
+				
+				<control type="group">
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="8" description="Lyrics Button">
+						<width>75</width>
+						<height>75</height>
+						<label>24013</label>
+						<font>-</font>
+						<texturefocus>controls/lyrics-focus.png</texturefocus>
+						<texturenofocus>controls/lyrics-nofocus.png</texturenofocus>
+						<onclick>Close</onclick>
+						<onclick>RunScript($INFO[Skin.String(AddonLyrics)])</onclick>
+					</control>
+				</control>
+
+				<control type="label" description="Spacer">
+					<width>60</width>
+				</control>
+				
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="1" description="Repeat Button">
+						<width>75</width>
+						<height>75</height>
+						<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+						<font>-</font>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>PlayerControl(Repeat)</onclick>
+						<colordiffuse>BackgroundColor</colordiffuse>
+					</control>
+					
+					<control type="image" id="2">
+						<width>75</width>
+						<height>75</height>
+						<texture>controls/repeat-nofocus.png</texture>
+						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+						<visible>!Control.HasFocus(1)</visible>
+					</control>
+
+					<control type="image" id="3">
+						<width>75</width>
+						<height>75</height>
+						<texture>controls/repeat-focus.png</texture>
+						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+						<visible>Control.HasFocus(1)</visible>
+					</control>
+
+					<control type="image" id="4">
+						<width>75</width>
+						<height>75</height>
+						<texture>controls/repeatone-nofocus.png</texture>
+						<visible>Playlist.IsRepeatOne</visible>
+						<visible>!Control.HasFocus(1)</visible>
+					</control>
+
+					<control type="image" id="5">
+						<width>75</width>
+						<height>75</height>
+						<texture>controls/repeatone-focus.png</texture>
+						<visible>Playlist.IsRepeatOne</visible>
+						<visible>Control.HasFocus(1)</visible>
+					</control>
+
+					<control type="image" id="6">
+						<width>75</width>
+						<height>75</height>
+						<texture>ocontrols/repeatall-nofocus.png</texture>
+						<visible>Playlist.IsRepeat</visible>
+						<visible>!Control.HasFocus(1)</visible>
+					</control>
+
+					<control type="image" id="7">
+						<width>75</width>
+						<height>75</height>
+						<texture>controls/repeatall-focus.png</texture>
+						<visible>Playlist.IsRepeat</visible>
+						<visible>Control.HasFocus(1)</visible>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="togglebutton" id="21" description="Random Button">
+						<width>75</width>
+						<height>75</height>
+						<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+						<font>-</font>
+						<texturefocus>controls/randomoff-focus.png</texturefocus>
+						<texturenofocus>controls/randomoff-nofocus.png</texturenofocus>
+						<usealttexture>Playlist.IsRandom</usealttexture>
+						<alttexturefocus>controls/randomon-focus.png</alttexturefocus>
+						<alttexturenofocus>controls/randomon-nofocus.png</alttexturenofocus>
+						<onclick>XBMC.PlayerControl(Random)</onclick>
+					</control>
+				</control>
+				
+				<control type="label" description="Spacer">
+					<width>60</width>
+				</control>
+				
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="13" description="Previous Button">
+						<width>75</width>
+						<height>75</height>
+						<label>210</label>
+						<font>-</font>
+						<texturefocus>controls/previous-focus.png</texturefocus>
+						<texturenofocus>controls/previous-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Previous)</onclick>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="14" description="Rewind Button">
+						<width>75</width>
+						<height>75</height>
+						<label>31921</label>
+						<font>-</font>
+						<texturefocus>controls/rewind-focus.png</texturefocus>
+						<texturenofocus>controls/rewind-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Rewind)</onclick>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="togglebutton" id="15" description="Play/Pause">
+						<width>75</width>
+						<height>75</height>
+						<label>31922</label>
+						<altlabel>208</altlabel>
+						<font>-</font>
+						<texturefocus>controls/pause-focus.png</texturefocus>
+						<texturenofocus>controls/pause-nofocus.png</texturenofocus>
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<alttexturefocus>controls/play-focus.png</alttexturefocus>
+						<alttexturenofocus>controls/play-nofocus.png</alttexturenofocus>
+						<onclick>PlayerControl(Play)</onclick>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="16" description="Stop">
+						<width>75</width>
+						<height>75</height>
+						<label>31920</label>
+						<font>-</font>
+						<texturefocus>controls/stop-focus.png</texturefocus>
+						<texturenofocus>controls/stop-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Stop)</onclick>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="17" description="Fast Forward">
+						<width>75</width>
+						<height>75</height>
+						<label>31923</label>
+						<font>-</font>
+						<texturefocus>controls/fastforward-focus.png</texturefocus>
+						<texturenofocus>controls/fastforward-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Forward)</onclick>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="18" description="Next Button">
+						<width>75</width>
+						<height>75</height>
+						<label>209</label>
+						<font>-</font>
+						<texturefocus>controls/next-focus.png</texturefocus>
+						<texturenofocus>controls/next-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Next)</onclick>
+					</control>
+				</control>
+
+				<control type="label" description="Spacer">
+					<width>60</width>
+				</control>
+				
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="10" description="Decrease Rating Button">
+						<width>75</width>
+						<height>75</height>
+						<label>$LOCALIZE[33080]</label>
+						<align>left</align>
+						<font>-</font>
+						<texturefocus>controls/lastfmhate-focus.png</texturefocus>
+						<texturenofocus>controls/lastfmhate-nofocus.png</texturenofocus>
+						<onclick>DecreaseRating</onclick>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="11" description="Increase Rating Button">
+						<width>75</width>
+						<height>75</height>
+						<label>$LOCALIZE[33079]</label>
+						<font>-</font>
+						<texturefocus>controls/lastfmlove-focus.png</texturefocus>
+						<texturenofocus>controls/lastfmlove-nofocus.png</texturenofocus>
+						<onclick>IncreaseRating</onclick>
+					</control>
+				</control>
+
+				<control type="label" description="Spacer">
+					<width>60</width>
+				</control>
+				
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="500" description="Visualisation">
+						<width>75</width>
+						<height>75</height>
+						<label>12006</label>
+						<font>-</font>
+						<texturefocus>controls/visualisation-focus.png</texturefocus>
+						<texturenofocus>controls/visualisation-nofocus.png</texturenofocus>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="20" description="Visualisation Presets Button">
+						<width>75</width>
+						<height>75</height>
+						<label>31925</label>
+						<font>-</font>
+						<texturefocus>controls/presets-focus.png</texturefocus>
+						<texturenofocus>controls/presets-nofocus.png</texturenofocus>
+						<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>90</width>
+					<include>PlayerControlFrame</include>
+
+					<control type="button" id="19" description="Visualisation Settings Button">
+						<width>75</width>
+						<height>75</height>
+						<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
+						<font>-</font>
+						<texturefocus>controls/settings-focus.png</texturefocus>
+						<texturenofocus>controls/settings-nofocus.png</texturenofocus>
+						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

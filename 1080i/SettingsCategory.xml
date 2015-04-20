@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="12">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>GlobalBackground</include>
+		
+	    <control type="group">
+			<include>ButtonLeftRingForSettings</include>
+
+			<control type="grouplist" id="3" description="Button Area">
+				<posx>40</posx>
+				<posy>600</posy>
+				<width>482</width>
+				<height>420</height>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>9000</onleft>
+				<onright>5</onright>
+			</control>
+
+			<control type="grouplist" id="5" description="Control Area">
+				<posx>700</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>800</height>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>3</onleft>
+				<onright>Noop</onright>
+			</control>
+            
+			<control type="button" id="7" description="Default Button">
+				<align>left</align>
+			</control>
+
+			<control type="radiobutton" id="8" description="Default Radio Button">
+				<radioposx>1040</radioposx>
+				<align>left</align>
+			</control>
+
+			<control type="spincontrolex" id="9" description="Default Spin Control">
+				<align>left</align>
+			</control>
+
+			<control type="button" id="10" description="Default Category Button">
+				<align>left</align>
+			</control>
+
+			<control type="group">
+				<visible>ControlGroup(5).HasFocus</visible>
+				<control type="image">
+					<posx>700</posx>
+					<posy>870</posy>
+					<width>1100</width>
+					<height>111</height>
+					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+				</control>
+				<control type="textbox" id="6" description="Settings Description Textbox">
+					<posx>720</posx>
+					<posy>880</posy>
+					<width>880</width>
+					<height>90</height>
+					<font>AnnotationFont</font>
+					<label>-</label>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="9000">
+			<include>SideMenu</include>
+
+			<control type="label">
+				<posx>24</posx>
+				<posy>20</posy>
+				<width>482</width>
+				<height>40</height>
+				<label>31139</label>
+			</control>
+			
+			<control type="grouplist" id="9001">
+				<posx>24</posx>
+				<posy>60</posy>
+				<width>482</width>
+				<height>440</height>
+				<itemgap>0</itemgap>
+				<onleft>-</onleft>
+				<onright>3</onright>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<orientation>vertical</orientation>
+
+				<include>SettingsLevelButtonForSideMenu</include>
+			</control>
+
+			<control type="group" description="Player Controls">
+				<visible>Player.HasMedia</visible>
+				<posx>PosXForCircleControlsForPlayer</posx>
+				<posy>PosYForCircleControlsForPlayer</posy>
+				<include>CircleControlsForPlayer</include>
+			</control>
+		</control>
+	</controls>
+</window>

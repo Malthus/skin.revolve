@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="144">
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForSingleLineDialog</posy>
+			<include>SingleLineDialog</include>
+
+			<control type="label" id="1" description="Karaoke Heading Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>31416</label>
+			</control>
+
+			<control type="label" id="401" description="Song Number Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>140</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="402" description="Song Name Label">
+				<posx>700</posx>
+				<posy>80</posy>
+				<width>1100</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>-</label>
+			</control>
+		</control>
+	</controls>
+</window>

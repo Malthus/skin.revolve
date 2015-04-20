@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2009">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="karvisualisation" id="1" description="Background Visualisation For Karaoke">
+			<include>FullscreenDimensions</include>
+			<visibility>false</visibility>
+		</control>
+
+		<control type="image" id="2" description="Fullscreen Background Image For Karaoke">
+			<include>FullscreenDimensions</include>
+			<visibility>false</visibility>
+		</control>
+
+		<control type="group" description="Next Song Name Label">
+			<visible>MusicPlayer.Offset(number).Exists + !IntegerGreaterThan(Player.TimeRemaining,20)</visible>
+			<posx>560</posx>
+			<posy>0</posy>
+
+			<control type="label">
+				<posx>-2</posx>
+				<posy>18</posy>
+				<width>1240</width>
+				<font>SmallInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<align>left</align>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>18</posy>
+				<width>1240</width>
+				<font>SmallInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<align>left</align>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+			</control>
+			<control type="label">
+				<posx>-2</posx>
+				<posy>22</posy>
+				<width>1240</width>
+				<font>SmallInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<align>left</align>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>22</posy>
+				<width>1240</width>
+				<font>SmallInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<align>left</align>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+			</control>
+			<control type="label">
+				<posy>20</posy>
+				<posx>0</posx>
+				<width>1240</width>
+				<font>SmallInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<align>left</align>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+			</control>
+		</control>
+	</controls>
+</window>

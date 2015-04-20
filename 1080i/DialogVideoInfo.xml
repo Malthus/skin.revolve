@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2003">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include>FifteenLinesDialog</include>
+
+			<control type="group" description="Dialog Icon For Movie">
+				<visible>!Control.HasFocus(50)</visible>
+				<posx>150</posx>
+				<posy>20</posy>
+				<include>DefaultCircleThumbnailIcon</include>
+			</control>
+
+			<control type="group" description="Dialog Icon For Cast List">
+				<visible>Control.HasFocus(50)</visible>
+				<posx>150</posx>
+				<posy>20</posy>
+				
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>262</width>
+					<height>262</height>
+					<texture background="true" diffuse="circlemask.png">$INFO[Container(50).ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				</control>
+		
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>270</width>
+					<height>270</height>
+					<texture background="true">circleborder.png</texture>
+					<colordiffuse>MainColor</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="Video Title Header">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<height>40</height>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>$VAR[ContentNameLabel]</label>
+			</control>
+			
+			<control type="list" description="Video Information List">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>240</height>
+				<itemgap>0</itemgap>
+				
+				<include>ItemsForInfoListInDialog</include>
+				
+				<content>
+					<item description="Year Label">
+						<visible>!IsEmpty(ListItem.Year)</visible>
+						<label>$LOCALIZE[172]</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Duration Label">
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<label>$LOCALIZE[180]</label>
+						<label2>$INFO[ListItem.Duration] $LOCALIZE[31901]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Genre Label">
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<label>$LOCALIZE[515]</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="MPAA Rating Label">
+						<visible>!IsEmpty(ListItem.MPAA)</visible>
+						<label>$LOCALIZE[20074]</label>
+						<label2>$INFO[ListItem.MPAA]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Rating Label">
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+						<label>$LOCALIZE[563]</label>
+						<label2>$INFO[ListItem.Rating]</label2>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+			</control>
+			
+			<control type="group" description="Video Details Icons">
+				<posx>560</posx>
+				<posy>320</posy>
+				<include>HorizontalDialogListOfContentMediaFlag</include>
+			</control>
+
+			<control type="textbox" id="4" description="Plot">
+				<posx>560</posx>
+				<posy>400</posy>
+				<width>1240</width>
+				<height>280</height>
+				<font>DescriptionFont</font>
+				<align>left</align>
+			</control>
+
+			<control type="list" id="50" description="Cast List">
+				<posx>560</posx>
+				<posy>400</posy>
+				<width>1240</width>
+				<height>280</height>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<orientation>vertical</orientation>
+				<scrolltime>200</scrolltime>
+				
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(50)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(50)</visible>
+						<include>NormalItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="grouplist" id="9000">
+				<posx>40</posx>
+				<posy>400</posy>
+				<width>480</width>
+				<height>280</height>
+				<itemgap>0</itemgap>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onright>50</onright>
+				<onleft>50</onleft>
+				<orientation>vertical</orientation>
+
+				<control type="button" id ="5" description="Plot/Cast Button">
+					<label>206</label>
+				</control>
+
+				<control type="button" id ="8" description="Play Button">
+					<label>208</label>
+				</control>
+
+				<control type="button" id ="9" description="Resume Button">
+					<label>13404</label>
+				</control>
+
+				<control type="button" id ="6" description="Refresh Button">
+					<label>184</label>
+				</control>
+
+				<control type="button" id ="10" description="Choose Art Button">
+					<label>13511</label>
+				</control>
+
+				<control type="button" id="11" description="Trailer Button">
+					<label>20410</label>
+				</control>
+				
+				<control type="button" id="13" description="Movies By Director Button">
+					<label>31409</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

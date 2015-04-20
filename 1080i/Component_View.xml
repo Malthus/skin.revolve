@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="VisibilityOfListIconInView">
+		<visible>!Container.Scrolling | Container.Content(Episodes) | Container.Content(Seasons) | Container.Content(Songs)</visible>
+	</include>
+
+	<include name="VisibilityOfSortLetterInView">
+		<visible>Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</visible>
+	</include>
+	
+	<include name="VisibilityOfContentNameOnlyInView">
+		<visible>ListItem.IsFolder + !StringCompare(ListItem.Label,..)</visible>
+	</include>
+
+	<include name="VisibilityOfContentInformationInView">
+		<visible>!ListItem.IsFolder | StringCompare(ListItem.Label,..)</visible>
+	</include>
+	
+	<include file="View_RevolveList.xml" />
+	<include file="View_DropList.xml" />
+	<include file="View_CircleList.xml" />
+	<include file="View_Landscape.xml" />
+	<include file="View_Thumbnails.xml" />
+	<include file="View_Panels.xml" />
+	<include file="View_Gallery.xml" />
+	<include file="View_Banners.xml" />
+</includes>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="115">
+	<defaultcontrol always="true">901</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	
+	<controls>
+		<control type="group">
+			<include>FullscreenDimensions</include>
+
+			<control type="group" description="Message Band With Direction Icon And Progress Bar">
+				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
+
+				<control type="group">
+					<posy>PosYForPauseMessageBand</posy>
+					<include>DefaultIconInMessageBand</include>
+		
+					<control type="group" description="Player Direction Icon">
+						<control type="image">
+							<visible>Player.Paused</visible>
+							<posx>235</posx>
+							<posy>10</posy>
+							<width>80</width>
+							<height>80</height>
+							<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<visible>Player.Forwarding | Player.Rewinding</visible>
+							<posx>235</posx>
+							<posy>0</posy>
+							<width>80</width>
+							<height>80</height>
+							<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="label">
+							<visible>Player.Forwarding | Player.Rewinding</visible>
+							<posx>230</posx>
+							<posy>80</posy>
+							<width>80</width>
+							<height>40</height>
+							<font>DefaultInformationFont</font>
+							<textcolor>BackgroundColor</textcolor>
+							<align>center</align>
+							<label>$VAR[PlayerSpeedLabel]</label>
+						</control>
+					</control>
+				
+					<control type="group" description="Seek Bar">
+						<control type="image">
+							<posx>758</posx>
+							<posy>38</posy>
+							<width>825</width>
+							<height>28</height>
+							<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>760</posx>
+							<posy>40</posy>
+							<width>820</width>
+							<height>24</height>
+							<texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="progress" description="Cache Progress Bar">
+							<posx>760</posx>
+							<posy>28</posy>
+							<width>820</width>
+							<height>24</height>
+							<midtexture colordiffuse="SelectColor" border="6">controls/horizontalbar-thin.png</midtexture>
+							<aspectratio>stretch</aspectratio>
+							<info>Player.ProgressCache</info>
+						</control>
+						<control type="progress" id="401" description="Player Seek Bar">
+							<posx>760</posx>
+							<posy>28</posy>
+							<width>820</width>
+							<height>24</height>
+							<midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
+							<aspectratio>stretch</aspectratio>
+							<info>Player.Progress</info>
+						</control>
+					</control>
+
+					<control type="label" id="402" description="Player Times Label">
+						<posx>560</posx>
+						<posy>30</posy>
+						<width>200</width>
+						<height>40</height>
+						<font>BigInformationFont</font>
+						<textcolor>MainColor</textcolor>
+						<label>$VAR[PlayerTimeLabel]</label>
+					</control>
+					<control type="label" description="Player Duration Label">
+						<posx>1800</posx>
+						<posy>30</posy>
+						<width>200</width>
+						<height>40</height>
+						<font>BigInformationFont</font>
+						<textcolor>MainColor</textcolor>
+						<align>right</align>
+						<label>$VAR[PlayerDurationLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group" description="Big Clock">
+					<animation effect="fade" start="0" end="100" time="250" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="250" reversible="false">WindowClose</animation>
+			
+					<include>BigClock</include>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]</visible>
+				<posx>1750</posx>
+				<posy>890</posy>
+				<include>StatusIconFrame</include>
+
+				<control type="group">
+					<visible>Player.Paused + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]</visible>
+					
+					<control type="image" description="Player Direction Icon">
+						<posx>45</posx>
+						<posy>40</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+				</control>
+
+				<control type="group">
+					<visible>[Player.Forwarding | Player.Rewinding] + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]</visible>
+					
+					<control type="image" description="Player Direction Icon">
+						<posx>45</posx>
+						<posy>25</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					
+					<control type="label">
+						<posx>15</posx>
+						<posy>70</posy>
+						<width>100</width>
+						<height>20</height>
+						<font>StatusDetailFont</font>
+						<textcolor>BackgroundColor</textcolor>
+						<align>center</align>
+						<label>$VAR[PlayerSpeedLabel]</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

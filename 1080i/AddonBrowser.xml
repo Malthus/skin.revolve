@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">52</defaultcontrol>
+	<views>52,55,51,53,56,57,58</views>
+
+	<controls>
+		<include>GlobalBackground</include>
+		<include>DropListView</include>
+		<include>CircleListView</include>
+     	<include>LandscapeView</include>
+		<include>ThumbnailsView</include>
+		<include>PanelsView</include>
+		<include>GalleryView</include>
+		<include>BannersView</include>
+
+		<control type="group" id="9000">
+			<include>SideMenu</include>
+
+			<control type="grouplist" id="9001">
+				<posx>24</posx>
+				<posy>20</posy>
+				<width>482</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onleft>-</onleft>
+				<onright>52</onright>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<orientation>vertical</orientation>
+
+				<include>ViewTypeButtonForSideMenu</include>
+				<include>SortCriteriumButtonForSideMenu</include>
+				<include>SortOrderButtonForSideMenu</include>
+				<include>AutoUpdatesButtonForSideMenu</include>
+				<include>NotificationsButtonForSideMenu</include>
+				<include>LanguageFilterButtonForSideMenu</include>
+			</control>
+
+			<control type="group" description="Player Controls">
+				<visible>Player.HasMedia</visible>
+				<posx>PosXForCircleControlsForPlayer</posx>
+				<posy>PosYForCircleControlsForPlayer</posy>
+				<include>CircleControlsForPlayer</include>
+			</control>
+		</control>
+	</controls>
+</window>

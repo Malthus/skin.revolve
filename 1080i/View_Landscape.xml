@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="LandscapeView">
+		<control type="list" id="53">
+			<viewtype label="31933">list</viewtype>
+			<visible allowhiddenfocus="true">true</visible>
+			
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>900</height>
+			<pagecontrol>63</pagecontrol>
+			<orientation>horizontal</orientation>
+			<focusposition>3</focusposition>
+			<onup>9000</onup>
+			<ondown>63</ondown>
+			<onleft>53</onleft>
+			<onright>53</onright>
+			
+			<itemlayout width="380" height="900">
+				<control type="label">
+					<visible>false</visible>
+					<posx>0</posx>
+					<height>100</height>
+					<width>1800</width>
+					<font>SmallListItemFont</font>
+					<textcolor>TextColor</textcolor>
+					<align>center</align>
+					<label>$VAR[ContentNameLabel]</label>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="380" height="900">
+				<control type="label">
+					<visible>false</visible>
+					<posx>0</posx>
+					<height>100</height>
+					<width>1800</width>
+					<font>SmallListItemFont</font>
+					<textcolor>MainColor</textcolor>
+					<align>center</align>
+					<label>$VAR[ContentNameLabel]</label>
+				</control>
+			</focusedlayout>			
+		</control>
+		
+		<include>MainLandscapeView</include>
+	</include>
+		
+	<include name="MainLandscapeView">
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<animation effect="slide" start="0,1080" end="0,0" time="500">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,1080" time="500">WindowClose</animation>
+
+			<include>BottomRing</include>
+			<include>ItemsForLandscape</include>
+		</control>
+
+		<control type="scrollbar" id="63" description="Scrollbar">
+			<visible allowhiddenfocus="true">Control.IsVisible(53)</visible>
+			<animation type="Conditional" condition="!Control.HasFocus(63) + !Container(53).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
+				<effect type="slide" start="0,0" end="0,-40" time="100" />
+			</animation>
+
+			<posx>1000</posx>
+			<posy>8</posy>
+			<width>860</width>
+			<height>20</height>
+			<orientation>horizontal</orientation>
+			<texturesliderbackground border="14,0,14,0" colordiffuse="BackgroundColor">controls/verticalbar-thick.png</texturesliderbackground>
+			<texturesliderbar border="14,0,14,0" colordiffuse="SelectColor">controls/verticalbar-thin.png</texturesliderbar>
+			<texturesliderbarfocus border="14,0,14,0" colordiffuse="MainColor">controls/verticalbar-thin.png</texturesliderbarfocus>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<onleft>63</onleft>
+			<onright>63</onright>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThreeLinesDialog</posy>
+			<include>ThreeLinesDialog</include>
+
+			<control type="label" description="Gamepad Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<align>left</align>
+				<font>DialogTitleFont</font>
+				<info>12338</info>
+			</control>
+		
+			<control type="label" id="2" description="Gamepad Line 1 Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<align>left</align>
+				<font>DialogTitleFont</font>
+				<label>-</label>
+			</control>
+		
+			<control type="label" id="3" description="Gamepad Line 2 Label">
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<align>left</align>
+				<font>DialogTitleFont</font>
+				<label>-</label>
+			</control>
+		
+			<control type="label" id="4" description="Gamepad Line 3 Label">
+				<posx>560</posx>
+				<posy>160</posy>
+				<width>1240</width>
+				<align>left</align>
+				<font>DialogTitleFont</font>
+				<label>-</label>
+			</control>
+		</control>
+	</controls>
+</window>

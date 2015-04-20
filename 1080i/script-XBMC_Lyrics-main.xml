@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<control type="group">
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include>FifteenLinesDialog</include>
+
+			<control type="group" description="Editor Dialog Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>PosYForBusyIconFrame</posy>
+				<include>BusyIconFrame</include>
+
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>262</width>
+					<height>262</height>
+					<texture diffuse="elements/circle-mask.png" background="true">logos/culrclyrics.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+
+			<control type="label" description="Artist And Song Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<height>40</height>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Title]</label>
+			</control>
+
+			<control type="list" id="110" description="Smooth Scrolling Lyrics List">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>600</height>
+				<pagecontrol>111</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<onup>110</onup>
+				<ondown>110</ondown>
+				<onleft>9010</onleft>
+				<onright>111</onright>
+
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(110)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(110)</visible>
+						<include>SelectedItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="scrollbar" id="111" description="Lyrics Scrollbar">
+				<visible>Control.IsVisible(110)</visible>
+				<posy>80</posy>
+				<height>600</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>110</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="label" id="2" description="Pick Label">
+				<visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>TextColor</textcolor>
+				<font>DialogTextFont</font>
+				<label>$LOCALIZE[31203]</label>
+			</control>
+			
+			<control type="list" id="120" description="Song Chooser List">
+				<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<height>560</height>
+				<pagecontrol>121</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<onleft>9010</onleft>
+				<onright>121</onright>
+				
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(120)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(120)</visible>
+						<include>SelectedItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="scrollbar" id="121" description="Song Chooser Scrollbar">
+				<visible>Control.IsVisible(120)</visible>
+				<posy>120</posy>
+				<height>560</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>120</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="label" description="CU LRC Lyrics Label">
+				<posx>40</posx>
+				<posy>300</posy>
+				<width>480</width>
+				<height>40</height>
+				<font>DialogTextFont</font>
+				<textcolor>TextColor</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[script.cu.lrclyrics 32199]</label>
+			</control>
+			
+			<control type="label" description="Scraper Label">
+				<posx>40</posx>
+				<posy>340</posy>
+				<width>480</width>
+				<height>40</height>
+				<font>DialogTextFont</font>
+				<textcolor>TextColor</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Control.GetLabel(200)]</label>
+			</control>
+			<control type="label" id="200" description="Scraper Label">
+				<visible>false</visible>
+			</control>
+			
+			<control type="group" description="Player Controls">
+				<posx>PosXForDialogControlsForPlayer</posx>
+				<posy>400</posy>
+				<include>DialogControlsForPlayer</include>
+			</control>
+			<control type="button" description="Focus Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<onfocus>SetFocus(110)</onfocus>
+			</control>
+		</control>
+	</controls>
+</window>

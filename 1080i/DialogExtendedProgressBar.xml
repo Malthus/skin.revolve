@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="151">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForSingleLineDialogForProgressBar</posy>
+			<include>SingleLineDialogForProgressBar</include>
+
+			<control type="label" id="30" description="Progress Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<align>left</align>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<label>-</label>
+			</control>
+		
+			<control type="label" id="31" description="Single Line Label">
+				<description>Line 1</description>
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<align>left</align>
+				<font>DialogTextFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<label>-</label>
+			</control>
+			
+			<control type="group" description="Progress Bar">
+				<posx>560</posx>
+				<posy>124</posy>
+				<include>ProgressBarForProgressBar</include>
+			</control>
+		</control>
+	</controls>
+</window>

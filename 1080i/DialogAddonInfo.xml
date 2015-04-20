@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="146">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+			
+			<control type="group" description="Dialog Icon">
+				<posx>150</posx>
+				<posy>20</posy>
+				<include>DefaultCircleThumbnailIcon</include>
+			</control>
+			
+			<control type="label" description="Addon Title Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<label>$VAR[ContentNameLabel]</label>
+				<scroll>true</scroll>
+			</control>
+
+			<control type="grouplist" description="Video Information List">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>160</height>
+				<itemgap>0</itemgap>
+				
+				<control type="group" description="Addon Type Label">
+					<height>40</height>
+						
+					<control type="label">
+						<width>300</width>
+						<align>left</align>
+						<textcolor>TextColor</textcolor>
+						<label>$LOCALIZE[564]:</label>
+					</control>
+					<control type="label">
+						<posx>340</posx>
+						<width>900</width>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Type)]</label>
+					</control>
+				</control>
+				
+				<control type="group" description="Addon Creator Label">
+					<height>40</height>
+						
+					<control type="label">
+						<width>300</width>
+						<align>left</align>
+						<textcolor>TextColor</textcolor>
+						<label>$LOCALIZE[31415]:</label>
+					</control>
+					<control type="label">
+						<posx>340</posx>
+						<width>900</width>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					</control>
+				</control>
+				
+				<control type="group" description="Addon Version Label">
+					<height>40</height>
+						
+					<control type="label">
+						<width>300</width>
+						<align>left</align>
+						<textcolor>TextColor</textcolor>
+						<label>$LOCALIZE[24051]</label>
+					</control>
+					<control type="label">
+						<posx>340</posx>
+						<width>900</width>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Version)]</label>
+					</control>
+				</control>
+				
+				<control type="group" description="Addon Status Label">
+					<height>40</height>
+						
+					<control type="label">
+						<width>300</width>
+						<align>left</align>
+						<textcolor>TextColor</textcolor>
+						<label>$LOCALIZE[126]:</label>
+					</control>
+					<control type="label">
+						<posx>340</posx>
+						<width>900</width>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(Addon.Status)]</label>
+					</control>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+				<posx>560</posx>
+				<posy>240</posy>
+
+				<control type="image" description="Background">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1240</width>
+					<height>80</height>
+					<texture>white.png</texture>
+				</control>
+
+				<control type="image" description="Broken Icon Image">
+					<posx>16</posx>
+					<posy>16</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>DefaultIconError.png</texture>
+				</control>
+				
+				<control type="textbox" description="Reason For Broken Label">
+					<posx>100</posx>
+					<posy>0</posy>
+					<width>1140</width>
+					<height>80</height>
+					<align>left</align>
+					<textcolor>BackgroundColor</textcolor>
+					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+					<label>$INFO[ListItem.Property(Addon.Broken)]</label>
+				</control>
+			</control>
+
+			<control type="textbox" id="400" description="Description">
+				<posx>560</posx>
+				<posy>320</posy>
+				<width>1240</width>
+				<height>280</height>
+				<font>HomeMenuDetailFont</font>
+				<align>left</align>
+				<label>$VAR[ContentDescription]</label>
+			</control>
+			
+			<control type="grouplist" id="9000">
+				<posx>40</posx>
+				<posy>320</posy>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+
+				<control type="button" id="6" description="Install/Uninstall Addon Button">
+					<label>24022</label>
+				</control>
+
+				<control type="button" id="7" description="Enable/Disable Addon Button">
+					<label>24021</label>	
+				</control>
+
+				<control type="button" id="9" description="Addon Settings Button">
+					<label>24020</label>
+				</control>
+
+				<control type="button" id="8" description="Update Addon Button">
+					<label>24069</label>
+				</control>
+
+				<control type="button" id="10" description="Changelog Button">
+					<label>24036</label>
+				</control>
+				
+				<control type="button" id="11" description="Rollback Button">
+					<label>24048</label>
+				</control>
+				
+				<control type="button" id="12" description="Run Button">
+					<label>31100</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

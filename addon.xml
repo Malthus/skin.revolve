@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.revolve" version="0.2.6" name="Revolve" provider-name="ransomed, mKo, relyter, Malthus">
+	<requires>
+		<import addon="xbmc.gui" version="5.0.1"/>
+	</requires>
+	
+	<extension point="xbmc.gui.skin" defaultthemename="textures.xbt" debugging="false" effectslowdown="1.0">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>Revolve is a skin centered around revolution.</summary>
+		<description>Revolve is a skin centered around revolution.[CR][CR]Concept and graphics by ransomed, additional graphics by Malthus / Skin by ransomed, mKo, relyter, and Malthus. Foundation (skin) by Hitcher, and textures courtesy of Jezz_X.</description>
+	</extension>
+</addon>

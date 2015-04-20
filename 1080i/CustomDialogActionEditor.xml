@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1191">
+	<defaultcontrol always="true">31</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include>FifteenLinesDialog</include>
+
+			<control type="group" description="Editor Dialog Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>PosYForBusyIconFrame</posy>
+				<include>BusyIconFrame</include>
+				
+				<control type="image">
+				    <posx>3</posx>
+				    <posy>3</posy>
+					<width>256</width>
+					<height>256</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-pencil.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31801]</label>
+			</control>
+			
+			<control type="label" description="Category Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31913]:</label>
+			</control>
+
+			<control type="list" id="30" description="Predefined Category List">
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<height>40</height>
+				<itemgap>0</itemgap>
+				<align>left</align>
+				<scrolltime>0</scrolltime>
+				<onup>39</onup>
+				<ondown>40</ondown>
+				<onleft>9000</onleft>
+				<onright>31</onright>
+
+				<itemlayout height="0">
+				</itemlayout>
+				
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(31) | Control.HasFocus(32)</visible>
+						<control type="image">
+							<width>1240</width>
+							<height>40</height>
+							<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<width>900</width>
+							<height>40</height>
+							<textcolor>BackgroundColor</textcolor>
+							<font>DialogTextFont</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					
+					<control type="group">
+						<visible>!Control.HasFocus(31) + !Control.HasFocus(32)</visible>
+						<control type="image">
+							<width>1240</width>
+							<height>40</height>
+							<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<width>900</width>
+							<height>40</height>
+							<textcolor>MainColor</textcolor>
+							<font>DialogTextFont</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				
+				<content>
+					<item id="1" description="Live TV Related Category Option">
+						<label>$LOCALIZE[31811]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="2" description="Video Related Category Option">
+						<label>$LOCALIZE[31812]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="3" description="Music Related Category Option">
+						<label>$LOCALIZE[31813]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="4" description="Picture Related Category Option">
+						<label>$LOCALIZE[31814]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="5" description="Program Related Category Option">
+						<label>$LOCALIZE[31815]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="6" description="Menu Option Related Category Option">
+						<label>$LOCALIZE[31816]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="7" description="Miscellaneous Category Option">
+						<label>$LOCALIZE[31817]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="8" description="XBMC Category Option">
+						<label>$LOCALIZE[31818]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="9" description="Custom Action Option">
+						<label>$LOCALIZE[31819]</label>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+			</control>
+
+			<control type="button" id="31" description="Next Predefined Category Button">
+				<posx>1700</posx>
+				<posy>120</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturenofocus>
+				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturefocus>
+				<onup>40</onup>
+				<ondown>40</ondown>
+				<onleft>9000</onleft>
+				<onright>32</onright>
+				<onclick>Control.Move(30,1)</onclick>
+			</control>
+			
+			<control type="button" id="32" description="Previous Predefined Category Button">
+				<posx>1740</posx>
+				<posy>120</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangleup.png</texturenofocus>
+				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</texturefocus>
+				<onup>40</onup>
+				<ondown>40</ondown>
+				<onleft>31</onleft>
+				<onright>Noop</onright>
+				<onclick>Control.Move(30,-1)</onclick>
+			</control>
+			
+			<control type="label" description="Action Label">
+				<posx>560</posx>
+				<posy>200</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31906]:</label>
+			</control>
+                
+			<control type="list" id="40" description="Action List">
+				<posx>560</posx>
+				<posy>240</posy>
+				<height>200</height>
+				<itemgap>0</itemgap>
+				<align>left</align>
+				<scrolltime>0</scrolltime>
+                <pagecontrol>41</pagecontrol>
+				<onup>31</onup>
+				<ondown>31</ondown>
+				<onleft>9000</onleft>
+				<onright>41</onright>
+
+				<itemlayout height="40">
+                    <include>NormalItemsForNormalList</include>
+				</itemlayout>
+				
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(40)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(40)</visible>
+						<include>SelectedItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+
+				<content>
+					<item id="101" description="Open Live TV Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31820]</label>
+						<property name="Command">ActivateWindowAndFocus(mypvr)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="102" description="Open Live TV / EPG Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31821]</label>
+						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,10,0)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="103" description="Open Live TV / TV Channels Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31822]</label>
+						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,11,0)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="104" description="Open Live TV / Radio Channels Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31823]</label>
+						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,12,0)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="105" description="Open Live TV / Recordings Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31824]</label>
+						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,13,0)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="106" description="Open Live TV / Timers Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31825]</label>
+						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,14,0)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="107" description="Open Live TV / Searches Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31826]</label>
+						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,17,0)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="201" description="Open Videos Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31827]</label>
+						<property name="Command">ActivateWindow(videos)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="202" description="Open Videos Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31828]</label>
+                        <property name="Command">ActivateWindow(videos,videodb://)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="203" description="Open Videos / Movies Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31829]</label>
+						<property name="Command">ActivateWindow(videos,videodb://movies/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="204" description="Open Videos / TV Shows Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31830]</label>
+						<property name="Command">ActivateWindow(videos,videodb://tvshows/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="205" description="Open Videos / Music Videos Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31831]</label>
+						<property name="Command">ActivateWindow(videos,videodb://musicvideos/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="207" description="Open Videos / Playlists Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31832]</label>
+						<property name="Command">ActivateWindow(videos,special://videoplaylists/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="208" description="Open Videos / Addons Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31833]</label>
+						<property name="Command">ActivateWindow(videos,addons://sources/video/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="209" description="Open Videos / Files Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31834]</label>
+						<property name="Command">ActivateWindow(videos,sources://video/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="210" description="Open Video Playlist Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31835]</label>
+						<property name="Command">ActivateWindow(videolibrary$INFO[Window.Property(CustomAction.Path),$COMMA,])</property>
+						<property name="Parameter">L</property>
+						<property name="InitialPath">special://videoplaylists/</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="220" description="Play DVD Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31836]</label>
+						<property name="Command">PlayDVD</property>
+						<onclick>Noop</onclick>
+					</item>
+                    <item id="280" description="Update Complete Video Library Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+                        <label>$LOCALIZE[31837]</label>
+                        <property name="Command">UpdateLibrary(video)</property>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="281" description="Update Path Video Library Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+                        <label>$LOCALIZE[31838]</label>
+                        <property name="Command">UpdateLibrary(video$INFO[Window.Property(CustomAction.Path),$COMMA,])</property>
+                        <property name="Parameter">P</property>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="282" description="Clean Video Library Option">
+                        <visible>Container(30).HasFocus(2)</visible>
+                        <label>$LOCALIZE[31839]</label>
+                        <property name="Command">CleanLibrary(video)</property>
+                        <onclick>Noop</onclick>
+                    </item>
+					<item id="301">
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31840]</label>
+						<property name="Command">ActivateWindow(music)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="302">
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31841]</label>
+						<property name="Command">ActivateWindow(music,musicdb://)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="307">
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31842]</label>
+						<property name="Command">ActivateWindow(music,special://musicplaylists/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="308">
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31843]</label>
+						<property name="Command">ActivateWindow(music,addons://sources/audio/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="309">
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31844]</label>
+						<property name="Command">ActivateWindow(music)</property>
+						<onclick>Noop</onclick>
+                    </item>
+					<item id="310" description="Open Music Playlist Option">
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31845]</label>
+						<property name="Command">ActivateWindow(musiclibrary$INFO[Window.Property(CustomAction.File),$COMMA,])</property>
+						<property name="Parameter">F</property>
+						<property name="InitialPath">special://musicplaylists/</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="350" description="Rip CD Option">
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31846]</label>
+						<property name="Command">RipCD</property>
+						<onclick>Noop</onclick>
+					</item>
+                    <item id="380" description="Update Music Library Option">
+                        <visible>Container(30).HasFocus(3)</visible>
+                        <label>$LOCALIZE[31847]</label>
+                        <property name="Command">UpdateLibrary(music)</property>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="381" description="Clean Music Library Option">
+                        <visible>Container(30).HasFocus(3)</visible>
+                        <label>$LOCALIZE[31848]</label>
+                        <property name="Command">CleanLibrary(music)</property>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="401" description="Open Pictures Option">
+                        <visible>Container(30).HasFocus(4)</visible>
+                        <label>$LOCALIZE[31849]</label>
+                        <property name="Command">ActivateWindow(pictures)</property>
+                        <onclick>Noop</onclick>
+                    </item>
+					<item id="411">
+                        <visible>Container(30).HasFocus(4)</visible>
+						<label>$LOCALIZE[31850]</label>
+						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],notrandom)</property>
+						<property name="Parameter">P</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="412">
+                        <visible>Container(30).HasFocus(4)</visible>
+						<label>$LOCALIZE[31851]</label>
+						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],random)</property>
+						<property name="Parameter">P</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="413">
+                        <visible>Container(30).HasFocus(4)</visible>
+						<label>$LOCALIZE[31852]</label>
+						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],recursive,notrandom)</property>
+						<property name="Parameter">P</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="414">
+                        <visible>Container(30).HasFocus(4)</visible>
+						<label>$LOCALIZE[31853]</label>
+						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],recursive,random)</property>
+						<property name="Parameter">P</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="501" description="Open Programs Option">
+                        <visible>Container(30).HasFocus(5)</visible>
+						<label>$LOCALIZE[31854]</label>
+						<property name="Command">ActivateWindow(programs)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="502" description="Open Addons Option">
+                        <visible>Container(30).HasFocus(5)</visible>
+						<label>$LOCALIZE[31855]</label>
+						<property name="Command">ActivateWindow(programs,addons://sources/executable/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="550" description="Run External Program Option">
+                        <visible>Container(30).HasFocus(5)</visible>
+						<label>$LOCALIZE[31856]</label>
+						<property name="Command">System.Exec($INFO[Window.Property(CustomAction.File)])</property>
+						<property name="Parameter">F</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="551" description="Run External Program And Wait Option">
+                        <visible>Container(30).HasFocus(5)</visible>
+						<label>$LOCALIZE[31857]</label>
+						<property name="Command">System.ExecWait($INFO[Window.Property(CustomAction.File)])</property>
+						<property name="Parameter">F</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="601" description="Open Favourites Option">
+                        <visible>Container(30).HasFocus(6)</visible>
+						<label>$LOCALIZE[31858]</label>
+						<property name="Command">ActivateWindow(favourites)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="602" description="Open Weather Option">
+                        <visible>Container(30).HasFocus(6)</visible>
+						<label>$LOCALIZE[31859]</label>
+						<property name="Command">ActivateWindow(weather)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="610" description="Open Addon Browser Option">
+                        <visible>Container(30).HasFocus(6)</visible>
+						<label>$LOCALIZE[31860]</label>
+						<property name="Command">ActivateWindow(addonbrowser)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="611" description="Open File Manager Option">
+                        <visible>Container(30).HasFocus(6)</visible>
+						<label>$LOCALIZE[31861]</label>
+						<property name="Command">ActivateWindow(filemanager)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="620" description="Open Settings Option">
+                        <visible>Container(30).HasFocus(6)</visible>
+						<label>$LOCALIZE[31862]</label>
+						<property name="Command">ActivateWindow(settings)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="701" description="Activate Screen Saver Option">
+                        <visible>Container(30).HasFocus(7)</visible>
+						<label>$LOCALIZE[31863]</label>
+						<property name="Command">ActivateScreensaver</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="702" description="Take Screenshot Option">
+                        <visible>Container(30).HasFocus(7)</visible>
+						<label>$LOCALIZE[31864]</label>
+						<property name="Command">TakeScreenshot</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="703" description="Mute Option">
+                        <visible>Container(30).HasFocus(7)</visible>
+						<label>$LOCALIZE[31865]</label>
+						<property name="Command">Mute</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="704" description="Eject Tray Option">
+                        <visible>Container(30).HasFocus(7)</visible>
+						<label>$LOCALIZE[31866]</label>
+						<property name="Command">EjectTray()</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="750" description="Wake Device On LAN Option">
+                        <visible>Container(30).HasFocus(7)</visible>
+						<label>$LOCALIZE[31867]</label>
+						<property name="Command">WakeOnLan($INFO[Window.Property(CustomAction.String)])</property>
+						<property name="Parameter">S</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="780" description="Execute Shell Command Option">
+                        <visible>Container(30).HasFocus(7)</visible>
+						<label>$LOCALIZE[31868]</label>
+						<property name="Command">System.Exec($INFO[Window.Property(CustomAction.String)])</property>
+						<property name="Parameter">S</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="781" description="Execute Shell Command And Wait Option">
+                        <visible>Container(30).HasFocus(7)</visible>
+						<label>$LOCALIZE[31869]</label>
+						<property name="Command">System.ExecWait($INFO[Window.Property(CustomAction.String)])</property>
+						<property name="Parameter">S</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="801" description="Refresh RSS Feeds Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31870]</label>
+						<property name="Command">RefreshRSS</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="850" description="Reload Current Skin Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31871]</label>
+						<property name="Command">ReloadSkin()</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="880" description="Log Off User Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31873]</label>
+						<property name="Command">System.LogOff</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="881" description="Minimize XBMC Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31872]</label>
+						<property name="Command">Minimize</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="882" description="Restart XBMC Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31876]</label>
+						<property name="Command">RestartApp</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="883" description="Quit XBMC Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31877]</label>
+						<property name="Command">Quit</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="890" description="Suspend Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31874]</label>
+						<property name="Command">Suspend</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="891" description="Hibernate Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31875]</label>
+						<property name="Command">Hibernate</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="892" description="Reboot Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31878]</label>
+						<property name="Command">Reboot</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="893" description="Shut Down Option">
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31879]</label>
+						<property name="Command">ShutDown</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="901" description="Custom Action Option">
+                        <visible>Container(30).HasFocus(9)</visible>
+						<label>$LOCALIZE[31880]</label>
+						<property name="Command">$INFO[Window.Property(CustomAction.String)]</property>
+						<property name="Parameter">S</property>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+			</control>
+            
+            <control id="41" type="scrollbar">
+				<posy>240</posy>
+				<height>200</height>
+                <include>MarkupForScrollbarForDialog</include>
+				<onleft>40</onleft>
+				<onright>Noop</onright>
+            </control>
+					
+            <control type="group" description="Playlist Option Group">
+                <visible>StringCompare(Container(40).ListItem.Property(Parameter),L)</visible>
+            
+                <control type="label">
+                    <posx>560</posx>
+                    <posy>480</posy>
+                    <width>1240</width>
+                    <font>DialogTextFont</font>
+                    <align>left</align>
+                    <label>$LOCALIZE[31914]:</label>
+                </control>
+                <control type="label">
+                    <posx>580</posx>
+                    <posy>520</posy>
+                    <width>1220</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>left</align>
+                    <label>$INFO[Window.Property(CustomAction.Playlist)]</label>
+                </control>
+			</control>
+
+            <control type="group" description="Image Option Group">
+                <visible>StringCompare(Container(40).ListItem.Property(Parameter),I)</visible>
+            
+                <control type="label">
+                    <posx>560</posx>
+                    <posy>480</posy>
+                    <width>1240</width>
+                    <font>DialogTextFont</font>
+                    <align>left</align>
+                    <label>$LOCALIZE[31914]:</label>
+                </control>
+                <control type="label">
+                    <posx>580</posx>
+                    <posy>520</posy>
+                    <width>1220</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>left</align>
+                    <label>$INFO[Window.Property(CustomAction.Image)]</label>
+                </control>
+			</control>
+
+            <control type="group" description="File Option Group">
+                <visible>StringCompare(Container(40).ListItem.Property(Parameter),F)</visible>
+            
+                <control type="label">
+                    <posx>560</posx>
+                    <posy>480</posy>
+                    <width>1240</width>
+                    <font>DialogTextFont</font>
+                    <align>left</align>
+                    <label>$LOCALIZE[31914]:</label>
+                </control>
+                <control type="label">
+                    <posx>580</posx>
+                    <posy>520</posy>
+                    <width>1220</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>left</align>
+                    <label>$INFO[Window.Property(CustomAction.File)]</label>
+                </control>
+			</control>
+
+            <control type="group" description="Path Option Group">
+                <visible>StringCompare(Container(40).ListItem.Property(Parameter),P)</visible>
+            
+                <control type="label">
+                    <posx>560</posx>
+                    <posy>480</posy>
+                    <width>1240</width>
+                    <font>DialogTextFont</font>
+                    <align>left</align>
+                    <label>$LOCALIZE[31914]:</label>
+                </control>
+                <control type="label">
+                    <posx>580</posx>
+                    <posy>520</posy>
+                    <width>1220</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>left</align>
+                    <label>$INFO[Window.Property(CustomAction.Path)]</label>
+                </control>
+			</control>
+
+            <control type="group" description="Addon Option Group">
+                <visible>StringCompare(Container(40).ListItem.Property(Parameter),A)</visible>
+            
+                <control type="label">
+                    <posx>560</posx>
+                    <posy>480</posy>
+                    <width>1240</width>
+                    <font>DialogTextFont</font>
+                    <align>left</align>
+                    <label>$LOCALIZE[31914]:</label>
+                </control>
+                <control type="label">
+                    <posx>580</posx>
+                    <posy>520</posy>
+                    <width>1220</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>left</align>
+                    <label>$INFO[Window.Property(CustomAction.Addon)]</label>
+                </control>
+			</control>
+
+            <control type="group" description="String Option Group">
+                <visible>StringCompare(Container(40).ListItem.Property(Parameter),S)</visible>
+            
+                <control type="label">
+                    <posx>560</posx>
+                    <posy>480</posy>
+                    <width>1240</width>
+                    <font>DialogTextFont</font>
+                    <align>left</align>
+                    <label>$LOCALIZE[31914]:</label>
+                </control>
+                <control type="label">
+                    <posx>580</posx>
+                    <posy>520</posy>
+                    <width>1220</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>left</align>
+                    <label>$INFO[Window.Property(CustomAction.String)]</label>
+                </control>
+			</control>
+
+			<control type="label" description="Custom Action Label">
+				<posx>560</posx>
+				<posy>600</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31910]:</label>
+			</control>
+
+			<control type="button" id="39" description="Custom Action Label">
+				<enable>false</enable>
+				<posx>560</posx>
+				<posy>640</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<textcolor>TextColor</textcolor>
+				<align>left</align>
+				<label>$INFO[Container(40).ListItem.Property(Command)]</label>
+			</control>
+
+			<control type="group" id="9000">
+                <defaultcontrol>10</defaultcontrol>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>Noop</onleft>
+				<onright>31</onright>
+                
+				<control type="button" id="10" description="Choose Playlist Button">
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),L)</visible>
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[31881]</label>
+                    <onup>21</onup>
+                    <ondown>11</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+                    <onclick>Skin.SetFile(Dialog.Input)</onclick>
+                    <onclick>SetProperty(CustomAction.Playlist,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>Skin.Reset(Dialog.Input)</onclick>
+				</control>
+
+				<control type="button" id="11" description="Choose Image Button">
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),I)</visible>
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[31882]</label>
+                    <onup>10</onup>
+                    <ondown>12</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+                    <onclick>Skin.SetImage(Dialog.Input)</onclick>
+                    <onclick>SetProperty(CustomAction.Image,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>Skin.Reset(Dialog.Input)</onclick>
+				</control>
+
+				<control type="button" id="12" description="Choose File Button">
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),F)</visible>
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[31883]</label>
+                    <onup>11</onup>
+                    <ondown>13</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+                    <onclick>Skin.SetFile(Dialog.Input)</onclick>
+                    <onclick>SetProperty(CustomAction.File,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>Skin.Reset(Dialog.Input)</onclick>
+				</control>
+
+				<control type="button" id="13" description="Choose Path Button">
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),P)</visible>
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[31884]</label>
+                    <onup>12</onup>
+                    <ondown>14</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+                    <onclick>Skin.SetPath(Dialog.Input)</onclick>
+                    <onclick>SetProperty(CustomAction.Path,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>Skin.Reset(Dialog.Input)</onclick>
+				</control>
+
+				<control type="button" id="14" description="Choose Addon Button">
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),A)</visible>
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[31885]</label>
+                    <onup>13</onup>
+                    <ondown>15</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+                    <onclick>Skin.SetAddon(Dialog.Input)</onclick>
+                    <onclick>SetProperty(CustomAction.Addon,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>Skin.Reset(Dialog.Input)</onclick>
+				</control>
+
+				<control type="button" id="15" description="Choose String Button">
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),S)</visible>
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[31886]</label>
+                    <onup>14</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+                    <onclick>Skin.SetString(Dialog.Input)</onclick>
+                    <onclick>SetProperty(CustomAction.String,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>Skin.Reset(Dialog.Input)</onclick>
+				</control>
+
+				<control type="button" id="20" description="Ok Button">
+                    <posx>40</posx>
+                    <posy>600</posy>
+					<label>$LOCALIZE[186]</label>
+                    <onup>15</onup>
+                    <ondown>21</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+					<onclick>SetProperty($INFO[Window.Property(CustomAction.Action)],$INFO[Container(40).ListItem.Property(Command)],$INFO[Window.Property(CustomAction.Window)])</onclick>
+					<onclick>Close</onclick>
+				</control>
+
+				<control type="button" id="21" description="Cancel Button">
+                    <posx>40</posx>
+                    <posy>640</posy>
+					<label>$LOCALIZE[222]</label>
+                    <onup>20</onup>
+                    <ondown>10</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+					<onclick>Close</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

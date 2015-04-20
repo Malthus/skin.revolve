@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="0">
+	<defaultcontrol>200</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="button" id="200" description="Default Revolve Skin Settings Initialisation">
+			<visible>!Skin.HasSetting(RevolveConfiguration)</visible>
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+			<include>DefaultSettingsForSkinSettings</include>
+			<onfocus>SetFocus(300)</onfocus>
+		</control>
+
+		<control type="button" id="200" description="Default Revolve Skin Settings Evasion">
+			<visible>Skin.HasSetting(RevolveConfiguration)</visible>
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+			<onfocus>SetFocus(300)</onfocus>
+		</control>
+	
+		<include>GlobalBackground</include>
+
+		<control type="group" description="RSS">
+			<control type="image">
+				<visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>40</height>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+			<control type="rss" id="1" description="RSS Feed">
+				<visible>true</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>40</height>
+				<font>RSSFont</font>
+				<titlecolor>MainColor</titlecolor>
+				<headlinecolor>SecondaryColor</headlinecolor>
+				<textcolor>TextColor</textcolor>
+				<urlset>1</urlset>
+			</control>
+		</control>
+
+		<include>RingForHomeRevolveList</include>
+		<include>ListForHomeRevolveList</include>
+
+		<control type="wraplist" id="300" description="Invisible Home Wraplist">
+			<visible allowhiddenfocus="true">false</visible>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>1920</width>
+			<height>1000</height>
+			<focusposition>3</focusposition>
+			<defaultcontrol>8</defaultcontrol>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>600</onleft>
+			<onright>Noop</onright>
+
+			<itemlayout width="1920" height="200">
+				<control type="label">
+					<posx>960</posx>
+					<width>1920</width>
+					<height>200</height>
+					<font>DefaultListViewFont</font>
+					<textcolor>TextColor</textcolor>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1920" height="200">
+				<control type="label">
+					<posx>960</posx>
+					<width>1920</width>
+					<height>200</height>
+					<font>DefaultListViewFont</font>
+					<textcolor>MainColor</textcolor>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+
+			<content>
+				<include>HomeMenuItems</include>
+			</content>
+		</control>
+		
+		<control type="group" description="Clock">
+			<animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
+			<animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
+			
+			<include>BigClock</include>
+		</control>
+	</controls>
+</window>

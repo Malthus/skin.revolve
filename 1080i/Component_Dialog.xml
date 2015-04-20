@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="ItemsForInfoListInDialog" description="All Items For Info List In Dialog">
+		<itemlayout height="40">
+			<include>NormalItemsForInfoListInDialog</include>
+		</itemlayout>
+					
+		<focusedlayout height="40">
+			<include>NormalItemsForInfoListInDialog</include>
+		</focusedlayout>
+	</include>
+
+	<include name="NormalItemsForInfoListInDialog" description="Normal Items For Info List In Dialog">
+		<control type="label">
+			<posx>0</posx>
+			<width>300</width>
+			<height>40</height>
+			<font>DialogTextFont</font>
+			<textcolor>TextColor</textcolor>
+			<align>left</align>
+			<label>$INFO[ListItem.Label]</label>
+		</control>
+		<control type="label">
+			<posx>320</posx>
+			<width>900</width>
+			<height>40</height>
+			<font>DialogTextFont</font>
+			<textcolor>MainColor</textcolor>
+			<align>left</align>
+			<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForInfoListInDialog" description="Normal Items For Info List In Dialog">
+		<control type="image">
+			<posx>300</posx>
+			<width>940</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<width>300</width>
+			<height>40</height>
+			<font>DialogTextFont</font>
+			<textcolor>TextColor</textcolor>
+			<align>left</align>
+			<label>$INFO[ListItem.Label]</label>
+		</control>
+		<control type="label">
+			<posx>320</posx>
+			<width>900</width>
+			<height>40</height>
+			<font>DialogTextFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<align>left</align>
+			<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+		</control>
+	</include>
+	
+	<include name="MarkupForScrollbarForDialog">
+		<posx>1840</posx>
+		<texturesliderbackground border="0,14,0,14" colordiffuse="MainColor">controls/horizontalbar-thick.png</texturesliderbackground>
+		<texturesliderbar border="0,14,0,14" colordiffuse="FadeDiffuseColor">controls/horizontalbar-thin.png</texturesliderbar>
+		<texturesliderbarfocus border="0,14,0,14" colordiffuse="BackgroundColor">controls/horizontalbar-thin.png</texturesliderbarfocus>
+		<orientation>vertical</orientation>
+		<showonepage>false</showonepage>
+	</include>
+
+	<include name="UpperShadowForDialog">
+		<width>1920</width>
+		<height>40</height>
+		<fadetime>100</fadetime>
+		<aspectratio>stretch</aspectratio>
+		<texture fallback="white.png">elements/shadow-upperborder.png</texture>
+		<colordiffuse>BackgroundColor</colordiffuse>
+	</include>
+
+	<include name="LowerShadowForDialog">
+		<width>1920</width>
+		<height>40</height>
+		<fadetime>100</fadetime>
+		<aspectratio>stretch</aspectratio>
+		<texture fallback="white.png">elements/shadow-lowerborder.png</texture>
+		<colordiffuse>BackgroundColor</colordiffuse>
+	</include>
+
+    <constant name="PosYForSingleLineDialog">630</constant>
+	<include name="SingleLineDialog" description="Dialog For Title and a Single Line">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>140</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>140</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+<!--	
+    <constant name="PosYForTwoLinesDialogBand">450</constant>
+	<include name="TwoLinesDialogBand" description="Dialog For Title and Two Lines">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>180</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>180</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+-->	
+    <constant name="PosYForThreeLinesDialog">430</constant>
+	<include name="ThreeLinesDialog" description="Dialog For Title and Three Lines">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>220</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>220</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForFourLinesDialog">410</constant>
+	<include name="FourLinesDialog" description="Dialog For Title and Four Lines">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>260</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>260</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForSixLinesDialog">370</constant>
+	<include name="SixLinesDialog" description="Dialog For Title and Six Lines">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>340</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>340</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForTenLinesDialog">290</constant>
+	<include name="TenLinesDialog" description="Dialog For Title and Ten Lines">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>500</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>500</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForThirteenLinesDialog">230</constant>
+	<include name="ThirteenLinesDialog" description="Dialog For Title and Thirteen Lines">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>620</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+				
+			<control type="image">
+				<width>1920</width>
+				<height>620</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+
+    <constant name="PosYForFifteenLinesDialog">190</constant>
+	<include name="FifteenLinesDialog" description="Dialog For Title and Fifteen Lines">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>700</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>700</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForFullWindowDialog">90</constant>
+	<include name="FullWindowDialog" description="Huge Dialog (Title and Twenty Lines)">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>900</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>900</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForKeyboardDialogBand">270</constant>
+	<include name="KeyboardDialogBand" description="Dialog For Keyboard">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>540</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>540</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForMessageBand">500</constant>
+	<include name="MessageBand" description="Single Line Message">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>80</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>80</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForPauseMessageBand">690</constant>
+    <constant name="PosYForDefaultIconInMessageBand">490</constant>
+	<include name="DefaultIconInMessageBand" description="Message Band For Single Line, Progress Bar and Default Icon">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>100</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+			<control type="image">
+				<posx>90</posx>
+				<posy>-135</posy>
+				<width>370</width>
+				<height>370</height>
+				<texture>elements/circle-shadow.png</texture>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>100</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="group">
+				<posx>140</posx>
+				<posy>-85</posy>
+				<include>BusyIconFrame</include>
+			</control>
+		</control>
+	</include>
+
+    <constant name="PosYForDefaultIconInDialogBand">440</constant>
+	<include name="DefaultIconInDialogBand">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>200</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+			<control type="image">
+				<posx>90</posx>
+				<posy>-85</posy>
+				<width>370</width>
+				<height>370</height>
+				<texture>elements/circle-shadow.png</texture>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>200</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+			<control type="group">
+				<posx>140</posx>
+				<posy>-35</posy>
+				<include>BusyIconFrame</include>
+			</control>
+		</control>
+	</include>
+	
+    <constant name="PosYForDefaultIconInBigDialogBand">410</constant>
+	<include name="DefaultIconInBigDialogBand">
+		<control type="group">
+			<control type="image">
+			    <posx>0</posx>
+				<posy>-40</posy>
+				<include>UpperShadowForDialog</include>
+			</control>
+			<control type="image">
+			    <posx>0</posx>
+				<posy>260</posy>
+				<include>LowerShadowForDialog</include>
+			</control>
+			
+			<control type="image">
+				<posx>90</posx>
+				<posy>-140</posy>
+				<width>370</width>
+				<height>370</height>
+				<texture>elements/circle-shadow.png</texture>
+			</control>
+
+			<control type="image">
+				<width>1920</width>
+				<height>260</height>
+				<fadetime>100</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture colordiffuse="BackgroundColor">white.png</texture>
+			</control>
+			<control type="group">
+				<posx>140</posx>
+				<posy>-90</posy>
+				<include>BusyIconFrame</include>
+			</control>
+		</control>
+	</include>
+</includes>

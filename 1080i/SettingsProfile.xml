@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="34">
+	<defaultcontrol always="true">4</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>GlobalBackground</include>
+			
+	    <control type="group">
+			<include>CleanLeftRingForSettings</include>
+
+			<control type="radiobutton" id="4" description="Enable Login Screen Radiobutton">
+				<posx>700</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<align>left</align>
+				<label>20096</label>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<onup>2</onup>
+				<ondown>5</ondown>
+			</control>
+
+			<control type="button" id="5" description="Auto Login Button">
+				<posx>700</posx>
+				<posy>140</posy>
+				<width>1100</width>
+				<align>left</align>
+				<label>$LOCALIZE[33084] $INFO[System.ProfileAutoLogin]</label>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<onup>4</onup>
+				<ondown>2</ondown>
+			</control>
+
+			<control type="list" id="2" description="Logins List">
+				<posx>700</posx>
+				<posy>220</posy>
+				<width>1100</width>
+				<height>800</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>5</onup>
+				<ondown>4</ondown>
+
+				<itemlayout height="60">
+					<include>NormalItemsForProfileList</include>
+				</itemlayout>
+					
+				<focusedlayout height="60">
+					<control type="group">
+						<visible>Control.HasFocus(2)</visible>
+						<include>FocusedItemsForProfileList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(2)</visible>
+						<include>NormalItemsForProfileList</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>

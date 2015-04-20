@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2005">
+	<defaultcontrol>-</defaultcontrol>
+
+	<controls>
+		<control type="group">
+			<posy>200</posy>
+			<include>DefaultIconInDialogBand</include>
+			
+			<control type="group" description="Projector Dialog Icon">
+				<posx>PosXForBusyIconFrame</posx>
+				<posy>-30</posy>
+
+				<control type="image">
+					<width>262</width>
+					<height>262</height>
+					<texture colordiffuse="BackgroundColor">icons/icon-projector.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+
+			<control type="label" id="10" description="Label Row 1">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1300</width>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="11" description="Label Row 2">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1300</width>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="12" description="Label Row 3">
+				<posx>560</posx>
+				<posy>140</posy>
+				<width>1300</width>
+				<label>-</label>
+			</control>
+		</control>
+
+		<control type="group">
+			<control type="label">
+				<posx>-2</posx>
+				<posy>518</posy>
+				<width>1920</width>
+				<align>center</align>
+				<font>BigInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$INFO[Control(24).Label]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>518</posy>
+				<width>1920</width>
+				<align>center</align>
+				<font>BigInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$INFO[Control(24).Label]</label>
+			</control>
+			<control type="label">
+				<posx>-2</posx>
+				<posy>522</posy>
+				<width>1920</width>
+				<align>center</align>
+				<font>BigInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$INFO[Control(24).Label]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>522</posy>
+				<width>1920</width>
+				<align>center</align>
+				<font>BigInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$INFO[Control(24).Label]</label>
+			</control>
+			<control type="label" id="24" description="Buffering Label">
+				<posx>0</posx>
+				<posy>520</posy>
+				<width>1920</width>
+				<align>center</align>
+				<font>BigInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
+			</control>
+		</control>
+	</controls>
+</window>

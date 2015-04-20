@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">32</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>GlobalBackground</include>
+
+        <control type="group" id="42" description="Live TV Control Group">
+			<include>EPGTimelineViewForLiveTV</include>
+			<include>TVChannelViewForLiveTV</include>
+			<include>RadioChannelViewForLiveTV</include>
+			<include>RecordingsViewForLiveTV</include>
+			<include>TimersViewForLiveTV</include>
+			<include>SearchViewForLiveTV</include>
+			<include>TVGuideChannelViewForLiveTV</include>
+			<include>TVGuideNowAndNextViewForLiveTV</include>
+        </control>
+
+		<control type="group" description="Clock Label">
+			<posx>1880</posx>
+			<posy>40</posy>
+			<include>DefaultClock</include>
+        </control>
+
+		<control type="group" description="Channel Group Label">
+			<control type="label" id="29" description="Empty Label To Receive Channel Type">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30" description="Empty Label to Receive Channel Group">
+				<visible>false</visible>
+			</control>
+
+			<control type="group">
+				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
+				
+				<control type="label">
+					<posx>1123</posx>
+					<posy>98</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DialogTitleFont</font>
+					<label>$INFO[Control.GetLabel(29),,:]</label>
+				</control>
+				<control type="label">
+					<posx>1127</posx>
+					<posy>98</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DialogTitleFont</font>
+					<label>$INFO[Control.GetLabel(29),,:]</label>
+				</control>
+				<control type="label">
+					<posx>1123</posx>
+					<posy>102</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DialogTitleFont</font>
+					<label>$INFO[Control.GetLabel(29),,:]</label>
+				</control>
+				<control type="label">
+					<posx>1127</posx>
+					<posy>102</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DialogTitleFont</font>
+					<label>$INFO[Control.GetLabel(29),,:]</label>
+				</control>
+				<control type="label">
+					<posx>1125</posx>
+					<posy>100</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>TextColor</textcolor>
+					<font>DialogTitleFont</font>
+					<label>$INFO[Control.GetLabel(29),,:]</label>
+				</control>
+				
+				<control type="label">
+					<posx>1123</posx>
+					<posy>138</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DefaultListViewFont</font>
+					<label>$INFO[Control.GetLabel(30)]</label>
+				</control>
+				<control type="label">
+					<posx>1127</posx>
+					<posy>138</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DefaultListViewFont</font>
+					<label>$INFO[Control.GetLabel(30)]</label>
+				</control>
+				<control type="label">
+					<posx>1123</posx>
+					<posy>142</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DefaultListViewFont</font>
+					<label>$INFO[Control.GetLabel(30)]</label>
+				</control>
+				<control type="label">
+					<posx>1127</posx>
+					<posy>142</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>BackgroundColor</textcolor>
+					<font>DefaultListViewFont</font>
+					<label>$INFO[Control.GetLabel(30)]</label>
+				</control>
+				<control type="label">
+					<posx>1125</posx>
+					<posy>140</posy>
+					<width>720</width>
+					<height>40</height>
+					<textcolor>TextColor</textcolor>
+					<font>DefaultListViewFont</font>
+					<label>$INFO[Control.GetLabel(30)]</label>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="9000">
+			<include>SideMenu</include>
+
+			<control type="grouplist" id="9001">
+				<posx>24</posx>
+				<posy>20</posy>
+				<width>482</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onleft>-</onleft>
+				<onright>42</onright>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<orientation>vertical</orientation>
+
+				<include>TVGuideButtonForSideMenu</include>
+				<include>TVChannelsButtonForSideMenu</include>
+				<include>RadioChannelsButtonForSideMenu</include>
+				<include>RecordingsButtonForSideMenu</include>
+				<include>TimersButtonForSideMenu</include>
+				<include>PVRSearchButtonForSideMenu</include>
+			</control>
+
+			<control type="group" description="Player Controls">
+				<visible>Player.HasMedia</visible>
+				<posx>PosXForCircleControlsForPlayer</posx>
+				<posy>PosYForCircleControlsForPlayer</posy>
+				<include>CircleControlsForPlayer</include>
+			</control>
+		</control>
+	</controls>
+</window>

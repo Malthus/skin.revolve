@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="129">
+	<defaultcontrol always="true">15</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForFourLinesDialog</posy>
+			<include>FourLinesDialog</include>
+
+			<control type="group" description="Smart Playlist Dialog Icon">
+				<posx>PosXForDialogIconFrame</posx>
+				<posy>PosYForDialogIconFrame</posy>
+				<include>DialogIconFrame</include>
+				
+				<control type="image">
+					<width>98</width>
+					<height>98</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-musicnote.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>21421</label>
+			</control>
+
+			<control type="label" description="Rule Match Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<align>left</align>
+				<label>21422</label>
+			</control>
+
+			<control type="spincontrolex" id="15" description="Rule Field Spinner">
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<align>left</align>
+				<onright>-</onright>
+				<onleft>18</onleft>
+				<onup>17</onup>
+				<ondown>16</ondown>
+			</control>
+
+			<control type="spincontrolex" id="16" description="Rule Operator Spinner">
+				<posx>560</posx>
+				<posy>160</posy>
+				<width>1240</width>
+				<align>left</align>
+				<onright>-</onright>
+				<onleft>18</onleft>
+				<onup>15</onup>
+				<ondown>17</ondown>
+			</control>
+	
+			<control type="button" id="17" description="Value Button">
+				<posx>560</posx>
+				<posy>200</posy>
+				<width>740</width>
+				<texturenofocus colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texturenofocus>
+				<label>-</label>
+				<onup>16</onup>
+				<onleft>19</onleft>
+				<onright>20</onright>
+				<ondown>15</ondown>
+			</control>
+
+			<control type="button" id="20" description="Browse Button">
+				<posx>1320</posx>
+				<posy>200</posy>
+				<width>480</width>
+				<label>1024</label>
+				<onup>16</onup>
+				<ondown>15</ondown>
+				<onleft>17</onleft>
+				<onright>-</onright>
+			</control>
+
+			<control type="group" id="9000">
+				<control type="button" id="18" description="Ok Button">
+					<posx>40</posx>
+					<posy>160</posy>
+					<label>186</label>
+					<onup>19</onup>
+					<onleft>-</onleft>
+					<onright>16</onright>
+					<ondown>19</ondown>
+				</control>
+
+				<control type="button" id="19" description="Cancel Button">
+					<posx>40</posx>
+					<posy>200</posy>
+					<label>222</label>
+					<onup>18</onup>
+					<onleft>-</onleft>
+					<onright>17</onright>
+					<ondown>18</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

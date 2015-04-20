@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="EPGTimelineViewForLiveTV">
+		<control type="group" description="TV Guide Timeline View">
+			<visible>Control.IsVisible(10)</visible>
+
+			<control type="epggrid" id="10" description="EPG Grid">
+				<posx>40</posx>
+				<posy>100</posy>
+				<width>1840</width>
+				<height>839</height>
+				<pagecontrol>10</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<progresstexture colordiffuse="SelectColor" border="20">white.png</progresstexture>
+				<timeblocks>20</timeblocks>
+				<rulerunit>6</rulerunit>
+				<onleft>31</onleft>
+				<onright>31</onright>
+				<onup>9000</onup>
+				<ondown>Noop</ondown>
+				<onback>50</onback>
+				
+				<rulerlayout height="40" width="60" description="EPG Header Row">
+					<control type="image" id="1">
+						<width>60</width>
+						<height>40</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+					</control>
+					<control type="label" id="2">
+						<posx>8</posx>
+						<posy>0</posy>
+						<width>60</width>
+						<height>40</height>
+						<align>left</align>
+						<textcolor>BackgroundColor</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</rulerlayout>
+				
+				<channellayout height="80" width="480" description="Normal EPG First Column">
+					<control type="image">					
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>480</width>
+						<height>80</height>
+						<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>480</width>
+						<height>80</height>
+						<texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>80</height>
+						<align>left</align>
+						<textcolor>TextColor</textcolor>
+						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+					</control>
+				    <control type="group">
+						<posx>405</posx>
+						<posy>5</posy>
+						<include>TinyCircleThumbnailIcon</include>
+					</control>
+				</channellayout>
+				
+				<focusedchannellayout height="80" width="480" description="Focused EPG First Column">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>500</width>
+						<height>100</height>
+						<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>100</height>
+						<align>left</align>
+						<textcolor>BackgroundColor</textcolor>
+						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+					</control>
+				    <control type="group">
+						<posx>405</posx>
+						<posy>15</posy>
+						<include>TinyCircleThumbnailIcon</include>
+					</control>
+				</focusedchannellayout>
+				
+				<itemlayout height="80" width="60" description="Normal EPG Row">
+					<control type="image" id="2">
+						<width>60</width>
+						<height>80</height>
+						<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+					</control>
+					<control type="label" id="1">
+						<posx>8</posx>
+						<posy>0</posy>
+						<width>44</width>
+						<height>80</height>
+						<align>left</align>
+						<textcolor>MainColor</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				
+				<focusedlayout height="80" width="60" description="Focused EPG Row">
+					<control type="image" id="2">
+						<posy>0</posy>
+						<width>60</width>
+						<height>100</height>
+						<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+					</control>
+					<control type="label" id="1">
+						<posx>8</posx>
+						<posy>0</posy>
+						<width>44</width>
+						<height>100</height>
+						<textcolor>BackgroundColor</textcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="group" description="Bottom Ring">
+				<visible>Control.IsVisible(10)</visible>
+				<include>BottomRing</include>
+			</control>
+		</control>
+	</include>
+  
+	<include name="TVChannelViewForLiveTV">
+		<control type="group" description="Live TV Channels Group View">
+			<visible>Control.IsVisible(11)</visible>
+
+			<include>PreviewForLiveTV</include>
+			
+			<control type="group" description="TV Channels List">
+				<control type="fixedlist" id="11">
+					<posx>795</posx>
+					<posy>-121</posy>
+					<width>960</width>
+					<height>1250</height>
+					<onleft>9000</onleft>
+					<onright>71</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<pagecontrol>71</pagecontrol>
+					<viewtype label="537">list</viewtype>
+					<focusposition>1</focusposition>
+		  
+					<include>NormalListItemForDropListView</include>
+					<include>FocusedListItemForDropListView</include>
+				</control>
+			</control>
+			
+			<include>ContentCategoryForDropListView</include>
+			<include>ContentNameForDropListView</include>
+			<include>ContentDetailForDropListView</include>
+			<include>ContentMediaFlagsForDropListView</include>
+			<include>ContentDescriptionForDropListView</include>
+			
+			<control type="scrollbar" id="71" description="Scrollbar">
+				<visible allowhiddenfocus="true">true</visible>
+				<animation type="Conditional" condition="!Control.HasFocus(71) + !Container(11).Scrolling">
+					<effect type="slide" start="0,0" end="100,0" time="100" />
+				</animation>
+
+				<posx>1860</posx>
+				<posy>100</posy>
+				<height>700</height>
+				<onleft>11</onleft>
+				<onright>-</onright>
+			</control>
+		</control>
+	</include>
+  
+	<include name="RadioChannelViewForLiveTV">
+		<control type="group" description="Radio Channels Group View">
+			<visible>Control.IsVisible(12)</visible>
+
+			<include>PreviewForLiveTV</include>
+			
+			<control type="group" description="Radio Channels List">
+				<control type="fixedlist" id="12">
+					<posx>795</posx>
+					<posy>-121</posy>
+					<width>960</width>
+					<height>1250</height>
+					<onleft>9000</onleft>
+					<onright>72</onright>
+					<onup>12</onup>
+					<ondown>12</ondown>
+					<pagecontrol>72</pagecontrol>
+					<viewtype label="537">list</viewtype>
+					<focusposition>1</focusposition>
+		  
+					<include>NormalListItemForDropListView</include>
+					<include>FocusedListItemForDropListView</include>
+				</control>
+			</control>
+			
+			<include>ContentCategoryForDropListView</include>
+			<include>ContentNameForDropListView</include>
+			<include>ContentDetailForDropListView</include>
+			<include>ContentMediaFlagsForDropListView</include>
+			<include>ContentDescriptionForDropListView</include>
+			
+			<control type="scrollbar" id="72" description="Scrollbar">
+				<visible allowhiddenfocus="true">true</visible>
+				<animation type="Conditional" condition="!Control.HasFocus(72) + !Container(12).Scrolling">
+					<effect type="slide" start="0,0" end="100,0" time="100" />
+				</animation>
+
+				<posx>1860</posx>
+				<posy>100</posy>
+				<height>700</height>
+				<onleft>12</onleft>
+				<onright>-</onright>
+			</control>
+		</control>
+	</include>
+
+	<include name="RecordingsViewForLiveTV">
+		<control type="group" description="Recordings Group View">
+			<visible>Control.IsVisible(13)</visible>
+
+			<control type="group" description="Recording Preview">
+				<visible>!Player.HasVideo</visible>
+				<posx>40</posx>
+				<posy>260</posy>
+				<include>HorizontalPosterIcon</include>
+			</control>
+			
+			<control type="group" description="Recordings List">
+				<control type="fixedlist" id="13">
+					<posx>795</posx>
+					<posy>-121</posy>
+					<width>960</width>
+					<height>1250</height>
+					<onleft>9000</onleft>
+					<onright>73</onright>
+					<onup>13</onup>
+					<ondown>13</ondown>
+					<pagecontrol>73</pagecontrol>
+					<viewtype label="537">list</viewtype>
+					<focusposition>1</focusposition>
+		  
+					<include>NormalListItemForDropListView</include>
+					<include>FocusedListItemForDropListView</include>
+				</control>
+			</control>
+			
+			<include>ContentCategoryForDropListView</include>
+			<include>ContentNameForDropListView</include>
+			<include>ContentDetailForDropListView</include>
+			<include>ContentMediaFlagsForDropListView</include>
+			<include>ContentDescriptionForDropListView</include>
+			
+			<control type="scrollbar" id="73" description="Scrollbar">
+				<visible allowhiddenfocus="true">true</visible>
+				<animation type="Conditional" condition="!Control.HasFocus(73) + !Container(13).Scrolling">
+					<effect type="slide" start="0,0" end="100,0" time="100" />
+				</animation>
+
+				<posx>1860</posx>
+				<posy>100</posy>
+				<height>700</height>
+				<onleft>13</onleft>
+				<onright>-</onright>
+			</control>
+		</control>
+	</include>
+  
+	<include name="TimersViewForLiveTV">
+		<control type="group" description="Timers View">
+			<visible>Control.IsVisible(14)</visible>
+
+			<control type="group" description="Timers List">
+				<control type="fixedlist" id="14">
+					<posx>795</posx>
+					<posy>-121</posy>
+					<width>960</width>
+					<height>1250</height>
+					<onleft>9000</onleft>
+					<onright>74</onright>
+					<onup>14</onup>
+					<ondown>14</ondown>
+					<pagecontrol>74</pagecontrol>
+					<viewtype label="537">list</viewtype>
+					<focusposition>1</focusposition>
+		  
+					<include>NormalListItemForDropListView</include>
+					<include>FocusedListItemForDropListView</include>
+				</control>
+			</control>
+			
+			<include>ContentCategoryForDropListView</include>
+			<include>ContentNameForDropListView</include>
+			<include>ContentDetailForDropListView</include>
+			<include>ContentDescriptionForDropListView</include>
+			
+			<control type="scrollbar" id="74" description="Scrollbar">
+				<visible allowhiddenfocus="true">true</visible>
+				<animation type="Conditional" condition="!Control.HasFocus(74) + !Container(14).Scrolling">
+					<effect type="slide" start="0,0" end="100,0" time="100" />
+				</animation>
+
+				<posx>1860</posx>
+				<posy>100</posy>
+				<height>700</height>
+				<onleft>14</onleft>
+				<onright>-</onright>
+			</control>
+		</control>
+	</include>
+  
+	<include name="SearchViewForLiveTV">
+	    <control type="group" description="Search View">
+			<visible>Control.IsVisible(17)</visible>
+
+			<control type="group" description="Timers List">
+				<control type="fixedlist" id="17">
+					<posx>795</posx>
+					<posy>-121</posy>
+					<width>960</width>
+					<height>1250</height>
+					<onleft>9000</onleft>
+					<onright>77</onright>
+					<onup>17</onup>
+					<ondown>17</ondown>
+					<pagecontrol>77</pagecontrol>
+					<viewtype label="537">list</viewtype>
+					<focusposition>1</focusposition>
+		  
+					<include>NormalListItemForDropListView</include>
+					<include>FocusedListItemForDropListView</include>
+				</control>
+			</control>
+			
+			<include>ContentCategoryForDropListView</include>
+			<include>ContentNameForDropListView</include>
+			<include>ContentDetailForDropListView</include>
+			<include>ContentMediaFlagsForDropListView</include>
+			<include>ContentDescriptionForDropListView</include>
+			
+			<control type="scrollbar" id="77" description="Scrollbar">
+				<visible allowhiddenfocus="true">true</visible>
+				<animation type="Conditional" condition="!Control.HasFocus(77) + !Container(17).Scrolling">
+					<effect type="slide" start="0,0" end="100,0" time="100" />
+				</animation>
+
+				<posx>1860</posx>
+				<posy>100</posy>
+				<height>700</height>
+				<onleft>17</onleft>
+				<onright>-</onright>
+			</control>
+		</control>
+	</include>
+  
+	<include name="TVGuideChannelViewForLiveTV">  
+		<control type="group" description="EPG Channel View">
+			<visible>Control.IsVisible(15)</visible>
+
+			<include>PreviewForLiveTV</include>
+			
+			<control type="group" description="TV Guide Channel List">
+				<control type="fixedlist" id="15">
+					<posx>795</posx>
+					<posy>-121</posy>
+					<width>960</width>
+					<height>1250</height>
+					<onleft>9000</onleft>
+					<onright>75</onright>
+					<onup>15</onup>
+					<ondown>15</ondown>
+					<pagecontrol>75</pagecontrol>
+					<viewtype label="537">list</viewtype>
+					<focusposition>1</focusposition>
+		  
+					<include>NormalListItemForDropListView</include>
+					<include>FocusedListItemForDropListView</include>
+				</control>
+			</control>
+			
+			<include>ContentCategoryForDropListView</include>
+			<include>ContentNameForDropListView</include>
+			<include>ContentDetailForDropListView</include>
+			<include>ContentMediaFlagsForDropListView</include>
+			<include>ContentDescriptionForDropListView</include>
+			
+			<control type="scrollbar" id="75" description="Scrollbar">
+				<visible allowhiddenfocus="true">true</visible>
+				<animation type="Conditional" condition="!Control.HasFocus(75) + !Container(15).Scrolling">
+					<effect type="slide" start="0,0" end="100,0" time="100" />
+				</animation>
+
+				<posx>1860</posx>
+				<posy>100</posy>
+				<height>700</height>
+				<onleft>15</onleft>
+				<onright>-</onright>
+			</control>
+		</control>
+	</include>
+  
+	<include name="TVGuideNowAndNextViewForLiveTV">
+		<control type="group" description="EPG Now And Next View">
+			<visible>Control.IsVisible(16)</visible>
+
+			<include>PreviewForLiveTV</include>
+			
+			<control type="group" description="TV Guide Now And Next List">
+				<control type="fixedlist" id="16">
+					<posx>795</posx>
+					<posy>-121</posy>
+					<width>960</width>
+					<height>1250</height>
+					<onleft>9000</onleft>
+					<onright>76</onright>
+					<onup>16</onup>
+					<ondown>16</ondown>
+					<pagecontrol>76</pagecontrol>
+					<viewtype label="537">list</viewtype>
+					<focusposition>1</focusposition>
+		  
+					<include>NormalListItemForDropListView</include>
+					<include>FocusedListItemForDropListView</include>
+				</control>
+			</control>
+			
+			<include>ContentCategoryForDropListView</include>
+			<include>ContentNameForDropListView</include>
+			<include>ContentDetailForDropListView</include>
+			<include>ContentMediaFlagsForDropListView</include>
+			<include>ContentDescriptionForDropListView</include>
+			
+			<control type="scrollbar" id="76" description="Scrollbar">
+				<visible allowhiddenfocus="true">true</visible>
+				<animation type="Conditional" condition="!Control.HasFocus(76) + !Container(16).Scrolling">
+					<effect type="slide" start="0,0" end="100,0" time="100" />
+				</animation>
+
+				<posx>1860</posx>
+				<posy>100</posy>
+				<height>700</height>
+				<onleft>16</onleft>
+				<onright>-</onright>
+			</control>
+		</control>
+	</include>
+	
+	<include name="PreviewForLiveTV">
+		<control type="group" description="Live TV Preview">
+			<posx>40</posx>
+			<posy>260</posy>
+
+			<control type="group" description="Banner Thumbnail">
+				<visible>!Player.HasVideo</visible>
+				<include>ShadowForHorizontalPosterIcon</include>
+				<include>HorizontalPosterIcon</include>
+				<include>OverlayForHorizontalPosterIcon</include>
+			</control>
+			
+			<control type="group" description="Live TV">
+				<visible>Player.HasVideo</visible>
+
+				<include>ShadowForHorizontalPosterIcon</include>
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>764</width>
+					<height>520</height>
+					<fadetime>100</fadetime>
+					<texture colordiffuse="Black" border="30" fallback="white.png">elements/poster-mask.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="videowindow">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>760</width>
+					<height>516</height>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>772</width>
+					<height>528</height>
+					<fadetime>100</fadetime>
+					<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-thickborder.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

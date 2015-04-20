@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="101">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForMultiLineDialogForProgressBar</posy>
+			<include>MultiLineDialogForProgressBar</include>
+
+			<control type="label" id="1" description="Progress Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>-</label>
+			</control>
+
+			<control type="textbox" id="9" description="Progress Message Area">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>120</height>
+				<font>DialogTextFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>-</label>
+			</control>
+
+			<control type="group" description="Progress Bar">
+				<posx>560</posx>
+				<posy>200</posy>
+				<include>ProgressBarForProgressBar</include>
+			</control>
+			
+			<control type="button" id="10" description="Cancel Button">
+				<posx>40</posx>
+				<posy>200</posy>
+				<width>480</width>
+				<label>106</label>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

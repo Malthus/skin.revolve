@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="2002">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThreeLinesDialog</posy>
+			<include>ThreeLinesDialog</include>
+			
+			<control type="group" description="Dialog Icon (!)">
+				<posx>PosXForDialogIconFrame</posx>
+				<posy>PosYForDialogIconFrame</posy>
+				<include>DialogIconFrame</include>
+			  
+				<control type="label">
+					<posx>32</posx>
+					<posy>30</posy>
+					<width>40</width>
+					<height>40</height>
+					<label>31905</label>
+					<font>StatusFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<align>center</align>
+				</control>
+			</control>
+
+			<control type="label" id="1" description="Dialog Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>-</label>
+			</control>
+
+			<control type="textbox" id="9" description="Message Area">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>120</height>
+				<font>DialogTextFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>-</label>
+			</control>
+
+			<control type="button" id="10" description="Ok Button">
+				<posx>40</posx>
+				<posy>160</posy>
+				<width>480</width>
+				<label>186</label>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

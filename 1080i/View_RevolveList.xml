@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="RevolveListView">
+		<control type="fixedlist" id="54" description="Invisible Revolve List (for mouse control)">
+			<viewtype label="31934">list</viewtype>
+			<visible allowhiddenfocus="true">true</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="Container(54).Scrolling">conditional</animation>
+			
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1020</height>
+			<pagecontrol>64</pagecontrol>
+			<focusposition>5</focusposition>
+			<scrolltime>200</scrolltime>
+			<onup>54</onup>
+			<ondown>54</ondown>
+			<onleft>9000</onleft>
+			<onright>64</onright>
+
+			<itemlayout width="1920" height="185">
+				<control type="label">
+					<visible>false</visible>
+					<posx>0</posx>
+					<height>185</height>
+					<width>1920</width>
+					<font>SmallListItemFont</font>
+					<textcolor>TextColor</textcolor>
+					<align>center</align>
+					<label>$VAR[ContentNameLabel]</label>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1920" height="185">
+				<control type="label">
+					<visible>false</visible>
+					<posx>0</posx>
+					<height>185</height>
+					<width>1920</width>
+					<font>SmallListItemFont</font>
+					<textcolor>MainColor</textcolor>
+					<align>center</align>
+					<label>$VAR[ContentNameLabel]</label>
+				</control>
+			</focusedlayout>			
+		</control>
+		
+		<include>MainRevolveListView</include>
+	</include>
+			
+	<include name="MainRevolveListView">
+		<control type="group" description="Left Ring (poster/thumb, plot, labels)">
+			<visible>Control.IsVisible(54)</visible>
+			<include>LeftRing</include>
+		</control>
+		
+		<control type="group">
+			<visible>Control.IsVisible(54)</visible>
+			<animation effect="rotate" tween="quadratic" easing="out" center="0,773" start="180" end="360" time="1000" reversible="false">WindowOpen</animation>
+			<animation effect="rotate" tween="quadratic" easing="in" center="0,773" start="360" end="180" time="1000" reversible="false">WindowClose</animation>
+			<animation effect="fade" start="100" end="30" time="500" condition="!Control.HasFocus(54)">conditional</animation>
+			
+			<control type="label">
+				<posx>864</posx>
+				<posy>644</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentCategoryLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>866</posx>
+				<posy>644</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentCategoryLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>864</posx>
+				<posy>646</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentCategoryLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>866</posx>
+				<posy>646</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentCategoryLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label" description="Top Label">
+				<posx>865</posx>
+				<posy>645</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[ContentCategoryLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>864</posx>
+				<posy>754</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDetailLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>866</posx>
+				<posy>754</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDetailLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>864</posx>
+				<posy>756</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDetailLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>866</posx>
+				<posy>756</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDetailLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label" description="Bottom Label">
+				<posx>865</posx>
+				<posy>755</posy>
+				<height>100</height>
+				<width>1000</width>
+				<font>HomeMenuDetailFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[ContentDetailLabel]</label>
+				<align>left</align>
+			</control>
+		</control>
+
+		<include>ItemsForRevolveListView</include>
+
+		<control type="scrollbar" id="64" description="Scrollbar">
+			<visible allowhiddenfocus="true">Control.IsVisible(54)</visible>
+			<animation type="Conditional" condition="!Control.HasFocus(64) + !Container(54).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
+				<effect type="slide" start="0,0" end="60,0" time="100" />
+			</animation>
+			<animation type="Conditional" condition="!Control.HasFocus(64) + !Container(54).Scrolling + Skin.HasSetting(ViewScrollbar.Visible)">
+				<effect type="slide" start="0,0" end="30,0" time="100" />
+			</animation>
+
+			<posx>1860</posx>
+			<posy>100</posy>
+			<height>760</height>
+			<onleft>54</onleft>
+			<onright>-</onright>
+		</control>
+	</include>
+
+	<include name="ItemsForRevolveListView">
+		<control type="group">
+			<visible>Control.IsVisible(54)</visible>
+			<animation effect="rotate" tween="quadratic" easing="out" center="0,773" start="180" end="360" time="1000" reversible="false">WindowOpen</animation>
+			<animation effect="rotate" tween="quadratic" easing="in" center="0,773" start="360" end="180" time="1000" reversible="false">WindowClose</animation>
+			<animation effect="fade" start="100" end="30" time="500" condition="!Control.HasFocus(54)">Conditional</animation>
+			
+			<control type="group" id="301">
+				<visible>Container.OnNext</visible>
+				<animation type="Hidden" reversible="false">
+					<effect type="rotate" center="0,773" start="0" end="13" time="250"/>
+				</animation>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="52" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnNext</visible>
+						<animation effect="zoom" center="860,750" end="20">Visible</animation>
+						<animation effect="zoom" center="860,750" start="20" end="0" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusFiveLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="39" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnNext</visible>
+						<animation effect="zoom" center="860,750" end="34">Visible</animation>
+						<animation effect="zoom" center="860,750" start="34" end="20" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusFourLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="26" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnNext</visible>
+						<animation effect="zoom" center="860,750" end="52">Visible</animation>
+						<animation effect="zoom" center="860,750" start="52" end="34" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusThreeLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="13" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnNext</visible>
+						<animation effect="zoom" center="860,750" end="80">Visible</animation>
+						<animation effect="zoom" center="860,750" start="80" end="52" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusTwoLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<control type="label">
+						<visible>Container.OnNext</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusFourLabel]</label>
+					</control>
+					
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>MainColor</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[ContentWrapMinusOneLabel]</label>
+						<align>left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<visible>Container.OnNext</visible>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-13" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnNext</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentOnOriginLabel]l</label>
+					</control>
+					
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>MainColor</textcolor>
+						<scroll>true</scroll>
+						<info>Container.ListItem(0).Label</info>
+						<align>left</align>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<visible>Container.OnNext</visible>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-26" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnNext</visible>
+						<animation effect="zoom" center="860,750" end="52">Visible</animation>
+						<animation effect="zoom" center="860,750" start="52" end="80" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapPlusOneLabel]</label>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group" id="302">
+				<visible>Container.OnPrevious</visible>
+				<animation type="Hidden" reversible="false">
+					<effect type="rotate" center="0,773" start="0" end="-13" time="250"/>
+				</animation>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="65" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation effect="zoom" center="860,750" end="0">Visible</animation>
+						<animation effect="zoom" center="860,750" start="0" end="20" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusFourLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="52" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation effect="zoom" center="860,750" end="20">Visible</animation>
+						<animation effect="zoom" center="860,750" start="20" end="34" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusThreeLabel]</label>
+					</control>
+				</control>
+
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="39" condition="true">Conditional</animation>
+					<control type="label">
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<visible>Container.OnPrevious</visible>
+						<animation effect="zoom" center="860,750" end="34">Visible</animation>
+						<animation effect="zoom" center="860,750" start="34" end="52" time="250" reversible="false">Hidden</animation>
+						<label>$VAR[ContentWrapMinusTwoLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="26" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation effect="zoom" center="860,750" end="52">Visible</animation>
+						<animation effect="zoom" center="860,750" start="52" end="80" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusOneLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="13" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentOnOriginLabel]</label>
+					</control>
+					
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="80"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>MainColor</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<label>$VAR[ContentNameLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="100"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="100" end="0" time="250"/>
+						</animation>
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>MainColor</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<label>$VAR[ContentWrapPlusOneLabel]</label>
+					</control>
+					
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation type="Visible" reversible="false">
+							<effect type="zoom" center="860,750" end="100"/>
+							<effect type="fade" end="0"/>
+						</animation>
+						<animation type="Hidden" reversible="false">
+							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
+							<effect type="fade" start="0" end="100" time="250"/>
+						</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapPlusOneLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-13" condition="true">Conditional</animation>
+					<control type="label">
+						<visible>Container.OnPrevious</visible>
+						<animation effect="zoom" center="860,750" end="80">Visible</animation>
+						<animation effect="zoom" center="860,750" start="80" end="60" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapPlusTwoLabel]</label>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group" id="303">
+				<visible>!Control.IsVisible(301) + !Control.IsVisible(302)</visible>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="52" condition="true">Conditional</animation>
+					<control type="label">
+						<animation effect="zoom" center="860,750" end="20" condition="true">Conditional</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusFourLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="39" condition="true">Conditional</animation>
+					<control type="label">
+						<animation effect="zoom" center="860,750" end="34" condition="true">Conditional</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusThreeLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="26" condition="true">Conditional</animation>
+					<control type="label">
+						<animation effect="zoom" center="860,750" end="52" condition="true">Conditional</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusTwoLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="13" condition="true">Conditional</animation>
+					<control type="label">
+						<animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapMinusOneLabel]</label>
+					</control>
+				</control>
+				
+				<control type="group">
+					<control type="label">
+						<posx>858</posx>
+						<posy>698</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>BackgroundColor</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[ContentNameLabel]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>862</posx>
+						<posy>698</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>BackgroundColor</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[ContentNameLabel]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>858</posx>
+						<posy>702</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>BackgroundColor</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[ContentNameLabel]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>862</posx>
+						<posy>702</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>BackgroundColor</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[ContentNameLabel]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>$VAR[ContentMainColor]</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[ContentNameLabel]</label>
+						<align>left</align>
+					</control>
+				</control>
+				
+				<control type="group">
+					<animation effect="rotate" center="0,773" end="-13" condition="true">Conditional</animation>
+					<control type="label">
+						<include>NormalListItemMarkupForRevolveListView</include>
+						<label>$VAR[ContentWrapPlusOneLabel]</label>
+						<animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	
+	<include name="NormalListItemMarkupForRevolveListView">
+		<posx>860</posx>
+		<posy>700</posy>
+		<height>100</height>
+		<width>1000</width>
+		<font>RevolveViewFont</font>
+		<textcolor>TextColor</textcolor>
+		<align>left</align>
+		<scroll>false</scroll>
+	</include>
+</includes>

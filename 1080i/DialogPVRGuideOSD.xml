@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="611">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<control type="fixedlist" id="11" description="Program List">
+				<posx>0</posx>
+				<posy>920</posy>
+				<width>1920</width>
+				<height>120</height>
+				<focusposition>0</focusposition>
+				<itemgap>0</itemgap>
+				<scrolltime>200</scrolltime>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				
+				<itemlayout width="1920" height="0">
+					<control type="label">
+						<posx>323</posx>
+						<width>1500</width>
+						<height>0</height>
+						<font>-</font>
+						<textcolor>MainColor</textcolor>
+						<align>left</align>
+						<label>$VAR[ContentNameLabel]</label>
+					</control>
+				</itemlayout>
+				
+				<focusedlayout width="1920" height="120">
+					<control type="label">
+						<posx>323</posx>
+						<width>1500</width>
+						<height>120</height>
+						<font>-</font>
+						<textcolor>MainColor</textcolor>
+						<align>left</align>
+						<label>$VAR[ContentNameLabel]</label>
+					</control>
+				</focusedlayout>				
+			</control>
+			
+			<control type="group">
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="500" />
+				</animation>
+
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="500" />
+				</animation>
+			
+				<control type="label">
+					<posx>323</posx>
+					<posy>928</posy>
+					<width>1500</width>
+					<align>left</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>327</posx>
+					<posy>928</posy>
+					<width>1500</width>
+					<align>left</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>323</posx>
+					<posy>932</posy>
+					<width>1500</width>
+					<align>left</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>327</posx>
+					<posy>932</posy>
+					<width>1500</width>
+					<align>left</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>325</posx>
+					<posy>930</posy>
+					<width>1500</width>
+					<align>left</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
+				</control>
+					<control type="label">
+					<posx>323</posx>
+					<posy>973</posy>
+					<width>1500</width>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>BigInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>327</posx>
+					<posy>973</posy>
+					<width>1500</width>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>BigInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>323</posx>
+					<posy>977</posy>
+					<width>1500</width>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>BigInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>327</posx>
+					<posy>977</posy>
+					<width>1500</width>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>BigInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>325</posx>
+					<posy>975</posy>
+					<width>1500</width>
+					<scroll>true</scroll>
+					<align>left</align>
+					<font>BigInformationFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
+				</control>
+	
+				<control type="label">
+					<posx>323</posx>
+					<posy>1013</posy>
+					<width>200</width>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.StartTime]</label>
+				</control>
+				<control type="label">
+					<posx>327</posx>
+					<posy>1013</posy>
+					<width>200</width>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.StartTime]</label>
+				</control>
+				<control type="label">
+					<posx>323</posx>
+					<posy>1017</posy>
+					<width>200</width>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.StartTime]</label>
+				</control>
+				<control type="label">
+					<posx>327</posx>
+					<posy>1017</posy>
+					<width>200</width>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.StartTime]</label>
+				</control>
+				<control type="label" description="Program Start Time Label">
+					<posx>325</posx>
+					<posy>1015</posy>
+					<width>200</width>
+					<font>DefaultInformationFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<label>$INFO[Container(11).ListItem.StartTime]</label>
+				</control>
+		
+				<control type="label">
+					<posx>1868</posx>
+					<posy>1013</posy>
+					<width>200</width>
+					<align>right</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.EndTime]</label>
+				</control>
+				<control type="label">
+					<posx>1872</posx>
+					<posy>1013</posy>
+					<width>200</width>
+					<align>right</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.EndTime]</label>
+				</control>
+				<control type="label">
+					<posx>1868</posx>
+					<posy>1017</posy>
+					<width>200</width>
+					<align>right</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.EndTime]</label>
+				</control>
+				<control type="label">
+					<posx>1872</posx>
+					<posy>1017</posy>
+					<width>200</width>
+					<align>right</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>MainColor</textcolor>
+					<label>$INFO[Container(11).ListItem.EndTime]</label>
+				</control>
+				<control type="label" description="Program End Time Label">
+					<posx>1870</posx>
+					<posy>1015</posy>
+					<width>200</width>
+					<align>right</align>
+					<font>DefaultInformationFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<label>$INFO[Container(11).ListItem.EndTime]</label>
+				</control>
+					<control type="image">
+					<posx>493</posx>
+					<posy>1020</posy>
+					<width>1215</width>
+					<height>28</height>
+					<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>495</posx>
+					<posy>1022</posy>
+					<width>1210</width>
+					<height>24</height>
+					<texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="progress">
+					<posx>495</posx>
+					<posy>1010</posy>
+					<width>1210</width>
+					<height>24</height>
+					<texturebg border="6">-</texturebg>
+					<midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
+					<aspectratio>stretch</aspectratio>
+					<info>Container(11).ListItem.Progress</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<animation type="WindowOpen">
+					<effect type="slide" tween="quadratic" easing="out" start="1575,0" end="0,0" time="500" />
+				</animation>
+
+				<animation type="WindowClose">
+					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1575,0" time="500" />
+				</animation>
+
+				<control type="image">
+					<posx>15</posx>
+					<posy>781</posy>
+					<width>330</width>
+					<height>330</height>
+					<texture background="true">elements/circle-shadow.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>806</posy>
+					<width>270</width>
+					<height>270</height>
+					<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<visible>!IsEmpty(Container(11).ListItem.Icon)</visible>
+					<posx>44</posx>
+					<posy>810</posy>
+					<width>262</width>
+					<height>262</height>
+					<texture diffuse="elements/circle-mask.png" background="true">$INFO[Container(11).ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				</control>
+				<control type="label">
+					<visible>IsEmpty(Container(11).ListItem.Icon)</visible>
+					<posx>42</posx>
+					<posy>806</posy>
+					<width>270</width>
+					<height>270</height>
+					<align>center</align>
+					<font>NormalSortLetterFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<label>$INFO[Container(11).ListItem.ChannelNumber]</label>
+				</control>
+			</control>			
+		</control>
+	</controls>
+</window>

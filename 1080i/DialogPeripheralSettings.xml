@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="123">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="label" description="Peripheral Settings Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>5</label>
+			</control>
+
+			<control type="grouplist" id="5" description="Control Area">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>520</height>
+				<itemgap>0</itemgap>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>9000</onleft>
+				<onright>-</onright>
+			</control>
+
+			<control type="button" id="7" description="Default Button">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+
+			<control type="radiobutton" id="8" description="Default RadioButton">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+
+			<control type="spincontrolex" id="9" description="Default SpinControlex">
+				<width>1240</width>
+				<align>left</align>
+				<reverse>yes</reverse>
+			</control>
+
+			<control type="sliderex" id="10" description="Default Slider">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+
+			<control type="image" id="11" description="Separator Image">
+				<height>4</height>
+				<texture>-</texture>
+			</control>
+
+			<control type="group" id="9000">
+				<control type="button" id="28" description="OK Button">
+					<posx>40</posx>
+					<posy>520</posy>
+					<label>186</label>
+					<onup>50</onup>
+					<ondown>29</ondown>
+					<onleft>-</onleft>
+					<onright>5</onright>
+				</control>
+
+				<control type="button" id="29" description="Cancel Button">
+					<posx>40</posx>
+					<posy>560</posy>
+					<label>222</label>
+					<onup>28</onup>
+					<ondown>50</ondown>
+					<onleft>-</onleft>
+					<onright>5</onright>
+				</control>
+				
+				<control type="button" id="50" description="Defaults Button">
+					<posx>40</posx>
+					<posy>480</posy>
+					<label>409</label>
+					<onup>29</onup>
+					<ondown>28</ondown>
+					<onleft>-</onleft>
+					<onright>5</onright>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

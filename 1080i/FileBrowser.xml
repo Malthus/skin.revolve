@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include>FifteenLinesDialog</include>
+
+			<control type="group" description="Dialog Icon (thumbnail of selected item)">
+				<posx>150</posx>
+				<posy>20</posy>
+				<include>DefaultCircleThumbnailIcon</include>
+			</control>
+
+			<control type="label" id="411" description="File Browser Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<label>1023</label>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+			</control>
+
+			<control type="label" id="412" description="Path Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<haspath>true</haspath>
+			</control>
+
+			<control type="list" id="450">
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<height>560</height>
+				<onup>450</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>450</ondown>
+
+				<include>ItemsForLargeThumbnailList</include>
+			</control>
+
+			<control type="grouplist" id="9000" description="Button Area">
+				<posx>40</posx>
+				<posy>520</posy>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onright>450</onright>
+				<onleft>-</onleft>
+
+				<control type="button" id="413" description="Ok Button">
+					<label>186</label>
+				</control>
+
+				<control type="button" id="414" description="Cancel Button">
+					<label>222</label>
+				</control>
+
+				<control type="button" id="415" description="Create Folder Button">
+					<label>119</label>
+				</control>
+
+				<control type="radiobutton" id="416" description="Horizontal Flip Button">
+					<label>749</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<constant name="PosXForCircleControlsForPlayer">120</constant>
+	<constant name="PosYForCircleControlsForPlayer">460</constant>
+	<include name="CircleControlsForPlayer">
+		<control type="group" id="9010">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>280</width>
+			<height>280</height>
+			<onleft>9010</onleft>
+			<onright>9010</onright>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+
+			<control type="image">
+				<width>280</width>
+				<height>280</height>
+				<texture background="true" diffuse="circlemask.png">white.png</texture>
+				<colordiffuse>MainColor</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+
+			<control type="togglebutton" id="403" description="Play/Pause Button">
+				<posx>100</posx>
+				<posy>4</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>402</onleft>
+				<onright>405</onright>
+				<onup>9001</onup>
+				<ondown>404</ondown>
+				<texturefocus>controls/pause-focus.png</texturefocus>
+				<texturenofocus>controls/pause-nofocus.png</texturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<alttexturefocus>controls/play-focus.png</alttexturefocus>
+				<alttexturenofocus>controls/play-nofocus.png</alttexturenofocus>
+				<onclick>PlayerControl(play)</onclick>
+			</control>
+
+			<control type="button" id="402" description="Rewind Button">
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>-</onleft>
+				<onright>403</onright>
+				<onup>9001</onup>
+				<ondown>401</ondown>
+				<texturefocus>controls/rewind-focus.png</texturefocus>
+				<texturenofocus>controls/rewind-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(rewind)</onclick>
+			</control>
+
+			<control type="button" id="405" description="Fast Forward Button">
+				<posx>170</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>403</onleft>
+				<onright>52</onright>
+				<onup>9001</onup>
+				<ondown>406</ondown>
+				<texturefocus>controls/fastforward-focus.png</texturefocus>
+				<texturenofocus>controls/fastforward-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(forward)</onclick>
+			</control>
+
+			<control type="button" id="401" description="Previous Button">
+				<posx>4</posx>
+				<posy>100</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>-</onleft>
+				<onright>406</onright>
+				<onup>402</onup>
+				<ondown>407</ondown>
+				<texturefocus>controls/previous-focus.png</texturefocus>
+				<texturenofocus>controls/previous-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(previous)</onclick>
+			</control>
+
+			<control type="button" id="406" description="Next Button">
+				<posx>196</posx>
+				<posy>100</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>401</onleft>
+				<onright>52</onright>
+				<onup>405</onup>
+				<ondown>400</ondown>
+				<texturefocus>controls/next-focus.png</texturefocus>
+				<texturenofocus>controls/next-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(next)</onclick>
+			</control>
+			
+			<control type="group" description="Repeat Button">
+				<posx>30</posx>
+				<posy>170</posy>
+
+				<control type="button" id="407">
+					<width>80</width>
+					<height>80</height>
+					<onleft>-</onleft>
+					<onright>404</onright>
+					<onup>401</onup>
+					<ondown>9001</ondown>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>BackgroundColor</colordiffuse>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				</control>
+					
+				<control type="image">
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeat-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeat-focus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatone-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatone-focus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeat + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatall-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeat + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatall-focus.png</texture>
+				</control>
+			</control>
+
+			<control type="togglebutton" id="400" description="Random Button">
+				<posx>170</posx>
+				<posy>170</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>404</onleft>
+				<onright>52</onright>
+				<onup>406</onup>
+				<ondown>9001</ondown>
+				<texturefocus>controls/randomoff-focus.png</texturefocus>
+				<texturenofocus>controls/randomoff-nofocus.png</texturenofocus>
+				<usealttexture>Playlist.IsRandom</usealttexture>
+				<alttexturefocus>controls/randomon-focus.png</alttexturefocus>
+				<alttexturenofocus>controls/randomon-nofocus.png</alttexturenofocus>
+				<onclick>PlayerControl(random)</onclick>
+			</control>
+
+			<control type="button" id="404" description="Stop Button">
+				<posx>100</posx>
+				<posy>196</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>407</onleft>
+				<onright>400</onright>
+				<onup>403</onup>
+				<ondown>9001</ondown>
+				<texturefocus>controls/stop-focus.png</texturefocus>
+				<texturenofocus>controls/stop-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(stop)</onclick>
+			</control>
+		</control>
+	</include>
+
+	<constant name="PosXForDialogControlsForPlayer">145</constant>
+	<include name="DialogControlsForPlayer">
+		<control type="group" id="9010">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>270</width>
+			<height>270</height>
+			<onup>9010</onup>
+			<ondown>9010</ondown>
+			<onleft>Noop</onleft>
+			<onright>9011</onright>
+
+			<control type="image">
+				<width>270</width>
+				<height>270</height>
+				<texture colordiffuse="MainColor">circlemask.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+
+			<control type="togglebutton" id="403" description="Play/Pause Button">
+				<posx>95</posx>
+				<posy>4</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>402</onleft>
+				<onright>405</onright>
+				<onup>9011</onup>
+				<ondown>404</ondown>
+				<texturefocus>controls/pause-focus.png</texturefocus>
+				<texturenofocus>controls/pause-nofocus.png</texturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<alttexturefocus>controls/play-focus.png</alttexturefocus>
+				<alttexturenofocus>controls/play-nofocus.png</alttexturenofocus>
+				<onclick>PlayerControl(play)</onclick>
+			</control>
+
+			<control type="button" id="402" description="Rewind Button">
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>-</onleft>
+				<onright>403</onright>
+				<onup>9011</onup>
+				<ondown>401</ondown>
+				<texturefocus>controls/rewind-focus.png</texturefocus>
+				<texturenofocus>controls/rewind-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(rewind)</onclick>
+			</control>
+
+			<control type="button" id="405" description="Fast Forward Button">
+				<posx>160</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>403</onleft>
+				<onright>52</onright>
+				<onup>9011</onup>
+				<ondown>406</ondown>
+				<texturefocus>controls/fastforward-focus.png</texturefocus>
+				<texturenofocus>controls/fastforward-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(forward)</onclick>
+			</control>
+
+			<control type="button" id="401" description="Previous Button">
+				<posx>4</posx>
+				<posy>95</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>-</onleft>
+				<onright>406</onright>
+				<onup>402</onup>
+				<ondown>407</ondown>
+				<texturefocus>controls/previous-focus.png</texturefocus>
+				<texturenofocus>controls/previous-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(previous)</onclick>
+			</control>
+
+			<control type="button" id="406" description="Next Button">
+				<posx>186</posx>
+				<posy>95</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>401</onleft>
+				<onright>52</onright>
+				<onup>405</onup>
+				<ondown>400</ondown>
+				<texturefocus>controls/next-focus.png</texturefocus>
+				<texturenofocus>controls/next-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(next)</onclick>
+			</control>
+			
+			<control type="group" description="Repeat Button">
+				<posx>30</posx>
+				<posy>160</posy>
+
+				<control type="button" id="407">
+					<width>80</width>
+					<height>80</height>
+					<onleft>-</onleft>
+					<onright>404</onright>
+					<onup>401</onup>
+					<ondown>9011</ondown>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>BackgroundColor</colordiffuse>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				</control>
+					
+				<control type="image">
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeat-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeat-focus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatone-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatone-focus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeat + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatall-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeat + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatall-focus.png</texture>
+				</control>
+			</control>
+
+			<control type="togglebutton" id="400" description="Random Button">
+				<posx>160</posx>
+				<posy>160</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>404</onleft>
+				<onright>52</onright>
+				<onup>406</onup>
+				<ondown>9011</ondown>
+				<texturefocus>controls/randomoff-focus.png</texturefocus>
+				<texturenofocus>controls/randomoff-nofocus.png</texturenofocus>
+				<usealttexture>Playlist.IsRandom</usealttexture>
+				<alttexturefocus>controls/randomon-focus.png</alttexturefocus>
+				<alttexturenofocus>controls/randomon-nofocus.png</alttexturenofocus>
+				<onclick>PlayerControl(random)</onclick>
+			</control>
+
+			<control type="button" id="404" description="Stop Button">
+				<posx>95</posx>
+				<posy>186</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>407</onleft>
+				<onright>400</onright>
+				<onup>403</onup>
+				<ondown>9011</ondown>
+				<texturefocus>controls/stop-focus.png</texturefocus>
+				<texturenofocus>controls/stop-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(stop)</onclick>
+			</control>
+		</control>
+	</include>
+	
+	<constant name="PosXForOvalControlsForPlayer">20</constant>
+	<constant name="PosYForOvalControlsForPlayer">540</constant>
+	<include name="OvalControlsForPlayer">
+		<control type="group" id="9010">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>480</width>
+			<height>200</height>
+			<onleft>9010</onleft>
+			<onright>9010</onright>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+
+			<control type="image">
+				<width>480</width>
+				<height>200</height>
+				<texture background="true" diffuse="circlemask.png">white.png</texture>
+				<colordiffuse>MainColor</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+
+			<control type="togglebutton" id="403" description="Play/Pause Button">
+				<posx>200</posx>
+				<posy>10</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>402</onleft>
+				<onright>405</onright>
+				<onup>9001</onup>
+				<ondown>404</ondown>
+				<texturefocus>controls/pause-focus.png</texturefocus>
+				<texturenofocus>controls/pause-nofocus.png</texturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<alttexturefocus>controls/play-focus.png</alttexturefocus>
+				<alttexturenofocus>controls/play-nofocus.png</alttexturenofocus>
+				<onclick>PlayerControl(play)</onclick>
+			</control>
+
+			<control type="button" id="401" description="Previous Button">
+				<posx>14</posx>
+				<posy>60</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>406</onleft>
+				<onright>402</onright>
+				<onup>9001</onup>
+				<ondown>407</ondown>
+				<texturefocus>controls/previous-focus.png</texturefocus>
+				<texturenofocus>controls/previous-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(previous)</onclick>
+			</control>
+
+			<control type="button" id="402" description="Rewind Button">
+				<posx>100</posx>
+				<posy>18</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>401</onleft>
+				<onright>403</onright>
+				<onup>9001</onup>
+				<ondown>407</ondown>
+				<texturefocus>controls/rewind-focus.png</texturefocus>
+				<texturenofocus>controls/rewind-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(rewind)</onclick>
+			</control>
+
+			<control type="button" id="405" description="Fast Forward Button">
+				<posx>300</posx>
+				<posy>18</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>403</onleft>
+				<onright>406</onright>
+				<onup>9001</onup>
+				<ondown>400</ondown>
+				<texturefocus>controls/fastforward-focus.png</texturefocus>
+				<texturenofocus>controls/fastforward-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(forward)</onclick>
+			</control>
+
+			<control type="button" id="406" description="Next Button">
+				<posx>386</posx>
+				<posy>60</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>405</onleft>
+				<onright>401</onright>
+				<onup>9001</onup>
+				<ondown>400</ondown>
+				<texturefocus>controls/next-focus.png</texturefocus>
+				<texturenofocus>controls/next-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(next)</onclick>
+			</control>
+			
+			<control type="group" description="Repeat Button">
+				<posx>100</posx>
+				<posy>102</posy>
+
+				<control type="button" id="407">
+					<width>80</width>
+					<height>80</height>
+					<onleft>401</onleft>
+					<onright>404</onright>
+					<onup>402</onup>
+					<ondown>9001</ondown>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<colordiffuse>BackgroundColor</colordiffuse>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				</control>
+					
+				<control type="image">
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeat-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeat-focus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatone-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatone-focus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeat + !Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatall-nofocus.png</texture>
+				</control>
+
+				<control type="image">
+					<visible>Playlist.IsRepeat + Control.HasFocus(407)</visible>
+					<width>80</width>
+					<height>80</height>
+					<texture>controls/repeatall-focus.png</texture>
+				</control>
+			</control>
+
+			<control type="togglebutton" id="400" description="Random Button">
+				<posx>300</posx>
+				<posy>102</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>404</onleft>
+				<onright>406</onright>
+				<onup>405</onup>
+				<ondown>9001</ondown>
+				<texturefocus>controls/randomoff-focus.png</texturefocus>
+				<texturenofocus>controls/randomoff-nofocus.png</texturenofocus>
+				<usealttexture>Playlist.IsRandom</usealttexture>
+				<alttexturefocus>controls/randomon-focus.png</alttexturefocus>
+				<alttexturenofocus>controls/randomon-nofocus.png</alttexturenofocus>
+				<onclick>PlayerControl(random)</onclick>
+			</control>
+
+			<control type="button" id="404" description="Stop Button">
+				<posx>200</posx>
+				<posy>110</posy>
+				<width>80</width>
+				<height>80</height>
+				<label>-</label>
+				<onleft>407</onleft>
+				<onright>400</onright>
+				<onup>403</onup>
+				<ondown>9001</ondown>
+				<texturefocus>controls/stop-focus.png</texturefocus>
+				<texturenofocus>controls/stop-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(stop)</onclick>
+			</control>
+		</control>
+	</include>
+	
+	<include name="PlayerMediaIconForPlayer">
+		<include>ShadowForDefaultCircleThumbnailIcon</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>270</width>
+			<height>270</height>
+			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+		</control>
+		<control type="image">
+			<posx>4</posx>
+			<posy>4</posy>
+			<width>262</width>
+			<height>262</height>
+			<texture diffuse="elements/circle-mask.png" background="true">$VAR[PlayerThumbnail]</texture>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	
+	<include name="MediaNameLabelForPlayer" description="Name (Title) Label">
+		<control type="group">
+			<posx>340</posx>
+			<posy>975</posy>
+				
+			<control type="label">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<width>1300</width>
+				<font>BigInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerNameLabel]</label>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>-2</posy>
+				<width>1300</width>
+				<font>BigInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<align>left</align>
+				<label>$VAR[PlayerNameLabel]</label>
+			</control>
+			<control type="label">
+				<posx>-2</posx>
+				<posy>2</posy>
+				<width>1300</width>
+				<font>BigInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<align>left</align>
+				<label>$VAR[PlayerNameLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>1300</width>
+				<font>BigInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<align>left</align>
+				<label>$VAR[PlayerNameLabel]</label>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1300</width>
+				<font>BigInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<align>left</align>
+				<label>$VAR[PlayerNameLabel]</label>
+			</control>
+		</control>
+	</include>
+	
+	<include name="MediaInformationLabelForPlayer">
+		<control type="group" description="Information Label">
+			<posx>340</posx>
+			<posy>934</posy>
+					
+			<control type="label">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<width>1300</width>
+				<align>left</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerInformationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>-2</posy>
+				<width>1300</width>
+				<align>left</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerInformationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>-2</posx>
+				<posy>2</posy>
+				<width>1300</width>
+				<align>left</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerInformationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>1300</width>
+				<align>left</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerInformationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1300</width>
+				<align>left</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[PlayerInformationLabel]</label>
+			</control>
+		</control>
+	</include>
+	
+	<include name="MediaPlaylistPositionLabelForPlayer">
+		<control type="group" description="Playlist Position Label">
+			<posx>1870</posx>
+			<posy>934</posy>
+					
+			<control type="label">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerPlaylistPositionLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>-2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerPlaylistPositionLabel]</label>
+			</control>
+			<control type="label">
+				<posx>-2</posx>
+				<posy>2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerPlaylistPositionLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerPlaylistPositionLabel]</label>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[PlayerPlaylistPositionLabel]</label>
+			</control>
+		</control>
+	</include>
+	
+	<include name="MediaStarRatingIconForPlayer">
+		<control type="group" description="Rating Icon">
+			<posx>1704</posx>
+			<posy>975</posy>
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>180</width>
+				<height>40</height>
+				<texture colordiffuse="MainColor">icons/rating-5.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<width>180</width>
+				<height>40</height>
+				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>2</posx>
+				<posy>-2</posy>
+				<width>180</width>
+				<height>40</height>
+				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>-2</posx>
+				<posy>2</posy>
+				<width>180</width>
+				<height>40</height>
+				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>180</width>
+				<height>40</height>
+				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>180</width>
+				<height>40</height>
+				<texture colordiffuse="BackgroundColor">$VAR[PlayerStarRating]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	<include name="MediaSeekBarForPlayer">
+		<control type="group" description="Playing Time Label">
+			<posx>340</posx>
+			<posy>1015</posy>
+					
+			<control type="label">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<width>200</width>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerTimeLabel]</label>
+			</control>
+			<control type="label">
+				<posx>-2</posx>
+				<posy>2</posy>
+				<width>200</width>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerTimeLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>-2</posy>
+				<width>200</width>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerTimeLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>200</width>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerTimeLabel]</label>
+			</control>
+			<control type="label" description="Player Times Label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<font>DefaultInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[PlayerTimeLabel]</label>
+			</control>
+		</control>
+
+		<control type="group" description="Duration Label">
+			<posx>1870</posx>
+			<posy>1015</posy>
+			
+			<control type="label">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerDurationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>-2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerDurationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>-2</posx>
+				<posy>2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerDurationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[PlayerDurationLabel]</label>
+			</control>
+			<control type="label" description="Player Duration Label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<align>right</align>
+				<font>DefaultInformationFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[PlayerDurationLabel]</label>
+			</control>
+		</control>
+
+		<control type="group" description="Player Seek Bar">
+			<posx>510</posx>
+			<posy>1025</posy>
+
+			<control type="image">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<width>1200</width>
+				<height>28</height>
+				<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1195</width>
+				<height>24</height>
+				<texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="progress" description="Cache Progress Bar">
+				<posx>0</posx>
+				<posy>-12</posy>
+				<width>1195</width>
+				<height>24</height>
+				<midtexture colordiffuse="SelectColor" border="6">controls/horizontalbar-thin.png</midtexture>
+				<aspectratio>stretch</aspectratio>
+				<info>Player.ProgressCache</info>
+			</control>
+			<control type="progress" description="Player Seek Bar">
+				<posx>0</posx>
+				<posy>-12</posy>
+				<width>1195</width>
+				<height>24</height>
+				<midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
+				<aspectratio>stretch</aspectratio>
+				<info>Player.Progress</info>
+			</control>
+		</control>
+	</include>
+    
+	<include name="MediaBackgroundMusicLabelForPlayer">
+        <control type="group">
+            <visible>Player.Playing</visible>
+
+            <control type="group" description="Play Icon">
+                <posx>340</posx>
+                <posy>1015</posy>
+
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                </control>
+
+                <control type="image">
+                    <posx>10</posx>
+                    <posy>8</posy>
+                    <width>24</width>
+                    <height>24</height>
+                    <texture colordiffuse="BackgroundColor">icons/player-play.png</texture>
+                </control>
+            </control>
+            
+            <control type="group" description="Information Label">
+                <posx>390</posx>
+                <posy>1015</posy>
+					
+                <control type="label">
+                    <posx>-2</posx>
+                    <posy>-2</posy>
+                    <width>1300</width>
+                    <align>left</align>
+                    <font>DefaultInformationFont</font>
+                    <textcolor>MainColor</textcolor>
+                    <label>$VAR[PlayerBackgroundMusicLabel]</label>
+                </control>
+                <control type="label">
+                    <posx>2</posx>
+                    <posy>-2</posy>
+                    <width>1300</width>
+                    <align>left</align>
+                    <font>DefaultInformationFont</font>
+                    <textcolor>MainColor</textcolor>
+                    <label>$VAR[PlayerBackgroundMusicLabel]</label>
+                </control>
+                <control type="label">
+                    <posx>-2</posx>
+                    <posy>2</posy>
+                    <width>1300</width>
+                    <align>left</align>
+                    <font>DefaultInformationFont</font>
+                    <textcolor>MainColor</textcolor>
+                    <label>$VAR[PlayerBackgroundMusicLabel]</label>
+                </control>
+                <control type="label">
+                    <posx>2</posx>
+                    <posy>2</posy>
+                    <width>1300</width>
+                    <align>left</align>
+                    <font>DefaultInformationFont</font>
+                    <textcolor>MainColor</textcolor>
+                    <label>$VAR[PlayerBackgroundMusicLabel]</label>
+                </control>
+                <control type="label">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>1300</width>
+                    <align>left</align>
+                    <font>DefaultInformationFont</font>
+                    <textcolor>BackgroundColor</textcolor>
+                    <label>$VAR[PlayerBackgroundMusicLabel]</label>
+                </control>
+            </control>
+        </control>
+	</include>
+	
+    <include name="OverlayInformationForMusicPlayer">
+		<posy>1030</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<label>$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]</label>
+		<align>right</align>
+		<scroll>true</scroll>
+		<scrollspeed>50</scrollspeed>
+		<scrollsuffix> | </scrollsuffix>
+    </include>
+    
+    <include name="OverlayTimeForMusicPlayer">
+		<posy>1030</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<label>| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+		<scroll>false</scroll>
+    </include>
+    
+    <include name="OverlayInformationForVideoPlayer">
+		<posy>1030</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</label>
+		<align>right</align>
+		<scroll>true</scroll>
+		<scrollspeed>50</scrollspeed>
+		<scrollsuffix> | </scrollsuffix>
+    </include>
+    
+    <include name="OverlayTimeForVideoPlayer">
+		<posy>1030</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<label>| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+		<scroll>false</scroll>
+    </include>
+</includes>

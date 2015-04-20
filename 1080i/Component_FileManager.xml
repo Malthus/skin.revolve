@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="ListFrameForFileManager" description="Frame For File Manager">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>900</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="30" fallback="white.png">poster.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>58</posy>
+				<width>892</width>
+				<height>804</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	<include name="NormalListItemForFileManager" description="Unfocused Items For File Manager">
+		<control type="image">
+			<width>888</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>730</width>
+			<height>40</height>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>50</posy>
+			<width>730</width>
+			<height>40</height>
+			<font>DetailListItemFont</font>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="FocusedListItemForFileManager" description="Focused Items For File Manager">
+		<control type="image">
+			<width>888</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>730</width>
+			<height>40</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>50</posy>
+			<width>730</width>
+			<height>40</height>
+			<font>DetailListItemFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="SelectedListItemForFileManager" description="Selected Items For File Manager">
+		<control type="image">
+			<width>888</width>
+			<height>100</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+	    <control type="group">
+		    <posx>20</posx>
+		    <posy>5</posy>
+			<include>SmallCircleThumbnailIcon</include>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>10</posy>
+			<width>730</width>
+			<height>40</height>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>130</posx>
+			<posy>50</posy>
+			<width>730</width>
+			<height>40</height>
+			<font>DetailListItemFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="ListItemForFileManager" description="List For File Manager">
+		<itemlayout height="100">
+			<include>NormalListItemForFileManager</include>
+		</itemlayout>
+					
+		<focusedlayout height="100">
+			<include>FocusedListItemForFileManager</include>
+		</focusedlayout>
+	</include>
+</includes>

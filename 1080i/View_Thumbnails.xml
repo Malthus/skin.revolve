@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="ThumbnailsView">
+		<control type="panel" id="55" description="Thumbnails">
+			<viewtype label="31935">list</viewtype>
+			<visible>true</visible>
+			<animation effect="slide" start="0,1080" end="0,0" time="500">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,1080" time="500">WindowClose</animation>
+
+			<posx>120</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1020</height>
+			<pagecontrol>65</pagecontrol>
+			<defaultcontrol>6</defaultcontrol>
+			<focusposition>6</focusposition>
+			<scrolltime>200</scrolltime>
+			<preloaditems>2</preloaditems>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<onleft>9000</onleft>
+			<onright>65</onright>
+
+			<itemlayout height="280" width="280">
+				<control type="group">
+					<posx>5</posx>
+					<posy>5</posy>
+					<include>DefaultCircleThumbnailIcon</include>
+					<include>OverlayForDefaultCircleThumbnailIcon</include>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout height="280" width="280">
+				<control type="group">
+					<animation effect="zoom" start="100" end="140" time="100" condition="true">conditional</animation>
+					<animation effect="slide" end="-38,-38" time="100" condition="true">conditional</animation>				
+				
+					<posx>5</posx>
+					<posy>5</posy>
+					<include>ShadowForDefaultCircleThumbnailIcon</include>
+					<include>DefaultCircleThumbnailIcon</include>
+					<include>OverlayForDefaultCircleThumbnailIcon</include>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="group" description="Bottom Ring">
+			<visible>Control.IsVisible(55)</visible>
+			<include>BottomRing</include>
+		</control>
+		
+		<control type="scrollbar" id="65" description="Scrollbar">
+			<visible allowhiddenfocus="true">Control.IsVisible(55)</visible>
+			<animation type="Conditional" condition="!Control.HasFocus(65) + !Container(55).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
+				<effect type="slide" start="0,0" end="60,0" time="100" />
+			</animation>
+			<animation type="Conditional" condition="!Control.HasFocus(65) + !Container(55).Scrolling + Skin.HasSetting(ViewScrollbar.Visible)">
+				<effect type="slide" start="0,0" end="30,0" time="100" />
+			</animation>
+
+			<posx>1860</posx>
+			<posy>100</posy>
+			<height>760</height>
+			<onleft>55</onleft>
+			<onright>-</onright>
+		</control>
+	</include>
+</includes>

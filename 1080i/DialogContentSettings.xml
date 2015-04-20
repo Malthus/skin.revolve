@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="132">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForTenLinesDialog</posy>
+			<include>TenLinesDialog</include>
+
+			<control type="group" description="Content Dialog Icon">
+				<posx>120</posx>
+				<posy>20</posy>
+				<include>DefaultCircleThumbnailIcon</include>
+			</control>
+			
+			<control type="label" id="20" description="Dialog Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>20333</label>
+			</control>
+			
+			<control type="spincontrolex" id="3" description="Directory Content Option">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<label>-</label>
+				<onup>5</onup>
+				<ondown>4</ondown>
+				<onleft>28</onleft>
+				<onright>-</onright>
+			</control>
+
+			<control type="label" description="Unfocused Directory Contains Label">
+				<visible>!Control.HasFocus(3)</visible>
+				<posx>580</posx>
+				<posy>80</posy>
+				<width>1200</width>
+				<font>DialogTextFont</font>
+				<textcolor>MainColor</textcolor>
+				<label>20344</label>
+			</control>
+
+			<control type="label" description="Focused Directory Contains Label">
+				<visible>Control.HasFocus(3)</visible>
+				<posx>580</posx>
+				<posy>80</posy>
+				<width>1200</width>
+				<font>DialogTextFont</font>
+				<textcolor>BackgroundColor</textcolor>
+				<label>20344</label>
+			</control>
+
+			<control type="list" id="4" description="List With Relevant Plugins">
+				<posx>560</posx>
+				<posy>140</posy>
+				<width>1240</width>
+				<height>140</height>
+				<onup>3</onup>
+				<onleft>28</onleft>
+				<onright>-</onright>
+				<ondown>5</ondown>
+
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
+					
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(4)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(4)</visible>
+						<include>NormalItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="grouplist" id="5" description="Control Area For Specific Content Settings">
+				<posx>560</posx>
+				<posy>320</posy>
+				<width>1240</width>
+				<height>160</height>
+				<itemgap>0</itemgap>
+				<onup>4</onup>
+				<ondown>3</ondown>
+				<onleft>28</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+			</control>
+
+			<control type="button" id="7" description="Default Button">
+				<align>left</align>
+			</control>
+
+			<control type="radiobutton" id="8" description="Default Radio Button">
+				<align>left</align>
+			</control>
+
+			<control type="button" id="6" description="Settings Button">
+				<posx>40</posx>
+				<posy>360</posy>
+				<width>480</width>
+				<label>5</label>
+				<onup>29</onup>
+				<ondown>28</ondown>
+				<onleft>-</onleft>
+				<onright>5</onright>
+			</control>
+
+			<control type="button" id="28" description="Ok Button">
+				<posx>40</posx>
+				<posy>400</posy>
+				<width>480</width>
+				<label>186</label>
+				<onup>6</onup>
+				<ondown>29</ondown>
+				<onleft>-</onleft>
+				<onright>5</onright>
+			</control>
+
+			<control type="button" id="29" description="Cancel Button">
+				<posx>40</posx>
+				<posy>440</posy>
+				<width>480</width>
+				<label>222</label>
+				<onup>28</onup>
+				<ondown>6</ondown>
+				<onleft>-</onleft>
+				<onright>5</onright>
+			</control>
+		</control>
+	</controls>
+</window>
