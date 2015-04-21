@@ -9,9 +9,9 @@
 			<include>SingleLineDialog</include>
 			
 			<control type="group" description="Dialog Icon Background">
-				<posx>230</posx>
-				<posy>20</posy>
-				<include>DialogIconFrame</include>
+				<posx>PosXForSmallIconFrameForDialog</posx>
+				<posy>PosYForSmallIconFrameForDialog</posy>
+				<include>SmallIconFrameForDialog</include>
 			</control>
 			
 			<control type="label" id="401" description="Message Header Label">

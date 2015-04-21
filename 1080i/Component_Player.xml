@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="ControlFrameForPlayer" description="Single Button Control Frame For Player">
+		<control type="group">
+			<control type="image">
+				<posx>-4</posx>
+				<posy>-4</posy>
+				<width>84</width>
+				<height>84</height>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+
 	<constant name="PosXForCircleControlsForPlayer">120</constant>
 	<constant name="PosYForCircleControlsForPlayer">460</constant>
 	<include name="CircleControlsForPlayer">

@@ -5,9 +5,24 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<posy>PosYForTenLinesDialog</posy>
+			<include>TenLinesDialog</include>
 
+			<control type="group" description="Dialog Icon Background">
+				<posx>PosXForSmallIconFrameForDialog</posx>
+				<posy>PosYForSmallIconFrameForDialog</posy>
+				<include>SmallIconFrameForDialog</include>
+                
+				<control type="image">
+                    <posx>1</posx>
+                    <posy>1</posy>
+					<width>98</width>
+					<height>98</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-disc.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+            
 			<control type="label" id="2" description="Heading Label">
 				<posx>560</posx>
 				<posy>20</posy>
@@ -15,7 +30,7 @@
 				<font>DialogTitleFont</font>
 				<textcolor>SecondaryColor</textcolor>
 				<align>left</align>
-				<label>13406</label>
+				<label>$LOCALIZE[13406]</label>
 			</control>
 
 			<control type="label" description="Paths Label">
@@ -25,18 +40,18 @@
 				<font>DialogTextFont</font>
 				<textcolor>SecondaryColor</textcolor>
 				<align>left</align>
-				<label>15311</label>
+				<label>$LOCALIZE[15311]</label>
 			</control>
 
 			<control type="list" id="10" description="Media Sources List">
 				<posx>560</posx>
 				<posy>120</posy>
 				<width>1240</width>
-				<height>340</height>
-				<onleft>9000</onleft>
-				<onright>-</onright>
+				<height>240</height>
 				<onup>12</onup>
 				<ondown>12</ondown>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
 
 				<itemlayout height="40">
 					<include>NormalItemsForNormalList</include>
@@ -56,63 +71,54 @@
 			
 			<control type="label" description="Name Label">
 				<posx>560</posx>
-				<posy>500</posy>
+				<posy>400</posy>
 				<width>1240</width>
 				<font>DialogTextFont</font>
 				<textcolor>SecondaryColor</textcolor>
 				<align>left</align>
-				<label>31400</label>
+				<label>$LOCALIZE[31400]</label>
 			</control>
 
 			<control type="edit" id="12" description="Name For Selected Source Edit Box">
 				<posx>560</posx>
-				<posy>540</posy>
+				<posy>440</posy>
 				<width>1240</width>
-				<onleft>9001</onleft>
-				<onright>-</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
 			</control>
 			
 			<control type="grouplist" id="9000">
 				<posx>40</posx>
-				<posy>120</posy>
-				<onleft>-</onleft>
-				<onright>10</onright>
-				<onup>9001</onup>
-				<ondown>9001</ondown>
+				<posy>160</posy>
 				<itemgap>0</itemgap>
-				<orientation>vertical</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+                <orientation>vertical</orientation>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>Noop</onleft>
+				<onright>10</onright>
 
 				<control type="button" id="11" description="Browse For Location Button">
-					<label>1024</label>
+					<label>$LOCALIZE[1024]</label>
 				</control>
 
 				<control type="button" id="13" description="Add New Source Button">
-					<label>1026</label>
+					<label>$LOCALIZE[1026]</label>
 				</control>
 
 				<control type="button" id="14" description="Delete Source Button">
-					<label>117</label>
+					<label>$LOCALIZE[117]</label>
 				</control>
-			</control>
-		
-			<control type="grouplist" id="9001">
-				<posx>40</posx>
-				<posy>500</posy>
-				<onleft>-</onleft>
-				<onright>12</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<itemgap>0</itemgap>
-				<orientation>vertical</orientation>
 
 				<control type="button" id="18" description="Ok Button">
-					<label>186</label>
+                    <posy>120</posy>
+					<label>$LOCALIZE[186]</label>
 				</control>
 
 				<control type="button" id="19" description="Cancel Button">
-					<label>222</label>
+					<label>$LOCALIZE[222]</label>
 				</control>
 			</control>
 		</control>

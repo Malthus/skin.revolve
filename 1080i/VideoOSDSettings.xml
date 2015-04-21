@@ -12,9 +12,9 @@
 <!--			<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(sliderdialog)">Conditional</animation> -->
 
 			<control type="group" description="Smart Playlist Dialog Icon">
-				<posx>PosXForBusyIconFrame</posx>
-				<posy>PosYForBusyIconFrame</posy>
-				<include>BusyIconFrame</include>
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultIconFrameForDialog</include>
 				
 				<control type="image">
 				    <posx>3</posx>

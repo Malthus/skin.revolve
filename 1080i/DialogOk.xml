@@ -9,19 +9,19 @@
 			<include>ThreeLinesDialog</include>
 			
 			<control type="group" description="Dialog Icon (!)">
-				<posx>PosXForDialogIconFrame</posx>
-				<posy>PosYForDialogIconFrame</posy>
-				<include>DialogIconFrame</include>
-			  
+				<posx>PosXForSmallIconFrameForDialog</posx>
+				<posy>PosYForSmallIconFrameForDialog</posy>
+				<include>SmallIconFrameForDialog</include>
+
 				<control type="label">
 					<posx>32</posx>
 					<posy>30</posy>
 					<width>40</width>
 					<height>40</height>
-					<label>31905</label>
 					<font>StatusFont</font>
 					<textcolor>BackgroundColor</textcolor>
 					<align>center</align>
+					<label>$LOCALIZE[31905]</label>
 				</control>
 			</control>
 
@@ -51,10 +51,10 @@
 				<posy>160</posy>
 				<width>480</width>
 				<label>186</label>
-				<onleft>-</onleft>
-				<onright>-</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
+				<onleft>Noop</onleft>
+				<onright>Noop</onright>
 			</control>
 		</control>
 	</controls>

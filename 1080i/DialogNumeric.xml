@@ -9,9 +9,9 @@
 			<include>KeyboardDialogBand</include>
 	
 			<control type="group" description="Keyboard Dialog Icon">
-				<posx>PosXForBusyIconFrame</posx>
-				<posy>PosYForBusyIconFrame</posy>
-				<include>BusyIconFrame</include>
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultIconFrameForDialog</include>
 			  
 				<control type="image">
 					<width>262</width>
