@@ -4,9 +4,24 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForSingleLineDialog</posy>
-			<include>SingleLineDialog</include>
+			<posy>PosYForTwoLinesDialogBand</posy>
+			<include>TwoLinesDialogBand</include>
 
+			<control type="group" description="Dialog Icon Background">
+				<posx>PosXForSmallIconFrameForDialog</posx>
+				<posy>PosYForSmallIconFrameForDialog</posy>
+				<include>SmallIconFrameForDialog</include>
+                
+				<control type="image">
+                    <posx>1</posx>
+                    <posy>1</posy>
+					<width>98</width>
+					<height>98</height>
+					<texture colodiffuse="BackgroundColor">icons/icon-musicnote.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+            
 			<control type="label" id="1" description="Karaoke Heading Label">
 				<posx>560</posx>
 				<posy>20</posy>
@@ -19,16 +34,16 @@
 			<control type="label" id="401" description="Song Number Label">
 				<posx>560</posx>
 				<posy>80</posy>
-				<width>140</width>
+				<width>1240</width>
 				<font>DialogTextFont</font>
 				<align>left</align>
 				<label>-</label>
 			</control>
 
 			<control type="label" id="402" description="Song Name Label">
-				<posx>700</posx>
-				<posy>80</posy>
-				<width>1100</width>
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
 				<font>DialogTextFont</font>
 				<align>left</align>
 				<label>-</label>

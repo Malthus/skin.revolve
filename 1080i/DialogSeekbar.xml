@@ -9,7 +9,7 @@
 			<include>FullscreenDimensions</include>
 
 			<control type="group" description="Message Band With Direction Icon And Progress Bar">
-				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
+				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation) | Window.IsVisible(karaoke)]</visible>
 
 				<control type="group">
 					<posy>PosYForPauseMessageBand</posy>
@@ -114,13 +114,13 @@
 			</control>
 			
 			<control type="group">
-				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]</visible>
+				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(karaoke)]</visible>
 				<posx>1750</posx>
 				<posy>890</posy>
 				<include>StatusIconFrame</include>
 
 				<control type="group">
-					<visible>Player.Paused + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]</visible>
+					<visible>Player.Paused</visible>
 					
 					<control type="image" description="Player Direction Icon">
 						<posx>45</posx>
@@ -133,7 +133,7 @@
 				</control>
 
 				<control type="group">
-					<visible>[Player.Forwarding | Player.Rewinding] + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)]</visible>
+					<visible>[Player.Forwarding | Player.Rewinding]</visible>
 					
 					<control type="image" description="Player Direction Icon">
 						<posx>45</posx>

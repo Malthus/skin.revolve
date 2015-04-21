@@ -6,16 +6,14 @@
 	<controls>
 		<control type="karvisualisation" id="1" description="Background Visualisation For Karaoke">
 			<include>FullscreenDimensions</include>
-			<visibility>false</visibility>
 		</control>
 
 		<control type="image" id="2" description="Fullscreen Background Image For Karaoke">
 			<include>FullscreenDimensions</include>
-			<visibility>false</visibility>
 		</control>
 
 		<control type="group" description="Next Song Name Label">
-			<visible>MusicPlayer.Offset(number).Exists + !IntegerGreaterThan(Player.TimeRemaining,20)</visible>
+			<visible>MusicPlayer.Offset(1).Exists + !IntegerGreaterThan(Player.TimeRemaining,20)</visible>
 			<posx>560</posx>
 			<posy>0</posy>
 
@@ -26,7 +24,7 @@
 				<font>SmallInformationFont</font>
 				<textcolor>BackgroundColor</textcolor>
 				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
 			</control>
 			<control type="label">
 				<posx>2</posx>
@@ -35,7 +33,7 @@
 				<font>SmallInformationFont</font>
 				<textcolor>BackgroundColor</textcolor>
 				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
 			</control>
 			<control type="label">
 				<posx>-2</posx>
@@ -44,7 +42,7 @@
 				<font>SmallInformationFont</font>
 				<textcolor>BackgroundColor</textcolor>
 				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
 			</control>
 			<control type="label">
 				<posx>2</posx>
@@ -53,7 +51,7 @@
 				<font>SmallInformationFont</font>
 				<textcolor>BackgroundColor</textcolor>
 				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
 			</control>
 			<control type="label">
 				<posy>20</posy>
@@ -62,7 +60,7 @@
 				<font>SmallInformationFont</font>
 				<textcolor>MainColor</textcolor>
 				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title]</label>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
 			</control>
 		</control>
 	</controls>
