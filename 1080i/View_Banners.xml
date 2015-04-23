@@ -24,7 +24,7 @@
 					<posx>960</posx>
 					<width>1920</width>
 					<height>110</height>
-					<font>SmallListItemFont</font>
+					<font>SmallViewFont</font>
 					<textcolor>TextColor</textcolor>
 					<align>center</align>
 					<label>$VAR[ContentNameLabel]</label>
@@ -37,7 +37,7 @@
 					<posx>960</posx>
 					<width>1920</width>
 					<height>120</height>
-					<font>SmallListItemFont</font>
+					<font>SmallViewFont</font>
 					<textcolor>MainColor</textcolor>
 					<align>center</align>
 					<label>$VAR[ContentNameLabel]</label>
@@ -520,7 +520,7 @@
 		<control type="image">
 			<height>140</height>
 			<width>758</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<texture>$VAR[ContentBanner]</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
@@ -530,7 +530,7 @@
 		<control type="image">
 			<height>140</height>
 			<width>758</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<texture colordiffuse="SelectColor">$VAR[ContentBanner]</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
@@ -541,7 +541,7 @@
 		<control type="label">
 			<height>40</height>
 			<width>880</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<textcolor>$VAR[ContentMainColor]</textcolor>
 			<align>right</align>
 			<scroll>true</scroll>
@@ -554,7 +554,7 @@
 		<control type="label">
 			<height>40</height>
 			<width>880</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<textcolor>$VAR[ContentTextColor]</textcolor>
 			<align>right</align>
 			<scroll>true</scroll>
@@ -568,7 +568,7 @@
 			<posy>-2</posy>
 			<height>40</height>
 			<width>880</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentNoBannerLabel]</label>
@@ -578,7 +578,7 @@
 			<posy>2</posy>
 			<height>40</height>
 			<width>880</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentNoBannerLabel]</label>
@@ -588,7 +588,7 @@
 			<posy>-2</posy>
 			<height>40</height>
 			<width>880</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentNoBannerLabel]</label>
@@ -598,7 +598,7 @@
 			<posy>2</posy>
 			<height>40</height>
 			<width>880</width>
-			<font>DefaultListViewFont</font>
+			<font>MediumViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentNoBannerLabel]</label>
@@ -610,7 +610,7 @@
 		<control type="label">
 			<width>880</width>
 			<height>30</height>
-			<font>HomeMenuDetailFont</font>
+			<font>DetailViewFont</font>
 			<textcolor>MainColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentInformationLabel]</label>
@@ -622,7 +622,7 @@
 		<control type="label">
 			<width>880</width>
 			<height>30</height>
-			<font>HomeMenuDetailFont</font>
+			<font>DetailViewFont</font>
 			<textcolor>TextColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentInformationLabel]</label>
@@ -635,7 +635,7 @@
 			<posy>-1</posy>
 			<width>880</width>
 			<height>30</height>
-			<font>HomeMenuDetailFont</font>
+			<font>DetailViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentInformationLabel]</label>
@@ -645,7 +645,7 @@
 			<posy>1</posy>
 			<width>880</width>
 			<height>30</height>
-			<font>HomeMenuDetailFont</font>
+			<font>DetailViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentInformationLabel]</label>
@@ -655,7 +655,7 @@
 			<posy>-1</posy>
 			<width>880</width>
 			<height>30</height>
-			<font>HomeMenuDetailFont</font>
+			<font>DetailViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentInformationLabel]</label>
@@ -665,7 +665,7 @@
 			<posy>1</posy>
 			<width>880</width>
 			<height>30</height>
-			<font>HomeMenuDetailFont</font>
+			<font>DetailViewFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<label>$VAR[ContentInformationLabel]</label>
@@ -677,7 +677,7 @@
 		<posy>160</posy>
 		<height>40</height>
 		<width>900</width>
-		<font>DefaultListViewFont</font>
+		<font>MediumViewFont</font>
 		<align>right</align>
 		<scroll>false</scroll>
 	</include>

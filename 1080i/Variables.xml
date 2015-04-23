@@ -143,7 +143,7 @@
 		<value condition="Window.IsVisible(settings)">special://skin/backgrounds/settings.jpg</value>
 
 		<value condition="Window.IsVisible(1101) + !IsEmpty(Container(450).ListItem.Art(Fanart))">$INFO[Container(450).ListItem.Art(Fanart)]</value>
-		<value condition="Window.IsVisible(1101)">special://skin/backgrounds/submenu.jpg</value>
+<!--		<value condition="Window.IsVisible(1101)">special://skin/backgrounds/submenu.jpg</value> -->
         
 		<value condition="Window.IsVisible(1102) + !IsEmpty(Container(450).ListItem.Art(Fanart))">$INFO[Container(450).ListItem.Art(Fanart)]</value>
 		<value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>

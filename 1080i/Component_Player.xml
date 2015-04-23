@@ -29,8 +29,7 @@
 			<control type="image">
 				<width>280</width>
 				<height>280</height>
-				<texture background="true" diffuse="circlemask.png">white.png</texture>
-				<colordiffuse>MainColor</colordiffuse>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 
@@ -222,7 +221,7 @@
 			<control type="image">
 				<width>270</width>
 				<height>270</height>
-				<texture colordiffuse="MainColor">circlemask.png</texture>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 
@@ -231,16 +230,16 @@
 				<posy>4</posy>
 				<width>80</width>
 				<height>80</height>
-				<label>-</label>
-				<onleft>402</onleft>
-				<onright>405</onright>
-				<onup>9011</onup>
-				<ondown>404</ondown>
 				<texturefocus>controls/pause-focus.png</texturefocus>
 				<texturenofocus>controls/pause-nofocus.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<alttexturefocus>controls/play-focus.png</alttexturefocus>
 				<alttexturenofocus>controls/play-nofocus.png</alttexturenofocus>
+				<label>-</label>
+				<onup>9011</onup>
+				<ondown>404</ondown>
+				<onleft>402</onleft>
+				<onright>405</onright>
 				<onclick>PlayerControl(play)</onclick>
 			</control>
 
@@ -249,13 +248,13 @@
 				<posy>30</posy>
 				<width>80</width>
 				<height>80</height>
-				<label>-</label>
-				<onleft>-</onleft>
-				<onright>403</onright>
-				<onup>9011</onup>
-				<ondown>401</ondown>
 				<texturefocus>controls/rewind-focus.png</texturefocus>
 				<texturenofocus>controls/rewind-nofocus.png</texturenofocus>
+				<label>-</label>
+				<onup>9011</onup>
+				<ondown>401</ondown>
+				<onleft>Noop</onleft>
+				<onright>403</onright>
 				<onclick>PlayerControl(rewind)</onclick>
 			</control>
 
@@ -264,13 +263,13 @@
 				<posy>30</posy>
 				<width>80</width>
 				<height>80</height>
-				<label>-</label>
-				<onleft>403</onleft>
-				<onright>52</onright>
-				<onup>9011</onup>
-				<ondown>406</ondown>
 				<texturefocus>controls/fastforward-focus.png</texturefocus>
 				<texturenofocus>controls/fastforward-nofocus.png</texturenofocus>
+				<label>-</label>
+				<onup>9011</onup>
+				<ondown>406</ondown>
+				<onleft>403</onleft>
+				<onright>52</onright>
 				<onclick>PlayerControl(forward)</onclick>
 			</control>
 
@@ -279,13 +278,13 @@
 				<posy>95</posy>
 				<width>80</width>
 				<height>80</height>
-				<label>-</label>
-				<onleft>-</onleft>
-				<onright>406</onright>
-				<onup>402</onup>
-				<ondown>407</ondown>
 				<texturefocus>controls/previous-focus.png</texturefocus>
 				<texturenofocus>controls/previous-nofocus.png</texturenofocus>
+				<label>-</label>
+				<onup>402</onup>
+				<ondown>407</ondown>
+				<onleft>Noop</onleft>
+				<onright>406</onright>
 				<onclick>PlayerControl(previous)</onclick>
 			</control>
 
@@ -294,13 +293,13 @@
 				<posy>95</posy>
 				<width>80</width>
 				<height>80</height>
-				<label>-</label>
-				<onleft>401</onleft>
-				<onright>52</onright>
-				<onup>405</onup>
-				<ondown>400</ondown>
 				<texturefocus>controls/next-focus.png</texturefocus>
 				<texturenofocus>controls/next-nofocus.png</texturenofocus>
+				<label>-</label>
+				<onup>405</onup>
+				<ondown>400</ondown>
+				<onleft>401</onleft>
+				<onright>52</onright>
 				<onclick>PlayerControl(next)</onclick>
 			</control>
 			
@@ -311,13 +310,13 @@
 				<control type="button" id="407">
 					<width>80</width>
 					<height>80</height>
-					<onleft>-</onleft>
-					<onright>404</onright>
-					<onup>401</onup>
-					<ondown>9011</ondown>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<colordiffuse>BackgroundColor</colordiffuse>
+					<onup>401</onup>
+					<ondown>9011</ondown>
+					<onleft>Noop</onleft>
+					<onright>404</onright>
 					<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				</control>
 					
@@ -369,16 +368,16 @@
 				<posy>160</posy>
 				<width>80</width>
 				<height>80</height>
-				<label>-</label>
-				<onleft>404</onleft>
-				<onright>52</onright>
-				<onup>406</onup>
-				<ondown>9011</ondown>
 				<texturefocus>controls/randomoff-focus.png</texturefocus>
 				<texturenofocus>controls/randomoff-nofocus.png</texturenofocus>
 				<usealttexture>Playlist.IsRandom</usealttexture>
 				<alttexturefocus>controls/randomon-focus.png</alttexturefocus>
 				<alttexturenofocus>controls/randomon-nofocus.png</alttexturenofocus>
+				<label>-</label>
+				<onup>406</onup>
+				<ondown>9011</ondown>
+				<onleft>404</onleft>
+				<onright>52</onright>
 				<onclick>PlayerControl(random)</onclick>
 			</control>
 
@@ -387,13 +386,13 @@
 				<posy>186</posy>
 				<width>80</width>
 				<height>80</height>
-				<label>-</label>
-				<onleft>407</onleft>
-				<onright>400</onright>
-				<onup>403</onup>
-				<ondown>9011</ondown>
 				<texturefocus>controls/stop-focus.png</texturefocus>
 				<texturenofocus>controls/stop-nofocus.png</texturenofocus>
+				<label>-</label>
+				<onup>403</onup>
+				<ondown>9011</ondown>
+				<onleft>407</onleft>
+				<onright>400</onright>
 				<onclick>PlayerControl(stop)</onclick>
 			</control>
 		</control>

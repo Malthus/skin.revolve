@@ -424,17 +424,17 @@
 						<property name="Command">ActivateWindow(programs,addons://sources/executable/)</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="550" description="Run External Program Option">
+					<item id="551" description="Run External Program Option">
                         <visible>Container(30).HasFocus(5)</visible>
 						<label>$LOCALIZE[31856]</label>
-						<property name="Command">System.Exec($INFO[Window.Property(CustomAction.File)])</property>
+						<property name="Command">System.Exec(&quot;$INFO[Window.Property(CustomAction.File)]&quot;)</property>
 						<property name="Parameter">F</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="551" description="Run External Program And Wait Option">
+					<item id="552" description="Run External Program And Wait Option">
                         <visible>Container(30).HasFocus(5)</visible>
 						<label>$LOCALIZE[31857]</label>
-						<property name="Command">System.ExecWait($INFO[Window.Property(CustomAction.File)])</property>
+						<property name="Command">System.ExecWait(&quot;$INFO[Window.Property(CustomAction.File)]&quot;)</property>
 						<property name="Parameter">F</property>
 						<onclick>Noop</onclick>
 					</item>
@@ -502,14 +502,14 @@
 					<item id="780" description="Execute Shell Command Option">
                         <visible>Container(30).HasFocus(7)</visible>
 						<label>$LOCALIZE[31868]</label>
-						<property name="Command">System.Exec($INFO[Window.Property(CustomAction.String)])</property>
+						<property name="Command">System.Exec(&quot;$INFO[Window.Property(CustomAction.String)]&quot;)</property>
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="781" description="Execute Shell Command And Wait Option">
                         <visible>Container(30).HasFocus(7)</visible>
 						<label>$LOCALIZE[31869]</label>
-						<property name="Command">System.ExecWait($INFO[Window.Property(CustomAction.String)])</property>
+						<property name="Command">System.ExecWait(&quot;$INFO[Window.Property(CustomAction.String)]&quot;)</property>
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
