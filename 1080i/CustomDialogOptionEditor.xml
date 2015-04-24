@@ -54,7 +54,7 @@
 				<onup>42</onup>
 				<ondown>31</ondown>
 				<onleft>9000</onleft>
-				<onright>-</onright>
+				<onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomOption.Name)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
 				<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -72,7 +72,7 @@
 				<onup>30</onup>
 				<ondown>32</ondown>
 				<onleft>9000</onleft>
-				<onright>-</onright>
+				<onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomOption.Subtitle)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
 				<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Dialog.Input)])</onclick>
