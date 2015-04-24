@@ -49,9 +49,9 @@
 		<value condition="!IsEmpty(ListItem.ChannelNumber)">[UPPERCASE]$INFO[ListItem.ChannelGroup,, | ]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,][/UPPERCASE]</value>
 		<value condition="!IsEmpty(ListItem.PictureDatetime)">[UPPERCASE]$INFO[ListItem.FolderName,, | ]$INFO[ListItem.PictureDatetime]$INFO[ListItem.Size, | ,][/UPPERCASE]</value>
         
-		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes)]</value>
-		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes)]</value>
-		<value condition="Container.Content(episodes)">[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] ,][/UPPERCASE]</value>
+		<value condition="Container.Content(tvshows)">[UPPERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]][/UPPERCASE]</value>
+		<value condition="Container.Content(seasons)">[UPPERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]][/UPPERCASE]</value>
+		<value condition="Container.Content(episodes)">[UPPERCASE]$INFO[ListItem.Season,$LOCALIZE[20373] ,]$INFO[ListItem.Episode, | $LOCALIZE[20359] ,][/UPPERCASE]</value>
 		<value condition="Container.Content(movies)">[UPPERCASE]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Born))">[UPPERCASE]$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Died), - ,][/UPPERCASE]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">[UPPERCASE]$INFO[ListItem.Property(Artist_Formed)]$INFO[ListItem.Property(Artist_Disbanded), - ,][/UPPERCASE]</value>
@@ -981,7 +981,7 @@
 	
 	<variable name="PlayerInformationLabel">
 		<value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.EXIFDate,, | ]$INFO[Slideshow.Filesize]$INFO[Slideshow.Aperture, | f/]</value>
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.Year]</value>
+		<value condition="Player.HasVideo">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, | $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, | $LOCALIZE[20359] ,]$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Year, | ,]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.Year, | ]</value>
 	</variable>
 	
