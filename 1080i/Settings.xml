@@ -36,6 +36,7 @@
 					<label2>5</label2>
 					<property name="Label3">$LOCALIZE[31023]</property>
 					<property name="Circle">circle/settings.png</property>
+					<icon>special://skin/backgrounds/pvrsettings.jpg</icon>
 					<onclick>ActivateWindow(PVRSettings)</onclick>
 				</item>
 				<item id="3" description="Videos Settings">
@@ -107,7 +108,7 @@
 					<label2>-</label2>
 					<property name="Label3">$LOCALIZE[33056]</property>
 					<property name="Circle">circle/settings.png</property>
-					<icon>special://skin/backgrounds/systemsettings.jpg</icon>
+					<icon>special://skin/backgrounds/systeminfo.jpg</icon>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 				</item>
 				<item id="12" description="Revolve Skin Settings">

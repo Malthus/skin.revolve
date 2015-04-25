@@ -153,6 +153,7 @@
 		<value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
 		
 		<value condition="Window.IsVisible(appearancesettings)">special://skin/backgrounds/appearancesettings.jpg</value>
+		<value condition="Window.IsVisible(pvrsettings)">special://skin/backgrounds/pvrsettings.jpg</value>
 		<value condition="Window.IsVisible(videossettings)">special://skin/backgrounds/videossettings.jpg</value>
 		<value condition="Window.IsVisible(musicsettings)">special://skin/backgrounds/musicsettings.jpg</value>
 		<value condition="Window.IsVisible(picturessettings)">special://skin/backgrounds/picturessettings.jpg</value>
@@ -162,7 +163,7 @@
 		<value condition="Window.IsVisible(servicesettings)">special://skin/backgrounds/servicesettings.jpg</value>
 		<value condition="Window.IsVisible(skinsettings)">special://skin/backgrounds/skinsettings.jpg</value>
 		<value condition="Window.IsVisible(systeminfo)">special://skin/backgrounds/systemsettings.jpg</value>
-		
+
 		<value condition="Window.IsVisible(home) + !IsEmpty(Container(300).ListItem.Icon)">$INFO[Container(300).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(home)">special://skin/backgrounds/default.jpg</value>
 
