@@ -78,7 +78,7 @@
 					<onclick>Reset()</onclick>
 				</control>
 
-				<control type="button" id="3112" description="Master Mode Button">
+				<control type="togglebutton" id="3112" description="Master Mode Button">
 					<visible>System.HasLocks</visible>
 					<width>512</width>
 					<height>60</height>

@@ -20,7 +20,7 @@
 				    <posy>3</posy>
 					<width>256</width>
 					<height>256</height>
-					<texture colodiffuse="BackgroundColor">icons/icon-pencil.png</texture>
+					<texture colordiffuse="BackgroundColor">icons/icon-pencil.png</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
 			</control>
@@ -217,7 +217,6 @@
                 <width>1240</width>
                 <font>DialogTextFont</font>
                 <align>left</align>
-                <scroll>true</scroll>
                 <label>$INFO[Window.Property(CustomOption.Action)]</label>
                 <onup>34</onup>
                 <ondown>30</ondown>

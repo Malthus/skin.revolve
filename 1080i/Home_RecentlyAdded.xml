@@ -13,7 +13,7 @@
 				<posy>550</posy>
 				<width>460</width>
 				<height>361</height>
-				<texture backgroud="true" diffuse="circle/episodemask.png" fallback="black.png">$INFO[Container(601).ListItem(0).icon]</texture>
+				<texture background="true" diffuse="circle/episodemask.png" fallback="black.png">$INFO[Container(601).ListItem(0).icon]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<fadetime>500</fadetime>
 			</control>
@@ -23,7 +23,7 @@
 				<posy>330</posy>
 				<width>662</width>
 				<height>662</height>
-				<texture backgroud="true">circle/tvshowswhite.png</texture>
+				<texture background="true">circle/tvshowswhite.png</texture>
 				<fadetime>500</fadetime>
 			</control>
 			
@@ -90,7 +90,7 @@
 				<posy>515</posy>
 				<width>527</width>
 				<height>296</height>
-				<texture backgroud="true" diffuse="circle/moviemask.png" fallback="black.png">$INFO[Container(602).ListItem(0).icon]</texture>
+				<texture background="true" diffuse="circle/moviemask.png" fallback="black.png">$INFO[Container(602).ListItem(0).icon]</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<fadetime>500</fadetime>
 			</control>
@@ -100,7 +100,7 @@
 				<posy>330</posy>
 				<width>662</width>
 				<height>662</height>
-				<texture backgroud="true">circle/movieswhite.png</texture>
+				<texture background="true">circle/movieswhite.png</texture>
 			</control>
 			
 			<control type="label">

@@ -82,7 +82,6 @@
 
 					<control type="label" id="21" description="Processor Text">
 						<width>1060</width>
-						<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
 						<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 					</control>
 
@@ -94,7 +93,6 @@
 
 					<control type="label" id="23" description="Memory Text">
 						<width>1060</width>
-						<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
 						<label>$LOCALIZE[31103] $INFO[System.Memory(used.percent)]</label>
 					</control>
 
