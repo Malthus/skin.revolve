@@ -137,16 +137,17 @@
 	</variable>
 	
 	<variable name="ContentBackground">
-		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(Fanart))">$INFO[Container(450).ListItem.Art(Fanart)]</value>
+		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(fanart))">$INFO[Container(450).ListItem.Art(fanart)]</value>
+		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(fanart_image))">$INFO[Container(450).ListItem.Art(fanart_image)]</value>
 		<value condition="Window.IsVisible(favourites)">special://skin/backgrounds/favourites.jpg</value>
 
 		<value condition="Window.IsVisible(settings) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(settings)">special://skin/backgrounds/settings.jpg</value>
 
-		<value condition="Window.IsVisible(1101) + !IsEmpty(Container(450).ListItem.Art(Fanart))">$INFO[Container(450).ListItem.Art(Fanart)]</value>
+		<value condition="Window.IsVisible(1101) + !IsEmpty(Container(450).ListItem.Property(backgroundimage))">$INFO[Container(450).ListItem.Property(backgroundimage)]</value>
 <!--		<value condition="Window.IsVisible(1101)">special://skin/backgrounds/submenu.jpg</value> -->
         
-		<value condition="Window.IsVisible(1102) + !IsEmpty(Container(450).ListItem.Art(Fanart))">$INFO[Container(450).ListItem.Art(Fanart)]</value>
+		<value condition="Window.IsVisible(1102) + !IsEmpty(Container(450).ListItem.Property(backgroundimage))">$INFO[Container(450).ListItem.Property(backgroundimage)]</value>
 		<value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>
         
 		<value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>

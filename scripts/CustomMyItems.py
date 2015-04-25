@@ -46,6 +46,7 @@ def createIconProperty(originbase, destination):
     
 def createBackgroundImageProperty(originbase, destination):
     value = getValueFromHomeProperty(originbase + '.Art(fanart)')
+    value = replaceEmptyValueFromHomeProperty(originbase + '.Art(fanart_image)', value)
     value = replaceEmptyValueFromHomeProperty(originbase + '.Fanart', value)
     setValueToProperty(destination, value, TARGET_WINDOW)
     
