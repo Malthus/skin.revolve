@@ -239,9 +239,9 @@
 			<property name="Circle">circle/music.png</property>
 			<icon>special://skin/backgrounds/albums.jpg</icon>
 			<thumb>$INFO[Skin.String(AlbumsOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
+			<onclick>ActivateWindow(musiclibrary,musicdb://albums/,return)</onclick>
 		</item>
-	
+
 		<item id="10" description="Books Option">
 			<visible>Skin.HasSetting(BooksOption.Active)</visible>
 			<label>31004</label>
