@@ -51,102 +51,72 @@
 				<control type="label">
 					<posx>-1</posx>
 					<posy>-1</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuCategoryLabel]</label>
 				</control>
 				<control type="label">
 					<posx>1</posx>
 					<posy>-1</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuCategoryLabel]</label>
 				</control>
 				<control type="label">
 					<posx>-1</posx>
 					<posy>1</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuCategoryLabel]</label>
 				</control>
 				<control type="label">
 					<posx>1</posx>
 					<posy>1</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuCategoryLabel]</label>
 				</control>
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>SecondaryColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuCategoryLabel]</label>
 				</control>
 				
 				<control type="label">
 					<posx>-1</posx>
 					<posy>89</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuDetailLabel]</label>
 				</control>
 				<control type="label">
 					<posx>1</posx>
 					<posy>89</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuDetailLabel]</label>
 				</control>
 				<control type="label">
 					<posx>-1</posx>
 					<posy>91</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuDetailLabel]</label>
 				</control>
 				<control type="label">
 					<posx>1</posx>
 					<posy>91</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuDetailLabel]</label>
 				</control>
 				<control type="label">
 					<posx>0</posx>
 					<posy>90</posy>
-					<height>100</height>
-					<width>1000</width>
-					<font>HomeMenuDetailFont</font>
+                    <include>MarkupForInformationInRevolveMenu</include>
 					<textcolor>SecondaryColor</textcolor>
-					<align>left</align>
 					<label>$VAR[MenuDetailLabel]</label>
 				</control>
 			</control>
@@ -1088,6 +1058,13 @@
 		</control>		
 	</include>
 	
+    <include name="MarkupForInformationInRevolveMenu">
+		<height>100</height>
+		<width>1200</width>
+		<font>HomeMenuDetailFont</font>
+		<align>left</align>
+    </include>
+    
     <include name="ItemMinusSevenForListInRevolveMenu">
 		<height>100</height>
 		<width>1200</width>
@@ -1251,7 +1228,7 @@
 	<include name="FocusedListItemCategoryLabelForCircleMenu">
 		<include>BackgroundForListItemCategoryLabelForCircleMenu</include>
 		<control type="label">
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>MainColor</textcolor>
@@ -1262,7 +1239,7 @@
 	<include name="UnfocusedListItemCategoryLabelForCircleMenu">
 		<include>BackgroundForListItemCategoryLabelForCircleMenu</include>
 		<control type="label">
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>TextColor</textcolor>
@@ -1274,7 +1251,7 @@
 		<control type="label">
 			<posx>-1</posx>
 			<posy>-1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -1283,7 +1260,7 @@
 		<control type="label">
 			<posx>-1</posx>
 			<posy>1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -1292,7 +1269,7 @@
 		<control type="label">
 			<posx>1</posx>
 			<posy>-1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -1301,7 +1278,7 @@
 		<control type="label">
 			<posx>1</posx>
 			<posy>1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -1312,7 +1289,7 @@
 	<include name="FocusedListItemDetailLabelForCircleMenu">
 		<include>BackgroundForListItemDetailLabelForCircleMenu</include>
 		<control type="label">
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>MainColor</textcolor>
@@ -1323,7 +1300,7 @@
 	<include name="UnfocusedListItemDetailLabelForCircleMenu">
 		<include>BackgroundForListItemDetailLabelForCircleMenu</include>
 		<control type="label">
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>TextColor</textcolor>
@@ -1335,7 +1312,7 @@
 		<control type="label">
 			<posx>-1</posx>
 			<posy>-1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -1344,7 +1321,7 @@
 		<control type="label">
 			<posx>-1</posx>
 			<posy>1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -1353,7 +1330,7 @@
 		<control type="label">
 			<posx>1</posx>
 			<posy>-1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -1362,7 +1339,7 @@
 		<control type="label">
 			<posx>1</posx>
 			<posy>1</posy>
-			<width>1000</width>
+			<width>1160</width>
 			<height>30</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
