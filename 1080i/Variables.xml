@@ -989,6 +989,7 @@
 	</variable>
 	
 	<variable name="PlayerThumbnail">
+		<value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.Path]$INFO[Slideshow.Filename]</value>
 		<value condition="Player.HasVideo + !IsEmpty(VideoPlayer.Cover)">$INFO[VideoPlayer.Cover]</value>
 		<value condition="Player.HasAudio + !IsEmpty(MusicPlayer.Cover)">$INFO[MusicPlayer.Cover]</value>
 		<value>$INFO[Player.Art(thumb)]</value>
