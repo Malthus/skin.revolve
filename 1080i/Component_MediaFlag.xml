@@ -967,6 +967,7 @@
 			</control>
 			
 			<control type="group">
+                <visible>!IsEmpty(Slideshow.Aperture)</visible>
 				<width>160</width>
 				
 				<control type="image">
