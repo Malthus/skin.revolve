@@ -387,6 +387,7 @@
 				<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(BooksOption.Parameter)],1190)</onclick>
 				<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(BooksOption.Action)],1190)</onclick>
 				<onclick>SetProperty(CustomOption.Target,BooksOption,1190)</onclick>
+				<onclick>ClearProperty(CustomOption.Customizable,1190)</onclick>
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
@@ -420,6 +421,7 @@
 				<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(GamesOption.Parameter)],1190)</onclick>
 				<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(GamesOption.Action)],1190)</onclick>
 				<onclick>SetProperty(CustomOption.Target,GamesOption,1190)</onclick>
+				<onclick>ClearProperty(CustomOption.Customizable,1190)</onclick>
 				<onclick>ActivateWindow(1190)</onclick>
             </control>
 
