@@ -5,8 +5,6 @@
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
 
 	<controls>
-		<include>GlobalOverlay</include>
-
 		<control type="image">
 			<posx>810</posx>
 			<posy>390</posy>
