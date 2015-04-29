@@ -22,45 +22,57 @@
             <include>InvisibleItemsForMenu</include>
             
 			<content>
-				<item id="3111" description="Exit Button">
+				<item id="1" description="Exit Button">
 					<visible>System.ShowExitButton</visible>
 					<label>$LOCALIZE[13012]</label>
 					<onclick>Quit()</onclick>
 				</item>
-				<item id="3116" description="Shutdown Bottun">
+				<item id="2" description="Shutdown Bottun">
+                    <visible>System.CanPowerDown</visible>
 					<label>$LOCALIZE[13005]</label>
 					<onclick>ShutDown()</onclick>
 				</item>
-				<item id="3113" description="Logoff Profile Button">
-					<visible>System.IsLoggedOn + System.HasLoginScreen</visible>
+				<item id="3" description="Logoff Profile Button">
+					<visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]</visible>
 					<label>$LOCALIZE[20126] $INFO[System.ProfileName]</label>
 					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>System.LogOff()</onclick>
 				</item>
-				<item id="3117" description="Suspend Button">
+				<item id="4" description="Suspend Button">
+                    <visible>System.CanSuspend</visible>
 					<label>$LOCALIZE[13011]</label>
 					<onclick>Suspend()</onclick>
 				</item>
-				<item id="3118" description="Reboot Button">
+				<item id="5" description="Hibernate Button">
+                    <visible>System.CanHibernate</visible>
+					<label>$LOCALIZE[13010]</label>
+					<onclick>Hibernate()</onclick>
+				</item>
+				<item id="6" description="Reboot Button">
+                    <visible>System.CanReboot</visible>
 					<label>$LOCALIZE[13013]</label>
 					<onclick>Reset()</onclick>
 				</item>
-				<item id="3112" description="Master Mode Button">
-					<visible>System.HasLocks</visible>
-					<label>$LOCALIZE[20046]</label>
-					<altlabel>20045</altlabel>
-					<onclick>Mastermode()</onclick>
+				<item id="7" description="Custom Shutdown Timer Button">
+					<visible>!System.HasAlarm(shutdowntimer)</visible>
+					<label>$LOCALIZE[20150]</label>
+					<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 				</item>
-				<item id="3114" description="Custom Cancel Timer Button">
+				<item id="8" description="Custom Cancel Timer Button">
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 					<label>$LOCALIZE[20151]</label>
 					<label2>$LOCALIZE[20145]: [B]$INFO[System.Alarmpos][/B]</label2>
 					<onclick>CancelAlarm(shutdowntimer)</onclick>
 				</item>
-				<item id="3115" description="Custom Shutdown Timer Button">
-					<visible>!System.HasAlarm(shutdowntimer)</visible>
-					<label>$LOCALIZE[20150]</label>
-					<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+				<item id="9" description="Enter Master Mode Button">
+					<visible>System.HasLocks + !System.IsMaster</visible>
+					<label>$LOCALIZE[20045]</label>
+					<onclick>Mastermode()</onclick>
+				</item>
+				<item id="10" description="Leave Master Mode Button">
+					<visible>System.HasLocks + System.IsMaster</visible>
+					<label>$LOCALIZE[20046]</label>
+					<onclick>Mastermode()</onclick>
 				</item>
 			</content>
 		</control>
@@ -87,17 +99,6 @@
 
             <control type="label" description="Settings Menu Title">
                 <include>MarkupForTitleForRevolveMenu</include>
-                <label>$LOCALIZE[13012]</label>
-            </control>
-        </control>
-        
-        <control type="group" description="Circle Menu">
-            <visible>false</visible>
-            <include>CenterIconForCircleMenu</include>
-            <include>ListForCircleMenu</include>
-            
-            <control type="label" description="Settings Menu Title">
-                <include>MarkupForTitleForCircleMenu</include>
                 <label>$LOCALIZE[13012]</label>
             </control>
         </control>

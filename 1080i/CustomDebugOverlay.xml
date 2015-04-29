@@ -288,8 +288,8 @@
 
 			<control type="label">
 				<include>WindowIDForDebug</include>
-				<label>CustomMyHub.xml</label>
-				<visible>Window.IsVisible(CustomMyHub.xml)</visible>
+				<label>CustomMySubmenu.xml</label>
+				<visible>Window.IsVisible(CustomMySubmenu.xml)</visible>
 			</control>
 
 			<control type="label">
@@ -300,8 +300,14 @@
 
 			<control type="label">
 				<include>WindowIDForDebug</include>
-				<label>CustomMyFavourites.xml</label>
-				<visible>Window.IsVisible(CustomMyFavourites.xml)</visible>
+				<label>CustomMyLists.xml</label>
+				<visible>Window.IsVisible(CustomMyLists.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>WindowIDForDebug</include>
+				<label>CustomExitMenu.xml</label>
+				<visible>Window.IsVisible(CustomExitMenu.xml)</visible>
 			</control>
             
 			<!-- Dialog labels -->
