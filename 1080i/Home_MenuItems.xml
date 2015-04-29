@@ -327,7 +327,8 @@
 			<property name="Circle">circle/power.png</property>
 			<icon>special://skin/backgrounds/exit.jpg</icon>
 			<thumb>$INFO[Skin.String(ExitOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(shutdownmenu)</onclick>				
+			<onclick>ActivateWindow(1180)</onclick>				
+<!--			<onclick>ActivateWindow(shutdownmenu)</onclick> -->
 		</item>
 	</include>
 </includes>
