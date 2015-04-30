@@ -12,8 +12,7 @@
 			<posy>40</posy>
 			<width>1920</width>
 			<height>1000</height>
-			<defaultcontrol>3111</defaultcontrol>
-			<focusposition>1</focusposition>
+			<focusposition>0</focusposition>
 			<onup>450</onup>
 			<ondown>450</ondown>
 			<onleft>Noop</onleft>
@@ -22,57 +21,64 @@
             <include>InvisibleItemsForMenu</include>
             
 			<content>
-				<item id="1" description="Exit Button">
+				<item id="1" description="Exit Option">
 					<visible>System.ShowExitButton</visible>
 					<label>$LOCALIZE[13012]</label>
 					<onclick>Quit()</onclick>
 				</item>
-				<item id="2" description="Shutdown Bottun">
+				<item id="2" description="Shutdown Option">
                     <visible>System.CanPowerDown</visible>
 					<label>$LOCALIZE[13005]</label>
 					<onclick>ShutDown()</onclick>
 				</item>
-				<item id="3" description="Logoff Profile Button">
+				<item id="3" description="Logoff Profile Option">
 					<visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]</visible>
 					<label>$LOCALIZE[20126] $INFO[System.ProfileName]</label>
 					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>System.LogOff()</onclick>
 				</item>
-				<item id="4" description="Suspend Button">
+				<item id="4" description="Suspend Option">
                     <visible>System.CanSuspend</visible>
 					<label>$LOCALIZE[13011]</label>
 					<onclick>Suspend()</onclick>
 				</item>
-				<item id="5" description="Hibernate Button">
+				<item id="5" description="Hibernate Option">
                     <visible>System.CanHibernate</visible>
 					<label>$LOCALIZE[13010]</label>
 					<onclick>Hibernate()</onclick>
 				</item>
-				<item id="6" description="Reboot Button">
+				<item id="6" description="Reboot Option">
                     <visible>System.CanReboot</visible>
 					<label>$LOCALIZE[13013]</label>
 					<onclick>Reset()</onclick>
 				</item>
-				<item id="7" description="Custom Shutdown Timer Button">
+				<item id="7" description="Custom Shutdown Timer Option">
 					<visible>!System.HasAlarm(shutdowntimer)</visible>
 					<label>$LOCALIZE[20150]</label>
 					<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 				</item>
-				<item id="8" description="Custom Cancel Timer Button">
+				<item id="8" description="Custom Cancel Timer Option">
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 					<label>$LOCALIZE[20151]</label>
 					<label2>$LOCALIZE[20145]: [B]$INFO[System.Alarmpos][/B]</label2>
 					<onclick>CancelAlarm(shutdowntimer)</onclick>
 				</item>
-				<item id="9" description="Enter Master Mode Button">
+				<item id="9" description="Enter Master Mode Option">
 					<visible>System.HasLocks + !System.IsMaster</visible>
 					<label>$LOCALIZE[20045]</label>
 					<onclick>Mastermode()</onclick>
 				</item>
-				<item id="10" description="Leave Master Mode Button">
+				<item id="10" description="Leave Master Mode Option">
 					<visible>System.HasLocks + System.IsMaster</visible>
 					<label>$LOCALIZE[20046]</label>
 					<onclick>Mastermode()</onclick>
+				</item>
+				<item id="11" description="Settings Option">
+                    <!-- <visible>!Skin.HasSetting(SettingsOption.Active)</visible> -->
+					<label>$LOCALIZE[5]</label>
+                    <property name="Label3">$LOCALIZE[31023]</property>
+					<icon>special://skin/backgrounds/settings.jpg</icon>
+                    <onclick>ActivateWindow(settings)</onclick>
 				</item>
 			</content>
 		</control>

@@ -40,23 +40,24 @@
 				<onright>Noop</onright>
 				<orientation>vertical</orientation>
 
-				<control type="button" id="3111" description="Exit Button">
+				<control type="button" id="1" description="Exit Button">
 					<visible>System.ShowExitButton</visible>
 					<width>512</width>
 					<height>60</height>
-					<label>13012</label>
+					<label>$LOCALIZE[13012]</label>
 					<onclick>Quit()</onclick>
 				</control>
 
-				<control type="button" id="3116" description="Shutdown Bottun">
+				<control type="button" id="2" description="Shutdown Button">
+                    <visible>System.CanPowerDown</visible>
 					<width>512</width>
 					<height>60</height>
-					<label>13005</label>
+					<label>$LOCALIZE[13005]</label>
 					<onclick>ShutDown()</onclick>
 				</control>
 
-				<control type="button" id="3113" description="Logoff Profile Button">
-					<visible>System.IsLoggedOn + System.HasLoginScreen</visible>
+				<control type="button" id="3" description="Logoff Profile Button">
+					<visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]</visible>
 					<width>512</width>
 					<height>60</height>
 					<label>$LOCALIZE[20126] $INFO[System.ProfileName]</label>
@@ -64,46 +65,64 @@
 					<onclick>System.LogOff()</onclick>
 				</control>
 
-				<control type="button" id="3117" description="Suspend Button">
-					<width>512</width>
+				<control type="button" id="4" description="Suspend Button">
+					<visible>System.CanSuspend</visible>
+                    <width>512</width>
 					<height>60</height>
-					<label>13011</label>
+					<label>$LOCALIZE[13011]</label>
 					<onclick>Suspend()</onclick>
 				</control>
 
-				<control type="button" id="3118" description="Reboot Button">
-					<width>512</width>
+				<control type="button" id="5" description="Hibernate Button">
+					<visible>System.CanHibernate</visible>
+                    <width>512</width>
 					<height>60</height>
-					<label>13013</label>
+					<label>$LOCALIZE[13010]</label>
+					<onclick>Hibernate()</onclick>
+				</control>
+
+				<control type="button" id="6" description="Reboot Button">
+					<visible>System.CanReboot</visible>
+                    <width>512</width>
+					<height>60</height>
+					<label>$LOCALIZE[13013]</label>
 					<onclick>Reset()</onclick>
 				</control>
 
-				<control type="togglebutton" id="3112" description="Master Mode Button">
-					<visible>System.HasLocks</visible>
-					<width>512</width>
-					<height>60</height>
-					<label>20046</label>
-					<altlabel>20045</altlabel>
-					<onclick>Mastermode()</onclick>
-				</control>
-
-				<control type="button" id="3114" description="Custom Cancel Timer Button">
-					<visible>System.HasAlarm(shutdowntimer)</visible>
-					<width>512</width>
-					<height>60</height>
-					<label>20151</label>
-					<onclick>CancelAlarm(shutdowntimer)</onclick>
-				</control>
-
-				<control type="button" id="3115" description="Custom Shutdown Timer Button">
+				<control type="button" id="7" description="Custom Shutdown Timer Button">
 					<visible>!System.HasAlarm(shutdowntimer)</visible>
 					<width>512</width>
 					<height>60</height>
-					<label>20150</label>
+					<label>$LOCALIZE[20150]</label>
 					<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 				</control>
 
-				<control type="label" id="3119" description="Alarm Time Label">
+				<control type="button" id="8" description="Custom Cancel Timer Button">
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+					<width>512</width>
+					<height>60</height>
+					<label>$LOCALIZE[20151]</label>
+					<onclick>CancelAlarm(shutdowntimer)</onclick>
+				</control>
+
+				<control type="togglebutton" id="9" description="Master Mode Button">
+					<visible>System.HasLocks</visible>
+					<width>512</width>
+					<height>60</height>
+					<label>$LOCALIZE[20046]</label>
+					<altlabel>$LOCALIZE[20045]</altlabel>
+					<onclick>Mastermode()</onclick>
+				</control>
+
+				<control type="button" id="10" description="Settings Button">
+					<visible>!Skin.HasSetting(SettingsOption.Active)</visible>
+					<width>512</width>
+					<height>60</height>
+					<label>$LOCALIZE[5]</label>
+					<onclick>ActivateWindow(settings)</onclick>
+				</control>
+
+				<control type="label" id="20" description="Alarm Time Label">
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 					<width>512</width>
 					<height>60</height>
