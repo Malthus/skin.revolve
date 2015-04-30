@@ -2,8 +2,16 @@
 <window id="1102">
 	<defaultcontrol always="yes">450</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-    <onload condition="IsEmpty(Window.Property(MyItemsMenuTitle))">RunScript(special://skin/scripts/CustomMyItems.py,$INFO[Skin.String(Dialog.MyItemsMenuTitle)],$INFO[Skin.String(Dialog.MyItemsOriginMask)],false)</onload>
-    
+    <onload condition="!IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyItems.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
+    <onload condition="!IsEmpty(Window.Property(SourceMask))">Skin.SetString(MyItems.SourceMask,$INFO[Window.Property(SourceMask)])</onload>
+    <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyItems.MenuTitle)])</onload>
+    <onload condition="IsEmpty(Window.Property(SourceMask))">SetProperty(SourceMask,$INFO[Skin.String(MyItems.SourceMask)])</onload>
+    <onload>RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Window.Property(SourceMask)])</onload>
+
+<!--
+            RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1102,MenuTitle,Random Albums,SourceMask,"RandomAlbum.%d")
+-->
+
 	<controls>
 		<include>GlobalBackground</include>
 
@@ -24,8 +32,7 @@
 		
 			<content>
 				<item id="1" description="My Item 1 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems01Option.Name))</visible>
-					<label>$INFO[Window.Property(MyItems01Option.Name)]</label>
+					<label>$INFO[Window.Property(MyItems01Option.Name)] - $INFO[Window.Property(SourceMask)]</label>
 					<label2>$INFO[Window.Property(MyItems01Option.Subtitle)]</label2>
 					<icon>$INFO[Window.Property(MyItems01Option.Icon)]</icon>
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems01Option.BackgroundImage)]</property>
@@ -194,7 +201,7 @@
             
             <control type="label" description="My Items Menu Title">
                 <include>MarkupForTitleForRevolveMenu</include>
-                <label>$INFO[Window.Property(MyItemsMenuTitle)]</label>
+                <label>$INFO[Window.Property(MenuTitle)]</label>
             </control>
 		</control>
         
@@ -205,7 +212,7 @@
             
             <control type="label" description="My Items Menu Title">
                 <include>MarkupForTitleForCircleMenu</include>
-                <label>$INFO[Window.Property(MyItemsMenuTitle)]</label>
+                <label>$INFO[Window.Property(MenuTitle)]</label>
             </control>
         </control>
         

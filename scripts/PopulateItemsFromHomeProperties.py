@@ -54,7 +54,6 @@ def createActionProperty(originbase, destination):
     value = getValueFromHomeProperty(originbase + '.Play')
     if value == '':
         value = addPrefixAndSuffixToLabel(getValueFromHomeProperty(originbase + '.Path'), 'PlayMedia("', '")')
-        print(value)
     if value == '':
         value = getValueFromHomeProperty(originbase + '.LibraryPath')
     setValueToProperty(destination, value, TARGET_WINDOW)
@@ -72,12 +71,11 @@ def copyProperties(originmask):
         createActionProperty(originbase, destinationbase + '.Action')
 
 
-if len(sys.argv) >= 2:
+if len(sys.argv) > 1:
     logMessage('Call to ' + SCRIPT_NAME + ' script with arguments: ' + str(sys.argv) + '.')	
-    menuname = sys.argv[1]
-    originmask = sys.argv[2]
+    originmask = sys.argv[1]
 
-    logMessage(SCRIPT_NAME + ' copies properties: ' + sys.argv[2] + ' to MyItems-properties')	
+    logMessage(SCRIPT_NAME + ' copies properties: ' + originmask + ' to MyItems-properties')	
     copyProperties(originmask)
 else:
     logMessage(SCRIPT_NAME + ' terminates: Missing argument(s) in call to script.')	
