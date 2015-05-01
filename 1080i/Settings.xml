@@ -132,18 +132,7 @@
 
             <control type="label" description="Settings Menu Title">
                 <include>MarkupForTitleForRevolveMenu</include>
-                <label>$LOCALIZE[5]</label>
-            </control>
-        </control>
-        
-        <control type="group" description="Circle Menu">
-            <visible>false</visible>
-            <include>CenterIconForCircleMenu</include>
-            <include>ListForCircleMenu</include>
-            
-            <control type="label" description="Settings Menu Title">
-                <include>MarkupForTitleForCircleMenu</include>
-                <label>$LOCALIZE[5]</label>
+                <label>$LOCALIZE[31080]</label>
             </control>
         </control>
 	</controls>
