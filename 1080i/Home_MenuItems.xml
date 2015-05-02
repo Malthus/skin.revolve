@@ -196,7 +196,7 @@
 			<property name="Circle">circle/videos.png</property>
 			<icon>special://skin/backgrounds/videos.jpg</icon>
 			<thumb>$INFO[Skin.String(VideosOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(videofiles)</onclick>
+			<onclick>ActivateWindow(videos)</onclick>
 		</item>
 
 		<item id="5" description="Movies Option">
@@ -207,7 +207,7 @@
 			<property name="Circle">circle/movies2.png</property>
 			<icon>special://skin/backgrounds/movies.jpg</icon>
 			<thumb>$INFO[Skin.String(MoviesOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(videos,videodb://movies/,return)</onclick>
+			<onclick>ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
 		</item>
 
 		<item id="6" description="TV Shows Option">
@@ -218,7 +218,7 @@
 			<property name="Circle">circle/tvshows.png</property>
 <!--			<icon>special://skin/backgrounds/tvshows.jpg</icon> -->
 			<thumb>$INFO[Skin.String(TVShowsOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(videos,videodb://tvshows/,return)</onclick>
+			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 		</item>
 					
 		<item id="3" description="Music Option">
@@ -240,7 +240,7 @@
 			<property name="Circle">circle/music.png</property>
 			<icon>special://skin/backgrounds/albums.jpg</icon>
 			<thumb>$INFO[Skin.String(AlbumsOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(musiclibrary,musicdb://albums/,return)</onclick>
+			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
 		</item>
 
 		<item id="10" description="Books Option">
