@@ -55,12 +55,14 @@
 				<item id="7" description="Custom Shutdown Timer Option">
 					<visible>!System.HasAlarm(shutdowntimer)</visible>
 					<label>$LOCALIZE[20150]</label>
+					<icon>special://skin/backgrounds/shutdowntimer.jpg</icon>
 					<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 				</item>
 				<item id="8" description="Custom Cancel Timer Option">
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 					<label>$LOCALIZE[20151]</label>
 					<label2>$LOCALIZE[20145]: [B]$INFO[System.Alarmpos][/B]</label2>
+					<icon>special://skin/backgrounds/shutdowntimer.jpg</icon>
 					<onclick>CancelAlarm(shutdowntimer)</onclick>
 				</item>
 				<item id="9" description="Enter Master Mode Option">
