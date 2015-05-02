@@ -11,6 +11,14 @@
 	<include name="VisibilityForHorizontalIcon">
 		<visible>!IsEmpty(ListItem.ChannelNumber)</visible>
 	</include>
+    
+    <include name="VisibilityForBanner">
+    	<visible>!IsEmpty(ListItem.Art(banner)) | !IsEmpty(ListItem.Art(season.banner)) | !IsEmpty(ListItem.Art(tvshow.banner))</visible>
+    </include>
+	
+    <include name="VisibilityForNoBanner">
+    	<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(season.banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+    </include>
 	
 	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
 		<control type="image">
@@ -362,6 +370,93 @@
 			<include>DefaultOverlayMediaFlag</include>
 		</control>
 	</include>
+    
+	<include name="SmallBannerIcon">
+		<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+			<height>74</height>
+			<width>382</width>
+			<texture colordiffuse="MainColor">elements/banner-mask.png</texture>
+		</control>
+		<control type="image">
+            <posx>2</posx>
+            <posy>2</posy>
+			<height>70</height>
+			<width>378</width>
+			<texture diffuse="elements/banner-mask.png" background="true">$VAR[ContentBanner]</texture>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+	</include>
+
+	<include name="ShadeForSmallBannerIcon">
+		<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+			<height>74</height>
+			<width>382</width>
+			<texture colordiffuse="SelectColor">elements/banner-mask.png</texture>
+		</control>
+	</include>
+
+	<include name="DefaultBannerIcon">
+		<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+			<height>146</height>
+			<width>764</width>
+			<texture colordiffuse="MainColor">elements/banner-mask.png</texture>
+		</control>
+		<control type="image">
+            <posx>3</posx>
+            <posy>3</posy>
+			<height>140</height>
+			<width>758</width>
+			<texture diffuse="elements/banner-mask.png" background="true">$VAR[ContentBanner]</texture>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
+            <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(season.banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+            <posx>3</posx>
+            <posy>3</posy>
+			<height>140</height>
+			<width>758</width>
+			<texture colordiffuse="BackgroundColor">elements/banner-border.png</texture>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+        <control type="label">
+            <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(season.banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+            <posx>382</posx>
+            <posy>7</posy>
+			<height>140</height>
+			<width>720</width>
+			<font>MediumViewFont</font>
+            <textcolor>$VAR[ContentBackgroundColor]</textcolor>
+            <align>center</align>
+            <label>$VAR[ContentNameLabel]</label>
+        </control>
+	</include>
+
+	<include name="ShadeForDefaultBannerIcon">
+		<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+			<height>146</height>
+			<width>764</width>
+			<texture colordiffuse="SelectColor">elements/banner-mask.png</texture>
+		</control>
+	</include>
+
+	<include name="ShadowForDefaultBannerIcon">
+		<control type="image">
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<height>206</height>
+			<width>824</width>
+			<texture border="30" background="true">elements/poster-shadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
 	
 	<include name="SquarePosterIcon">
 		<control type="image">
@@ -381,7 +476,7 @@
 	</include>
 
 	<include name="ShadowForSquarePosterIcon">
-		<control type="group">
+		<control type="image">
 			<posx>-30</posx>
 			<posy>-30</posy>
 			<width>588</width>
@@ -418,7 +513,7 @@
 	</include>
 
 	<include name="ShadowForVerticalPosterIcon">
-		<control type="group">
+		<control type="image">
 			<posx>-30</posx>
 			<posy>-30</posy>
 			<width>588</width>

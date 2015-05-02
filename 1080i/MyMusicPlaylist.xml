@@ -2,12 +2,13 @@
 <window id="500">
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>52,51</views>
+	<views>52,51,58</views>
 
 	<controls>
 		<include>GlobalBackground</include>
 		<include>DropListView</include>
 		<include>CircleListView</include>
+		<include>RotateListView</include>
 
 		<control type="group" id="9000">
 			<include>SideMenu</include>
