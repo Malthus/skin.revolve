@@ -413,27 +413,63 @@
 			<height>140</height>
 			<width>758</width>
 			<texture diffuse="elements/banner-mask.png" background="true">$VAR[ContentBanner]</texture>
-            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
-		<control type="image">
-            <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(season.banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
-            <posx>3</posx>
-            <posy>3</posy>
-			<height>140</height>
-			<width>758</width>
-			<texture colordiffuse="BackgroundColor">elements/banner-border.png</texture>
-            <aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
-        <control type="label">
-            <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(season.banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
-            <posx>382</posx>
-            <posy>7</posy>
-			<height>140</height>
-			<width>720</width>
-			<font>MediumViewFont</font>
-            <textcolor>$VAR[ContentBackgroundColor]</textcolor>
-            <align>center</align>
-            <label>$VAR[ContentNameLabel]</label>
+
+        <control type="group">
+            <include>VisibilityForNoBanner</include>
+            
+            <control type="label">
+                <posx>380</posx>
+                <posy>108</posy>
+                <height>30</height>
+                <width>720</width>
+                <font>SmallViewFont</font>
+                <textcolor>$VAR[ContentMainColor]</textcolor>
+                <align>center</align>
+                <label>$VAR[ContentNameLabel]</label>
+            </control>
+            <control type="label">
+                <posx>384</posx>
+                <posy>108</posy>
+                <height>30</height>
+                <width>720</width>
+                <font>SmallViewFont</font>
+                <textcolor>$VAR[ContentMainColor]</textcolor>
+                <align>center</align>
+                <label>$VAR[ContentNameLabel]</label>
+            </control>
+            <control type="label">
+                <posx>380</posx>
+                <posy>112</posy>
+                <height>30</height>
+                <width>720</width>
+                <font>SmallViewFont</font>
+                <textcolor>$VAR[ContentMainColor]</textcolor>
+                <align>center</align>
+                <label>$VAR[ContentNameLabel]</label>
+            </control>
+            <control type="label">
+                <posx>384</posx>
+                <posy>112</posy>
+                <height>30</height>
+                <width>720</width>
+                <font>SmallViewFont</font>
+                <textcolor>$VAR[ContentMainColor]</textcolor>
+                <align>center</align>
+                <label>$VAR[ContentNameLabel]</label>
+            </control>
+            
+            <control type="label">
+                <posx>382</posx>
+                <posy>110</posy>
+                <height>30</height>
+                <width>720</width>
+                <font>SmallViewFont</font>
+                <textcolor>$VAR[ContentBackgroundColor]</textcolor>
+                <align>center</align>
+                <label>$VAR[ContentNameLabel]</label>
+            </control>
         </control>
 	</include>
 
