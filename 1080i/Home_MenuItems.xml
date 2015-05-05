@@ -247,7 +247,7 @@
 			<visible>Skin.HasSetting(BooksOption.Active)</visible>
 			<label>31004</label>
 			<property name="Label3">$LOCALIZE[31027]</property>
-<!--			<property name="Circle">circle/books.png</property> -->
+			<property name="Circle">circle/books.png</property>
 			<icon>special://skin/backgrounds/books.jpg</icon>
 			<onclick>$INFO[Skin.String(BooksOption.Action)]</onclick>
 		</item>
