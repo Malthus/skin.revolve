@@ -53,13 +53,15 @@
 			<posy>40</posy>
 			<width>1920</width>
 			<height>1000</height>
-			<focusposition>3</focusposition>
+			<focusposition>5</focusposition>
 			<defaultcontrol>8</defaultcontrol>
 			<onup>300</onup>
 			<ondown>300</ondown>
-			<onleft>600</onleft>
+			<onleft condition="Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(16)">600</onleft>
 			<onright>Noop</onright>
 
+            <include>InvisibleItemsForMenu</include>
+<!--            
 			<itemlayout width="1920" height="200">
 				<control type="label">
 					<posx>960</posx>
@@ -83,7 +85,7 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</focusedlayout>
-
+-->
 			<content>
 				<include>HomeMenuItems</include>
 			</content>

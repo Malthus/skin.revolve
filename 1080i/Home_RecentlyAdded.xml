@@ -1,235 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="ItemsRecentlyAdded">
-
 		<control type="group">
-			<description>Recent TV icon</description>
-			<visible>Control.HasFocus(601)</visible>
-			<animation effect="fade" start="0" end="100" time="500">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="500">Hidden</animation>
-			
-			<control type="image">
-				<posx>-54</posx>
-				<posy>550</posy>
-				<width>460</width>
-				<height>361</height>
-				<texture background="true" diffuse="circle/episodemask.png" fallback="black.png">$INFO[Container(601).ListItem(0).icon]</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<fadetime>500</fadetime>
-			</control>
-		
-			<control type="image">
+			<control type="fixedlist" id="600">
+                <visible allowhiddenfocus="true">Control.HasFocus(600)</visible>
+                <description>Items In Circle List</description>
+                <animation effect="fade" start="0" end="100" time="500">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
+                
 				<posx>-100</posx>
 				<posy>330</posy>
 				<width>662</width>
 				<height>662</height>
-				<texture background="true">circle/tvshowswhite.png</texture>
-				<fadetime>500</fadetime>
-			</control>
-			
-			<control type="label">
-				<posx>20</posx>
-				<posy>950</posy>
-				<width>800</width>
-				<height>100</height>
-				<label>$INFO[Container(601).ListItem(0).Label]</label>
-				<font>MediumViewFont</font>
-				<textcolor>White</textcolor>
-				<align>left</align>
-				<scroll>true</scroll>
-			</control>
-			
-			<control type="label">
-				<posx>20</posx>
-				<posy>990</posy>
-				<width>800</width>
-				<height>100</height>
-				<label>[UPPERCASE]$INFO[Container(601).ListItem(0).Label2][/UPPERCASE]</label>
-				<font>HomeMenuSpecialFont</font>
-				<textcolor>White</textcolor>
-				<align>left</align>
-			</control>
-		
-		</control>
-		
-		<control type="group" id="600">
-			<visible>Container(300).HasFocus(6)</visible>
-			<defaultcontrol>601</defaultcontrol>
-		
-			<control type="fixedlist" id="601">
-				<posx>2000</posx>
-				<posy>400</posy>
-				<height>2000</height>
-				<width>300</width>
-				<onup>601</onup>
-				<ondown>601</ondown>
-				<onleft>600</onleft>
+				<onup>600</onup>
+				<ondown>600</ondown>
+				<onleft>Noop</onleft>
 				<onright>300</onright>
-				<scrolltime>200</scrolltime>
+				<scrolltime>0</scrolltime>
 				
-				<itemlayout width="300" height="300">
+				<itemlayout width="662" height="0">
 				</itemlayout>
 				
-				<focusedlayout width="300" height="300">
-				</focusedlayout>
-				
-				<content>
-					<include>EpisodesRecentlyAdded</include>
-				</content>
-			</control>
-		</control>
+				<focusedlayout width="662" height="800">
+                    <control type="group">
+                        <description>Movies In Circle List</description>
+                        <visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>
+                        
+                        <control type="image">
+                            <posx>66</posx>
+                            <posy>185</posy>
+                            <width>527</width>
+                            <height>296</height>
+                            <texture background="true" diffuse="circle/movies-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
+                        </control>
 		
-		<control type="group">
-			<description>Recent Movies</description>
-			<visible>Control.HasFocus(602)</visible>
-			<animation effect="fade" start="0" end="100" time="500">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="500">Hidden</animation>
+                        <control type="image">
+                            <width>662</width>
+                            <height>662</height>
+                            <texture background="true">circle/movies-focus.png</texture>
+                        </control>
+                    </control>
 			
-			<control type="image">
-				<posx>-34</posx>
-				<posy>515</posy>
-				<width>527</width>
-				<height>296</height>
-				<texture background="true" diffuse="circle/moviemask.png" fallback="black.png">$INFO[Container(602).ListItem(0).icon]</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<fadetime>500</fadetime>
-			</control>
-		
-			<control type="image">
-				<posx>-100</posx>
-				<posy>330</posy>
-				<width>662</width>
-				<height>662</height>
-				<texture background="true">circle/movieswhite.png</texture>
-			</control>
-			
-			<control type="label">
-				<posx>20</posx>
-				<posy>880</posy>
-				<width>600</width>
-				<height>100</height>
-				<label>$INFO[Container(602).ListItem(0).Label]</label>
-				<font>MediumViewFont</font>
-				<textcolor>White</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<wrapmultiline>true</wrapmultiline>
-			</control>
-			
-			<control type="label">
-				<posx>20</posx>
-				<posy>810</posy>
-				<width>800</width>
-				<height>100</height>
-				<label>[UPPERCASE]$INFO[Container(602).ListItem(0).Label2][/UPPERCASE]</label>
-				<font>HomeMenuSpecialFont</font>
-				<textcolor>White</textcolor>
-				<align>left</align>
-			</control>
-		</control>
-		
-		<control type="group" id="600">
-			<visible>Container(300).HasFocus(5)</visible>
-			<defaultcontrol>601</defaultcontrol>
-		
-			<control type="fixedlist" id="602">
-				<posx>2000</posx>
-				<posy>400</posy>
-				<height>2000</height>
-				<width>300</width>
-				<onup>602</onup>
-				<ondown>602</ondown>
-				<onleft>600</onleft>
-				<onright>300</onright>
-				<scrolltime>200</scrolltime>
-				<itemlayout width="300" height="300">
-					
-				</itemlayout>
-				
-				<focusedlayout width="300" height="300">
-					
-				</focusedlayout>
-				
-				<content>
-					
-					<include>MoviesRecentlyAdded</include>
-					
-				</content>
-				
-			</control>
-		
-		</control>
+                    <control type="group">
+                        <description>TV Shows In Circle List</description>
+                        <visible allowhiddenfocus="true">Container(300).HasFocus(6)</visible>
 
+                        <control type="image">
+                            <posx>38</posx>
+                            <posy>68</posy>
+                            <width>486</width>
+                            <height>447</height>
+                            <texture background="true" diffuse="circle/tvshows-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+<!--                        <fadetime>500</fadetime> -->
+                        </control>
+		
+                        <control type="image">
+                            <width>662</width>
+                            <height>662</height>
+                            <texture background="true">circle/tvshows-focus.png</texture>
+<!--                        <fadetime>500</fadetime> -->
+                        </control>
+                    </control>
+
+                    <control type="group">
+                        <description>Albums In Circle List</description>
+                        <visible allowhiddenfocus="true">Container(300).HasFocus(16)</visible>
+                        
+                        <control type="image">
+                            <width>662</width>
+                            <height>662</height>
+                            <texture background="true">circle/albums-focus.png</texture>
+                        </control>
+                        
+                        <control type="image">
+                            <posx>118</posx>
+                            <posy>58</posy>
+                            <width>468</width>
+                            <height>468</height>
+                            <texture diffuse="circle/albums-mask.png" fallback="black.png" background="true">$INFO[ListItem.Icon]</texture>
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                        </control>
+                    </control>
+
+                    <control type="label">
+                        <posx>120</posx>
+                        <posy>550</posy>
+                        <width>800</width>
+                        <height>40</height>
+                        <font>MediumViewFont</font>
+                        <textcolor>White</textcolor>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <wrapmultiline>true</wrapmultiline>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+			
+                    <control type="label">
+                        <posx>120</posx>
+                        <posy>590</posy>
+                        <width>800</width>
+                        <height>30</height>
+                        <font>HomeMenuSpecialFont</font>
+                        <textcolor>White</textcolor>
+                        <align>left</align>
+                        <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+                    </control>
+				</focusedlayout>
+				
+				<content>
+					<include>LatestItemsRecentlyAdded</include>
+				</content>
+			</control>
+		</control>
 	</include>
 	
-	<include name="EpisodesRecentlyAdded">
-		<item id="1">
+	<include name="LatestItemsRecentlyAdded">
+		<item id="50">
+            <visible>Container(300).HasFocus(5)</visible>
+			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
+			<label2>$INFO[Window.Property(LatestMovie.1.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.1.Rating)]</label2>
+			<icon>$INFO[Window.Property(LatestMovie.1.Fanart)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
+		</item>
+		<item id="51">
+            <visible>Container(300).HasFocus(5)</visible>
+			<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
+			<label2>$INFO[Window.Property(LatestMovie.2.Year)] | $INFO[Window.Property(LatestMovie.2.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.2.Rating)]</label2>
+			<icon>$INFO[Window.Property(LatestMovie.2.Fanart)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
+		</item>
+		<item id="52">
+            <visible>Container(300).HasFocus(5)</visible>
+			<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
+			<label2>$INFO[Window.Property(LatestMovie.3.Year)] | $INFO[Window.Property(LatestMovie.3.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.3.Rating)]</label2>
+			<icon>$INFO[Window.Property(LatestMovie.3.Fanart)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
+		</item>
+		<item id="53">
+            <visible>Container(300).HasFocus(5)</visible>
+			<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
+			<label2>$INFO[Window.Property(LatestMovie.4.Year)] | $INFO[Window.Property(LatestMovie.4.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.4.Rating)]</label2>
+			<icon>$INFO[Window.Property(LatestMovie.4.Fanart)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
+		</item>
+		<item id="54">
+            <visible>Container(300).HasFocus(5)</visible>
+			<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
+			<label2>$INFO[Window.Property(LatestMovie.5.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.5.Rating)]</label2>
+			<icon>$INFO[Window.Property(LatestMovie.5.Fanart)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick>
+		</item>
+
+		<item id="60">
+            <visible>Container(300).HasFocus(6)</visible>
 			<label>$INFO[Window.Property(LatestEpisode.1.ShowTitle)]</label>
 			<label2>$LOCALIZE[20373] $INFO[Window.Property(LatestEpisode.1.EpisodeSeason)] $LOCALIZE[20452] $INFO[Window.Property(LatestEpisode.1.EpisodeNumber)]</label2>
 			<icon>$INFO[Window.Property(LatestEpisode.1.Thumb)]</icon>
 			<property name="FanartImage">$INFO[Window.Property(LatestEpisode.1.Fanart)]</property>
 			<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.1.Path)])</onclick>
 		</item>
-		<item id="2">
+		<item id="61">
+            <visible>Container(300).HasFocus(6)</visible>
 			<label>$INFO[Window.Property(LatestEpisode.2.ShowTitle)]</label>
 			<label2>$LOCALIZE[20373] $INFO[Window.Property(LatestEpisode.2.EpisodeSeason)] $LOCALIZE[20452] $INFO[Window.Property(LatestEpisode.2.EpisodeNumber)]</label2>
 			<icon>$INFO[Window.Property(LatestEpisode.2.Thumb)]</icon>
 			<property name="FanartImage">$INFO[Window.Property(LatestEpisode.2.Fanart)]</property>
 			<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.2.Path)])</onclick>
 		</item>
-		<item id="3">
+		<item id="62">
+            <visible>Container(300).HasFocus(6)</visible>
 			<label>$INFO[Window.Property(LatestEpisode.3.ShowTitle)]</label>
 			<label2>$LOCALIZE[20373] $INFO[Window.Property(LatestEpisode.3.EpisodeSeason)] $LOCALIZE[20452] $INFO[Window.Property(LatestEpisode.3.EpisodeNumber)]</label2>
 			<icon>$INFO[Window.Property(LatestEpisode.3.Thumb)]</icon>
 			<property name="FanartImage">$INFO[Window.Property(LatestEpisode.3.Fanart)]</property>
 			<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.3.Path)])</onclick>
 		</item>
-		<item id="4">
+		<item id="63">
+            <visible>Container(300).HasFocus(6)</visible>
 			<label>$INFO[Window.Property(LatestEpisode.4.ShowTitle)]</label>
 			<label2>$LOCALIZE[20373] $INFO[Window.Property(LatestEpisode.4.EpisodeSeason)] $LOCALIZE[20452] $INFO[Window.Property(LatestEpisode.4.EpisodeNumber)]</label2>
 			<icon>$INFO[Window.Property(LatestEpisode.4.Thumb)]</icon>
 			<property name="FanartImage">$INFO[Window.Property(LatestEpisode.4.Fanart)]</property>
 			<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.4.Path)])</onclick>
 		</item>
-		<item id="5">
+		<item id="64">
+            <visible>Container(300).HasFocus(6)</visible>
 			<label>$INFO[Window.Property(LatestEpisode.5.ShowTitle)]</label>
 			<label2>$LOCALIZE[20373] $INFO[Window.Property(LatestEpisode.5.EpisodeSeason)] $LOCALIZE[20452] $INFO[Window.Property(LatestEpisode.5.EpisodeNumber)]</label2>
 			<icon>$INFO[Window.Property(LatestEpisode.5.Thumb)]</icon>
 			<property name="FanartImage">$INFO[Window.Property(LatestEpisode.5.Fanart)]</property>
 			<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.5.Path)])</onclick>
 		</item>
-	</include>
-	
-	<include name="MoviesRecentlyAdded">
-		<item id="1">
-			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.1.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.1.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.1.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
+
+		<item id="160">
+            <visible>Container(300).HasFocus(16)</visible>
+			<label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
+			<label2>$INFO[Window.Property(LatestAlbum.1.Artist)]$INFO[Window.Property(LatestAlbum.1.Year), | ,]</label2>
+			<icon>$INFO[Window.Property(LatestAlbum.1.Thumb)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestAlbum.1.Path)])</onclick>
 		</item>
-		<item id="2">
-			<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.2.Year)] | $INFO[Window.Property(LatestMovie.2.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.2.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.2.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
+		<item id="161">
+            <visible>Container(300).HasFocus(16)</visible>
+			<label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
+			<label2>$INFO[Window.Property(LatestAlbum.2.Artist)]$INFO[Window.Property(LatestAlbum.2.Year), | ,]</label2>
+			<icon>$INFO[Window.Property(LatestAlbum.2.Thumb)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestAlbum.2.Path)])</onclick>
 		</item>
-		<item id="3">
-			<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.3.Year)] | $INFO[Window.Property(LatestMovie.3.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.3.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.3.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
+		<item id="162">
+            <visible>Container(300).HasFocus(16)</visible>
+			<label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
+			<label2>$INFO[Window.Property(LatestAlbum.3.Artist)]$INFO[Window.Property(LatestAlbum.3.Year), | ,]</label2>
+			<icon>$INFO[Window.Property(LatestAlbum.3.Thumb)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestAlbum.3.Path)])</onclick>
 		</item>
-		<item id="4">
-			<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.4.Year)] | $INFO[Window.Property(LatestMovie.4.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.4.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.4.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
+		<item id="163">
+            <visible>Container(300).HasFocus(16)</visible>
+			<label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
+			<label2>$INFO[Window.Property(LatestAlbum.4.Artist)]$INFO[Window.Property(LatestAlbum.4.Year), | ,]</label2>
+			<icon>$INFO[Window.Property(LatestAlbum.4.Thumb)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestAlbum.4.Path)])</onclick>
 		</item>
-		<item id="5">
-			<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.5.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.5.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.5.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick>
+		<item id="164">
+            <visible>Container(300).HasFocus(16)</visible>
+			<label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
+			<label2>$INFO[Window.Property(LatestAlbum.5.Artist)]$INFO[Window.Property(LatestAlbum.5.Year), | ,]</label2>
+			<icon>$INFO[Window.Property(LatestAlbum.5.Thumb)]</icon>
+			<onclick>PlayMedia($INFO[Window.Property(LatestAlbum.5.Path)])</onclick>
 		</item>
 	</include>
 </includes>
