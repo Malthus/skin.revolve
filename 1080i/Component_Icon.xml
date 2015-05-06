@@ -110,12 +110,11 @@
 	
 	<include name="FadeMaskForDefaultCircleThumbnailIcon" description="Fade Mask For Circle Thumbnail Icon">
 		<control type="image">
-			<animation effect="fade" end="75" condition="true">conditional</animation>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>270</width>
 			<height>270</height>
-			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+			<texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
 		</control>
 	</include>
 	
@@ -473,7 +472,7 @@
         </control>
 	</include>
 
-	<include name="ShadeForDefaultBannerIcon">
+	<include name="FadeMaskForDefaultBannerIcon">
 		<control type="image">
             <posx>0</posx>
             <posy>0</posy>
