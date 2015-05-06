@@ -234,7 +234,7 @@
 	
 		<item id="16" description="Albums Option">
 			<visible>Library.HasContent(Music) + Skin.HasSetting(AlbumsOption.Active)</visible>
-			<label>132</label>
+			<label>$LOCALIZE[132]</label>
 			<label2>$INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
 			<property name="Label3">$LOCALIZE[33057]</property>
 			<property name="Circle">circle/albums.png</property>
@@ -273,7 +273,7 @@
 
 		<item id="1" description="Programs Option">
 			<visible>Skin.HasSetting(ProgramsOption.Active)</visible>
-			<label>0</label>
+			<label>$LOCALIZE[0]</label>
 			<property name="Label3">$LOCALIZE[33055]</property>
 			<property name="Circle">circle/programs.png</property>
 			<icon>special://skin/backgrounds/programs.jpg</icon>
@@ -283,7 +283,8 @@
 
 		<item id="9" description="Weather Option">
 			<visible>Skin.HasSetting(WeatherOption.Active)</visible>
-			<label>8</label>
+			<label>$LOCALIZE[8]</label>
+            <label2>$LOCALIZE[31479]: $INFO[Weather.Location] | $INFO[Weather.Temperature] | $INFO[Weather.Conditions]</label2>
 			<property name="Label3">$LOCALIZE[31022]</property>
 			<property name="Circle">circle/weather.png</property>
 			<icon>special://skin/backgrounds/weather.jpg</icon>
