@@ -135,117 +135,170 @@
 	
 	<include name="ContentCategoryForDropListView">
 		<control type="group">
+            <include>VisibilityForNoBanner</include>
+			<posx>1125</posx>
+			<posy>220</posy>
+            
 			<control type="label">
-				<posx>1124</posx>
-				<posy>219</posy>
+				<posx>-1</posx>
+				<posy>-1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentCategoryLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1124</posx>
-				<posy>221</posy>
+				<posx>-1</posx>
+				<posy>1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentCategoryLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1126</posx>
-				<posy>219</posy>
+				<posx>1</posx>
+				<posy>-1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentCategoryLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1126</posx>
-				<posy>221</posy>
+				<posx>1</posx>
+				<posy>1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentCategoryLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1125</posx>
-				<posy>220</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>MainColor</textcolor>
 				<label>$VAR[ContentCategoryLabel]</label>
+			</control>
+		</control>
+        
+		<control type="group">
+            <include>VisibilityForBanner</include>
+			<posx>1125</posx>
+			<posy>160</posy>
+            
+			<control type="label">
+				<posx>-1</posx>
+				<posy>-1</posy>
+				<include>ContentInformationMarkupForDropListView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentInformationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>-1</posx>
+				<posy>1</posy>
+				<include>ContentInformationMarkupForDropListView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentInformationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>1</posx>
+				<posy>-1</posy>
+				<include>ContentInformationMarkupForDropListView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentInformationLabel]</label>
+			</control>
+			<control type="label">
+				<posx>1</posx>
+				<posy>1</posy>
+				<include>ContentInformationMarkupForDropListView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentInformationLabel]</label>
+			</control>
+			<control type="label">
+				<include>ContentInformationMarkupForDropListView</include>
+				<textcolor>MainColor</textcolor>
+				<label>$VAR[ContentInformationLabel]</label>
 			</control>
 		</control>
 	</include>
 	
 	<include name="ContentNameForDropListView">
 		<control type="group">
+            <include>VisibilityForNoBanner</include>
+			<posx>1125</posx>
+			<posy>260</posy>
+            
 			<control type="label">
-				<posx>1123</posx>
-				<posy>258</posy>
+				<posx>-2</posx>
+				<posy>-2</posy>
 				<include>ContentNameMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentNameLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1127</posx>
-				<posy>258</posy>
+				<posx>2</posx>
+				<posy>-2</posy>
 				<include>ContentNameMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentNameLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1123</posx>
-				<posy>262</posy>
+				<posx>-2</posx>
+				<posy>2</posy>
 				<include>ContentNameMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentNameLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1127</posx>
-				<posy>262</posy>
+				<posx>2</posx>
+				<posy>2</posy>
 				<include>ContentNameMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentNameLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1125</posx>
-				<posy>260</posy>
 				<include>ContentNameMarkupForDropListView</include>
 				<textcolor>$VAR[ContentMainColor]</textcolor>
 				<label>$VAR[ContentNameLabel]</label>
 			</control>
 		</control>
+        
+		<control type="group">
+            <include>VisibilityForBanner</include>
+			<posx>1125</posx>
+			<posy>200</posy>
+            <include>DefaultBannerIcon</include>
+		</control>
 	</include>
 
 	<include name="ContentDetailForDropListView">
 		<control type="group">
+            <include>VisibilityForNoBanner</include>
+			<posx>1125</posx>
+			<posy>320</posy>
+            
 			<control type="label">
-				<posx>1124</posx>
-				<posy>319</posy>
+				<posx>-1</posx>
+				<posy>-1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDetailLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1124</posx>
-				<posy>321</posy>
+				<posx>-1</posx>
+				<posy>1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDetailLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1126</posx>
-				<posy>319</posy>
+				<posx>1</posx>
+				<posy>-1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDetailLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1126</posx>
-				<posy>321</posy>
+				<posx>1</posx>
+				<posy>1</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDetailLabel]</label>
 			</control>
 			<control type="label">
-				<posx>1125</posx>
-				<posy>320</posy>
 				<include>ContentInformationMarkupForDropListView</include>
 				<textcolor>MainColor</textcolor>
 				<label>$VAR[ContentDetailLabel]</label>
