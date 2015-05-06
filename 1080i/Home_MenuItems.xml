@@ -283,6 +283,7 @@
 
 		<item id="9" description="Weather Option">
 			<visible>Skin.HasSetting(WeatherOption.Active)</visible>
+            <enabled>Weather.IsFetched</enabled>
 			<label>$LOCALIZE[8]</label>
             <label2>$LOCALIZE[31479]: $INFO[Weather.Location] | $INFO[Weather.Temperature] | $INFO[Weather.Conditions]</label2>
 			<property name="Label3">$LOCALIZE[31022]</property>

@@ -61,31 +61,7 @@
 			<onright>Noop</onright>
 
             <include>InvisibleItemsForMenu</include>
-<!--            
-			<itemlayout width="1920" height="200">
-				<control type="label">
-					<posx>960</posx>
-					<width>1920</width>
-					<height>200</height>
-					<font>MediumViewFont</font>
-					<textcolor>TextColor</textcolor>
-					<align>center</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
 
-			<focusedlayout width="1920" height="200">
-				<control type="label">
-					<posx>960</posx>
-					<width>1920</width>
-					<height>200</height>
-					<font>MediumViewFont</font>
-					<textcolor>MainColor</textcolor>
-					<align>center</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
--->
 			<content>
 				<include>HomeMenuItems</include>
 			</content>
