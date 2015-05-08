@@ -39,27 +39,32 @@
 
 				<content>
 					<item id="1" description="Background Visuals Option">
-						<label>31122</label>
+						<label>$LOCALIZE[31122]</label>
 						<onclick>Noop</onclick>
 					</item>
 
 					<item id="2" description="Home Menu Option">
-						<label>31120</label>
+						<label>$LOCALIZE[31120]</label>
+						<onclick>Noop</onclick>
+					</item>
+
+					<item id="3" description="Circle Items Option">
+						<label>$LOCALIZE[31197]</label>
 						<onclick>Noop</onclick>
 					</item>
 
 					<item id="7" description="Default Add-ons Option">
-						<label>31125</label>
+						<label>$LOCALIZE[31125]</label>
 						<onclick>Noop</onclick>
 					</item>
 
 					<item id="8" description="Miscellaneous Option">
-						<label>31132</label>
+						<label>$LOCALIZE[31132]</label>
 						<onclick>Noop</onclick>
 					</item>
 
 					<item id="9" description="Debug Option">
-						<label>31133</label>
+						<label>$LOCALIZE[31133]</label>
 						<onclick>Noop</onclick>
 					</item>
 				</content>
@@ -147,6 +152,45 @@
 
                 <include>OptionsForHomeMenuSkinSettings</include>
 
+				<control type="grouplist" id="300" description="Control Area For Background Visuals">
+					<visible>Container(99).Hasfocus(3)</visible>
+					<width>1100</width>
+					<height>760</height>
+					<itemgap>0</itemgap>
+					<onup>100</onup>
+					<ondown>100</ondown>
+					<onleft>99</onleft>
+					<onright>Noop</onright>
+					<orientation>vertical</orientation>
+
+					<control type="button" id="301" description="Circle Movies Source Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31198]: $INFO[Skin.String(CircleMovieOption.Name)]</label>
+						<onclick>SetProperty(TargetCircleOption,CircleMovieOption,1194)</onclick>
+						<onclick>ActivateWindow(1194)</onclick>
+					</control>
+
+					<control type="button" id="302" description="Circle Episodes Source Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31199]: $INFO[Skin.String(CircleEpisodeOption.Name)]</label>
+						<onclick>SetProperty(TargetCircleOption,CircleEpisodeOption,1194)</onclick>
+						<onclick>ActivateWindow(1194)</onclick>
+					</control>
+
+					<control type="button" id="303" description="Circle Albums Source Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31200]: $INFO[Skin.String(CircleAlbumOption.Name)]</label>
+						<onclick>SetProperty(TargetCircleOption,CircleAlbumOption,1194)</onclick>
+						<onclick>ActivateWindow(1194)</onclick>
+					</control>
+				</control>
+                
 				<control type="grouplist" id="700" description="Control Area For Default Add-ons Options">
 					<visible>Container(99).Hasfocus(7)</visible>
 					<width>1100</width>
@@ -291,7 +335,7 @@
 			</control>
 			
 			<control type="group">
-				<visible>ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
+				<visible>ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
 				<control type="image">
 					<posx>700</posx>
 					<posy>870</posy>
@@ -304,7 +348,7 @@
                 <include>AnnotationsForHomeMenuSkinSettings</include>
                 
 				<control type="group" description="Settings Description Textbox">
-                    <visible>ControlGroup(100).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
+                    <visible>ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
 					<posx>720</posx>
 					<posy>880</posy>
 					<width>880</width>
@@ -313,32 +357,47 @@
 					<control type="textbox">
 						<visible>Control.HasFocus(101)</visible>
 						<font>AnnotationFont</font>
-						<label>31161</label>
+						<label>$LOCALIZE[31161]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(102)</visible>
 						<font>AnnotationFont</font>
-						<label>31162</label>
+						<label>$LOCALIZE[31162]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(103)</visible>
 						<font>AnnotationFont</font>
-						<label>31163</label>
+						<label>$LOCALIZE[31163]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(104)</visible>
 						<font>AnnotationFont</font>
-						<label>31164</label>
+						<label>$LOCALIZE[31164]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(105)</visible>
 						<font>AnnotationFont</font>
-						<label>31165</label>
+						<label>$LOCALIZE[31165]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(106)</visible>
 						<font>AnnotationFont</font>
-						<label>31166</label>
+						<label>$LOCALIZE[31166]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(301)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31201]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(302)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31202]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(303)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31203]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(701)</visible>

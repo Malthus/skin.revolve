@@ -31,7 +31,7 @@
 				<width>1240</width>
 				<font>DialogTitleFont</font>
 				<align>left</align>
-				<label>Custom Items Editor</label>
+				<label>$LOCALIZE[31887]</label>
 			</control>
 			
 			<control type="label" description="Custom Items Group Label">
@@ -181,140 +181,140 @@
                         <item id="101" description="XBMC / Latest Movies Option">
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31721] $LOCALIZE[31711]</label>
-                            <property name="ItemName">Latest Movies</property>
+                            <property name="ItemName">$LOCALIZE[31721]</property>
                             <property name="OriginMask">LatestMovie.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="102" description="XBMC / Latest Episodes Option">
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31722] $LOCALIZE[31711]</label>
-                            <property name="ItemName">Latest Episodes</property>
+                            <property name="ItemName">$LOCALIZE[31722]</property>
                             <property name="OriginMask">LatestEpisode.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="103" description="XBMC / Latest Music Video Option">
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31723] $LOCALIZE[31711]</label>
-                            <property name="ItemName">Latest Music Videos</property>
+                            <property name="ItemName">$LOCALIZE[31723]</property>
                             <property name="OriginMask">LatestMusicVideo.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="104" description="XBMC / Latest Song Option">
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31724] $LOCALIZE[31711]</label>
-                            <property name="ItemName">Latest Songs</property>
+                            <property name="ItemName">$LOCALIZE[31724]</property>
                             <property name="OriginMask">LatestSong.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="105" description="XBMC / Latest Albums Option">
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31725] $LOCALIZE[31711]</label>
-                            <property name="ItemName">Latest Albums</property>
+                            <property name="ItemName">$LOCALIZE[31725]</property>
                             <property name="OriginMask">LatestAlbum.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="201" description="Screen Widgets / Random Movies Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31726] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Random Movies</property>
+                            <property name="ItemName">$LOCALIZE[31726]</property>
                             <property name="OriginMask">RandomMovie.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="202" description="Screen Widgets / Random Episodes Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31727] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Random Episodes</property>
+                            <property name="ItemName">$LOCALIZE[31727]</property>
                             <property name="OriginMask">RandomEpisode.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="203" description="Screen Widgets / Random Music Videos Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31728] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Random Music Videos</property>
+                            <property name="ItemName">$LOCALIZE[31728]</property>
                             <property name="OriginMask">RandomMusicVideo.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="204" description="Screen Widgets / Random Albums Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31729] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Random Albums</property>
+                            <property name="ItemName">$LOCALIZE[31729]</property>
                             <property name="OriginMask">RandomAlbum.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="205" description="Screen Widgets / Random Artists Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31730] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Random Artists</property>
+                            <property name="ItemName">$LOCALIZE[31730]</property>
                             <property name="OriginMask">RandomArtist.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="206" description="Screen Widgets / Random Songs Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31731] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Random Songs</property>
+                            <property name="ItemName">$LOCALIZE[31731]</property>
                             <property name="OriginMask">RandomSong.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="207" description="Screen Widgets / Random Addons Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31732] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Random Addons</property>
+                            <property name="ItemName">$LOCALIZE[31732]</property>
                             <property name="OriginMask">RandomAddon.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="221" description="Screen Widgets / Recommended Movies Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31733] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recommended Movies</property>
+                            <property name="ItemName">$LOCALIZE[31733]</property>
                             <property name="OriginMask">RecommendedMovie.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="222" description="Screen Widgets / Recommended Episodes Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31734] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recommended Episodes</property>
+                            <property name="ItemName">$LOCALIZE[31734]</property>
                             <property name="OriginMask">RecommendedEpisode.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="223" description="Screen Widgets / Recommended Music Videos Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31735] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recommended Music Videos</property>
+                            <property name="ItemName">$LOCALIZE[31735]</property>
                             <property name="OriginMask">RecommendedMusicVideo.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="224" description="Screen Widgets / Recommended Albums Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31736] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recommended Albums</property>
+                            <property name="ItemName">$LOCALIZE[31736]</property>
                             <property name="OriginMask">RecommendedAlbum.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="241" description="Screen Widgets / Recent Movies Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31737] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recent Movies</property>
+                            <property name="ItemName">$LOCALIZE[31737]</property>
                             <property name="OriginMask">RecentMovie.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="242" description="Screen Widgets / Recent Episodes Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31738] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recent Episodes</property>
+                            <property name="ItemName">$LOCALIZE[31738]</property>
                             <property name="OriginMask">RecentEpisode.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="243" description="Screen Widgets / Recent Music Videos Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31739] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recent Music Videos</property>
+                            <property name="ItemName">$LOCALIZE[31739]</property>
                             <property name="OriginMask">RecentMusicVideo.%d</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="244" description="Screen Widgets / Recent Albums Option">
                             <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31740] $LOCALIZE[31712]</label>
-                            <property name="ItemName">Recent Albums</property>
+                            <property name="ItemName">$LOCALIZE[31740]</property>
                             <property name="OriginMask">RecentAlbum.%d</property>
                             <onclick>Noop</onclick>
                         </item>

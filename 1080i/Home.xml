@@ -2,6 +2,9 @@
 <window id="0">
 	<defaultcontrol>200</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+    <onload condition="!IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onload>
+    <onload condition="!IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onload>
+    <onload condition="!IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onload>
 
 	<controls>
 		<control type="button" id="200" description="Default Revolve Skin Settings Initialisation">
