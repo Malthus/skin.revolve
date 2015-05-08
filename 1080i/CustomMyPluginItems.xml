@@ -3,9 +3,9 @@
 	<defaultcontrol always="yes">450</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
     <onload condition="!IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyLists.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
-    <onload condition="!IsEmpty(Window.Property(SourcePlugin))">Skin.SetString(MyLists.Source,$INFO[Window.Property(SourcePlugin)])</onload>
+    <onload condition="!IsEmpty(Window.Property(SourcePlugin))">Skin.SetString(MyLists.SourcePlugin,$INFO[Window.Property(SourcePlugin)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
-    <onload condition="IsEmpty(Window.Property(SourcePlugin))">SetProperty(Source,$INFO[Skin.String(MyLists.SourcePlugin)])</onload>
+    <onload condition="IsEmpty(Window.Property(SourcePlugin))">SetProperty(SourcePlugin,$INFO[Skin.String(MyLists.SourcePlugin)])</onload>
     
 <!--
             RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1103,MenuTitle,Random Movies,SourcePlugin,"plugin://service.library.data.provider?type=randommovies")
