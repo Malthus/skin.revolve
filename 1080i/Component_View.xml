@@ -8,14 +8,6 @@
 		<visible>Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</visible>
 	</include>
 	
-	<include name="VisibilityOfContentNameOnlyInView">
-		<visible>ListItem.IsFolder + !StringCompare(ListItem.Label,..)</visible>
-	</include>
-
-	<include name="VisibilityOfContentInformationInView">
-		<visible>!ListItem.IsFolder | StringCompare(ListItem.Label,..)</visible>
-	</include>
-	
 	<include file="View_RevolveList.xml" />
 	<include file="View_DropList.xml" />
 	<include file="View_CircleList.xml" />
