@@ -16,11 +16,11 @@ from xbmc_property import *
 SCRIPT_NAME = 'Revolve/PopulateListFromHomeProperties'
 TARGET_WINDOW = '1102'
 TOTAL_ITEMS = 20
+DEFAULT_TARGET = 'MyItems%02dOption'
 
 def logMessage(annotation):
     message = '%s: %s' % (SCRIPT_NAME, annotation.encode('ascii', 'ignore'))
     xbmc.log(msg=message, level=xbmc.LOGDEBUG)
-
 
 def createNameProperty(originbase, destination):
     value = getValueFromHomeProperty(originbase + '.Title')
@@ -59,10 +59,10 @@ def createActionProperty(originbase, destination):
     setValueToProperty(destination, value, TARGET_WINDOW)
     
 
-def copyProperties(originmask):
+def copyProperties(originmask, destinationmask):
     for index in range (1, TOTAL_ITEMS):
         originbase = originmask % (index)
-        destinationbase = 'MyItems%02dOption' % (index)
+        destinationbase = destinationmask % (index)
 
         createNameProperty(originbase, destinationbase + '.Name')
         createSubtitleProperty(originbase, destinationbase + '.Subtitle')
@@ -75,7 +75,12 @@ if len(sys.argv) > 1:
     logMessage('Call to ' + SCRIPT_NAME + ' script with arguments: ' + str(sys.argv) + '.')	
     originmask = sys.argv[1]
 
-    logMessage(SCRIPT_NAME + ' copies properties: ' + originmask + ' to MyItems-properties')	
-    copyProperties(originmask)
+    if len(sys.argv) > 2:
+        destinationmask = sys.argv[2]
+    else:
+        destinationmask = DEFAULT_TARGET
+    
+    logMessage(SCRIPT_NAME + ' copies properties: ' + originmask + ' to ' + destinationmask)	
+    copyProperties(originmask, destinationmask)
 else:
     logMessage(SCRIPT_NAME + ' terminates: Missing argument(s) in call to script.')	
