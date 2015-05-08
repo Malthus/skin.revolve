@@ -4,7 +4,8 @@
 		<onfocus>Skin.ResetSettings</onfocus>
 		
 		<include>BackgroundSettingsForSkinSettings</include>
-		<include>HomeMenuSettingsForSkinSettings</include>
+		<include>HomeMenuItemsSettingsForSkinSettings</include>
+		<include>CircleItemsSettingsForSkinSettings</include>
 		<include>AddonSettingsForSkinSettings</include>
 		<include>MiscellaneousSettingsForSkinSettings</include>
 		
@@ -18,7 +19,7 @@
 		<onfocus>Skin.SetBool(BackgroundVideo.Active)</onfocus>
 	</include>
 	
-	<include name="HomeMenuSettingsForSkinSettings" description="Home Menu Skin Settings">
+	<include name="HomeMenuItemsSettingsForSkinSettings" description="Home Menu Items Skin Settings">
 		<onfocus>Skin.SetBool(PlayDiscOption.Active)</onfocus>
 		<onfocus>Skin.SetBool(FavouritesOption.Active)</onfocus>
 		<onfocus>Skin.SetBool(VideosOption.Active)</onfocus>
@@ -26,6 +27,12 @@
 		<onfocus>Skin.SetBool(PicturesOption.Active)</onfocus>
 		<onfocus>Skin.SetBool(SettingsOption.Active)</onfocus>
 		<onfocus>Skin.SetBool(ExitOption.Active)</onfocus>
+	</include>
+
+	<include name="CircleItemsSettingsForSkinSettings" description="Circle Items Skin Settings">
+		<onfocus>SetString(CircleMovieOption.Source,LatestMovie.%d)</onfocus>
+		<onfocus>SetString(CircleEpisodeOption.Source,LatestEpisode.%d)</onfocus>
+		<onfocus>SetString(CircleAlbumOption.Source,LatestAlbum.%d)</onfocus>
 	</include>
 
 	<include name="AddonSettingsForSkinSettings" description="Background Skin Settings">
