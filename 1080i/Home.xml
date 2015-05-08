@@ -5,6 +5,7 @@
     <onload condition="!IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onload>
     <onload condition="!IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onload>
     <onload condition="!IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onload>
+    <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onload>
 
 	<controls>
 		<control type="button" id="200" description="Default Revolve Skin Settings Initialisation">
@@ -60,7 +61,7 @@
 			<defaultcontrol>8</defaultcontrol>
 			<onup>300</onup>
 			<ondown>300</ondown>
-			<onleft condition="Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(16)">600</onleft>
+			<onleft condition="Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(15) | Container(300).HasFocus(16)">600</onleft>
 			<onright>Noop</onright>
 
             <include>InvisibleItemsForMenu</include>

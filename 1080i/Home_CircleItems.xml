@@ -44,7 +44,7 @@
 			
                     <control type="group">
                         <description>TV Shows In Circle List</description>
-                        <visible allowhiddenfocus="true">Container(300).HasFocus(6)</visible>
+                        <visible allowhiddenfocus="true">Container(300).HasFocus(6) | Container(300).HasFocus(15)</visible>
 
                         <control type="image">
                             <posx>38</posx>
@@ -121,7 +121,7 @@
 			<label2>$INFO[Window.Property(CircleMovie01Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie01Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie01Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie01Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie01Option.Action)]</onclick>
 		</item>
 		<item id="51">
             <visible>Container(300).HasFocus(5)</visible>
@@ -129,7 +129,7 @@
 			<label2>$INFO[Window.Property(CircleMovie02Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie02Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie02Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie02Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie02Option.Action)]</onclick>
 		</item>
 		<item id="52">
             <visible>Container(300).HasFocus(5)</visible>
@@ -137,7 +137,7 @@
 			<label2>$INFO[Window.Property(CircleMovie03Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie03Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie03Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie03Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie03Option.Action)]</onclick>
 		</item>
 		<item id="53">
             <visible>Container(300).HasFocus(5)</visible>
@@ -145,7 +145,7 @@
 			<label2>$INFO[Window.Property(CircleMovie04Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie04Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie04Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie04Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie04Option.Action)]</onclick>
 		</item>
 		<item id="54">
             <visible>Container(300).HasFocus(5)</visible>
@@ -153,7 +153,7 @@
 			<label2>$INFO[Window.Property(CircleMovie05Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie05Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie05Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie05Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie05Option.Action)]</onclick>
 		</item>
 		<item id="55">
             <visible>Container(300).HasFocus(5)</visible>
@@ -161,7 +161,7 @@
 			<label2>$INFO[Window.Property(CircleMovie06Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie06Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie06Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie06Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie06Option.Action)]</onclick>
 		</item>
 		<item id="56">
             <visible>Container(300).HasFocus(5)</visible>
@@ -169,7 +169,7 @@
 			<label2>$INFO[Window.Property(CircleMovie07Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie07Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie07Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie07Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie07Option.Action)]</onclick>
 		</item>
 		<item id="57">
             <visible>Container(300).HasFocus(5)</visible>
@@ -177,7 +177,7 @@
 			<label2>$INFO[Window.Property(CircleMovie08Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie08Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie08Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie08Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie08Option.Action)]</onclick>
 		</item>
 		<item id="58">
             <visible>Container(300).HasFocus(5)</visible>
@@ -185,7 +185,7 @@
 			<label2>$INFO[Window.Property(CircleMovie09Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie09Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie09Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie09Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie09Option.Action)]</onclick>
 		</item>
 		<item id="59">
             <visible>Container(300).HasFocus(5)</visible>
@@ -193,7 +193,7 @@
 			<label2>$INFO[Window.Property(CircleMovie10Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie10Option.BackgroundImage)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie10Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleMovie10Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleMovie10Option.Action)]</onclick>
 		</item>
 
 		<item id="60">
@@ -202,7 +202,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode01Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode01Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode01Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode01Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode01Option.Action)]</onclick>
 		</item>
 		<item id="61">
             <visible>Container(300).HasFocus(6)</visible>
@@ -210,7 +210,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode02Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode02Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode02Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode02Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode02Option.Action)]</onclick>
 		</item>
 		<item id="62">
             <visible>Container(300).HasFocus(6)</visible>
@@ -218,7 +218,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode03Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode03Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode03Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode03Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode03Option.Action)]</onclick>
 		</item>
 		<item id="63">
             <visible>Container(300).HasFocus(6)</visible>
@@ -226,7 +226,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode04Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode04Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode04Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode04Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode04Option.Action)]</onclick>
 		</item>
 		<item id="64">
             <visible>Container(300).HasFocus(6)</visible>
@@ -234,7 +234,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode05Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode05Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode05Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode05Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode05Option.Action)]</onclick>
 		</item>
 		<item id="65">
             <visible>Container(300).HasFocus(6)</visible>
@@ -242,7 +242,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode06Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode06Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode06Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode06Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode06Option.Action)]</onclick>
 		</item>
 		<item id="66">
             <visible>Container(300).HasFocus(6)</visible>
@@ -250,7 +250,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode07Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode07Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode07Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode07Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode07Option.Action)]</onclick>
 		</item>
 		<item id="67">
             <visible>Container(300).HasFocus(6)</visible>
@@ -258,7 +258,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode08Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode08Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode08Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode08Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode08Option.Action)]</onclick>
 		</item>
 		<item id="68">
             <visible>Container(300).HasFocus(6)</visible>
@@ -266,7 +266,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode09Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode09Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode09Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode09Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode09Option.Action)]</onclick>
 		</item>
 		<item id="69">
             <visible>Container(300).HasFocus(6)</visible>
@@ -274,8 +274,90 @@
 			<label2>$INFO[Window.Property(CircleEpisode10Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode10Option.Icon)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode10Option.BackgroundImage)]</property>
-			<onclick>PlayMedia($INFO[Window.Property(CircleEpisode10Option.Action)])</onclick>
+			<onclick>$INFO[Window.Property(CircleEpisode10Option.Action)]</onclick>
 		</item>
+        
+		<item id="150">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.1.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.1.AirTime)]$INFO[Window.Property(NextAired.1.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.1.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.1.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.1.Path)]</onclick>
+		</item>
+		<item id="151">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.2.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.2.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.2.AirTime)]$INFO[Window.Property(NextAired.2.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.2.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.2.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.2.Path)]</onclick>
+		</item>
+		<item id="152">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.3.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.3.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.3.AirTime)]$INFO[Window.Property(NextAired.3.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.3.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.3.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.3.Path)]</onclick>
+		</item>
+		<item id="153">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.4.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.4.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.4.AirTime)]$INFO[Window.Property(NextAired.4.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.4.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.4.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.4.Path)]</onclick>
+		</item>
+		<item id="154">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.5.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.5.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.5.AirTime)]$INFO[Window.Property(NextAired.5.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.5.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.5.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.5.Path)]</onclick>
+		</item>
+		<item id="155">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.6.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.6.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.6.AirTime)]$INFO[Window.Property(NextAired.6.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.6.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.6.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.6.Path)]</onclick>
+		</item>
+		<item id="156">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.7.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.7.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.7.AirTime)]$INFO[Window.Property(NextAired.7.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.7.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.7.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.7.Path)]</onclick>
+		</item>
+		<item id="157">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.8.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.8.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.8.AirTime)]$INFO[Window.Property(NextAired.8.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.8.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.8.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.8.Path)]</onclick>
+		</item>
+		<item id="158">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.9.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.9.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.9.AirTime)]$INFO[Window.Property(NextAired.9.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.9.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.9.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.9.Path)]</onclick>
+		</item>
+		<item id="159">
+            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.10.NextDate))</visible>
+			<label>$INFO[Window.Property(NextAired.10.Label)]</label>
+			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.10.AirTime)]$INFO[Window.Property(NextAired.10.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<icon>$INFO[Window.Property(NextAired.10.Thumb)]</icon>
+            <property name="BackgroundImage">$INFO[Window.Property(NextAired.10.Art(fanart))]</property>
+			<onclick>$INFO[Window.Property(NextAired.10.Path)]</onclick>
+		</item>
+        
 		<item id="160">
             <visible>Container(300).HasFocus(16)</visible>
 			<label>$INFO[Window.Property(CircleAlbum01Option.Name)]</label>
@@ -356,77 +438,5 @@
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum10Option.BackgroundImage)]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum10Option.Action)]</onclick>
 		</item>
-<!--
-		<item id="50">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.1.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.1.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.1.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
-		</item>
-		<item id="51">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.2.Year)] | $INFO[Window.Property(LatestMovie.2.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.2.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.2.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
-		</item>
-		<item id="52">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.3.Year)] | $INFO[Window.Property(LatestMovie.3.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.3.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.3.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
-		</item>
-		<item id="53">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.4.Year)] | $INFO[Window.Property(LatestMovie.4.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.4.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.4.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
-		</item>
-		<item id="54">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.5.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.5.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.5.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick>
-		</item>
-		<item id="55">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.6.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.6.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.6.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.6.Path)])</onclick>
-		</item>
-		<item id="56">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.7.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.7.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.7.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.7.Path)])</onclick>
-		</item>
-		<item id="57">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.8.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.8.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.8.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.8.Path)])</onclick>
-		</item>
-		<item id="58">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.9.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.9.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.9.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.9.Path)])</onclick>
-		</item>
-		<item id="59">
-            <visible>Container(300).HasFocus(5)</visible>
-			<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
-			<label2>$INFO[Window.Property(LatestMovie.10.Year)] | $INFO[Window.Property(LatestMovie.1.RunningTime)] $LOCALIZE[31901] | $INFO[Window.Property(LatestMovie.10.Rating)]</label2>
-			<icon>$INFO[Window.Property(LatestMovie.10.Fanart)]</icon>
-			<onclick>PlayMedia($INFO[Window.Property(LatestMovie.10.Path)])</onclick>
-		</item>
--->        
 	</include>
 </includes>
