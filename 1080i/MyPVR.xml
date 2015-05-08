@@ -7,14 +7,14 @@
 		<include>GlobalBackground</include>
 
         <control type="group" id="42" description="Live TV Control Group">
-			<include>EPGTimelineViewForLiveTV</include>
-			<include>TVChannelViewForLiveTV</include>
-			<include>RadioChannelViewForLiveTV</include>
-			<include>RecordingsViewForLiveTV</include>
-			<include>TimersViewForLiveTV</include>
-			<include>SearchViewForLiveTV</include>
-			<include>TVGuideChannelViewForLiveTV</include>
-			<include>TVGuideNowAndNextViewForLiveTV</include>
+			<include>EPGTimelineViewForPVR</include>
+			<include>TVChannelViewForPVR</include>
+			<include>RadioChannelViewForPVR</include>
+			<include>RecordingsViewForPVR</include>
+			<include>TimersViewForPVR</include>
+			<include>SearchViewForPVR</include>
+			<include>TVGuideChannelViewForPVR</include>
+			<include>TVGuideNowAndNextViewForPVR</include>
         </control>
 
 		<control type="group" description="Clock Label">
@@ -34,96 +34,102 @@
 			<control type="group">
 				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 				
-				<control type="label">
-					<posx>1123</posx>
-					<posy>98</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>DialogTitleFont</font>
-					<label>$INFO[Control.GetLabel(29),,:]</label>
-				</control>
-				<control type="label">
-					<posx>1127</posx>
-					<posy>98</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>DialogTitleFont</font>
-					<label>$INFO[Control.GetLabel(29),,:]</label>
-				</control>
-				<control type="label">
-					<posx>1123</posx>
-					<posy>102</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>DialogTitleFont</font>
-					<label>$INFO[Control.GetLabel(29),,:]</label>
-				</control>
-				<control type="label">
-					<posx>1127</posx>
-					<posy>102</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>DialogTitleFont</font>
-					<label>$INFO[Control.GetLabel(29),,:]</label>
-				</control>
-				<control type="label">
-					<posx>1125</posx>
+                <control type="group">
+					<posx>1080</posx>
 					<posy>100</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>TextColor</textcolor>
-					<font>DialogTitleFont</font>
-					<label>$INFO[Control.GetLabel(29),,:]</label>
+
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>TextColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
 				</control>
 				
-				<control type="label">
-					<posx>1123</posx>
-					<posy>138</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>MediumViewFont</font>
-					<label>$INFO[Control.GetLabel(30)]</label>
-				</control>
-				<control type="label">
-					<posx>1127</posx>
-					<posy>138</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>MediumViewFont</font>
-					<label>$INFO[Control.GetLabel(30)]</label>
-				</control>
-				<control type="label">
-					<posx>1123</posx>
-					<posy>142</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>MediumViewFont</font>
-					<label>$INFO[Control.GetLabel(30)]</label>
-				</control>
-				<control type="label">
-					<posx>1127</posx>
-					<posy>142</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>BackgroundColor</textcolor>
-					<font>MediumViewFont</font>
-					<label>$INFO[Control.GetLabel(30)]</label>
-				</control>
-				<control type="label">
-					<posx>1125</posx>
+                <control type="group">
+					<posx>1080</posx>
 					<posy>140</posy>
-					<width>720</width>
-					<height>40</height>
-					<textcolor>TextColor</textcolor>
-					<font>MediumViewFont</font>
-					<label>$INFO[Control.GetLabel(30)]</label>
+
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>TextColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
 				</control>
 			</control>
 		</control>

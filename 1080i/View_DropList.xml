@@ -5,9 +5,9 @@
 			<viewtype label="31931">list</viewtype>
 			<animation effect="fade" start="100" end="0" time="200" condition="Container(51).Scrolling + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(songs)">conditional</animation>
 
-			<posx>795</posx>
+			<posx>720</posx>
 			<posy>-121</posy>
-			<width>960</width>
+			<width>1080</width>
 			<height>1250</height>
 			<onleft>9000</onleft>
 			<onright>61</onright>
@@ -26,7 +26,7 @@
 
 			<control type="group" description="Vertical Poster">
 				<include>VisibilityForVerticalIcon</include>
-				<posx>150</posx>
+				<posx>120</posx>
 				<posy>150</posy>
 				<include>ShadowForVerticalPosterIcon</include>
 				<include>VerticalPosterIcon</include>
@@ -35,7 +35,7 @@
 
 			<control type="group" description="Square Icon">
 				<include>VisibilityForSquareIcon</include>
-				<posx>150</posx>
+				<posx>120</posx>
 				<posy>150</posy>
 				<include>ShadowForSquarePosterIcon</include>
 				<include>SquarePosterIcon</include>
@@ -75,11 +75,11 @@
 	</include>
 	
 	<include name="NormalListItemForDropListView">
-		<itemlayout width="960" height="250">
+		<itemlayout width="1080" height="250">
 			<control type="group">
 				<animation effect="zoom" end="80" center="auto" condition="true">Conditional</animation>
 				
-				<posx>34</posx>
+				<posx>40</posx>
 				<posy>-10</posy>
 				<width>310</width>
 				<height>310</height>
@@ -92,15 +92,15 @@
 	</include>
 	
 	<include name="FocusedListItemForDropListView">
-		<focusedlayout width="960" height="310">
+		<focusedlayout width="1080" height="310">
 			<control type="group">
-				<posx>30</posx>
+				<posx>40</posx>
 				<posy>0</posy>
 				<width>310</width>
 				<height>310</height>
 				<animation effect="zoom" center="auto" start="80" end="100" time="200" reversible="false">focus</animation>
 				<animation effect="zoom" center="auto" start="100" end="80" time="200" reversible="false">unfocus</animation>
-					
+
 				<control type="group">
 					<animation effect="slide" start="0,31" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollNext">focus</animation>
 					<animation effect="slide" start="0,0" end="0,-35" time="200" reversible="false" condition="Container(51).OnScrollNext">unfocus</animation>
@@ -136,7 +136,7 @@
 	<include name="ContentCategoryForDropListView">
 		<control type="group">
             <include>VisibilityForNoBanner</include>
-			<posx>1125</posx>
+			<posx>1080</posx>
 			<posy>220</posy>
             
 			<control type="label">
@@ -176,7 +176,7 @@
         
 		<control type="group">
             <include>VisibilityForBanner</include>
-			<posx>1125</posx>
+			<posx>1080</posx>
 			<posy>160</posy>
             
 			<control type="label">
@@ -218,7 +218,7 @@
 	<include name="ContentNameForDropListView">
 		<control type="group">
             <include>VisibilityForNoBanner</include>
-			<posx>1125</posx>
+			<posx>1080</posx>
 			<posy>260</posy>
             
 			<control type="label">
@@ -258,7 +258,7 @@
         
 		<control type="group">
             <include>VisibilityForBanner</include>
-			<posx>1125</posx>
+			<posx>1080</posx>
 			<posy>200</posy>
             <include>DefaultBannerIcon</include>
 		</control>
@@ -267,7 +267,7 @@
 	<include name="ContentDetailForDropListView">
 		<control type="group">
             <include>VisibilityForNoBanner</include>
-			<posx>1125</posx>
+			<posx>1080</posx>
 			<posy>320</posy>
             
 			<control type="label">
@@ -309,7 +309,7 @@
 	<include name="ContentMediaFlagsForDropListView">
 		<control type="group">
 			<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-			<posx>1125</posx>
+			<posx>1080</posx>
 			<posy>360</posy>
 			<include>HorizontalViewListOfContentMediaFlag</include>
 		</control>
@@ -317,37 +317,38 @@
 	
 	<include name="ContentDescriptionForDropListView">
 		<control type="group">
+			<posx>1080</posx>
+			<posy>420</posy>
+            
 			<control type="textbox">
-				<posx>1124</posx>
-				<posy>419</posy>
+				<posx>-1</posx>
+				<posy>-1</posy>
 				<include>ContentDescriptionMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDescription]</label>
 			</control>
 			<control type="textbox">
-				<posx>1126</posx>
-				<posy>419</posy>
+				<posx>1</posx>
+				<posy>-1</posy>
 				<include>ContentDescriptionMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDescription]</label>
 			</control>
 			<control type="textbox">
-				<posx>1124</posx>
-				<posy>421</posy>
+				<posx>-1</posx>
+				<posy>1</posy>
 				<include>ContentDescriptionMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDescription]</label>
 			</control>
 			<control type="textbox">
-				<posx>1126</posx>
-				<posy>421</posy>
+				<posx>1</posx>
+				<posy>1</posy>
 				<include>ContentDescriptionMarkupForDropListView</include>
 				<textcolor>BackgroundColor</textcolor>
 				<label>$VAR[ContentDescription]</label>
 			</control>
 			<control type="textbox">
-				<posx>1125</posx>
-				<posy>420</posy>
 				<include>ContentDescriptionMarkupForDropListView</include>
 				<textcolor>SecondaryColor</textcolor>
 				<label>$VAR[ContentDescription]</label>
@@ -356,7 +357,7 @@
 	</include>
 	
 	<include name="ContentNameMarkupForDropListView">
-		<width>720</width>
+		<width>760</width>
 		<height>40</height>
 		<aligny>top</aligny>
 		<font>MediumViewFont</font>
@@ -365,7 +366,7 @@
 	
 	<include name="ContentInformationMarkupForDropListView">
 		<align>left</align>
-		<width>720</width>
+		<width>760</width>
 		<height>30</height>
 		<font>DetailViewFont</font>
 		<scroll>true</scroll>
@@ -374,7 +375,7 @@
 	<include name="ContentDescriptionMarkupForDropListView">
 		<align>left</align>
 		<aligny>top</aligny>
-		<width>720</width>
+		<width>760</width>
 		<height>410</height>
 		<font>DescriptionFont</font>
 		<wrapmultiline>true</wrapmultiline>
