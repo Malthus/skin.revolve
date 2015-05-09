@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1193">
+	<defaultcontrol always="true">34</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    <onload>SetFocus(40,$INFO[Window.Property(TargetParameter)])</onload>
+    <onload>SetFocus(34)</onload>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Editor Dialog Icon">
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultIconFrameForDialog</include>
+				
+				<control type="image">
+				    <posx>3</posx>
+				    <posy>3</posy>
+					<width>256</width>
+					<height>256</height>
+					<texture colordiffuse="BackgroundColor">icons/icon-pencil.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31887]</label>
+			</control>
+			
+			<control type="label" description="Custom Items Group Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+                <textcolor>TextColor</textcolor>
+				<align>left</align>
+				<label>$LOCALIZE[31913]:</label>
+			</control>
+            
+			<control type="list" id="33" description="Predefined Option Types List">
+				<posx>560</posx>
+				<posy>120</posy>
+				<width>1240</width>
+				<height>40</height>
+				<itemgap>0</itemgap>
+				<align>left</align>
+				<scrolltime>0</scrolltime>
+				<onup>40</onup>
+				<ondown>40</ondown>
+				<onleft>9000</onleft>
+				<onright>34</onright>
+
+				<itemlayout height="0">
+				</itemlayout>
+				
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(34) | Control.HasFocus(35)</visible>
+						<control type="image">
+							<width>1240</width>
+							<height>40</height>
+							<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<width>1140</width>
+							<height>40</height>
+							<textcolor>BackgroundColor</textcolor>
+							<font>DialogTextFont</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					
+					<control type="group">
+						<visible>!Control.HasFocus(34) + !Control.HasFocus(35)</visible>
+						<control type="image">
+							<width>1240</width>
+							<height>40</height>
+							<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<width>1140</width>
+							<height>40</height>
+							<textcolor>MainColor</textcolor>
+							<font>DialogTextFont</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				
+				<content>
+					<item id="99" description="All Item Groups Option">
+						<label>$LOCALIZE[31700]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="1" description="XBMC Item Group Option">
+						<label>$LOCALIZE[31701]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="2" description="Screen Widgets Item Group Option">
+						<label>$LOCALIZE[31702]</label>
+						<onclick>Noop</onclick>
+					</item>
+				</content>
+            </control>
+
+			<control type="button" id="34" description="Next Item Group Button">
+				<posx>1700</posx>
+				<posy>120</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturenofocus>
+				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturefocus>
+				<onup>40</onup>
+				<ondown>40</ondown>
+				<onleft>9000</onleft>
+				<onright>35</onright>
+				<onclick>Control.Move(33,1)</onclick>
+			</control>
+			
+			<control type="button" id="35" description="Previous Item Group Button">
+				<posx>1740</posx>
+				<posy>120</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangleup.png</texturenofocus>
+				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</texturefocus>
+				<onup>40</onup>
+				<ondown>40</ondown>
+				<onleft>34</onleft>
+				<onright>Noop</onright>
+				<onclick>Control.Move(33,-1)</onclick>
+			</control>
+
+			<control type="label" description="Custom Item Label">
+				<posx>560</posx>
+				<posy>200</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+                <textcolor>TextColor</textcolor>
+				<align>left</align>
+				<label>$LOCALIZE[31900]:</label>
+			</control>
+
+			<control type="group">
+                <control type="list" id="40" description="Item List">
+                    <posx>560</posx>
+                    <posy>240</posy>
+                    <height>360</height>
+                    <itemgap>0</itemgap>
+                    <align>left</align>
+                    <scrolltime>0</scrolltime>
+                    <pagecontrol>41</pagecontrol>
+                    <onup>34</onup>
+                    <ondown>34</ondown>
+                    <onleft>9000</onleft>
+                    <onright>41</onright>
+
+                    <itemlayout height="40">
+                        <include>NormalItemsForNormalList</include>
+                    </itemlayout>
+				
+                    <focusedlayout height="40">
+                        <control type="group">
+                            <visible>Control.HasFocus(40)</visible>
+                            <include>FocusedItemsForNormalList</include>
+                        </control>
+                        <control type="group">
+                            <visible>!Control.HasFocus(40)</visible>
+                            <include>SelectedItemsForNormalList</include>
+                        </control>
+                    </focusedlayout>
+
+                    <content>
+                        <item id="101" description="XBMC / Latest Movies Option">
+                            <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31721] $LOCALIZE[31711]</label>
+                            <property name="ItemName">$LOCALIZE[31721]</property>
+                            <property name="SourceMask">LatestMovie.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="102" description="XBMC / Latest Episodes Option">
+                            <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31722] $LOCALIZE[31711]</label>
+                            <property name="ItemName">$LOCALIZE[31722]</property>
+                            <property name="SourceMask">LatestEpisode.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="103" description="XBMC / Latest Music Video Option">
+                            <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31723] $LOCALIZE[31711]</label>
+                            <property name="ItemName">$LOCALIZE[31723]</property>
+                            <property name="SourceMask">LatestMusicVideo.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="104" description="XBMC / Latest Song Option">
+                            <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31724] $LOCALIZE[31711]</label>
+                            <property name="ItemName">$LOCALIZE[31724]</property>
+                            <property name="SourceMask">LatestSong.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="105" description="XBMC / Latest Albums Option">
+                            <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31725] $LOCALIZE[31711]</label>
+                            <property name="ItemName">$LOCALIZE[31725]</property>
+                            <property name="SourceMask">LatestAlbum.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="201" description="Screen Widgets / Random Movies Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31726] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31726]</property>
+                            <property name="SourceMask">RandomMovie.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="202" description="Screen Widgets / Random Episodes Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31727] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31727]</property>
+                            <property name="SourceMask">RandomEpisode.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="203" description="Screen Widgets / Random Music Videos Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31728] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31728]</property>
+                            <property name="SourceMask">RandomMusicVideo.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="204" description="Screen Widgets / Random Albums Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31729] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31729]</property>
+                            <property name="SourceMask">RandomAlbum.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="205" description="Screen Widgets / Random Artists Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31730] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31730]</property>
+                            <property name="SourceMask">RandomArtist.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="206" description="Screen Widgets / Random Songs Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31731] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31731]</property>
+                            <property name="SourceMask">RandomSong.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="207" description="Screen Widgets / Random Addons Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31732] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31732]</property>
+                            <property name="SourceMask">RandomAddon.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="221" description="Screen Widgets / Recommended Movies Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31733] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31733]</property>
+                            <property name="SourceMask">RecommendedMovie.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="222" description="Screen Widgets / Recommended Episodes Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31734] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31734]</property>
+                            <property name="SourceMask">RecommendedEpisode.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="223" description="Screen Widgets / Recommended Music Videos Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31735] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31735]</property>
+                            <property name="SourceMask">RecommendedMusicVideo.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="224" description="Screen Widgets / Recommended Albums Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31736] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31736]</property>
+                            <property name="SourceMask">RecommendedAlbum.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="241" description="Screen Widgets / Recent Movies Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31737] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31737]</property>
+                            <property name="SourceMask">RecentMovie.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="242" description="Screen Widgets / Recent Episodes Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31738] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31738]</property>
+                            <property name="SourceMask">RecentEpisode.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="243" description="Screen Widgets / Recent Music Videos Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31739] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31739]</property>
+                            <property name="SourceMask">RecentMusicVideo.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="244" description="Screen Widgets / Recent Albums Option">
+                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <label>$LOCALIZE[31740] $LOCALIZE[31712]</label>
+                            <property name="ItemName">$LOCALIZE[31740]</property>
+                            <property name="SourceMask">RecentAlbum.%d</property>
+                            <property name="Window">$NUMBER[1101]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                    </content>
+                </control>
+                
+                <control id="41" type="scrollbar">
+                    <posy>240</posy>
+                    <height>360</height>
+                    <include>MarkupForScrollbarForDialog</include>
+                    <onleft>40</onleft>
+                    <onright>Noop</onright>
+                </control>
+			</control>
+                
+			<control type="group" id="9000">
+                <defaultcontrol>20</defaultcontrol>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>Noop</onleft>
+				<onright>40</onright>
+
+				<control type="button" id="20" description="Ok Button">
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[186]</label>
+                    <onup>21</onup>
+                    <ondown>21</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>40</onright>
+					<onclick>SetProperty($INFO[Window.Property(TargetParameter)],$INFO[Container(40).CurrentItem],$INFO[Window.Property(TargetWindow)])</onclick>
+ 					<onclick>SetProperty($INFO[Window.Property(TargetAction)],RunScript(special://skin/scripts/ActivateWindowWithProperties.py,$INFO[Container(40).ListItem.Property(Window)],MenuTitle,$INFO[Container(40).ListItem.Property(ItemName)],SourceMask,&quot;$INFO[Container(40).ListItem.Property(SourceMask)]&quot;),$INFO[Window.Property(TargetWindow)])</onclick>
+<!-- 					<onclick>SetProperty($INFO[Window.Property(CustomItem.Action)],RunScript(special://skin/scripts/ActivateWindowWithProperties.py,$INFO[Container(40).CurrentItem.Property(Window)],MenuTitle,$INFO[Container(40).CurrentItem.Property(ItemName)],SourcePlugin,$INFO[Container(40).CurrentItem.Property(PluginAction)],$INFO[Window.Property(CustomItem.Window)])</onclick> -->
+					<onclick>Close</onclick>
+				</control>
+
+				<control type="button" id="21" description="Cancel Button">
+                    <posx>40</posx>
+                    <posy>560</posy>
+					<label>$LOCALIZE[222]</label>
+                    <onup>20</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>40</onright>
+					<onclick>Close</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -37,6 +37,7 @@
 				<posy>80</posy>
 				<width>1240</width>
 				<font>DialogTextFont</font>
+                <textcolor>TextColor</textcolor>
 				<align>left</align>
 				<label>$LOCALIZE[31913]:</label>
 			</control>
@@ -166,6 +167,7 @@
 				<posy>200</posy>
 				<width>1240</width>
 				<font>DialogTextFont</font>
+                <textcolor>TextColor</textcolor>
 				<align>left</align>
 				<label>$LOCALIZE[31906]:</label>
 			</control>
@@ -202,7 +204,7 @@
 					<item id="101" description="Open Live TV Option">
                         <visible>Container(30).HasFocus(1)</visible>
 						<label>$LOCALIZE[31820]</label>
-						<property name="Command">ActivateWindowAndFocus(mypvr)</property>
+						<property name="Command">ActivateWindow(mypvr)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="102" description="Open Live TV / EPG Option">
@@ -292,7 +294,7 @@
 					<item id="210" description="Open Video Playlist Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31835]</label>
-						<property name="Command">ActivateWindow(videolibrary$INFO[Window.Property(CustomAction.Path),$COMMA,])</property>
+						<property name="Command">ActivateWindow(videolibrary$INFO[Window.Property(ParameterPath),$COMMA,])</property>
 						<property name="Parameter">L</property>
 						<property name="InitialPath">special://videoplaylists/</property>
 						<onclick>Noop</onclick>
@@ -312,7 +314,7 @@
                     <item id="281" description="Update Path Video Library Option">
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31838]</label>
-                        <property name="Command">UpdateLibrary(video$INFO[Window.Property(CustomAction.Path),$COMMA,])</property>
+                        <property name="Command">UpdateLibrary(video$INFO[Window.Property(ParameterPath),$COMMA,])</property>
                         <property name="Parameter">P</property>
                         <onclick>Noop</onclick>
                     </item>
@@ -355,7 +357,7 @@
 					<item id="310" description="Open Music Playlist Option">
                         <visible>Container(30).HasFocus(3)</visible>
 						<label>$LOCALIZE[31845]</label>
-						<property name="Command">ActivateWindow(musiclibrary$INFO[Window.Property(CustomAction.File),$COMMA,])</property>
+						<property name="Command">ActivateWindow(musiclibrary$INFO[Window.Property(ParameterFile),$COMMA,])</property>
 						<property name="Parameter">F</property>
 						<property name="InitialPath">special://musicplaylists/</property>
 						<onclick>Noop</onclick>
@@ -387,28 +389,28 @@
 					<item id="411">
                         <visible>Container(30).HasFocus(4)</visible>
 						<label>$LOCALIZE[31850]</label>
-						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],notrandom)</property>
+						<property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],notrandom)</property>
 						<property name="Parameter">P</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="412">
                         <visible>Container(30).HasFocus(4)</visible>
 						<label>$LOCALIZE[31851]</label>
-						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],random)</property>
+						<property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],random)</property>
 						<property name="Parameter">P</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="413">
                         <visible>Container(30).HasFocus(4)</visible>
 						<label>$LOCALIZE[31852]</label>
-						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],recursive,notrandom)</property>
+						<property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],recursive,notrandom)</property>
 						<property name="Parameter">P</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="414">
                         <visible>Container(30).HasFocus(4)</visible>
 						<label>$LOCALIZE[31853]</label>
-						<property name="Command">SlideShow($INFO[Window.Property(CustomAction.Path)],recursive,random)</property>
+						<property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],recursive,random)</property>
 						<property name="Parameter">P</property>
 						<onclick>Noop</onclick>
 					</item>
@@ -427,14 +429,14 @@
 					<item id="551" description="Run External Program Option">
                         <visible>Container(30).HasFocus(5)</visible>
 						<label>$LOCALIZE[31856]</label>
-						<property name="Command">System.Exec(&quot;$INFO[Window.Property(CustomAction.File)]&quot;)</property>
+						<property name="Command">System.Exec(&quot;$INFO[Window.Property(ParameterFile)]&quot;)</property>
 						<property name="Parameter">F</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="552" description="Run External Program And Wait Option">
                         <visible>Container(30).HasFocus(5)</visible>
 						<label>$LOCALIZE[31857]</label>
-						<property name="Command">System.ExecWait(&quot;$INFO[Window.Property(CustomAction.File)]&quot;)</property>
+						<property name="Command">System.ExecWait(&quot;$INFO[Window.Property(ParameterFile)]&quot;)</property>
 						<property name="Parameter">F</property>
 						<onclick>Noop</onclick>
 					</item>
@@ -495,21 +497,21 @@
 					<item id="750" description="Wake Device On LAN Option">
                         <visible>Container(30).HasFocus(7)</visible>
 						<label>$LOCALIZE[31867]</label>
-						<property name="Command">WakeOnLan($INFO[Window.Property(CustomAction.String)])</property>
+						<property name="Command">WakeOnLan($INFO[Window.Property(ParameterString)])</property>
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="780" description="Execute Shell Command Option">
                         <visible>Container(30).HasFocus(7)</visible>
 						<label>$LOCALIZE[31868]</label>
-						<property name="Command">System.Exec(&quot;$INFO[Window.Property(CustomAction.String)]&quot;)</property>
+						<property name="Command">System.Exec(&quot;$INFO[Window.Property(ParameterString)]&quot;)</property>
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="781" description="Execute Shell Command And Wait Option">
                         <visible>Container(30).HasFocus(7)</visible>
 						<label>$LOCALIZE[31869]</label>
-						<property name="Command">System.ExecWait(&quot;$INFO[Window.Property(CustomAction.String)]&quot;)</property>
+						<property name="Command">System.ExecWait(&quot;$INFO[Window.Property(ParameterString)]&quot;)</property>
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
@@ -576,7 +578,7 @@
 					<item id="901" description="Custom Action Option">
                         <visible>Container(30).HasFocus(9)</visible>
 						<label>$LOCALIZE[31880]</label>
-						<property name="Command">$INFO[Window.Property(CustomAction.String)]</property>
+						<property name="Command">$INFO[Window.Property(ParameterString)]</property>
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
@@ -609,7 +611,7 @@
                     <font>DialogTextFont</font>
                     <textcolor>TextColor</textcolor>
                     <align>left</align>
-                    <label>$INFO[Window.Property(CustomAction.Playlist)]</label>
+                    <label>$INFO[Window.Property(ParameterPlaylist)]</label>
                 </control>
 			</control>
 
@@ -631,7 +633,7 @@
                     <font>DialogTextFont</font>
                     <textcolor>TextColor</textcolor>
                     <align>left</align>
-                    <label>$INFO[Window.Property(CustomAction.Image)]</label>
+                    <label>$INFO[Window.Property(ParameterImage)]</label>
                 </control>
 			</control>
 
@@ -653,7 +655,7 @@
                     <font>DialogTextFont</font>
                     <textcolor>TextColor</textcolor>
                     <align>left</align>
-                    <label>$INFO[Window.Property(CustomAction.File)]</label>
+                    <label>$INFO[Window.Property(ParameterFile)]</label>
                 </control>
 			</control>
 
@@ -675,7 +677,7 @@
                     <font>DialogTextFont</font>
                     <textcolor>TextColor</textcolor>
                     <align>left</align>
-                    <label>$INFO[Window.Property(CustomAction.Path)]</label>
+                    <label>$INFO[Window.Property(ParameterPath)]</label>
                 </control>
 			</control>
 
@@ -697,7 +699,7 @@
                     <font>DialogTextFont</font>
                     <textcolor>TextColor</textcolor>
                     <align>left</align>
-                    <label>$INFO[Window.Property(CustomAction.Addon)]</label>
+                    <label>$INFO[Window.Property(ParameterAddon)]</label>
                 </control>
 			</control>
 
@@ -719,7 +721,7 @@
                     <font>DialogTextFont</font>
                     <textcolor>TextColor</textcolor>
                     <align>left</align>
-                    <label>$INFO[Window.Property(CustomAction.String)]</label>
+                    <label>$INFO[Window.Property(ParameterString)]</label>
                 </control>
 			</control>
 
@@ -728,6 +730,7 @@
 				<posy>600</posy>
 				<width>1240</width>
 				<font>DialogTextFont</font>
+                <textcolor>TextColor</textcolor>
 				<align>left</align>
 				<label>$LOCALIZE[31910]:</label>
 			</control>
@@ -760,7 +763,7 @@
                     <onleft>Noop</onleft>
                     <onright>31</onright>
                     <onclick>Skin.SetFile(Dialog.Input)</onclick>
-                    <onclick>SetProperty(CustomAction.Playlist,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>SetProperty(ParameterPlaylist,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
 
@@ -774,7 +777,7 @@
                     <onleft>Noop</onleft>
                     <onright>31</onright>
                     <onclick>Skin.SetImage(Dialog.Input)</onclick>
-                    <onclick>SetProperty(CustomAction.Image,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>SetProperty(ParameterImage,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
 
@@ -788,7 +791,7 @@
                     <onleft>Noop</onleft>
                     <onright>31</onright>
                     <onclick>Skin.SetFile(Dialog.Input)</onclick>
-                    <onclick>SetProperty(CustomAction.File,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>SetProperty(ParameterFile,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
 
@@ -802,7 +805,7 @@
                     <onleft>Noop</onleft>
                     <onright>31</onright>
                     <onclick>Skin.SetPath(Dialog.Input)</onclick>
-                    <onclick>SetProperty(CustomAction.Path,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>SetProperty(ParameterPath,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
 
@@ -816,7 +819,7 @@
                     <onleft>Noop</onleft>
                     <onright>31</onright>
                     <onclick>Skin.SetAddon(Dialog.Input)</onclick>
-                    <onclick>SetProperty(CustomAction.Addon,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>SetProperty(ParameterAddon,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
 
@@ -830,7 +833,7 @@
                     <onleft>Noop</onleft>
                     <onright>31</onright>
                     <onclick>Skin.SetString(Dialog.Input)</onclick>
-                    <onclick>SetProperty(CustomAction.String,$INFO[Skin.String(Dialog.Input)])</onclick>
+                    <onclick>SetProperty(ParameterString,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
 
@@ -842,7 +845,7 @@
                     <ondown>21</ondown>
                     <onleft>Noop</onleft>
                     <onright>31</onright>
-					<onclick>SetProperty($INFO[Window.Property(CustomAction.Action)],$INFO[Container(40).ListItem.Property(Command)],$INFO[Window.Property(CustomAction.Window)])</onclick>
+					<onclick>SetProperty($INFO[Window.Property(TargetAction)],$INFO[Container(40).ListItem.Property(Command)],$INFO[Window.Property(TargetWindow)])</onclick>
 					<onclick>Close</onclick>
 				</control>
 

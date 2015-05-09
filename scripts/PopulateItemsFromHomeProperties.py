@@ -14,7 +14,7 @@ import xbmc
 from xbmc_property import *
 
 SCRIPT_NAME = 'Revolve/PopulateListFromHomeProperties'
-DEFAULT_WINDOW = '1102'
+DEFAULT_WINDOW = '1101'
 DEFAULT_TARGETMASK = 'MyItems%02dOption'
 TOTAL_ITEMS = 20
 

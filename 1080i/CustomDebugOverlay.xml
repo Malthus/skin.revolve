@@ -288,20 +288,14 @@
 
 			<control type="label">
 				<include>WindowIDForDebug</include>
-				<label>CustomMySubmenu.xml</label>
-				<visible>Window.IsVisible(CustomMySubmenu.xml)</visible>
+				<label>CustomMyStaticItems.xml</label>
+				<visible>Window.IsVisible(CustomMyStaticItems.xml)</visible>
 			</control>
 
 			<control type="label">
 				<include>WindowIDForDebug</include>
-				<label>CustomMyItems.xml</label>
-				<visible>Window.IsVisible(CustomMyItems.xml)</visible>
-			</control>
-
-			<control type="label">
-				<include>WindowIDForDebug</include>
-				<label>CustomMyLists.xml</label>
-				<visible>Window.IsVisible(CustomMyLists.xml)</visible>
+				<label>CustomMyDynamicItems.xml</label>
+				<visible>Window.IsVisible(CustomMyDynamicItems.xml)</visible>
 			</control>
 
 			<control type="label">
@@ -696,6 +690,18 @@
 				<visible>Window.IsVisible(CustomDialogOptionEditor.xml)</visible>	
 			</control>
 			
+			<control type="label">
+				<include>DialogIDForDebug</include>
+				<label>CustomDialogItemsEditor.xml</label>
+				<visible>Window.IsVisible(CustomDialogItemsEditor.xml)</visible>	
+			</control>
+			
+			<control type="label">
+				<include>DialogIDForDebug</include>
+				<label>CustomDialogCircleEditor.xml</label>
+				<visible>Window.IsVisible(CustomDialogCircleEditor.xml)</visible>	
+			</control>
+            
 			<!-- Add-on Dialog Labels -->
 			
 			<control type="label">

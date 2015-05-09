@@ -60,14 +60,14 @@
 				<width>1100</width>
 				<align>left</align>
 				<label>- $LOCALIZE[31136]</label>
-				<onclick>SetProperty(CustomOption.Type, $INFO[Skin.String(Custom01Option.Type)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Name, $INFO[Skin.String(Custom01Option.Name)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Subtitle, $INFO[Skin.String(Custom01Option.Subtitle)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.BackgroundImage, $INFO[Skin.String(Custom01Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionType, $INFO[Skin.String(Custom01Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName, $INFO[Skin.String(Custom01Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle, $INFO[Skin.String(Custom01Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage, $INFO[Skin.String(Custom01Option.BackgroundImage)],1190)</onclick>
 				<onclick>SetProperty(CustomOption.Parameter, $INFO[Skin.String(Custom01Option.Parameter)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Action, $INFO[Skin.String(Custom01Option.Action)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Target, Custom01Option,1190)</onclick>
-				<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+				<onclick>SetProperty(CustomAction, $INFO[Skin.String(Custom01Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption, Custom01Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 					
@@ -85,14 +85,14 @@
 				<width>1100</width>
 				<align>left</align>
 				<label>- $LOCALIZE[31136]</label>
-				<onclick>SetProperty(CustomOption.Type, $INFO[Skin.String(Custom02Option.Type)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Name, $INFO[Skin.String(Custom02Option.Name)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Subtitle, $INFO[Skin.String(Custom02Option.Subtitle)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.BackgroundImage, $INFO[Skin.String(Custom02Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionType, $INFO[Skin.String(Custom02Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName, $INFO[Skin.String(Custom02Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle, $INFO[Skin.String(Custom02Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage, $INFO[Skin.String(Custom02Option.BackgroundImage)],1190)</onclick>
 				<onclick>SetProperty(CustomOption.Parameter, $INFO[Skin.String(Custom02Option.Parameter)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Action, $INFO[Skin.String(Custom02Option.Action)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Target, Custom02Option,1190)</onclick>
-				<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+				<onclick>SetProperty(CustomAction, $INFO[Skin.String(Custom02Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption, Custom02Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 				
@@ -112,14 +112,14 @@
 				<width>1100</width>
 				<align>left</align>
 				<label>- $LOCALIZE[31136]</label>
-				<onclick>SetProperty(CustomOption.Type, $INFO[Skin.String(Custom03Option.Type)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Name, $INFO[Skin.String(Custom03Option.Name)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Subtitle, $INFO[Skin.String(Custom03Option.Subtitle)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.BackgroundImage, $INFO[Skin.String(Custom03Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionType, $INFO[Skin.String(Custom03Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName, $INFO[Skin.String(Custom03Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle, $INFO[Skin.String(Custom03Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage, $INFO[Skin.String(Custom03Option.BackgroundImage)],1190)</onclick>
 				<onclick>SetProperty(CustomOption.Parameter, $INFO[Skin.String(Custom03Option.Parameter)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Action, $INFO[Skin.String(Custom03Option.Action)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Target, Custom03Option,1190)</onclick>
-				<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+				<onclick>SetProperty(CustomAction, $INFO[Skin.String(Custom03Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption, Custom03Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
@@ -133,24 +133,24 @@
 				<onclick>Skin.ToggleSetting(Custom04Option.Active)</onclick>
 			</control>
 
-					<control type="button" id="208" description="Custom Option 4 Edit Button">
+			<control type="button" id="208" description="Custom Option 4 Edit Button">
                         <visible>Skin.HasSetting(Custom03Option.Active) | Skin.HasSetting(Custom04Option.Active) | !IsEmpty(Skin.String(Custom04Option.Name))</visible>
 						<enable>Skin.HasSetting(Custom04Option.Active)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31136]</label>
-						<onclick>SetProperty(CustomOption.Type, $INFO[Skin.String(Custom04Option.Type)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Name, $INFO[Skin.String(Custom04Option.Name)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Subtitle, $INFO[Skin.String(Custom04Option.Subtitle)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.BackgroundImage, $INFO[Skin.String(Custom04Option.BackgroundImage)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionType, $INFO[Skin.String(Custom04Option.Type)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionName, $INFO[Skin.String(Custom04Option.Name)],1190)</onclick>
+						<onclick>SetProperty(CustomSubtitle, $INFO[Skin.String(Custom04Option.Subtitle)],1190)</onclick>
+						<onclick>SetProperty(CustomBackgroundImage, $INFO[Skin.String(Custom04Option.BackgroundImage)],1190)</onclick>
 						<onclick>SetProperty(CustomOption.Parameter, $INFO[Skin.String(Custom04Option.Parameter)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Action, $INFO[Skin.String(Custom04Option.Action)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Target, Custom04Option,1190)</onclick>
-						<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+						<onclick>SetProperty(CustomAction, $INFO[Skin.String(Custom04Option.Action)],1190)</onclick>
+						<onclick>SetProperty(TargetOption, Custom04Option,1190)</onclick>
+						<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 						<onclick>ActivateWindow(1190)</onclick>
-					</control>
+			</control>
 
-					<control type="radiobutton" id="209" description="Custom Option 5 Activation Button">
+			<control type="radiobutton" id="209" description="Custom Option 5 Activation Button">
                         <visible>Skin.HasSetting(Custom04Option.Active) | Skin.HasSetting(Custom05Option.Active) | !IsEmpty(Skin.String(Custom05Option.Name))</visible>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -158,26 +158,26 @@
 						<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom05Option.Name)]</label>
 						<selected>Skin.HasSetting(Custom05Option.Active)</selected>
 						<onclick>Skin.ToggleSetting(Custom05Option.Active)</onclick>
-					</control>
+			</control>
 
-					<control type="button" id="210" description="Custom Option 5 Edit Button">
+			<control type="button" id="210" description="Custom Option 5 Edit Button">
                         <visible>Skin.HasSetting(Custom04Option.Active) | Skin.HasSetting(Custom05Option.Active) | !IsEmpty(Skin.String(Custom05Option.Name))</visible>
 						<enable>Skin.HasSetting(Custom05Option.Active)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31136]</label>
-						<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(Custom05Option.Type)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Custom05Option.Name)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Custom05Option.Subtitle)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.BackgroundImage,$INFO[Skin.String(Custom05Option.BackgroundImage)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom05Option.Type)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom05Option.Name)],1190)</onclick>
+						<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom05Option.Subtitle)],1190)</onclick>
+						<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom05Option.BackgroundImage)],1190)</onclick>
 						<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(Custom05Option.Parameter)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(Custom05Option.Action)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Target,Custom05Option,1190)</onclick>
-						<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+						<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom05Option.Action)],1190)</onclick>
+						<onclick>SetProperty(TargetOption,Custom05Option,1190)</onclick>
+						<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 						<onclick>ActivateWindow(1190)</onclick>
-					</control>
+			</control>
 
-					<control type="radiobutton" id="211" description="Custom Option 6 Activation Button">
+			<control type="radiobutton" id="211" description="Custom Option 6 Activation Button">
                         <visible>Skin.HasSetting(Custom05Option.Active) | Skin.HasSetting(Custom06Option.Active) | !IsEmpty(Skin.String(Custom06Option.Name))</visible>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -185,26 +185,26 @@
 						<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom06Option.Name)]</label>
 						<selected>Skin.HasSetting(Custom06Option.Active)</selected>
 						<onclick>Skin.ToggleSetting(Custom06Option.Active)</onclick>
-					</control>
+			</control>
 
-					<control type="button" id="212" description="Custom Option 6 Edit Button">
+			<control type="button" id="212" description="Custom Option 6 Edit Button">
                         <visible>Skin.HasSetting(Custom05Option.Active) | Skin.HasSetting(Custom06Option.Active) | !IsEmpty(Skin.String(Custom06Option.Name))</visible>
 						<enable>Skin.HasSetting(Custom06Option.Active)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31136]</label>
-						<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(Custom06Option.Type)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Custom06Option.Name)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Custom06Option.Subtitle)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.BackgroundImage,$INFO[Skin.String(Custom06Option.BackgroundImage)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom06Option.Type)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom06Option.Name)],1190)</onclick>
+						<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom06Option.Subtitle)],1190)</onclick>
+						<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom06Option.BackgroundImage)],1190)</onclick>
 						<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(Custom06Option.Parameter)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(Custom06Option.Action)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Target,Custom06Option,1190)</onclick>
-						<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+						<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom06Option.Action)],1190)</onclick>
+						<onclick>SetProperty(TargetOption,Custom06Option,1190)</onclick>
+						<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 						<onclick>ActivateWindow(1190)</onclick>
-					</control>
+			</control>
 
-					<control type="radiobutton" id="213" description="Custom Option 7 Activation Button">
+			<control type="radiobutton" id="213" description="Custom Option 7 Activation Button">
                         <visible>Skin.HasSetting(Custom06Option.Active) | Skin.HasSetting(Custom07Option.Active) | !IsEmpty(Skin.String(Custom07Option.Name))</visible>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -212,26 +212,26 @@
 						<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom07Option.Name)]</label>
 						<selected>Skin.HasSetting(Custom07Option.Active)</selected>
 						<onclick>Skin.ToggleSetting(Custom07Option.Active)</onclick>
-					</control>
+			</control>
 
-					<control type="button" id="214" description="Custom Option 7 Edit Button">
+			<control type="button" id="214" description="Custom Option 7 Edit Button">
                         <visible>Skin.HasSetting(Custom06Option.Active) | Skin.HasSetting(Custom07Option.Active) | !IsEmpty(Skin.String(Custom07Option.Name))</visible>
 						<enable>Skin.HasSetting(Custom07Option.Active)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31136]</label>
-						<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(Custom07Option.Type)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Custom07Option.Name)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Custom07Option.Subtitle)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.BackgroundImage,$INFO[Skin.String(Custom07Option.BackgroundImage)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom07Option.Type)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom07Option.Name)],1190)</onclick>
+						<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom07Option.Subtitle)],1190)</onclick>
+						<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom07Option.BackgroundImage)],1190)</onclick>
 						<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(Custom07Option.Parameter)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(Custom07Option.Action)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Target,Custom07Option,1190)</onclick>
-						<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+						<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom07Option.Action)],1190)</onclick>
+						<onclick>SetProperty(TargetOption,Custom07Option,1190)</onclick>
+						<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 						<onclick>ActivateWindow(1190)</onclick>
-					</control>
+			</control>
 
-					<control type="radiobutton" id="215" description="Custom Option 8 Activation Button">
+			<control type="radiobutton" id="215" description="Custom Option 8 Activation Button">
                         <visible>Skin.HasSetting(Custom07Option.Active) | Skin.HasSetting(Custom08Option.Active) | !IsEmpty(Skin.String(Custom08Option.Name))</visible>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -239,53 +239,53 @@
 						<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom08Option.Name)]</label>
 						<selected>Skin.HasSetting(Custom08Option.Active)</selected>
 						<onclick>Skin.ToggleSetting(Custom08Option.Active)</onclick>
-					</control>
+			</control>
 
-					<control type="button" id="216" description="Custom Option 8 Edit Button">
+			<control type="button" id="216" description="Custom Option 8 Edit Button">
                         <visible>Skin.HasSetting(Custom07Option.Active) | Skin.HasSetting(Custom08Option.Active) | !IsEmpty(Skin.String(Custom08Option.Name))</visible>
 						<enable>Skin.HasSetting(Custom08Option.Active)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31136]</label>
-						<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(Custom08Option.Type)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Custom08Option.Name)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Custom08Option.Subtitle)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.BackgroundImage,$INFO[Skin.String(Custom08Option.BackgroundImage)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom08Option.Type)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom08Option.Name)],1190)</onclick>
+						<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom08Option.Subtitle)],1190)</onclick>
+						<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom08Option.BackgroundImage)],1190)</onclick>
 						<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(Custom08Option.Parameter)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(Custom08Option.Action)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Target,Custom08Option,1190)</onclick>
-						<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+						<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom08Option.Action)],1190)</onclick>
+						<onclick>SetProperty(TargetOption,Custom08Option,1190)</onclick>
+						<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 						<onclick>ActivateWindow(1190)</onclick>
-					</control>
+			</control>
 
-					<control type="radiobutton" id="217" description="Custom Option 9 Activation Button">
-                        <visible>Skin.HasSetting(Custom08Option.Active) | Skin.HasSetting(Custom09Option.Active) | !IsEmpty(Skin.String(Custom09Option.Name))</visible>
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom09Option.Name)]</label>
-						<selected>Skin.HasSetting(Custom09Option.Active)</selected>
-						<onclick>Skin.ToggleSetting(Custom09Option.Active)</onclick>
-					</control>
+			<control type="radiobutton" id="217" description="Custom Option 9 Activation Button">
+                <visible>Skin.HasSetting(Custom08Option.Active) | Skin.HasSetting(Custom09Option.Active) | !IsEmpty(Skin.String(Custom09Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom09Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom09Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom09Option.Active)</onclick>
+			</control>
 
-					<control type="button" id="218" description="Custom Option 9 Edit Button">
+			<control type="button" id="218" description="Custom Option 9 Edit Button">
                         <visible>Skin.HasSetting(Custom08Option.Active) | Skin.HasSetting(Custom09Option.Active) | !IsEmpty(Skin.String(Custom09Option.Name))</visible>
 						<enable>Skin.HasSetting(Custom09Option.Active)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31136]</label>
-						<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(Custom09Option.Type)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Custom09Option.Name)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Custom09Option.Subtitle)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.BackgroundImage,$INFO[Skin.String(Custom09Option.BackgroundImage)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom09Option.Type)],1190)</onclick>
+						<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom09Option.Name)],1190)</onclick>
+						<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom09Option.Subtitle)],1190)</onclick>
+						<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom09Option.BackgroundImage)],1190)</onclick>
 						<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(Custom09Option.Parameter)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(Custom09Option.Action)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Target,Custom09Option,1190)</onclick>
-						<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
+						<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom09Option.Action)],1190)</onclick>
+						<onclick>SetProperty(TargetOption,Custom09Option,1190)</onclick>
+						<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
 						<onclick>ActivateWindow(1190)</onclick>
-					</control>
+			</control>
 
-					<control type="radiobutton" id="219" description="Custom Option 10 Activation Button">
+			<control type="radiobutton" id="219" description="Custom Option 10 Activation Button">
                         <visible>Skin.HasSetting(Custom09Option.Active) | Skin.HasSetting(Custom10Option.Active) | !IsEmpty(Skin.String(Custom10Option.Name))</visible>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -293,60 +293,60 @@
 						<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom10Option.Name)]</label>
 						<selected>Skin.HasSetting(Custom10Option.Active)</selected>
 						<onclick>Skin.ToggleSetting(Custom10Option.Active)</onclick>
-					</control>
+			</control>
 
-					<control type="button" id="220" description="Custom Option 10 Edit Button">
-                        <visible>Skin.HasSetting(Custom09Option.Active) | Skin.HasSetting(Custom10Option.Active) | !IsEmpty(Skin.String(Custom10Option.Name))</visible>
-						<enable>Skin.HasSetting(Custom10Option.Active)</enable>
-						<width>1100</width>
-						<align>left</align>
-						<label>- $LOCALIZE[31136]</label>
-						<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(Custom10Option.Type)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Name,$INFO[Skin.String(Custom10Option.Name)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Subtitle,$INFO[Skin.String(Custom10Option.Subtitle)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.BackgroundImage,$INFO[Skin.String(Custom10Option.BackgroundImage)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(Custom10Option.Parameter)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(Custom10Option.Action)],1190)</onclick>
-						<onclick>SetProperty(CustomOption.Target,Custom10Option,1190)</onclick>
-						<onclick>SetProperty(CustomOption.Customizable,true,1190)</onclick>
-						<onclick>ActivateWindow(1190)</onclick>
-					</control>
+			<control type="button" id="220" description="Custom Option 10 Edit Button">
+                <visible>Skin.HasSetting(Custom09Option.Active) | Skin.HasSetting(Custom10Option.Active) | !IsEmpty(Skin.String(Custom10Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom10Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom10Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom10Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom10Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom10Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(Custom10Option.Parameter)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom10Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,Custom10Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
 
-					<control type="radiobutton" id="293" description="LiveTV/PVR Option">
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>31001</label>
-						<selected>Skin.HasSetting(LiveTVOption.Active)</selected>
-						<onclick>Skin.ToggleSetting(LiveTVOption.Active)</onclick>
-					</control>
+			<control type="radiobutton" id="293" description="LiveTV/PVR Option">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>31001</label>
+				<selected>Skin.HasSetting(LiveTVOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(LiveTVOption.Active)</onclick>
+			</control>
 					
-					<control type="radiobutton" id="282" description="Videos Option">
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>3</label>
-						<selected>Skin.HasSetting(VideosOption.Active)</selected>
-						<onclick>Skin.ToggleSetting(VideosOption.Active)</onclick>
-					</control>
+			<control type="radiobutton" id="282" description="Videos Option">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>3</label>
+				<selected>Skin.HasSetting(VideosOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(VideosOption.Active)</onclick>
+			</control>
 					
-					<control type="radiobutton" id="283" description="Movies Option">
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>342</label>
-						<selected>Skin.HasSetting(MoviesOption.Active)</selected>
-						<onclick>Skin.ToggleSetting(MoviesOption.Active)</onclick>
-					</control>
+			<control type="radiobutton" id="283" description="Movies Option">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>342</label>
+				<selected>Skin.HasSetting(MoviesOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(MoviesOption.Active)</onclick>
+			</control>
 					
-					<control type="radiobutton" id="284" description="TVShows Option">
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>31003</label>
-						<selected>Skin.HasSetting(TVShowsOption.Active)</selected>
-						<onclick>Skin.ToggleSetting(TVShowsOption.Active)</onclick>
-					</control>
+			<control type="radiobutton" id="284" description="TVShows Option">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>31003</label>
+				<selected>Skin.HasSetting(TVShowsOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(TVShowsOption.Active)</onclick>
+			</control>
 					
 			<control type="radiobutton" id="285" description="Music Option">
 				<width>1100</width>
@@ -380,14 +380,14 @@
 				<width>1100</width>
 				<align>left</align>
 				<label>- $LOCALIZE[31142]</label>
-				<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(BooksOption.Type)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Name,$LOCALIZE[31004],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Subtitle,$LOCALIZE[31027],1190)</onclick>
-				<onclick>SetProperty(CustomOption.BackgroundImage,special://skin/backgrounds/books.jpg,1190)</onclick>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(BooksOption.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$LOCALIZE[31004],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$LOCALIZE[31027],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,special://skin/backgrounds/books.jpg,1190)</onclick>
 				<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(BooksOption.Parameter)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(BooksOption.Action)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Target,BooksOption,1190)</onclick>
-				<onclick>ClearProperty(CustomOption.Customizable,1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(BooksOption.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,BooksOption,1190)</onclick>
+				<onclick>ClearProperty(CustomizableOption,1190)</onclick>
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
@@ -414,14 +414,14 @@
 				<width>1100</width>
 				<align>left</align>
 				<label>- $LOCALIZE[31142]</label>
-				<onclick>SetProperty(CustomOption.Type,$INFO[Skin.String(GamesOption.Type)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Name,$LOCALIZE[15016],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Subtitle,$LOCALIZE[31020],1190)</onclick>
-				<onclick>SetProperty(CustomOption.BackgroundImage,special://skin/backgrounds/games.jpg,1190)</onclick>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(GamesOption.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$LOCALIZE[15016],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$LOCALIZE[31020],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,special://skin/backgrounds/games.jpg,1190)</onclick>
 				<onclick>SetProperty(CustomOption.Parameter,$INFO[Skin.String(GamesOption.Parameter)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Action,$INFO[Skin.String(GamesOption.Action)],1190)</onclick>
-				<onclick>SetProperty(CustomOption.Target,GamesOption,1190)</onclick>
-				<onclick>ClearProperty(CustomOption.Customizable,1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(GamesOption.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,GamesOption,1190)</onclick>
+				<onclick>ClearProperty(CustomizableOption,1190)</onclick>
 				<onclick>ActivateWindow(1190)</onclick>
             </control>
 
