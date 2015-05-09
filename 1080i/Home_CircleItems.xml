@@ -2,7 +2,7 @@
 <includes>
 	<include name="HomeCircleItems">
 		<control type="group">
-			<control type="fixedlist" id="600">
+            <control type="fixedlist" id="600">
                 <visible allowhiddenfocus="true">Control.HasFocus(600)</visible>
                 <description>Items In Circle List</description>
                 <animation effect="fade" start="0" end="100" time="500">Visible</animation>
@@ -12,11 +12,11 @@
 				<posy>330</posy>
 				<width>812</width>
 				<height>662</height>
+				<scrolltime>0</scrolltime>
 				<onup>600</onup>
 				<ondown>600</ondown>
 				<onleft>Noop</onleft>
 				<onright>300</onright>
-				<scrolltime>0</scrolltime>
 				
 				<itemlayout width="800" height="0">
 				</itemlayout>

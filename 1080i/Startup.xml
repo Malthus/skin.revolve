@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2999">
-    <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 </window>

@@ -2,39 +2,54 @@
 <window id="0">
 	<defaultcontrol>200</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-    <onload condition="!IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onload>
-    <onload condition="!IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onload>
-    <onload condition="!IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onload>
 
 	<controls>
-		<control type="button" id="200" description="Default Revolve Skin Settings Initialisation">
+		<control type="button" id="200" description="Default Skin Settings Initialisation">
 			<visible>!Skin.HasSetting(RevolveConfiguration)</visible>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
 			<include>DefaultSettingsForSkinSettings</include>
-			<onfocus>SetFocus(300)</onfocus>
+			<onfocus>SetFocus(210)</onfocus>
 		</control>
 
-		<control type="button" id="200" description="Default Revolve Skin Settings Evasion">
+		<control type="button" id="200" description="Default Skin Settings Evasion">
 			<visible>Skin.HasSetting(RevolveConfiguration)</visible>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
+			<onfocus>SetFocus(210)</onfocus>
+		</control>
+	
+		<control type="button" id="210" description="Script and Plugin Initialisation">
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+<!--            <onfocus condition="System.HasAddon(service.skin.widgets) + !Window(home).Property(SkinWidgets_Running)">RunScript(service.skin.widgets)</onfocus> -->
+<!--            <onfocus condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onfocus> -->
+            <onfocus condition="System.HasAddon(service.skin.widgets)">SetProperty(SkinWidgets_RandomItems_Update,true)</onfocus>
+			<onfocus>SetFocus(220)</onfocus>
+		</control>
+    
+		<control type="button" id="220" description="Circle Items Initialisation">
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+            <onfocus condition="!IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onfocus>
+            <onfocus condition="!IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onfocus>
+            <onfocus condition="!IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onfocus>
 			<onfocus>SetFocus(300)</onfocus>
 		</control>
 	
 		<include>GlobalBackground</include>
 
-		<control type="group" description="RSS">
+		<control type="group" description="RSS Feed">
+			<visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
+            
 			<control type="image">
-				<visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1920</width>
 				<height>40</height>
 				<texture colordiffuse="BackgroundColor">white.png</texture>
 			</control>
-			<control type="rss" id="1" description="RSS Feed">
-				<visible>true</visible>
+			<control type="rss" id="1">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1920</width>
