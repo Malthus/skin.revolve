@@ -760,6 +760,16 @@
                 </control>
 
                 <control type="image">
+                    <visible>Window.IsVisible(134)</visible>
+                    <posx>40</posx>
+                    <posy>40</posy>
+                    <width>520</width>
+                    <height>520</height>
+                    <texture>circle/favourites.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <control type="image">
                     <visible>!Container(450).IsUpdating</visible>
                     <posx>6</posx>
                     <posy>6</posy>
