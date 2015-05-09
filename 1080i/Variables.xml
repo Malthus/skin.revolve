@@ -349,6 +349,11 @@
 		<value>TextColor</value>
 	</variable>
 	
+	<variable name="ContentWrapMinusOneMainColor">
+		<value condition="ListItem(-1).IsPlaying">HighlightColor</value>
+		<value>MainColor</value>
+	</variable>
+	
 	<variable name="ContentWrapMinusOneThumbnail">
 		<value condition="!IsEmpty(ListItem(-1).Art(thumb))">$INFO[ListItem(-1).Art(thumb)]</value>
 		<value>$INFO[ListItem(-1).Icon]</value>
@@ -361,6 +366,11 @@
 	<variable name="ContentWrapPlusOneColor">
 		<value condition="ListItem(1).IsPlaying">HighlightColor</value>
 		<value>TextColor</value>
+	</variable>
+	
+	<variable name="ContentWrapPlusOneMainColor">
+		<value condition="ListItem(1).IsPlaying">HighlightColor</value>
+		<value>MainColor</value>
 	</variable>
 	
 	<variable name="ContentWrapPlusOneThumbnail">
@@ -527,6 +537,11 @@
 		<value>TextColor</value>
 	</variable>
 	
+	<variable name="ContentNoWrapMinusOneMainColor">
+		<value condition="ListItemNoWrap(-1).IsPlaying">HighlightColor</value>
+		<value>MainColor</value>
+	</variable>
+	
 	<variable name="ContentNoWrapMinusOneThumbnail">
 		<value condition="!IsEmpty(ListItemNoWrap(-1).Art(thumb))">$INFO[ListItemNoWrap(-1).Art(thumb)]</value>
 		<value>$INFO[ListItemNoWrap(-1).Icon]</value>
@@ -539,6 +554,11 @@
 	<variable name="ContentNoWrapPlusOneColor">
 		<value condition="ListItemNoWrap(1).IsPlaying">HighlightColor</value>
 		<value>TextColor</value>
+	</variable>
+	
+	<variable name="ContentNoWrapPlusOneMainColor">
+		<value condition="ListItemNoWrap(1).IsPlaying">HighlightColor</value>
+		<value>MainColor</value>
 	</variable>
 	
 	<variable name="ContentNoWrapPlusOneThumbnail">

@@ -201,6 +201,7 @@
 						<animation effect="zoom" center="860,750" end="20">Visible</animation>
 						<animation effect="zoom" center="860,750" start="20" end="0" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusFiveColor]</textcolor>
 						<label>$VAR[ContentWrapMinusFiveLabel]</label>
 					</control>
 				</control>
@@ -212,6 +213,7 @@
 						<animation effect="zoom" center="860,750" end="34">Visible</animation>
 						<animation effect="zoom" center="860,750" start="34" end="20" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusFourColor]</textcolor>
 						<label>$VAR[ContentWrapMinusFourLabel]</label>
 					</control>
 				</control>
@@ -223,6 +225,7 @@
 						<animation effect="zoom" center="860,750" end="52">Visible</animation>
 						<animation effect="zoom" center="860,750" start="52" end="34" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusThreeColor]</textcolor>
 						<label>$VAR[ContentWrapMinusThreeLabel]</label>
 					</control>
 				</control>
@@ -234,6 +237,7 @@
 						<animation effect="zoom" center="860,750" end="80">Visible</animation>
 						<animation effect="zoom" center="860,750" start="80" end="52" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusTwoColor]</textcolor>
 						<label>$VAR[ContentWrapMinusTwoLabel]</label>
 					</control>
 				</control>
@@ -250,19 +254,12 @@
 							<effect type="fade" start="0" end="100" time="250"/>
 						</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusOneColor]</textcolor>
 						<label>$VAR[ContentWrapMinusOneLabel]</label>
 					</control>
 					
 					<control type="label">
-						<posx>860</posx>
-						<posy>700</posy>
-						<height>100</height>
-						<width>1000</width>
-						<font>RevolveViewFont</font>
-						<textcolor>MainColor</textcolor>
-						<scroll>true</scroll>
-						<label>$VAR[ContentWrapMinusOneLabel]</label>
-						<align>left</align>
+						<visible>Container.OnNext</visible>
 						<animation type="Visible" reversible="false">
 							<effect type="zoom" center="860,750" end="100"/>
 							<effect type="fade" end="100"/>
@@ -271,7 +268,16 @@
 							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
 							<effect type="fade" start="100" end="0" time="250"/>
 						</animation>
-						<visible>Container.OnNext</visible>
+                        
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>$VAR[ContentWrapMinusOneMainColor]</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<label>$VAR[ContentWrapMinusOneLabel]</label>
 					</control>
 				</control>
 				
@@ -288,19 +294,12 @@
 							<effect type="fade" start="100" end="0" time="250"/>
 						</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
-						<label>$VAR[ContentOnOriginLabel]l</label>
+						<textcolor>$VAR[ContentTextColor]</textcolor>
+						<label>$VAR[ContentOnOriginLabel]</label>
 					</control>
 					
 					<control type="label">
-						<posx>860</posx>
-						<posy>700</posy>
-						<height>100</height>
-						<width>1000</width>
-						<font>RevolveViewFont</font>
-						<textcolor>MainColor</textcolor>
-						<scroll>true</scroll>
-						<info>Container.ListItem(0).Label</info>
-						<align>left</align>
+						<visible>Container.OnNext</visible>
 						<animation type="Visible" reversible="false">
 							<effect type="zoom" center="860,750" end="80"/>
 							<effect type="fade" end="0"/>
@@ -309,7 +308,16 @@
 							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
 							<effect type="fade" start="0" end="100" time="250"/>
 						</animation>
-						<visible>Container.OnNext</visible>
+
+						<posx>860</posx>
+						<posy>700</posy>
+						<height>100</height>
+						<width>1000</width>
+						<font>RevolveViewFont</font>
+						<textcolor>$VAR[ContentMainColor]</textcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<info>$VAR[ContentNameLabel]</info>
 					</control>
 				</control>
 				
@@ -320,6 +328,7 @@
 						<animation effect="zoom" center="860,750" end="52">Visible</animation>
 						<animation effect="zoom" center="860,750" start="52" end="80" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapPlusOneColor]</textcolor>
 						<label>$VAR[ContentWrapPlusOneLabel]</label>
 					</control>
 				</control>
@@ -338,6 +347,7 @@
 						<animation effect="zoom" center="860,750" end="0">Visible</animation>
 						<animation effect="zoom" center="860,750" start="0" end="20" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusFourColor]</textcolor>
 						<label>$VAR[ContentWrapMinusFourLabel]</label>
 					</control>
 				</control>
@@ -349,6 +359,7 @@
 						<animation effect="zoom" center="860,750" end="20">Visible</animation>
 						<animation effect="zoom" center="860,750" start="20" end="34" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusThreeColor]</textcolor>
 						<label>$VAR[ContentWrapMinusThreeLabel]</label>
 					</control>
 				</control>
@@ -356,10 +367,11 @@
 				<control type="group">
 					<animation effect="rotate" center="0,773" end="39" condition="true">Conditional</animation>
 					<control type="label">
-						<include>NormalListItemMarkupForRevolveListView</include>
 						<visible>Container.OnPrevious</visible>
 						<animation effect="zoom" center="860,750" end="34">Visible</animation>
 						<animation effect="zoom" center="860,750" start="34" end="52" time="250" reversible="false">Hidden</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusTwoColor]</textcolor>
 						<label>$VAR[ContentWrapMinusTwoLabel]</label>
 					</control>
 				</control>
@@ -371,6 +383,7 @@
 						<animation effect="zoom" center="860,750" end="52">Visible</animation>
 						<animation effect="zoom" center="860,750" start="52" end="80" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusOneColor]</textcolor>
 						<label>$VAR[ContentWrapMinusOneLabel]</label>
 					</control>
 				</control>
@@ -388,6 +401,7 @@
 							<effect type="fade" start="100" end="0" time="250"/>
 						</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+						<textcolor>$VAR[ContentTextColor]</textcolor>
 						<label>$VAR[ContentOnOriginLabel]</label>
 					</control>
 					
@@ -401,12 +415,13 @@
 							<effect type="zoom" center="860,750" start="80" end="100" time="250"/>
 							<effect type="fade" start="0" end="100" time="250"/>
 						</animation>
+                        
 						<posx>860</posx>
 						<posy>700</posy>
 						<height>100</height>
 						<width>1000</width>
 						<font>RevolveViewFont</font>
-						<textcolor>MainColor</textcolor>
+						<textcolor>$VAR[ContentWrapPlusOneMainColor]</textcolor>
 						<scroll>true</scroll>
 						<align>left</align>
 						<label>$VAR[ContentNameLabel]</label>
@@ -424,12 +439,13 @@
 							<effect type="zoom" center="860,750" start="100" end="80" time="250"/>
 							<effect type="fade" start="100" end="0" time="250"/>
 						</animation>
+                        
 						<posx>860</posx>
 						<posy>700</posy>
 						<height>100</height>
 						<width>1000</width>
 						<font>RevolveViewFont</font>
-						<textcolor>MainColor</textcolor>
+						<textcolor>$VAR[ContentWrapPlusOneMainColor]</textcolor>
 						<scroll>true</scroll>
 						<align>left</align>
 						<label>$VAR[ContentWrapPlusOneLabel]</label>
@@ -446,6 +462,7 @@
 							<effect type="fade" start="0" end="100" time="250"/>
 						</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapPlusOneColor]</textcolor>
 						<label>$VAR[ContentWrapPlusOneLabel]</label>
 					</control>
 				</control>
@@ -457,6 +474,7 @@
 						<animation effect="zoom" center="860,750" end="80">Visible</animation>
 						<animation effect="zoom" center="860,750" start="80" end="60" time="250" reversible="false">Hidden</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapPlusTwoColor]</textcolor>
 						<label>$VAR[ContentWrapPlusTwoLabel]</label>
 					</control>
 				</control>
@@ -470,6 +488,7 @@
 					<control type="label">
 						<animation effect="zoom" center="860,750" end="20" condition="true">Conditional</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusFourColor]</textcolor>
 						<label>$VAR[ContentWrapMinusFourLabel]</label>
 					</control>
 				</control>
@@ -479,6 +498,7 @@
 					<control type="label">
 						<animation effect="zoom" center="860,750" end="34" condition="true">Conditional</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusThreeColor]</textcolor>
 						<label>$VAR[ContentWrapMinusThreeLabel]</label>
 					</control>
 				</control>
@@ -488,6 +508,7 @@
 					<control type="label">
 						<animation effect="zoom" center="860,750" end="52" condition="true">Conditional</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusTwoColor]</textcolor>
 						<label>$VAR[ContentWrapMinusTwoLabel]</label>
 					</control>
 				</control>
@@ -497,6 +518,7 @@
 					<control type="label">
 						<animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
 						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapMinusOneColor]</textcolor>
 						<label>$VAR[ContentWrapMinusOneLabel]</label>
 					</control>
 				</control>
@@ -562,9 +584,10 @@
 				<control type="group">
 					<animation effect="rotate" center="0,773" end="-13" condition="true">Conditional</animation>
 					<control type="label">
-						<include>NormalListItemMarkupForRevolveListView</include>
-						<label>$VAR[ContentWrapPlusOneLabel]</label>
 						<animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
+						<include>NormalListItemMarkupForRevolveListView</include>
+                        <textcolor>$VAR[ContentWrapPlusOneColor]</textcolor>
+						<label>$VAR[ContentWrapPlusOneLabel]</label>
 					</control>
 				</control>
 			</control>
@@ -577,7 +600,6 @@
 		<height>100</height>
 		<width>1000</width>
 		<font>RevolveViewFont</font>
-		<textcolor>TextColor</textcolor>
 		<align>left</align>
 		<scroll>false</scroll>
 	</include>
