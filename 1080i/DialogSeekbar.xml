@@ -49,33 +49,33 @@
 				
 					<control type="group" description="Seek Bar">
 						<control type="image">
-							<posx>758</posx>
+							<posx>778</posx>
 							<posy>38</posy>
-							<width>825</width>
+							<width>805</width>
 							<height>28</height>
 							<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>760</posx>
+							<posx>780</posx>
 							<posy>40</posy>
-							<width>820</width>
+							<width>800</width>
 							<height>24</height>
 							<texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="progress" description="Cache Progress Bar">
-							<posx>760</posx>
+							<posx>780</posx>
 							<posy>28</posy>
-							<width>820</width>
+							<width>800</width>
 							<height>24</height>
 							<midtexture colordiffuse="SelectColor" border="6">controls/horizontalbar-thin.png</midtexture>
 							<info>Player.ProgressCache</info>
 						</control>
 						<control type="progress" id="401" description="Player Seek Bar">
-							<posx>760</posx>
+							<posx>780</posx>
 							<posy>28</posy>
-							<width>820</width>
+							<width>800</width>
 							<height>24</height>
 							<midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
 							<info>Player.Progress</info>
