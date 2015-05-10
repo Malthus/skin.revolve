@@ -76,7 +76,7 @@
 					<onclick>Mastermode()</onclick>
 				</item>
 				<item id="11" description="Settings Option">
-                    <!-- <visible>!Skin.HasSetting(SettingsOption.Active)</visible> -->
+                    <visible>!Skin.HasSetting(SettingsOption.Active)</visible>
 					<label>$LOCALIZE[5]</label>
                     <property name="Label3">$LOCALIZE[31023]</property>
 					<icon>special://skin/backgrounds/settings.jpg</icon>
@@ -86,7 +86,6 @@
 		</control>
 		
         <control type="group" description="Revolve Menu">
-            <visible>true</visible>
             <include>ListForRevolveMenu</include>
             <include>RingForRevolveMenu</include>
 
