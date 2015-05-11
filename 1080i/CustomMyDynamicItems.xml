@@ -3,11 +3,11 @@
 	<defaultcontrol always="yes">450</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
     <onload condition="!IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyLists.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
-    <onload condition="!IsEmpty(Window.Property(SourcePlugin))">Skin.SetString(MyLists.SourcePlugin,$INFO[Window.Property(SourcePlugin)])</onload>
+    <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
-    <onload condition="IsEmpty(Window.Property(SourcePlugin))">SetProperty(SourcePlugin,$INFO[Skin.String(MyLists.SourcePlugin)])</onload>
+    <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
 <!--
-            RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1102,MenuTitle,Random Movies,SourcePlugin,"service.library.data.provider?type=randommovies")
+            RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1102,MenuTitle,Random Movies,SourceInfo,"service.library.data.provider?type=randommovies")
             <content>plugin://service.library.data.provider?type=randommovies</content>
 -->
     
@@ -28,7 +28,7 @@
 
             <include>InvisibleItemsForMenu</include>
 
-            <content>plugin://$INFO[Window.Property(SourcePlugin)]</content>
+            <content>plugin://$INFO[Window.Property(SourceInfo)]</content>
 		</control>
 
         <control type="group" description="Revolve Menu">

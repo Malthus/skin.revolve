@@ -2,13 +2,14 @@
 <window type="dialog" id="1190">
 	<defaultcontrol always="true">34</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-    <onload condition="IsEmpty(Window.Property(CustomizableOption))">SetFocus(34,$INFO[Window.Property(CustomOptionType)])</onload>
+    <onload condition="IsEmpty(Window.Property(CustomizableOption) + !StringCompare(CustomOptionType,A) + !StringCompare(CustomOptionType,M))">SetFocus(34,2)</onload>
+    <onload condition="IsEmpty(Window.Property(CustomizableOption) + StringCompare(CustomOptionType,A)">SetFocus(34,3)</onload>
     <onload condition="!IsEmpty(Window.Property(CustomizableOption))">SetFocus(30)</onload>
 
 	<controls>
 		<control type="group">
-			<posy>PosYForTenLinesDialog</posy>
-			<include>TenLinesDialog</include>
+			<posy>PosYForTwelveLinesDialog</posy>
+			<include>TwelveLinesDialog</include>
 
 			<control type="group" description="Editor Dialog Icon">
 				<posx>PosXForDefaultIconFrameForDialog</posx>
@@ -160,17 +161,25 @@
 				</focusedlayout>
 				
 				<content>
-					<item id="1" description="Custom Submenu Option">
-                        <visible>false</visible>
-						<label>$LOCALIZE[31803]</label>
+					<item id="1" description="Custom Static Items Option">
+						<label>$LOCALIZE[31804] $LOCALIZE[31889]</label>
+                        <property name="Type">S</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="2" description="Custom Items Option">
-						<label>$LOCALIZE[31804]</label>
+					<item id="2" description="Custom Dynamic Items Option">
+						<label>$LOCALIZE[31804] $LOCALIZE[31890]</label>
+                        <property name="Type">D</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="3" description="Custom Action Option">
 						<label>$LOCALIZE[31805]</label>
+                        <property name="Type">A</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="4" description="Custom Submenu Option">
+                        <visible>false</visible>
+						<label>$LOCALIZE[31803]</label>
+                        <property name="Type">M</property>
 						<onclick>Noop</onclick>
 					</item>
 				</content>
@@ -238,42 +247,31 @@
 				<onleft>Noop</onleft>
 				<onright>34</onright>
 
-				<control type="button" id="25" description="Clear Button">
-                    <posx>40</posx>
-                    <posy>280</posy>
-					<label>$LOCALIZE[192]</label>
-                    <onup>21</onup>
-                    <ondown>24</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
-					<onclick>ClearProperty(CustomOptionName)</onclick>
-					<onclick>ClearProperty(CustomSubtitle)</onclick>
-					<onclick>ClearProperty(CustomBackgroundImage)</onclick>
-					<onclick>ClearProperty(CustomAction)</onclick>
-				</control>
-                
 				<control type="button" id="24" description="Edit Submenu Button">
-                    <visible>Container(33).HasFocus(1) + !IsEmpty(Window.Property(CustomOptionName))</visible>
+                    <visible>Container(33).HasFocus(4) + !IsEmpty(Window.Property(CustomOptionName))</visible>
                     <posx>40</posx>
                     <posy>320</posy>
 					<label>$LOCALIZE[31806]</label>
-                    <onup>25</onup>
+                    <onup>21</onup>
                     <ondown>23</ondown>
                     <onleft>Noop</onleft>
                     <onright>34</onright>
-					<onclick>RunScript(special://skin/scripts/CustomDialogHubEditor.py,$INFO[Window.Property(CustomOptionName)],$INFO[Window.Property(CustomOption.Parameter)])</onclick>
+                    <onclick>Noop</onclick>
 				</control>
 
 				<control type="button" id="23" description="Choose Items Button">
-                    <visible>Container(33).HasFocus(2)</visible>
+                    <visible>Container(33).HasFocus(1) | Container(33).HasFocus(2)</visible>
                     <posx>40</posx>
                     <posy>320</posy>
 					<label>$LOCALIZE[31807]</label>
                     <onup>24</onup>
-                    <ondown>20</ondown>
+                    <ondown>22</ondown>
                     <onleft>Noop</onleft>
                     <onright>34</onright>
-					<onclick>SetProperty(TargetParameter,CustomOption.Parameter,1193)</onclick>
+					<onclick>SetProperty(SelectType,$INFO[Container(40).ListItem.Property(Type)],1193)</onclick>
+					<onclick>SetProperty(TargetType,CustomOptionType,1193)</onclick>
+					<onclick>SetProperty(TargetMenuTitle,CustomMenuTitle,1193)</onclick>
+					<onclick>SetProperty(TargetSourceInfo,CustomSourceInfo,1193)</onclick>
 					<onclick>SetProperty(TargetAction,CustomAction,1193)</onclick>
 					<onclick>SetProperty(TargetWindow,1190,1193)</onclick>
 					<onclick>ActivateWindow(1193)</onclick>
@@ -285,37 +283,58 @@
                     <posy>320</posy>
 					<label>$LOCALIZE[31808]</label>
                     <onup>23</onup>
-                    <ondown>20</ondown>
+                    <ondown>25</ondown>
                     <onleft>Noop</onleft>
                     <onright>34</onright>
+					<onclick>SetProperty(TargetType,CustomOptionType,1191)</onclick>
+					<onclick>SetProperty(TargetMenuTitle,CustomMenuTitle,1191)</onclick>
+					<onclick>SetProperty(TargetSourceInfo,CustomSourceInfo,1191)</onclick>
 					<onclick>SetProperty(TargetAction,CustomAction,1191)</onclick>
-					<onclick>SetProperty(TargetAction.Window,1190,1191)</onclick>
+					<onclick>SetProperty(TargetWindow,1190,1191)</onclick>
 					<onclick>ActivateWindow(1191)</onclick>
 				</control>
 
-				<control type="button" id="20" description="Ok Button">
+				<control type="button" id="25" description="Clear Button">
                     <posx>40</posx>
                     <posy>400</posy>
-					<label>$LOCALIZE[186]</label>
+					<label>$LOCALIZE[192]</label>
                     <onup>22</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>ClearProperty(CustomOptionName)</onclick>
+					<onclick>ClearProperty(CustomSubtitle)</onclick>
+					<onclick>ClearProperty(CustomBackgroundImage)</onclick>
+					<onclick>ClearProperty(CustomOptionType)</onclick>
+					<onclick>ClearProperty(CustomMenuTitle)</onclick>
+					<onclick>ClearProperty(CustomSourceInfo)</onclick>
+					<onclick>ClearProperty(CustomAction)</onclick>
+				</control>
+                
+				<control type="button" id="20" description="Ok Button">
+                    <posx>40</posx>
+                    <posy>480</posy>
+					<label>$LOCALIZE[186]</label>
+                    <onup>25</onup>
                     <ondown>21</ondown>
                     <onleft>Noop</onleft>
                     <onright>34</onright>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Container(33).CurrentItem])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomOptionName)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Parameter,$INFO[Window.Property(CustomOptionName)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Container(40).ListItem.Property(Type])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].MenuTitle,$INFO[Window.Property(CustomMenuTitle)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].SourceInfo,$INFO[Window.Property(CustomSourceInfo)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Window.Property(CustomAction)])</onclick>
 					<onclick>Close</onclick>
 				</control>
 
 				<control type="button" id="21" description="Cancel Button">
                     <posx>40</posx>
-                    <posy>440</posy>
+                    <posy>520</posy>
 					<label>$LOCALIZE[222]</label>
                     <onup>20</onup>
-                    <ondown>25</ondown>
+                    <ondown>24</ondown>
                     <onleft>Noop</onleft>
                     <onright>34</onright>
 					<onclick>Close</onclick>

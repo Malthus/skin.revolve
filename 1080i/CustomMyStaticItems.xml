@@ -3,12 +3,12 @@
 	<defaultcontrol always="yes">450</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
     <onload condition="!IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyItems.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
-    <onload condition="!IsEmpty(Window.Property(SourceMask))">Skin.SetString(MyItems.SourceMask,$INFO[Window.Property(SourceMask)])</onload>
+    <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyItems.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyItems.MenuTitle)])</onload>
-    <onload condition="IsEmpty(Window.Property(SourceMask))">SetProperty(SourceMask,$INFO[Skin.String(MyItems.SourceMask)])</onload>
-    <onload>RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Window.Property(SourceMask)])</onload>
+    <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyItems.SourceInfo)])</onload>
+    <onload>RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Window.Property(SourceInfo)])</onload>
 <!--
-            RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1101,MenuTitle,Random Albums,SourceMask,"RandomAlbum.%d")
+            RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1101,MenuTitle,Random Albums,SourceInfo,"RandomAlbum.%d")
 -->
 
 	<controls>

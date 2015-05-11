@@ -845,6 +845,9 @@
                     <ondown>21</ondown>
                     <onleft>Noop</onleft>
                     <onright>31</onright>
+					<onclick>SetProperty($INFO[Window.Property(TargetType)],A,$INFO[Window.Property(TargetWindow)])</onclick>
+					<onclick>ClearProperty($INFO[Window.Property(TargetMenuTitle)],$INFO[Window.Property(TargetWindow)])</onclick>
+					<onclick>ClearProperty($INFO[Window.Property(TargetSourceInfo)],$INFO[Window.Property(TargetWindow)])</onclick>
 					<onclick>SetProperty($INFO[Window.Property(TargetAction)],$INFO[Container(40).ListItem.Property(Command)],$INFO[Window.Property(TargetWindow)])</onclick>
 					<onclick>Close</onclick>
 				</control>
