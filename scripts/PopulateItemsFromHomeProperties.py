@@ -14,7 +14,7 @@ import xbmc
 from xbmc_property import *
 
 SCRIPT_NAME = 'Revolve/PopulateListFromHomeProperties'
-DEFAULT_WINDOW = '1101'
+DEFAULT_WINDOW = '0'
 DEFAULT_TARGETMASK = 'MyItems%02dOption'
 TOTAL_ITEMS = 20
 
@@ -42,6 +42,7 @@ def createSubtitleProperty(originbase, destination, targetwindow):
 def createIconProperty(originbase, destination, targetwindow):
     value = getValueFromHomeProperty(originbase + '.Art(poster)')
     value = replaceEmptyValueFromHomeProperty(originbase + '.Thumb', value)
+    value = replaceEmptyValueFromHomeProperty(originbase + '.Icon', value)
     setValueToProperty(destination, value, targetwindow)
     
 def createBackgroundImageProperty(originbase, destination, targetwindow):
@@ -64,10 +65,10 @@ def copyProperties(originmask, destinationmask, targetwindow):
         originbase = originmask % (index)
         destinationbase = destinationmask % (index)
 
-        createNameProperty(originbase, destinationbase + '.Name', targetwindow)
-        createSubtitleProperty(originbase, destinationbase + '.Subtitle', targetwindow)
-        createIconProperty(originbase, destinationbase + '.Icon', targetwindow)
-        createBackgroundImageProperty(originbase, destinationbase + '.BackgroundImage', targetwindow)
+        createNameProperty(originbase, destinationbase + '.Label', targetwindow)
+        createSubtitleProperty(originbase, destinationbase + '.Label2', targetwindow)
+        createIconProperty(originbase, destinationbase + '.Thumb', targetwindow)
+        createBackgroundImageProperty(originbase, destinationbase + '.Fanart', targetwindow)
         createActionProperty(originbase, destinationbase + '.Action', targetwindow)
 
 
