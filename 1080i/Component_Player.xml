@@ -619,7 +619,7 @@
 			<control type="label">
 				<posx>-2</posx>
 				<posy>-2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<font>BigInformationFont</font>
 				<textcolor>MainColor</textcolor>
 				<label>$VAR[PlayerNameLabel]</label>
@@ -628,7 +628,7 @@
 			<control type="label">
 				<posx>2</posx>
 				<posy>-2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<font>BigInformationFont</font>
 				<textcolor>MainColor</textcolor>
 				<align>left</align>
@@ -637,7 +637,7 @@
 			<control type="label">
 				<posx>-2</posx>
 				<posy>2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<font>BigInformationFont</font>
 				<textcolor>MainColor</textcolor>
 				<align>left</align>
@@ -646,7 +646,7 @@
 			<control type="label">
 				<posx>2</posx>
 				<posy>2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<font>BigInformationFont</font>
 				<textcolor>MainColor</textcolor>
 				<align>left</align>
@@ -655,7 +655,7 @@
 			<control type="label">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<font>BigInformationFont</font>
 				<textcolor>BackgroundColor</textcolor>
 				<align>left</align>
@@ -672,7 +672,7 @@
 			<control type="label">
 				<posx>-2</posx>
 				<posy>-2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<align>left</align>
 				<font>DefaultInformationFont</font>
 				<textcolor>MainColor</textcolor>
@@ -681,7 +681,7 @@
 			<control type="label">
 				<posx>2</posx>
 				<posy>-2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<align>left</align>
 				<font>DefaultInformationFont</font>
 				<textcolor>MainColor</textcolor>
@@ -690,7 +690,7 @@
 			<control type="label">
 				<posx>-2</posx>
 				<posy>2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<align>left</align>
 				<font>DefaultInformationFont</font>
 				<textcolor>MainColor</textcolor>
@@ -699,7 +699,7 @@
 			<control type="label">
 				<posx>2</posx>
 				<posy>2</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<align>left</align>
 				<font>DefaultInformationFont</font>
 				<textcolor>MainColor</textcolor>
@@ -708,7 +708,7 @@
 			<control type="label">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>1300</width>
+				<width>1350</width>
 				<align>left</align>
 				<font>DefaultInformationFont</font>
 				<textcolor>BackgroundColor</textcolor>
@@ -931,7 +931,7 @@
 			<control type="image">
 				<posx>-2</posx>
 				<posy>-2</posy>
-				<width>1200</width>
+				<width>1185</width>
 				<height>28</height>
 				<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
 				<aspectratio>stretch</aspectratio>
@@ -939,7 +939,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>1195</width>
+				<width>1180</width>
 				<height>24</height>
 				<texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
 				<aspectratio>stretch</aspectratio>
@@ -947,7 +947,7 @@
 			<control type="progress" description="Cache Progress Bar">
 				<posx>0</posx>
 				<posy>-12</posy>
-				<width>1195</width>
+				<width>1185</width>
 				<height>24</height>
 				<midtexture colordiffuse="SelectColor" border="6">controls/horizontalbar-thin.png</midtexture>
 				<info>Player.ProgressCache</info>
@@ -955,7 +955,7 @@
 			<control type="progress" description="Player Seek Bar">
 				<posx>0</posx>
 				<posy>-12</posy>
-				<width>1195</width>
+				<width>1185</width>
 				<height>24</height>
 				<midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
 				<info>Player.Progress</info>
@@ -995,7 +995,7 @@
                 <control type="label">
                     <posx>-2</posx>
                     <posy>-2</posy>
-                    <width>1300</width>
+                    <width>1480</width>
                     <align>left</align>
                     <font>DefaultInformationFont</font>
                     <textcolor>MainColor</textcolor>
@@ -1004,7 +1004,7 @@
                 <control type="label">
                     <posx>2</posx>
                     <posy>-2</posy>
-                    <width>1300</width>
+                    <width>1480</width>
                     <align>left</align>
                     <font>DefaultInformationFont</font>
                     <textcolor>MainColor</textcolor>
@@ -1013,7 +1013,7 @@
                 <control type="label">
                     <posx>-2</posx>
                     <posy>2</posy>
-                    <width>1300</width>
+                    <width>1480</width>
                     <align>left</align>
                     <font>DefaultInformationFont</font>
                     <textcolor>MainColor</textcolor>
@@ -1022,7 +1022,7 @@
                 <control type="label">
                     <posx>2</posx>
                     <posy>2</posy>
-                    <width>1300</width>
+                    <width>1480</width>
                     <align>left</align>
                     <font>DefaultInformationFont</font>
                     <textcolor>MainColor</textcolor>
@@ -1031,7 +1031,7 @@
                 <control type="label">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <width>1300</width>
+                    <width>1480</width>
                     <align>left</align>
                     <font>DefaultInformationFont</font>
                     <textcolor>BackgroundColor</textcolor>
