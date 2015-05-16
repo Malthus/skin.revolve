@@ -22,9 +22,9 @@
 		<control type="button" id="210" description="Script and Plugin Initialisation">
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
-<!--            <onfocus condition="System.HasAddon(service.skin.widgets) + !Window(home).Property(SkinWidgets_Running)">RunScript(service.skin.widgets)</onfocus> -->
-<!--            <onfocus condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onfocus> -->
+            <onfocus condition="System.HasAddon(service.skin.widgets) + !Window(home).Property(SkinWidgets_Running)">RunScript(service.skin.widgets)</onfocus>
             <onfocus condition="System.HasAddon(service.skin.widgets)">SetProperty(SkinWidgets_RandomItems_Update,true)</onfocus>
+<!--            <onfocus condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onfocus> -->
 			<onfocus>SetFocus(220)</onfocus>
 		</control>
     

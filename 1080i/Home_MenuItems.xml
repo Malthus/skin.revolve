@@ -24,6 +24,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom01Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom01Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom01Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom01Option.MenuTitle)],$INFO[Skin.String(Custom01Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom01Option.SourceInfo)],$INFO[Skin.String(Custom01Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom01Option.Action)]</onclick>
 		</item>
 
@@ -32,6 +34,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom02Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom02Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom02Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom02Option.MenuTitle)],$INFO[Skin.String(Custom02Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom02Option.SourceInfo)],$INFO[Skin.String(Custom02Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom02Option.Action)]</onclick>
 		</item>
 		
@@ -40,6 +44,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom03Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom03Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom03Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom03Option.MenuTitle)],$INFO[Skin.String(Custom03Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom03Option.SourceInfo)],$INFO[Skin.String(Custom03Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom03Option.Action)]</onclick>
 		</item>
 		
@@ -48,6 +54,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom04Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom04Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom04Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom04Option.MenuTitle)],$INFO[Skin.String(Custom04Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom04Option.SourceInfo)],$INFO[Skin.String(Custom04Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom04Option.Action)]</onclick>
 		</item>
 		
@@ -56,6 +64,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom05Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom05Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom05Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom05Option.MenuTitle)],$INFO[Skin.String(Custom05Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom05Option.SourceInfo)],$INFO[Skin.String(Custom05Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom05Option.Action)]</onclick>
 		</item>
 
@@ -64,6 +74,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom06Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom06Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom06Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom06Option.MenuTitle)],$INFO[Skin.String(Custom06Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom06Option.SourceInfo)],$INFO[Skin.String(Custom06Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom06Option.Action)]</onclick>
 		</item>
 
@@ -72,6 +84,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom07Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom07Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom07Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom07Option.MenuTitle)],$INFO[Skin.String(Custom07Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom07Option.SourceInfo)],$INFO[Skin.String(Custom07Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom07Option.Action)]</onclick>
 		</item>
 
@@ -80,6 +94,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom08Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom08Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom08Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom08Option.MenuTitle)],$INFO[Skin.String(Custom08Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom08Option.SourceInfo)],$INFO[Skin.String(Custom08Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom08Option.Action)]</onclick>
 		</item>
 
@@ -88,6 +104,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom09Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom09Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom09Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom09Option.MenuTitle)],$INFO[Skin.String(Custom09Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom09Option.SourceInfo)],$INFO[Skin.String(Custom09Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom09Option.Action)]</onclick>
 		</item>
 
@@ -96,6 +114,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom10Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom10Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom10Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom10Option.MenuTitle)],$INFO[Skin.String(Custom10Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom10Option.SourceInfo)],$INFO[Skin.String(Custom10Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom10Option.Action)]</onclick>
 		</item>
 
@@ -104,6 +124,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom11Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom11Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom11Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom11Option.MenuTitle)],$INFO[Skin.String(Custom11Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom11Option.SourceInfo)],$INFO[Skin.String(Custom11Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom11Option.Action)]</onclick>
 		</item>
 
@@ -112,6 +134,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom12Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom12Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom12Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom12Option.MenuTitle)],$INFO[Skin.String(Custom12Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom12Option.SourceInfo)],$INFO[Skin.String(Custom12Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom12Option.Action)]</onclick>
 		</item>
 		
@@ -120,6 +144,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom13Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom13Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom13Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom13Option.MenuTitle)],$INFO[Skin.String(Custom13Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom13Option.SourceInfo)],$INFO[Skin.String(Custom13Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom13Option.Action)]</onclick>
 		</item>
 		
@@ -128,6 +154,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom14Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom14Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom14Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom14Option.MenuTitle)],$INFO[Skin.String(Custom14Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom14Option.SourceInfo)],$INFO[Skin.String(Custom14Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom14Option.Action)]</onclick>
 		</item>
 		
@@ -136,6 +164,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom15Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom15Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom15Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom15Option.MenuTitle)],$INFO[Skin.String(Custom15Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom15Option.SourceInfo)],$INFO[Skin.String(Custom15Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom15Option.Action)]</onclick>
 		</item>
 
@@ -144,6 +174,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom16Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom16Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom16Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom16Option.MenuTitle)],$INFO[Skin.String(Custom16Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom16Option.SourceInfo)],$INFO[Skin.String(Custom16Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom16Option.Action)]</onclick>
 		</item>
 
@@ -152,6 +184,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom17Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom17Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom17Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom17Option.MenuTitle)],$INFO[Skin.String(Custom17Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom17Option.SourceInfo)],$INFO[Skin.String(Custom17Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom17Option.Action)]</onclick>
 		</item>
 
@@ -160,6 +194,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom18Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom18Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom18Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom18Option.MenuTitle)],$INFO[Skin.String(Custom18Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom18Option.SourceInfo)],$INFO[Skin.String(Custom18Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom18Option.Action)]</onclick>
 		</item>
 
@@ -168,6 +204,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom19Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom19Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom19Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom19Option.MenuTitle)],$INFO[Skin.String(Custom19Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom19Option.SourceInfo)],$INFO[Skin.String(Custom19Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom19Option.Action)]</onclick>
 		</item>
 
@@ -176,6 +214,8 @@
 			<label fallback="31002">$INFO[Skin.String(Custom20Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom20Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom20Option.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom20Option.MenuTitle)],$INFO[Skin.String(Custom20Option.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom20Option.SourceInfo)],$INFO[Skin.String(Custom20Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom20Option.Action)]</onclick>
 		</item>
 
@@ -249,6 +289,8 @@
 			<property name="Label3">$LOCALIZE[31027]</property>
 			<property name="Circle">circle/books.png</property>
 			<icon>special://skin/backgrounds/books.jpg</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(BooksOption.MenuTitle)],$INFO[Skin.String(BooksOption.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(BooksOption.SourceInfo)],$INFO[Skin.String(BooksOption.Window)])</onclick>
 			<onclick>$INFO[Skin.String(BooksOption.Action)]</onclick>
 		</item>
 
@@ -268,6 +310,8 @@
 			<property name="Label3">$LOCALIZE[31020]</property>
 			<property name="Circle">circle/games.png</property>
 			<icon>special://skin/backgrounds/games.jpg</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(GamesOption.MenuTitle)],$INFO[Skin.String(GamesOption.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(GamesOption.SourceInfo)],$INFO[Skin.String(GamesOption.Window)])</onclick>
 			<onclick>$INFO[Skin.String(GamesOption.Action)]</onclick>
 		</item>
 
@@ -297,7 +341,6 @@
 			<visible>Skin.HasSetting(FileManagerOption.Active)</visible>
 			<label>744</label>
 			<property name="Label3">$LOCALIZE[31023]</property>
-<!--			<property name="Circle">circle/files.png</property> -->
 			<icon>special://skin/backgrounds/files.jpg</icon>
 			<onclick>ActivateWindow(filemanager)</onclick>
 		</item>

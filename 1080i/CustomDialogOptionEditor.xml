@@ -8,8 +8,8 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForTwelveLinesDialog</posy>
-			<include>TwelveLinesDialog</include>
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
 
 			<control type="group" description="Editor Dialog Icon">
 				<posx>PosXForDefaultIconFrameForDialog</posx>
@@ -53,7 +53,7 @@
 				<font>DialogTextFont</font>
 				<align>left</align>
 				<label>$LOCALIZE[551]: $INFO[Window.Property(CustomOptionName)]</label>
-				<onup>42</onup>
+				<onup>63</onup>
 				<ondown>31</ondown>
 				<onleft>9000</onleft>
 				<onright>Noop</onright>
@@ -117,7 +117,7 @@
 				<align>left</align>
 				<scrolltime>0</scrolltime>
 				<onup>32</onup>
-				<ondown>36</ondown>
+				<ondown>60</ondown>
 				<onleft>9000</onleft>
 				<onright>34</onright>
 
@@ -161,25 +161,22 @@
 				</focusedlayout>
 				
 				<content>
-					<item id="1" description="Custom Static Items Option">
-						<label>$LOCALIZE[31804] $LOCALIZE[31889]</label>
-                        <property name="Type">S</property>
+					<item id="1" description="Custom Submenu Option">
+						<label>$LOCALIZE[31803]</label>
+                        <property name="Type">M</property>
+                        <property name="Window">$NUMBER[1103]</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="2" description="Custom Dynamic Items Option">
-						<label>$LOCALIZE[31804] $LOCALIZE[31890]</label>
-                        <property name="Type">D</property>
+					<item id="2" description="Custom Items Option">
+						<label>$LOCALIZE[31804]</label>
+                        <property name="Type">$INFO[Container(64).ListItem.Property(Type)]</property>
+                        <property name="Window">$INFO[Container(64).ListItem.Property(Window)]</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="3" description="Custom Action Option">
 						<label>$LOCALIZE[31805]</label>
                         <property name="Type">A</property>
-						<onclick>Noop</onclick>
-					</item>
-					<item id="4" description="Custom Submenu Option">
-                        <visible>false</visible>
-						<label>$LOCALIZE[31803]</label>
-                        <property name="Type">M</property>
+                        <property name="Window">$NUMBER[0]</property>
 						<onclick>Noop</onclick>
 					</item>
 				</content>
@@ -193,7 +190,7 @@
 				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturenofocus>
 				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturefocus>
 				<onup>32</onup>
-				<ondown>36</ondown>
+				<ondown>60</ondown>
 				<onleft>9000</onleft>
 				<onright>35</onright>
 				<onclick>Control.Move(33,1)</onclick>
@@ -207,15 +204,135 @@
 				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangleup.png</texturenofocus>
 				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</texturefocus>
 				<onup>32</onup>
-				<ondown>36</ondown>
+				<ondown>60</ondown>
 				<onleft>34</onleft>
 				<onright>Noop</onright>
 				<onclick>Control.Move(33,-1)</onclick>
 			</control>
+                
+			<control type="button" id="60" description="Menu/Window Title For Custom Option Button">
+                <visible>Container(33).HasFocus(1) | Container(33).HasFocus(2)</visible>
+				<posx>560</posx>
+				<posy>360</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31891]: $INFO[Window.Property(CustomMenuTitle)]</label>
+				<onup>34</onup>
+				<ondown>61</ondown>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+                <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomMenuTitle)])</onclick>
+                <onclick>Skin.SetString(Dialog.Input)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Dialog.Input)])</onclick>
+                <onclick>Skin.Reset(Dialog.Input)</onclick>
+			</control>
 
+			<control type="button" id="61" description="Source Description For Custom Option Button">
+                <visible>Container(33).HasFocus(1) | Container(33).HasFocus(2)</visible>
+				<posx>560</posx>
+				<posy>400</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31892]: $INFO[Window.Property(CustomSourceInfo)]</label>
+				<onup>60</onup>
+				<ondown>62</ondown>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+                <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomSourceInfo)])</onclick>
+                <onclick>Skin.SetString(Dialog.Input)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Dialog.Input)])</onclick>
+                <onclick>Skin.Reset(Dialog.Input)</onclick>
+			</control>
+            
+            <control type="list" id="64" description="Items Source Types List">
+                <visible>Container(33).HasFocus(2)</visible>
+                <enable>false</enable>
+                <posx>560</posx>
+                <posy>440</posy>
+                <width>1240</width>
+                <height>40</height>
+                <itemgap>0</itemgap>
+                <align>left</align>
+                <scrolltime>0</scrolltime>
+                <onup>61</onup>
+                <ondown>63</ondown>
+                <onleft>9000</onleft>
+                <onright>Noop</onright>
+
+                <itemlayout height="0">
+                </itemlayout>
+				
+                <focusedlayout height="40">
+                    <control type="group">
+                        <visible>Control.HasFocus(62)</visible>
+                        <control type="image">
+                            <width>1240</width>
+                            <height>40</height>
+                            <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <width>1140</width>
+                            <height>40</height>
+                            <textcolor>BackgroundColor</textcolor>
+                            <font>DialogTextFont</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+					
+                    <control type="group">
+                        <visible>!Control.HasFocus(62)</visible>
+                        <control type="image">
+                            <width>1240</width>
+                            <height>40</height>
+                            <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <width>1140</width>
+                            <height>40</height>
+                            <textcolor>MainColor</textcolor>
+                            <font>DialogTextFont</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+				
+                <content>
+                    <item id="1" description="Custom Static Items Option">
+                        <label>$LOCALIZE[21870]: $LOCALIZE[31889]</label>
+                        <property name="Type">S</property>
+                        <property name="Window">$NUMBER[1101]</property>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="2" description="Custom Dynamic Items Option">
+                        <label>$LOCALIZE[21870]: $LOCALIZE[31890]</label>
+                        <property name="Type">D</property>
+                        <property name="Window">$NUMBER[1102]</property>
+                        <onclick>Noop</onclick>
+                    </item>
+                </content>
+            </control>
+            
+            <control type="button" id="62" description="Items Source Types Button">
+                <visible>Container(33).HasFocus(2)</visible>
+                <posx>560</posx>
+                <posy>440</posy>
+                <width>1240</width>
+                <texturefocus>-</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <onup>61</onup>
+                <ondown>63</ondown>
+                <onleft>9000</onleft>
+                <onright>Noop</onright>
+                <onclick>Control.Move(64,1)</onclick>
+            </control>
+            
             <control type="label" description="Custom Command Label">
                 <posx>560</posx>
-                <posy>400</posy>
+                <posy>520</posy>
                 <width>1240</width>
                 <font>DialogTextFont</font>
                 <textcolor>TextColor</textcolor>
@@ -223,14 +340,41 @@
                 <label>$LOCALIZE[31910]:</label>
             </control>
 
-            <control type="button" id="36" description="Custom Option Action Button">
+            <control type="button" id="63" description="Custom Submenu Action Button">
+                <visible>Container(33).HasFocus(1)</visible>
+                <enable>false</enable>
                 <posx>560</posx>
-                <posy>440</posy>
+                <posy>560</posy>
+                <width>1240</width>
+                <font>DialogTextFont</font>
+                <align>left</align>
+                <label>ActivateWindow(1103)</label>
+                <onup>62</onup>
+                <ondown>30</ondown>
+            </control>
+
+            <control type="button" id="63" description="Custom Items Action Button">
+                <visible>Container(33).HasFocus(2)</visible>
+                <enable>false</enable>
+                <posx>560</posx>
+                <posy>560</posy>
+                <width>1240</width>
+                <font>DialogTextFont</font>
+                <align>left</align>
+                <label>ActivateWindow($INFO[Container(64).ListItem.Property(Window)])</label>
+                <onup>62</onup>
+                <ondown>30</ondown>
+            </control>
+
+            <control type="button" id="63" description="Custom Option Action Button">
+                <visible>Container(33).HasFocus(3)</visible>
+                <posx>560</posx>
+                <posy>560</posy>
                 <width>1240</width>
                 <font>DialogTextFont</font>
                 <align>left</align>
                 <label>$INFO[Window.Property(CustomAction)]</label>
-                <onup>34</onup>
+                <onup>62</onup>
                 <ondown>30</ondown>
                 <onleft>9000</onleft>
                 <onright>Noop</onright>
@@ -248,7 +392,7 @@
 				<onright>34</onright>
 
 				<control type="button" id="24" description="Edit Submenu Button">
-                    <visible>Container(33).HasFocus(4) + !IsEmpty(Window.Property(CustomOptionName))</visible>
+                    <visible>Container(33).HasFocus(1) + !IsEmpty(Window.Property(CustomSourceInfo))</visible>
                     <posx>40</posx>
                     <posy>320</posy>
 					<label>$LOCALIZE[31806]</label>
@@ -256,11 +400,11 @@
                     <ondown>23</ondown>
                     <onleft>Noop</onleft>
                     <onright>34</onright>
-                    <onclick>Noop</onclick>
+                    <onclick>-</onclick>
 				</control>
 
 				<control type="button" id="23" description="Choose Items Button">
-                    <visible>Container(33).HasFocus(1) | Container(33).HasFocus(2)</visible>
+                    <visible>Container(33).HasFocus(2)</visible>
                     <posx>40</posx>
                     <posy>320</posy>
 					<label>$LOCALIZE[31807]</label>
@@ -296,7 +440,7 @@
 
 				<control type="button" id="25" description="Clear Button">
                     <posx>40</posx>
-                    <posy>400</posy>
+                    <posy>440</posy>
 					<label>$LOCALIZE[192]</label>
                     <onup>22</onup>
                     <ondown>20</ondown>
@@ -308,12 +452,13 @@
 					<onclick>ClearProperty(CustomOptionType)</onclick>
 					<onclick>ClearProperty(CustomMenuTitle)</onclick>
 					<onclick>ClearProperty(CustomSourceInfo)</onclick>
+					<onclick>ClearProperty(CustomWindow)</onclick>
 					<onclick>ClearProperty(CustomAction)</onclick>
 				</control>
                 
 				<control type="button" id="20" description="Ok Button">
                     <posx>40</posx>
-                    <posy>480</posy>
+                    <posy>520</posy>
 					<label>$LOCALIZE[186]</label>
                     <onup>25</onup>
                     <ondown>21</ondown>
@@ -322,16 +467,18 @@
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomOptionName)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Container(40).ListItem.Property(Type])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Container(33).ListItem.Property(Type)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].MenuTitle,$INFO[Window.Property(CustomMenuTitle)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].SourceInfo,$INFO[Window.Property(CustomSourceInfo)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Window.Property(CustomAction)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Window,$INFO[Container(33).ListItem.Property(Window)])</onclick>
+<!--					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Window.Property(CustomAction)])</onclick> -->
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Control.GetLabel(63)])</onclick>
 					<onclick>Close</onclick>
 				</control>
 
 				<control type="button" id="21" description="Cancel Button">
                     <posx>40</posx>
-                    <posy>520</posy>
+                    <posy>560</posy>
 					<label>$LOCALIZE[222]</label>
                     <onup>20</onup>
                     <ondown>24</ondown>
