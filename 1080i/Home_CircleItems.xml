@@ -22,6 +22,14 @@
 				</itemlayout>
 				
 				<focusedlayout width="800" height="622">
+                    <control type="button" description="Invisible Circle Items Loading Button">
+                        <texturenofocus>-</texturenofocus>
+                        <texturefocus>-</texturefocus>
+                        <onfocus condition="Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/PopulateStaticItemsFromHomeProperties.py,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onfocus>
+                        <onfocus condition="Container(300).HasFocus(6) + !IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(special://skin/scripts/PopulateStaticItemsFromHomeProperties.py,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onfocus>
+                        <onfocus condition="Container(300).HasFocus(16) + !IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(special://skin/scripts/PopulateStaticItemsFromHomeProperties.py,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onfocus>
+                    </control>
+                
                     <control type="group">
                         <description>Movies In Circle List</description>
                         <visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>
@@ -73,10 +81,10 @@
                         </control>
                         
                         <control type="image">
-                            <posx>118</posx>
-                            <posy>58</posy>
-                            <width>468</width>
-                            <height>468</height>
+                            <posx>117</posx>
+                            <posy>57</posy>
+                            <width>469</width>
+                            <height>469</height>
                             <texture diffuse="circle/albums-mask.png" fallback="black.png" background="true">$INFO[ListItem.Icon]</texture>
                             <aspectratio scalediffuse="false">scale</aspectratio>
                         </control>
@@ -115,8 +123,41 @@
 	</include>
 	
 	<include name="ListOfHomeCircleItems">
+		<item id="5">
+            <visible>Container(300).HasFocus(5) + IsEmpty(Window.Property(CircleMovie01Option.Label))</visible>
+			<label>-</label>
+			<label2>-</label2>
+			<icon>-</icon>
+            <property name="BackgroundImage">-</property>
+			<onclick>Noop</onclick>
+		</item>
+		<item id="6">
+            <visible>Container(300).HasFocus(6) + IsEmpty(Window.Property(CircleEpisode01Option.Label))</visible>
+			<label>-</label>
+			<label2>-</label2>
+			<icon>-</icon>
+            <property name="BackgroundImage">-</property>
+			<onclick>Noop</onclick>
+		</item>
+		<item id="15">
+            <visible>Container(300).HasFocus(15) + IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
+			<label>-</label>
+			<label2>-</label2>
+			<icon>-</icon>
+            <property name="BackgroundImage">-</property>
+			<onclick>Noop</onclick>
+		</item>
+		<item id="16">
+            <visible>Container(300).HasFocus(16) + IsEmpty(Window.Property(CircleAlbum01Option.Label))</visible>
+			<label>-</label>
+			<label2>-</label2>
+			<icon>-</icon>
+            <property name="BackgroundImage">-</property>
+			<onclick>Noop</onclick>
+		</item>
+        
 		<item id="50">
-            <visible>Container(300).HasFocus(5)</visible>
+            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie01Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleMovie01Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleMovie01Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie01Option.Fanart)]</icon>
@@ -197,7 +238,7 @@
 		</item>
 
 		<item id="60">
-            <visible>Container(300).HasFocus(6)</visible>
+            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode01Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleEpisode01Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode01Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode01Option.Thumb)]</icon>
@@ -357,9 +398,9 @@
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.10.Art(fanart))]</property>
 			<onclick>$INFO[Window.Property(NextAired.10.Path)]</onclick>
 		</item>
-        
+
 		<item id="160">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum01Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum01Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum01Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum01Option.Thumb)]</icon>
@@ -367,7 +408,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum01Option.Action)]</onclick>
 		</item>
 		<item id="161">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum02Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum02Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum02Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum02Option.Thumb)]</icon>
@@ -375,7 +416,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum02Option.Action)]</onclick>
 		</item>
 		<item id="162">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum03Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum03Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum03Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum03Option.Thumb)]</icon>
@@ -383,7 +424,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum03Option.Action)]</onclick>
 		</item>
 		<item id="163">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum04Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum04Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum04Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum04Option.Thumb)]</icon>
@@ -391,7 +432,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum04Option.Action)]</onclick>
 		</item>
 		<item id="164">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum05Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum05Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum05Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum05Option.Thumb)]</icon>
@@ -399,7 +440,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum05Option.Action)]</onclick>
 		</item>
 		<item id="165">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum06Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum06Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum06Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum06Option.Thumb)]</icon>
@@ -407,7 +448,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum06Option.Action)]</onclick>
 		</item>
 		<item id="166">+
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum07Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum07Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum07Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum07Option.Thumb)]</icon>
@@ -415,7 +456,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum07Option.Action)]</onclick>
 		</item>
 		<item id="167">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum08Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum08Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum08Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum08Option.Thumb)]</icon>
@@ -423,7 +464,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum08Option.Action)]</onclick>
 		</item>
 		<item id="168">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum09Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum09Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum09Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum09Option.Thumb)]</icon>
@@ -431,7 +472,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum09Option.Action)]</onclick>
 		</item>
 		<item id="169">
-            <visible>Container(300).HasFocus(16)</visible>
+            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum10Option.Label))</visible>
 			<label>$INFO[Window.Property(CircleAlbum10Option.Label)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum10Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum10Option.Thumb)]</icon>
