@@ -56,9 +56,9 @@
 
                         <control type="image">
                             <posx>38</posx>
-                            <posy>68</posy>
+                            <posy>119</posy>
                             <width>486</width>
-                            <height>447</height>
+                            <height>386</height>
                             <texture background="true" diffuse="circle/tvshows-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
                             <aspectratio scalediffuse="false">scale</aspectratio>
                         </control>
@@ -93,7 +93,7 @@
                     <control type="label">
                         <posx>120</posx>
                         <posy>550</posy>
-                        <width>812</width>
+                        <width>690</width>
                         <height>40</height>
                         <font>MediumViewFont</font>
                         <textcolor>BackgroundColor</textcolor>
@@ -112,6 +112,26 @@
                         <align>left</align>
                         <scroll>true</scroll>
                         <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+                    </control>
+                    
+                    <control type="image">
+                        <posx>120</posx>
+                        <posy>625</posy>
+                        <width>30</width>
+                        <height>30</height>
+                        <texture colordiffuse="BackgroundColor">elements/circle-mask.png</texture>
+                    </control>
+
+                    <control type="label">
+                        <posx>135</posx>
+                        <posy>630</posy>
+                        <width>20</width>
+                        <height>20</height>
+                        <font>HomeMenuCircleCounterFont</font>
+                        <textcolor>MainColor</textcolor>
+                        <align>center</align>
+                        <scroll>false</scroll>
+                        <label>$INFO[ListItem.Property(Number)]</label>
                     </control>
 				</focusedlayout>
 				
@@ -162,6 +182,7 @@
 			<label2>$INFO[Window.Property(CircleMovie01Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie01Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie01Option.Fanart)]</property>
+            <property name="Number">$NUMBER[1]</property>
 			<onclick>$INFO[Window.Property(CircleMovie01Option.Action)]</onclick>
 		</item>
 		<item id="51">
@@ -170,6 +191,7 @@
 			<label2>$INFO[Window.Property(CircleMovie02Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie02Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie02Option.Fanart)]</property>
+            <property name="Number">$NUMBER[2]</property>
 			<onclick>$INFO[Window.Property(CircleMovie02Option.Action)]</onclick>
 		</item>
 		<item id="52">
@@ -178,6 +200,7 @@
 			<label2>$INFO[Window.Property(CircleMovie03Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie03Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie03Option.Fanart)]</property>
+            <property name="Number">$NUMBER[3]</property>
 			<onclick>$INFO[Window.Property(CircleMovie03Option.Action)]</onclick>
 		</item>
 		<item id="53">
@@ -186,6 +209,7 @@
 			<label2>$INFO[Window.Property(CircleMovie04Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie04Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie04Option.Fanart)]</property>
+            <property name="Number">$NUMBER[4]</property>
 			<onclick>$INFO[Window.Property(CircleMovie04Option.Action)]</onclick>
 		</item>
 		<item id="54">
@@ -194,6 +218,7 @@
 			<label2>$INFO[Window.Property(CircleMovie05Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie05Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie05Option.Fanart)]</property>
+            <property name="Number">$NUMBER[5]</property>
 			<onclick>$INFO[Window.Property(CircleMovie05Option.Action)]</onclick>
 		</item>
 		<item id="55">
@@ -202,6 +227,7 @@
 			<label2>$INFO[Window.Property(CircleMovie06Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie06Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie06Option.Fanart)]</property>
+            <property name="Number">$NUMBER[6]</property>
 			<onclick>$INFO[Window.Property(CircleMovie06Option.Action)]</onclick>
 		</item>
 		<item id="56">
@@ -210,6 +236,7 @@
 			<label2>$INFO[Window.Property(CircleMovie07Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie07Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie07Option.Fanart)]</property>
+            <property name="Number">$NUMBER[7]</property>
 			<onclick>$INFO[Window.Property(CircleMovie07Option.Action)]</onclick>
 		</item>
 		<item id="57">
@@ -218,6 +245,7 @@
 			<label2>$INFO[Window.Property(CircleMovie08Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie08Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie08Option.Fanart)]</property>
+            <property name="Number">$NUMBER[8]</property>
 			<onclick>$INFO[Window.Property(CircleMovie08Option.Action)]</onclick>
 		</item>
 		<item id="58">
@@ -226,6 +254,7 @@
 			<label2>$INFO[Window.Property(CircleMovie09Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie09Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie09Option.Fanart)]</property>
+            <property name="Number">$NUMBER[9]</property>
 			<onclick>$INFO[Window.Property(CircleMovie09Option.Action)]</onclick>
 		</item>
 		<item id="59">
@@ -234,6 +263,7 @@
 			<label2>$INFO[Window.Property(CircleMovie10Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie10Option.Fanart)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleMovie10Option.Fanart)]</property>
+            <property name="Number">$NUMBER[10]</property>
 			<onclick>$INFO[Window.Property(CircleMovie10Option.Action)]</onclick>
 		</item>
 
@@ -243,6 +273,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode01Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode01Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode01Option.Fanart)]</property>
+            <property name="Number">$NUMBER[1]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode01Option.Action)]</onclick>
 		</item>
 		<item id="61">
@@ -251,6 +282,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode02Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode02Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode02Option.Fanart)]</property>
+            <property name="Number">$NUMBER[2]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode02Option.Action)]</onclick>
 		</item>
 		<item id="62">
@@ -259,6 +291,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode03Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode03Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode03Option.Fanart)]</property>
+            <property name="Number">$NUMBER[3]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode03Option.Action)]</onclick>
 		</item>
 		<item id="63">
@@ -267,6 +300,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode04Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode04Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode04Option.Fanart)]</property>
+            <property name="Number">$NUMBER[4]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode04Option.Action)]</onclick>
 		</item>
 		<item id="64">
@@ -275,6 +309,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode05Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode05Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode05Option.Fanart)]</property>
+            <property name="Number">$NUMBER[5]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode05Option.Action)]</onclick>
 		</item>
 		<item id="65">
@@ -283,6 +318,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode06Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode06Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode06Option.Fanart)]</property>
+            <property name="Number">$NUMBER[6]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode06Option.Action)]</onclick>
 		</item>
 		<item id="66">
@@ -291,6 +327,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode07Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode07Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode07Option.Fanart)]</property>
+            <property name="Number">$NUMBER[7]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode07Option.Action)]</onclick>
 		</item>
 		<item id="67">
@@ -299,6 +336,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode08Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode08Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode08Option.Fanart)]</property>
+            <property name="Number">$NUMBER[8]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode08Option.Action)]</onclick>
 		</item>
 		<item id="68">
@@ -307,6 +345,7 @@
 			<label2>$INFO[Window.Property(CircleEpisode09Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode09Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode09Option.Fanart)]</property>
+            <property name="Number">$NUMBER[9]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode09Option.Action)]</onclick>
 		</item>
 		<item id="69">
@@ -315,87 +354,98 @@
 			<label2>$INFO[Window.Property(CircleEpisode10Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode10Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleEpisode10Option.Fanart)]</property>
+            <property name="Number">$NUMBER[10]</property>
 			<onclick>$INFO[Window.Property(CircleEpisode10Option.Action)]</onclick>
 		</item>
         
 		<item id="150">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.1.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.1.AirTime)]$INFO[Window.Property(NextAired.1.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.1.AirTime)]$INFO[Window.Property(NextAired.1.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.1.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.1.Art(fanart))]</property>
+            <property name="Number">$NUMBER[1]</property>
 			<onclick>$INFO[Window.Property(NextAired.1.Path)]</onclick>
 		</item>
 		<item id="151">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.2.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.2.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.2.AirTime)]$INFO[Window.Property(NextAired.2.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.2.AirTime)]$INFO[Window.Property(NextAired.2.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.2.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.2.Art(fanart))]</property>
+            <property name="Number">$NUMBER[2]</property>
 			<onclick>$INFO[Window.Property(NextAired.2.Path)]</onclick>
 		</item>
 		<item id="152">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.3.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.3.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.3.AirTime)]$INFO[Window.Property(NextAired.3.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.3.AirTime)]$INFO[Window.Property(NextAired.3.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.3.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.3.Art(fanart))]</property>
+            <property name="Number">$NUMBER[3]</property>
 			<onclick>$INFO[Window.Property(NextAired.3.Path)]</onclick>
 		</item>
 		<item id="153">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.4.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.4.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.4.AirTime)]$INFO[Window.Property(NextAired.4.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.4.AirTime)]$INFO[Window.Property(NextAired.4.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.4.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.4.Art(fanart))]</property>
+            <property name="Number">$NUMBER[4]</property>
 			<onclick>$INFO[Window.Property(NextAired.4.Path)]</onclick>
 		</item>
 		<item id="154">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.5.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.5.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.5.AirTime)]$INFO[Window.Property(NextAired.5.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.5.AirTime)]$INFO[Window.Property(NextAired.5.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.5.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.5.Art(fanart))]</property>
+            <property name="Number">$NUMBER[5]</property>
 			<onclick>$INFO[Window.Property(NextAired.5.Path)]</onclick>
 		</item>
 		<item id="155">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.6.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.6.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.6.AirTime)]$INFO[Window.Property(NextAired.6.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.6.AirTime)]$INFO[Window.Property(NextAired.6.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.6.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.6.Art(fanart))]</property>
+            <property name="Number">$NUMBER[6]</property>
 			<onclick>$INFO[Window.Property(NextAired.6.Path)]</onclick>
 		</item>
 		<item id="156">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.7.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.7.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.7.AirTime)]$INFO[Window.Property(NextAired.7.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.7.AirTime)]$INFO[Window.Property(NextAired.7.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.7.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.7.Art(fanart))]</property>
+            <property name="Number">$NUMBER[7]</property>
 			<onclick>$INFO[Window.Property(NextAired.7.Path)]</onclick>
 		</item>
 		<item id="157">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.8.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.8.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.8.AirTime)]$INFO[Window.Property(NextAired.8.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.8.AirTime)]$INFO[Window.Property(NextAired.8.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.8.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.8.Art(fanart))]</property>
+            <property name="Number">$NUMBER[8]</property>
 			<onclick>$INFO[Window.Property(NextAired.8.Path)]</onclick>
 		</item>
 		<item id="158">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.9.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.9.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.9.AirTime)]$INFO[Window.Property(NextAired.9.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.9.AirTime)]$INFO[Window.Property(NextAired.9.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.9.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.9.Art(fanart))]</property>
+            <property name="Number">$NUMBER[9]</property>
 			<onclick>$INFO[Window.Property(NextAired.9.Path)]</onclick>
 		</item>
 		<item id="159">
             <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.10.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.10.Label)]</label>
-			<label2>[UPPERCASE]$INFO[Window.Property(NextAired.10.AirTime)]$INFO[Window.Property(NextAired.10.Runtime), | , $LOCALIZE[31901]][/UPPERCASE]</label2>
+			<label2>$INFO[Window.Property(NextAired.10.AirTime)]$INFO[Window.Property(NextAired.10.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.10.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(NextAired.10.Art(fanart))]</property>
+            <property name="Number">$NUMBER[10]</property>
 			<onclick>$INFO[Window.Property(NextAired.10.Path)]</onclick>
 		</item>
 
@@ -405,6 +455,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum01Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum01Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum01Option.Fanart)]</property>
+            <property name="Number">$NUMBER[1]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum01Option.Action)]</onclick>
 		</item>
 		<item id="161">
@@ -413,6 +464,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum02Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum02Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum02Option.Fanart)]</property>
+            <property name="Number">$NUMBER[2]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum02Option.Action)]</onclick>
 		</item>
 		<item id="162">
@@ -421,6 +473,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum03Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum03Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum03Option.Fanart)]</property>
+            <property name="Number">$NUMBER[3]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum03Option.Action)]</onclick>
 		</item>
 		<item id="163">
@@ -429,6 +482,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum04Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum04Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum04Option.Fanart)]</property>
+            <property name="Number">$NUMBER[4]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum04Option.Action)]</onclick>
 		</item>
 		<item id="164">
@@ -437,6 +491,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum05Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum05Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum05Option.Fanart)]</property>
+            <property name="Number">$NUMBER[5]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum05Option.Action)]</onclick>
 		</item>
 		<item id="165">
@@ -445,6 +500,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum06Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum06Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum06Option.Fanart)]</property>
+            <property name="Number">$NUMBER[6]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum06Option.Action)]</onclick>
 		</item>
 		<item id="166">+
@@ -453,6 +509,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum07Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum07Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum07Option.Fanart)]</property>
+            <property name="Number">$NUMBER[7]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum07Option.Action)]</onclick>
 		</item>
 		<item id="167">
@@ -461,6 +518,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum08Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum08Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum08Option.Fanart)]</property>
+            <property name="Number">$NUMBER[8]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum08Option.Action)]</onclick>
 		</item>
 		<item id="168">
@@ -469,6 +527,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum09Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum09Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum09Option.Fanart)]</property>
+            <property name="Number">$NUMBER[9]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum09Option.Action)]</onclick>
 		</item>
 		<item id="169">
@@ -477,6 +536,7 @@
 			<label2>$INFO[Window.Property(CircleAlbum10Option.Label2)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum10Option.Thumb)]</icon>
             <property name="BackgroundImage">$INFO[Window.Property(CircleAlbum10Option.Fanart)]</property>
+            <property name="Number">$NUMBER[10]</property>
 			<onclick>$INFO[Window.Property(CircleAlbum10Option.Action)]</onclick>
 		</item>
 	</include>

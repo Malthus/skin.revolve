@@ -6,10 +6,7 @@
     <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyItems.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyItems.MenuTitle)])</onload>
     <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyItems.SourceInfo)])</onload>
-    <onload>RunScript(special://skin/scripts/PopulateItemsFromHomeProperties.py,$INFO[Window.Property(SourceInfo)],MyItems%02dOption,1101)</onload>
-<!--
-            RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1101,MenuTitle,Random Albums,SourceInfo,"RandomAlbum.%d")
--->
+    <onload>RunScript(special://skin/scripts/PopulateStaticItemsFromHomeProperties.py,$INFO[Window.Property(SourceInfo)],MyItems%02dOption,1101)</onload>
 
 	<controls>
 		<include>GlobalBackground</include>
@@ -29,14 +26,14 @@
             <include>InvisibleItemsForMenu</include>
 		
 			<content>
-				<item id="1" description="My Item 1 Option">
+				<item id="1" description="My Items 1 Option">
 					<label>$INFO[Window.Property(MyItems01Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems01Option.Label2)]</label2>
 					<icon>$INFO[Window.Property(MyItems01Option.Thumb)]</icon>
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems01Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems01Option.Action)]</onclick>
 				</item>
-				<item id="2" description="My Item 2 Option">
+				<item id="2" description="My Items 2 Option">
                     <visible>!IsEmpty(Window.Property(MyItems02Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems02Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems02Option.Label2)]</label2>
@@ -44,7 +41,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems02Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems02Option.Action)]</onclick>
 				</item>
-				<item id="3" description="My Item 3 Option">
+				<item id="3" description="My Items 3 Option">
                     <visible>!IsEmpty(Window.Property(MyItems03Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems03Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems03Option.Label2)]</label2>
@@ -52,7 +49,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems03Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems03Option.Action)]</onclick>
 				</item>
-				<item id="4" description="My Item 4 Option">
+				<item id="4" description="My Items 4 Option">
                     <visible>!IsEmpty(Window.Property(MyItems04Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems04Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems04Option.Label2)]</label2>
@@ -60,7 +57,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems04Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems04Option.Action)]</onclick>
 				</item>
-				<item id="5" description="My Item 5 Option">
+				<item id="5" description="My Items 5 Option">
                     <visible>!IsEmpty(Window.Property(MyItems05Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems05Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems05Option.Label2)]</label2>
@@ -68,7 +65,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems05Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems05Option.Action)]</onclick>
 				</item>
-				<item id="6" description="My Item 6 Option">
+				<item id="6" description="My Items 6 Option">
                     <visible>!IsEmpty(Window.Property(MyItems06Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems06Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems06Option.Label2)]</label2>
@@ -76,7 +73,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems06Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems06Option.Action)]</onclick>
 				</item>
-				<item id="7" description="My Item 7 Option">
+				<item id="7" description="My Items 7 Option">
                     <visible>!IsEmpty(Window.Property(MyItems07Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems07Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems07Option.Label2)]</label2>
@@ -84,7 +81,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems07Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems07Option.Action)]</onclick>
 				</item>
-				<item id="8" description="My Item 8 Option">
+				<item id="8" description="My Items 8 Option">
                     <visible>!IsEmpty(Window.Property(MyItems08Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems08Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems08Option.Label2)]</label2>
@@ -92,7 +89,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems08Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems08Option.Action)]</onclick>
 				</item>
-				<item id="9" description="My Item 9 Option">
+				<item id="9" description="My Items 9 Option">
                     <visible>!IsEmpty(Window.Property(MyItems09Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems09Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems09Option.Label2)]</label2>
@@ -100,7 +97,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems09Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems09Option.Action)]</onclick>
 				</item>
-				<item id="10" description="My Item 10 Option">
+				<item id="10" description="My Items 10 Option">
                     <visible>!IsEmpty(Window.Property(MyItems10Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems10Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems10Option.Label2)]</label2>
@@ -108,7 +105,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems10Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems10Option.Action)]</onclick>
 				</item>
-				<item id="11" description="My Item 11 Option">
+				<item id="11" description="My Items 11 Option">
                     <visible>!IsEmpty(Window.Property(MyItems11Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems11Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems11Option.Label2)]</label2>
@@ -116,7 +113,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems11Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems11Option.Action)]</onclick>
 				</item>
-				<item id="12" description="My Item 12 Option">
+				<item id="12" description="My Items 12 Option">
                     <visible>!IsEmpty(Window.Property(MyItems12Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems12Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems12Option.Label2)]</label2>
@@ -124,7 +121,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems12Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems12Option.Action)]</onclick>
 				</item>
-				<item id="13" description="My Item 13 Option">
+				<item id="13" description="My Items 13 Option">
                     <visible>!IsEmpty(Window.Property(MyItems13Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems13Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems13Option.Label2)]</label2>
@@ -132,7 +129,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems13Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems13Option.Action)]</onclick>
 				</item>
-				<item id="14" description="My Item 14 Option">
+				<item id="14" description="My Items 14 Option">
                     <visible>!IsEmpty(Window.Property(MyItems14Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems14Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems14Option.Label2)]</label2>
@@ -140,7 +137,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems14Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems14Option.Action)]</onclick>
 				</item>
-				<item id="15" description="My Item 15 Option">
+				<item id="15" description="My Items 15 Option">
                     <visible>!IsEmpty(Window.Property(MyItems15Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems15Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems15Option.Label2)]</label2>
@@ -148,7 +145,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems15Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems15Option.Action)]</onclick>
 				</item>
-				<item id="16" description="My Item 16 Option">
+				<item id="16" description="My Items 16 Option">
                     <visible>!IsEmpty(Window.Property(MyItems16Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems16Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems16Option.Label2)]</label2>
@@ -156,7 +153,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems16Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems16Option.Action)]</onclick>
 				</item>
-				<item id="17" description="My Item 17 Option">
+				<item id="17" description="My Items 17 Option">
                     <visible>!IsEmpty(Window.Property(MyItems17Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems17Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems17Option.Label2)]</label2>
@@ -164,7 +161,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems17Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems17Option.Action)]</onclick>
 				</item>
-				<item id="18" description="My Item 18 Option">
+				<item id="18" description="My Items 18 Option">
                     <visible>!IsEmpty(Window.Property(MyItems18Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems18Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems18Option.Label2)]</label2>
@@ -172,7 +169,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems18Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems18Option.Action)]</onclick>
 				</item>
-				<item id="19" description="My Item 19 Option">
+				<item id="19" description="My Items 19 Option">
                     <visible>!IsEmpty(Window.Property(MyItems19Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems19Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems19Option.Label2)]</label2>
@@ -180,7 +177,7 @@
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems19Option.Fanart)]</property>
 					<onclick>$INFO[Window.Property(MyItems19Option.Action)]</onclick>
 				</item>
-				<item id="20" description="My Item 20 Option">
+				<item id="20" description="My Items 20 Option">
                     <visible>!IsEmpty(Window.Property(MyItems20Option.Label))</visible>
 					<label>$INFO[Window.Property(MyItems20Option.Label)]</label>
 					<label2>$INFO[Window.Property(MyItems20Option.Label2)]</label2>

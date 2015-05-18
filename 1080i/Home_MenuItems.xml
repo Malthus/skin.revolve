@@ -223,7 +223,7 @@
 			<visible>System.GetBool(pvrmanager.enabled) + Skin.HasSetting(LiveTVOption.Active)</visible>
 			<label>31001</label>
 			<property name="Label3">$LOCALIZE[31021]</property>
-			<property name="Circle">circle/livetv.png</property>
+			<property name="Circle">circle/tvshows.png</property>
 			<icon>special://skin/backgrounds/livetv.jpg</icon>
 			<thumb>$INFO[Skin.String(LiveTVOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindowAndFocus(pvr,11,0)</onclick>
