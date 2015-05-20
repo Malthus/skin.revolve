@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1193">
-	<defaultcontrol always="true">34</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-    <onload>SetFocus(34)</onload>
+	<defaultcontrol always="true">34</defaultcontrol>
 
 	<controls>
 		<control type="group">
@@ -105,7 +104,13 @@
 						<onclick>Noop</onclick>
 					</item>
 					<item id="2" description="Screen Widgets Item Group Option">
-						<label>$LOCALIZE[31702]</label>
+						<visible>System.HasAddon(service.skin.widgets)</visible>
+                        <label>$LOCALIZE[31702]</label>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="3" description="Library Data Provider Item Group Option">
+						<visible>System.HasAddon(service.library.data.provider)</visible>
+						<label>$LOCALIZE[31703]</label>
 						<onclick>Noop</onclick>
 					</item>
 				</content>
@@ -220,7 +225,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="201" description="Screen Widgets / Random Movies Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31726] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31726]</property>
@@ -228,7 +233,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="202" description="Screen Widgets / Random Episodes Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31727] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31727]</property>
@@ -236,7 +241,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="203" description="Screen Widgets / Random Music Videos Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31728] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31728]</property>
@@ -244,7 +249,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="204" description="Screen Widgets / Random Albums Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31729] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31729]</property>
@@ -252,7 +257,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="205" description="Screen Widgets / Random Artists Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31730] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31730]</property>
@@ -260,7 +265,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="206" description="Screen Widgets / Random Songs Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31731] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31731]</property>
@@ -268,7 +273,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="207" description="Screen Widgets / Random Addons Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31732] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31732]</property>
@@ -276,7 +281,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="221" description="Screen Widgets / Recommended Movies Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31733] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31733]</property>
@@ -284,7 +289,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="222" description="Screen Widgets / Recommended Episodes Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31734] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31734]</property>
@@ -292,7 +297,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="223" description="Screen Widgets / Recommended Music Videos Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31735] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31735]</property>
@@ -300,7 +305,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="224" description="Screen Widgets / Recommended Albums Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31736] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31736]</property>
@@ -308,7 +313,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="241" description="Screen Widgets / Recent Movies Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31737] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31737]</property>
@@ -316,7 +321,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="242" description="Screen Widgets / Recent Episodes Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31738] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31738]</property>
@@ -324,7 +329,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="243" description="Screen Widgets / Recent Music Videos Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31739] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31739]</property>
@@ -332,11 +337,91 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="244" description="Screen Widgets / Recent Albums Option">
-                            <visible>Container(33).HasFocus(2) | Container(33).HasFocus(99)</visible>
+                            <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31740] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31740]</property>
                             <property name="SourceInfo">RecentAlbum.%d</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="301" description="Library Data Provider / Random Movies Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31726] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31726]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=randommovies</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="302" description="Library Data Provider / Random Episodes Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31727] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31727]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=randomepisodes</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="303" description="Library Data Provider / Random Albums Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31729] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31729]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=randomalbums</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="304" description="Library Data Provider / Random Songs Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31731] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31731]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=randomsongs</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="321" description="Library Data Provider / Recommended Movies Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31733] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31733]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=recommendedmovies</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="322" description="Library Data Provider / Recommended Episodes Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31734] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31734]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=recommendedepisodes</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="323" description="Library Data Provider / Recommended Albums Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31736] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31736]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=recommendedalbums</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="341" description="Library Data Provider / Recent Movies Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31737] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31737]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=recentmovies</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="342" description="Library Data Provider / Recent Episodes Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31738] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31738]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=recentepisodes</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="343" description="Library Data Provider / Recent Albums Option">
+                            <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
+                            <label>$LOCALIZE[31740] $LOCALIZE[31713]</label>
+                            <property name="Type">D</property>
+                            <property name="MenuTitle">$LOCALIZE[31740]</property>
+                            <property name="SourceInfo">service.library.data.provider?type=recentalbums</property>
                             <onclick>Noop</onclick>
                         </item>
                     </content>
@@ -369,8 +454,6 @@
 					<onclick>SetProperty($INFO[Window.Property(TargetType)],$INFO[Container(40).ListItem.Property(Type)],$INFO[Window.Property(TargetWindow)])</onclick>
 					<onclick>SetProperty($INFO[Window.Property(TargetMenuTitle)],$INFO[Container(40).ListItem.Property(MenuTitle)],$INFO[Window.Property(TargetWindow)])</onclick>
 					<onclick>SetProperty($INFO[Window.Property(TargetSourceInfo)],$INFO[Container(40).ListItem.Property(SourceInfo)],$INFO[Window.Property(TargetWindow)])</onclick>
- 					<onclick condition="StringCompare(Container(40).ListItem.Property(Type),S)">SetProperty($INFO[Window.Property(TargetAction)],RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1101,MenuTitle,$INFO[Container(40).ListItem.Property(MenuTitle)],SourceInfo,&quot;$INFO[Container(40).ListItem.Property(SourceInfo)]&quot;),$INFO[Window.Property(TargetWindow)])</onclick>
- 					<onclick condition="StringCompare(Container(40).ListItem.Property(Type),D)">SetProperty($INFO[Window.Property(CustomItem.Action)],RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1102,MenuTitle,$INFO[Container(40).CurrentItem.Property(MenuTitle)],SourceInfo,$INFO[Container(40).CurrentItem.Property(SourceInfo)],$INFO[Window.Property(TargetWindow)])</onclick>
 					<onclick>Close</onclick>
 				</control>
 
