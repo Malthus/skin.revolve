@@ -141,17 +141,17 @@
 	
 	<variable name="ContentBackground">
 		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(fanart))">$INFO[Container(450).ListItem.Art(Fanart)]</value>
-		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(fanart_image))">$INFO[Container(450).ListItem.Art(Fanart_image)]</value>
+		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Property(Fanart_image))">$INFO[Container(450).ListItem.Property(Fanart_image)]</value>
 		<value condition="Window.IsVisible(favourites)">special://skin/backgrounds/favourites.jpg</value>
 
 		<value condition="Window.IsVisible(1101) + !IsEmpty(Container(450).ListItem.Property(backgroundimage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
-<!--		<value condition="Window.IsVisible(1101)">special://skin/backgrounds/submenu.jpg</value> -->
+		<value condition="Window.IsVisible(1101)">special://skin/backgrounds/items.jpg</value>
         
-		<value condition="Window.IsVisible(1102) + !IsEmpty(Container(450).ListItem.Property(backgroundimage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
+		<value condition="Window.IsVisible(1102) + !IsEmpty(Container(450).ListItem.Property(Fanart_image))">$INFO[Container(450).ListItem.Property(Fanart_image)]</value>
 		<value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>
 
-		<value condition="Window.IsVisible(1103) + !IsEmpty(Container(450).ListItem.Property(fanart))">$INFO[Container(450).ListItem.Property(Fanart)]</value>
-		<value condition="Window.IsVisible(1103)">special://skin/backgrounds/items.jpg</value>
+		<value condition="Window.IsVisible(1103) + !IsEmpty(Container(450).ListItem.Property(backgroundimage))">$INFO[Container(450).ListItem.Property(backgroundimage)]</value>
+<!--		<value condition="Window.IsVisible(1103)">special://skin/backgrounds/submenu.jpg</value> -->
 
 		<value condition="Window.IsVisible(settings) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(settings)">special://skin/backgrounds/settings.jpg</value>
@@ -180,7 +180,7 @@
 
 		<value condition="Container.Content(addons)">special://skin/backgrounds/addons.jpg</value>
 		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(Fanart)]</value>
-		<value condition="!IsEmpty(ListItem.Art(fanart_image))">$INFO[ListItem.Art(Fanart_image)]</value>
+		<value condition="!IsEmpty(ListItem.Property(fanart_image))">$INFO[ListItem.Property(Fanart_image)]</value>
 		<value condition="!IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
 		<value>special://skin/backgrounds/default.jpg</value>
 	</variable>
@@ -703,11 +703,23 @@
     </variable>
 
 	<variable name="MenuCategoryLabel">
-		<value>[UPPERCASE]$INFO[Container(450).ListItem.Property(Label3)][/UPPERCASE]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Property(Label3))">[UPPERCASE]$INFO[Container(450).ListItem.Property(Label3)][/UPPERCASE]</value>
+		<value condition="Container.Content(tvshows)">[UPPERCASE]$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Rating,, | ]$INFO[Container(450).ListItem.MPAA][/UPPERCASE]</value>
+		<value condition="Container.Content(seasons)">[UPPERCASE]$INFO[Container(450).ListItem.TVShowTitle][/UPPERCASE]</value>
+		<value condition="Container.Content(episodes)">[UPPERCASE]$INFO[Container(450).ListItem.Premiered,, | ]$INFO[Container(450).ListItem.Duration][/UPPERCASE]</value>
+		<value condition="Container.Content(movies)">[UPPERCASE]$INFO[Container(450).ListItem.Director][/UPPERCASE]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Album)">[UPPERCASE]$INFO[Container(450).ListItem.Artist]$INFO[Container(450).ListItem.Album, | ,][/UPPERCASE]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Artist)">[UPPERCASE]$INFO[Container(450).ListItem.Artist][/UPPERCASE]</value>
 	</variable>
 	
 	<variable name="MenuDetailLabel">
-		<value>[UPPERCASE]$INFO[Container(450).ListItem.Label2][/UPPERCASE]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Label2)">[UPPERCASE]$INFO[Container(450).ListItem.Label2][/UPPERCASE]</value>
+		<value condition="Container.Content(episodes)">$INFO[Container(450).ListItem.Season,$LOCALIZE[20373] ,]</value>
+		<value condition="Container.Content(movies)">[UPPERCASE]$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration,, $LOCALIZE[12391]]$INFO[Container(450).ListItem.Genre, | ,]$INFO[Container(450).ListItem.MPAA, | ,][/UPPERCASE]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Property(Artist_Born))">[UPPERCASE]$INFO[Container(450).ListItem.Property(Artist_Born)]$INFO[Container(450).ListItem.Property(Artist_Died), - ,][/UPPERCASE]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Property(Artist_Formed))">[UPPERCASE]$INFO[Container(450).ListItem.Property(Artist_Formed)]$INFO[Container(450).ListItem.Property(Artist_Disbanded), - ,][/UPPERCASE]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Duration)">[UPPERCASE]$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration]$INFO[Container(450).ListItem.Genre, | ,][/UPPERCASE]</value>
+		<value>$INFO[Container(450).ListItem.Year]</value>
 	</variable>
     
 	<variable name="MenuThumbnail">

@@ -115,6 +115,7 @@
                     </control>
                     
                     <control type="image">
+                        <visible>!IsEmpty(ListItem.Property(Number))</visible>
                         <posx>120</posx>
                         <posy>625</posy>
                         <width>30</width>

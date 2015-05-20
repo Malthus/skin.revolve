@@ -20,6 +20,7 @@ TOTAL_ITEMS = 20
 
 def logMessage(annotation):
     message = '%s: %s' % (SCRIPT_NAME, annotation.encode('ascii', 'ignore'))
+    print message
     xbmc.log(msg=message, level=xbmc.LOGDEBUG)
 
 def createGenericNameProperty(sourcebase, targetproperty, targetwindow):
@@ -46,8 +47,8 @@ def createGenericIconProperty(sourcebase, targetproperty, targetwindow):
     setValueToProperty(targetproperty, value, targetwindow)
     
 def createGenericBackgroundImageProperty(sourcebase, targetproperty, targetwindow):
-    value = getValueFromHomeProperty(sourcebase + '.Art(fanart)')
-    value = replaceEmptyValueFromHomeProperty(sourcebase + '.Art(fanart_image)', value)
+    value = getValueFromHomeProperty(sourcebase + '.Art(Fanart)')
+    value = replaceEmptyValueFromHomeProperty(sourcebase + '.Property(Fanart_image)', value)
     value = replaceEmptyValueFromHomeProperty(sourcebase + '.Fanart', value)
     setValueToProperty(targetproperty, value, targetwindow)
     
@@ -58,9 +59,9 @@ def createGenericActionProperty(sourcebase, targetproperty, targetwindow):
     if value == '':
         value = getValueFromHomeProperty(sourcebase + '.LibraryPath')
         if "videodb" in value:
-            value = addPrefixAndSuffixToLabel(value, "ActivateWindow(videos,", ")")
+            value = addPrefixAndSuffixToLabel(value, "ActivateWindow(videos,", ",return)")
         if "musicdb" in value:
-            value = addPrefixAndSuffixToLabel(value, "ActivateWindow(music,", ")")
+            value = addPrefixAndSuffixToLabel(value, "ActivateWindow(music,", ",return)")
     setValueToProperty(targetproperty, value, targetwindow)
     
 
