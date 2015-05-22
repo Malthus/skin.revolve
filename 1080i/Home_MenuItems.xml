@@ -236,7 +236,8 @@
 			<property name="Circle">circle/videos.png</property>
 			<icon>special://skin/backgrounds/videos.jpg</icon>
 			<thumb>$INFO[Skin.String(VideosOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(videos)</onclick>
+			<onclick condition="Skin.HasSetting(VideosOption.Immutable)">ActivateWindow(videos,root)</onclick>
+			<onclick condition="!Skin.HasSetting(VideosOption.Immutable)">ActivateWindow(videos)</onclick>
 		</item>
 
 		<item id="5" description="Movies Option">
@@ -269,7 +270,8 @@
 			<property name="Circle">circle/music.png</property>
 			<icon>special://skin/backgrounds/music.jpg</icon>
 			<thumb>$INFO[Skin.String(MusicOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindow(music)</onclick>
+			<onclick condition="Skin.HasSetting(MusicOption.Immutable)">ActivateWindow(music,root)</onclick>
+			<onclick condition="!Skin.HasSetting(MusicOption.Immutable)">ActivateWindow(music)</onclick>
 		</item>
 	
 		<item id="16" description="Albums Option">

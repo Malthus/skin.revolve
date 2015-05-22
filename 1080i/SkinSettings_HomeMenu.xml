@@ -332,6 +332,296 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
+			<control type="radiobutton" id="221" description="Custom Option 11 Activation Button">
+                <visible>Skin.HasSetting(Custom10Option.Active) | Skin.HasSetting(Custom11Option.Active) | !IsEmpty(Skin.String(Custom11Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom11Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom11Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom11Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="222" description="Custom Option 11 Edit Button">
+                <visible>Skin.HasSetting(Custom10Option.Active) | Skin.HasSetting(Custom11Option.Active) | !IsEmpty(Skin.String(Custom11Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom11Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom11Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom11Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom11Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom11Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom11Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom11Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom11Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom11Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption, Custom11Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+					
+			<control type="radiobutton" id="223" description="Custom Option 12 Activation Button">
+                <visible>Skin.HasSetting(Custom11Option.Active) | Skin.HasSetting(Custom12Option.Active) | !IsEmpty(Skin.String(Custom12Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom12Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom12Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom12Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="224" description="Custom Option 12 Edit Button">
+                <visible>Skin.HasSetting(Custom11Option.Active) | Skin.HasSetting(Custom12Option.Active) | !IsEmpty(Skin.String(Custom12Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom12Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom12Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom12Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom12Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom12Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom12Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom12Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom12Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom12Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption, Custom12Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+				
+			<control type="radiobutton" id="225" description="Custom Option 13 Activation Button">
+                <visible>Skin.HasSetting(Custom12Option.Active) | Skin.HasSetting(Custom13Option.Active) | !IsEmpty(Skin.String(Custom13Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom13Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom13Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom13Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="226" description="Custom Option 13 Edit Button">
+                <visible>Skin.HasSetting(Custom12Option.Active) | Skin.HasSetting(Custom13Option.Active) | !IsEmpty(Skin.String(Custom13Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom13Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom13Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom13Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom13Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom13Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom13Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom13Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom13Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom13Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption, Custom13Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
+			<control type="radiobutton" id="227" description="Custom Option 14 Activation Button">
+                <visible>Skin.HasSetting(Custom13Option.Active) | Skin.HasSetting(Custom14Option.Active) | !IsEmpty(Skin.String(Custom14Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom14Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom14Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom14Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="228" description="Custom Option 14 Edit Button">
+                <visible>Skin.HasSetting(Custom13Option.Active) | Skin.HasSetting(Custom14Option.Active) | !IsEmpty(Skin.String(Custom14Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom14Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom14Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom14Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom14Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom14Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom14Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom14Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom14Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom14Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption, Custom14Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
+			<control type="radiobutton" id="229" description="Custom Option 15 Activation Button">
+                <visible>Skin.HasSetting(Custom14Option.Active) | Skin.HasSetting(Custom15Option.Active) | !IsEmpty(Skin.String(Custom15Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom15Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom15Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom15Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="230" description="Custom Option 15 Edit Button">
+                <visible>Skin.HasSetting(Custom14Option.Active) | Skin.HasSetting(Custom15Option.Active) | !IsEmpty(Skin.String(Custom15Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom15Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom15Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom15Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom15Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom15Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom15Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom15Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom15Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom15Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,Custom15Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
+			<control type="radiobutton" id="231" description="Custom Option 16 Activation Button">
+                <visible>Skin.HasSetting(Custom15Option.Active) | Skin.HasSetting(Custom16Option.Active) | !IsEmpty(Skin.String(Custom16Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom16Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom16Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom16Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="232" description="Custom Option 16 Edit Button">
+                <visible>Skin.HasSetting(Custom15Option.Active) | Skin.HasSetting(Custom16Option.Active) | !IsEmpty(Skin.String(Custom16Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom16Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom16Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom16Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom16Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom16Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom16Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom16Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom16Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom16Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,Custom16Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
+			<control type="radiobutton" id="233" description="Custom Option 17 Activation Button">
+                <visible>Skin.HasSetting(Custom16Option.Active) | Skin.HasSetting(Custom17Option.Active) | !IsEmpty(Skin.String(Custom17Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom17Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom17Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom17Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="234" description="Custom Option 17 Edit Button">
+                <visible>Skin.HasSetting(Custom16Option.Active) | Skin.HasSetting(Custom17Option.Active) | !IsEmpty(Skin.String(Custom17Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom17Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom17Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom17Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom17Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom17Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom17Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom17Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom17Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom17Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,Custom17Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
+			<control type="radiobutton" id="235" description="Custom Option 18 Activation Button">
+                <visible>Skin.HasSetting(Custom17Option.Active) | Skin.HasSetting(Custom18Option.Active) | !IsEmpty(Skin.String(Custom18Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom18Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom18Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom18Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="236" description="Custom Option 18 Edit Button">
+                <visible>Skin.HasSetting(Custom17Option.Active) | Skin.HasSetting(Custom18Option.Active) | !IsEmpty(Skin.String(Custom18Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom18Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom18Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom18Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom18Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom18Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom18Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom18Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom18Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom18Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,Custom18Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
+			<control type="radiobutton" id="237" description="Custom Option 19 Activation Button">
+                <visible>Skin.HasSetting(Custom18Option.Active) | Skin.HasSetting(Custom19Option.Active) | !IsEmpty(Skin.String(Custom19Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom19Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom19Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom19Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="238" description="Custom Option 19 Edit Button">
+                <visible>Skin.HasSetting(Custom18Option.Active) | Skin.HasSetting(Custom19Option.Active) | !IsEmpty(Skin.String(Custom19Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom19Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom19Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom19Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom19Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom19Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom19Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom19Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom19Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom19Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,Custom19Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
+			<control type="radiobutton" id="239" description="Custom Option 20 Activation Button">
+                <visible>Skin.HasSetting(Custom19Option.Active) | Skin.HasSetting(Custom20Option.Active) | !IsEmpty(Skin.String(Custom20Option.Name))</visible>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(Custom20Option.Name)]</label>
+				<selected>Skin.HasSetting(Custom20Option.Active)</selected>
+				<onclick>Skin.ToggleSetting(Custom20Option.Active)</onclick>
+			</control>
+
+			<control type="button" id="240" description="Custom Option 10 Edit Button">
+                <visible>Skin.HasSetting(Custom19Option.Active) | Skin.HasSetting(Custom20Option.Active) | !IsEmpty(Skin.String(Custom20Option.Name))</visible>
+				<enable>Skin.HasSetting(Custom20Option.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(Custom20Option.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Custom20Option.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Custom20Option.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Custom20Option.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(Custom20Option.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Custom20Option.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(Custom20Option.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(Custom20Option.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,Custom20Option,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
 			<control type="radiobutton" id="293" description="LiveTV/PVR Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -350,6 +640,16 @@
 				<onclick>Skin.ToggleSetting(VideosOption.Active)</onclick>
 			</control>
 					
+			<control type="radiobutton" id="276" description="Videos Root Option">
+                <enable>Skin.HasSetting(VideosOption.Active)</enable>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>- $LOCALIZE[31204]</label>
+				<selected>Skin.HasSetting(VideosOption.Immutable)</selected>
+				<onclick>Skin.ToggleSetting(VideosOption.Immutable)</onclick>
+			</control>
+                    
 			<control type="radiobutton" id="283" description="Movies Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -377,6 +677,16 @@
 				<onclick>Skin.ToggleSetting(MusicOption.Active)</onclick>
 			</control>
 					
+			<control type="radiobutton" id="277" description="Music Root Option">
+                <enable>Skin.HasSetting(MusicOption.Active)</enable>
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>- $LOCALIZE[31204]</label>
+				<selected>Skin.HasSetting(MusicOption.Immutable)</selected>
+				<onclick>Skin.ToggleSetting(MusicOption.Immutable)</onclick>
+			</control>
+                    
 			<control type="radiobutton" id="275" description="Albums Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -555,6 +865,11 @@
 				<label>31189</label>
 			</control>
 			<control type="textbox">
+				<visible>Control.HasFocus(276) | Control.HasFocus(277)</visible>
+				<font>AnnotationFont</font>
+				<label>$LOCALIZE[31205]</label>
+			</control>
+			<control type="textbox">
 				<visible>Control.HasFocus(281)</visible>
 				<font>AnnotationFont</font>
 				<label>31172</label>
@@ -580,49 +895,49 @@
 				<label>31176</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(286)</visible>
-						<font>AnnotationFont</font>
-						<label>31177</label>
+				<visible>Control.HasFocus(286)</visible>
+				<font>AnnotationFont</font>
+				<label>31177</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(287)</visible>
-						<font>AnnotationFont</font>
-						<label>31178</label>
+				<visible>Control.HasFocus(287)</visible>
+				<font>AnnotationFont</font>
+				<label>31178</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(288)</visible>
-						<font>AnnotationFont</font>
-						<label>31179</label>
+				<visible>Control.HasFocus(288)</visible>
+				<font>AnnotationFont</font>
+				<label>31179</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(289)</visible>
-						<font>AnnotationFont</font>
-						<label>31180</label>
+				<visible>Control.HasFocus(289)</visible>
+				<font>AnnotationFont</font>
+				<label>31180</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(290)</visible>
-						<font>AnnotationFont</font>
-						<label>31181</label>
+				<visible>Control.HasFocus(290)</visible>
+				<font>AnnotationFont</font>
+				<label>31181</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(291)</visible>
-						<font>AnnotationFont</font>
-						<label>31182</label>
+				<visible>Control.HasFocus(291)</visible>
+				<font>AnnotationFont</font>
+				<label>31182</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(292)</visible>
-						<font>AnnotationFont</font>
-						<label>31183</label>
+				<visible>Control.HasFocus(292)</visible>
+				<font>AnnotationFont</font>
+				<label>31183</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(293)</visible>
-						<font>AnnotationFont</font>
-						<label>31185</label>
+				<visible>Control.HasFocus(293)</visible>
+				<font>AnnotationFont</font>
+				<label>31185</label>
 			</control>
 			<control type="textbox">
-						<visible>Control.HasFocus(294)</visible>
-						<font>AnnotationFont</font>
-						<label>31187</label>
+				<visible>Control.HasFocus(294)</visible>
+				<font>AnnotationFont</font>
+				<label>31187</label>
 			</control>
 		</control>
     </include>
