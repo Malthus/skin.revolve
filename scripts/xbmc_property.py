@@ -38,6 +38,10 @@ def getValueFromSkinSetting(skinsetting):
     value = getValueFromInfoLabel('Skin.String(' + skinsetting + ')')
     return value
 
+def getValueFromBooleanSkinSetting(skinsetting):
+    value = getValueFromInfoLabel('Skin.HasSetting(' + skinsetting + ')')
+    return value
+
 
 def ignoreNumericZeroValue(value):
     if (value == '0'):
@@ -85,3 +89,8 @@ def setValueToSkinSetting(skinsetting, value):
 def copySkinSettingToProperty(skinsetting, property, window):
     value = getValueFromSkinSetting(skinsetting)
     setValueToProperty(property, value, window)
+
+def copyBooleanSkinSettingToProperty(skinsetting, property, window):
+    value = getValueFromBooleanSkinSetting(skinsetting)
+    setValueToProperty(property, value, window)
+    

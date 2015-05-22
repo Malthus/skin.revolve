@@ -66,7 +66,7 @@ def createGenericActionProperty(sourcebase, targetproperty, targetwindow):
     
 
 def copyProperties(sourcemask, targetmask, targetwindow):
-    for index in range (1, TOTAL_ITEMS):
+    for index in range (1, TOTAL_ITEMS + 1):
         sourcebase = sourcemask % (index)
         targetbase = targetmask % (index)
 

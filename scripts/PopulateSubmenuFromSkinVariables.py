@@ -24,11 +24,12 @@ def logMessage(annotation):
 
 
 def copyProperties(sourcemask, targetmask, targetwindow):
-    for index in range (1, TOTAL_ITEMS):
+    for index in range (1, TOTAL_ITEMS + 1):
         sourcebase = sourcemask % (index)
         targetbase = targetmask % (index)
 
         copySkinSettingToProperty(sourcebase + '.Type', targetbase + '.Type', targetwindow)
+        copyBooleanSkinSettingToProperty(sourcebase + '.Active', targetbase + '.Active', targetwindow)
         copySkinSettingToProperty(sourcebase + '.Name', targetbase + '.Name', targetwindow)
         copySkinSettingToProperty(sourcebase + '.Subtitle', targetbase + '.Subtitle', targetwindow)
         copySkinSettingToProperty(sourcebase + '.BackgroundImage', targetbase + '.BackgroundImage', targetwindow)
