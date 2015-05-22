@@ -388,6 +388,7 @@
                     <ondown>23</ondown>
                     <onleft>Noop</onleft>
                     <onright>34</onright>
+					<onclick>SetProperty(CustomMenuTitle,$INFO[Window.Property(CustomMenuTitle)],1192)</onclick>
 					<onclick>SetProperty(TargetOption,$INFO[Window.Property(CustomSourceInfo)],1192)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(CustomSourceInfo)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
 					<onclick>ActivateWindow(1192)</onclick>
