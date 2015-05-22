@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1192">
+	<allowoverlay>yes</allowoverlay>
+	<defaultcontrol>30</defaultcontrol>
+<!--
+    <onload>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onload>
+-->
+	<controls>
+		<control type="group">
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Editor Dialog Icon">
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultIconFrameForDialog</include>
+				
+				<control type="image">
+				    <posx>3</posx>
+				    <posy>3</posy>
+					<width>256</width>
+					<height>256</height>
+					<texture colordiffuse="BackgroundColor">icons/icon-pencil.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+			
+			<control type="label" description="Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>$LOCALIZE[31894] - $INFO[Window.Property(TargetOption)]</label>
+			</control>
+            
+            <control type="grouplist" id="30">
+                <posx>560</posx>
+                <posy>80</posy>
+                <height>520</height>
+                <itemgap>0</itemgap>
+                <align>left</align>
+                <scrolltime>0</scrolltime>
+                <pagecontrol>31</pagecontrol>
+                <onup>30</onup>
+                <ondown>30</ondown>
+                <onleft>9000</onleft>
+                <onright>31</onright>
+
+                <control type="radiobutton" id="201" description="Custom Option 1 Activation Button">
+                    <width>1240</width>
+                    <radioposx>1180</radioposx>
+                    <align>left</align>
+                    <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu01Option.Name)]</label>
+                    <selected>Skin.HasSetting(CustomSubmenu01Option.Active)</selected>
+                    <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]01Option.Active)</onclick>
+                    <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                </control>
+
+                <control type="button" id="202" description="Custom Option 1 Edit Button">
+<!--                    <enable>Skin.HasSetting(CustomSubmenu01Option.Active)</enable> -->
+                    <width>1240</width>
+                    <align>left</align>
+                    <label>- $LOCALIZE[31136]</label>
+                    <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu01Option.Type)],1195)</onclick>
+                    <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu01Option.Name)],1195)</onclick>
+                    <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu01Option.Subtitle)],1195)</onclick>
+                    <onclick>SetProperty(CustomBackgroundImage,$INFO[Window.Property(CustomSubmenu01Option.BackgroundImage)],1195)</onclick>
+                    <onclick>SetProperty(CustomMenuTitle,$INFO[Window.Property(CustomSubmenu01Option.MenuTitle)],1195)</onclick>
+                    <onclick>SetProperty(CustomSourceInfo,$INFO[Window.Property(CustomSubmenu01Option.SourceInfo)],1195)</onclick>
+                    <onclick>SetProperty(CustomWindow,$INFO[Window.Property(CustomSubmenu01Option.Window)],1195)</onclick>
+                    <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu01Option.Action)],1195)</onclick>
+                    <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]01Option,1195)</onclick>
+                    <onclick>ActivateWindow(1195)</onclick>
+                    <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                </control>
+
+                <control type="radiobutton" id="203" description="Custom Option 2 Activation Button">
+                    <width>1240</width>
+                    <radioposx>1180</radioposx>
+                    <align>left</align>
+                    <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu02Option.Name)]</label>
+                    <selected>Skin.HasSetting(CustomSubmenu02Option.Active)</selected>
+                    <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]02Option.Active)</onclick>
+                    <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                </control>
+
+                <control type="button" id="204" description="Custom Option 2 Edit Button">
+<!--                    <enable>Skin.HasSetting(CustomSubmenu02Option.Active)</enable> -->
+                    <width>1240</width>
+                    <align>left</align>
+                    <label>- $LOCALIZE[31136]</label>
+                    <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu02Option.Type)],1195)</onclick>
+                    <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu02Option.Name)],1195)</onclick>
+                    <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu02Option.Subtitle)],1195)</onclick>
+                    <onclick>SetProperty(CustomBackgroundImage,$INFO[Window.Property(CustomSubmenu02Option.BackgroundImage)],1195)</onclick>
+                    <onclick>SetProperty(CustomMenuTitle,$INFO[Window.Property(CustomSubmenu02Option.MenuTitle)],1195)</onclick>
+                    <onclick>SetProperty(CustomSourceInfo,$INFO[Window.Property(CustomSubmenu02Option.SourceInfo)],1195)</onclick>
+                    <onclick>SetProperty(CustomWindow,$INFO[Window.Property(CustomSubmenu02Option.Window)],1195)</onclick>
+                    <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu02Option.Action)],1195)</onclick>
+                    <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]02Option,1195)</onclick>
+                    <onclick>ActivateWindow(1195)</onclick>
+                    <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                </control>
+			</control>
+
+			<control type="group" id="9000">
+                <defaultcontrol>22</defaultcontrol>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>Noop</onleft>
+				<onright>34</onright>
+<!--
+				<control type="button" id="25" description="Clear Button">
+                    <posx>40</posx>
+                    <posy>440</posy>
+					<label>$LOCALIZE[192]</label>
+                    <onup>22</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>ClearProperty(CustomOptionName)</onclick>
+					<onclick>ClearProperty(CustomSubtitle)</onclick>
+					<onclick>ClearProperty(CustomBackgroundImage)</onclick>
+					<onclick>ClearProperty(CustomOptionType)</onclick>
+					<onclick>ClearProperty(CustomMenuTitle)</onclick>
+					<onclick>ClearProperty(CustomSourceInfo)</onclick>
+					<onclick>ClearProperty(CustomAction)</onclick>
+				</control>
+-->
+<!--                
+				<control type="button" id="20" description="Ok Button">
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[186]</label>
+                    <onup>25</onup>
+                    <ondown>21</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>34</onright>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomOptionName)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Window.Property(CustomOptionType)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].MenuTitle,$INFO[Window.Property(CustomMenuTitle)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].SourceInfo,$INFO[Window.Property(CustomSourceInfo)])</onclick>
+					<onclick condition="StringCompare(Window.Property(CustomOptionType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1103)</onclick>
+					<onclick condition="StringCompare(Window.Property(CustomOptionType),S)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1101)</onclick>
+					<onclick condition="StringCompare(Window.Property(CustomOptionType),D)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1102)</onclick>
+					<onclick condition="StringCompare(Window.Property(CustomOptionType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,0)</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Control.GetLabel(40)])</onclick>
+					<onclick>Close</onclick>
+				</control>
+-->
+				<control type="button" id="21" description="Close Button">
+                    <posx>40</posx>
+                    <posy>560</posy>
+					<label>$LOCALIZE[31915]</label>
+                    <onup>21</onup>
+                    <ondown>21</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>30</onright>
+					<onclick>Close</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

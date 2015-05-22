@@ -28,6 +28,7 @@ def copyProperties(sourcemask, targetmask, targetwindow):
         sourcebase = sourcemask % (index)
         targetbase = targetmask % (index)
 
+        copySkinSettingToProperty(sourcebase + '.Type', targetbase + '.Type', targetwindow)
         copySkinSettingToProperty(sourcebase + '.Name', targetbase + '.Name', targetwindow)
         copySkinSettingToProperty(sourcebase + '.Subtitle', targetbase + '.Subtitle', targetwindow)
         copySkinSettingToProperty(sourcebase + '.BackgroundImage', targetbase + '.BackgroundImage', targetwindow)

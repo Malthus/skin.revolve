@@ -6,7 +6,7 @@
     <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
     <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
-    <onload>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(SourceInfo)],MySubmenu%02dOption,1103)</onload>
+    <onload>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(SourceInfo)]%02dOption,MySubmenu%02dOption,1103)</onload>
 
 	<controls>
 		<include>GlobalBackground</include>
@@ -30,10 +30,19 @@
                     <visible>!IsEmpty(Window.Property(MySubmenu01Option.Name))</visible>
                     <label fallback="31002">$INFO[Window.Property(MySubmenu01Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu01Option.Subtitle)]</property>
-                    <icon>$INFO[Window.Property(MySubmenu01Option.BackgroundImage)]</icon>
-                    <onclick>SetProperty(MenuTitle,$INFO[Window.Property(MySubmenu01Option.MenuTitle)],$INFO[Skin.String(MySubmenu01Option.Window)])</onclick>
-                    <onclick>SetProperty(SourceInfo,$INFO[Window.Property(MySubmenu01Option.SourceInfo)],$INFO[Skin.String(MySubmenu01Option.Window)])</onclick>
+                    <property name="BackgroundImage">$INFO[Window.Property(MySubmenu01Option.BackgroundImage)]</property>
+                    <onclick>SetProperty(MenuTitle,$INFO[Window.Property(MySubmenu01Option.MenuTitle)],$INFO[Window.Property(MySubmenu01Option.Window)])</onclick>
+                    <onclick>SetProperty(SourceInfo,$INFO[Window.Property(MySubmenu01Option.SourceInfo)],$INFO[Window.Property(MySubmenu01Option.Window)])</onclick>
                     <onclick>$INFO[Window.Property(MySubmenu01Option.Action)]</onclick>
+                </item>
+                <item id="2" description="My Submenu 2 Option">
+                    <visible>!IsEmpty(Window.Property(MySubmenu02Option.Name))</visible>
+                    <label fallback="31002">$INFO[Window.Property(MySubmenu02Option.Name)]</label>
+                    <property name="Label3">$INFO[Window.Property(MySubmenu02Option.Subtitle)]</property>
+                    <property name="BackgroundImage">$INFO[Window.Property(MySubmenu02Option.BackgroundImage)]</property>
+                    <onclick>SetProperty(MenuTitle,$INFO[Window.Property(MySubmenu02Option.MenuTitle)],$INFO[Window.Property(MySubmenu02Option.Window)])</onclick>
+                    <onclick>SetProperty(SourceInfo,$INFO[Window.Property(MySubmenu02Option.SourceInfo)],$INFO[Window.Property(MySubmenu02Option.Window)])</onclick>
+                    <onclick>$INFO[Window.Property(MySubmenu02Option.Action)]</onclick>
                 </item>
             </content>
 		</control>
@@ -42,14 +51,31 @@
             <visible>true</visible>
             <include>ListForRevolveMenu</include>
             <include>RingForRevolveMenu</include>
+<!--            
             <include>IconForRevolveMenu</include>
-            
+-->            
+       		<control type="group" description="Submenu Circle Image">
+                <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
+                <animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="400" reversible="false">WindowClose</animation>
+<!--
+                <control type="image">
+                    <posx>-280</posx>
+                    <posy>330</posy>
+                    <width>662</width>
+                    <height>662</height>
+                    <texture background="true">circle/lightning.png</texture>
+                    <fadetime>500</fadetime>
+                    <colordiffuse>55000000</colordiffuse>
+                </control>
+-->            
+            </control>
+
             <control type="label" description="My Items Menu Title">
                 <include>MarkupForTitleForRevolveMenu</include>
                 <label>$INFO[Window.Property(MenuTitle)]</label>
             </control>
 		</control>
-        
+<!--        
         <control type="group" description="Circle Menu">
             <visible>false</visible>
             <include>CenterIconForCircleMenu</include>
@@ -60,7 +86,8 @@
                 <label>$INFO[Window.Property(MenuTitle)]</label>
             </control>
         </control>
-        
+-->        
+<!--        
 		<control type="group" id="9000">
 			<include>SideMenu</include>
 
@@ -88,5 +115,6 @@
 				<include>CircleControlsForPlayer</include>
 			</control>
 		</control>
+-->        
 	</controls>
 </window>
