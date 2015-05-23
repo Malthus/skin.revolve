@@ -260,30 +260,6 @@
 		</control>
 	</include>
 	
-    <constant name="PosYForTwelveLinesDialog">250</constant>
-	<include name="TwelveLinesDialog" description="Dialog For Title and Twelve Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>580</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>580</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
-	</include>
-	
     <constant name="PosYForThirteenLinesDialog">230</constant>
 	<include name="ThirteenLinesDialog" description="Dialog For Title and Thirteen Lines">
 		<control type="group">

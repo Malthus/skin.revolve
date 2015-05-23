@@ -165,7 +165,6 @@
 
 					<control type="button" id="301" description="Circle Movies Source Option">
 						<width>1100</width>
-						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31198]: $INFO[Skin.String(CircleMovieOption.Name)]</label>
 						<onclick>SetProperty(TargetCircleOption,CircleMovieOption,1194)</onclick>
@@ -174,7 +173,6 @@
 
 					<control type="button" id="302" description="Circle Episodes Source Option">
 						<width>1100</width>
-						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31199]: $INFO[Skin.String(CircleEpisodeOption.Name)]</label>
 						<onclick>SetProperty(TargetCircleOption,CircleEpisodeOption,1194)</onclick>
@@ -183,7 +181,6 @@
 
 					<control type="button" id="303" description="Circle Albums Source Option">
 						<width>1100</width>
-						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31200]: $INFO[Skin.String(CircleAlbumOption.Name)]</label>
 						<onclick>SetProperty(TargetCircleOption,CircleAlbumOption,1194)</onclick>

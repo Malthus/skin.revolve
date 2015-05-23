@@ -325,32 +325,4 @@
 			</control>
 		</control>
 	</include>
-	
-	<include name="LabelsForTopRing">
-		<control type="group">
-			<include>VisibilityOfListIconInView</include>
-			<animation effect="slide" start="0,-240" end="0,0" time="500">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,-240" time="500">WindowClose</animation>
-
-			<control type="group">
-				<posy>61</posy>
-				<include>NameLabelForRing</include>
-			</control>
-			<control type="group">
-				<posy>20</posy>
-				<include>InformationLabelForRing</include>
-			</control>
-		</control>
-		
-		<control type="group">
-			<include>VisibilityOfSortLetterInView</include>
-			<animation effect="slide" start="0,-240" end="0,0" time="500">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,-240" time="500">WindowClose</animation>
-
-			<control type="group">
-				<posy>20</posy>
-				<include>SortLetterLabelForRing</include>
-			</control>
-		</control>
-	</include>
 </includes>
