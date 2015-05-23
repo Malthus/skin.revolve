@@ -232,6 +232,7 @@
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onclick>
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),S)">SetProperty(CustomOptionType,D)</onclick>
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),M)">SetProperty(CustomOptionType,S)</onclick>
+				<onclick condition="StringCompare(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,M)</onclick>
 			</control>
 			
 			<control type="button" id="35" description="Previous Predefined Option Type Button">
@@ -248,6 +249,7 @@
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),S)">SetProperty(CustomOptionType,M)</onclick>
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,S)</onclick>
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,D)</onclick>
+				<onclick condition="StringCompare(Window.Property(CustomOptionType),M)">SetProperty(CustomOptionType,A)</onclick>
 			</control>
 
 			<control type="button" id="36" description="Menu/Window Title For Custom Option Button">
