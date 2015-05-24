@@ -603,7 +603,7 @@
 				<onclick>Skin.ToggleSetting(Custom20Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="240" description="Custom Option 10 Edit Button">
+			<control type="button" id="240" description="Custom Option 20 Edit Button">
                 <visible>Skin.HasSetting(Custom19Option.Active) | Skin.HasSetting(Custom20Option.Active) | !IsEmpty(Skin.String(Custom20Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom20Option.Active)</enable>
 				<width>1100</width>
@@ -668,6 +668,33 @@
 				<onclick>Skin.ToggleSetting(TVShowsOption.Active)</onclick>
 			</control>
 					
+			<control type="radiobutton" id="241" description="Custom Videos Option Activation Button">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(CustomVideosOption.Name)]</label>
+				<selected>Skin.HasSetting(CustomVideosOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(CustomVideosOption.Active)</onclick>
+			</control>
+
+			<control type="button" id="242" description="Custom Videos Option Edit Button">
+				<enable>Skin.HasSetting(CustomVideosOption.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(CustomVideosOption.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(CustomVideosOption.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(CustomVideosOption.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(CustomVideosOption.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(CustomVideosOption.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(CustomVideosOption.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(CustomVideosOption.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(CustomVideosOption.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,CustomVideosOption,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
 			<control type="radiobutton" id="285" description="Music Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -696,6 +723,33 @@
 				<onclick>Skin.ToggleSetting(AlbumsOption.Active)</onclick>
 			</control>
 					
+			<control type="radiobutton" id="243" description="Custom Music Option Activation Button">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(CustomMusicOption.Name)]</label>
+				<selected>Skin.HasSetting(CustomMusicOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(CustomMusicOption.Active)</onclick>
+			</control>
+
+			<control type="button" id="244" description="Custom Music Option Edit Button">
+				<enable>Skin.HasSetting(CustomMusicOption.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(CustomMusicOption.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(CustomMusicOption.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(CustomMusicOption.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(CustomMusicOption.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(CustomMusicOption.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(CustomMusicOption.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(CustomMusicOption.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(CustomMusicOption.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,CustomMusicOption,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
 			<control type="radiobutton" id="271" description="Books Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -732,6 +786,33 @@
 				<onclick>Skin.ToggleSetting(PicturesOption.Active)</onclick>
 			</control>
 					
+			<control type="radiobutton" id="245" description="Custom Pictures Option Activation Button">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[31140]: $INFO[Skin.String(CustomPicturesOption.Name)]</label>
+				<selected>Skin.HasSetting(CustomPicturesOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(CustomPicturesOption.Active)</onclick>
+			</control>
+
+			<control type="button" id="246" description="Custom Pictures Option Edit Button">
+				<enable>Skin.HasSetting(CustomPicturesOption.Active)</enable>
+				<width>1100</width>
+				<align>left</align>
+				<label>- $LOCALIZE[31136]</label>
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(CustomPicturesOption.Type)],1190)</onclick>
+				<onclick>SetProperty(CustomOptionName,$INFO[Skin.String(CustomPicturesOption.Name)],1190)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(CustomPicturesOption.Subtitle)],1190)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(CustomPicturesOption.BackgroundImage)],1190)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(CustomPicturesOption.MenuTitle)],1190)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(CustomPicturesOption.SourceInfo)],1190)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(CustomPicturesOption.Window)],1190)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(CustomPicturesOption.Action)],1190)</onclick>
+				<onclick>SetProperty(TargetOption,CustomPicturesOption,1190)</onclick>
+				<onclick>SetProperty(CustomizableOption,true,1190)</onclick>
+				<onclick>ActivateWindow(1190)</onclick>
+			</control>
+
 			<control type="radiobutton" id="273" description="Games Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -835,12 +916,12 @@
 			<height>90</height>
 
 			<control type="textbox">
-				<visible>Control.HasFocus(201) | Control.HasFocus(203) | Control.HasFocus(205) | Control.HasFocus(207) | Control.HasFocus(209) | Control.HasFocus(211) | Control.HasFocus(213) | Control.HasFocus(215) | Control.HasFocus(217) | Control.HasFocus(219) | Control.HasFocus(221) | Control.HasFocus(223) | Control.HasFocus(225) | Control.HasFocus(227) | Control.HasFocus(229) | Control.HasFocus(231) | Control.HasFocus(233) | Control.HasFocus(235) | Control.HasFocus(237) | Control.HasFocus(239)</visible>
+				<visible>Control.HasFocus(201) | Control.HasFocus(203) | Control.HasFocus(205) | Control.HasFocus(207) | Control.HasFocus(209) | Control.HasFocus(211) | Control.HasFocus(213) | Control.HasFocus(215) | Control.HasFocus(217) | Control.HasFocus(219) | Control.HasFocus(221) | Control.HasFocus(223) | Control.HasFocus(225) | Control.HasFocus(227) | Control.HasFocus(229) | Control.HasFocus(231) | Control.HasFocus(233) | Control.HasFocus(235) | Control.HasFocus(237) | Control.HasFocus(239) | Control.HasFocus(241) | Control.HasFocus(243) | Control.HasFocus(245)</visible>
 				<font>AnnotationFont</font>
 				<label>31168</label>
 			</control>
 			<control type="textbox">
-				<visible>Control.HasFocus(202) | Control.HasFocus(204) | Control.HasFocus(206) | Control.HasFocus(208) | Control.HasFocus(210) | Control.HasFocus(212) | Control.HasFocus(214) | Control.HasFocus(216) | Control.HasFocus(218) | Control.HasFocus(220) | Control.HasFocus(222) | Control.HasFocus(224) | Control.HasFocus(226) | Control.HasFocus(228) | Control.HasFocus(230) | Control.HasFocus(232) | Control.HasFocus(234) | Control.HasFocus(236) | Control.HasFocus(238) | Control.HasFocus(240)</visible>
+				<visible>Control.HasFocus(202) | Control.HasFocus(204) | Control.HasFocus(206) | Control.HasFocus(208) | Control.HasFocus(210) | Control.HasFocus(212) | Control.HasFocus(214) | Control.HasFocus(216) | Control.HasFocus(218) | Control.HasFocus(220) | Control.HasFocus(222) | Control.HasFocus(224) | Control.HasFocus(226) | Control.HasFocus(228) | Control.HasFocus(230) | Control.HasFocus(232) | Control.HasFocus(234) | Control.HasFocus(236) | Control.HasFocus(238) | Control.HasFocus(240) | Control.HasFocus(242) | Control.HasFocus(244) | Control.HasFocus(246)</visible>
 				<font>AnnotationFont</font>
 				<label>31169</label>
 			</control>

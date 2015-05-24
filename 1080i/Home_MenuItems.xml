@@ -262,6 +262,16 @@
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 		</item>
 					
+		<item id="42" description="Custom Videos Option">
+			<visible>Skin.HasSetting(CustomVideosOption.Active)</visible>
+			<label fallback="31002">$INFO[Skin.String(CustomVideosOption.Name)]</label>
+			<property name="Label3">$INFO[Skin.String(CustomVideosOption.Subtitle)]</property>
+			<icon>$INFO[Skin.String(CustomVideosOption.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomVideosOption.MenuTitle)],$INFO[Skin.String(CustomVideosOption.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(CustomVideosOption.SourceInfo)],$INFO[Skin.String(CustomVideosOption.Window)])</onclick>
+			<onclick>$INFO[Skin.String(CustomVideosOption.Action)]</onclick>
+		</item>
+
 		<item id="3" description="Music Option">
 			<visible>Skin.HasSetting(MusicOption.Active)</visible>
 			<label>2</label>
@@ -285,6 +295,16 @@
 			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
 		</item>
 
+		<item id="43" description="Custom Music Option">
+			<visible>Skin.HasSetting(CustomMusicOption.Active)</visible>
+			<label fallback="31002">$INFO[Skin.String(CustomMusicOption.Name)]</label>
+			<property name="Label3">$INFO[Skin.String(CustomMusicOption.Subtitle)]</property>
+			<icon>$INFO[Skin.String(CustomMusicOption.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomMusicOption.MenuTitle)],$INFO[Skin.String(CustomMusicOption.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(CustomMusicOption.SourceInfo)],$INFO[Skin.String(CustomMusicOption.Window)])</onclick>
+			<onclick>$INFO[Skin.String(CustomMusicOption.Action)]</onclick>
+		</item>
+
 		<item id="10" description="Books Option">
 			<visible>Skin.HasSetting(BooksOption.Active)</visible>
 			<label>31004</label>
@@ -304,6 +324,16 @@
 			<icon>special://skin/backgrounds/pictures.jpg</icon>
 			<thumb>$INFO[Skin.String(PicturesOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(pictures)</onclick>
+		</item>
+
+		<item id="44" description="Custom Pictures Option">
+			<visible>Skin.HasSetting(CustomPicturesOption.Active)</visible>
+			<label fallback="31002">$INFO[Skin.String(CustomPicturesOption.Name)]</label>
+			<property name="Label3">$INFO[Skin.String(CustomPicturesOption.Subtitle)]</property>
+			<icon>$INFO[Skin.String(CustomPicturesOption.BackgroundImage)]</icon>
+			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomPicturesOption.MenuTitle)],$INFO[Skin.String(CustomPicturesOption.Window)])</onclick>
+			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(CustomPicturesOption.SourceInfo)],$INFO[Skin.String(CustomPicturesOption.Window)])</onclick>
+			<onclick>$INFO[Skin.String(CustomPicturesOption.Action)]</onclick>
 		</item>
 
 		<item id="12" description="Games Option">
