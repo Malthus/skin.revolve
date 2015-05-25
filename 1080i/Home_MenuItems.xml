@@ -21,7 +21,7 @@
 
 		<item id="22" description="Custom 1 Option">
 			<visible>Skin.HasSetting(Custom01Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom01Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom01Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom01Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom01Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom01Option.MenuTitle)],$INFO[Skin.String(Custom01Option.Window)])</onclick>
@@ -31,7 +31,7 @@
 
 		<item id="23" description="Custom 2 Option">
 			<visible>Skin.HasSetting(Custom02Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom02Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom02Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom02Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom02Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom02Option.MenuTitle)],$INFO[Skin.String(Custom02Option.Window)])</onclick>
@@ -41,7 +41,7 @@
 		
 		<item id="24" description="Custom 3 Option">
 			<visible>Skin.HasSetting(Custom03Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom03Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom03Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom03Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom03Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom03Option.MenuTitle)],$INFO[Skin.String(Custom03Option.Window)])</onclick>
@@ -51,7 +51,7 @@
 		
 		<item id="25" description="Custom 4 Option">
 			<visible>Skin.HasSetting(Custom04Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom04Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom04Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom04Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom04Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom04Option.MenuTitle)],$INFO[Skin.String(Custom04Option.Window)])</onclick>
@@ -61,7 +61,7 @@
 		
 		<item id="26" description="Custom 5 Option">
 			<visible>Skin.HasSetting(Custom05Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom05Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom05Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom05Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom05Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom05Option.MenuTitle)],$INFO[Skin.String(Custom05Option.Window)])</onclick>
@@ -71,7 +71,7 @@
 
 		<item id="27" description="Custom 6 Option">
 			<visible>Skin.HasSetting(Custom06Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom06Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom06Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom06Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom06Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom06Option.MenuTitle)],$INFO[Skin.String(Custom06Option.Window)])</onclick>
@@ -81,7 +81,7 @@
 
 		<item id="28" description="Custom 7 Option">
 			<visible>Skin.HasSetting(Custom07Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom07Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom07Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom07Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom07Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom07Option.MenuTitle)],$INFO[Skin.String(Custom07Option.Window)])</onclick>
@@ -91,7 +91,7 @@
 
 		<item id="29" description="Custom 8 Option">
 			<visible>Skin.HasSetting(Custom08Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom08Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom08Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom08Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom08Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom08Option.MenuTitle)],$INFO[Skin.String(Custom08Option.Window)])</onclick>
@@ -101,7 +101,7 @@
 
 		<item id="30" description="Custom 9 Option">
 			<visible>Skin.HasSetting(Custom09Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom09Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom09Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom09Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom09Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom09Option.MenuTitle)],$INFO[Skin.String(Custom09Option.Window)])</onclick>
@@ -111,7 +111,7 @@
 
 		<item id="31" description="Custom 10 Option">
 			<visible>Skin.HasSetting(Custom10Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom10Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom10Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom10Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom10Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom10Option.MenuTitle)],$INFO[Skin.String(Custom10Option.Window)])</onclick>
@@ -121,7 +121,7 @@
 
 		<item id="32" description="Custom 11 Option">
 			<visible>Skin.HasSetting(Custom11Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom11Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom11Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom11Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom11Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom11Option.MenuTitle)],$INFO[Skin.String(Custom11Option.Window)])</onclick>
@@ -131,7 +131,7 @@
 
 		<item id="33" description="Custom 12 Option">
 			<visible>Skin.HasSetting(Custom12Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom12Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom12Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom12Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom12Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom12Option.MenuTitle)],$INFO[Skin.String(Custom12Option.Window)])</onclick>
@@ -141,7 +141,7 @@
 		
 		<item id="34" description="Custom 13 Option">
 			<visible>Skin.HasSetting(Custom13Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom13Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom13Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom13Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom13Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom13Option.MenuTitle)],$INFO[Skin.String(Custom13Option.Window)])</onclick>
@@ -151,7 +151,7 @@
 		
 		<item id="35" description="Custom 14 Option">
 			<visible>Skin.HasSetting(Custom14Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom14Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom14Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom14Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom14Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom14Option.MenuTitle)],$INFO[Skin.String(Custom14Option.Window)])</onclick>
@@ -161,7 +161,7 @@
 		
 		<item id="36" description="Custom 15 Option">
 			<visible>Skin.HasSetting(Custom15Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom15Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom15Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom15Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom15Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom15Option.MenuTitle)],$INFO[Skin.String(Custom15Option.Window)])</onclick>
@@ -171,7 +171,7 @@
 
 		<item id="37" description="Custom 16 Option">
 			<visible>Skin.HasSetting(Custom16Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom16Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom16Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom16Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom16Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom16Option.MenuTitle)],$INFO[Skin.String(Custom16Option.Window)])</onclick>
@@ -181,7 +181,7 @@
 
 		<item id="38" description="Custom 17 Option">
 			<visible>Skin.HasSetting(Custom17Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom17Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom17Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom17Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom17Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom17Option.MenuTitle)],$INFO[Skin.String(Custom17Option.Window)])</onclick>
@@ -191,7 +191,7 @@
 
 		<item id="39" description="Custom 18 Option">
 			<visible>Skin.HasSetting(Custom18Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom18Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom18Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom18Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom18Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom18Option.MenuTitle)],$INFO[Skin.String(Custom18Option.Window)])</onclick>
@@ -201,7 +201,7 @@
 
 		<item id="40" description="Custom 19 Option">
 			<visible>Skin.HasSetting(Custom19Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom19Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom19Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom19Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom19Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom19Option.MenuTitle)],$INFO[Skin.String(Custom19Option.Window)])</onclick>
@@ -211,7 +211,7 @@
 
 		<item id="41" description="Custom 20 Option">
 			<visible>Skin.HasSetting(Custom20Option.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(Custom20Option.Name)]</label>
+			<label>$INFO[Skin.String(Custom20Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom20Option.Subtitle)]</property>
 			<icon>$INFO[Skin.String(Custom20Option.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom20Option.MenuTitle)],$INFO[Skin.String(Custom20Option.Window)])</onclick>
@@ -264,7 +264,7 @@
 					
 		<item id="42" description="Custom Videos Option">
 			<visible>Skin.HasSetting(CustomVideosOption.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(CustomVideosOption.Name)]</label>
+			<label>$INFO[Skin.String(CustomVideosOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomVideosOption.Subtitle)]</property>
 			<icon>$INFO[Skin.String(CustomVideosOption.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomVideosOption.MenuTitle)],$INFO[Skin.String(CustomVideosOption.Window)])</onclick>
@@ -297,7 +297,7 @@
 
 		<item id="43" description="Custom Music Option">
 			<visible>Skin.HasSetting(CustomMusicOption.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(CustomMusicOption.Name)]</label>
+			<label>$INFO[Skin.String(CustomMusicOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomMusicOption.Subtitle)]</property>
 			<icon>$INFO[Skin.String(CustomMusicOption.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomMusicOption.MenuTitle)],$INFO[Skin.String(CustomMusicOption.Window)])</onclick>
@@ -328,7 +328,7 @@
 
 		<item id="44" description="Custom Pictures Option">
 			<visible>Skin.HasSetting(CustomPicturesOption.Active)</visible>
-			<label fallback="31002">$INFO[Skin.String(CustomPicturesOption.Name)]</label>
+			<label>$INFO[Skin.String(CustomPicturesOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomPicturesOption.Subtitle)]</property>
 			<icon>$INFO[Skin.String(CustomPicturesOption.BackgroundImage)]</icon>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomPicturesOption.MenuTitle)],$INFO[Skin.String(CustomPicturesOption.Window)])</onclick>
