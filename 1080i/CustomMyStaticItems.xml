@@ -27,162 +27,162 @@
 		
 			<content>
 				<item id="1" description="My Items 1 Option">
-					<label>$INFO[Window.Property(MyItems01Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems01Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems01Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems01Option.Fanart)]</property>
+					<label>$INFO[Window.Property(MyItems01Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems01Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems01Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems01Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems01Option.Action)]</onclick>
 				</item>
 				<item id="2" description="My Items 2 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems02Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems02Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems02Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems02Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems02Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems02Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems02Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems02Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems02Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems02Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems02Option.Action)]</onclick>
 				</item>
 				<item id="3" description="My Items 3 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems03Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems03Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems03Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems03Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems03Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems03Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems03Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems03Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems03Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems03Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems03Option.Action)]</onclick>
 				</item>
 				<item id="4" description="My Items 4 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems04Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems04Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems04Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems04Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems04Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems04Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems04Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems04Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems04Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems04Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems04Option.Action)]</onclick>
 				</item>
 				<item id="5" description="My Items 5 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems05Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems05Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems05Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems05Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems05Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems05Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems05Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems05Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems05Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems05Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems05Option.Action)]</onclick>
 				</item>
 				<item id="6" description="My Items 6 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems06Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems06Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems06Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems06Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems06Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems06Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems06Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems06Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems06Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems06Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems06Option.Action)]</onclick>
 				</item>
 				<item id="7" description="My Items 7 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems07Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems07Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems07Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems07Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems07Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems07Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems07Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems07Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems07Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems07Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems07Option.Action)]</onclick>
 				</item>
 				<item id="8" description="My Items 8 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems08Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems08Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems08Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems08Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems08Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems08Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems08Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems08Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems08Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems08Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems08Option.Action)]</onclick>
 				</item>
 				<item id="9" description="My Items 9 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems09Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems09Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems09Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems09Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems09Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems09Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems09Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems09Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems09Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems09Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems09Option.Action)]</onclick>
 				</item>
 				<item id="10" description="My Items 10 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems10Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems10Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems10Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems10Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems10Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems10Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems10Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems10Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems10Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems10Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems10Option.Action)]</onclick>
 				</item>
 				<item id="11" description="My Items 11 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems11Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems11Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems11Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems11Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems11Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems11Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems11Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems11Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems11Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems11Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems11Option.Action)]</onclick>
 				</item>
 				<item id="12" description="My Items 12 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems12Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems12Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems12Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems12Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems12Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems12Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems12Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems12Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems12Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems12Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems12Option.Action)]</onclick>
 				</item>
 				<item id="13" description="My Items 13 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems13Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems13Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems13Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems13Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems13Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems13Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems13Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems13Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems13Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems13Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems13Option.Action)]</onclick>
 				</item>
 				<item id="14" description="My Items 14 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems14Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems14Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems14Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems14Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems14Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems14Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems14Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems14Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems14Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems14Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems14Option.Action)]</onclick>
 				</item>
 				<item id="15" description="My Items 15 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems15Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems15Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems15Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems15Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems15Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems15Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems15Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems15Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems15Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems15Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems15Option.Action)]</onclick>
 				</item>
 				<item id="16" description="My Items 16 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems16Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems16Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems16Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems16Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems16Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems16Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems16Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems16Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems16Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems16Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems16Option.Action)]</onclick>
 				</item>
 				<item id="17" description="My Items 17 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems17Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems17Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems17Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems17Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems17Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems17Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems17Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems17Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems17Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems17Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems17Option.Action)]</onclick>
 				</item>
 				<item id="18" description="My Items 18 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems18Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems18Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems18Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems18Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems18Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems18Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems18Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems18Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems18Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems18Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems18Option.Action)]</onclick>
 				</item>
 				<item id="19" description="My Items 19 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems19Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems19Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems19Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems19Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems19Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems19Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems19Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems19Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems19Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems19Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems19Option.Action)]</onclick>
 				</item>
 				<item id="20" description="My Items 20 Option">
-                    <visible>!IsEmpty(Window.Property(MyItems20Option.Label))</visible>
-					<label>$INFO[Window.Property(MyItems20Option.Label)]</label>
-					<label2>$INFO[Window.Property(MyItems20Option.Label2)]</label2>
-					<icon>$INFO[Window.Property(MyItems20Option.Thumb)]</icon>
-                    <property name="BackgroundImage">$INFO[Window.Property(MyItems20Option.Fanart)]</property>
+                    <visible>!IsEmpty(Window.Property(MyItems20Option.Name))</visible>
+					<label>$INFO[Window.Property(MyItems20Option.Name)]</label>
+					<label2>$INFO[Window.Property(MyItems20Option.Subtitle)]</label2>
+					<icon>$INFO[Window.Property(MyItems20Option.Thumbnail)]</icon>
+                    <property name="BackgroundImage">$INFO[Window.Property(MyItems20Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems20Option.Action)]</onclick>
 				</item>
 			</content>

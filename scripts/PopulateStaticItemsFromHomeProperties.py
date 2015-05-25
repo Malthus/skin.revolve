@@ -36,8 +36,8 @@ def createGenericSubtitleProperty(sourcebase, targetproperty, targetwindow):
         getValueFromHomeProperty(sourcebase + '.Artist'),
         getValueFromHomeProperty(sourcebase + '.Author'),
         getValueFromHomeProperty(sourcebase + '.Album'),
-        ignoreNumericZeroValue(getValueFromHomeProperty(sourcebase + '.Year')),
-        ignoreNumericZeroValue(getValueFromHomeProperty(sourcebase + '.Version')))
+        getNumericValue(getValueFromHomeProperty(sourcebase + '.Year')),
+        getNumericValue(getValueFromHomeProperty(sourcebase + '.Version')))
     setValueToProperty(targetproperty, value, targetwindow)
     
 def createGenericIconProperty(sourcebase, targetproperty, targetwindow):
@@ -70,11 +70,16 @@ def copyProperties(sourcemask, targetmask, targetwindow):
         sourcebase = sourcemask % (index)
         targetbase = targetmask % (index)
 
-        createGenericNameProperty(sourcebase, targetbase + '.Label', targetwindow)
-        createGenericSubtitleProperty(sourcebase, targetbase + '.Label2', targetwindow)
-        createGenericIconProperty(sourcebase, targetbase + '.Thumb', targetwindow)
-        createGenericBackgroundImageProperty(sourcebase, targetbase + '.Fanart', targetwindow)
+        createGenericNameProperty(sourcebase, targetbase + '.Name', targetwindow)
+        createGenericSubtitleProperty(sourcebase, targetbase + '.Subtitle', targetwindow)
+        createGenericIconProperty(sourcebase, targetbase + '.Thumbnail', targetwindow)
+        createGenericBackgroundImageProperty(sourcebase, targetbase + '.BackgroundImage', targetwindow)
         createGenericActionProperty(sourcebase, targetbase + '.Action', targetwindow)
+
+#        createGenericNameProperty(sourcebase, targetbase + '.Label', targetwindow)
+#        createGenericSubtitleProperty(sourcebase, targetbase + '.Label2', targetwindow)
+#        createGenericIconProperty(sourcebase, targetbase + '.Thumb', targetwindow)
+#        createGenericBackgroundImageProperty(sourcebase, targetbase + '.Fanart', targetwindow)
 
 
 if len(sys.argv) > 1:

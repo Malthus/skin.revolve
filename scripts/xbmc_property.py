@@ -16,6 +16,11 @@ def escapeValue(value):
         value = '"' + value + '"'
     return value
 
+def getNumericValue(value):
+    if value == '0':
+        value = ''
+    return value
+    
 def getValueFromInfoLabel(infolabel):    
     value = xbmc.getInfoLabel(infolabel)
     return value
@@ -43,11 +48,6 @@ def getValueFromBooleanSkinSetting(skinsetting):
     return value
 
 
-def ignoreNumericZeroValue(value):
-    if (value == '0'):
-        value = '' 
-    return value
-    
 def replaceEmptyValueFromHomeProperty(property, value):
     if value == '':
         value = getValueFromHomeProperty(property)
