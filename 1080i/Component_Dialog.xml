@@ -489,4 +489,39 @@
 			</control>
 		</control>
 	</include>
+    
+    <include name="DefaultHelpFrameForDialog">
+        <control type="image">
+            <width>480</width>
+            <height>280</height>
+            <aspectratio>stretch</aspectratio>
+            <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+        </control>
+                
+        <control type="image">
+            <width>480</width>
+            <height>280</height>
+            <aspectratio>stretch</aspectratio>
+            <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+        </control>
+            
+        <control type="image">
+            <posx>20</posx>
+            <posy>-16</posy>
+            <width>36</width>
+            <height>36</height>
+            <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+        </control>
+                
+        <control type="label" description="Question Mark Label">
+            <posx>20</posx>
+            <posy>-16</posy>
+            <width>36</width>
+            <height>36</height>
+            <font>DialogTextFont</font>
+            <textcolor>BackgroundColor</textcolor>
+            <align>center</align>
+            <label>$LOCALIZE[31904]</label>
+        </control>
+    </include>
 </includes>

@@ -440,37 +440,7 @@
                 <posx>40</posx>
                 <posy>20</posy>
             
-                <control type="image">
-                    <width>480</width>
-                    <height>280</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
-                </control>
-                
-                <control type="image">
-                    <width>480</width>
-                    <height>280</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
-                </control>
-            
-                <control type="image">
-                    <posx>460</posx>
-                    <posy>20</posy>
-                    <width>40</width>
-                    <height>40</height>
-                    <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-                </control>
-                
-                <control type="label" description="Question Mark Label">
-                    <posx>460</posx>
-                    <posy>20</posy>
-                    <width>40</width>
-                    <font>DialogTextFont</font>
-                    <textcolor>BackgroundColor</textcolor>
-                    <align>center</align>
-                    <label>$LOCALIZE[31904]</label>
-                </control>
+                <include>DefaultHelpFrameForDialog</include>
             
                 <control type="group" description="Settings Description Textbox">
                     <posx>20</posx>
