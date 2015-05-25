@@ -451,8 +451,8 @@
                     <ondown>20</ondown>
                     <onleft>Noop</onleft>
                     <onright>40</onright>
-                    <selected>Skin.HasSetting(CustomOptionHelp.Visible)</selected>
-					<onclick>Skin.ToggleSetting(CustomOptionHelp.Visible)</onclick>
+                    <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
+					<onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
 				</control>
                 
 				<control type="button" id="20" description="Ok Button">
@@ -482,7 +482,7 @@
 			</control>
             
             <control type="group" description="Help Textbox">
-                <visible>Skin.HasSetting(CustomOptionHelp.Visible)</visible>
+                <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
                 <posx>40</posx>
                 <posy>20</posy>
             
