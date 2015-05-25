@@ -756,7 +756,7 @@
 				<control type="button" id="10" description="Choose Playlist Button">
                     <visible>StringCompare(Container(40).ListItem.Property(Parameter),L)</visible>
                     <posx>40</posx>
-                    <posy>520</posy>
+                    <posy>440</posy>
 					<label>$LOCALIZE[31881]</label>
                     <onup>21</onup>
                     <ondown>11</ondown>
@@ -770,7 +770,7 @@
 				<control type="button" id="11" description="Choose Image Button">
                     <visible>StringCompare(Container(40).ListItem.Property(Parameter),I)</visible>
                     <posx>40</posx>
-                    <posy>520</posy>
+                    <posy>440</posy>
 					<label>$LOCALIZE[31882]</label>
                     <onup>10</onup>
                     <ondown>12</ondown>
@@ -784,7 +784,7 @@
 				<control type="button" id="12" description="Choose File Button">
                     <visible>StringCompare(Container(40).ListItem.Property(Parameter),F)</visible>
                     <posx>40</posx>
-                    <posy>520</posy>
+                    <posy>440</posy>
 					<label>$LOCALIZE[31883]</label>
                     <onup>11</onup>
                     <ondown>13</ondown>
@@ -798,7 +798,7 @@
 				<control type="button" id="13" description="Choose Path Button">
                     <visible>StringCompare(Container(40).ListItem.Property(Parameter),P)</visible>
                     <posx>40</posx>
-                    <posy>520</posy>
+                    <posy>440</posy>
 					<label>$LOCALIZE[31884]</label>
                     <onup>12</onup>
                     <ondown>14</ondown>
@@ -812,7 +812,7 @@
 				<control type="button" id="14" description="Choose Addon Button">
                     <visible>StringCompare(Container(40).ListItem.Property(Parameter),A)</visible>
                     <posx>40</posx>
-                    <posy>520</posy>
+                    <posy>440</posy>
 					<label>$LOCALIZE[31885]</label>
                     <onup>13</onup>
                     <ondown>15</ondown>
@@ -826,10 +826,10 @@
 				<control type="button" id="15" description="Choose String Button">
                     <visible>StringCompare(Container(40).ListItem.Property(Parameter),S)</visible>
                     <posx>40</posx>
-                    <posy>520</posy>
+                    <posy>440</posy>
 					<label>$LOCALIZE[31886]</label>
                     <onup>14</onup>
-                    <ondown>20</ondown>
+                    <ondown>26</ondown>
                     <onleft>Noop</onleft>
                     <onright>31</onright>
                     <onclick>Skin.SetString(Dialog.Input)</onclick>
@@ -837,11 +837,23 @@
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
 
+				<control type="radiobutton" id="26" description="Help Radiobutton">
+                    <posx>40</posx>
+                    <posy>520</posy>
+					<label>$LOCALIZE[10043]</label>
+                    <onup>15</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>31</onright>
+                    <selected>Skin.HasSetting(CustomOptionHelp.Visible)</selected>
+					<onclick>Skin.ToggleSetting(CustomOptionHelp.Visible)</onclick>
+				</control>
+                
 				<control type="button" id="20" description="Ok Button">
                     <posx>40</posx>
                     <posy>600</posy>
 					<label>$LOCALIZE[186]</label>
-                    <onup>15</onup>
+                    <onup>26</onup>
                     <ondown>21</ondown>
                     <onleft>Noop</onleft>
                     <onright>31</onright>
@@ -863,6 +875,119 @@
 					<onclick>Close</onclick>
 				</control>
 			</control>
+            
+            <control type="group" description="Help Textbox">
+                <visible>Skin.HasSetting(CustomOptionHelp.Visible)</visible>
+                <posx>40</posx>
+                <posy>20</posy>
+            
+                <control type="image">
+                    <width>480</width>
+                    <height>280</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                </control>
+                
+                <control type="image">
+                    <width>480</width>
+                    <height>280</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+                </control>
+            
+                <control type="image">
+                    <posx>460</posx>
+                    <posy>20</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                </control>
+                
+                <control type="label" description="Question Mark Label">
+                    <posx>460</posx>
+                    <posy>20</posy>
+                    <width>40</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>BackgroundColor</textcolor>
+                    <align>center</align>
+                    <label>$LOCALIZE[31904]</label>
+                </control>
+            
+                <control type="group" description="Settings Description Textbox">
+                    <posx>20</posx>
+                    <posy>20</posy>
+                    <width>440</width>
+                    <height>240</height>
+
+                    <control type="textbox">
+                        <visible>Control.HasFocus(10)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31776]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(11)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31777]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(12)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31778]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(13)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31779]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(14)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31780]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(15)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31781]</label>
+                    </control>
+
+                    <control type="textbox">
+                        <visible>Control.HasFocus(20)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31771]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(21)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31772]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(26)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31765]</label>
+                    </control>
+                
+                    <control type="textbox">
+                        <visible>Control.HasFocus(31) | Control.HasFocus(32)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31782]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(39)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31783]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(40)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31773]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(41)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31769]</label>
+                    </control>
+                </control>
+            </control>
 		</control>
 	</controls>
 </window>

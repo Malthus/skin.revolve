@@ -641,58 +641,101 @@
 				<ondown>9000</ondown>
 				<onleft>Noop</onleft>
 				<onright>30</onright>
-<!--
-				<control type="button" id="25" description="Clear Button">
+
+				<control type="radiobutton" id="26" description="Help Radiobutton">
                     <posx>40</posx>
-                    <posy>440</posy>
-					<label>$LOCALIZE[192]</label>
-                    <onup>22</onup>
-                    <ondown>20</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
-					<onclick>ClearProperty(CustomOptionName)</onclick>
-					<onclick>ClearProperty(CustomSubtitle)</onclick>
-					<onclick>ClearProperty(CustomBackgroundImage)</onclick>
-					<onclick>ClearProperty(CustomOptionType)</onclick>
-					<onclick>ClearProperty(CustomMenuTitle)</onclick>
-					<onclick>ClearProperty(CustomSourceInfo)</onclick>
-					<onclick>ClearProperty(CustomAction)</onclick>
-				</control>
--->
-<!--                
-				<control type="button" id="20" description="Ok Button">
-                    <posx>40</posx>
-                    <posy>520</posy>
-					<label>$LOCALIZE[186]</label>
-                    <onup>25</onup>
+                    <posy>480</posy>
+					<label>$LOCALIZE[10043]</label>
+                    <onup>21</onup>
                     <ondown>21</ondown>
                     <onleft>Noop</onleft>
-                    <onright>34</onright>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomOptionName)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Window.Property(CustomOptionType)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].MenuTitle,$INFO[Window.Property(CustomMenuTitle)])</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].SourceInfo,$INFO[Window.Property(CustomSourceInfo)])</onclick>
-					<onclick condition="StringCompare(Window.Property(CustomOptionType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1103)</onclick>
-					<onclick condition="StringCompare(Window.Property(CustomOptionType),S)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1101)</onclick>
-					<onclick condition="StringCompare(Window.Property(CustomOptionType),D)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1102)</onclick>
-					<onclick condition="StringCompare(Window.Property(CustomOptionType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,0)</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Control.GetLabel(40)])</onclick>
-					<onclick>Close</onclick>
+                    <onright>30</onright>
+                    <selected>Skin.HasSetting(CustomOptionHelp.Visible)</selected>
+					<onclick>Skin.ToggleSetting(CustomOptionHelp.Visible)</onclick>
 				</control>
--->
+
 				<control type="button" id="21" description="Close Button">
                     <posx>40</posx>
                     <posy>560</posy>
 					<label>$LOCALIZE[31915]</label>
-                    <onup>21</onup>
-                    <ondown>21</ondown>
+                    <onup>26</onup>
+                    <ondown>26</ondown>
                     <onleft>Noop</onleft>
                     <onright>30</onright>
 					<onclick>Close</onclick>
 				</control>
 			</control>
+            
+            <control type="group" description="Help Textbox">
+                <visible>Skin.HasSetting(CustomOptionHelp.Visible)</visible>
+                <posx>40</posx>
+                <posy>20</posy>
+            
+                <control type="image">
+                    <width>480</width>
+                    <height>280</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                </control>
+                
+                <control type="image">
+                    <width>480</width>
+                    <height>280</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+                </control>
+            
+                <control type="image">
+                    <posx>460</posx>
+                    <posy>20</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                </control>
+                
+                <control type="label" description="Question Mark Label">
+                    <posx>460</posx>
+                    <posy>20</posy>
+                    <width>40</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>BackgroundColor</textcolor>
+                    <align>center</align>
+                    <label>$LOCALIZE[31904]</label>
+                </control>
+            
+                <control type="group" description="Settings Description Textbox">
+                    <posx>20</posx>
+                    <posy>20</posy>
+                    <width>440</width>
+                    <height>240</height>
+                    
+                    <control type="textbox">
+                        <visible>Control.HasFocus(21)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31766]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(26)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31765]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(31)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31769]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(201) | Control.HasFocus(203) | Control.HasFocus(205) | Control.HasFocus(207) | Control.HasFocus(209) | Control.HasFocus(211) | Control.HasFocus(213) | Control.HasFocus(215) | Control.HasFocus(217) | Control.HasFocus(219) | Control.HasFocus(221) | Control.HasFocus(223) | Control.HasFocus(225) | Control.HasFocus(227) | Control.HasFocus(229) | Control.HasFocus(231) | Control.HasFocus(233) | Control.HasFocus(235) | Control.HasFocus(237) | Control.HasFocus(239) | Control.HasFocus(241) | Control.HasFocus(243) | Control.HasFocus(245)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31767]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(202) | Control.HasFocus(204) | Control.HasFocus(206) | Control.HasFocus(208) | Control.HasFocus(210) | Control.HasFocus(212) | Control.HasFocus(214) | Control.HasFocus(216) | Control.HasFocus(218) | Control.HasFocus(220) | Control.HasFocus(222) | Control.HasFocus(224) | Control.HasFocus(226) | Control.HasFocus(228) | Control.HasFocus(230) | Control.HasFocus(232) | Control.HasFocus(234) | Control.HasFocus(236) | Control.HasFocus(238) | Control.HasFocus(240) | Control.HasFocus(242) | Control.HasFocus(244) | Control.HasFocus(246)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31768]</label>
+                    </control>
+                </control>
+            </control>
 		</control>
 	</controls>
 </window>

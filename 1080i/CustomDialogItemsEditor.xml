@@ -443,11 +443,23 @@
 				<onleft>Noop</onleft>
 				<onright>40</onright>
 
+				<control type="radiobutton" id="26" description="Help Radiobutton">
+                    <posx>40</posx>
+                    <posy>440</posy>
+					<label>$LOCALIZE[10043]</label>
+                    <onup>21</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>40</onright>
+                    <selected>Skin.HasSetting(CustomOptionHelp.Visible)</selected>
+					<onclick>Skin.ToggleSetting(CustomOptionHelp.Visible)</onclick>
+				</control>
+                
 				<control type="button" id="20" description="Ok Button">
                     <posx>40</posx>
                     <posy>520</posy>
 					<label>$LOCALIZE[186]</label>
-                    <onup>21</onup>
+                    <onup>26</onup>
                     <ondown>21</ondown>
                     <onleft>Noop</onleft>
                     <onright>40</onright>
@@ -462,12 +474,89 @@
                     <posy>560</posy>
 					<label>$LOCALIZE[222]</label>
                     <onup>20</onup>
-                    <ondown>20</ondown>
+                    <ondown>26</ondown>
                     <onleft>Noop</onleft>
                     <onright>40</onright>
 					<onclick>Close</onclick>
 				</control>
 			</control>
+            
+            <control type="group" description="Help Textbox">
+                <visible>Skin.HasSetting(CustomOptionHelp.Visible)</visible>
+                <posx>40</posx>
+                <posy>20</posy>
+            
+                <control type="image">
+                    <width>480</width>
+                    <height>280</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                </control>
+                
+                <control type="image">
+                    <width>480</width>
+                    <height>280</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+                </control>
+            
+                <control type="image">
+                    <posx>460</posx>
+                    <posy>20</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                </control>
+                
+                <control type="label" description="Question Mark Label">
+                    <posx>460</posx>
+                    <posy>20</posy>
+                    <width>40</width>
+                    <font>DialogTextFont</font>
+                    <textcolor>BackgroundColor</textcolor>
+                    <align>center</align>
+                    <label>$LOCALIZE[31904]</label>
+                </control>
+            
+                <control type="group" description="Settings Description Textbox">
+                    <posx>20</posx>
+                    <posy>20</posy>
+                    <width>440</width>
+                    <height>240</height>
+            
+                    <control type="textbox">
+                        <visible>Control.HasFocus(20)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31771]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(21)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31772]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(26)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31765]</label>
+                    </control>
+
+                    <control type="textbox">
+                        <visible>Control.HasFocus(34) | Control.HasFocus(35)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31775]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(40)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31774]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(41)</visible>
+                        <font>AnnotationFont</font>
+                        <label>$LOCALIZE[31769]</label>
+                    </control>
+                </control>
+            </control>
 		</control>
 	</controls>
 </window>

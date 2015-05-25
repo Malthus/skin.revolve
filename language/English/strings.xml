@@ -128,6 +128,7 @@
 	<string id="31712">(provided by Screen Widgets)</string>
 	<string id="31713">(provided by Library Data Provider)</string>
     
+	<string id="31720">Nothing</string>
 	<string id="31721">Latest Movies</string>
 	<string id="31722">Latest Episodes</string>
 	<string id="31723">Latest Music Videos</string>
@@ -149,6 +150,41 @@
 	<string id="31739">Recent Music Videos</string>
 	<string id="31740">Recent Albums</string>
 
+	<string id="31750">Set the name of the custom option that will appear in the menu.</string>
+	<string id="31751">Set the subtitle that will appear over the custom option in the menu.</string>
+	<string id="31752">Set the background image for the custom option in the menu.</string>
+	<string id="31753">Set the type of custom option that you want to create, the action associated with this custom option:[CR]- Custom submenu opens another menu, which you can fill with custom options. You can use the 'Edit Submenu' button to manage this submenu.[CR]- Custom items opens a window with items (such as movies, music albums) form a selected source, so you can fill a view with random albums or recommended episodes. You can use the 'Choose Items' button to select different sources for these items.[CR]- Custom action allows you to execute built-in functions from XBMC. You can use the 'Create Command' button to create these actions.</string>
+	<string id="31754">Set the name of the window that is opened by this custom option.</string>
+	<string id="31755">Set the source pattern that defines the properties that provide the items. The number in this pattern should be represented by '%d', so Revolve can extract the item-information from the properties and display them in a window.</string>
+	<string id="31756">Set the plugin that provdes the items. You should write down the complete call to the plugin, including arguments, but you should exclude the 'plugin://' part of the call.</string>
+	<string id="31757">Set the unique identifier of the submenu. The whole submenu is linked to this identifier. You can link an option to an existing submenu by copying the submenu's identifier, or you can lose a submenu by removing this identifier. An identifier should consist only of alphanumeric characters (so no spaces, no punctuation marks, no strange characters).</string>
+	<string id="31758">Set the XBMC built-in function that should be executed when this custom option is selected. You can edit this command or use the 'Create Command' button to create a new custom command.</string>
+	<string id="31759">Confirm the settings of this custom option and return to the Skin Settings menu.</string>
+	<string id="31760">Discard the changes made in the settings of this custom option and return to the Skin Settings menu.</string>
+	<string id="31761">Open the Custom Action Editor to create a new action for this custom option.</string>
+	<string id="31762">Open the Custom Items Editor to select a source to provide items for this custom option.</string>
+	<string id="31763">Open the Custom Submenu Editor to create or edit the submenu that is accessible through this custom command.</string>
+	<string id="31764">Clear all the settings for this custom command.</string>
+	<string id="31765">Enable or disable this helptext.</string>
+	<string id="31766">Close the Custom Submenu Editor and return to the Custom Option Editor.</string>
+    <string id="31767">Enable this option in this submenu. You should provide a name and an action to make this custom option do something useful.</string>
+    <string id="31768">Edit this custom submenu-option. You can set the name and subtitle of this option, and you can enter the action that is executed when this option is chosen in the submenu.</string>
+    <string id="31769">Use the scrollbar to quickly move through the list of options.</string>
+	<string id="31770">Set the type of custom option that you want to create, the action associated with this custom option:[CR]- Custom items opens a window with items (such as movies, music albums) form a selected source, so you can fill a view with random albums or recommended episodes. You can use the 'Choose Items' button to select different sources for these items.[CR]- Custom action allows you to execute built-in functions from XBMC. You can use the 'Create Command' button to create these actions.</string>
+	<string id="31771">Confirm the settings in this window and return to the Custom Option Editor.</string>
+	<string id="31772">Discard the changes made in this window and return to the Custom Option Editor.</string>
+	<string id="31773">Select the custom action that you want to connect to your custom option, or select the 'Custom Command' option in the list so you can enter a command.</string>
+	<string id="31774">Select the items for this custom action. The selected items will be displayed in a window when the associated custom action is selected.</string>
+	<string id="31775">Filter the list of items by the provider (the script or plugin that provides the items) of the items.</string>
+	<string id="31776">Select the playlist that is used in the highlighted action.</string>
+	<string id="31777">Select the image that is used in the highlighted action.</string>
+	<string id="31778">Select the file that is used in the highlighted action.</string>
+	<string id="31779">Select the path that is used in the highlighted action.</string>
+	<string id="31780">Select the addon that is used in the highlighted action.</string>
+	<string id="31781">Enter the string that is used in the highlighted action.</string>
+	<string id="31782">Filter the list of actions by the kind of action that you want to create.</string>
+	<string id="31783">Enter a custom built-in command for this custom action.</string>
+    
 	<string id="31800">Custom Option Editor</string>
 	<string id="31801">Custom Action Editor</string>
 	<string id="31802">Background Image</string>

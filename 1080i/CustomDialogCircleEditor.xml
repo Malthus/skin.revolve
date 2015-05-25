@@ -71,6 +71,14 @@
                     </focusedlayout>
 
                     <content>
+<!--                    
+                        <item id="1" description="Nothing Option">
+                            <label>$LOCALIZE[31720]</label>
+                            <property name="ItemName">$LOCALIZE[31720]</property>
+                            <property name="OriginMask"></property>
+                            <onclick>Noop</onclick>
+                        </item>
+-->
                         <item id="51" description="XBMC / Latest Movies Option">
                             <visible>StringCompare(Window.Property(TargetCircleOption),CircleMovieOption)</visible>
                             <label>$LOCALIZE[31721] $LOCALIZE[31711]</label>
