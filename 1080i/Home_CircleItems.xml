@@ -35,18 +35,19 @@
                         <visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>
                         
                         <control type="image">
-                            <posx>66</posx>
-                            <posy>185</posy>
-                            <width>527</width>
-                            <height>296</height>
-                            <texture background="true" diffuse="circle/movies-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
-                            <aspectratio scalediffuse="false">stretch</aspectratio>
-                        </control>
-		
-                        <control type="image">
                             <width>662</width>
                             <height>662</height>
                             <texture background="true">circle/movies-focus.png</texture>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                        </control>
+                        
+                        <control type="image">
+                            <posx>66</posx>
+                            <posy>186</posy>
+                            <width>527</width>
+                            <height>294</height>
+                            <texture background="true" diffuse="circle/movies-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>
                     </control>
 			
@@ -55,18 +56,19 @@
                         <visible allowhiddenfocus="true">Container(300).HasFocus(6) | Container(300).HasFocus(15)</visible>
 
                         <control type="image">
-                            <posx>38</posx>
-                            <posy>119</posy>
-                            <width>486</width>
-                            <height>386</height>
-                            <texture background="true" diffuse="circle/tvshows-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
-                            <aspectratio scalediffuse="false">scale</aspectratio>
-                        </control>
-		
-                        <control type="image">
                             <width>662</width>
                             <height>662</height>
                             <texture background="true">circle/tvshows-focus.png</texture>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                        </control>
+                        
+                        <control type="image">
+                            <posx>39</posx>
+                            <posy>118</posy>
+                            <width>486</width>
+                            <height>387</height>
+                            <texture background="true" diffuse="circle/tvshows-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>
                     </control>
 
@@ -78,15 +80,16 @@
                             <width>662</width>
                             <height>662</height>
                             <texture background="true">circle/albums-focus.png</texture>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
                         </control>
                         
                         <control type="image">
                             <posx>117</posx>
                             <posy>57</posy>
-                            <width>469</width>
+                            <width>468</width>
                             <height>469</height>
                             <texture diffuse="circle/albums-mask.png" fallback="black.png" background="true">$INFO[ListItem.Icon]</texture>
-                            <aspectratio scalediffuse="false">scale</aspectratio>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>
                     </control>
 
