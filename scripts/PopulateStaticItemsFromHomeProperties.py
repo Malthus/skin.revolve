@@ -76,11 +76,6 @@ def copyProperties(sourcemask, targetmask, targetwindow):
         createGenericBackgroundImageProperty(sourcebase, targetbase + '.BackgroundImage', targetwindow)
         createGenericActionProperty(sourcebase, targetbase + '.Action', targetwindow)
 
-#        createGenericNameProperty(sourcebase, targetbase + '.Label', targetwindow)
-#        createGenericSubtitleProperty(sourcebase, targetbase + '.Label2', targetwindow)
-#        createGenericIconProperty(sourcebase, targetbase + '.Thumb', targetwindow)
-#        createGenericBackgroundImageProperty(sourcebase, targetbase + '.Fanart', targetwindow)
-
 
 if len(sys.argv) > 1:
     logMessage('Call to ' + SCRIPT_NAME + ' script with arguments: ' + str(sys.argv) + '.')	
