@@ -586,6 +586,7 @@
 			</control>
 			
 			<control type="image">
+                <visible>!Control.HasFocus(900)</visible>
 				<posx>-100</posx>
 				<posy>330</posy>
 				<width>662</width>
@@ -596,6 +597,7 @@
 			</control>
 			
 			<include>HomeCircleItems</include>
+			<include>HomeExitItems</include>
 
 			<control type="image">
 				<width>900</width>

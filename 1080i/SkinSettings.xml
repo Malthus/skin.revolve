@@ -186,6 +186,15 @@
 						<onclick>SetProperty(TargetCircleOption,CircleAlbumOption,1194)</onclick>
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
+                    
+					<control type="radiobutton" id="304" description="Circle Exit Menu Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31784]</label>
+                        <selected>Skin.HasSetting(CircleExitMenu.Enable)</selected>
+						<onclick>Skin.ToggleSetting(CircleExitMenu.Enable)</onclick>
+					</control>
 				</control>
                 
 				<control type="grouplist" id="700" description="Control Area For Default Add-ons Options">
@@ -395,6 +404,11 @@
 						<visible>Control.HasFocus(303)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31203]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(304)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31785]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(701)</visible>

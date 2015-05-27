@@ -65,6 +65,7 @@
 			<onup>300</onup>
 			<ondown>300</ondown>
 			<onleft condition="Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(15) | Container(300).HasFocus(16)">600</onleft>
+			<onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)">900</onleft>
 			<onright>Noop</onright>
 
             <include>InvisibleItemsForMenu</include>
