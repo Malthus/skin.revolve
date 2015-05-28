@@ -38,7 +38,7 @@
                             <width>662</width>
                             <height>662</height>
                             <texture background="true">circle/movies-focus.png</texture>
-                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>
                         
                         <control type="image">
@@ -59,14 +59,14 @@
                             <width>662</width>
                             <height>662</height>
                             <texture background="true">circle/tvshows-focus.png</texture>
-                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>
                         
                         <control type="image">
                             <posx>39</posx>
-                            <posy>118</posy>
-                            <width>486</width>
-                            <height>387</height>
+                            <posy>119</posy>
+                            <width>485</width>
+                            <height>385</height>
                             <texture background="true" diffuse="circle/tvshows-mask.png" fallback="black.png">$INFO[ListItem.Icon]</texture>
                             <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>
@@ -80,14 +80,14 @@
                             <width>662</width>
                             <height>662</height>
                             <texture background="true">circle/albums-focus.png</texture>
-                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>
                         
                         <control type="image">
-                            <posx>117</posx>
-                            <posy>57</posy>
-                            <width>468</width>
-                            <height>469</height>
+                            <posx>118</posx>
+                            <posy>58</posy>
+                            <width>467</width>
+                            <height>467</height>
                             <texture diffuse="circle/albums-mask.png" fallback="black.png" background="true">$INFO[ListItem.Icon]</texture>
                             <aspectratio scalediffuse="false">stretch</aspectratio>
                         </control>

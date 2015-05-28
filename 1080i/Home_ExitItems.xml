@@ -20,7 +20,7 @@
                         <width>80</width>
                         <height>80</height>
                         <texture colordiffuse="BackgroundColor">icons/overlay-timer.png</texture>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                     </control>
                         
                     <control type="label">
@@ -46,7 +46,7 @@
                         <width>80</width>
                         <height>80</height>
                         <texture colordiffuse="BackgroundColor">icons/overlay-locked.png</texture>
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                     </control>
                 </control>
             </control>
@@ -78,7 +78,7 @@
                         <width>662</width>
                         <height>662</height>
                         <texture background="true">circle/exit-focus.png</texture>
-                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <aspectratio scalediffuse="false">stretch</aspectratio>
                     </control>
             
                     <control type="label">
