@@ -257,7 +257,7 @@
 			<label2>$INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31902] | $INFO[Window(Home).Property(Episodes.Count)] $LOCALIZE[20360] | $INFO[Window(Home).Property(Episodes.UnWatched)] $LOCALIZE[16101]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
 			<property name="Circle">circle/tvshows.png</property>
-<!--			<icon>special://skin/backgrounds/tvshows.jpg</icon> -->
+			<icon>special://skin/backgrounds/tvshows.jpg</icon>
 			<thumb>$INFO[Skin.String(TVShowsOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 		</item>
