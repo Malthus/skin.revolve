@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="1189">
+<window type="dialog" id="1189">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
@@ -56,6 +56,7 @@
 				<onup>10</onup>
 				<ondown>10</ondown>
                 <onclick>$INFO[Window.Property(DialogAction)]</onclick>
+                <onclick>Close</onclick>
 			</control>
 
 			<control type="button" id="10" description="No Button">
@@ -69,6 +70,55 @@
 				<onup>11</onup>
 				<ondown>11</ondown>
                 <onclick>Close</onclick>
+			</control>
+            
+			<control type="button" id="51" description="Background Visuals Settings Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>BackgroundSettingsForSkinSettings</include>
+			</control>
+            
+			<control type="button" id="52" description="Home Menu Items Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>HomeMenuItemsSettingsForSkinSettings</include>
+			</control>
+            
+			<control type="button" id="53" description="Circle Items Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>CircleItemsSettingsForSkinSettings</include>
+			</control>
+            
+			<control type="button" id="57" description="default Add-ons Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>AddonSettingsForSkinSettings</include>
+			</control>
+            
+			<control type="button" id="58" description="Miscellaneous Settings Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>MiscellaneousSettingsForSkinSettings</include>
+			</control>
+            
+			<control type="button" id="59" description="Debug Settings Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>DebugSettingsForSkinSettings</include>
+			</control>
+
+			<control type="button" id="60" description="All Revolve Settings Reset Button">
+				<visible allowhiddenfocus="true">false</visible>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<include>DefaultSettingsForSkinSettings</include>
 			</control>
 		</control>
 	</controls>

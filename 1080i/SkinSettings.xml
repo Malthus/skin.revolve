@@ -70,13 +70,6 @@
 				</content>
 			</control>
 
-			<control type="button" id="97" description="Settings Reset Button">
-				<visible allowhiddenfocus="true">false</visible>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<include>DefaultSettingsForSkinSettings</include>
-			</control>
-			
 			<control type="group" id="98">
 				<posx>700</posx>
 				<posy>100</posy>
@@ -148,6 +141,16 @@
 						<selected>Skin.HasSetting(BackgroundVideo.Faded)</selected>
 						<onclick>Skin.ToggleSetting(BackgroundVideo.Faded)</onclick>
 					</control>
+                    
+					<control type="button" id="320" description="Reset Page Setting Button">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[10041]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+						<onclick>SetProperty(DialogAction,SetFocus(51),1189)</onclick>
+						<onclick>ActivateWindow(1189)</onclick>
+					</control>
 				</control>
 
                 <include>OptionsForHomeMenuSkinSettings</include>
@@ -157,8 +160,8 @@
 					<width>1100</width>
 					<height>760</height>
 					<itemgap>0</itemgap>
-					<onup>100</onup>
-					<ondown>100</ondown>
+					<onup>300</onup>
+					<ondown>300</ondown>
 					<onleft>99</onleft>
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
@@ -195,6 +198,16 @@
                         <selected>Skin.HasSetting(CircleExitMenu.Enable)</selected>
 						<onclick>Skin.ToggleSetting(CircleExitMenu.Enable)</onclick>
 					</control>
+                    
+					<control type="button" id="320" description="Reset Page Setting Button">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[10041]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+						<onclick>SetProperty(DialogAction,SetFocus(53),1189)</onclick>
+						<onclick>ActivateWindow(1189)</onclick>
+					</control>
 				</control>
                 
 				<control type="grouplist" id="700" description="Control Area For Default Add-ons Options">
@@ -202,8 +215,8 @@
 					<width>1100</width>
 					<height>760</height>
 					<itemgap>0</itemgap>
-					<onup>200</onup>
-					<ondown>200</ondown>
+					<onup>700</onup>
+					<ondown>700</ondown>
 					<onleft>99</onleft>
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
@@ -215,6 +228,16 @@
 						<label2>$INFO[Skin.String(AddonLyrics)]</label2>
 						<onclick>Skin.SetAddon(AddonLyrics,xbmc.python.lyrics)</onclick>
 					</control>
+                    
+					<control type="button" id="720" description="Reset Page Setting Button">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[10041]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+						<onclick>SetProperty(DialogAction,SetFocus(57),1189)</onclick>
+						<onclick>ActivateWindow(1189)</onclick>
+					</control>
 				</control>
 				
 				<control type="grouplist" id="800" description="Control Area For Background Visuals">
@@ -222,8 +245,8 @@
 					<width>1100</width>
 					<height>760</height>
 					<itemgap>0</itemgap>
-					<onup>100</onup>
-					<ondown>100</ondown>
+					<onup>800</onup>
+					<ondown>800</ondown>
 					<onleft>99</onleft>
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
@@ -246,11 +269,6 @@
 						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
 					</control>
 					
-					<control type="label" id="803" description="Spacer">
-						<width>1100</width>
-						<label>-</label>
-					</control>
-					
 					<control type="radiobutton" id="806" description="Visible OSD Player Icon Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -269,11 +287,6 @@
 						<onclick>Skin.ToggleSetting(MediaIcons.Visible)</onclick>
 					</control>
 					
-					<control type="label" id="808" description="Spacer">
-						<width>1100</width>
-						<label>-</label>
-					</control>
-					
 					<control type="radiobutton" id="805" description="Visible No Information Available Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -281,6 +294,16 @@
 						<label>$LOCALIZE[31138]</label>
 						<selected>Skin.HasSetting(NoInformationLabel.Visible)</selected>
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
+					</control>
+                    
+					<control type="button" id="820" description="Reset Page Setting Button">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[10041]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+						<onclick>SetProperty(DialogAction,SetFocus(58),1189)</onclick>
+						<onclick>ActivateWindow(1189)</onclick>
 					</control>
 				</control>
 
@@ -318,24 +341,31 @@
 						<label>-</label>
 					</control>
 
-					<control type="button" id="904" description="Reload Skin Button">
+					<control type="button" id="910" description="Reload Skin Button">
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31871]</label>
 						<onclick>ReloadSkin()</onclick>
 					</control>
-					
-					<control type="label" id="905" description="Spacer">
+
+					<control type="button" id="920" description="Reset Page Setting Button">
 						<width>1100</width>
-						<label>-</label>
+						<align>left</align>
+						<label>$LOCALIZE[10041]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+						<onclick>SetProperty(DialogAction,SetFocus(59),1189)</onclick>
+						<onclick>ActivateWindow(1189)</onclick>
 					</control>
 
-					<control type="button" id="906" description="Reset Skin Setting Button">
+					<control type="button" id="930" description="Reset Skin Setting Button">
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31141]</label>
-						<onclick>SetFocus(97)</onclick>
-						<onclick>SetFocus(905)</onclick>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+						<onclick>SetProperty(DialogAction,SetFocus(60),1189)</onclick>
+						<onclick>ActivateWindow(1189)</onclick>
 					</control>
 				</control>
 			</control>
@@ -451,12 +481,17 @@
 						<label>$LOCALIZE[31193]</label>
 					</control>
 					<control type="textbox">
-						<visible>Control.HasFocus(904)</visible>
+						<visible>Control.HasFocus(910)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31196]</label>
 					</control>
 					<control type="textbox">
-						<visible>Control.HasFocus(906)</visible>
+						<visible>Control.HasFocus(120) | Control.HasFocus(320) | Control.HasFocus(720) | Control.HasFocus(820) | Control.HasFocus(920)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31897]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(930)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31195]</label>
 					</control>
