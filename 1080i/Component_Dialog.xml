@@ -490,6 +490,26 @@
 		</control>
 	</include>
     
+	<include name="StatusIconFrameForDialog" description="Status Icon Frame">
+		<control type="group">
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-10</posy>
+				<width>140</width>
+				<height>140</height>
+				<texture background="true">elements/circle-shadow.png</texture>
+			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>10</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+
     <include name="DefaultHelpFrameForDialog">
         <control type="image">
             <width>480</width>
@@ -524,4 +544,59 @@
             <label>$LOCALIZE[31904]</label>
         </control>
     </include>
+
+	<include name="TitledFullListFrameForDialog" description="Titled Full-Dialog List Frame">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>600</width>
+				<height>800</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-background.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>58</posy>
+				<width>592</width>
+				<height>704</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	<include name="TitledHalfListFrameForDialog" description="Titled Half-Dialog List Frame">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>600</width>
+				<height>390</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-background.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>-1</posx>
+				<posy>351</posy>
+				<width>602</width>
+				<height>40</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>58</posy>
+				<width>592</width>
+				<height>324</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
 </includes>

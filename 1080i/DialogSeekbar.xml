@@ -115,7 +115,7 @@
 				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(karaoke)]</visible>
 				<posx>1750</posx>
 				<posy>890</posy>
-				<include>StatusIconFrame</include>
+				<include>StatusIconFrameForDialog</include>
 
 				<control type="group">
 					<visible>Player.Paused</visible>
