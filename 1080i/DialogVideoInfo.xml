@@ -25,7 +25,7 @@
 					<posy>4</posy>
 					<width>262</width>
 					<height>262</height>
-					<texture background="true" diffuse="circlemask.png">$INFO[Container(50).ListItem.Icon]</texture>
+					<texture background="true" diffuse="elements/circle-mask.png">$INFO[Container(50).ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
 		
@@ -34,7 +34,7 @@
 					<posy>0</posy>
 					<width>270</width>
 					<height>270</height>
-					<texture background="true">circleborder.png</texture>
+					<texture background="true">elements/circle-border.png</texture>
 					<colordiffuse>MainColor</colordiffuse>
 					<aspectratio>stretch</aspectratio>
 				</control>

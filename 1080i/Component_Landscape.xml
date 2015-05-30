@@ -67,13 +67,10 @@
 						<width>330</width>
 						<height>646</height>
 				
-						<control type="image">
-							<width>330</width>
-							<height>464</height>
-							<fadetime>100</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true">AAApostershadow.png</texture>
-						</control>
+                        <control type="group">
+                            <include>ShadowForLandscape</include>
+                        </control>
+                        
 						<include>SelectedItemForLandscape</include>
 					</control>
 				</control>
@@ -201,16 +198,12 @@
 						<posy>380</posy>
 						<width>330</width>
 						<height>646</height>
-				
-						<control type="image">
-							<visible>Container.OnNext</visible>
+
+                        <control type="group">
 							<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
-							<width>330</width>
-							<height>464</height>
-							<fadetime>100</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true">AAApostershadow.png</texture>
-						</control>
+                            <include>ShadowForLandscape</include>
+                        </control>
+                        
 						<include>ItemMinus1ForLandscape</include>
 					</control>
 				</control>
@@ -229,16 +222,12 @@
 						<posy>380</posy>
 						<width>330</width>
 						<height>646</height>
-				
-						<control type="image">
-							<visible>Container.OnNext</visible>
+
+                        <control type="group">
 							<animation effect="fade" start="0" end="100" time="200" reversible="false">Hidden</animation>
-							<width>330</width>
-							<height>464</height>
-							<fadetime>100</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true">AAApostershadow.png</texture>
-						</control>
+                            <include>ShadowForLandscape</include>
+                        </control>
+                        
 						<include>SelectedItemForLandscape</include>
 					</control>
 				</control>
@@ -332,17 +321,12 @@
 						<posy>380</posy>
 						<width>330</width>
 						<height>646</height>
-				
-						<control type="image">
-							<visible>Container.OnPrevious</visible>
+
+                        <control type="group">
 							<animation effect="fade" start="0" end="100" time="200" reversible="false">Hidden</animation>
-							<width>330</width>
-							<height>464</height>
-							<fadetime>100</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true">AAApostershadow.png</texture>
-						</control>
-					
+                            <include>ShadowForLandscape</include>
+                        </control>
+                        
 						<include>SelectedItemForLandscape</include>
 					</control>
 				</control>
@@ -362,16 +346,11 @@
 						<width>330</width>
 						<height>646</height>
 
-						<control type="image">
-							<visible>Container.OnPrevious</visible>
+                        <control type="group">
 							<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
-							<width>330</width>
-							<height>464</height>
-							<fadetime>100</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<texture background="true">AAApostershadow.png</texture>
-						</control>
-
+                            <include>ShadowForLandscape</include>
+                        </control>
+                        
 						<include>ItemPlus1ForLandscape</include>
 					</control>
 				</control>
@@ -435,14 +414,13 @@
 		<control type="group">
 			<include>VisibilityForVerticalIcon</include>
 
-
 			<control type="image">
 				<posx>20</posx>
 				<posy>20</posy>
 				<width>290</width>
 				<height>424</height>
-				<texture diffuse="postermaskbig.png">poster.png</texture>
-				<colordiffuse>MainColor</colordiffuse>
+				<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 					
 			<control type="image">
@@ -450,8 +428,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-4).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -464,8 +442,8 @@
 				<posy>20</posy>
 				<width>290</width>
 				<height>290</height>
-				<texture diffuse="postermaskbig.png">poster.png</texture>
-				<colordiffuse>MainColor</colordiffuse>
+				<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 					
 			<control type="image">
@@ -473,8 +451,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-4).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
@@ -498,8 +476,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -521,8 +499,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-3).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
@@ -546,8 +524,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -569,8 +547,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-2).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
@@ -594,8 +572,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -617,8 +595,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(-1).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
@@ -642,8 +620,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -665,8 +643,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(0).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
@@ -690,8 +668,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		<control type="group">
@@ -712,8 +690,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(1).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
@@ -736,8 +714,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(2).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -783,8 +761,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(3).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -806,8 +784,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(3).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
@@ -830,8 +808,8 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>412</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(4).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 		
@@ -853,10 +831,38 @@
 				<posy>26</posy>
 				<width>278</width>
 				<height>278</height>
-				<aspectratio>stretch</aspectratio>
 				<texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container.ListItem(4).Icon]</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 	</include>
 
+	<include name="ShadowForLandscape">
+		<control type="group">
+			<include>VisibilityForVerticalIcon</include>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>330</width>
+				<height>464</height>
+				<texture colordiffuse="MainColor">elements/poster-shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+		
+		<control type="group">
+			<include>VisibilityForSquareIcon</include>
+			<posy>134</posy>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>330</width>
+				<height>330</height>
+				<texture colordiffuse="MainColor">elements/poster-shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
 </includes>
