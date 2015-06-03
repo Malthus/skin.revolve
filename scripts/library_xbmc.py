@@ -93,4 +93,8 @@ def copySkinSettingToProperty(skinsetting, property, window):
 def copyBooleanSkinSettingToProperty(skinsetting, property, window):
     value = getValueFromBooleanSkinSetting(skinsetting)
     setValueToProperty(property, value, window)
+
+    
+def getLocalizedValue(value):
+    return xbmc.getLocalizeString(value)
     

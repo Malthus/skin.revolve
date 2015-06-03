@@ -11,7 +11,7 @@
 import sys
 import xbmc
 
-from xbmc_property import *
+from library_xbmc import *
 
 SCRIPT_NAME = 'Revolve/PopulateStaticItemsFromHomeProperties'
 DEFAULT_TARGETWINDOW = '0'
@@ -19,64 +19,96 @@ DEFAULT_TARGETMASK = 'MyItems%02dOption'
 TOTAL_ITEMS = 20
 
 def logMessage(annotation):
-    message = '%s: %s' % (SCRIPT_NAME, annotation.encode('ascii', 'ignore'))
-    print message
-    xbmc.log(msg=message, level=xbmc.LOGDEBUG)
+    if isinstance(annotation, str):
+        annotation = annotation.decode("utf-8")
+    message = u'%s: %s' % (SCRIPT_NAME, annotation)
+    xbmc.log(msg=message.encode("utf-8"), level=xbmc.LOGDEBUG)
 
-def createGenericNameProperty(sourcebase, targetproperty, targetwindow):
+def createGenericName(sourcebase):
     value = getValueFromHomeProperty(sourcebase + '.Title')
     value = replaceEmptyValueFromHomeProperty(sourcebase + '.EpisodeTitle', value)
-    setValueToProperty(targetproperty, value, targetwindow)
+    return value
     
-def createGenericSubtitleProperty(sourcebase, targetproperty, targetwindow):
+def createGenericSubtitle(sourcebase):
     value = joinLabels(
         getValueFromHomeProperty(sourcebase + '.ShowTitle'),
         getValueFromHomeProperty(sourcebase + '.TVShowTitle'),
         getValueFromHomeProperty(sourcebase + '.Studio'),
         getValueFromHomeProperty(sourcebase + '.Artist'),
         getValueFromHomeProperty(sourcebase + '.Author'),
-        getValueFromHomeProperty(sourcebase + '.Album'),
         getNumericValue(getValueFromHomeProperty(sourcebase + '.Year')),
         getNumericValue(getValueFromHomeProperty(sourcebase + '.Version')))
-    setValueToProperty(targetproperty, value, targetwindow)
+    return value
+
+def createSongSubtitle(sourcebase):
+    value = joinLabels(
+        getNumericValue(getValueFromHomeProperty(sourcebase + '.Artist')),
+        getNumericValue(getValueFromHomeProperty(sourcebase + '.Album')),
+        getNumericValue(getValueFromHomeProperty(sourcebase + '.Year')))
+    return value
     
-def createGenericIconProperty(sourcebase, targetproperty, targetwindow):
+def createGenericThumbnail(sourcebase):
     value = getValueFromHomeProperty(sourcebase + '.Art(poster)')
     value = replaceEmptyValueFromHomeProperty(sourcebase + '.Thumb', value)
     value = replaceEmptyValueFromHomeProperty(sourcebase + '.Icon', value)
-    setValueToProperty(targetproperty, value, targetwindow)
-    
-def createGenericBackgroundImageProperty(sourcebase, targetproperty, targetwindow):
+    return value
+
+def createGenericBackgroundImage(sourcebase):
     value = getValueFromHomeProperty(sourcebase + '.Art(Fanart)')
     value = replaceEmptyValueFromHomeProperty(sourcebase + '.Property(Fanart_image)', value)
     value = replaceEmptyValueFromHomeProperty(sourcebase + '.Fanart', value)
-    setValueToProperty(targetproperty, value, targetwindow)
-    
-def createGenericActionProperty(sourcebase, targetproperty, targetwindow):
+    return value
+
+def createGenericAction(sourcebase):
     value = getValueFromHomeProperty(sourcebase + '.Play')
     if value == '':
         value = addPrefixAndSuffixToLabel(getValueFromHomeProperty(sourcebase + '.Path'), 'PlayMedia("', '")')
     if value == '':
         value = getValueFromHomeProperty(sourcebase + '.LibraryPath')
-        if "videodb" in value:
+        if 'videodb' in value.lower():
             value = addPrefixAndSuffixToLabel(value, "ActivateWindow(videos,", ",return)")
-        if "musicdb" in value:
+        if 'musicdb' in value.lower():
             value = addPrefixAndSuffixToLabel(value, "ActivateWindow(music,", ",return)")
-    setValueToProperty(targetproperty, value, targetwindow)
-    
+    return value
 
+
+def determineNameMethod(sourcemask):
+    return createGenericName    
+    
+def determineSubtitleMethod(sourcemask):
+    value = createGenericSubtitle
+    if 'song' in sourcemask.lower():
+        value = createSongSubtitle
+    return value
+    
+def determineThumbnailMethod(sourcemask):
+    return createGenericThumbnail
+    
+def determineBackgroundImageMethod(sourcemask):
+    return createGenericBackgroundImage
+    
+def determineActionMethod(sourcemask):
+    return createGenericAction
+
+    
 def copyProperties(sourcemask, targetmask, targetwindow):
+    nameMethod = determineNameMethod(sourcemask)
+    subtitleMethod = determineSubtitleMethod(sourcemask)
+    thumbnailMethod = determineThumbnailMethod(sourcemask)
+    backgroundImageMethod = determineBackgroundImageMethod(sourcemask)
+    actionMethod = determineActionMethod(sourcemask)
+
     for index in range (1, TOTAL_ITEMS + 1):
         sourcebase = sourcemask % (index)
         targetbase = targetmask % (index)
 
-        createGenericNameProperty(sourcebase, targetbase + '.Name', targetwindow)
-        createGenericSubtitleProperty(sourcebase, targetbase + '.Subtitle', targetwindow)
-        createGenericIconProperty(sourcebase, targetbase + '.Thumbnail', targetwindow)
-        createGenericBackgroundImageProperty(sourcebase, targetbase + '.BackgroundImage', targetwindow)
-        createGenericActionProperty(sourcebase, targetbase + '.Action', targetwindow)
+        setValueToProperty(targetbase + '.Name', nameMethod(sourcebase), targetwindow)
+        setValueToProperty(targetbase + '.Subtitle', subtitleMethod(sourcebase), targetwindow)
+        setValueToProperty(targetbase + '.Thumbnail', thumbnailMethod(sourcebase), targetwindow)
+        setValueToProperty(targetbase + '.BackgroundImage', backgroundImageMethod(sourcebase), targetwindow)
+        setValueToProperty(targetbase + '.Action', actionMethod(sourcebase), targetwindow)
 
-
+        
 if len(sys.argv) > 1:
     logMessage('Call to ' + SCRIPT_NAME + ' script with arguments: ' + str(sys.argv) + '.')	
     sourcemask = sys.argv[1]

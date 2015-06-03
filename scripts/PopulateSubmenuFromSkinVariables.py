@@ -11,17 +11,18 @@
 import sys
 import xbmc
 
-from xbmc_property import *
+from library_xbmc import *
 
-SCRIPT_NAME = 'Revolve/PopulateListFromSkinVariables'
+SCRIPT_NAME = 'Revolve/PopulateSubmenuFromSkinVariables'
 DEFAULT_TARGETMASK = 'MySubmenu%02dOption'
 DEFAULT_TARGETWINDOW = '0'
 TOTAL_ITEMS = 20
 
 def logMessage(annotation):
-    message = '%s: %s' % (SCRIPT_NAME, annotation.encode('ascii', 'ignore'))
-    xbmc.log(msg=message, level=xbmc.LOGDEBUG)
-
+    if isinstance(annotation, str):
+        annotation = annotation.decode("utf-8")
+    message = u'%s: %s' % (SCRIPT_NAME, annotation)
+    xbmc.log(msg=message.encode("utf-8"), level=xbmc.LOGDEBUG)
 
 def copyProperties(sourcemask, targetmask, targetwindow):
     for index in range (1, TOTAL_ITEMS + 1):
