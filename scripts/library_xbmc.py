@@ -11,6 +11,8 @@
 import sys
 import xbmc
 
+# Filter Methods
+
 def escapeValue(value):
     if '"' not in value:
         value = '"' + value + '"'
@@ -21,80 +23,95 @@ def getNumericValue(value):
         value = ''
     return value
     
-def getValueFromInfoLabel(infolabel):    
-    value = xbmc.getInfoLabel(infolabel)
-    return value
+def getLocalizedValue(value):
+    return xbmc.getLocalizedString(value)
+
+# Recombination Methods    
     
-def getValueFromProperty(property, window):
-    value = getValueFromInfoLabel('Window(' + window + ').Property(' + property + ')')
-    return value
-
-def getValueFromHomeProperty(property):
-    value = getValueFromProperty(property, 'home')
-    return value
-
-def getNumericValueFromHomeProperty(property):
-    value = getValueFromProperty(property, 'home')
-    if value == '0':
-        value = ''
-    return value
-
-def getValueFromSkinSetting(skinsetting):
-    value = getValueFromInfoLabel('Skin.String(' + skinsetting + ')')
-    return value
-
-def getValueFromBooleanSkinSetting(skinsetting):
-    value = getValueFromInfoLabel('Skin.HasSetting(' + skinsetting + ')')
-    return value
-
-
-def replaceEmptyValueFromHomeProperty(property, value):
-    if value == '':
-        value = getValueFromHomeProperty(property)
-    return value
-
+def joinSingleValue(result, value):
+    return result + value
     
-def addPrefixAndSuffixToLabel(value, prefix, suffix):
-    if value != '':
-        value = prefix + value + suffix
-    return value
+def joinValues(*values):
+    result = ''
+    for value in values:
+        result = joinSingleValue(result, label)
+    return result
     
-def joinSingleLabel(value, label):
-    if value != '':
-        value = value + addPrefixAndSuffixToLabel(label, ' | ', '')
+def joinSingleItem(result, item):
+    if (result != '') and (item != ''):
+        result = result + joinSingleValue(' | ', item)
+    elif result == '':
+        result = item
+    return result
+    
+def joinItems(*items):
+    result = ''
+    for item in items:
+        result = joinSingleItem(result, item)
+    return result
+
+def addPrefixToItem(prefix, item):
+    if item != '':
+        item = prefix + item
+    return item
+    
+def addPrefixAndSuffixToItem(prefix, item, suffix):
+    if item != '':
+        item = prefix + item + suffix
+    return item
+    
+def replaceEmptyItem(item, nextItem):
+    if item != '':
+        return item
     else:
-        value = label    
-    return value
+        return nextItem
     
-def joinLabels(*labels):
-    value = ''
-    for label in labels:
-        value = joinSingleLabel(value, label)
-    return value
+# Data Read Methods    
+    
+def getItemFromInfoLabel(infolabel):    
+    return xbmc.getInfoLabel(infolabel)
+    
+def getItemFromProperty(property, window):
+    return getItemFromInfoLabel('Window(' + window + ').Property(' + property + ')')
 
+def getItemFromHomeProperty(property):
+    return getItemFromProperty(property, 'home')
 
-def setValueToProperty(property, value, window):
-    if value != '':
-        xbmc.executebuiltin('SetProperty(' + property + ',' + escapeValue(value) + ',' + window + ')')        
+def getNumericItemFromHomeProperty(property):
+    return getNumericValue(getItemFromProperty(property, 'home'))
+
+def getItemFromSkinSetting(skinsetting):
+    return getItemFromInfoLabel('Skin.String(' + skinsetting + ')')
+
+def getBooleanItemFromSkinSetting(skinsetting):
+    return getItemFromInfoLabel('Skin.HasSetting(' + skinsetting + ')')
+
+def replaceEmptyItemWithHomeProperty(item, property):
+    if item == '':
+        item = getItemFromHomeProperty(property)
+    return item
+
+# Data Write Methods    
+    
+def setItemToProperty(property, item, window):
+    if item != '':
+        xbmc.executebuiltin('SetProperty(' + property + ',' + escapeValue(item) + ',' + window + ')')        
     else:
         xbmc.executebuiltin('ClearProperty(' + property + ',' + window + ')')
     
-def setValueToSkinSetting(skinsetting, value):
-    if value != '':
-        xbmc.executebuiltin('Skin.SetString(' + skinsetting + ',' + escapeValue(value) + ')')
+def setItemToSkinSetting(skinsetting, item):
+    if item != '':
+        xbmc.executebuiltin('Skin.SetString(' + skinsetting + ',' + escapeValue(item) + ')')
     else:
         xbmc.executebuiltin('Skin.Reset(' + skinsetting + ')')
     
+# Data Copy Methods    
     
 def copySkinSettingToProperty(skinsetting, property, window):
-    value = getValueFromSkinSetting(skinsetting)
-    setValueToProperty(property, value, window)
+    item = getItemFromSkinSetting(skinsetting)
+    setItemToProperty(property, item, window)
 
 def copyBooleanSkinSettingToProperty(skinsetting, property, window):
-    value = getValueFromBooleanSkinSetting(skinsetting)
-    setValueToProperty(property, value, window)
+    item = getBooleanItemFromSkinSetting(skinsetting)
+    setItemToProperty(property, item, window)
 
-    
-def getLocalizedValue(value):
-    return xbmc.getLocalizeString(value)
-    

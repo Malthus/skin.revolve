@@ -25,61 +25,68 @@ def logMessage(annotation):
     xbmc.log(msg=message.encode("utf-8"), level=xbmc.LOGDEBUG)
 
 def createGenericName(sourcebase):
-    value = getValueFromHomeProperty(sourcebase + '.Title')
-    value = replaceEmptyValueFromHomeProperty(sourcebase + '.EpisodeTitle', value)
-    return value
-    
+    return replaceEmptyItemWithHomeProperty(getItemFromHomeProperty(sourcebase + '.Title'), sourcebase + '.EpisodeTitle')
+
 def createGenericSubtitle(sourcebase):
-    value = joinLabels(
-        getValueFromHomeProperty(sourcebase + '.ShowTitle'),
-        getValueFromHomeProperty(sourcebase + '.TVShowTitle'),
-        getValueFromHomeProperty(sourcebase + '.Studio'),
-        getValueFromHomeProperty(sourcebase + '.Artist'),
-        getValueFromHomeProperty(sourcebase + '.Author'),
-        getNumericValue(getValueFromHomeProperty(sourcebase + '.Year')),
-        getNumericValue(getValueFromHomeProperty(sourcebase + '.Version')))
-    return value
+    return joinItems(
+        getItemFromHomeProperty(sourcebase + '.ShowTitle'),
+        getItemFromHomeProperty(sourcebase + '.TVShowTitle'),
+        getItemFromHomeProperty(sourcebase + '.Studio'),
+        getItemFromHomeProperty(sourcebase + '.Artist'),
+        getNumericValue(getItemFromHomeProperty(sourcebase + '.Year')),
+        getNumericValue(getItemFromHomeProperty(sourcebase + '.Version')))
+
+def createEpisodeSubtitle(sourcebase):
+    seasonNumber = replaceEmptyItemWithHomeProperty(getItemFromHomeProperty(sourcebase + '.Season'), sourcebase + '.EpisodeSeason')
+    episodeNumber = replaceEmptyItemWithHomeProperty(getItemFromHomeProperty(sourcebase + '.Episode'), sourcebase + '.EpisodeNumber')
+    
+    return joinItems(
+        getItemFromHomeProperty(sourcebase + '.ShowTitle'),
+        getItemFromHomeProperty(sourcebase + '.TVShowTitle'),
+        addPrefixToItem(getLocalizedValue(20373) + ' ', getNumericValue(seasonNumber)),
+        addPrefixToItem(getLocalizedValue(20359) + ' ', getNumericValue(episodeNumber)))
 
 def createSongSubtitle(sourcebase):
-    value = joinLabels(
-        getNumericValue(getValueFromHomeProperty(sourcebase + '.Artist')),
-        getNumericValue(getValueFromHomeProperty(sourcebase + '.Album')),
-        getNumericValue(getValueFromHomeProperty(sourcebase + '.Year')))
-    return value
+    return joinItems(
+        getItemFromHomeProperty(sourcebase + '.Artist'),
+        getItemFromHomeProperty(sourcebase + '.Album'),
+        getNumericValue(getItemFromHomeProperty(sourcebase + '.Year')))
 
 def createGenericThumbnail(sourcebase):
-    value = getValueFromHomeProperty(sourcebase + '.Art(poster)')
-    value = replaceEmptyValueFromHomeProperty(sourcebase + '.Thumb', value)
-    value = replaceEmptyValueFromHomeProperty(sourcebase + '.Icon', value)
-    return value
+    result = getItemFromHomeProperty(sourcebase + '.Art(poster)')
+    result = replaceEmptyItemWithHomeProperty(result, sourcebase + '.Thumb')
+    result = replaceEmptyItemWithHomeProperty(result, sourcebase + '.Icon')
+    return result
 
 def createGenericBackgroundImage(sourcebase):
-    value = getValueFromHomeProperty(sourcebase + '.Art(Fanart)')
-    value = replaceEmptyValueFromHomeProperty(sourcebase + '.Property(Fanart_image)', value)
-    value = replaceEmptyValueFromHomeProperty(sourcebase + '.Fanart', value)
-    return value
+    result = getItemFromHomeProperty(sourcebase + '.Art(Fanart)')
+    result = replaceEmptyItemWithHomeProperty(result, sourcebase + '.Property(Fanart_image)')
+    result = replaceEmptyItemWithHomeProperty(result, sourcebase + '.Fanart')
+    return result
 
 def createGenericAction(sourcebase):
-    value = getValueFromHomeProperty(sourcebase + '.Play')
-    if value == '':
-        value = addPrefixAndSuffixToLabel(getValueFromHomeProperty(sourcebase + '.Path'), 'PlayMedia("', '")')
-    if value == '':
-        value = getValueFromHomeProperty(sourcebase + '.LibraryPath')
-        if 'videodb' in value.lower():
-            value = addPrefixAndSuffixToLabel(value, "ActivateWindow(videos,", ",return)")
-        if 'musicdb' in value.lower():
-            value = addPrefixAndSuffixToLabel(value, "ActivateWindow(music,", ",return)")
-    return value
+    result = getItemFromHomeProperty(sourcebase + '.Play')
+    if result == '':
+        result = addPrefixAndSuffixToItem('PlayMedia("', getItemFromHomeProperty(sourcebase + '.Path'), '")')
+    if result == '':
+        result = getItemFromHomeProperty(sourcebase + '.LibraryPath')
+        if 'videodb' in result.lower():
+            result = addPrefixAndSuffixToItem("ActivateWindow(videos,", result, ",return)")
+        if 'musicdb' in result.lower():
+            result = addPrefixAndSuffixToItem("ActivateWindow(music,", result, ",return)")
+    return result
 
 
 def determineNameMethod(sourcemask):
     return createGenericName    
     
 def determineSubtitleMethod(sourcemask):
-    value = createGenericSubtitle
+    result = createGenericSubtitle
+    if 'episode' in sourcemask.lower():
+        result = createEpisodeSubtitle
     if 'song' in sourcemask.lower():
-        value = createSongSubtitle
-    return value
+        result = createSongSubtitle
+    return result
     
 def determineThumbnailMethod(sourcemask):
     return createGenericThumbnail
@@ -102,11 +109,11 @@ def copyProperties(sourcemask, targetmask, targetwindow):
         sourcebase = sourcemask % (index)
         targetbase = targetmask % (index)
 
-        setValueToProperty(targetbase + '.Name', nameMethod(sourcebase), targetwindow)
-        setValueToProperty(targetbase + '.Subtitle', subtitleMethod(sourcebase), targetwindow)
-        setValueToProperty(targetbase + '.Thumbnail', thumbnailMethod(sourcebase), targetwindow)
-        setValueToProperty(targetbase + '.BackgroundImage', backgroundImageMethod(sourcebase), targetwindow)
-        setValueToProperty(targetbase + '.Action', actionMethod(sourcebase), targetwindow)
+        setItemToProperty(targetbase + '.Name', nameMethod(sourcebase), targetwindow)
+        setItemToProperty(targetbase + '.Subtitle', subtitleMethod(sourcebase), targetwindow)
+        setItemToProperty(targetbase + '.Thumbnail', thumbnailMethod(sourcebase), targetwindow)
+        setItemToProperty(targetbase + '.BackgroundImage', backgroundImageMethod(sourcebase), targetwindow)
+        setItemToProperty(targetbase + '.Action', actionMethod(sourcebase), targetwindow)
 
         
 if len(sys.argv) > 1:
