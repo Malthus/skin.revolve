@@ -13,11 +13,13 @@
 	</include>
     
     <include name="VisibilityForBanner">
-    	<visible>!IsEmpty(ListItem.Art(banner)) | !IsEmpty(ListItem.Art(season.banner)) | !IsEmpty(ListItem.Art(tvshow.banner))</visible>
+<!--    	<visible>!IsEmpty(ListItem.Art(banner)) | !IsEmpty(ListItem.Art(season.banner)) | !IsEmpty(ListItem.Art(tvshow.banner))</visible> -->
+    	<visible>!IsEmpty(ListItem.Art(banner))</visible>
     </include>
 	
     <include name="VisibilityForNoBanner">
-    	<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(season.banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+<!--    	<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(season.banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible> -->
+        <visible>IsEmpty(ListItem.Art(banner))</visible>
     </include>
 	
 	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
