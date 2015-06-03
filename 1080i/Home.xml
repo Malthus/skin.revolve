@@ -64,7 +64,7 @@
 			<defaultcontrol>8</defaultcontrol>
 			<onup>300</onup>
 			<ondown>300</ondown>
-			<onleft condition="Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(15) | Container(300).HasFocus(16)">600</onleft>
+			<onleft condition="[Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source)] | [Container(300).HasFocus(6) + !IsEmpty(Skin.String(CircleEpisodeOption.Source)] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable)] | [Container(300).HasFocus(16) + !IsEmpty(Skin.String(CircleAlbumOption.Source)]">600</onleft>
 			<onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)">900</onleft>
 			<onright>Noop</onright>
 

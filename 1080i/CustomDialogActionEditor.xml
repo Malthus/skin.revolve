@@ -252,43 +252,43 @@
 					<item id="202" description="Open Videos Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31828]</label>
-                        <property name="Command">ActivateWindow(videos,videodb://)</property>
+                        <property name="Command">ActivateWindow(videos,videodb://,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="203" description="Open Videos / Movies Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31829]</label>
-						<property name="Command">ActivateWindow(videos,videodb://movies/)</property>
+						<property name="Command">ActivateWindow(videos,videodb://movies/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="204" description="Open Videos / TV Shows Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31830]</label>
-						<property name="Command">ActivateWindow(videos,videodb://tvshows/)</property>
+						<property name="Command">ActivateWindow(videos,videodb://tvshows/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="205" description="Open Videos / Music Videos Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31831]</label>
-						<property name="Command">ActivateWindow(videos,videodb://musicvideos/)</property>
+						<property name="Command">ActivateWindow(videos,videodb://musicvideos/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="207" description="Open Videos / Playlists Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31832]</label>
-						<property name="Command">ActivateWindow(videos,special://videoplaylists/)</property>
+						<property name="Command">ActivateWindow(videos,special://videoplaylists/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="208" description="Open Videos / Addons Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31833]</label>
-						<property name="Command">ActivateWindow(videos,addons://sources/video/)</property>
+						<property name="Command">ActivateWindow(videos,addons://sources/video/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="209" description="Open Videos / Files Option">
                         <visible>Container(30).HasFocus(2)</visible>
 						<label>$LOCALIZE[31834]</label>
-						<property name="Command">ActivateWindow(videos,sources://video/)</property>
+						<property name="Command">ActivateWindow(videos,sources://video/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="210" description="Open Video Playlist Option">
@@ -333,19 +333,19 @@
 					<item id="302">
                         <visible>Container(30).HasFocus(3)</visible>
 						<label>$LOCALIZE[31841]</label>
-						<property name="Command">ActivateWindow(music,musicdb://)</property>
+						<property name="Command">ActivateWindow(music,musicdb://,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="307">
                         <visible>Container(30).HasFocus(3)</visible>
 						<label>$LOCALIZE[31842]</label>
-						<property name="Command">ActivateWindow(music,special://musicplaylists/)</property>
+						<property name="Command">ActivateWindow(music,special://musicplaylists/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="308">
                         <visible>Container(30).HasFocus(3)</visible>
 						<label>$LOCALIZE[31843]</label>
-						<property name="Command">ActivateWindow(music,addons://sources/audio/)</property>
+						<property name="Command">ActivateWindow(music,addons://sources/audio/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="309">
@@ -357,7 +357,7 @@
 					<item id="310" description="Open Music Playlist Option">
                         <visible>Container(30).HasFocus(3)</visible>
 						<label>$LOCALIZE[31845]</label>
-						<property name="Command">ActivateWindow(musiclibrary$INFO[Window.Property(ParameterFile),$COMMA,])</property>
+						<property name="Command">ActivateWindow(musiclibrary$INFO[Window.Property(ParameterFile),$COMMA,],return)</property>
 						<property name="Parameter">F</property>
 						<property name="InitialPath">special://musicplaylists/</property>
 						<onclick>Noop</onclick>

@@ -166,6 +166,16 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
+					<control type="radiobutton" id="305" description="Circle Next Aired Option">
+                        <enable>System.HasAddon(script.tv.show.next.aired)</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31786]</label>
+                        <selected>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable)</selected>
+						<onclick>Skin.ToggleSetting(CircleNextAired.Enable)</onclick>
+					</control>
+                    
 					<control type="button" id="301" description="Circle Movies Source Option">
 						<width>1100</width>
 						<align>left</align>
@@ -439,6 +449,11 @@
 						<visible>Control.HasFocus(304)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31785]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(305)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31787]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(701)</visible>
