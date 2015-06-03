@@ -46,7 +46,7 @@ def createSongSubtitle(sourcebase):
         getNumericValue(getValueFromHomeProperty(sourcebase + '.Album')),
         getNumericValue(getValueFromHomeProperty(sourcebase + '.Year')))
     return value
-    
+
 def createGenericThumbnail(sourcebase):
     value = getValueFromHomeProperty(sourcebase + '.Art(poster)')
     value = replaceEmptyValueFromHomeProperty(sourcebase + '.Thumb', value)
