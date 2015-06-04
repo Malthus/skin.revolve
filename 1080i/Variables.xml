@@ -1028,7 +1028,8 @@
 	
 	<variable name="PlayerInformationLabel">
 		<value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.EXIFDate,, | ]$INFO[Slideshow.Filesize]</value>
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, | $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, | $LOCALIZE[20359] ,]$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Year, | ,]</value>
+		<value condition="Player.HasVideo + !IsEmpty(VideoPlayer.ChannelNumber)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</value>
+		<value condition="Player.HasVideo">$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season, $LOCALIZE[20373] , | ]$INFO[VideoPlayer.Episode, $LOCALIZE[20359] , | ]$INFO[VideoPlayer.Artist, | ]$INFO[VideoPlayer.Year]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.Year, | ]</value>
 	</variable>
 	
