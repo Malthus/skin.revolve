@@ -70,13 +70,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu01Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu01Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu01Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]01Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="202" description="Custom Option 1 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu01Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu01Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -98,13 +98,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu02Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu02Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu02Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]02Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="204" description="Custom Option 2 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu02Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu02Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -126,13 +126,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu03Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu03Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu03Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]03Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="206" description="Custom Option 3 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu03Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu03Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -154,13 +154,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu04Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu04Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu04Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]04Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="208" description="Custom Option 4 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu04Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu04Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -182,13 +182,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu05Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu05Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu05Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]05Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="210" description="Custom Option 5 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu05Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu05Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -210,13 +210,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu06Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu06Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu06Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]06Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="212" description="Custom Option 6 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu06Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu06Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -238,13 +238,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu07Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu07Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu07Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]07Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="214" description="Custom Option 7 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu07Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu07Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -266,13 +266,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu08Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu08Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu08Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]08Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="216" description="Custom Option 8 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu08Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu08Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -294,13 +294,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu09Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu09Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu09Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]09Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="218" description="Custom Option 9 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu09Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu09Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -322,13 +322,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu10Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu10Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu10Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]10Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="220" description="Custom Option 10 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu10Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu10Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -350,13 +350,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu11Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu11Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu11Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]11Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="222" description="Custom Option 11 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu11Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu11Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -378,13 +378,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu12Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu12Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu12Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]12Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="224" description="Custom Option 12 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu12Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu12Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -406,13 +406,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu13Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu13Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu13Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]13Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="226" description="Custom Option 13 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu13Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu13Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -434,13 +434,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu14Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu14Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu14Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]14Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="228" description="Custom Option 14 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu14Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu14Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -462,13 +462,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu15Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu15Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu15Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]15Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="230" description="Custom Option 15 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu15Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu15Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -490,13 +490,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu16Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu16Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu16Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]16Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="232" description="Custom Option 16 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu16Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu16Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -518,13 +518,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu17Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu17Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu17Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]17Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="234" description="Custom Option 17 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu17Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu17Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -546,13 +546,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu18Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu18Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu18Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]18Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="236" description="Custom Option 18 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu18Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu18Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -574,13 +574,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu19Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu19Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu19Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]19Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="238" description="Custom Option 19 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu19Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu19Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>
@@ -602,13 +602,13 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu20Option.Name)]</label>
-                    <selected>StringCompare(Window.Property(CustomSubmenu20Option.Active),True)</selected>
+                    <selected>Substring(Window.Property(CustomSubmenu20Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]20Option.Active)</onclick>
                     <onclick>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="240" description="Custom Option 20 Edit Button">
-                    <enable>StringCompare(Window.Property(CustomSubmenu20Option.Active),True)</enable>
+                    <enable>Substring(Window.Property(CustomSubmenu20Option.Active),T,left)</enable>
                     <width>1240</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31136]</label>

@@ -27,7 +27,7 @@
             
             <content>
                 <item id="1" description="My Submenu 1 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu01Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu01Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu01Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu01Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu01Option.BackgroundImage)]</property>
@@ -36,7 +36,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu01Option.Action)]</onclick>
                 </item>
                 <item id="2" description="My Submenu 2 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu02Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu02Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu02Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu02Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu02Option.BackgroundImage)]</property>
@@ -45,7 +45,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu02Option.Action)]</onclick>
                 </item>
                 <item id="3" description="My Submenu 3 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu03Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu03Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu03Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu03Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu03Option.BackgroundImage)]</property>
@@ -54,7 +54,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu03Option.Action)]</onclick>
                 </item>
                 <item id="4" description="My Submenu 4 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu04Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu04Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu04Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu04Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu04Option.BackgroundImage)]</property>
@@ -63,7 +63,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu04Option.Action)]</onclick>
                 </item>
                 <item id="5" description="My Submenu 5 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu05Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu05Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu05Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu05Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu05Option.BackgroundImage)]</property>
@@ -72,7 +72,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu05Option.Action)]</onclick>
                 </item>
                 <item id="6" description="My Submenu 6 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu06Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu06Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu06Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu06Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu06Option.BackgroundImage)]</property>
@@ -81,7 +81,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu06Option.Action)]</onclick>
                 </item>
                 <item id="7" description="My Submenu 7 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu07Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu07Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu07Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu07Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu07Option.BackgroundImage)]</property>
@@ -90,7 +90,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu07Option.Action)]</onclick>
                 </item>
                 <item id="8" description="My Submenu 8 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu08Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu08Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu08Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu08Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu08Option.BackgroundImage)]</property>
@@ -99,7 +99,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu08Option.Action)]</onclick>
                 </item>
                 <item id="9" description="My Submenu 9 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu09Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu09Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu09Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu09Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu09Option.BackgroundImage)]</property>
@@ -108,7 +108,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu09Option.Action)]</onclick>
                 </item>
                 <item id="10" description="My Submenu 10 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu10Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu10Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu10Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu10Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu10Option.BackgroundImage)]</property>
@@ -117,7 +117,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu10Option.Action)]</onclick>
                 </item>
                 <item id="11" description="My Submenu 11 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu11Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu11Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu11Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu11Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu11Option.BackgroundImage)]</property>
@@ -126,7 +126,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu11Option.Action)]</onclick>
                 </item>
                 <item id="12" description="My Submenu 12 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu12Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu12Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu12Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu12Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu12Option.BackgroundImage)]</property>
@@ -135,7 +135,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu12Option.Action)]</onclick>
                 </item>
                 <item id="13" description="My Submenu 13 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu13Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu13Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu13Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu13Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu13Option.BackgroundImage)]</property>
@@ -144,7 +144,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu13Option.Action)]</onclick>
                 </item>
                 <item id="14" description="My Submenu 14 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu14Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu14Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu14Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu14Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu14Option.BackgroundImage)]</property>
@@ -153,7 +153,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu14Option.Action)]</onclick>
                 </item>
                 <item id="15" description="My Submenu 15 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu15Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu15Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu15Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu15Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu15Option.BackgroundImage)]</property>
@@ -162,7 +162,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu15Option.Action)]</onclick>
                 </item>
                 <item id="16" description="My Submenu 16 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu16Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu16Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu16Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu16Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu16Option.BackgroundImage)]</property>
@@ -171,7 +171,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu16Option.Action)]</onclick>
                 </item>
                 <item id="17" description="My Submenu 17 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu17Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu17Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu17Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu17Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu17Option.BackgroundImage)]</property>
@@ -180,7 +180,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu17Option.Action)]</onclick>
                 </item>
                 <item id="18" description="My Submenu 18 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu18Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu18Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu18Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu18Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu18Option.BackgroundImage)]</property>
@@ -189,7 +189,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu18Option.Action)]</onclick>
                 </item>
                 <item id="19" description="My Submenu 19 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu19Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu19Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu19Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu19Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu19Option.BackgroundImage)]</property>
@@ -198,7 +198,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu19Option.Action)]</onclick>
                 </item>
                 <item id="20" description="My Submenu 20 Option">
-                    <visible>StringCompare(Window.Property(MySubmenu20Option.Active),True)</visible>
+                    <visible>Substring(Window.Property(MySubmenu20Option.Active),T,left)</visible>
                     <label>$INFO[Window.Property(MySubmenu20Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu20Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu20Option.BackgroundImage)]</property>

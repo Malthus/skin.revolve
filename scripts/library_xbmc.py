@@ -84,7 +84,10 @@ def getItemFromSkinSetting(skinsetting):
     return getItemFromInfoLabel('Skin.String(' + skinsetting + ')')
 
 def getBooleanItemFromSkinSetting(skinsetting):
-    return getItemFromInfoLabel('Skin.HasSetting(' + skinsetting + ')')
+    item = getItemFromInfoLabel('Skin.HasSetting(' + skinsetting + ')')
+    if item == '':
+        item = 'False'
+    return item
 
 def replaceEmptyItemWithHomeProperty(item, property):
     if item == '':
