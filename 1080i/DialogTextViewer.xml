@@ -25,10 +25,9 @@
 			</control>
 
 			<control type="scrollbar" id="61">
-				<posx>1840</posx>
 				<posy>80</posy>
-				<width>40</width>
 				<height>800</height>
+				<include>MarkupForScrollbarForDialog</include>
 				<onleft>Noop</onleft>
 				<onright>Noop</onright>
 				<ondown>61</ondown>
