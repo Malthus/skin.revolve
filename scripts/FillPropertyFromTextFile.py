@@ -16,6 +16,7 @@ from library_xbmc import *
 SCRIPT_NAME = 'Revolve/FillPropertyFromTextFile'
 DEFAULT_TARGETPROPERTY = 'TextFileContent'
 DEFAULT_TARGETWINDOW = '0'
+SPECIAL_FILE = 'special://'
 
 def logMessage(annotation):
     if isinstance(annotation, str):
@@ -25,8 +26,7 @@ def logMessage(annotation):
 
 def loadPropertyFromTextFile(filename, targetproperty, targetwindow):
     try:
-        sourcefilename = xbmc.translatePath(filename)
-        with open(sourcefilename) as file:
+        with open(translatePath(filename)) as file:
             value = file.read()
         setItemToProperty(targetproperty, value, targetwindow)
     except IOError:

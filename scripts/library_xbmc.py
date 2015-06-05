@@ -118,3 +118,12 @@ def copyBooleanSkinSettingToProperty(skinsetting, property, window):
     item = getBooleanItemFromSkinSetting(skinsetting)
     setItemToProperty(property, item, window)
 
+    
+# File Methods
+
+def translatePath(filename):
+    if filename.startswith('special://'):
+        return xbmc.translatePath(filename)
+    else:
+        return filename
+
