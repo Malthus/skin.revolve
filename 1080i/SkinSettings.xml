@@ -67,6 +67,11 @@
 						<label>$LOCALIZE[31133]</label>
 						<onclick>Noop</onclick>
 					</item>
+
+					<item id="10" description="Skin Information Option">
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Noop</onclick>
+					</item>
 				</content>
 			</control>
 
@@ -89,7 +94,7 @@
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
-						<label>31131</label>
+						<label>$LOCALIZE[31131]</label>
 						<selected>Skin.HasSetting(BackgroundImage.Active)</selected>
 						<onclick>Skin.ToggleSetting(BackgroundImage.Active)</onclick>
 					</control>
@@ -108,7 +113,7 @@
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
-						<label>31123</label>
+						<label>$LOCALIZE[31123]</label>
 						<selected>Skin.HasSetting(BackgroundVisualiser.Active)</selected>
 						<onclick>Skin.ToggleSetting(BackgroundVisualiser.Active)</onclick>
 					</control>
@@ -127,7 +132,7 @@
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
-						<label>31124</label>
+						<label>$LOCALIZE[31124]</label>
 						<selected>Skin.HasSetting(BackgroundVideo.Active)</selected>
 						<onclick>Skin.ToggleSetting(BackgroundVideo.Active)</onclick>
 					</control>
@@ -376,6 +381,36 @@
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
 						<onclick>SetProperty(DialogAction,SetFocus(60),1189)</onclick>
 						<onclick>ActivateWindow(1189)</onclick>
+					</control>
+				</control>
+                
+				<control type="grouplist" id="1000" description="Control Area for Skin Information">
+					<visible>Container(99).Hasfocus(10)</visible>
+					<width>1100</width>
+					<height>760</height>
+					<itemgap>0</itemgap>
+					<onup>1000</onup>
+					<ondown>1000</ondown>
+					<onleft>99</onleft>
+					<onright>Noop</onright>
+					<orientation>vertical</orientation>
+
+					<control type="button" id="1003" description="Changelog Button">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31147],1188)</onclick>
+						<onclick>SetProperty(DialogTextFile,special://skin/changelog.txt,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
+					</control>
+
+					<control type="button" id="1004" description="Credits Button">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31148],1188)</onclick>
+						<onclick>SetProperty(DialogTextFile,special://skin/credits.txt,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
 					</control>
 				</control>
 			</control>

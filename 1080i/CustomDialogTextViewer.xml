@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1188">
+	<defaultcontrol>21</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    <onload>RunScript(special://skin/scripts/FillPropertyFromTextFile.py,$INFO[Window.Property(DialogTextFile)],DialogText,1188)</onload>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include>FifteenLinesDialog</include>
+
+			<control type="label" id="1" description="Text Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<label>$INFO[Window.Property(DialogTitle)]</label>
+			</control>
+			
+			<control type="textbox" id="5" description="Text Area">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<height>600</height>
+				<align>left</align>
+                <pagecontrol>61</pagecontrol>
+				<label>$INFO[Window.Property(DialogText)]</label>
+			</control>
+
+			<control type="scrollbar" id="61">
+				<posx>1840</posx>
+				<posy>80</posy>
+				<width>40</width>
+				<height>600</height>
+				<onleft>21</onleft>
+				<onright>Noop</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+            
+            <control type="button" id="21" description="Close Button">
+                <posx>40</posx>
+                <posy>640</posy>
+				<label>$LOCALIZE[31915]</label>
+                <onup>21</onup>
+                <ondown>21</ondown>
+                <onleft>Noop</onleft>
+                <onright>61</onright>
+				<onclick>Close</onclick>
+			</control>
+		</control>
+	</controls>
+</window>
