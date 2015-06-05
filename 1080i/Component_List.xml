@@ -563,30 +563,6 @@
 		</focusedlayout>
 	</include>
 	
-	
-	<include name="ListFrameForFileManager" description="Half-Screen Frame For File Manager">
-		<control type="group">
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>900</width>
-				<height>900</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-mask.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>4</posx>
-				<posy>58</posy>
-				<width>892</width>
-				<height>804</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		</control>
-	</include>
-	
 	<include name="NormalListItemForHalfWidthDialogList" description="Unfocused Items For File Manager">
 		<control type="image">
 			<width>588</width>

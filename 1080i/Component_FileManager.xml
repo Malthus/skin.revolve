@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="ListFrameForFileManager" description="Frame For File Manager">
+	<include name="LeftListFrameForFileManager" description="Frame For File Manager">
+		<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
+		<animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="400" reversible="false">WindowClose</animation>
+        
 		<control type="group">
 			<control type="image">
 				<posx>0</posx>
@@ -12,9 +15,35 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>4</posx>
+				<posx>29</posx>
 				<posy>58</posy>
-				<width>892</width>
+				<width>866</width>
+				<height>804</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	<include name="RightListFrameForFileManager" description="Frame For File Manager">
+		<animation effect="slide" tween="quadratic" easing="out" start="1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
+		<animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="1000,0" time="400" reversible="false">WindowClose</animation>
+        
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>900</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-mask.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>58</posy>
+				<width>866</width>
 				<height>804</height>
 				<fadetime>100</fadetime>
 				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
@@ -25,7 +54,7 @@
 	
 	<include name="NormalListItemForFileManager" description="Unfocused Items For File Manager">
 		<control type="image">
-			<width>888</width>
+			<width>862</width>
 			<height>100</height>
 			<aspectratio>stretch</aspectratio>
 			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
@@ -38,14 +67,14 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>10</posy>
-			<width>730</width>
+			<width>710</width>
 			<height>40</height>
 			<info>ListItem.Label</info>
 		</control>
 		<control type="label">
 			<posx>130</posx>
 			<posy>50</posy>
-			<width>730</width>
+			<width>710</width>
 			<height>40</height>
 			<font>DetailListItemFont</font>
 			<info>ListItem.Label2</info>
@@ -54,7 +83,7 @@
 	
 	<include name="FocusedListItemForFileManager" description="Focused Items For File Manager">
 		<control type="image">
-			<width>888</width>
+			<width>862</width>
 			<height>100</height>
 			<aspectratio>stretch</aspectratio>
 			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
@@ -67,7 +96,7 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>10</posy>
-			<width>730</width>
+			<width>710</width>
 			<height>40</height>
 			<textcolor>BackgroundColor</textcolor>
 			<info>ListItem.Label</info>
@@ -75,7 +104,7 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>50</posy>
-			<width>730</width>
+			<width>710</width>
 			<height>40</height>
 			<font>DetailListItemFont</font>
 			<textcolor>BackgroundColor</textcolor>
@@ -85,7 +114,7 @@
 	
 	<include name="SelectedListItemForFileManager" description="Selected Items For File Manager">
 		<control type="image">
-			<width>888</width>
+			<width>862</width>
 			<height>100</height>
 			<aspectratio>stretch</aspectratio>
 			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
@@ -98,7 +127,7 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>10</posy>
-			<width>730</width>
+			<width>710</width>
 			<height>40</height>
 			<textcolor>BackgroundColor</textcolor>
 			<info>ListItem.Label</info>
@@ -106,21 +135,11 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>50</posy>
-			<width>730</width>
+			<width>710</width>
 			<height>40</height>
 			<font>DetailListItemFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<info>ListItem.Label2</info>
 		</control>
-	</include>
-	
-	<include name="ListItemForFileManager" description="List For File Manager">
-		<itemlayout height="100">
-			<include>NormalListItemForFileManager</include>
-		</itemlayout>
-					
-		<focusedlayout height="100">
-			<include>FocusedListItemForFileManager</include>
-		</focusedlayout>
 	</include>
 </includes>

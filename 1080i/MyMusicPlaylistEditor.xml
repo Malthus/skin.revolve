@@ -10,7 +10,7 @@
 			<control type="group" description="Left Panel with Library or Directory Listing">
 				<posx>40</posx>
 				<posy>80</posy>
-				<include>ListFrameForFileManager</include>
+				<include>LeftListFrameForFileManager</include>
 				
 				<control type="label" description="Description of Left Panel">
 					<posx>20</posx>
@@ -24,24 +24,26 @@
 				</control>
 				
 				<control type="label" id="12" description="Number of Items in Left Panel Label">
-					<posx>20</posx>
-					<posy>760</posy>
-					<width>860</width>
+					<posx>40</posx>
+					<posy>862</posy>
+					<width>820</width>
 					<height>30</height>
 					<textcolor>BackgroundColor</textcolor>
+                    <font>DetailListItemFont</font>
 					<align>left</align>
 					<label>-</label>
 				</control>
 				
 				<control type="list" id="50" description="File List">
-					<posx>6</posx>
+					<posx>31</posx>
 					<posy>60</posy>
-					<width>888</width>
+					<width>862</width>
 					<height>800</height>
-					<onleft>9000</onleft>
-					<onright>100</onright>
+                    <pagecontrol>60</pagecontrol>
 					<onup>50</onup>
 					<ondown>50</ondown>
+					<onleft>60</onleft>
+					<onright>100</onright>
 
 					<itemlayout height="100">
 						<include>NormalListItemForFileManager</include>
@@ -58,12 +60,23 @@
 						</control>
 					</focusedlayout>
 				</control>
+                
+                <control type="scrollbar" id="60">
+                    <posx>6</posx>
+					<posy>54</posy>
+                    <width>20</width>
+                    <height>812</height>
+                    <ondown>60</ondown>
+                    <onup>60</onup>
+                    <onleft>9000</onleft>
+                    <onright>50</onright>
+                </control>
 			</control>
 			
 			<control type="group" description="Right Panel with Playlist">
 				<posx>980</posx>
 				<posy>80</posy>
-				<include>ListFrameForFileManager</include>
+				<include>RightListFrameForFileManager</include>
 				
 				<control type="label" description="Description of Right Panel">
 					<posx>20</posx>
@@ -77,22 +90,24 @@
 				</control>
 				
 				<control type="label" id="101" description="Number of Items in Right Panel Label">
-					<posx>20</posx>
-					<posy>760</posy>
-					<width>860</width>
+					<posx>40</posx>
+					<posy>862</posy>
+					<width>820</width>
 					<height>30</height>
 					<textcolor>BackgroundColor</textcolor>
+                    <font>DetailListItemFont</font>
 					<align>left</align>
 					<label>-</label>
 				</control>
 				
 				<control type="list" id="100" description="Playlist List">
-					<posx>6</posx>
+					<posx>7</posx>
 					<posy>60</posy>
-					<width>888</width>
+					<width>861</width>
 					<height>800</height>
+                    <pagecontrol>110</pagecontrol>
 					<onleft>50</onleft>
-					<onright>Noop</onright>
+					<onright>110</onright>
 					<onup>100</onup>
 					<ondown>100</ondown>
 
@@ -111,6 +126,17 @@
 						</control>
 					</focusedlayout>
 				</control>
+                
+                <control type="scrollbar" id="110">
+                    <posx>874</posx>
+					<posy>54</posy>
+                    <width>20</width>
+                    <height>812</height>
+                    <ondown>110</ondown>
+                    <onup>110</onup>
+                    <onleft>100</onleft>
+                    <onright>Noop</onright>
+                </control>
 			</control>
 		</control>
 			
@@ -124,7 +150,7 @@
 				<height>480</height>
 				<itemgap>0</itemgap>
 				<onleft>Noop</onleft>
-				<onright>50</onright>
+				<onright>60</onright>
 				<onup>9010</onup>
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
