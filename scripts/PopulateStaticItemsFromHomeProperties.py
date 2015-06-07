@@ -27,6 +27,9 @@ def logMessage(annotation):
 def createGenericName(sourcebase):
     return replaceEmptyItemWithHomeProperty(getItemFromHomeProperty(sourcebase + '.Title'), sourcebase + '.EpisodeTitle')
 
+def createSongName(sourcebase):
+    return getItemFromHomeProperty(sourcebase + '.Artist') + ' - ' + getItemFromHomeProperty(sourcebase + '.Title')
+
 def createGenericSubtitle(sourcebase):
     return joinItems(
         getItemFromHomeProperty(sourcebase + '.ShowTitle'),
@@ -48,7 +51,6 @@ def createEpisodeSubtitle(sourcebase):
 
 def createSongSubtitle(sourcebase):
     return joinItems(
-        getItemFromHomeProperty(sourcebase + '.Artist'),
         getItemFromHomeProperty(sourcebase + '.Album'),
         getNumericValue(getItemFromHomeProperty(sourcebase + '.Year')))
 
@@ -78,8 +80,11 @@ def createGenericAction(sourcebase):
 
 
 def determineNameMethod(sourcemask):
-    return createGenericName    
-    
+    result = createGenericName    
+    if 'song' in sourcemask.lower():
+        result = createSongName
+    return result
+
 def determineSubtitleMethod(sourcemask):
     result = createGenericSubtitle
     if 'episode' in sourcemask.lower():

@@ -2,10 +2,6 @@
 <includes>
 	<variable name="ContentNameLabel">
 		<value condition="!IsEmpty(ListItem.ChannelNumber)">[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</value>
-		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Album)">[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</value>
-		<value condition="Container.Content(songs) + !IsEmpty(ListItem.Title) + !IntegerGreaterThan(ListItem.TrackNumber,0)">[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</value>
-		<value condition="Container.Content(songs) + !IsEmpty(ListItem.Title) + SubString(ListItem.Label,0,Left)">[UPPERCASE]$INFO[ListItem.TrackNumber,0,. ]$INFO[ListItem.Title][/UPPERCASE]</value>
-		<value condition="Container.Content(songs) + !IsEmpty(ListItem.Title)">[UPPERCASE]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title][/UPPERCASE]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	
@@ -20,17 +16,17 @@
 		<value condition="Container.Content(seasons)">[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</value>
 		<value condition="Container.Content(episodes)">[UPPERCASE]$INFO[ListItem.TVShowTitle]$INFO[ListItem.Season, | $LOCALIZE[20373] ,][/UPPERCASE]</value>
 		<value condition="Container.Content(albums)">[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</value>
-		<value condition="Container.Content(songs)">[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Album, | ,][/UPPERCASE]</value>
-		<value condition="Container.Content(files)">[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Album, | ,][/UPPERCASE]</value>
+		<value condition="Container.Content(songs)">[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</value>
+		<value condition="Container.Content(files)">[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</value>
 		<value condition="Container.Content(addons)">[UPPERCASE]$INFO[ListItem.Property(Addon.Creator),, | ]$INFO[ListItem.Property(Addon.Type)][/UPPERCASE]</value>
 		<value condition="!IsEmpty(ListItem.PictureDatetime)">[UPPERCASE]$INFO[ListItem.FolderName,, | ]$INFO[ListItem.PictureLongDatetime][/UPPERCASE]</value>
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">[UPPERCASE]$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date][/UPPERCASE]</value>
 	</variable>
-	
+
 	<variable name="ContentDetailLabel">
 		<value condition="StringCompare(ListItem.Label,..)">[UPPERCASE]$INFO[Container.NumItems,, $LOCALIZE[31900]][/UPPERCASE]</value>
 		<value condition="!IsEmpty(ListItem.ChannelNumber)">[UPPERCASE]$INFO[ListItem.StartDate,, | ]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,][/UPPERCASE]</value>
-		<value condition="Container.Content(movies)">[UPPERCASE]$INFO[ListItem.year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
+		<value condition="Container.Content(movies)">[UPPERCASE]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(UnWatchedEpisodes)] / $INFO[ListItem.Property(TotalEpisodes)]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes)] / $INFO[ListItem.Property(TotalEpisodes)]</value>
 		<value condition="Container.Content(episodes)">[UPPERCASE]$INFO[ListItem.Episode,$LOCALIZE[20359] ,]$INFO[ListItem.Duration, | , $LOCALIZE[12391]]$INFO[ListItem.Premiered, | ,][/UPPERCASE]</value>
@@ -38,7 +34,9 @@
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">[UPPERCASE]$INFO[ListItem.Property(Artist_Formed)]$INFO[ListItem.Property(Artist_Disbanded), - ,][/UPPERCASE]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(songs)">[UPPERCASE]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,][/UPPERCASE]</value>
-		<value condition="Container.Content(files)">$INFO[ListItem.Year]$INFO[ListItem.Duration, | ,]</value>
+		<value condition="Container.Content(files) + Substring(ListItem.Duration,:)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
+		<value condition="Container.Content(files) + !IsEmpty(ListItem.Duration)">[UPPERCASE]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
+		<value condition="Container.Content(files) + !IsEmpty(Artist)">[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
 		<value condition="Container.Content(addons)">[UPPERCASE]$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Status), | ,][/UPPERCASE]</value>
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.Size]</value>
 		<value>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</value>
@@ -55,13 +53,15 @@
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Born))">[UPPERCASE]$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Died), - ,][/UPPERCASE]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">[UPPERCASE]$INFO[ListItem.Property(Artist_Formed)]$INFO[ListItem.Property(Artist_Disbanded), - ,][/UPPERCASE]</value>
 		<value condition="Container.Content(albums)">[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Duration, | ,][/UPPERCASE]</value>
-		<value condition="Container.Content(songs)">[UPPERCASE]$INFO[ListItem.Artist,, | ]$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,][/UPPERCASE]</value>
-		<value condition="Container.Content(files)">[UPPERCASE]$INFO[ListItem.Artist,, | ]$INFO[ListItem.Album,, | ]$INFO[ListItem.Year]$INFO[ListItem.Duration, | ,][/UPPERCASE]</value>
+		<value condition="Container.Content(songs)">[UPPERCASE]$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,][/UPPERCASE]</value>
+		<value condition="Container.Content(files) + Substring(ListItem.Duration,:)">[UPPERCASE]$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration][/UPPERCASE]</value>
+		<value condition="Container.Content(files) + !IsEmpty(ListItem.Duration)">[UPPERCASE]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
+		<value condition="Container.Content(files) + !IsEmpty(ListItem.Artist)">[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
 		<value condition="Container.Content(addons)">[UPPERCASE]$INFO[ListItem.Property(Addon.Creator),, | ]$INFO[ListItem.Property(Addon.Type)]$INFO[ListItem.Property(Addon.Version), | ,]$INFO[ListItem.Property(Addon.Status), | ,][/UPPERCASE]</value>
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">[UPPERCASE]$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date]$INFO[ListItem.Size, | ,][/UPPERCASE]</value>
         <value>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</value>
 	</variable>
-	
+
 	<variable name="ContentMainColor">
 		<value condition="ListItem.IsPlaying">HighlightColor</value>
 		<value>MainColor</value>
@@ -94,7 +94,7 @@
 		<value condition="!IsEmpty(ListItem.Art(season.banner))">$INFO[ListItem.Art(season.banner)]</value>
 		<value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
 		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(ListItem.Art(fanart_image))">$INFO[ListItem.Art(fanart_image)]</value>
+		<value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
 		<value condition="!IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
 	</variable>
 	
@@ -138,17 +138,17 @@
 	</variable>
 	
 	<variable name="ContentBackground">
-		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(fanart))">$INFO[Container(450).ListItem.Art(Fanart)]</value>
-		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Property(Fanart_image))">$INFO[Container(450).ListItem.Property(Fanart_image)]</value>
+		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(fanart))">$INFO[Container(450).ListItem.Art(fanart)]</value>
+		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Property(Fanart_Image))">$INFO[Container(450).ListItem.Property(Fanart_Image)]</value>
 		<value condition="Window.IsVisible(favourites)">special://skin/backgrounds/favourites.jpg</value>
 
-		<value condition="Window.IsVisible(1101) + !IsEmpty(Container(450).ListItem.Property(backgroundimage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
+		<value condition="Window.IsVisible(1101) + !IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
 		<value condition="Window.IsVisible(1101)">special://skin/backgrounds/items.jpg</value>
         
-		<value condition="Window.IsVisible(1102) + !IsEmpty(Container(450).ListItem.Property(Fanart_image))">$INFO[Container(450).ListItem.Property(Fanart_image)]</value>
+		<value condition="Window.IsVisible(1102) + !IsEmpty(Container(450).ListItem.Property(Fanart_image))">$INFO[Container(450).ListItem.Property(fanart_image)]</value>
 		<value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>
 
-		<value condition="Window.IsVisible(1103) + !IsEmpty(Container(450).ListItem.Property(backgroundimage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
+		<value condition="Window.IsVisible(1103) + !IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
 		<value condition="Window.IsVisible(1103)">special://skin/backgrounds/default.jpg</value>
 
 		<value condition="Window.IsVisible(settings) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
@@ -172,15 +172,11 @@
 		<value condition="Window.IsVisible(skinsettings)">special://skin/backgrounds/skinsettings.jpg</value>
 		<value condition="Window.IsVisible(systeminfo)">special://skin/backgrounds/systeminfo.jpg</value>
 
-<!--        
-		<value condition="Window.IsVisible(home) + Control.HasFocus(300) + !IsEmpty(Container(300).ListItem.Icon)">$INFO[Container(300).ListItem.Icon]</value>
-		<value condition="Window.IsVisible(home) + Control.HasFocus(600) + !IsEmpty(Container(600).ListItem.Property(BackgroundImage))">$INFO[Container(600).ListItem.Property(BackgroundImage)]</value>
--->        
 		<value condition="Window.IsVisible(home) + !IsEmpty(Container(300).ListItem.Icon)">$INFO[Container(300).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(home)">special://skin/backgrounds/default.jpg</value>
 
-		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(Fanart)]</value>
-		<value condition="!IsEmpty(ListItem.Property(fanart_image))">$INFO[ListItem.Property(Fanart_image)]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
 		<value condition="!IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
         
 		<value condition="Container.Content(addons)">special://skin/backgrounds/addons.jpg</value>
@@ -232,7 +228,7 @@
 	</variable>
 	
 	<variable name="ContentPictureAperture">
-		<value>f/$INFO[ListItem.PictureAperture]</value>
+		<value>$INFO[ListItem.PictureAperture,$LOCALIZE[31916],]</value>
 	</variable>
 	
 	<variable name="ContentMedium">
@@ -275,7 +271,7 @@
 		<value condition="Container.Content(songs) + !IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
 		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Broken),[B],[/B][CR][CR]]$INFO[ListItem.Property(Addon.Description)]$INFO[ListItem.Property(Addon.Disclaimer),[CR][CR],]</value>
         
-		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,$LOCALIZE[20334]: ,[CR]]$INFO[ListItem.PictureDatetime,$LOCALIZE[552]: ,[CR]]$INFO[ListItem.Size,$LOCALIZE[21802]: ,[CR]]$INFO[ListItem.PictureResolution,$LOCALIZE[169]: ,[CR][CR]]$INFO[ListItem.PictureISO,$LOCALIZE[21837]: ,[CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: ,[CR]]$INFO[ListItem.PictureExpMode,$LOCALIZE[21832]: ,[CR]]$INFO[ListItem.PictureExposure,$LOCALIZE[21829]: ,[CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: ,[CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: ,[CR]]$INFO[ListItem.PictureFocusDist,$LOCALIZE[21828]: ,[CR]]$INFO[ListItem.PictureMeteringMode,$LOCALIZE[21836]: ,[CR]]$INFO[ListItem.PictureCamMake,[CR]$LOCALIZE[21822]: ,[CR]]$INFO[ListItem.PictureCamModel,$LOCALIZE[21823]: ,[CR]]$INFO[ListItem.PictureCCDWidth,$LOCALIZE[21839]: ,]</value>
+		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,$LOCALIZE[20334]: ,[CR]]$INFO[ListItem.PictureDatetime,$LOCALIZE[552]: ,[CR]]$INFO[ListItem.Size,$LOCALIZE[21802]: ,[CR]]$INFO[ListItem.PictureResolution,$LOCALIZE[169]: ,[CR][CR]]$INFO[ListItem.PictureISO,$LOCALIZE[21837]: ,[CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: $LOCALIZE[31916],[CR]]$INFO[ListItem.PictureExpMode,$LOCALIZE[21832]: ,[CR]]$INFO[ListItem.PictureExposure,$LOCALIZE[21829]: ,[CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: ,[CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: ,[CR]]$INFO[ListItem.PictureFocusDist,$LOCALIZE[21828]: ,[CR]]$INFO[ListItem.PictureMeteringMode,$LOCALIZE[21836]: ,[CR]]$INFO[ListItem.PictureCamMake,[CR]$LOCALIZE[21822]: ,[CR]]$INFO[ListItem.PictureCamModel,$LOCALIZE[21823]: ,[CR]]$INFO[ListItem.PictureCCDWidth,$LOCALIZE[21839]: ,]</value>
 
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="!IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
