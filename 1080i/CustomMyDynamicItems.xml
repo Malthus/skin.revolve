@@ -6,10 +6,6 @@
     <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
     <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
-<!--
-            RunScript(special://skin/scripts/ActivateWindowWithProperties.py,1102,MenuTitle,Random Movies,SourceInfo,"service.library.data.provider?type=randommovies")
-            <content>plugin://service.library.data.provider?type=randommovies</content>
--->
     
 	<controls>
 		<include>GlobalBackground</include>

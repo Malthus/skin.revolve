@@ -27,6 +27,7 @@
 		
 			<content>
 				<item id="1" description="My Items 1 Option">
+                    <visible>!IsEmpty(Window.Property(MyItems01Option.Name))</visible>
 					<label>$INFO[Window.Property(MyItems01Option.Name)]</label>
 					<label2>$INFO[Window.Property(MyItems01Option.Subtitle)]</label2>
 					<icon>$INFO[Window.Property(MyItems01Option.Thumbnail)]</icon>
@@ -184,6 +185,14 @@
 					<icon>$INFO[Window.Property(MyItems20Option.Thumbnail)]</icon>
                     <property name="BackgroundImage">$INFO[Window.Property(MyItems20Option.BackgroundImage)]</property>
 					<onclick>$INFO[Window.Property(MyItems20Option.Action)]</onclick>
+				</item>
+				<item id="99" description="My Empty Items Option">
+                    <visible>IsEmpty(Window.Property(MyItems01Option.Name))</visible>
+					<label>-</label>
+					<label2>-</label2>
+					<icon>-</icon>
+                    <property name="BackgroundImage">-</property>
+					<onclick>Noop</onclick>
 				</item>
 			</content>
 		</control>

@@ -206,6 +206,13 @@
                     <onclick>SetProperty(SourceInfo,$INFO[Window.Property(MySubmenu20Option.SourceInfo)],$INFO[Window.Property(MySubmenu20Option.Window)])</onclick>
                     <onclick>$INFO[Window.Property(MySubmenu20Option.Action)]</onclick>
                 </item>
+                <item id="99" description="My Empty Submenu Option">
+                    <visible>! [Substring(Window.Property(MySubmenu01Option.Active),T,left) | Substring(Window.Property(MySubmenu02Option.Active),T,left) | Substring(Window.Property(MySubmenu03Option.Active),T,left) | Substring(Window.Property(MySubmenu04Option.Active),T,left) | Substring(Window.Property(MySubmenu05Option.Active),T,left) | Substring(Window.Property(MySubmenu06Option.Active),T,left) | Substring(Window.Property(MySubmenu07Option.Active),T,left) | Substring(Window.Property(MySubmenu08Option.Active),T,left) | Substring(Window.Property(MySubmenu09Option.Active),T,left) | Substring(Window.Property(MySubmenu10Option.Active),T,left) | Substring(Window.Property(MySubmenu11Option.Active),T,left) | Substring(Window.Property(MySubmenu12Option.Active),T,left) | Substring(Window.Property(MySubmenu13Option.Active),T,left) | Substring(Window.Property(MySubmenu14Option.Active),T,left) | Substring(Window.Property(MySubmenu15Option.Active),T,left) | Substring(Window.Property(MySubmenu16Option.Active),T,left) | Substring(Window.Property(MySubmenu17Option.Active),T,left) | Substring(Window.Property(MySubmenu18Option.Active),T,left) | Substring(Window.Property(MySubmenu19Option.Active),T,left) | Substring(Window.Property(MySubmenu20Option.Active),T,left)]</visible>
+                    <label>-</label>
+                    <property name="Label3">-</property>
+                    <property name="BackgroundImage">-</property>
+					<onclick>Noop</onclick>
+                </item>
             </content>
 		</control>
 
