@@ -117,7 +117,7 @@
 						</animation>
 
 						<control type="label">
-							<include>NormalListItemMarkupForRotateListView</include>
+							<include>MainListItemMarkupForRotateListView</include>
 							<textcolor>$VAR[ContentNoWrapMinusOneMainColor]</textcolor>
 							<label>$VAR[ContentNoWrapMinusOneLabel]</label>
 						</control>
@@ -233,7 +233,7 @@
 						</animation>
 
 						<control type="label">
-							<include>NormalListItemMarkupForRotateListView</include>
+							<include>MainListItemMarkupForRotateListView</include>
 							<textcolor>$VAR[ContentNoWrapPlusOneMainColor]</textcolor>
 							<label>$VAR[ContentNoWrapPlusOneLabel]</label>
 						</control>
@@ -659,6 +659,16 @@
 			<align>right</align>
 			<label>$VAR[ContentInformationLabel]</label>
 		</control>
+	</include>
+
+	<include name="MainListItemMarkupForRotateListView">
+		<posx>0</posx>
+		<posy>160</posy>
+		<height>40</height>
+		<width>900</width>
+		<font>MediumViewFont</font>
+		<align>right</align>
+		<scroll>true</scroll>
 	</include>
 
 	<include name="NormalListItemMarkupForRotateListView">
