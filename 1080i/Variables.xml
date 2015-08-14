@@ -275,7 +275,7 @@
 
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="!IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
-		<value condition="!Skin.HasSetting(NoInformationLabel.Visible)">$LOCALIZE[31300]</value>
+		<value condition="Skin.HasSetting(NoInformationLabel.Visible)">$LOCALIZE[31300]</value>
 	</variable>
 	
 	<variable name="ContentMediaFlagInViewColor">
