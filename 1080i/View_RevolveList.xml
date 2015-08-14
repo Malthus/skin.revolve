@@ -274,7 +274,7 @@
 						<height>100</height>
 						<width>1000</width>
 						<font>RevolveViewFont</font>
-						<textcolor>$VAR[ContentWrapMinusOneMainColor]</textcolor>
+						<textcolor>$VAR[ContentMainColor]</textcolor>
 						<scroll>true</scroll>
 						<align>left</align>
 						<label>$VAR[ContentWrapMinusOneLabel]</label>
@@ -297,7 +297,7 @@
 						<textcolor>$VAR[ContentTextColor]</textcolor>
 						<label>$VAR[ContentOnOriginLabel]</label>
 					</control>
-					
+
 					<control type="label">
 						<visible>Container.OnNext</visible>
 						<animation type="Visible" reversible="false">
@@ -317,7 +317,7 @@
 						<textcolor>$VAR[ContentMainColor]</textcolor>
 						<scroll>true</scroll>
 						<align>left</align>
-						<info>$VAR[ContentNameLabel]</info>
+						<label>$VAR[ContentNameLabel]</label>
 					</control>
 				</control>
 				
@@ -598,7 +598,7 @@
 		<posx>860</posx>
 		<posy>700</posy>
 		<height>100</height>
-		<width>1000</width>
+		<width>2400</width>
 		<font>RevolveViewFont</font>
 		<align>left</align>
 		<scroll>false</scroll>
