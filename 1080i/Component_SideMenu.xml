@@ -91,16 +91,11 @@
 	
 	<include name="GenericPlaylistButtonForSideMenu" description="Generic Playlist Button For Side Menu">
 		<control type="button" id="1">
-            <visible>Player.HasVideo</visible>
+            <visible>Player.HasVideo | Player.HasAudio</visible>
 			<align>left</align>
 			<label>$LOCALIZE[13350]</label>
-			<onclick>ActivateWindow(videoplaylist)</onclick>
-		</control>
-		<control type="button" id="1">
-            <visible>Player.HasAudio</visible>
-			<align>left</align>
-			<label>$LOCALIZE[13350]</label>
-			<onclick>ActivateWindow(musicplaylist)</onclick>
+			<onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
+			<onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
 		</control>
 	</include>
 	
