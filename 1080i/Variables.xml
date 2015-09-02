@@ -260,18 +260,6 @@
 	</variable>
 
 	<variable name="ContentDescription">
-<!--    
-		<value condition="!IsEmpty(ListItem.ChannelNumber) + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-        
-		<value condition="Container.Content(tvshows) + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="Container.Content(movies) + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="Container.Content(songs) + !IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
-		<value condition="Container.Content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Broken),[B],[/B][CR][CR]]$INFO[ListItem.Property(Addon.Description)]$INFO[ListItem.Property(Addon.Disclaimer),[CR][CR],]</value>
--->        
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,$LOCALIZE[20334]: ,[CR]]$INFO[ListItem.PictureDatetime,$LOCALIZE[552]: ,[CR]]$INFO[ListItem.Size,$LOCALIZE[21802]: ,[CR]]$INFO[ListItem.PictureResolution,$LOCALIZE[169]: ,[CR][CR]]$INFO[ListItem.PictureISO,$LOCALIZE[21837]: ,[CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: $LOCALIZE[31916],[CR]]$INFO[ListItem.PictureExpMode,$LOCALIZE[21832]: ,[CR]]$INFO[ListItem.PictureExposure,$LOCALIZE[21829]: ,[CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: ,[CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: ,[CR]]$INFO[ListItem.PictureFocusDist,$LOCALIZE[21828]: ,[CR]]$INFO[ListItem.PictureMeteringMode,$LOCALIZE[21836]: ,[CR]]$INFO[ListItem.PictureCamMake,[CR]$LOCALIZE[21822]: ,[CR]]$INFO[ListItem.PictureCamModel,$LOCALIZE[21823]: ,[CR]]$INFO[ListItem.PictureCCDWidth,$LOCALIZE[21839]: ,]</value>
 
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
