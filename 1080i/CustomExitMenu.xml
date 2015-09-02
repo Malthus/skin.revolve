@@ -24,11 +24,13 @@
 				<item id="1" description="Exit Option">
 					<visible>System.ShowExitButton</visible>
 					<label>$LOCALIZE[13012]</label>
+					<icon>special://skin/backgrounds/exit.jpg</icon>
 					<onclick>Quit()</onclick>
 				</item>
 				<item id="2" description="Shutdown Option">
                     <visible>System.CanPowerDown</visible>
 					<label>$LOCALIZE[13005]</label>
+					<icon>special://skin/backgrounds/shutdown.jpg</icon>
 					<onclick>ShutDown()</onclick>
 				</item>
 				<item id="3" description="Logoff Profile Option">
@@ -40,6 +42,7 @@
 				<item id="4" description="Suspend Option">
                     <visible>System.CanSuspend</visible>
 					<label>$LOCALIZE[13011]</label>
+					<icon>special://skin/backgrounds/suspend.jpg</icon>
 					<onclick>Suspend()</onclick>
 				</item>
 				<item id="5" description="Hibernate Option">
@@ -68,11 +71,13 @@
 				<item id="9" description="Enter Master Mode Option">
 					<visible>System.HasLocks + !System.IsMaster</visible>
 					<label>$LOCALIZE[20045]</label>
+					<icon>special://skin/backgrounds/mastermode.jpg</icon>
 					<onclick>Mastermode()</onclick>
 				</item>
 				<item id="10" description="Leave Master Mode Option">
 					<visible>System.HasLocks + System.IsMaster</visible>
 					<label>$LOCALIZE[20046]</label>
+					<icon>special://skin/backgrounds/mastermode.jpg</icon>
 					<onclick>Mastermode()</onclick>
 				</item>
 				<item id="11" description="Settings Option">
