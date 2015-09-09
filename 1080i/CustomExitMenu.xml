@@ -41,6 +41,7 @@
 				<item id="4" description="Suspend Option">
                     <visible>System.CanSuspend</visible>
 					<label>$LOCALIZE[13011]</label>
+					<icon>special://skin/backgrounds/suspend.jpg</icon>
 					<onclick>Suspend()</onclick>
 				</item>
 				<item id="5" description="Hibernate Option">
