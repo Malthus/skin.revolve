@@ -29,6 +29,14 @@
             <animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="400" reversible="false">WindowClose</animation>
 
             <control type="image">
+                <posx>76</posx>
+                <posy>546</posy>
+                <width>408</width>
+                <height>408</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+            </control>
+            
+            <control type="image">
                 <visible>!Container(450).IsUpdating</visible>
                 <posx>80</posx>
                 <posy>550</posy>
