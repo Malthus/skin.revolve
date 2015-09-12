@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1120">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>GlobalBackground</include>
+        
+        <control type="group">
+            <posx>560</posx>
+            <posy>140</posy>
+            
+            <control type="image">
+                <posx>-80</posx>
+                <posy>-80</posy>
+                <width>960</width>
+                <height>960</height>
+                <texture background="true">elements/circle-shadow.png</texture>
+            </control>
+        
+            <control type="image">
+                <width>800</width>
+                <height>800</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            
+            <control type="image">
+                <posx>69</posx>
+                <posy>69</posy>
+                <width>662</width>
+                <height>662</height>
+                <texture colordiffuse="FF000000" background="true">circle/revolve.png</texture>
+                <fadetime>500</fadetime>
+            </control>
+            
+            <control type="label" description="Revolve Title">
+                <posx>0</posx>
+                <posy>360</posy>
+                <height>80</height>
+                <width>800</width>
+                <font>HugeClockTimeFont</font>
+                <align>center</align>
+                <scroll>false</scroll>
+                <textcolor>BackgroundColor</textcolor>
+                <label>$LOCALIZE[31000]</label>
+            </control>
+        </control>
+<!--
+        <control type="group">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>640</width>
+            <height>360</height>
+            
+            <control type="image">
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>630</width>
+                <height>350</height>
+                <texture colordiffuse="MainColor">elements/view-mask.png</texture>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+            </control>
+            
+            <control type="image">
+                <posx>10</posx>
+                <posy>10</posy>
+                <width>620</width>
+                <height>340</height>
+                <texture diffuse="elements/view-mask.png">special://_screenshots/screenshot1.jpg</texture>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+            </control>
+        </control>
+        
+		<control type="group" description="Ring">
+            <animation effect="slide" start="800,0" end="0,0" time="400">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="800,0" time="400">WindowClose</animation>
+		
+            <control type="image">
+                <posx>1220</posx>
+                <posy>0</posy>
+                <width>1000</width>
+                <height>1080</height>
+                <texture colordiffuse="MainColor">elements/ring-maskright.png</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+
+            <control type="image">
+                <posx>1220</posx>
+                <posy>0</posy>
+                <width>1000</width>
+                <height>1080</height>
+                <texture>elements/ring-ringsright.png</texture>
+            </control>
+
+            <control type="label" description="Revolve Title">
+                <posx>1780</posx>
+                <posy>40</posy>
+                <height>120</height>
+                <width>900</width>
+                <font>HugeClockTimeFont</font>
+                <align>left</align>
+                <scroll>false</scroll>
+                <textcolor>BackgroundColor</textcolor>
+                <angle>270</angle>
+                <label>$LOCALIZE[31000]</label>
+            </control>
+		</control>
+-->        
+	</controls>
+</window>
