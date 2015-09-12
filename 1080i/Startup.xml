@@ -1,4 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2999">
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+    <onload condition="System.HasAddon(script.tv.show.next.aired)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload>
+	<onload condition="System.HasAddon(script.grab.fanart)">XBMC.RunScript(script.grab.fanart,mode=random)</onload>
+    <onload>AlarmClock(StartupClock,ReplaceWindow($INFO[System.StartupWindow]),00:02,silent)</onload>
+<!--	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload> -->
+
+    <animation type="WindowOpen">
+		<effect type="fade" start="0" end="100" time="400" />
+	</animation>
+		
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+
+	<controls>
+        <control type="group">
+			<visible>Skin.HasSetting(BackgroundImage.Active)</visible>
+			<include>FullscreenDimensions</include>
+			<texture background="true">$VAR[ContentBackground]</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+        </control>
+        
+        <control type="group">
+            <posx>560</posx>
+            <posy>140</posy>
+            
+            <control type="image">
+                <posx>-80</posx>
+                <posy>-80</posy>
+                <width>960</width>
+                <height>960</height>
+                <texture background="true">elements/circle-shadow.png</texture>
+            </control>
+
+            <control type="image">
+                <width>800</width>
+                <height>800</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            
+            <control type="image">
+                <posx>69</posx>
+                <posy>69</posy>
+                <width>662</width>
+                <height>662</height>
+                <texture colordiffuse="FF000000" background="true">circle/revolve.png</texture>
+                <fadetime>500</fadetime>
+                <animation effect="rotate" center="400,400" start="1800" end="0" time="10000" condition="true">conditional</animation>
+            </control>
+            
+            <control type="label" description="Revolve Title">
+                <posx>0</posx>
+                <posy>360</posy>
+                <height>80</height>
+                <width>800</width>
+                <font>HugeClockTimeFont</font>
+                <align>center</align>
+                <scroll>false</scroll>
+                <textcolor>BackgroundColor</textcolor>
+                <label>$LOCALIZE[31000]</label>
+            </control>
+        </control>
+	</controls>
 </window>
