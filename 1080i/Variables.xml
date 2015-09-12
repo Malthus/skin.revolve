@@ -151,6 +151,8 @@
 		<value condition="Window.IsVisible(1103) + !IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
 		<value condition="Window.IsVisible(1103)">special://skin/backgrounds/default.jpg</value>
 
+		<value condition="Window.IsVisible(1120)">special://skin/media/white.png</value>
+        
 		<value condition="Window.IsVisible(settings) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(settings)">special://skin/backgrounds/settings.jpg</value>
 

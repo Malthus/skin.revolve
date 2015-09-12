@@ -306,6 +306,12 @@
 
 			<control type="label">
 				<include>WindowIDForDebug</include>
+				<label>CustomTitleScreen.xml</label>
+				<visible>Window.IsVisible(CustomTitleScreen.xml)</visible>
+			</control>
+            
+			<control type="label">
+				<include>WindowIDForDebug</include>
 				<label>CustomExitMenu.xml</label>
 				<visible>Window.IsVisible(CustomExitMenu.xml)</visible>
 			</control>
