@@ -255,7 +255,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="800" description="Control Area For Background Visuals">
+				<control type="grouplist" id="800" description="Control Area For Miscellaneous Settings">
 					<visible>Container(99).Hasfocus(8)</visible>
 					<width>1100</width>
 					<height>760</height>
@@ -266,6 +266,15 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
+					<control type="radiobutton" id="803" description="Visible Title Screen Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31149]</label>
+						<selected>Skin.HasSetting(TitleScreen.Visible)</selected>
+						<onclick>Skin.ToggleSetting(TitleScreen.Visible)</onclick>
+					</control>
+					
 					<control type="radiobutton" id="801" description="Visible Unfocused Side Menu Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -504,6 +513,11 @@
 						<visible>Control.HasFocus(802)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31188]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(803)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31206]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(804)</visible>

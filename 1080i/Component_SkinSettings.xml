@@ -83,6 +83,7 @@
 	</include>
 	
 	<include name="MiscellaneousSettingsForSkinSettings" description="Miscellaneous Skin Settings">
+		<onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
 		<onfocus>Skin.SetBool(SideMenu.Visible)</onfocus>
 		<onfocus>Skin.SetBool(ViewScrollbar.Visible)</onfocus>
 		<onfocus>Skin.SetBool(PlayerArtwork.Visible)</onfocus>
