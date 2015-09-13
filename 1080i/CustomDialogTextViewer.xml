@@ -9,6 +9,19 @@
 			<posy>PosYForFifteenLinesDialog</posy>
 			<include>FifteenLinesDialog</include>
 
+			<control type="group" description="Textfile Icon">
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultIconFrameForDialog</include>
+				
+				<control type="image">
+					<width>262</width>
+					<height>262</height>
+					<texture colordiffuse="BackgroundColor">icons/icon-textfile.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+            
 			<control type="label" id="1" description="Text Header Label">
 				<posx>560</posx>
 				<posy>20</posy>
