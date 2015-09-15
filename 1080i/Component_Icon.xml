@@ -25,7 +25,7 @@
         <visible>Skin.HasSetting(NoInformationLabel.Visible) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Comment) + IsEmpty(ListItem.Property(Artist_Description)) + IsEmpty(ListItem.Property(Album_Description)) + IsEmpty(ListItem.Property(Addon.Description)) + [!Window.IsVisible(pictures) | ListItem.IsFolder]</visible>
 	</include>
     
-	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
+	<include name="TinyCircleBackgroundIcon" description="Tiny Circle Background Icon">
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -33,6 +33,10 @@
 			<height>70</height>
 			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
 		</control>
+	</include>
+    
+	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
+        <include>TinyCircleBackgroundIcon</include>
 
 		<control type="image">
 			<posx>3</posx>
@@ -44,7 +48,7 @@
 		</control>
 	</include>
 	
-	<include name="SmallCircleThumbnailIcon" description="Small Circle Thumbnail Icon Without Shadow">
+	<include name="SmallCircleBackgroundIcon" description="Small Circle Background Icon Without Shadow">
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -52,6 +56,10 @@
 			<height>90</height>
 			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
 		</control>
+	</include>
+	
+	<include name="SmallCircleThumbnailIcon" description="Small Circle Thumbnail Icon Without Shadow">
+        <include>SmallCircleBackgroundIcon</include>
 		
 		<control type="image">
 			<posx>3</posx>
@@ -62,8 +70,8 @@
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 		</control>
 	</include>
-	
-	<include name="DefaultCircleThumbnailIcon" description="Default Circle Thumbnail Icon Without Shadow">
+
+	<include name="DefaultCircleBackgroundIcon" description="Default Circle Background Icon Without Shadow">
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -71,6 +79,10 @@
 			<height>270</height>
 			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
 		</control>
+	</include>
+	
+	<include name="DefaultCircleThumbnailIcon" description="Default Circle Thumbnail Icon Without Shadow">
+        <include>DefaultCircleBackgroundIcon</include>
 
 		<control type="image">
 			<posx>4</posx>
@@ -83,13 +95,7 @@
 	</include>
 	
 	<include name="DefaultCircleSortLetterIcon" description="Default Circle Sort Letter Icon Without Shadow">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>270</width>
-			<height>270</height>
-			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-		</control>
+        <include>DefaultCircleBackgroundIcon</include>
 
 		<control type="label">
 			<posx>0</posx>
@@ -130,6 +136,7 @@
 			<include>DefaultOverlayMediaFlag</include>
 		</control>
 	</include>
+
 <!--
 	<include name="LargeCircleThumbnailIcon">
 		<control type="group">
@@ -162,13 +169,17 @@
 		</control>
 	</include>
 -->	
-	<include name="HugeCircleThumbnailIcon">
+
+	<include name="HugeCircleBackgroundIcon">
 		<control type="image">
 			<width>610</width>
 			<height>610</height>
 			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-			<aspectratio>stretch</aspectratio>
 		</control>
+	</include>
+
+	<include name="HugeCircleThumbnailIcon">
+        <include>HugeCircleBackgroundIcon</include>
 		
 		<control type="image">
 			<posx>6</posx>
@@ -181,11 +192,7 @@
 	</include>
 
 	<include name="HugeCircleSortLetterIcon">
-		<control type="image">
-			<width>610</width>
-			<height>610</height>
-			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-		</control>
+        <include>HugeCircleBackgroundIcon</include>
 
 		<control type="label">
 			<posx>125</posx>
