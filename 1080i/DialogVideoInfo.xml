@@ -10,15 +10,15 @@
 
 			<control type="group" description="Dialog Icon For Movie">
 				<visible>!Control.HasFocus(50)</visible>
-				<posx>150</posx>
-				<posy>20</posy>
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
 				<include>DefaultCircleThumbnailIcon</include>
 			</control>
 
 			<control type="group" description="Dialog Icon For Cast List">
 				<visible>Control.HasFocus(50)</visible>
-				<posx>150</posx>
-				<posy>20</posy>
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
 				
 				<control type="image">
 					<posx>4</posx>
