@@ -4,21 +4,10 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<control type="group">
-			<posx>1620</posx>
-			<posy>890</posy>
-
-			<control type="group" id="901">
-				<include>StatusIconFrameForDialog</include>
-			
-				<control type="image" id="901" description="Mute Image">
-					<posx>30</posx>
-					<posy>25</posy>
-					<width>72</width>
-					<height>72</height>
-					<texture>icons/volume-mute.png</texture>
-				</control>
-			</control>
+		<control type="group" id="901">
+            <posx>20</posx>
+            <posy>20</posy>
+			<include>SmallCircleMuteBugIcon</include>
 		</control>
 	</controls>
 </window>

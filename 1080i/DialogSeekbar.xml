@@ -113,47 +113,21 @@
 			
 			<control type="group">
 				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [[!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(karaoke)]] | Window.IsVisible(subtitlesearch)]</visible>
-				<posx>1750</posx>
-				<posy>890</posy>
-				<include>StatusIconFrameForDialog</include>
-
-				<control type="group">
-					<visible>Player.Paused</visible>
-					
-					<control type="image" description="Player Direction Icon">
-						<posx>45</posx>
-						<posy>40</posy>
-						<width>40</width>
-						<height>40</height>
-						<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-				</control>
-
-				<control type="group">
-					<visible>[Player.Forwarding | Player.Rewinding]</visible>
-					
-					<control type="image" description="Player Direction Icon">
-						<posx>45</posx>
-						<posy>25</posy>
-						<width>40</width>
-						<height>40</height>
-						<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-					
-					<control type="label">
-						<posx>15</posx>
-						<posy>70</posy>
-						<width>100</width>
-						<height>20</height>
-						<font>PlayerSpeedFont</font>
-						<textcolor>BackgroundColor</textcolor>
-						<align>center</align>
-						<label>$VAR[PlayerSpeedLabel]</label>
-					</control>
-				</control>
-			</control>
+                
+                <control type="group">
+                    <visible>Window.IsVisible(mutebug)</visible>
+                    <posx>140</posx>
+                    <posy>20</posy>
+                    <include>SmallCirclePlayerStateIcon</include>
+                </control>
+                
+                <control type="group">
+                    <visible>!Window.IsVisible(mutebug)</visible>
+                    <posx>20</posx>
+                    <posy>20</posy>
+                    <include>SmallCirclePlayerStateIcon</include>
+                </control>
+            </control>
 		</control>
 	</controls>
 </window>
