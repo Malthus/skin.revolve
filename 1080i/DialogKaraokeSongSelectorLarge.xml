@@ -10,13 +10,13 @@
 			<control type="group" description="Dialog Icon Background">
 				<posx>PosXForSmallIconFrameForDialog</posx>
 				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>SmallIconFrameForDialog</include>
+				<include>BackgroundForSmallCircleThumbnailIcon</include>
                 
 				<control type="image">
                     <posx>1</posx>
                     <posy>1</posy>
-					<width>98</width>
-					<height>98</height>
+					<width>88</width>
+					<height>88</height>
 					<texture colordiffuse="BackgroundColor">icons/icon-microphone.png</texture>
 					<aspectratio>scale</aspectratio>
 				</control>

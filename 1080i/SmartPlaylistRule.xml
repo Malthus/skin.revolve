@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="129">
+<window id="137">
 	<defaultcontrol always="true">15</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
@@ -11,11 +11,11 @@
 			<control type="group" description="Smart Playlist Dialog Icon">
 				<posx>PosXForSmallIconFrameForDialog</posx>
 				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>SmallIconFrameForDialog</include>
+				<include>BackgroundForSmallCircleThumbnailIcon</include>
 				
 				<control type="image">
-					<width>98</width>
-					<height>98</height>
+					<width>88</width>
+					<height>88</height>
 					<texture colordiffuse="BackgroundColor">icons/icon-musicnote.png</texture>
 					<aspectratio>scale</aspectratio>
 				</control>

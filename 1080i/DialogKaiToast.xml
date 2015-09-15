@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="107">
-<!--	<defaultcontrol always="true">402</defaultcontrol> -->
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
@@ -11,7 +10,46 @@
 			<control type="group" description="Dialog Icon Background">
 				<posx>PosXForSmallIconFrameForDialog</posx>
 				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>SmallIconFrameForDialog</include>
+				<include>BackgroundForSmallCircleThumbnailIcon</include>
+                
+                <control type="image" id="400" description="File Icon">
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>80</width>
+                    <height>80</height>
+                    <texture diffuse="elements/circle-mask.png">DefaultFile.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+
+                <control type="image" id="403" description="Info Icon">
+                    <visible>false</visible>
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>80</width>
+                    <height>80</height>
+                    <texture diffuse="elements/circle-mask.png">DefaultIconInfo.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+
+                <control type="image" id="404" description="Warning Icon">
+                    <visible>false</visible>
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>80</width>
+                    <height>80</height>
+                    <texture diffuse="elements/circle-mask.png">DefaultIconWarning.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+
+                <control type="image" id="405" description="Error Icon">
+                    <visible>false</visible>
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>80</width>
+                    <height>80</height>
+                    <texture diffuse="elements/circle-mask.png">DefaultIconError.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>                
 			</control>
 			
 			<control type="label" id="401" description="Message Header Label">
@@ -28,45 +66,6 @@
 				<width>1240</width>
 				<scroll>true</scroll>
 				<label>-</label>
-			</control>
-			
-			<control type="image" id="400" description="File Icon">
-				<posx>233</posx>
-				<posy>23</posy>
-				<width>96</width>
-				<height>96</height>
-				<aspectratio>keep</aspectratio>
-				<texture diffuse="elements/circle-mask.png">DefaultFile.png</texture>
-			</control>
-
-			<control type="image" id="403" description="Info Icon">
-				<posx>233</posx>
-				<posy>23</posy>
-				<width>96</width>
-				<height>96</height>
-				<aspectratio>keep</aspectratio>
-				<visible>false</visible>
-				<texture diffuse="elements/circle-mask.png">DefaultIconInfo.png</texture>
-			</control>
-
-			<control type="image" id="404" description="Warning Icon">
-				<posx>233</posx>
-				<posy>23</posy>
-				<width>96</width>
-				<height>96</height>
-				<aspectratio>keep</aspectratio>
-				<visible>false</visible>
-				<texture diffuse="elements/circle-mask.png">DefaultIconWarning.png</texture>
-			</control>
-
-			<control type="image" id="405" description="Error Icon">
-				<posx>233</posx>
-				<posy>23</posy>
-				<width>96</width>
-				<height>96</height>
-				<aspectratio>keep</aspectratio>
-				<visible>false</visible>
-				<texture diffuse="elements/circle-mask.png">DefaultIconError.png</texture>
 			</control>
 		</control>
 	</controls>
