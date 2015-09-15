@@ -164,6 +164,30 @@
 		</control>
 	</include>
 	
+	<include name="DefaultCircleQuestionThumbnailIcon" description="Default Circle Thumbnail Icon With Questionmark Without Shadow">
+        <include>BackgroundForDefaultCircleThumbnailIcon</include>
+
+		<control type="label">
+			<posx>35</posx>
+			<posy>35</posy>
+			<width>200</width>
+			<height>200</height>
+			<font>HugeSortLetterFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<align>center</align>
+			<label>$LOCALIZE[31904]</label>
+		</control>
+
+        <control type="image">
+			<posx>4</posx>
+			<posy>4</posy>
+			<width>262</width>
+			<height>262</height>
+			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	
 	<include name="DefaultCirclePlayerMediaIcon">
         <control type="group">
             <include>ShadowForDefaultCircleThumbnailIcon</include>
