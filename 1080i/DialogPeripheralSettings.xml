@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="123">
+<window id="150">
 	<defaultcontrol>5</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
@@ -7,6 +7,19 @@
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
 			<include>ThirteenLinesDialog</include>
+
+			<control type="group" description="Peripheral Dialog Icon">
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultIconFrameForDialog</include>
+
+				<control type="image">
+					<width>262</width>
+					<height>262</height>
+					<texture colordiffuse="BackgroundColor">icons/icon-connector.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
 
 			<control type="label" description="Peripheral Settings Header Label">
 				<posx>560</posx>
