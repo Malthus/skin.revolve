@@ -11,17 +11,17 @@
 			<control type="group" description="Dialog Icon (?)">
 				<posx>PosXForSmallIconFrameForDialog</posx>
 				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>SmallIconFrameForDialog</include>
+				<include>SmallCircleBackgroundIcon</include>
 			  
 				<control type="label">
-					<posx>32</posx>
-					<posy>30</posy>
+					<posx>25</posx>
+					<posy>25</posy>
 					<width>40</width>
 					<height>40</height>
-					<label>$INFO[31904]</label>
 					<font>DialogIconFont</font>
 					<textcolor>BackgroundColor</textcolor>
 					<align>center</align>
+					<label>$LOCALIZE[31904]</label>
 				</control>
 			</control>
 
