@@ -8,6 +8,21 @@
 			<posy>PosYForSixLinesDialog</posy>
 			<include>SixLinesDialog</include>
 
+			<control type="group" description="Dialog Settings Icon">
+				<posx>PosXForSmallIconFrameForDialog</posx>
+				<posy>PosYForSmallIconFrameForDialog</posy>
+				<include>BackgroundForSmallCircleThumbnailIcon</include>
+                
+				<control type="image">
+                    <posx>1</posx>
+                    <posy>1</posy>
+					<width>88</width>
+					<height>88</height>
+					<texture colordiffuse="BackgroundColor">icons/icon-settings.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+            
 			<control type="label" id="2" description="Network Header Label">
 				<posx>560</posx>
 				<posy>20</posy>
@@ -89,7 +104,7 @@
 
 			<control type="button" id="12" description="Server Browse Button">
 				<posx>40</posx>
-				<posy>120</posy>
+				<posy>160</posy>
 				<width>480</width>
 				<label>1024</label>
 				<onup>19</onup>
