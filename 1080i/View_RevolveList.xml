@@ -49,7 +49,7 @@
 	</include>
 			
 	<include name="MainRevolveListView">
-		<control type="group" description="Left Ring (poster/thumb, plot, labels)">
+		<control type="group" description="Left Ring Image">
 			<visible>Control.IsVisible(54)</visible>
 			<include>LeftRing</include>
 		</control>
