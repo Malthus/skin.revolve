@@ -12,34 +12,45 @@
 		</control>
 
 		<control type="group">
-			<include>VisibilityForVerticalIcon</include>
-			<posx>40</posx>
-			<posy>140</posy>
-			<include>VerticalThumbnailIcon</include>
-			<include>OverlayForVerticalThumbnailIcon</include>
-		</control>
+            <visible>!Container.Content(files)</visible>
+            
+            <control type="group">
+                <include>VisibilityForVerticalIcon</include>
+                <posx>40</posx>
+                <posy>140</posy>
+                <include>VerticalThumbnailIcon</include>
+                <include>OverlayForVerticalThumbnailIcon</include>
+            </control>
 
-		<control type="group">
-			<include>VisibilityForSquareIcon</include>
-			<posx>40</posx>
-			<posy>240</posy>
-			<include>SquareThumbnailIcon</include>
-			<include>OverlayForSquareThumbnailIcon</include>
-		</control>
+            <control type="group">
+                <include>VisibilityForSquareIcon</include>
+                <posx>40</posx>
+                <posy>240</posy>
+                <include>SquareThumbnailIcon</include>
+                <include>OverlayForSquareThumbnailIcon</include>
+            </control>
 		
-		<control type="group">
-			<include>VisibilityForHorizontalIcon</include>
-			<posx>40</posx>
-			<posy>240</posy>
-			<include>HorizontalThumbnailIcon</include>
-			<include>OverlayForSquareThumbnailIcon</include>
-		</control>
+            <control type="group">
+                <include>VisibilityForHorizontalIcon</include>
+                <posx>40</posx>
+                <posy>240</posy>
+                <include>HorizontalThumbnailIcon</include>
+                <include>OverlayForSquareThumbnailIcon</include>
+            </control>
 		
+            <control type="group">
+                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+                <posx>40</posx>
+                <posy>610</posy>
+                <include>HorizontalViewListOfContentMediaFlag</include>
+            </control>
+		</control>
+        
 		<control type="group">
-			<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-			<posx>40</posx>
-			<posy>610</posy>
-			<include>HorizontalViewListOfContentMediaFlag</include>
+            <visible>Container.Content(files)</visible>
+            <posx>60</posx>
+            <posy>400</posy>
+            <include>HugeCircleThumbnailIcon</include>
 		</control>
 
 		<control type="textbox" description="Description of List Item">
@@ -96,27 +107,38 @@
 		</control>
 			
 		<control type="group">
-			<include>VisibilityForSquareIcon</include>
-			<posx>1500</posx>
-			<posy>460</posy>
-			<include>SquareThumbnailIcon</include>
-			<include>OverlayForSquareThumbnailIcon</include>
+            <visible>!Container.Content(files)</visible>
+            
+            <control type="group">
+                <include>VisibilityForSquareIcon</include>
+                <posx>1500</posx>
+                <posy>460</posy>
+                <include>SquareThumbnailIcon</include>
+                <include>OverlayForSquareThumbnailIcon</include>
+            </control>
+			
+            <control type="group">
+                <include>VisibilityForVerticalIcon</include>
+                <posx>1500</posx>
+                <posy>460</posy>
+                <include>VerticalThumbnailIcon</include>
+                <include>OverlayForVerticalThumbnailIcon</include>
+            </control>
+			
+            <control type="group">
+                <include>VisibilityForHorizontalIcon</include>
+                <posx>1400</posx>
+                <posy>460</posy>
+                <include>HorizontalThumbnailIcon</include>
+                <include>OverlayForHorizontalThumbnailIcon</include>
+            </control>
 		</control>
 			
 		<control type="group">
-			<include>VisibilityForVerticalIcon</include>
-			<posx>1500</posx>
-			<posy>460</posy>
-			<include>VerticalThumbnailIcon</include>
-			<include>OverlayForVerticalThumbnailIcon</include>
-		</control>
-			
-		<control type="group">
-			<include>VisibilityForHorizontalIcon</include>
-			<posx>1400</posx>
-			<posy>460</posy>
-			<include>HorizontalThumbnailIcon</include>
-			<include>OverlayForHorizontalThumbnailIcon</include>
+            <visible>Container.Content(files)</visible>
+            <posx>1200</posx>
+            <posy>20</posy>
+            <include>HugeCircleThumbnailIcon</include>
 		</control>
 			
 		<control type="image">
