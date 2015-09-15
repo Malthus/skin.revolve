@@ -9,26 +9,15 @@
 			<include>ThirteenLinesDialog</include>
 
 			<control type="group" description="Dialog Icon For Subtitle Service">
-				<posx>150</posx>
-				<posy>20</posy>
-				
-				<control type="image" id="110">
-					<posx>4</posx>
-					<posy>4</posy>
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultIconFrameForDialog</include>
+
+				<control type="image">
 					<width>262</width>
 					<height>262</height>
-					<texture background="true" diffuse="elements/circle-mask.png">-</texture>
-					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				</control>
-		
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>270</width>
-					<height>270</height>
-					<texture background="true">elements/circle-border.png</texture>
-					<colordiffuse>MainColor</colordiffuse>
-					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="BackgroundColor">icons/icon-subtitles.png</texture>
+					<aspectratio>scale</aspectratio>
 				</control>
 			</control>
 			
