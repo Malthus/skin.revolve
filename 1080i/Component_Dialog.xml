@@ -2,34 +2,10 @@
 <includes>
     <constant name="PosXForSmallIconFrameForDialog">230</constant>
     <constant name="PosYForSmallIconFrameForDialog">20</constant>
-	<include name="SmallIconFrameForDialog" description="Dialog Icon Frame">
-		<control type="group">
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>100</height>
-				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-				<aspectratio scalediffuse="false">keep</aspectratio>
-			</control>
-		</control>
-	</include>
 
     <constant name="PosXForDefaultIconFrameForDialog">145</constant>
     <constant name="PosYForDefaultIconFrameForDialog">20</constant>
-	<include name="DefaultIconFrameForDialog" description="Busy Icon Frame">
-		<control type="group">
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>270</width>
-				<height>270</height>
-				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-				<aspectratio scalediffuse="false">keep</aspectratio>
-			</control>
-		</control>
-	</include>
-	
+    
 	<include name="ItemsForInfoListInDialog" description="All Items For Info List In Dialog">
 		<itemlayout height="40">
 			<include>NormalItemsForInfoListInDialog</include>
@@ -413,7 +389,7 @@
 			<control type="group">
 				<posx>140</posx>
 				<posy>-85</posy>
-				<include>DefaultIconFrameForDialog</include>
+				<include>BackgroundForDefaultCircleThumbnailIcon</include>
 			</control>
 		</control>
 	</include>
@@ -449,7 +425,7 @@
 			<control type="group">
 				<posx>140</posx>
 				<posy>-35</posy>
-				<include>DefaultIconFrameForDialog</include>
+				<include>BackgroundForDefaultCircleThumbnailIcon</include>
 			</control>
 		</control>
 	</include>
@@ -486,27 +462,7 @@
 			<control type="group">
 				<posx>140</posx>
 				<posy>-90</posy>
-				<include>DefaultIconFrameForDialog</include>
-			</control>
-		</control>
-	</include>
-    
-	<include name="StatusIconFrameForDialog" description="Status Icon Frame">
-		<control type="group">
-			<control type="image">
-				<posx>-5</posx>
-				<posy>-10</posy>
-				<width>140</width>
-				<height>140</height>
-				<texture background="true">elements/circle-shadow.png</texture>
-			</control>
-			<control type="image">
-				<posx>15</posx>
-				<posy>10</posy>
-				<width>100</width>
-				<height>100</height>
-				<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-				<aspectratio scalediffuse="false">keep</aspectratio>
+				<include>BackgroundForDefaultCircleThumbnailIcon</include>
 			</control>
 		</control>
 	</include>
