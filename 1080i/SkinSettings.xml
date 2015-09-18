@@ -320,6 +320,20 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
+					<control type="button" id="807" description="Busy Animation Option">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31788]: $VAR[BusyAnimationNameLabel]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31788],1188)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
+						<onclick>SetProperty(DialogTarget,BusyAnimation,1188)</onclick>
+						<onclick>SetProperty(List01Option.Name,$LOCALIZE[31951],1188)</onclick>
+						<onclick>SetProperty(List01Option.Value,A,1188)</onclick>
+						<onclick>SetProperty(List02Option.Name,$LOCALIZE[31952],1188)</onclick>
+						<onclick>SetProperty(List02Option.Value,C,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
+					</control>
+					
 					<control type="button" id="820" description="Reset Page Setting Button">
 						<width>1100</width>
 						<align>left</align>
@@ -533,6 +547,11 @@
 						<visible>Control.HasFocus(806)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31191]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(807)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31207]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>

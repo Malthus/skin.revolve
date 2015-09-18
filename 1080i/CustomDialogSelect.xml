@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1188">
+	<defaultcontrol always="true">40</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<control type="group">
+			<posy>PosYForTenLinesDialog</posy>
+			<include>TenLinesDialog</include>
+
+			<control type="group" description="Dialog Thumbnail Icon">
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>DefaultCircleQuestionThumbnailIcon</include>
+			</control>
+			
+			<control type="label" description="Header Label">
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<font>DialogTitleFont</font>
+				<align>left</align>
+				<label>$INFO[Window.Property(DialogTitle)]</label>
+			</control>
+			
+			<control type="label" description="Custom Item Label">
+				<posx>560</posx>
+				<posy>80</posy>
+				<width>1240</width>
+				<font>DialogTextFont</font>
+				<align>left</align>
+				<label>$INFO[Window.Property(DialogMessage)]</label>
+			</control>
+
+			<control type="group">
+                <control type="list" id="40" description="Item List">
+                    <posx>560</posx>
+                    <posy>120</posy>
+                    <height>360</height>
+                    <itemgap>0</itemgap>
+                    <align>left</align>
+                    <scrolltime>0</scrolltime>
+                    <pagecontrol>41</pagecontrol>
+                    <onup>40</onup>
+                    <ondown>40</ondown>
+                    <onleft>9000</onleft>
+                    <onright>41</onright>
+
+                    <itemlayout height="40">
+                        <include>NormalItemsForNormalList</include>
+                    </itemlayout>
+				
+                    <focusedlayout height="40">
+                        <control type="group">
+                            <visible>Control.HasFocus(40)</visible>
+                            <include>FocusedItemsForNormalList</include>
+                        </control>
+                        <control type="group">
+                            <visible>!Control.HasFocus(40)</visible>
+                            <include>SelectedItemsForNormalList</include>
+                        </control>
+                    </focusedlayout>
+
+                    <content>
+                        <item id="51">
+                            <visible>!IsEmpty(Window.Property(List01Option.Name))</visible>
+                            <label>$INFO[Window.Property(List01Option.Name)]</label>
+                            <property name="ItemValue">$INFO[Window.Property(List01Option.Value)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="52">
+                            <visible>!IsEmpty(Window.Property(List02Option.Name))</visible>
+                            <label>$INFO[Window.Property(List02Option.Name)]</label>
+                            <property name="ItemValue">$INFO[Window.Property(List02Option.Value)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="53">
+                            <visible>!IsEmpty(Window.Property(List03Option.Name))</visible>
+                            <label>$INFO[Window.Property(List03Option.Name)]</label>
+                            <property name="ItemValue">$INFO[Window.Property(List03Option.Value)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                    </content>
+                </control>
+                
+                <control id="41" type="scrollbar">
+                    <posy>240</posy>
+                    <height>360</height>
+                    <include>MarkupForScrollbarForDialog</include>
+                    <onleft>40</onleft>
+                    <onright>Noop</onright>
+                </control>
+			</control>
+                
+			<control type="group" id="9000">
+                <defaultcontrol>20</defaultcontrol>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onleft>Noop</onleft>
+				<onright>40</onright>
+
+				<control type="button" id="20" description="Ok Button">
+                    <posx>40</posx>
+                    <posy>400</posy>
+					<label>$LOCALIZE[186]</label>
+                    <onup>21</onup>
+                    <ondown>21</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>40</onright>
+					<onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Container(40).ListItem.Property(ItemValue)])</onclick>
+					<onclick>Close</onclick>
+				</control>
+
+				<control type="button" id="21" description="Cancel Button">
+                    <posx>40</posx>
+                    <posy>440</posy>
+					<label>$LOCALIZE[222]</label>
+                    <onup>20</onup>
+                    <ondown>20</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>40</onright>
+					<onclick>Close</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
