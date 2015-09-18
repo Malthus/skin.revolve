@@ -312,6 +312,12 @@
             
 			<control type="label">
 				<include>WindowIDForDebug</include>
+				<label>CustomPromoScreen.xml</label>
+				<visible>Window.IsVisible(CustomPromoScreen.xml)</visible>
+			</control>
+            
+			<control type="label">
+				<include>WindowIDForDebug</include>
 				<label>CustomExitMenu.xml</label>
 				<visible>Window.IsVisible(CustomExitMenu.xml)</visible>
 			</control>
@@ -692,6 +698,12 @@
 
 			<control type="label">
 				<include>DialogIDForDebug</include>
+				<label>CustomDialogTextViewer.xml</label>
+				<visible>Window.IsVisible(CustomDialogTextViewer.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogIDForDebug</include>
 				<label>CustomDialogActionEditor.xml</label>
 				<visible>Window.IsVisible(CustomDialogActionEditor.xml)</visible>
 			</control>
@@ -710,8 +722,32 @@
 			
 			<control type="label">
 				<include>DialogIDForDebug</include>
+				<label>CustomDialogSubmenuEditor.xml</label>
+				<visible>Window.IsVisible(CustomDialogSubmenuEditor.xml)</visible>	
+			</control>
+			
+			<control type="label">
+				<include>DialogIDForDebug</include>
+				<label>CustomDialogSuboptionEditor.xml</label>
+				<visible>Window.IsVisible(CustomDialogSuboptionEditor.xml)</visible>	
+			</control>
+			
+			<control type="label">
+				<include>DialogIDForDebug</include>
 				<label>CustomDialogCircleEditor.xml</label>
 				<visible>Window.IsVisible(CustomDialogCircleEditor.xml)</visible>	
+			</control>
+            
+			<control type="label">
+				<include>DialogIDForDebug</include>
+				<label>CustomDialogSelect.xml</label>
+				<visible>Window.IsVisible(CustomDialogSelect.xml)</visible>	
+			</control>
+            
+			<control type="label">
+				<include>DialogIDForDebug</include>
+				<label>CustomDialogYesNo.xml</label>
+				<visible>Window.IsVisible(CustomDialogYesNo.xml)</visible>	
 			</control>
             
 			<!-- Add-on Dialog Labels -->
