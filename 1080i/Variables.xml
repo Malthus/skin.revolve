@@ -691,6 +691,16 @@
 		<value>TextColor</value>
 	</variable>
     
+    <variable name="BusyAnimationThumbnail">
+        <value condition="StringCompare(Skin.String(BusyAnimation),C)">icons/busy-circles.png</value>
+        <value>icons/busy-arrows.png</value>
+    </variable>
+
+    <variable name="BusyAnimationNameLabel">
+        <value condition="StringCompare(Skin.String(BusyAnimation),C)">$LOCALIZE[31952]</value>
+        <value>$LOCALIZE[31951]</value>
+    </variable>
+
     <variable name="MenuNameLabel">
         <value>$INFO[Container(450).ListItem.Label]</value>
     </variable>
