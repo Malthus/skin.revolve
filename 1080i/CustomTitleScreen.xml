@@ -45,7 +45,7 @@
                 <height>662</height>
                 <texture colordiffuse="FF000000" background="true">circle/revolve.png</texture>
                 <fadetime>400</fadetime>
-                <animation effect="rotate" center="400,400" start="3600" end="0" time="20000" condition="true">conditional</animation>
+                <animation effect="rotate" center="400,400" start="360" end="0" time="2000" loop="true" condition="true">conditional</animation>
             </control>
             
             <control type="label" description="Revolve Title">
