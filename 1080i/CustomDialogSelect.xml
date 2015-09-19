@@ -2,6 +2,7 @@
 <window type="dialog" id="1188">
 	<defaultcontrol always="true">40</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+    <onunload>RunScript(special://skin/scripts/ClearProperties.py,List%02dOption,1188)</onunload>
 
 	<controls>
 		<control type="group">
@@ -65,19 +66,121 @@
                         <item id="51">
                             <visible>!IsEmpty(Window.Property(List01Option.Name))</visible>
                             <label>$INFO[Window.Property(List01Option.Name)]</label>
-                            <property name="ItemValue">$INFO[Window.Property(List01Option.Value)]</property>
+                            <property name="Action">$INFO[Window.Property(List01Option.Action)]</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="52">
                             <visible>!IsEmpty(Window.Property(List02Option.Name))</visible>
                             <label>$INFO[Window.Property(List02Option.Name)]</label>
-                            <property name="ItemValue">$INFO[Window.Property(List02Option.Value)]</property>
+                            <property name="Action">$INFO[Window.Property(List02Option.Action)]</property>
                             <onclick>Noop</onclick>
                         </item>
                         <item id="53">
                             <visible>!IsEmpty(Window.Property(List03Option.Name))</visible>
                             <label>$INFO[Window.Property(List03Option.Name)]</label>
-                            <property name="ItemValue">$INFO[Window.Property(List03Option.Value)]</property>
+                            <property name="Action">$INFO[Window.Property(List03Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="54">
+                            <visible>!IsEmpty(Window.Property(List04Option.Name))</visible>
+                            <label>$INFO[Window.Property(List04Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List04Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="55">
+                            <visible>!IsEmpty(Window.Property(List05Option.Name))</visible>
+                            <label>$INFO[Window.Property(List05Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List05Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="56">
+                            <visible>!IsEmpty(Window.Property(List06Option.Name))</visible>
+                            <label>$INFO[Window.Property(List06Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List06Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="57">
+                            <visible>!IsEmpty(Window.Property(List07Option.Name))</visible>
+                            <label>$INFO[Window.Property(List07Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List07Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="58">
+                            <visible>!IsEmpty(Window.Property(List08Option.Name))</visible>
+                            <label>$INFO[Window.Property(List08Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List08Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="59">
+                            <visible>!IsEmpty(Window.Property(List09Option.Name))</visible>
+                            <label>$INFO[Window.Property(List09Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List09Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="60">
+                            <visible>!IsEmpty(Window.Property(List10Option.Name))</visible>
+                            <label>$INFO[Window.Property(List10Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List10Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="61">
+                            <visible>!IsEmpty(Window.Property(List11Option.Name))</visible>
+                            <label>$INFO[Window.Property(List11Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List11Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="62">
+                            <visible>!IsEmpty(Window.Property(List12Option.Name))</visible>
+                            <label>$INFO[Window.Property(List12Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List12Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="63">
+                            <visible>!IsEmpty(Window.Property(List13Option.Name))</visible>
+                            <label>$INFO[Window.Property(List13Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List13Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="64">
+                            <visible>!IsEmpty(Window.Property(List14Option.Name))</visible>
+                            <label>$INFO[Window.Property(List14Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List14Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="65">
+                            <visible>!IsEmpty(Window.Property(List15Option.Name))</visible>
+                            <label>$INFO[Window.Property(List15Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List15Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="66">
+                            <visible>!IsEmpty(Window.Property(List16Option.Name))</visible>
+                            <label>$INFO[Window.Property(List16Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List16Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="67">
+                            <visible>!IsEmpty(Window.Property(List17Option.Name))</visible>
+                            <label>$INFO[Window.Property(List17Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List17Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="68">
+                            <visible>!IsEmpty(Window.Property(List18Option.Name))</visible>
+                            <label>$INFO[Window.Property(List18Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List18Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="69">
+                            <visible>!IsEmpty(Window.Property(List19Option.Name))</visible>
+                            <label>$INFO[Window.Property(List19Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List19Option.Action)]</property>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item id="70">
+                            <visible>!IsEmpty(Window.Property(List20Option.Name))</visible>
+                            <label>$INFO[Window.Property(List20Option.Name)]</label>
+                            <property name="Action">$INFO[Window.Property(List20Option.Action)]</property>
                             <onclick>Noop</onclick>
                         </item>
                     </content>
@@ -107,7 +210,7 @@
                     <ondown>21</ondown>
                     <onleft>Noop</onleft>
                     <onright>40</onright>
-					<onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Container(40).ListItem.Property(ItemValue)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Container(40).ListItem.Property(Action)])</onclick>
 					<onclick>Close</onclick>
 				</control>
 

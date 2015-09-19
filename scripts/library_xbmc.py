@@ -96,6 +96,9 @@ def replaceEmptyItemWithHomeProperty(item, property):
 
 # Data Write Methods    
     
+def clearProperty(property, window):
+    xbmc.executebuiltin('ClearProperty(' + property + ',' + window + ')')
+    
 def setItemToProperty(property, item, window):
     if item != '':
         xbmc.executebuiltin('SetProperty(' + property + ',' + escapeValue(item) + ',' + window + ')')        
