@@ -17,7 +17,7 @@
 		<value condition="Container.Content(episodes)">[UPPERCASE]$INFO[ListItem.TVShowTitle]$INFO[ListItem.Season, | $LOCALIZE[20373] ,][/UPPERCASE]</value>
 		<value condition="Container.Content(albums)">[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</value>
 		<value condition="Container.Content(songs)">[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</value>
-		<value condition="Container.Content(files)">[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</value>
+		<value condition="Container.Content(files) + !IsEmpty(Artist)">[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Album, | ,][/UPPERCASE]</value>
 		<value condition="Container.Content(addons)">[UPPERCASE]$INFO[ListItem.Property(Addon.Creator),, | ]$INFO[ListItem.Property(Addon.Type)][/UPPERCASE]</value>
 		<value condition="!IsEmpty(ListItem.PictureDatetime)">[UPPERCASE]$INFO[ListItem.FolderName,, | ]$INFO[ListItem.PictureLongDatetime][/UPPERCASE]</value>
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">[UPPERCASE]$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date][/UPPERCASE]</value>
@@ -36,7 +36,7 @@
 		<value condition="Container.Content(songs)">[UPPERCASE]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,][/UPPERCASE]</value>
 		<value condition="Container.Content(files) + Substring(ListItem.Duration,:)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(files) + !IsEmpty(ListItem.Duration)">[UPPERCASE]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
-		<value condition="Container.Content(files) + !IsEmpty(Artist)">[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
+		<value condition="Container.Content(files) + !IsEmpty(Year)">[UPPERCASE]$INFO[ListItem.Year]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,][/UPPERCASE]</value>
 		<value condition="Container.Content(addons)">[UPPERCASE]$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Status), | ,][/UPPERCASE]</value>
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.Size]</value>
 		<value>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</value>
