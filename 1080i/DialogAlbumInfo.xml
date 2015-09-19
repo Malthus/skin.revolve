@@ -14,7 +14,8 @@
 				<include>DefaultCircleThumbnailIcon</include>
 			</control>
 
-			<control type="label" description="Artist / Album Name Header Label">
+			<control type="label" description="Artist Name Header Label">
+				<visible>Container.Content(Artists)</visible>
 				<posx>560</posx>
 				<posy>20</posy>
 				<width>1240</width>
@@ -23,6 +24,18 @@
 				<textcolor>SecondaryColor</textcolor>
 				<align>left</align>
 				<label>$VAR[ContentNameLabel]</label>
+			</control>
+			
+			<control type="label" description="Album Name Header Label">
+				<visible>Container.Content(Albums)</visible>
+				<posx>560</posx>
+				<posy>20</posy>
+				<width>1240</width>
+				<height>40</height>
+				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>left</align>
+				<label>$INFO[ListItem.Album]</label>
 			</control>
 			
 			<control type="list" id="20" description="Artist Information List">
@@ -73,16 +86,16 @@
 						<label2>$INFO[ListItem.Property(Artist_Genre)]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Artist Moods Label">
-						<visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
-							<label>$LOCALIZE[175]</label>
-							<label>$INFO[ListItem.Property(Artist_Mood)]</label>
-						<onclick>Noop</onclick>
-					</item>
 					<item description="Artist Styles Label">
 						<visible>!IsEmpty(ListItem.Property(Artist_Style))</visible>
 						<label>$LOCALIZE[176]</label>
 						<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item description="Artist Moods Label">
+						<visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
+						<label>$LOCALIZE[175]</label>
+						<label>$INFO[ListItem.Property(Artist_Mood)]</label>
 						<onclick>Noop</onclick>
 					</item>
 					<item description="Artist Instruments Label">
@@ -103,7 +116,7 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="list" id="22" description="Artist Information List">
+			<control type="list" id="22" description="Album Information List">
 				<visible>Container.Content(Albums)</visible>
 				<posx>560</posx>
 				<posy>80</posy>
@@ -133,22 +146,22 @@
 						<label2>$INFO[ListItem.Property(Album_Type)]</label2>
 						<onclick>Noop</onclick>
 					</item>
+					<item description="Album Styles Label">
+						<visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
+						<label>$LOCALIZE[176]</label>
+						<label2>$INFO[ListItem.Property(Album_Style)]</label2>
+						<onclick>Noop</onclick>
+					</item>
 					<item description="Album Theme Label">
 						<visible>!IsEmpty(ListItem.Property(Album_Theme))</visible>
-							<label>$LOCALIZE[15111]</label>
-							<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
+						<label>$LOCALIZE[15111]</label>
+						<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item description="Album Moods Label">
 						<visible>!IsEmpty(ListItem.Property(Album_Mood))</visible>
 						<label>$LOCALIZE[175]</label>
 						<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item description="Album Styles Label">
-						<visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
-						<label>$LOCALIZE[176]</label>
-						<label2>$INFO[ListItem.Property(Album_Style)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item description="Album Rating Label">
@@ -239,7 +252,8 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onleft>Noop</onleft>
-				<onright>50</onright>
+				<onright condition="Control.IsVisible(50)">50</onright>
+				<onright condition="!Control.IsVisible(50)">24</onright>
 
 				<control type="button" id="5" description="Review/Track Listing Button">
 					<label>$LOCALIZE[206]</label>
