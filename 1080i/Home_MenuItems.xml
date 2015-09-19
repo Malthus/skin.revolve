@@ -383,6 +383,7 @@
 		<item id="7" description="File Manager Option">
 			<visible>Skin.HasSetting(FileManagerOption.Active)</visible>
 			<label>$LOCALIZE[744]</label>
+            <label2>$INFO[System.FreeSpace] / $INFO[System.TotalSpace]</label2>
 			<property name="Label3">$LOCALIZE[31023]</property>
 			<icon>special://skin/backgrounds/files.jpg</icon>
 			<onclick>ActivateWindow(filemanager)</onclick>
