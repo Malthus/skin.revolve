@@ -283,10 +283,10 @@
 				<visible>Player.Paused</visible>
 					
 				<control type="image" description="Player Direction Icon">
-					<posx>55</posx>
-					<posy>55</posy>
-					<width>160</width>
-					<height>160</height>
+					<posx>75</posx>
+					<posy>75</posy>
+					<width>120</width>
+					<height>120</height>
 					<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
@@ -296,18 +296,18 @@
 				<visible>[Player.Forwarding | Player.Rewinding]</visible>
 					
 				<control type="image" description="Player Direction Icon">
-					<posx>55</posx>
-					<posy>35</posy>
-					<width>160</width>
-					<height>160</height>
+					<posx>75</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
 					<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 					
 				<control type="label">
-					<posx>35</posx>
+					<posx>75</posx>
 					<posy>195</posy>
-					<width>200</width>
+					<width>120</width>
 					<height>40</height>
 					<font>PlayerSpeedFont</font>
 					<textcolor>BackgroundColor</textcolor>
