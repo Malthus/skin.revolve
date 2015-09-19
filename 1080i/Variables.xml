@@ -1060,6 +1060,20 @@
 	<variable name="PlayerBackgroundMusicLabel">
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ]</value>
 	</variable>
+    
+    <variable name="PlayerVideoCodecLabel">
+		<value condition="Player.HasVideo">$INFO[VideoPlayer.VideoCodec] $LOCALIZE[21445]$INFO[VideoPlayer.VideoResolution, | $LOCALIZE[169]: ,]$INFO[VideoPlayer.VideoAspect, | $LOCALIZE[21374]: ,]$INFO[Player.CacheLevel, | ,% $LOCALIZE[439]]</value>
+	</variable>
+    
+    <variable name="PlayerAudioCodecLabel">
+		<value condition="Player.HasVideo">$INFO[VideoPlayer.AudioCodec] $LOCALIZE[21446]$INFO[VideoPlayer.AudioChannels, | , $LOCALIZE[19019]]</value>
+        <value condition="Player.HasAudio">$INFO[MusicPlayer.Codec] $LOCALIZE[21446]$INFO[MusicPlayer.BitRate, | , $LOCALIZE[31911]]$INFO[MusicPlayer.Channels, | , $LOCALIZE[19019]]</value>
+    </variable>
+
+    <variable name="PlayerVisualisationLabel">
+        <value condition="Visualisation.Locked">$INFO[Visualisation.Name] | $INFO[Visualisation.Preset] | $LOCALIZE[20166]</value>
+        <value>$INFO[Visualisation.Name] | $INFO[Visualisation.Preset]</value>
+    </variable>
 
 	<variable name="PlayerVideoCodec">
 		<value>$INFO[VideoPlayer.VideoCodec,icons/video-,.png]</value>

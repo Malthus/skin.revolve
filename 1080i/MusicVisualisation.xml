@@ -50,5 +50,14 @@
 				</control>
 			</control>
 		</control>
+        
+		<control type="group">
+			<visible>Player.ShowCodec + ![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+
+            <control type="group">
+				<include>MediaVisualisationLabelForPlayer</include>
+				<include>MediaAudioCodecLabelForPlayer</include>
+			</control>
+		</control>
 	</controls>
 </window>
