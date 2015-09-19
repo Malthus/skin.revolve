@@ -50,6 +50,7 @@
 		<onfocus>Skin.Reset(VideosOption.Immutable)</onfocus>
 		<onfocus>Skin.Reset(MoviesOption.Active)</onfocus>
 		<onfocus>Skin.Reset(TVShowsOption.Active)</onfocus>
+		<onfocus>Skin.Reset(MusicVideosOption.Active)</onfocus>
 		<onfocus>Skin.Reset(CustomVideosOption.Active)</onfocus>
 		<onfocus>Skin.SetBool(MusicOption.Active)</onfocus>
 		<onfocus>Skin.Reset(MusicOption.Immutable)</onfocus>
@@ -88,6 +89,7 @@
 		<onfocus>Skin.SetBool(ViewScrollbar.Visible)</onfocus>
 		<onfocus>Skin.SetBool(PlayerArtwork.Visible)</onfocus>
 		<onfocus>Skin.SetBool(MediaIcons.Visible)</onfocus>
+		<onfocus>Skin.SetString(BusyAnimation,A)</onfocus>
 		<onfocus>Skin.SetBool(NoInformationLabel.Visible)</onfocus>
 	</include>
     

@@ -3,7 +3,7 @@
 	<include name="HomeMenuItems">
 		<item id="13" description="Play Disc Option">
 			<visible>System.HasMediaDVD + Skin.HasSetting(PlayDiscOption.Active)</visible>
-			<label>427</label>
+			<label>$LOCALIZE[427]</label>
 			<label2>$INFO[System.DVDLabel]</label2>
 			<property name="Label3">$LOCALIZE[31020]</property>
 			<icon>special://skin/backgrounds/disc.jpg</icon>
@@ -12,7 +12,7 @@
 
 		<item id="8" description="Favourites Option">
 			<visible>Skin.HasSetting(FavouritesOption.Active)</visible>
-			<label>1036</label>
+			<label>$LOCALIZE[1036]</label>
 			<property name="Label3">$LOCALIZE[31026]</property>
 			<property name="Circle">circle/favourites.png</property>
 			<icon>special://skin/backgrounds/favourites.jpg</icon>
@@ -221,7 +221,7 @@
 
 		<item id="15" description="Live TV Option">
 			<visible>System.GetBool(pvrmanager.enabled) + Skin.HasSetting(LiveTVOption.Active)</visible>
-			<label>31001</label>
+			<label>$LOCALIZE[31001]</label>
 			<property name="Label3">$LOCALIZE[31021]</property>
 			<property name="Circle">circle/tvshows.png</property>
 			<icon>special://skin/backgrounds/livetv.jpg</icon>
@@ -231,7 +231,8 @@
 
 		<item id="2" description="Videos Option">
 			<visible>Skin.HasSetting(VideosOption.Active)</visible>
-			<label>3</label>
+			<label>$LOCALIZE[3]</label>
+            <label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31902] | $INFO[Window(Home).Property(MusicVideos.Count)] $LOCALIZE[20389]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
 			<property name="Circle">circle/videos.png</property>
 			<icon>special://skin/backgrounds/videos.jpg</icon>
@@ -242,7 +243,7 @@
 
 		<item id="5" description="Movies Option">
 			<visible>Library.HasContent(Movies) + Skin.HasSetting(MoviesOption.Active)</visible>
-			<label>342</label>
+			<label>$LOCALIZE[342]</label>
 			<label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(Movies.UnWatched)] $LOCALIZE[16101]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
 			<property name="Circle">circle/movies.png</property>
@@ -253,13 +254,23 @@
 
 		<item id="6" description="TV Shows Option">
 			<visible>Library.HasContent(TVShows) + Skin.HasSetting(TVShowsOption.Active)</visible>
-			<label>31003</label>
+			<label>$LOCALIZE[31003]</label>
 			<label2>$INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31902] | $INFO[Window(Home).Property(Episodes.Count)] $LOCALIZE[20360] | $INFO[Window(Home).Property(Episodes.UnWatched)] $LOCALIZE[16101]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
 			<property name="Circle">circle/tvshows.png</property>
 			<icon>special://skin/backgrounds/tvshows.jpg</icon>
 			<thumb>$INFO[Skin.String(TVShowsOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
+		</item>
+					
+		<item id="17" description="Music Videos Option">
+			<visible>Library.HasContent(MusicVideos) + Skin.HasSetting(MusicVideosOption.Active)</visible>
+			<label>$LOCALIZE[20389]</label>
+			<label2>$INFO[Window(Home).Property(MusicVideos.Count)] $LOCALIZE[20389] | $INFO[Window(Home).Property(MusicVideos.UnWatched)] $LOCALIZE[16101]</label2>
+			<property name="Label3">$LOCALIZE[33056]</property>
+			<icon>special://skin/backgrounds/musicvideos.jpg</icon>
+			<thumb>$INFO[Skin.String(MusicVideosOption.BackgroundFolder)]</thumb>
+			<onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
 		</item>
 					
 		<item id="42" description="Custom Videos Option">
@@ -274,8 +285,8 @@
 
 		<item id="3" description="Music Option">
 			<visible>Skin.HasSetting(MusicOption.Active)</visible>
-			<label>2</label>
-			<label2>$INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
+			<label>$LOCALIZE[2]</label>
+			<label2>$INFO[Window(Home).Property(Music.ArtistsCount)] $LOCALIZE[133] | $INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
 			<property name="Label3">$LOCALIZE[33057]</property>
 			<property name="Circle">circle/music.png</property>
 			<icon>special://skin/backgrounds/music.jpg</icon>
@@ -287,7 +298,7 @@
 		<item id="16" description="Albums Option">
 			<visible>Library.HasContent(Music) + Skin.HasSetting(AlbumsOption.Active)</visible>
 			<label>$LOCALIZE[132]</label>
-			<label2>$INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
+			<label2>$INFO[Window(Home).Property(Music.ArtistsCount)] $LOCALIZE[133] | $INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
 			<property name="Label3">$LOCALIZE[33057]</property>
 			<property name="Circle">circle/albums.png</property>
 			<icon>special://skin/backgrounds/albums.jpg</icon>
@@ -307,7 +318,7 @@
 
 		<item id="10" description="Books Option">
 			<visible>Skin.HasSetting(BooksOption.Active)</visible>
-			<label>31004</label>
+			<label>$LOCALIZE[31004]</label>
 			<property name="Label3">$LOCALIZE[31027]</property>
 			<property name="Circle">circle/books.png</property>
 			<icon>special://skin/backgrounds/books.jpg</icon>
@@ -318,7 +329,7 @@
 
 		<item id="4" description="Pictures Option">
 			<visible>Skin.HasSetting(PicturesOption.Active)</visible>
-			<label>1</label>
+			<label>$LOCALIZE[1]</label>
 			<property name="Label3">$LOCALIZE[33058]</property>
 			<property name="Circle">circle/pictures.png</property>
 			<icon>special://skin/backgrounds/pictures.jpg</icon>
@@ -338,7 +349,7 @@
 
 		<item id="12" description="Games Option">
 			<visible>Skin.HasSetting(GamesOption.Active)</visible>
-			<label>15016</label>
+			<label>$LOCALIZE[15016]</label>
 			<property name="Label3">$LOCALIZE[31020]</property>
 			<property name="Circle">circle/games.png</property>
 			<icon>special://skin/backgrounds/games.jpg</icon>
@@ -371,7 +382,7 @@
 
 		<item id="7" description="File Manager Option">
 			<visible>Skin.HasSetting(FileManagerOption.Active)</visible>
-			<label>744</label>
+			<label>$LOCALIZE[744]</label>
 			<property name="Label3">$LOCALIZE[31023]</property>
 			<icon>special://skin/backgrounds/files.jpg</icon>
 			<onclick>ActivateWindow(filemanager)</onclick>
@@ -379,7 +390,7 @@
 
 		<item id="14" description="Add-ons Option">
 			<visible>Skin.HasSetting(AddonsOption.Active)</visible>
-			<label>24001</label>
+			<label>$LOCALIZE[24001]</label>
 			<property name="Label3">$LOCALIZE[31023]</property>
 			<property name="Circle">circle/addons.png</property>
 			<icon>special://skin/backgrounds/addons.jpg</icon>

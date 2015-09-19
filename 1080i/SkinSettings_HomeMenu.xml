@@ -32,7 +32,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>427</label>
+				<label>$LOCALIZE[427]</label>
 				<selected>Skin.HasSetting(PlayDiscOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(PlayDiscOption.Active)</onclick>
 			</control>
@@ -41,7 +41,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>1036</label>
+				<label>$LOCALIZE[1036]</label>
 				<selected>Skin.HasSetting(FavouritesOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(FavouritesOption.Active)</onclick>
 			</control>
@@ -626,7 +626,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>31001</label>
+				<label>$LOCALIZE[31001]</label>
 				<selected>Skin.HasSetting(LiveTVOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(LiveTVOption.Active)</onclick>
 			</control>
@@ -635,7 +635,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>3</label>
+				<label>$LOCALIZE[3]</label>
 				<selected>Skin.HasSetting(VideosOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(VideosOption.Active)</onclick>
 			</control>
@@ -654,7 +654,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>342</label>
+				<label>$LOCALIZE[342]</label>
 				<selected>Skin.HasSetting(MoviesOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(MoviesOption.Active)</onclick>
 			</control>
@@ -663,9 +663,18 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>31003</label>
+				<label>$LOCALIZE[31003]</label>
 				<selected>Skin.HasSetting(TVShowsOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(TVShowsOption.Active)</onclick>
+			</control>
+					
+			<control type="radiobutton" id="270" description="Music Videos Option">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[20389]</label>
+				<selected>Skin.HasSetting(MusicVideosOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(MusicVideosOption.Active)</onclick>
 			</control>
 					
 			<control type="radiobutton" id="241" description="Custom Videos Option Activation Button">
@@ -699,7 +708,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>2</label>
+				<label>$LOCALIZE[2]</label>
 				<selected>Skin.HasSetting(MusicOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(MusicOption.Active)</onclick>
 			</control>
@@ -754,7 +763,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>31004</label>
+				<label>$LOCALIZE[31004]</label>
 				<selected>Skin.HasSetting(BooksOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(BooksOption.Active)</onclick>
 			</control>
@@ -781,7 +790,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>1</label>
+				<label>$LOCALIZE[1]</label>
 				<selected>Skin.HasSetting(PicturesOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(PicturesOption.Active)</onclick>
 			</control>
@@ -817,7 +826,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>15016</label>
+				<label>$LOCALIZE[15016]</label>
 				<selected>Skin.HasSetting(GamesOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(GamesOption.Active)</onclick>
 			</control>
@@ -844,7 +853,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>0</label>
+				<label>$LOCALIZE[0]</label>
 				<selected>Skin.HasSetting(ProgramsOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(ProgramsOption.Active)</onclick>
 			</control>
@@ -853,7 +862,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>8</label>
+				<label>$LOCALIZE[8]</label>
 				<selected>Skin.HasSetting(WeatherOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(WeatherOption.Active)</onclick>
 			</control>
@@ -862,7 +871,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>7</label>
+				<label>$LOCALIZE[7]</label>
 				<selected>Skin.HasSetting(FileManagerOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(FileManagerOption.Active)</onclick>
 			</control>
@@ -871,7 +880,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>24001</label>
+				<label>$LOCALIZE[24001]</label>
 				<selected>Skin.HasSetting(AddonsOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(AddonsOption.Active)</onclick>
 			</control>
@@ -880,7 +889,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>5</label>
+				<label>$LOCALIZE[5]</label>
 				<selected>Skin.HasSetting(SettingsOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(SettingsOption.Active)</onclick>
 			</control>
@@ -889,7 +898,7 @@
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>13012</label>
+				<label>$LOCALIZE[13012]</label>
 				<selected>Skin.HasSetting(ExitOption.Active)</selected>
 				<onclick>Skin.ToggleSetting(ExitOption.Active)</onclick>
 			</control>
@@ -928,32 +937,37 @@
 			<control type="textbox">
 				<visible>Control.HasFocus(201) | Control.HasFocus(203) | Control.HasFocus(205) | Control.HasFocus(207) | Control.HasFocus(209) | Control.HasFocus(211) | Control.HasFocus(213) | Control.HasFocus(215) | Control.HasFocus(217) | Control.HasFocus(219) | Control.HasFocus(221) | Control.HasFocus(223) | Control.HasFocus(225) | Control.HasFocus(227) | Control.HasFocus(229) | Control.HasFocus(231) | Control.HasFocus(233) | Control.HasFocus(235) | Control.HasFocus(237) | Control.HasFocus(239) | Control.HasFocus(241) | Control.HasFocus(243) | Control.HasFocus(245)</visible>
 				<font>AnnotationFont</font>
-				<label>31168</label>
+				<label>$LOCALIZE[31168]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(202) | Control.HasFocus(204) | Control.HasFocus(206) | Control.HasFocus(208) | Control.HasFocus(210) | Control.HasFocus(212) | Control.HasFocus(214) | Control.HasFocus(216) | Control.HasFocus(218) | Control.HasFocus(220) | Control.HasFocus(222) | Control.HasFocus(224) | Control.HasFocus(226) | Control.HasFocus(228) | Control.HasFocus(230) | Control.HasFocus(232) | Control.HasFocus(234) | Control.HasFocus(236) | Control.HasFocus(238) | Control.HasFocus(240) | Control.HasFocus(242) | Control.HasFocus(244) | Control.HasFocus(246)</visible>
 				<font>AnnotationFont</font>
-				<label>31169</label>
+				<label>$LOCALIZE[31169]</label>
+			</control>
+			<control type="textbox">
+				<visible>Control.HasFocus(270)</visible>
+				<font>AnnotationFont</font>
+				<label>$LOCALIZE[31160]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(271)</visible>
 				<font>AnnotationFont</font>
-				<label>31170</label>
+				<label>$LOCALIZE[31170]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(272) | Control.HasFocus(274)</visible>
 				<font>AnnotationFont</font>
-				<label>31167</label>
+				<label>$LOCALIZE[31167]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(273)</visible>
 				<font>AnnotationFont</font>
-				<label>31171</label>
+				<label>$LOCALIZE[31171]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(275)</visible>
 				<font>AnnotationFont</font>
-				<label>31189</label>
+				<label>$LOCALIZE[31189]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(276) | Control.HasFocus(277)</visible>
@@ -963,72 +977,72 @@
 			<control type="textbox">
 				<visible>Control.HasFocus(281)</visible>
 				<font>AnnotationFont</font>
-				<label>31172</label>
+				<label>$LOCALIZE[31172]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(282)</visible>
 				<font>AnnotationFont</font>
-				<label>31173</label>
+				<label>$LOCALIZE[31173]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(283)</visible>
 				<font>AnnotationFont</font>
-				<label>31174</label>
+				<label>$LOCALIZE[31174]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(284)</visible>
 				<font>AnnotationFont</font>
-				<label>31175</label>
+				<label>$LOCALIZE[31175]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(285)</visible>
 				<font>AnnotationFont</font>
-				<label>31176</label>
+				<label>$LOCALIZE[31176]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(286)</visible>
 				<font>AnnotationFont</font>
-				<label>31177</label>
+				<label>$LOCALIZE[31177]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(287)</visible>
 				<font>AnnotationFont</font>
-				<label>31178</label>
+				<label>$LOCALIZE[31178]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(288)</visible>
 				<font>AnnotationFont</font>
-				<label>31179</label>
+				<label>$LOCALIZE[31179]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(289)</visible>
 				<font>AnnotationFont</font>
-				<label>31180</label>
+				<label>$LOCALIZE[31180]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(290)</visible>
 				<font>AnnotationFont</font>
-				<label>31181</label>
+				<label>$LOCALIZE[31181]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(291)</visible>
 				<font>AnnotationFont</font>
-				<label>31182</label>
+				<label>$LOCALIZE[31182]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(292)</visible>
 				<font>AnnotationFont</font>
-				<label>31183</label>
+				<label>$LOCALIZE[31183]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(293)</visible>
 				<font>AnnotationFont</font>
-				<label>31185</label>
+				<label>$LOCALIZE[31185]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(294)</visible>
 				<font>AnnotationFont</font>
-				<label>31187</label>
+				<label>$LOCALIZE[31187]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(250)</visible>
