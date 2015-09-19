@@ -12,8 +12,6 @@
 		</control>
 
 		<control type="group">
-            <visible>!Container.Content(files)</visible>
-            
             <control type="group">
                 <include>VisibilityForVerticalIcon</include>
                 <posx>40</posx>
@@ -46,13 +44,6 @@
             </control>
 		</control>
         
-		<control type="group">
-            <visible>Container.Content(files)</visible>
-            <posx>60</posx>
-            <posy>400</posy>
-            <include>HugeCircleThumbnailIcon</include>
-		</control>
-
 		<control type="textbox" description="Description of List Item">
 			<posx>40</posx>
 			<posy>660</posy>
@@ -107,8 +98,6 @@
 		</control>
 			
 		<control type="group">
-            <visible>!Container.Content(files)</visible>
-            
             <control type="group">
                 <include>VisibilityForSquareIcon</include>
                 <posx>1500</posx>
@@ -132,13 +121,6 @@
                 <include>HorizontalThumbnailIcon</include>
                 <include>OverlayForHorizontalThumbnailIcon</include>
             </control>
-		</control>
-			
-		<control type="group">
-            <visible>Container.Content(files)</visible>
-            <posx>1200</posx>
-            <posy>20</posy>
-            <include>HugeCircleThumbnailIcon</include>
 		</control>
 			
 		<control type="image">
