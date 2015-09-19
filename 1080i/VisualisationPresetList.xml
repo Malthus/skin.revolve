@@ -8,12 +8,29 @@
 			<posy>PosYForThirteenLinesDialog</posy>
 			<include>ThirteenLinesDialog</include>
 
+			<control type="group" description="Dialog Icon">
+				<posx>PosXForDefaultIconFrameForDialog</posx>
+				<posy>PosYForDefaultIconFrameForDialog</posy>
+				<include>BackgroundForDefaultCircleThumbnailIcon</include>
+                
+				<control type="image">
+				    <posx>4</posx>
+				    <posy>4</posy>
+					<width>262</width>
+					<height>262</height>
+					<texture colordiffuse="BackgroundColor">icons/icon-lookingglass.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			</control>
+            
 			<control type="label" description="Visualization Preset List Header Label">
 				<posx>560</posx>
+				<posy>20</posy>
 				<width>1240</width>
 				<font>DialogTitleFont</font>
+				<textcolor>SecondaryColor</textcolor>
 				<align>left</align>
-				<label>31925</label>
+				<label>$LOCALIZE[31925]</label>
 			</control>
 
 			<control type="list" id="2" description="Preset List">
