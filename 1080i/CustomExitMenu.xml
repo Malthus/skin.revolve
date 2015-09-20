@@ -35,6 +35,7 @@
 				<item id="3" description="Logoff Profile Option">
 					<visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]</visible>
 					<label>$LOCALIZE[20126] $INFO[System.ProfileName]</label>
+					<icon>special://skin/backgrounds/logoff.jpg</icon>
 					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>System.LogOff()</onclick>
 				</item>
