@@ -116,17 +116,6 @@
 		</control>
 	</include>
 	
-	<include name="MySubmenuMenuTypeButtonForSideMenu" description="My Submenu Menu Type Button For Side Menu">
-		<control type="togglebutton" id="2">
-            <usealttexture>!Skin.HasSetting(MySubmenuMenu.Default)</usealttexture>
-			<label>$LOCALIZE[33061]: $LOCALIZE[31934]</label>
-			<altlabel>$LOCALIZE[33061]: $LOCALIZE[31932]</altlabel>
-			<align>left</align>
-            <onclick>Skin.Reset(MySubmenuMenu.Default)</onclick>
-            <altclick>Skin.SetBool(MySubmenuMenu.Default)</altclick>
-		</control>
-	</include>
-	
 	<include name="MyItemsMenuTypeButtonForSideMenu" description="My Items Menu Type Button For Side Menu">
 		<control type="togglebutton" id="2">
             <usealttexture>!Skin.HasSetting(MyItemsMenu.Default)</usealttexture>

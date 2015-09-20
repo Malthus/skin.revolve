@@ -20,11 +20,6 @@
         <visible>IsEmpty(ListItem.Art(banner))</visible>
     </include>
 	
-	<include name="VisibilityForNoDescription">
-<!--        <visible>Skin.HasSetting(NoInformationLabel.Visible) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Comment) + [!Container.Content(artists) | IsEmpty(ListItem.Property(Artist_Description))] + [!Container.Content(albums) | IsEmpty(ListItem.Property(Album_Description))] + [!Container.Content(addons) | IsEmpty(ListItem.Property(Addon.Description))] + [!Window.IsVisible(pictures) | ListItem.IsFolder]</visible> -->
-        <visible>Skin.HasSetting(NoInformationLabel.Visible) + IsEmpty(ListItem.Plot) + IsEmpty(ListItem.Comment) + IsEmpty(ListItem.Property(Artist_Description)) + IsEmpty(ListItem.Property(Album_Description)) + IsEmpty(ListItem.Property(Addon.Description)) + [!Window.IsVisible(pictures) | ListItem.IsFolder]</visible>
-	</include>
-    
 	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
         <include>BackgroundForTinyCircleThumbnailIcon</include>
 
