@@ -419,6 +419,16 @@
         </control>
 	</include>
 	
+    <include name="DescriptionForLandscapeButtonForSideMenu" description="Description in Landscape Button For Side Menu">
+		<control type="radiobutton" id="98">
+            <visible>Control.IsVisible(53)</visible>
+			<align>left</align>
+			<label>$LOCALIZE[21821]</label>
+			<selected>Skin.HasSetting(LandscapeDescription.Visible)</selected>
+			<onclick>Skin.ToggleSetting(LandscapeDescription.Visible)</onclick>
+		</control>
+	</include>
+    
 	<include name="MusicLibraryButtonForSideMenu" description="Music Library Button For Side Menu">
 		<control type="button" id="99">
 			<align>left</align>
