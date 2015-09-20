@@ -692,12 +692,12 @@
 	</variable>
     
     <variable name="BusyAnimationThumbnail">
-        <value condition="StringCompare(Skin.String(BusyAnimation),C)">icons/busy-circles.png</value>
+        <value condition="StringCompare(Skin.String(BusyAnimation.Type),C)">icons/busy-circles.png</value>
         <value>icons/busy-arrows.png</value>
     </variable>
 
     <variable name="BusyAnimationNameLabel">
-        <value condition="StringCompare(Skin.String(BusyAnimation),C)">$LOCALIZE[31952]</value>
+        <value condition="StringCompare(Skin.String(BusyAnimation.Type),C)">$LOCALIZE[31952]</value>
         <value>$LOCALIZE[31951]</value>
     </variable>
 

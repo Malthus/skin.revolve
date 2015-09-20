@@ -55,6 +55,7 @@
 
 			<include>BottomRing</include>
 			<include>ItemsForLandscape</include>
+            <include>ContentDescriptionForLandscapeView</include>
 		</control>
 
 		<control type="scrollbar" id="63" description="Scrollbar">
@@ -76,5 +77,57 @@
 			<onleft>63</onleft>
 			<onright>63</onright>
 		</control>
+	</include>
+    
+	<include name="ContentDescriptionForLandscapeView">
+		<control type="group">
+            <visible>Skin.HasSetting(LandscapeDescription.Visible)</visible>
+			<posx>40</posx>
+			<posy>40</posy>
+            
+			<control type="textbox">
+				<posx>-1</posx>
+				<posy>-1</posy>
+				<include>ContentDescriptionMarkupForLandscapeView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDescription]</label>
+			</control>
+			<control type="textbox">
+				<posx>1</posx>
+				<posy>-1</posy>
+				<include>ContentDescriptionMarkupForLandscapeView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDescription]</label>
+			</control>
+			<control type="textbox">
+				<posx>-1</posx>
+				<posy>1</posy>
+				<include>ContentDescriptionMarkupForLandscapeView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDescription]</label>
+			</control>
+			<control type="textbox">
+				<posx>1</posx>
+				<posy>1</posy>
+				<include>ContentDescriptionMarkupForLandscapeView</include>
+				<textcolor>BackgroundColor</textcolor>
+				<label>$VAR[ContentDescription]</label>
+			</control>
+			<control type="textbox">
+				<include>ContentDescriptionMarkupForLandscapeView</include>
+				<textcolor>SecondaryColor</textcolor>
+				<label>$VAR[ContentDescription]</label>
+			</control>
+		</control>
+	</include>
+    
+	<include name="ContentDescriptionMarkupForLandscapeView">
+		<align>left</align>
+		<aligny>top</aligny>
+		<width>1840</width>
+		<height>400</height>
+		<font>DescriptionFont</font>
+		<wrapmultiline>true</wrapmultiline>
+		<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 	</include>
 </includes>

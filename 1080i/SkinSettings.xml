@@ -311,6 +311,20 @@
 						<onclick>Skin.ToggleSetting(MediaIcons.Visible)</onclick>
 					</control>
 					
+					<control type="button" id="807" description="Busy Animation Option">
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31788]: $VAR[BusyAnimationNameLabel]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31788],1188)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
+						<onclick>SetProperty(DialogTarget,BusyAnimation.Type,1188)</onclick>
+						<onclick>SetProperty(List01Option.Name,$LOCALIZE[31951],1188)</onclick>
+						<onclick>SetProperty(List01Option.Action,A,1188)</onclick>
+						<onclick>SetProperty(List02Option.Name,$LOCALIZE[31952],1188)</onclick>
+						<onclick>SetProperty(List02Option.Action,C,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
+					</control>
+					
 					<control type="radiobutton" id="805" description="Visible No Information Available Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -320,20 +334,15 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
-					<control type="button" id="807" description="Busy Animation Option">
+					<control type="radiobutton" id="808" description="Visible Description in Landscape Option">
 						<width>1100</width>
+						<radioposx>1040</radioposx>
 						<align>left</align>
-						<label>$LOCALIZE[31788]: $VAR[BusyAnimationNameLabel]</label>
-						<onclick>SetProperty(DialogTitle,$LOCALIZE[31788],1188)</onclick>
-						<onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
-						<onclick>SetProperty(DialogTarget,BusyAnimation,1188)</onclick>
-						<onclick>SetProperty(List01Option.Name,$LOCALIZE[31951],1188)</onclick>
-						<onclick>SetProperty(List01Option.Action,A,1188)</onclick>
-						<onclick>SetProperty(List02Option.Name,$LOCALIZE[31952],1188)</onclick>
-						<onclick>SetProperty(List02Option.Action,C,1188)</onclick>
-						<onclick>ActivateWindow(1188)</onclick>
+						<label>$LOCALIZE[31150]</label>
+						<selected>Skin.HasSetting(LandscapeDescription.Visible)</selected>
+						<onclick>Skin.ToggleSetting(LandscapeDescription.Visible)</onclick>
 					</control>
-					
+                    
 					<control type="button" id="820" description="Reset Page Setting Button">
 						<width>1100</width>
 						<align>left</align>
@@ -552,6 +561,11 @@
 						<visible>Control.HasFocus(807)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31207]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(808)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31209]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>
