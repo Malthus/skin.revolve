@@ -157,8 +157,8 @@
 		<value condition="Window.IsVisible(settings) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(settings)">special://skin/backgrounds/settings.jpg</value>
 
-		<value condition="Window.IsVisible(1180) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
-		<value condition="Window.IsVisible(1180)">special://skin/backgrounds/exit.jpg</value>
+		<value condition="Window.IsVisible(1150) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
+		<value condition="Window.IsVisible(1150)">special://skin/backgrounds/exit.jpg</value>
         
 		<value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>
 		<value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
