@@ -55,6 +55,7 @@
 				<item id="6" description="Reboot Option">
                     <visible>System.CanReboot</visible>
 					<label>$LOCALIZE[13013]</label>
+					<icon>special://skin/backgrounds/reboot.jpg</icon>
 					<onclick>Reset()</onclick>
 				</item>
 				<item id="7" description="Custom Shutdown Timer Option">
