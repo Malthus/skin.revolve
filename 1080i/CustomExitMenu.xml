@@ -30,6 +30,7 @@
 				<item id="2" description="Shutdown Option">
                     <visible>System.CanPowerDown</visible>
 					<label>$LOCALIZE[13005]</label>
+					<icon>special://skin/backgrounds/shutdown.jpg</icon>
 					<onclick>ShutDown()</onclick>
 				</item>
 				<item id="3" description="Logoff Profile Option">
