@@ -60,11 +60,10 @@
 				<ondown>17</ondown>
 			</control>
 	
-			<control type="button" id="17" description="Value Button">
+			<control type="edit" id="17" description="Value Edit Box">
 				<posx>560</posx>
 				<posy>200</posy>
 				<width>740</width>
-				<texturenofocus colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texturenofocus>
 				<label>-</label>
 				<onup>16</onup>
 				<onleft>19</onleft>
