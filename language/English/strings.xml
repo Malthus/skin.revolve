@@ -81,20 +81,20 @@
     <string id="31180">Enable the File Manager option in the Home Menu.</string>
     <string id="31181">Enable the Add-ons option in the Home Menu. You can always manage your add-ons through the Add-ons option in the Settings menu.</string>
     <string id="31182">Enable the Settings option in the Home Menu. You should realize that it is hard to change these settings without this option!</string>
-    <string id="31183">Enable the Exit option in the Home Menu. You might need this option to exit XBMC.</string>
+    <string id="31183">Enable the Exit option in the Home Menu. You might need this option to exit Kodi.</string>
     <string id="31184">Do not completely hide the side menu when it is not focused. An invisible side menu gives Revolve a cleaner look, but there is no longer a visual clue that suggests the presence of a side menu.</string>
     <string id="31185">Enable the Live TV option in the Home Menu. This option will only be visible in the Home Menu if the Personal Video Recorder (PVR) features are enabled. You can enable these PVR features in the Live TV settings.</string>
     <string id="31186">Show the 'No information available' messages if there is no information available.</string>
-    <string id="31187">Enable the (Play) Disc option in the Home Menu. This option will only be visible in the Home Menu if there is a disc in the drive of your XBMC device.</string>
+    <string id="31187">Enable the (Play) Disc option in the Home Menu. This option will only be visible in the Home Menu if there is a disc in the drive of your Kodi device.</string>
     <string id="31188">Do not completely hide the scrollbar in the views when it is not focused. An invisible scrollbar gives Revolve a cleaner look, but there is no longer a visual clue that suggests the presence of the scrollbar.</string>
     <string id="31189">Enable the Albums option in the Home Menu. This option will only be visible in the Home Menu if your library contains some music.</string>
     <string id="31190">Set the add-on that can provide lyrics for your music.</string>
-    <string id="31191">Show the artwork for the currently playing media in the lower right corner of the screen in most XBMC windows. Hiding this artwork gives Revolve a cleaner but slightly boring look.</string>
+    <string id="31191">Show the artwork for the currently playing media in the lower right corner of the screen in most Kodi windows. Hiding this artwork gives Revolve a cleaner but slightly boring look.</string>
     <string id="31192">Enable an on-screen grid that you can use to place and align elements of this skin.</string>
     <string id="31193">Enable on-screen debug information that shows the currently active window and dialogs.</string>
     <string id="31194">Show the media icons that give detailed information about resolution, video codec, audio codec, aspect ratio, etc. in most views. Showing these icons gives you more information about the highlighted media, but hiding these icons gives Revolve a cleaner look.</string>
     <string id="31195">Reset all Revolve specific skin settings to the default values. This will delete all skin specific settings, including your custom Home Menu options!</string>
-    <string id="31196">Reload the current skin. This option is useful if you change the skin files while XBMC is running.</string>
+    <string id="31196">Reload the current skin. This option is useful if you change the skin files while Kodi is running.</string>
 	<string id="31197">Circle Items</string>
 	<string id="31198">Movie Source</string>
 	<string id="31199">Episode Source</string>
@@ -131,10 +131,10 @@
 	
     <!-- Custom Options Labels -->
 	<string id="31700">All Items</string>
-	<string id="31701">XBMC Items</string>
+	<string id="31701">Kodi Items</string>
 	<string id="31702">Screen Widgets Items</string>
 	<string id="31703">Library Data Provider Items</string>
-	<string id="31711">(provided by XBMC)</string>
+	<string id="31711">(provided by Kodi)</string>
 	<string id="31712">(provided by Screen Widgets)</string>
 	<string id="31713">(provided by Library Data Provider)</string>
     
@@ -163,12 +163,12 @@
 	<string id="31750">Set the name of the custom option that will appear in the menu.</string>
 	<string id="31751">Set the subtitle that will appear over the custom option in the menu.</string>
 	<string id="31752">Set the background image for the custom option in the menu.</string>
-	<string id="31753">Set the type of custom option that you want to create, the action associated with this custom option:[CR]- Custom submenu opens another menu, which you can fill with custom options. You can use the 'Edit Submenu' button to manage this submenu.[CR]- Custom items opens a window with items (such as movies, music albums) form a selected source, so you can fill a view with random albums or recommended episodes. You can use the 'Choose Items' button to select different sources for these items.[CR]- Custom action allows you to execute built-in functions from XBMC. You can use the 'Create Command' button to create these actions.</string>
+	<string id="31753">Set the type of custom option that you want to create, the action associated with this custom option:[CR]- Custom submenu opens another menu, which you can fill with custom options. You can use the 'Edit Submenu' button to manage this submenu.[CR]- Custom items opens a window with items (such as movies, music albums) form a selected source, so you can fill a view with random albums or recommended episodes. You can use the 'Choose Items' button to select different sources for these items.[CR]- Custom action allows you to execute built-in functions from Kodi. You can use the 'Create Command' button to create these actions.</string>
 	<string id="31754">Set the name of the window that is opened by this custom option.</string>
 	<string id="31755">Set the source pattern that defines the properties that provide the items. The number in this pattern should be represented by '%d', so Revolve can extract the item-information from the properties and display them in a window.</string>
 	<string id="31756">Set the plug-in that provides the items. You should write down the complete call to the plug-in, including arguments, but you should exclude the 'plug-in://' part of the call.</string>
 	<string id="31757">Set the unique identifier of the submenu. The whole submenu is linked to this identifier. You can link an option to an existing submenu by copying the submenu's identifier, or you can lose a submenu by removing this identifier. An identifier should consist only of alphanumeric characters (so no spaces, no punctuation marks, no strange characters).</string>
-	<string id="31758">Set the XBMC built-in function that should be executed when this custom option is selected. You can edit this command or use the 'Create Command' button to create a new custom command.</string>
+	<string id="31758">Set the Kodi built-in function that should be executed when this custom option is selected. You can edit this command or use the 'Create Command' button to create a new custom command.</string>
 	<string id="31759">Confirm the settings of this custom option and return to the Skin Settings menu.</string>
 	<string id="31760">Discard the changes made in the settings of this custom option and return to the Skin Settings menu.</string>
 	<string id="31761">Open the Custom Action Editor to create a new action for this custom option.</string>
@@ -180,7 +180,7 @@
     <string id="31767">Enable this option in this submenu. You should provide a name and an action to make this custom option do something useful.</string>
     <string id="31768">Edit this custom submenu option. You can set the name and subtitle of this option, and you can enter the action that is executed when this option is chosen in the submenu.</string>
     <string id="31769">Use the scrollbar to quickly move through the list of options.</string>
-	<string id="31770">Set the type of custom option that you want to create, the action associated with this custom option:[CR]- Custom items opens a window with items (such as movies, music albums) form a selected source, so you can fill a view with random albums or recommended episodes. You can use the 'Choose Items' button to select different sources for these items.[CR]- Custom action allows you to execute built-in functions from XBMC. You can use the 'Create Command' button to create these actions.</string>
+	<string id="31770">Set the type of custom option that you want to create, the action associated with this custom option:[CR]- Custom items opens a window with items (such as movies, music albums) form a selected source, so you can fill a view with random albums or recommended episodes. You can use the 'Choose Items' button to select different sources for these items.[CR]- Custom action allows you to execute built-in functions from Kodi. You can use the 'Create Command' button to create these actions.</string>
 	<string id="31771">Confirm the settings in this window and return to the Custom Option Editor.</string>
 	<string id="31772">Discard the changes made in this window and return to the Custom Option Editor.</string>
 	<string id="31773">Select the custom action that you want to connect to your custom option, or select the 'Custom Command' option in the list so you can enter a command.</string>
@@ -218,7 +218,7 @@
 	<string id="31815">Program Related Actions</string>
 	<string id="31816">Menu Option Related Actions</string>
 	<string id="31817">Miscellaneous Actions</string>
-	<string id="31818">XBMC Control Actions</string>
+	<string id="31818">Kodi Control Actions</string>
 	<string id="31819">Custom Command</string>
 	<string id="31820">Open live tv</string>
 	<string id="31821">Open the EPG timeline</string>
@@ -272,12 +272,12 @@
 	<string id="31869">Execute a shell command and wait</string>
 	<string id="31870">Refresh RSS Feeds</string>
 	<string id="31871">Reload the current skin</string>
-	<string id="31872">Minimize XBMC</string>
+	<string id="31872">Minimize Kodi</string>
 	<string id="31873">Log off user</string>
 	<string id="31874">Suspend your device</string>
 	<string id="31875">Hibernate your device</string>
-	<string id="31876">Restart XBMC</string>
-	<string id="31877">Quit XBMC</string>
+	<string id="31876">Restart Kodi</string>
+	<string id="31877">Quit Kodi</string>
 	<string id="31878">Reboot your device</string>
 	<string id="31879">Shut down your device</string>
 	<string id="31880">Enter a custom command</string>
