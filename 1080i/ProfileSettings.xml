@@ -12,7 +12,7 @@
 				<posx>150</posx>
 				<posy>20</posy>
 				
-				<control type="image" id="2">
+				<control type="image" id="101">
 					<posx>4</posx>
 					<posy>4</posy>
 					<width>262</width>
@@ -32,7 +32,7 @@
 				</control>
 			</control>
 			
-			<control type="label" description="Edit Profile Heading Label">
+			<control type="label" id="2" description="Edit Profile Heading Label">
 				<posx>560</posx>
 				<posy>20</posy>
 				<width>1240</width>
@@ -40,10 +40,10 @@
 				<font>DialogTitleFont</font>
 				<textcolor>SecondaryColor</textcolor>
 				<align>left</align>
-				<label>20067</label>
+				<label>-</label>
 			</control>
 
-			<control type="label" id="1000" description="Profile Name Label">
+			<control type="label" id="102" description="Profile Name Label">
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
@@ -51,7 +51,7 @@
 				<label>-</label>
 			</control>
 
-			<control type="label" id="1001" description="Profile Directory Label">
+			<control type="label" id="103" description="Profile Directory Label">
 				<posx>560</posx>
 				<posy>120</posy>
 				<width>1240</width>
@@ -88,7 +88,7 @@
 					<posx>40</posx>
 					<posy>520</posy>
 					<width>480</width>
-					<label>186</label>
+					<label>$LOCALIZE[186]</label>
 					<onleft>Noop</onleft>
 					<onright>5</onright>
 					<onup>29</onup>
@@ -99,7 +99,7 @@
 					<posx>40</posx>
 					<posy>560</posy>
 					<width>480</width>
-					<label>222</label>
+					<label>$LOCALIZE[222]</label>
 					<onleft>Noop</onleft>
 					<onright>5</onright>
 					<onup>28</onup>
