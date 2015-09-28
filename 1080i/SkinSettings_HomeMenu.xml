@@ -622,13 +622,22 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="293" description="LiveTV/PVR Option">
+			<control type="radiobutton" id="293" description="TV Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
-				<label>$LOCALIZE[31001]</label>
-				<selected>Skin.HasSetting(LiveTVOption.Active)</selected>
-				<onclick>Skin.ToggleSetting(LiveTVOption.Active)</onclick>
+				<label>$LOCALIZE[19020]</label>
+				<selected>Skin.HasSetting(TVOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(TVOption.Active)</onclick>
+			</control>
+					
+			<control type="radiobutton" id="269" description="Radio Option">
+				<width>1100</width>
+				<radioposx>1040</radioposx>
+				<align>left</align>
+				<label>$LOCALIZE[19021]</label>
+				<selected>Skin.HasSetting(RadioOption.Active)</selected>
+				<onclick>Skin.ToggleSetting(RadioOption.Active)</onclick>
 			</control>
 					
 			<control type="radiobutton" id="282" description="Videos Option">
@@ -945,6 +954,11 @@
 				<label>$LOCALIZE[31169]</label>
 			</control>
 			<control type="textbox">
+				<visible>Control.HasFocus(269)</visible>
+				<font>AnnotationFont</font>
+				<label>$LOCALIZE[31211]</label>
+			</control>
+			<control type="textbox">
 				<visible>Control.HasFocus(270)</visible>
 				<font>AnnotationFont</font>
 				<label>$LOCALIZE[31160]</label>
@@ -1037,7 +1051,7 @@
 			<control type="textbox">
 				<visible>Control.HasFocus(293)</visible>
 				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31185]</label>
+				<label>$LOCALIZE[31210]</label>
 			</control>
 			<control type="textbox">
 				<visible>Control.HasFocus(294)</visible>
