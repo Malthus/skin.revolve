@@ -1,473 +1,334 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="EPGTimelineViewForPVR">
-		<control type="group" description="TV Guide Timeline View">
+		<control type="epggrid" id="10" description="EPG Grid">
+            <viewtype label="19032">list</viewtype>
+			<posx>40</posx>
+			<posy>100</posy>
+			<width>1840</width>
+			<height>839</height>
+			<pagecontrol>10</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<progresstexture colordiffuse="SelectColor" border="20">white.png</progresstexture>
+			<timeblocks>20</timeblocks>
+			<rulerunit>6</rulerunit>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>9000</onup>
+			<ondown>Noop</ondown>
+			<onback>50</onback>
+				
+			<rulerlayout height="40" width="60" description="EPG Header Row">
+				<control type="image" id="1">
+					<width>60</width>
+					<height>40</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+				</control>
+				<control type="label" id="2">
+					<posx>8</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>BackgroundColor</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</rulerlayout>
+				
+			<channellayout height="80" width="480" description="Normal EPG First Column">
+				<control type="image">					
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>480</width>
+					<height>80</height>
+					<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>480</width>
+					<height>80</height>
+					<texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>80</height>
+					<align>left</align>
+					<textcolor>TextColor</textcolor>
+					<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+				</control>
+			    <control type="group">
+					<posx>405</posx>
+					<posy>5</posy>
+					<include>TinyCircleThumbnailIcon</include>
+				</control>
+			</channellayout>
+				
+			<focusedchannellayout height="80" width="480" description="Focused EPG First Column">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>500</width>
+					<height>100</height>
+					<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>100</height>
+					<align>left</align>
+					<textcolor>BackgroundColor</textcolor>
+					<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+				</control>
+			    <control type="group">
+					<posx>405</posx>
+					<posy>15</posy>
+					<include>TinyCircleThumbnailIcon</include>
+				</control>
+			</focusedchannellayout>
+				
+			<itemlayout height="80" width="60" description="Normal EPG Row">
+				<control type="image" id="2">
+					<width>60</width>
+					<height>80</height>
+					<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+				</control>
+				<control type="label" id="1">
+					<posx>8</posx>
+					<posy>0</posy>
+					<width>44</width>
+					<height>80</height>
+					<align>left</align>
+					<textcolor>MainColor</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+				
+			<focusedlayout height="80" width="60" description="Focused EPG Row">
+				<control type="image" id="2">
+					<posy>0</posy>
+					<width>60</width>
+					<height>100</height>
+					<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+				</control>
+				<control type="label" id="1">
+					<posx>8</posx>
+					<posy>0</posy>
+					<width>44</width>
+					<height>100</height>
+					<textcolor>BackgroundColor</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="group">
 			<visible>Control.IsVisible(10)</visible>
-
-			<control type="epggrid" id="10" description="EPG Grid">
-				<posx>40</posx>
-				<posy>100</posy>
-				<width>1840</width>
-				<height>839</height>
-				<pagecontrol>10</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<progresstexture colordiffuse="SelectColor" border="20">white.png</progresstexture>
-				<timeblocks>20</timeblocks>
-				<rulerunit>6</rulerunit>
-				<onleft>31</onleft>
-				<onright>31</onright>
-				<onup>9000</onup>
-				<ondown>Noop</ondown>
-				<onback>50</onback>
-				
-				<rulerlayout height="40" width="60" description="EPG Header Row">
-					<control type="image" id="1">
-						<width>60</width>
-						<height>40</height>
-						<posx>0</posx>
-						<posy>0</posy>
-						<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
-					</control>
-					<control type="label" id="2">
-						<posx>8</posx>
-						<posy>0</posy>
-						<width>60</width>
-						<height>40</height>
-						<align>left</align>
-						<textcolor>BackgroundColor</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</rulerlayout>
-				
-				<channellayout height="80" width="480" description="Normal EPG First Column">
-					<control type="image">					
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>480</width>
-						<height>80</height>
-						<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>480</width>
-						<height>80</height>
-						<texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
-					</control>
-					<control type="label">
-						<posx>40</posx>
-						<posy>0</posy>
-						<width>360</width>
-						<height>80</height>
-						<align>left</align>
-						<textcolor>TextColor</textcolor>
-						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
-					</control>
-				    <control type="group">
-						<posx>405</posx>
-						<posy>5</posy>
-						<include>TinyCircleThumbnailIcon</include>
-					</control>
-				</channellayout>
-				
-				<focusedchannellayout height="80" width="480" description="Focused EPG First Column">
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>500</width>
-						<height>100</height>
-						<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>360</width>
-						<height>100</height>
-						<align>left</align>
-						<textcolor>BackgroundColor</textcolor>
-						<label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
-					</control>
-				    <control type="group">
-						<posx>405</posx>
-						<posy>15</posy>
-						<include>TinyCircleThumbnailIcon</include>
-					</control>
-				</focusedchannellayout>
-				
-				<itemlayout height="80" width="60" description="Normal EPG Row">
-					<control type="image" id="2">
-						<width>60</width>
-						<height>80</height>
-						<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
-					</control>
-					<control type="label" id="1">
-						<posx>8</posx>
-						<posy>0</posy>
-						<width>44</width>
-						<height>80</height>
-						<align>left</align>
-						<textcolor>MainColor</textcolor>
-						<info>ListItem.Label</info>
-					</control>
-				</itemlayout>
-				
-				<focusedlayout height="80" width="60" description="Focused EPG Row">
-					<control type="image" id="2">
-						<posy>0</posy>
-						<width>60</width>
-						<height>100</height>
-						<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
-					</control>
-					<control type="label" id="1">
-						<posx>8</posx>
-						<posy>0</posy>
-						<width>44</width>
-						<height>100</height>
-						<textcolor>BackgroundColor</textcolor>
-						<align>left</align>
-						<info>ListItem.Label</info>
-					</control>
-				</focusedlayout>
-			</control>
-
 			<control type="group" description="Bottom Ring">
-				<visible>Control.IsVisible(10)</visible>
 				<include>BottomRing</include>
 			</control>
 		</control>
 	</include>
+    
+	<include name="EPGGuideNowViewForPVR">
+		<control type="fixedlist" id="11">
+            <viewtype label="19030">list</viewtype>
+			<posx>720</posx>
+			<posy>-121</posy>
+			<width>960</width>
+			<height>1250</height>
+			<pagecontrol>71</pagecontrol>
+			<focusposition>1</focusposition>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<onleft>9000</onleft>
+			<onright>71</onright>
   
-	<include name="TVChannelViewForPVR">
-		<control type="group" description="Live TV Channels Group View">
+			<include>NormalListItemForDropListView</include>
+			<include>FocusedListItemForDropListView</include>
+		</control>
+			
+        <include>ContentCategoryForDropListView</include>
+        <include>ContentNameForDropListView</include>
+		<include>ContentDetailForDropListView</include>
+		<include>ContentMediaFlagsForDropListView</include>
+		<include>ContentDescriptionForDropListView</include>
+			
+		<control type="scrollbar" id="71" description="Scrollbar">
+			<visible allowhiddenfocus="true">true</visible>
+			<animation type="Conditional" condition="!Control.HasFocus(71) + !Container(11).Scrolling">
+				<effect type="slide" start="0,0" end="100,0" time="100" />
+			</animation>
+
+			<posx>1860</posx>
+			<posy>100</posy>
+			<height>700</height>
+			<onleft>16</onleft>
+			<onright>Noop</onright>
+		</control>
+
+		<control type="group" description="EPG Now View">
 			<visible>Control.IsVisible(11)</visible>
-
 			<include>PreviewForPVR</include>
-			
-			<control type="group" description="TV Channels List">
-				<control type="fixedlist" id="11">
-					<posx>720</posx>
-					<posy>-121</posy>
-					<width>960</width>
-					<height>1250</height>
-					<onleft>9000</onleft>
-					<onright>71</onright>
-					<onup>11</onup>
-					<ondown>11</ondown>
-					<pagecontrol>71</pagecontrol>
-					<viewtype label="537">list</viewtype>
-					<focusposition>1</focusposition>
-		  
-					<include>NormalListItemForDropListView</include>
-					<include>FocusedListItemForDropListView</include>
-				</control>
-			</control>
-			
-			<include>ContentCategoryForDropListView</include>
-			<include>ContentNameForDropListView</include>
-			<include>ContentDetailForDropListView</include>
-			<include>ContentMediaFlagsForDropListView</include>
-			<include>ContentDescriptionForDropListView</include>
-			
-			<control type="scrollbar" id="71" description="Scrollbar">
-				<visible allowhiddenfocus="true">true</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(71) + !Container(11).Scrolling">
-					<effect type="slide" start="0,0" end="100,0" time="100" />
-				</animation>
-
-				<posx>1860</posx>
-				<posy>100</posy>
-				<height>700</height>
-				<onleft>11</onleft>
-				<onright>Noop</onright>
-			</control>
 		</control>
 	</include>
-  
-	<include name="RadioChannelViewForPVR">
-		<control type="group" description="Radio Channels Group View">
+
+	<include name="EPGGuideNextViewForPVR">
+		<control type="fixedlist" id="12">
+            <viewtype label="19031">list</viewtype>
+			<posx>720</posx>
+			<posy>-121</posy>
+			<width>960</width>
+			<height>1250</height>
+            <pagecontrol>72</pagecontrol>
+			<focusposition>1</focusposition>
+			<onup>12</onup>
+			<ondown>12</ondown>
+			<onleft>9000</onleft>
+			<onright>72</onright>
+		  
+			<include>NormalListItemForDropListView</include>
+			<include>FocusedListItemForDropListView</include>
+		</control>
+			
+		<include>ContentCategoryForDropListView</include>
+		<include>ContentNameForDropListView</include>
+		<include>ContentDetailForDropListView</include>
+		<include>ContentMediaFlagsForDropListView</include>
+		<include>ContentDescriptionForDropListView</include>
+			
+		<control type="scrollbar" id="72" description="Scrollbar">
+			<visible allowhiddenfocus="true">true</visible>
+			<animation type="Conditional" condition="!Control.HasFocus(72) + !Container(12).Scrolling">
+				<effect type="slide" start="0,0" end="100,0" time="100" />
+			</animation>
+
+			<posx>1860</posx>
+			<posy>100</posy>
+			<height>700</height>
+			<onleft>16</onleft>
+			<onright>Noop</onright>
+		</control>
+        
+		<control type="group">
 			<visible>Control.IsVisible(12)</visible>
-
 			<include>PreviewForPVR</include>
-			
-			<control type="group" description="Radio Channels List">
-				<control type="fixedlist" id="12">
-					<posx>720</posx>
-					<posy>-121</posy>
-					<width>960</width>
-					<height>1250</height>
-					<onleft>9000</onleft>
-					<onright>72</onright>
-					<onup>12</onup>
-					<ondown>12</ondown>
-					<pagecontrol>72</pagecontrol>
-					<viewtype label="537">list</viewtype>
-					<focusposition>1</focusposition>
-		  
-					<include>NormalListItemForDropListView</include>
-					<include>FocusedListItemForDropListView</include>
-				</control>
-			</control>
-			
-			<include>ContentCategoryForDropListView</include>
-			<include>ContentNameForDropListView</include>
-			<include>ContentDetailForDropListView</include>
-			<include>ContentMediaFlagsForDropListView</include>
-			<include>ContentDescriptionForDropListView</include>
-			
-			<control type="scrollbar" id="72" description="Scrollbar">
-				<visible allowhiddenfocus="true">true</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(72) + !Container(12).Scrolling">
-					<effect type="slide" start="0,0" end="100,0" time="100" />
-				</animation>
-
-				<posx>1860</posx>
-				<posy>100</posy>
-				<height>700</height>
-				<onleft>12</onleft>
-				<onright>Noop</onright>
-			</control>
 		</control>
 	</include>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	<include name="EPGGuideChannelViewForPVR">  
+		<control type="fixedlist" id="13">
+            <viewtype label="19029">list</viewtype>
+			<posx>720</posx>
+			<posy>-121</posy>
+			<width>960</width>
+			<height>1250</height>
+			<pagecontrol>73</pagecontrol>
+			<focusposition>1</focusposition>
+			<onup>13</onup>
+			<ondown>13</ondown>
+			<onleft>9000</onleft>
+			<onright>73</onright>
+		  
+			<include>NormalListItemForDropListView</include>
+			<include>FocusedListItemForDropListView</include>
+		</control>
+<!--			
+		<include>ContentCategoryForDropListView</include>
+		<include>ContentNameForDropListView</include>
+		<include>ContentDetailForDropListView</include>
+		<include>ContentMediaFlagsForDropListView</include>
+		<include>ContentDescriptionForDropListView</include>
+			
+		<control type="scrollbar" id="73" description="Scrollbar">
+			<visible allowhiddenfocus="true">true</visible>
+			<animation type="Conditional" condition="!Control.HasFocus(73) + !Container(13).Scrolling">
+				<effect type="slide" start="0,0" end="100,0" time="100" />
+			</animation>
 
-	<include name="RecordingsViewForPVR">
-		<control type="group" description="Recordings Group View">
+			<posx>1860</posx>
+			<posy>100</posy>
+			<height>700</height>
+			<onleft>15</onleft>
+			<onright>Noop</onright>
+		</control>
+        
+		<control type="group">
 			<visible>Control.IsVisible(13)</visible>
-
 			<include>PreviewForPVR</include>
-			
-			<control type="group" description="Recording Preview">
-				<visible>!Player.HasVideo | Skin.HasSetting(BackgroundVideo.Active)</visible>
-				<posx>120</posx>
-				<posy>260</posy>
-				<include>SmallHorizontalPosterIcon</include>
-			</control>
-			
-			<control type="group" description="Recording Preview">
-				<visible>Player.HasVideo + !Skin.HasSetting(BackgroundVideo.Active)</visible>
-				<posx>120</posx>
-				<posy>660</posy>
-				<include>SmallHorizontalPosterIcon</include>
-			</control>
-			
-			<control type="group" description="Recordings List">
-				<control type="fixedlist" id="13">
-					<posx>720</posx>
-					<posy>-121</posy>
-					<width>960</width>
-					<height>1250</height>
-					<onleft>9000</onleft>
-					<onright>73</onright>
-					<onup>13</onup>
-					<ondown>13</ondown>
-					<pagecontrol>73</pagecontrol>
-					<viewtype label="537">list</viewtype>
-					<focusposition>1</focusposition>
-		  
-					<include>NormalListItemForDropListView</include>
-					<include>FocusedListItemForDropListView</include>
-				</control>
-			</control>
-			
-			<include>ContentCategoryForDropListView</include>
-			<include>ContentNameForDropListView</include>
-			<include>ContentDetailForDropListView</include>
-			<include>ContentMediaFlagsForDropListView</include>
-			<include>ContentDescriptionForDropListView</include>
-			
-			<control type="scrollbar" id="73" description="Scrollbar">
-				<visible allowhiddenfocus="true">true</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(73) + !Container(13).Scrolling">
-					<effect type="slide" start="0,0" end="100,0" time="100" />
-				</animation>
+		</control>
+-->        
+	</include>
 
-				<posx>1860</posx>
-				<posy>100</posy>
-				<height>700</height>
-				<onleft>13</onleft>
-				<onright>Noop</onright>
+    <constant name="PosXForChannelGroupLabelForPVR">1900</constant>
+    <constant name="PosYForChannelGroupLabelForPVR">60</constant>
+    <include name="ChannelGroupLabelForPVR">
+		<control type="group">
+            <control type="label">
+                <posx>-2</posx>
+                <posy>-2</posy>
+                <width>760</width>
+                <height>40</height>
+                <textcolor>BackgroundColor</textcolor>
+                <font>DialogTitleFont</font>
+                <align>right</align>
+                <label>$INFO[Control.GetLabel(29)]</label>
+            </control>
+            <control type="label">
+                <posx>2</posx>
+                <posy>-2</posy>
+                <width>760</width>
+                <height>40</height>
+                <textcolor>BackgroundColor</textcolor>
+                <font>DialogTitleFont</font>
+                <align>right</align>
+                <label>$INFO[Control.GetLabel(29)]</label>
+            </control>
+            <control type="label">
+                <posx>-2</posx>
+                <posy>2</posy>
+                <width>760</width>
+                <height>40</height>
+                <textcolor>BackgroundColor</textcolor>
+                <font>DialogTitleFont</font>
+                <align>right</align>
+                <label>$INFO[Control.GetLabel(29)]</label>
+            </control>
+            <control type="label">
+                <posx>2</posx>
+                <posy>2</posy>
+                <width>760</width>
+                <height>40</height>
+                <textcolor>BackgroundColor</textcolor>
+                <font>DialogTitleFont</font>
+                <align>right</align>
+                <label>$INFO[Control.GetLabel(29)]</label>
+            </control>
+            <control type="label" id="29">
+                <width>760</width>
+                <height>40</height>
+                <textcolor>MainColor</textcolor>
+                <font>DialogTitleFont</font>
+                <align>right</align>
+                <label>-</label>
 			</control>
 		</control>
-	</include>
-  
-	<include name="TimersViewForPVR">
-		<control type="group" description="Timers View">
-			<visible>Control.IsVisible(14)</visible>
-
-			<control type="group" description="Timers List">
-				<control type="fixedlist" id="14">
-					<posx>720</posx>
-					<posy>-121</posy>
-					<width>960</width>
-					<height>1250</height>
-					<onleft>9000</onleft>
-					<onright>74</onright>
-					<onup>14</onup>
-					<ondown>14</ondown>
-					<pagecontrol>74</pagecontrol>
-					<viewtype label="537">list</viewtype>
-					<focusposition>1</focusposition>
-		  
-					<include>NormalListItemForDropListView</include>
-					<include>FocusedListItemForDropListView</include>
-				</control>
-			</control>
-			
-			<include>ContentCategoryForDropListView</include>
-			<include>ContentNameForDropListView</include>
-			<include>ContentDetailForDropListView</include>
-			<include>ContentDescriptionForDropListView</include>
-			
-			<control type="scrollbar" id="74" description="Scrollbar">
-				<visible allowhiddenfocus="true">true</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(74) + !Container(14).Scrolling">
-					<effect type="slide" start="0,0" end="100,0" time="100" />
-				</animation>
-
-				<posx>1860</posx>
-				<posy>100</posy>
-				<height>700</height>
-				<onleft>14</onleft>
-				<onright>Noop</onright>
-			</control>
-		</control>
-	</include>
-  
-	<include name="SearchViewForPVR">
-	    <control type="group" description="Search View">
-			<visible>Control.IsVisible(17)</visible>
-
-			<control type="group" description="Timers List">
-				<control type="fixedlist" id="17">
-					<posx>720</posx>
-					<posy>-121</posy>
-					<width>960</width>
-					<height>1250</height>
-					<pagecontrol>77</pagecontrol>
-					<viewtype label="537">list</viewtype>
-					<focusposition>1</focusposition>
-					<onup>17</onup>
-					<ondown>17</ondown>
-					<onleft>9000</onleft>
-					<onright>77</onright>
-		  
-					<include>NormalListItemForDropListView</include>
-					<include>FocusedListItemForDropListView</include>
-				</control>
-			</control>
-			
-			<include>ContentCategoryForDropListView</include>
-			<include>ContentNameForDropListView</include>
-			<include>ContentDetailForDropListView</include>
-			<include>ContentMediaFlagsForDropListView</include>
-			<include>ContentDescriptionForDropListView</include>
-			
-			<control type="scrollbar" id="77" description="Scrollbar">
-				<visible allowhiddenfocus="true">true</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(77) + !Container(17).Scrolling">
-					<effect type="slide" start="0,0" end="100,0" time="100" />
-				</animation>
-
-				<posx>1860</posx>
-				<posy>100</posy>
-				<height>700</height>
-				<onleft>17</onleft>
-				<onright>Noop</onright>
-			</control>
-		</control>
-	</include>
-  
-	<include name="TVGuideChannelViewForPVR">  
-		<control type="group" description="EPG Channel View">
-			<visible>Control.IsVisible(15)</visible>
-
-			<include>PreviewForPVR</include>
-			
-			<control type="group" description="TV Guide Channel List">
-				<control type="fixedlist" id="15">
-					<posx>720</posx>
-					<posy>-121</posy>
-					<width>960</width>
-					<height>1250</height>
-					<pagecontrol>75</pagecontrol>
-					<viewtype label="537">list</viewtype>
-					<focusposition>1</focusposition>
-					<onup>15</onup>
-					<ondown>15</ondown>
-					<onleft>9000</onleft>
-					<onright>75</onright>
-		  
-					<include>NormalListItemForDropListView</include>
-					<include>FocusedListItemForDropListView</include>
-				</control>
-			</control>
-			
-			<include>ContentCategoryForDropListView</include>
-			<include>ContentNameForDropListView</include>
-			<include>ContentDetailForDropListView</include>
-			<include>ContentMediaFlagsForDropListView</include>
-			<include>ContentDescriptionForDropListView</include>
-			
-			<control type="scrollbar" id="75" description="Scrollbar">
-				<visible allowhiddenfocus="true">true</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(75) + !Container(15).Scrolling">
-					<effect type="slide" start="0,0" end="100,0" time="100" />
-				</animation>
-
-				<posx>1860</posx>
-				<posy>100</posy>
-				<height>700</height>
-				<onleft>15</onleft>
-				<onright>Noop</onright>
-			</control>
-		</control>
-	</include>
-  
-	<include name="TVGuideNowAndNextViewForPVR">
-		<control type="group" description="EPG Now And Next View">
-			<visible>Control.IsVisible(16)</visible>
-
-			<include>PreviewForPVR</include>
-			
-			<control type="group" description="TV Guide Now And Next List">
-				<control type="fixedlist" id="16">
-					<posx>720</posx>
-					<posy>-121</posy>
-					<width>960</width>
-					<height>1250</height>
-					<onleft>9000</onleft>
-					<onright>76</onright>
-					<onup>16</onup>
-					<ondown>16</ondown>
-					<pagecontrol>76</pagecontrol>
-					<viewtype label="537">list</viewtype>
-					<focusposition>1</focusposition>
-		  
-					<include>NormalListItemForDropListView</include>
-					<include>FocusedListItemForDropListView</include>
-				</control>
-			</control>
-			
-			<include>ContentCategoryForDropListView</include>
-			<include>ContentNameForDropListView</include>
-			<include>ContentDetailForDropListView</include>
-			<include>ContentMediaFlagsForDropListView</include>
-			<include>ContentDescriptionForDropListView</include>
-			
-			<control type="scrollbar" id="76" description="Scrollbar">
-				<visible allowhiddenfocus="true">true</visible>
-				<animation type="Conditional" condition="!Control.HasFocus(76) + !Container(16).Scrolling">
-					<effect type="slide" start="0,0" end="100,0" time="100" />
-				</animation>
-
-				<posx>1860</posx>
-				<posy>100</posy>
-				<height>700</height>
-				<onleft>16</onleft>
-				<onright>Noop</onright>
-			</control>
-		</control>
-	</include>
-	
+    </include>
+    
 	<include name="PreviewForPVR">
 		<control type="group">
 			<visible>Player.HasVideo + !Skin.HasSetting(BackgroundVideo.Active)</visible>

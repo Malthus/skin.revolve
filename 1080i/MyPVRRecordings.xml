@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>52,55,51,53,54,56,57,58</views>
+
+	<controls>
+		<include>GlobalBackground</include>
+		<include>FullscreenDimensions</include>
+		<include>DropListView</include>
+		<include>CircleListView</include>
+     	<include>LandscapeView</include>
+		<include>ThumbnailsView</include>
+		<include>RevolveListView</include>
+		<include>PanelsView</include>
+		<include>GalleryView</include>
+		<include>RotateListView</include>
+
+		<control type="group" description="Clock Label">
+			<posx>1880</posx>
+			<posy>40</posy>
+			<include>DefaultClock</include>
+        </control>
+
+		<control type="group" description="Channel Group Label">
+			<control type="label" id="29" description="Empty Label To Receive Channel Type">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30" description="Empty Label to Receive Channel Group">
+				<visible>false</visible>
+			</control>
+
+			<control type="group">
+                <control type="group">
+					<posx>1080</posx>
+					<posy>100</posy>
+
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+                    <control type="label">
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>TextColor</textcolor>
+                        <font>DialogTitleFont</font>
+                        <label>$INFO[Control.GetLabel(29),,:]</label>
+                    </control>
+				</control>
+				
+                <control type="group">
+					<posx>1080</posx>
+					<posy>140</posy>
+
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>-2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <posx>-2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>BackgroundColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+                    <control type="label">
+                        <width>760</width>
+                        <height>40</height>
+                        <textcolor>TextColor</textcolor>
+                        <font>MediumViewFont</font>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                    </control>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="9000">
+			<include>SideMenu</include>
+
+			<control type="grouplist" id="9001">
+				<posx>24</posx>
+				<posy>20</posy>
+				<width>482</width>
+				<height>480</height>
+				<itemgap>0</itemgap>
+				<onleft>Noop</onleft>
+				<onright>52</onright>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<orientation>vertical</orientation>
+
+				<include>ViewTypeButtonForSideMenu</include>
+				<include>SortCriteriumButtonForSideMenu</include>
+				<include>SortOrderButtonForSideMenu</include>
+				<include>GuideButtonForSideMenu</include>
+				<include>ChannelsButtonForSideMenu</include>
+				<include>TimersButtonForSideMenu</include>
+				<include>PVRSearchButtonForSideMenu</include>
+                <include>DeletedRecordingsButtonForSideMenu</include>
+				<include>ChannelGroupButtonForSideMenu</include>
+			</control>
+
+			<control type="group" description="Player Controls">
+				<visible>Player.HasMedia</visible>
+				<posx>PosXForCircleControlsForPlayer</posx>
+				<posy>PosYForCircleControlsForPlayer</posy>
+				<include>CircleControlsForPlayer</include>
+			</control>
+		</control>
+	</controls>
+</window>

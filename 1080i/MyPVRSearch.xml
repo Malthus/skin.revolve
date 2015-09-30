@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">32</defaultcontrol>
+	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<views>52,55,51,53,54,56,57,58</views>
 
 	<controls>
 		<include>GlobalBackground</include>
-
-        <control type="group" id="42" description="Live TV Control Group">
-			<include>EPGTimelineViewForPVR</include>
-			<include>TVChannelViewForPVR</include>
-			<include>RadioChannelViewForPVR</include>
-			<include>RecordingsViewForPVR</include>
-			<include>TimersViewForPVR</include>
-			<include>SearchViewForPVR</include>
-			<include>TVGuideChannelViewForPVR</include>
-			<include>TVGuideNowAndNextViewForPVR</include>
-        </control>
+		<include>FullscreenDimensions</include>
+		<include>DropListView</include>
+		<include>CircleListView</include>
+     	<include>LandscapeView</include>
+		<include>ThumbnailsView</include>
+		<include>RevolveListView</include>
+		<include>PanelsView</include>
+		<include>GalleryView</include>
+		<include>RotateListView</include>
 
 		<control type="group" description="Clock Label">
 			<posx>1880</posx>
@@ -32,8 +31,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
-				
                 <control type="group">
 					<posx>1080</posx>
 					<posy>100</posy>
@@ -144,17 +141,19 @@
 				<height>480</height>
 				<itemgap>0</itemgap>
 				<onleft>Noop</onleft>
-				<onright>42</onright>
+				<onright>52</onright>
 				<onup>9010</onup>
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
-				<include>TVGuideButtonForSideMenu</include>
-				<include>TVChannelsButtonForSideMenu</include>
-				<include>RadioChannelsButtonForSideMenu</include>
+				<include>ViewTypeButtonForSideMenu</include>
+				<include>SortCriteriumButtonForSideMenu</include>
+				<include>SortOrderButtonForSideMenu</include>
+				<include>GuideButtonForSideMenu</include>
+				<include>ChannelsButtonForSideMenu</include>
 				<include>RecordingsButtonForSideMenu</include>
 				<include>TimersButtonForSideMenu</include>
-				<include>PVRSearchButtonForSideMenu</include>
+				<include>ChannelGroupButtonForSideMenu</include>
 			</control>
 
 			<control type="group" description="Player Controls">
