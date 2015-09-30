@@ -112,7 +112,7 @@
 			</control>
 			
 			<control type="group">
-				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [[!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(karaoke)]] | Window.IsVisible(subtitlesearch)]</visible>
+				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [[!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(karaoke)] | Window.IsVisible(subtitlesearch)]</visible>
                 
                 <control type="group">
                     <visible>Window.IsVisible(mutebug)</visible>
