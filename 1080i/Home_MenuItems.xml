@@ -225,8 +225,8 @@
 			<property name="Label3">$LOCALIZE[31021]</property>
 			<property name="Circle">circle/tvshows.png</property>
 			<icon>special://skin/backgrounds/tv.jpg</icon>
-			<thumb>$INFO[Skin.String(LiveTVOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindowAndFocus(pvr,11,0)</onclick>
+			<thumb>$INFO[Skin.String(TVOption.BackgroundFolder)]</thumb>
+			<onclick>ActivateWindowAndFocus(tvchannels)</onclick>
 		</item>
 
 		<item id="18" description="Radio Option">
@@ -234,8 +234,8 @@
 			<label>$LOCALIZE[19021]</label>
 			<property name="Label3">$LOCALIZE[33057]</property>
 			<icon>special://skin/backgrounds/radio.jpg</icon>
-			<thumb>$INFO[Skin.String(LiveTVOption.BackgroundFolder)]</thumb>
-			<onclick>ActivateWindowAndFocus(pvr,11,0)</onclick>
+			<thumb>$INFO[Skin.String(RadioOption.BackgroundFolder)]</thumb>
+			<onclick>ActivateWindowAndFocus(radiochannels)</onclick>
 		</item>
 
 		<item id="2" description="Videos Option">
