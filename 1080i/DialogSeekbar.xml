@@ -106,13 +106,14 @@
 				<control type="group" description="Big Clock">
 					<animation effect="fade" start="0" end="100" time="250" reversible="false">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="250" reversible="false">WindowClose</animation>
-			
+                    <posx>PosXForBigClock</posx>
+                    <posy>PosYForBigClock</posy>
 					<include>BigClock</include>
 				</control>
 			</control>
 			
 			<control type="group">
-				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [[!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(karaoke)]] | Window.IsVisible(subtitlesearch)]</visible>
+				<visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + [[!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(karaoke)] | Window.IsVisible(subtitlesearch)]</visible>
                 
                 <control type="group">
                     <visible>Window.IsVisible(mutebug)</visible>
