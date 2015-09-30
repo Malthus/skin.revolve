@@ -78,8 +78,19 @@
 		<control type="group" description="Clock">
 			<animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
 			<animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
-			
-			<include>BigClock</include>
+            
+            <control type="group">
+                <visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
+                <posx>PosXForBigClock</posx>
+                <posy>50</posy>
+                <include>BigClock</include>
+            </control>
+            <control type="group">
+                <visible>!System.GetBool(lookandfeel.enablerssfeeds)</visible>
+                <posx>PosXForBigClock</posx>
+                <posy>PosYForBigClock</posy>
+                <include>BigClock</include>
+            </control>
 		</control>
 	</controls>
 </window>

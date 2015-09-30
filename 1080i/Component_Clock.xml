@@ -1,69 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <constant name="PosXForBigClock">1900</constant>
+    <constant name="PosYForBigClock">10</constant>
 	<include name="BigClock" description="Big Clock">
 		<control type="group">
-			<visible>Window.IsVisible(home) + System.GetBool(lookandfeel.enablerssfeeds)</visible>
-            
 			<control type="group">
 				<visible>!SubString(System.Time(xx),M)</visible> 
-				<posx>1900</posx>
-				<posy>50</posy>
+				<posx>0</posx>
+				<posy>0</posy>
 				<include>TimeForBigClock</include>
 			</control>
 
 			<control type="group">
 				<visible>SubString(System.Time(xx),M)</visible> 
-				<posx>1830</posx>
-				<posy>50</posy>
+				<posx>-70</posx>
+				<posy>0</posy>
 				<include>TimeForBigClock</include>
 			</control>
 				
 			<control type="group">
 				<visible>SubString(System.Time(xx),M)</visible> 
-				<posx>1840</posx>
-				<posy>50</posy>
+				<posx>-60</posx>
+				<posy>0</posy>
 				<include>AmPmForBigClock</include>
 			</control>
 
 			<control type="group">
-				<posx>1900</posx>
-				<posy>170</posy>
-				<include>DateForBigClock</include>
-			</control>
-		</control>
-        
-		<control type="group">
-			<visible>!Window.IsVisible(home) | !System.GetBool(lookandfeel.enablerssfeeds)</visible>
-            
-			<control type="group">
-				<visible>!SubString(System.Time(xx),M)</visible> 
-				<posx>1900</posx>
-				<posy>10</posy>
-				<include>TimeForBigClock</include>
-			</control>
-
-			<control type="group">
-				<visible>SubString(System.Time(xx),M)</visible> 
-				<posx>1830</posx>
-				<posy>10</posy>
-				<include>TimeForBigClock</include>
-			</control>
-				
-			<control type="group">
-				<visible>SubString(System.Time(xx),M)</visible> 
-				<posx>1840</posx>
-				<posy>10</posy>
-				<include>AmPmForBigClock</include>
-			</control>
-
-			<control type="group">
-				<posx>1900</posx>
-				<posy>130</posy>
+				<posx>0</posx>
+				<posy>120</posy>
 				<include>DateForBigClock</include>
 			</control>
 		</control>
 	</include>
 	
+    <constant name="PosXForDefaultClock">1900</constant>
+    <constant name="PosYForDefaultClock">20</constant>
 	<include name="DefaultClock">
 		<control type="group">
 			<control type="group" description="Default Clock">
