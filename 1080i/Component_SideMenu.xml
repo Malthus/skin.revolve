@@ -170,6 +170,13 @@
 		</control>
 	</include>
 	
+	<include name="GroupByButtonForSideMenu" description="Group By Folder Structure Button For Side Menu">
+		<control type="radiobutton" id="5">
+			<align>left</align>
+			<label>$LOCALIZE[19270]</label>
+		</control>
+	</include>
+	
 	<include name="AutoUpdatesButtonForSideMenu" description="Auto-Updates Button For Side Menu">
 		<control type="button" id="5">
 			<align>left</align>
@@ -199,6 +206,12 @@
 		</control>
 	</include>
 	
+	<include name="HiddenChannelsButtonForSideMenu" description="Show Hidden Channels Button For Side Menu">
+		<control type="radiobutton" id="6">
+			<align>left</align>
+			<label>$LOCALIZE[31411]</label>
+		</control>
+	</include>
 	
 	<include name="PlaylistsButtonForSideMenu" description="Playlists Button For Side Menu">
 		<control type="button" id="7">
@@ -219,6 +232,13 @@
 		<control type="radiobutton" id="7">
 			<align>left</align>
 			<label>$LOCALIZE[25001]</label>
+		</control>
+	</include>
+	
+	<include name="DeletedRecordingsButtonForSideMenu" description="Show Deleted Recordings Button For Side Menu">
+		<control type="radiobutton" id="7">
+			<align>left</align>
+			<label>$LOCALIZE[31410]</label>
 		</control>
 	</include>
 	
@@ -374,31 +394,49 @@
 		</control>
 	</include>
 	
-	<include name="TVGuideButtonForSideMenu" description="TV Guide Button For Side Menu">
-        <control type="button" id="31" description="TV Guide Button">
+	<include name="ChannelGroupButtonForSideMenu" description="Channel Group Button For Side Menu">
+        <control type="button" id="28" description="Channel Group Button">
 			<align>left</align>
-            <label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
+            <label>$INFO[Control.GetLabel(29)]</label>
+        </control>
+        <control type="label" id="29" description="TV/Radio Guide View Label">
+            <visible>false</visible>
+            <label>-</label>
         </control>
 	</include>
 
-	<include name="TVChannelsButtonForSideMenu" description="TV Channels Button For Side Menu">
-		<control type="button" id="32">
+	<include name="GuideButtonForSideMenu" description="Guide Button For Side Menu">
+        <control type="button" id="31" description="TV/Radio Guide Button">
 			<align>left</align>
-            <label>$LOCALIZE[19023]</label>
+            <label>$LOCALIZE[22020]</label>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvguide)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radioguide)</onclick>
+            <onclick>Control.SetFocus(10)</onclick>
         </control>
 	</include>
 
-	<include name="RadioChannelsButtonForSideMenu" description="Radio Channels Button For Side Menu">
-        <control type="button" id="33">
+	<include name="PVRFilterButtonForSideMenu" description="PVR Filter Button For Side Menu">
+		<control type="radiobutton" id="7">
 			<align>left</align>
-            <label>$LOCALIZE[19024]</label>
+			<label>$LOCALIZE[25001]</label>
+		</control>
+	</include>
+
+	<include name="ChannelsButtonForSideMenu" description="Channels Button For Side Menu">
+		<control type="button" id="33">
+			<align>left</align>
+            <label>$LOCALIZE[19019]</label>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvchannels)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiochannels)</onclick>
         </control>
 	</include>
-	
+
 	<include name="RecordingsButtonForSideMenu" description="Recordings Button For Side Menu">
         <control type="button" id="34">
 			<align>left</align>
             <label>$LOCALIZE[19163]</label>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvrecordings)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiorecordings)</onclick>
         </control>
 	</include>
 
@@ -406,6 +444,8 @@
         <control type="button" id="35">
 			<align>left</align>
             <label>$LOCALIZE[19040]</label>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvtimers)</onclick>
+			<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiotimers)</onclick>            
         </control>
 	</include>
 
@@ -413,6 +453,8 @@
         <control type="button" id="36">
 			<align>left</align>
             <label>$LOCALIZE[137]</label>
+			<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvsearch)</onclick>
+			<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiosearch)</onclick>
         </control>
 	</include>
 	
