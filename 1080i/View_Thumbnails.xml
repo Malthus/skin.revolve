@@ -52,13 +52,10 @@
 		<control type="scrollbar" id="65" description="Scrollbar">
 			<visible allowhiddenfocus="true">Control.IsVisible(55)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(65) + !Container(55).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
-				<effect type="slide" start="0,0" end="60,0" time="100" />
-			</animation>
-			<animation type="Conditional" condition="!Control.HasFocus(65) + !Container(55).Scrolling + Skin.HasSetting(ViewScrollbar.Visible)">
-				<effect type="slide" start="0,0" end="30,0" time="100" />
+				<effect type="slide" start="0,0" end="40,0" time="100" />
 			</animation>
 
-			<posx>1860</posx>
+			<posx>1880</posx>
 			<posy>100</posy>
 			<height>760</height>
 			<onleft>55</onleft>
