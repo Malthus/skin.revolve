@@ -39,16 +39,16 @@
             <control type="group">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
                 <posx>40</posx>
-                <posy>610</posy>
+                <posy>615</posy>
                 <include>HorizontalViewListOfContentMediaFlag</include>
             </control>
 		</control>
         
 		<control type="textbox" description="Description of List Item">
 			<posx>40</posx>
-			<posy>660</posy>
+			<posy>680</posy>
 			<width>580</width>
-			<height>360</height>
+			<height>340</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>left</align>
@@ -86,9 +86,9 @@
 
 		<control type="textbox" description="Description of List Item">
 			<posx>1120</posx>
-			<posy>100</posy>
+			<posy>120</posy>
 			<width>740</width>
-			<height>340</height>
+			<height>320</height>
 			<font>HomeMenuDetailFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>

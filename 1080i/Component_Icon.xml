@@ -9,7 +9,7 @@
 	</include>
 
 	<include name="VisibilityForHorizontalIcon">
-		<visible>!IsEmpty(ListItem.ChannelNumber)</visible>
+		<visible>false</visible>
 	</include>
     
     <include name="VisibilityForBanner">
