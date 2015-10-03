@@ -2,18 +2,16 @@
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>52,55,51,53,54,56,57,58</views>
+	<views>52,55,51,54,56,58</views>
 
 	<controls>
 		<include>GlobalBackground</include>
 		<include>FullscreenDimensions</include>
 		<include>DropListView</include>
 		<include>CircleListView</include>
-     	<include>LandscapeView</include>
 		<include>ThumbnailsView</include>
 		<include>RevolveListView</include>
 		<include>PanelsView</include>
-		<include>GalleryView</include>
 		<include>RotateListView</include>
 
 		<control type="group" description="Clock Label">
