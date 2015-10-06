@@ -141,10 +141,24 @@
 
 			<control type="image" description="Audio Channels Icon">
 				<include>AudioChannelsVisibilityForContentMediaFlag</include>
-				<width>85</width>
-				<height>60</height>
-				<texture colordiffuse="MainColor">$VAR[ContentAudioChannels]</texture>
-				<aspectratio>keep</aspectratio>
+				<width>120</width>
+                
+				<control type="image">
+					<width>120</width>
+					<height>60</height>
+					<texture colordiffuse="MainColor">icons/channels-logo.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+                    <posx>105</posx>
+					<width>105</width>
+					<height>60</height>
+					<font>LargeMediaFlagFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$VAR[ContentAudioChannels]</label>
+				</control>
 			</control>
 
 			<control type="group" description="Picture Codec Icon">
@@ -399,23 +413,35 @@
 
 			<control type="group" description="Audio Channels Icon">
 				<include>AudioChannelsVisibilityForContentMediaFlag</include>
-				<width>71</width>
+				<width>100</width>
 				
 				<control type="image">
 					<posx>2</posx>
 					<posy>2</posy>
-					<width>67</width>
+					<width>96</width>
 					<height>46</height>
 					<texture>icons/channels-background.png</texture>
 					<colordiffuse>$VAR[ContentMediaBackgroundInViewColor]</colordiffuse>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">
-					<width>71</width>
+					<posx>2</posx>
+					<posy>2</posy>
+					<width>100</width>
 					<height>50</height>
-					<texture>$VAR[ContentAudioChannels]</texture>
-					<colordiffuse>$VAR[ContentMediaFlagInViewColor]</colordiffuse>
+					<texture>icons/channels-background.png</texture>
+					<colordiffuse>$VAR[ContentMediaBackgroundInViewColor]</colordiffuse>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+                    <posx>85</posx>
+					<width>85</width>
+					<height>50</height>
+					<font>MediumMediaFlagFont</font>
+					<textcolor>$VAR[ContentMediaFlagInViewColor]</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$VAR[ContentAudioChannels]</label>
 				</control>
 			</control>
 
@@ -785,21 +811,31 @@
 			
 			<control type="group" description="Audio Channels Icon">
 				<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
-				<width>85</width>
+				<width>120</width>
 				
 				<control type="image">
 					<posx>2</posx>
 					<posy>2</posy>
-					<width>81</width>
+					<width>116</width>
 					<height>56</height>
 					<texture colordiffuse="BackgroundColor">icons/channels-background.png</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">
-					<width>85</width>
+					<width>120</width>
 					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerAudioChannels]</texture>
+					<texture colordiffuse="MainColor">icons/channels-logo.png</texture>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+                    <posx>105</posx>
+					<width>105</width>
+					<height>60</height>
+					<font>LargeMediaFlagFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$VAR[PlayerAudioChannels]</label>
 				</control>
 			</control>
 
@@ -964,21 +1000,31 @@
 
 			<control type="group" description="Audio Channels Icon">
 				<visible>!IsEmpty(MusicPlayer.Channels)</visible>
-				<width>85</width>
+				<width>120</width>
 				
 				<control type="image">
 					<posx>2</posx>
 					<posy>2</posy>
-					<width>81</width>
+					<width>116</width>
 					<height>56</height>
 					<texture colordiffuse="BackgroundColor">icons/channels-background.png</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">
-					<width>85</width>
+					<width>120</width>
 					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerAudioChannels]</texture>
+					<texture colordiffuse="MainColor">icons/channels-logo.png</texture>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+                    <posx>105</posx>
+					<width>105</width>
+					<height>60</height>
+					<font>LargeMediaFlagFont</font>
+					<textcolor>BackgroundColor</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$VAR[PlayerAudioChannels]</label>
 				</control>
 			</control>
 		</control>

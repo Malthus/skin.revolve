@@ -217,7 +217,17 @@
 	</variable>
 
 	<variable name="ContentAudioChannels">
-		<value>$INFO[ListItem.AudioChannels,icons/channels-,.png]</value>
+		<value condition="StringCompare(ListItem.AudioChannels,1)">1.0</value>
+		<value condition="StringCompare(ListItem.AudioChannels,2)">2.0</value>
+		<value condition="StringCompare(ListItem.AudioChannels,3)">2.1</value>
+		<value condition="StringCompare(ListItem.AudioChannels,4)">4.0</value>
+		<value condition="StringCompare(ListItem.AudioChannels,5)">4.1</value>
+		<value condition="StringCompare(ListItem.AudioChannels,6)">5.1</value>
+		<value condition="StringCompare(ListItem.AudioChannels,7)">6.1</value>
+		<value condition="StringCompare(ListItem.AudioChannels,8)">7.1</value>
+		<value condition="StringCompare(ListItem.AudioChannels,10)">9.1</value>
+		<value condition="!IsEmpty(ListItem.AudioChannels)">$INFO[VideoPlayer.AudioChannels]</value>
+        <value>?</value>
 	</variable>
 
 	<variable name="ContentPictureCodec">
@@ -1097,8 +1107,27 @@
 	</variable>
 	
 	<variable name="PlayerAudioChannels">
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.AudioChannels,icons/channels-,.png]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Channels,icons/channels-,.png]</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,1)">1.0</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,1)">,1.0</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,2)">2.0</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,2)">2.0</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,3)">2.1</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,3)">2.1</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,4)">4.0</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,4)">4.0</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,5)">4.1</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,5)">4.1</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,6)">5.1</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,6)">5.1</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,7)">6.1</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,7)">6.1</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,8)">7.1</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,8)">7.1</value>
+		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,10)">9.1</value>
+		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,10)">9.1</value>
+		<value condition="Player.HasVideo">$INFO[VideoPlayer.AudioChannels]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Channels]</value>
+        <value>?</value>
 	</variable>
 	
 	<variable name="PlayerPictureCodec">
