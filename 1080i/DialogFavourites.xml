@@ -7,12 +7,12 @@
 		<include>GlobalBackground</include>
 
 		<control type="fixedlist" id="450" description="Invisible Favourites Wraplist">
-			<visible>true</visible>
+			<visible allowhiddenfocus="true">Skin.HasSetting(DebugListBorder.Visible)</visible>
 			<posx>0</posx>
-			<posy>60</posy>
+			<posy>0</posy>
 			<width>1920</width>
-			<height>1000</height>
-			<focusposition>0</focusposition>
+			<height>1080</height>
+			<focusposition>4</focusposition>
 			<scrolltime>200</scrolltime>
             <onup>450</onup>
             <ondown>450</ondown>

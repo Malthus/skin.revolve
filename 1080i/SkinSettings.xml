@@ -383,6 +383,15 @@
 						<onclick>Skin.ToggleSetting(DebugInfo.Visible)</onclick>
 					</control>
 
+					<control type="radiobutton" id="904" description="Debug List Border Setting">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31789]</label>
+						<selected>Skin.HasSetting(DebugListBorder.Visible)</selected>
+						<onclick>Skin.ToggleSetting(DebugListBorder.Visible)</onclick>
+					</control>
+                    
 					<control type="label" id="903" description="Spacer">
 						<width>1100</width>
 						<label>-</label>
@@ -576,6 +585,11 @@
 						<visible>Control.HasFocus(902)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31193]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(904)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31212]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(910)</visible>

@@ -98,6 +98,7 @@
 	<include name="DebugSettingsForSkinSettings" description="Debug Skin Settings">
 		<onfocus>Skin.Reset(DebugGrid.Visible)</onfocus>
 		<onfocus>Skin.Reset(DebugInfo.Visible)</onfocus>
+		<onfocus>Skin.Reset(DebugListBorder.Visible)</onfocus>
 	</include>
     
 	<include file="SkinSettings_HomeMenu.xml" />

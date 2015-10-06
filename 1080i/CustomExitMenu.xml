@@ -7,12 +7,13 @@
 		<include>GlobalBackground</include>
 
 		<control type="wraplist" id="450" description="Invisible Exit Wraplist">
-			<visible allowhiddenfocus="true">false</visible>
+			<visible allowhiddenfocus="true">Skin.HasSetting(DebugListBorder.Visible)</visible>
 			<posx>0</posx>
-			<posy>40</posy>
+			<posy>0</posy>
 			<width>1920</width>
-			<height>1000</height>
-			<focusposition>0</focusposition>
+			<height>1080</height>
+			<focusposition>4</focusposition>
+			<defaultcontrol>1</defaultcontrol>
 			<onup>450</onup>
 			<ondown>450</ondown>
 			<onleft>Noop</onleft>

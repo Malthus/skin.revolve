@@ -1423,29 +1423,47 @@
     </include>
 
     <include name="InvisibleItemsForMenu">
-		<itemlayout width="1920" height="110">
-			<control type="label">
-				<visible>false</visible>
-				<posx>960</posx>
-				<width>1920</width>
-				<height>110</height>
-				<font>MenuListFont</font>
-				<textcolor>TextColor</textcolor>
-				<align>center</align>
-				<label>$INFO[ListItem.Label]</label>
+		<itemlayout width="1920" height="125">
+            <control type="group">
+                <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+            
+                <control type="image">
+                    <width>1920</width>
+                    <height>125</height>
+                    <texture colordiffuse="TextColor" border="20">controls/rectangle-clear.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            
+                <control type="label">
+                    <width>1900</width>
+                    <height>125</height>
+                    <font>MenuListFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>right</align>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
 			</control>
 		</itemlayout>
 
-		<focusedlayout width="1920" height="120">
-			<control type="label">
-				<visible>false</visible>
-				<posx>960</posx>
-				<width>1920</width>
-				<height>120</height>
-				<font>MenuListFont</font>
-				<textcolor>MainColor</textcolor>
-				<align>center</align>
-				<label>$INFO[ListItem.Label]</label>
+		<focusedlayout width="1920" height="330">
+            <control type="group">
+                <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+
+                <control type="image">
+                    <width>1920</width>
+                    <height>330</height>
+                    <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            
+                <control type="label">
+                    <width>1900</width>
+                    <height>330</height>
+                    <font>MenuListFont</font>
+                    <textcolor>MainColor</textcolor>
+                    <align>right</align>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
 			</control>
         </focusedlayout>
     </include>

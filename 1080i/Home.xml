@@ -51,16 +51,13 @@
 			</control>
 		</control>
 
-		<include>RingForHomeRevolveList</include>
-		<include>ListForHomeRevolveList</include>
-
 		<control type="wraplist" id="300" description="Invisible Home Wraplist">
-			<visible allowhiddenfocus="true">false</visible>
+			<visible allowhiddenfocus="true">Skin.HasSetting(DebugListBorder.Visible)</visible>
 			<posx>0</posx>
-			<posy>40</posy>
+			<posy>0</posy>
 			<width>1920</width>
-			<height>1000</height>
-			<focusposition>5</focusposition>
+			<height>1080</height>
+			<focusposition>4</focusposition>
 			<defaultcontrol>8</defaultcontrol>
 			<onup>300</onup>
 			<ondown>300</ondown>
@@ -75,6 +72,9 @@
 			</content>
 		</control>
 		
+		<include>RingForHomeRevolveList</include>
+		<include>ListForHomeRevolveList</include>
+
 		<control type="group" description="Clock">
 			<animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
 			<animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
