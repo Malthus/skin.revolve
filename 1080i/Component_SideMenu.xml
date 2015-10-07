@@ -4,17 +4,17 @@
 		<posx>20</posx>
 		<posy>100</posy>
 		
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
+		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
 			<effect type="slide" start="0,0" end="-610,0" time="200" />
 		</animation>
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
+		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
 			<effect type="slide" start="0,0" end="-515,0" time="200" />
 		</animation>
 		
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
+		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
 			<effect type="rotate" start="0" end="90" center="0,0" time="200" />
 		</animation>
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
+		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
 			<effect type="rotate" start="0" end="90" center="0,45" time="200" />
 		</animation>
 
@@ -43,10 +43,22 @@
 		<control type="group" description="Side Menu Label When Side Menu Is Unfocused">
 			<visible>Skin.HasSetting(SideMenu.Visible)</visible>
 
-			<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + Skin.HasSetting(SideMenu.Visible)">
+			<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + Skin.HasSetting(SideMenu.Visible)">
 				<effect type="fade" start="0" end="100" time="200" />
 			</animation>
 
+			<control type="button" id="9020" description="Invisible Mouse Conhtrol Side Menu Button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>528</width>
+				<height>760</height>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus>-</texturefocus>
+				<font>-</font>
+				<label>-</label>
+                <onfocus>Control.SetFocus(9001)</onfocus>
+			</control>
+			
 			<control type="label" description="Left Side Menu Label">
 				<posx>113</posx>
 				<posy>400</posy>
@@ -59,7 +71,7 @@
 				<label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
 			</control>
 			
-			<control type="label" description="Top Side Menu Label">
+			<control type="label" id="9021" description="Top Side Menu Label">
 				<posx>-387</posx>
 				<posy>400</posy>
 				<width>800</width>
