@@ -233,6 +233,7 @@
 			<visible>System.GetBool(pvrmanager.enabled) + Skin.HasSetting(RadioOption.Active)</visible>
 			<label>$LOCALIZE[19021]</label>
 			<property name="Label3">$LOCALIZE[33057]</property>
+			<property name="Circle">circle/radio.png</property>
 			<icon>special://skin/backgrounds/radio.jpg</icon>
 			<thumb>$INFO[Skin.String(RadioOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindowAndFocus(radiochannels)</onclick>
