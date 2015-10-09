@@ -73,53 +73,45 @@
 				<align>left</align>
 				<onup>Noop</onup>
 				<ondown>Noop</ondown>
-				<onleft>6</onleft>
-				<onright>4</onright>
+				<onleft>100</onleft>
+				<onright>100</onright>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
-					
-					<control type="button" id="4" description="Subtitles Button">
-						<width>75</width>
-						<height>75</height>
-						<label>287</label>
-						<font>-</font>
-						<texturefocus>controls/subtitles-focus.png</texturefocus>
-						<texturenofocus>controls/subtitles-nofocus.png</texturenofocus>
-						<onclick>Close</onclick>
-						<onclick>ActivateWindow(subtitlesearch)</onclick>
+
+					<control type="button" id="420" description="Subtitles Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>SubtitlesButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
-	
-					<control type="button" id="2" description="Audio Settings Button">
-						<width>75</width>
-						<height>75</height>
-						<label>13396</label>
-						<font>-</font>
-						<texturefocus>controls/audio-focus.png</texturefocus>
-						<texturenofocus>controls/audio-nofocus.png</texturenofocus>
-						<onclick>ActivateWindow(osdaudiosettings)</onclick>
+
+					<control type="button" id="421" description="Audio Settings Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>AudioButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
 
-					<control type="button" id="3" description="Video Settings Button">
-						<width>75</width>
-						<height>75</height>
-						<label>13395</label>
-						<align>left</align>
-						<font>-</font>
-						<texturefocus>controls/video-focus.png</texturefocus>
-						<texturenofocus>controls/video-nofocus.png</texturenofocus>
-						<onclick>ActivateWindow(osdvideosettings)</onclick>
+					<control type="button" id="422" description="Video Settings Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>VideoButtonForPlayer</include>
 					</control>
 				</control>
 
@@ -128,96 +120,80 @@
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
 
-					<control type="button" id="12" description="Previous Button">
-						<width>75</width>
-						<height>75</height>
-						<label>210</label>
-						<font>-</font>
-						<texturefocus>controls/previous-focus.png</texturefocus>
-						<texturenofocus>controls/previous-nofocus.png</texturenofocus>
-						<onclick>PlayerControl(Previous)</onclick>
+					<control type="button" id="401" description="Previous Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>PreviousButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
-					
-					<control type="button" id="13" description="Rewind Button">
-						<width>75</width>
-						<height>75</height>
-						<label>31921</label>
-						<font>-</font>
-						<texturefocus>controls/rewind-focus.png</texturefocus>
-						<texturenofocus>controls/rewind-nofocus.png</texturenofocus>
-						<onclick>PlayerControl(Rewind)</onclick>
+
+					<control type="button" id="402" description="Rewind Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>RewindButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
-					
-					<control type="togglebutton" id="14" description="Play/Pause Button">
-						<width>75</width>
-						<height>75</height>
-						<label>31922</label>
-						<altlabel>208</altlabel>
-						<font>-</font>
-						<texturefocus>controls/pause-focus.png</texturefocus>
-						<texturenofocus>controls/pause-nofocus.png</texturenofocus>
-						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<alttexturefocus>controls/play-focus.png</alttexturefocus>
-						<alttexturenofocus>controls/play-nofocus.png</alttexturenofocus>
-						<onclick>PlayerControl(Play)</onclick>
+
+					<control type="togglebutton" id="403" description="Play/Pause Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>PlayPauseButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
 
-					<control type="button" id="15" description="Stop Button">
-						<width>75</width>
-						<height>75</height>
-						<label>31920</label>
-						<font>-</font>
-						<texturefocus>controls/stop-focus.png</texturefocus>
-						<texturenofocus>controls/stop-nofocus.png</texturenofocus>
-						<onclick>PlayerControl(Stop)</onclick>
+					<control type="button" id="404" description="Stop Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>StopButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
 
-					<control type="button" id="16" description="Fast Forward Button">
-						<width>75</width>
-						<height>75</height>
-						<label>31923</label>
-						<font>-</font>
-						<texturefocus>controls/fastforward-focus.png</texturefocus>
-						<texturenofocus>controls/fastforward-nofocus.png</texturenofocus>
-						<onclick>PlayerControl(Forward)</onclick>
+					<control type="button" id="405" description="Fast Forward Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>FastForwardButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
 
-					<control type="button" id="17" description="Next Button">
-						<width>75</width>
-						<height>75</height>
-						<label>209</label>
-						<font>-</font>
-						<texturefocus>controls/next-focus.png</texturefocus>
-						<texturenofocus>controls/next-nofocus.png</texturenofocus>
-						<onclick>PlayerControl(Next)</onclick>
+					<control type="button" id="406" description="Next Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>NextButtonForPlayer</include>
 					</control>
 				</control>
 
@@ -226,33 +202,28 @@
 				</control>
 				
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
 	
-					<control type="button" id="1" description="Bookmarks Button">
-						<width>75</width>
-						<height>75</height>
-						<label>298</label>
-						<font>-</font>
-						<texturefocus>controls/bookmarks-focus.png</texturefocus>
-						<texturenofocus>controls/bookmarks-nofocus.png</texturenofocus>
-						<onclick>ActivateWindow(videobookmarks)</onclick>
+					<control type="button" id="411" description="Bookmarks Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>BookmarksButtonForPlayer</include>
 					</control>
 				</control>
 
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>ControlFrameForPlayer</include>
 
-					<control type="button" id="6" description="DVD Menu Button">
-						<width>75</width>
-						<height>75</height>
-						<label>31924</label>
-						<font>-</font>
-						<texturefocus>controls/dvd-focus.png</texturefocus>
-						<texturenofocus>controls/dvd-nofocus.png</texturenofocus>
-						<enable>VideoPlayer.HasMenu</enable>
-						<onclick>PlayerControl(ShowVideoMenu)</onclick>
+					<control type="button" id="416" description="DVD Menu Button">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <include>DiscButtonForPlayer</include>
 					</control>
 				</control>
 			</control>

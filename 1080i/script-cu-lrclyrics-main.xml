@@ -149,9 +149,9 @@
 			</control>
 			
 			<control type="group" description="Player Controls">
-				<posx>PosXForDialogControlsForPlayer</posx>
-				<posy>400</posy>
-				<include>DialogControlsForPlayer</include>
+				<posx>PosXForDialogCircleControlsForPlayer</posx>
+				<posy>PosYForDialogCircleControlsForPlayer</posy>
+				<include>CircleControlsForPlayer</include>
 			</control>
 			<control type="button" description="Focus Button">
 				<visible allowhiddenfocus="true">false</visible>

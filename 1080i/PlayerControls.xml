@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="400">
+<window type="dialog" id="114">
 	<defaultcontrol always="true">403</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
+    <onunload>SetProperty(DialogCloseButton,False,114)</onunload>
 
 	<controls>
-		<control type="image">
-			<posx>810</posx>
-			<posy>390</posy>
-			<width>300</width>
-			<height>300</height>
-			<texture colordiffuse="MainColor" background="true">elements/circle-mask.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-
 		<control type="image">
 			<posx>815</posx>
 			<posy>395</posy>
 			<width>290</width>
 			<height>290</height>
+			<texture colordiffuse="MainColor" background="true">elements/circle-mask.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		<control type="image">
+			<posx>820</posx>
+			<posy>400</posy>
+			<width>280</width>
+			<height>280</height>
 			<texture colordiffuse="BackgroundColor">elements/circle-mask.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 
 		<control type="group" description="Player Controls">
-			<visible>Player.HasMedia</visible>
-			<posx>820</posx>
-			<posy>400</posy>
+			<posx>825</posx>
+			<posy>405</posy>
 			<include>CircleControlsForPlayer</include>
+		</control>
+
+		<control type="button" id="408" description="Close Button">
+            <visible>Substring(Window.Property(DialogCloseButton),T,left)</visible>
+			<posx>920</posx>
+			<posy>500</posy>
+            <include>CloseButtonForPlayer</include>
+            <onup>403</onup>
+			<ondown>404</ondown>
+			<onleft>401</onleft>
+			<onright>406</onright>
 		</control>
 	</controls>
 </window>
