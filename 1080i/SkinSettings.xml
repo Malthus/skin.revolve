@@ -293,6 +293,15 @@
 						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
 					</control>
 					
+					<control type="radiobutton" id="809" description="Visible Back Button Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31151]</label>
+						<selected>Skin.HasSetting(BackButton.Visible)</selected>
+						<onclick>Skin.ToggleSetting(BackButton.Visible)</onclick>
+					</control>
+					
 					<control type="radiobutton" id="806" description="Visible OSD Player Icon Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -577,6 +586,11 @@
 						<label>$LOCALIZE[31209]</label>
 					</control>
 					<control type="textbox">
+						<visible>Control.HasFocus(809)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31213]</label>
+					</control>
+					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31192]</label>
@@ -609,5 +623,7 @@
 				</control>
 			</control>
 		</control>
+        
+        <include>BackButton</include>
 	</controls>
 </window>

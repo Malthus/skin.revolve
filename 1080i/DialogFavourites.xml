@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="134">
+<window id="134" type="dialog">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
@@ -86,5 +86,7 @@
 				<include>CircleControlsForPlayer</include>
 			</control>
 		</control>
+        
+        <include>BackButton</include>
 	</controls>
 </window>

@@ -69,85 +69,87 @@
 				<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
 			</control>
 
-				<control type="grouplist">
-					<posx>720</posx>
-					<posy>100</posy>
+			<control type="grouplist">
+				<posx>720</posx>
+				<posy>100</posy>
+				<width>1060</width>
+				<height>900</height>
+				<itemgap>0</itemgap>
+
+				<control type="label" id="52" description="XBMC Build Version">
 					<width>1060</width>
-					<height>900</height>
-					<itemgap>0</itemgap>
-
-					<control type="label" id="52" description="XBMC Build Version">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="21" description="Processor Text">
-						<width>1060</width>
-						<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
-					</control>
-
-					<control type="progress" id="22" description="Processor Bar">
-						<width>1060</width>
-						<height>40</height>
-						<info>System.CPUUsage</info>
-					</control>
-
-					<control type="label" id="23" description="Memory Text">
-						<width>1060</width>
-						<label>$LOCALIZE[31103] $INFO[System.Memory(used.percent)]</label>
-					</control>
-
-					<control type="progress" id="24" description="Memory Bar">
-						<width>1060</width>
-						<height>40</height>
-						<info>System.Memory(used)</info>
-					</control>
-
-					<control type="label" id="25" description="Spacer">
-						<width>1060</width>
-						<height>40</height>
-						<font>-</font>
-					</control>
-
-					<control type="label" id="2" description="Label 2">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="3" description="Label 3">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="4" description="Label 4">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="5" description="Label 5">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="6" description="Label 6">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="7" description="Label 7">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="8" description="Label 8">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="9" description="Label 9">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="10" description="Label 10">
-						<width>1060</width>
-					</control>
-
-					<control type="label" id="11" description="Label 11">
-						<width>1060</width>
-					</control>
 				</control>
+
+				<control type="label" id="21" description="Processor Text">
+					<width>1060</width>
+					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+				</control>
+
+				<control type="progress" id="22" description="Processor Bar">
+					<width>1060</width>
+					<height>40</height>
+					<info>System.CPUUsage</info>
+				</control>
+
+				<control type="label" id="23" description="Memory Text">
+					<width>1060</width>
+					<label>$LOCALIZE[31103] $INFO[System.Memory(used.percent)]</label>
+				</control>
+
+				<control type="progress" id="24" description="Memory Bar">
+					<width>1060</width>
+					<height>40</height>
+					<info>System.Memory(used)</info>
+				</control>
+
+				<control type="label" id="25" description="Spacer">
+					<width>1060</width>
+					<height>40</height>
+					<font>-</font>
+				</control>
+
+				<control type="label" id="2" description="Label 2">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="3" description="Label 3">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="4" description="Label 4">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="5" description="Label 5">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="6" description="Label 6">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="7" description="Label 7">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="8" description="Label 8">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="9" description="Label 9">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="10" description="Label 10">
+					<width>1060</width>
+				</control>
+
+				<control type="label" id="11" description="Label 11">
+					<width>1060</width>
+				</control>
+			</control>
 		</control>
+        
+        <include>BackButton</include>
 	</controls>
 </window>
