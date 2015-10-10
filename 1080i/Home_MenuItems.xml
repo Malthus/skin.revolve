@@ -379,15 +379,25 @@
 		</item>
 
 		<item id="9" description="Weather Option">
-			<visible>Skin.HasSetting(WeatherOption.Active)</visible>
-            <enabled>Weather.IsFetched</enabled>
+			<visible>Skin.HasSetting(WeatherOption.Active) + Weather.IsFetched</visible>
 			<label>$LOCALIZE[8]</label>
-            <label2>$LOCALIZE[31479]: $INFO[Weather.Location] | $INFO[Weather.Temperature] | $INFO[Weather.Conditions]</label2>
+            <label2>$INFO[Weather.Location,$LOCALIZE[31479]: ,]$INFO[Weather.Temperature, | ,]$INFO[Weather.Conditions, | ,]</label2>
 			<property name="Label3">$LOCALIZE[31022]</property>
 			<property name="Circle">circle/weather.png</property>
 			<icon>special://skin/backgrounds/weather.jpg</icon>
 			<thumb>$INFO[Skin.String(WeatherOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(weather)</onclick>
+		</item>
+
+		<item id="19" description="Weather Unavailable Option">
+			<visible>Skin.HasSetting(WeatherOption.Active) + !Weather.IsFetched</visible>
+			<label>$LOCALIZE[8]</label>
+            <label2>$LOCALIZE[31927]</label2>
+			<property name="Label3">$LOCALIZE[31029]</property>
+			<property name="Circle">circle/weather.png</property>
+			<icon>special://skin/backgrounds/weather.jpg</icon>
+			<thumb>$INFO[Skin.String(WeatherOption.BackgroundFolder)]</thumb>
+			<onclick>ActivateWindow(weathersettings)</onclick>
 		</item>
 
 		<item id="7" description="File Manager Option">
