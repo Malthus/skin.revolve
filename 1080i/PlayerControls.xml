@@ -40,5 +40,12 @@
 			<onleft>401</onleft>
 			<onright>406</onright>
 		</control>
+
+		<control type="group" description="Current Control Label">
+			<visible>Window.IsActive(playercontrols)</visible>
+			<posx>700</posx>
+			<posy>700</posy>
+            <include>DescriptionForControlsForPlayer</include>
+		</control>
 	</controls>
 </window>

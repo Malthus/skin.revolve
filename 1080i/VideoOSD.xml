@@ -11,56 +11,9 @@
 			
 			<control type="group" description="Current Control Label">
 				<visible>Window.IsActive(videoosd) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks)</visible>
-				<control type="label">
-					<posx>698</posx>
-					<posy>88</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[System.CurrentControl]</label>
-				</control>
-				<control type="label">
-					<posx>702</posx>
-					<posy>88</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[System.CurrentControl]</label>
-				</control>
-				<control type="label">
-					<posx>698</posx>
-					<posy>92</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[System.CurrentControl]</label>
-				</control>
-				<control type="label">
-					<posx>702</posx>
-					<posy>92</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[System.CurrentControl]</label>
-				</control>
-				<control type="label">
-					<posx>700</posx>
-					<posy>90</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<label>$INFO[System.CurrentControl]</label>
-				</control>
+				<posx>700</posx>
+				<posy>92</posy>
+                <include>DescriptionForControlsForPlayer</include>
 			</control>
 
 			<control type="grouplist" id="100">

@@ -10,56 +10,9 @@
 
 			<control type="group" description="Current Control Label">
 				<visible>Window.IsActive(musicosd) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(addonsettings) + !Window.IsVisible(selectdialog)</visible>
-				<control type="label">
-					<posx>698</posx>
-					<posy>90</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<label>$INFO[System.CurrentControl]</label>
-					<textcolor>MainColor</textcolor>
-				</control>
-				<control type="label">
-					<posx>702</posx>
-					<posy>90</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<label>$INFO[System.CurrentControl]</label>
-					<textcolor>MainColor</textcolor>
-				</control>
-				<control type="label">
-					<posx>698</posx>
-					<posy>94</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<label>$INFO[System.CurrentControl]</label>
-					<textcolor>MainColor</textcolor>
-				</control>
-				<control type="label">
-					<posx>702</posx>
-					<posy>94</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<label>$INFO[System.CurrentControl]</label>
-					<textcolor>MainColor</textcolor>
-				</control>
-				<control type="label">
-					<posx>700</posx>
-					<posy>92</posy>
-					<width>520</width>
-					<height>20</height>
-					<align>center</align>
-					<font>DefaultInformationFont</font>
-					<label>$INFO[System.CurrentControl]</label>
-					<textcolor>BackgroundColor</textcolor>
-				</control>
+				<posx>700</posx>
+				<posy>92</posy>
+                <include>DescriptionForControlsForPlayer</include>
 			</control>
 
 			<control type="grouplist" id="100">
