@@ -95,7 +95,7 @@
 				</focusedlayout>
 				
 				<content>
-					<item id="1" description="Live TV Related Category Option">
+					<item id="1" description="Radio and TV Related Category Option">
 						<label>$LOCALIZE[31811]</label>
 						<onclick>Noop</onclick>
 					</item>
@@ -201,46 +201,64 @@
 				</focusedlayout>
 
 				<content>
-					<item id="101" description="Open Live TV Option">
-                        <visible>Container(30).HasFocus(1)</visible>
-						<label>$LOCALIZE[31820]</label>
-						<property name="Command">ActivateWindow(mypvr)</property>
-						<onclick>Noop</onclick>
-					</item>
-					<item id="102" description="Open Live TV / EPG Option">
-                        <visible>Container(30).HasFocus(1)</visible>
-						<label>$LOCALIZE[31821]</label>
-						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,10,0)</property>
-						<onclick>Noop</onclick>
-					</item>
-					<item id="103" description="Open Live TV / TV Channels Option">
+					<item id="101" description="Open TV Channels Option">
                         <visible>Container(30).HasFocus(1)</visible>
 						<label>$LOCALIZE[31822]</label>
-						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,11,0)</property>
+						<property name="Command">ActivateWindow(tvchannels)</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="104" description="Open Live TV / Radio Channels Option">
+					<item id="102" description="Open Radio Channels Option">
                         <visible>Container(30).HasFocus(1)</visible>
 						<label>$LOCALIZE[31823]</label>
-						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,12,0)</property>
+						<property name="Command">ActivateWindow(radiochannels)</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="105" description="Open Live TV / Recordings Option">
+					<item id="103" description="Open TV Guide Option">
                         <visible>Container(30).HasFocus(1)</visible>
-						<label>$LOCALIZE[31824]</label>
-						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,13,0)</property>
+						<label>$LOCALIZE[31790]</label>
+						<property name="Command">ActivateWindow(tvguide)</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="106" description="Open Live TV / Timers Option">
+					<item id="104" description="Open Radio Guide Option">
                         <visible>Container(30).HasFocus(1)</visible>
-						<label>$LOCALIZE[31825]</label>
-						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,14,0)</property>
+						<label>$LOCALIZE[31791]</label>
+						<property name="Command">ActivateWindow(radioguide)</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="107" description="Open Live TV / Searches Option">
+					<item id="105" description="Open TV Recordings Option">
                         <visible>Container(30).HasFocus(1)</visible>
-						<label>$LOCALIZE[31826]</label>
-						<property name="Command">ActivateWindowAndFocus(mypvr,31,0,17,0)</property>
+						<label>$LOCALIZE[31792]</label>
+						<property name="Command">ActivateWindow(tvrecordings)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="106" description="Open Radio Recordings Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31793]</label>
+						<property name="Command">ActivateWindow(radiorecordings)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="107" description="Open TV Timers Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31794]</label>
+						<property name="Command">ActivateWindow(tvtimers)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="108" description="Open Radio Timers Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31795]</label>
+						<property name="Command">ActivateWindow(radiotimers)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="109" description="Open TV Search Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31796]</label>
+						<property name="Command">ActivateWindow(tvsearch)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="110" description="Open Radio Search Option">
+                        <visible>Container(30).HasFocus(1)</visible>
+						<label>$LOCALIZE[31797]</label>
+						<property name="Command">ActivateWindow(radiosearch)</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="201" description="Open Videos Option">

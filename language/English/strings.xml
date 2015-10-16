@@ -176,7 +176,7 @@
 	<string id="31754">Set the name of the window that is opened by this custom option.</string>
 	<string id="31755">Set the source pattern that defines the properties that provide the items. The number in this pattern should be represented by '%d', so Revolve can extract the item-information from the properties and display them in a window.</string>
 	<string id="31756">Set the plug-in that provides the items. You should write down the complete call to the plug-in, including arguments, but you should exclude the 'plug-in://' part of the call.</string>
-	<string id="31757">Set the unique identifier of the submenu. The whole submenu is linked to this identifier. You can link an option to an existing submenu by copying the submenu's identifier, or you can lose a submenu by removing this identifier. An identifier should consist only of alphanumeric characters (so no spaces, no punctuation marks, no strange characters).</string>
+	<string id="31757">Set the unique identifier of the submenu. The whole submenu is linked to this identifier. You can link an option to an existing submenu by copying the submenu's identifier, or you can loose a submenu by removing this identifier. An identifier should consist only of alphanumeric characters (so no spaces, no punctuation marks, no strange characters).</string>
 	<string id="31758">Set the Kodi built-in function that should be executed when this custom option is selected. You can edit this command or use the 'Create Command' button to create a new custom command.</string>
 	<string id="31759">Confirm the settings of this custom option and return to the Skin Settings menu.</string>
 	<string id="31760">Discard the changes made in the settings of this custom option and return to the Skin Settings menu.</string>
@@ -209,6 +209,14 @@
 	<string id="31787">Enable the 'Next Aired' information in the circle of the Home Menu. If this option is enabled, you can access it by pressing 'left' on the Live TV-option in the Home Menu.</string>
 	<string id="31788">Busy Animation</string>
 	<string id="31789">Debug List Border</string>
+	<string id="31790">Open the TV guide</string>
+	<string id="31791">Open the radio guide</string>
+	<string id="31792">Open the TV recordings</string>
+	<string id="31793">Open the radio recordings</string>
+	<string id="31794">Open the TV timers</string>
+	<string id="31795">Open the radio timers</string>
+	<string id="31796">Open the TV search window</string>
+	<string id="31797">Open the radio search window</string>
     
 	<string id="31800">Custom Option Editor</string>
 	<string id="31801">Custom Action Editor</string>
@@ -221,7 +229,7 @@
 	<string id="31808">Create Command</string>
 	<string id="31809">Custom Submenu Editor</string>
 	<string id="31810">Custom Items Editor</string>
-	<string id="31811">Live TV Related Actions</string>
+	<string id="31811">TV/Radio Related Actions</string>
 	<string id="31812">Video Related Actions</string>
 	<string id="31813">Music Related Actions</string>
 	<string id="31814">Picture Related Actions</string>
