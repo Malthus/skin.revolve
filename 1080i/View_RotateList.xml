@@ -8,41 +8,17 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1920</width>
-			<height>1000</height>
+			<height>1080</height>
 			<pagecontrol>68</pagecontrol>
 			<defaultcontrol>6</defaultcontrol>
-			<focusposition>5</focusposition>
+			<focusposition>1</focusposition>
 			<scrolltime>200</scrolltime>
 			<onup>58</onup>
 			<ondown>58</ondown>
 			<onleft>9000</onleft>
 			<onright>68</onright>
 
-			<itemlayout width="1920" height="110">
-				<control type="label">
-					<visible>false</visible>
-					<posx>960</posx>
-					<width>1920</width>
-					<height>110</height>
-					<font>SmallViewFont</font>
-					<textcolor>TextColor</textcolor>
-					<align>center</align>
-					<label>$VAR[ContentNameLabel]</label>
-				</control>
-			</itemlayout>
-
-			<focusedlayout width="1920" height="120">
-				<control type="label">
-					<visible>false</visible>
-					<posx>960</posx>
-					<width>1920</width>
-					<height>120</height>
-					<font>SmallViewFont</font>
-					<textcolor>MainColor</textcolor>
-					<align>center</align>
-					<label>$VAR[ContentNameLabel]</label>
-				</control>
-			</focusedlayout>			
+            <include>InvisibleVerticalListItemsForMenu</include>
 		</control>
 		
 		<include>MainRotateListView</include>

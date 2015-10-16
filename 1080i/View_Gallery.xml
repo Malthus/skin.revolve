@@ -9,39 +9,15 @@
 			<width>1920</width>
 			<height>1000</height>
 			<pagecontrol>67</pagecontrol>
-			<focusposition>3</focusposition>
+			<focusposition>2</focusposition>
 			<orientation>horizontal</orientation>
 			<scrolltime>200</scrolltime>
 			<onup>9000</onup>
 			<ondown>67</ondown>
 			<onleft>57</onleft>
 			<onright>57</onright>
-			
-			<itemlayout width="300" height="1000">
-				<control type="label">
-					<visible>false</visible>
-					<posx>100</posx>
-					<width>300</width>
-					<height>1000</height>
-					<font>SmallViewFont</font>
-					<textcolor>TextColor</textcolor>
-					<align>center</align>
-					<label>$VAR[ContentNameLabel]</label>
-				</control>
-			</itemlayout>
-
-			<focusedlayout width="720" height="1000">
-				<control type="label">
-					<visible>false</visible>
-					<posx>310</posx>
-					<width>720</width>
-					<height>1000</height>
-					<font>SmallViewFont</font>
-					<textcolor>MainColor</textcolor>
-					<align>center</align>
-					<label>$VAR[ContentNameLabel]</label>
-				</control>
-			</focusedlayout>			
+	
+            <include>InvisibleHorizontalListItemsForMenu</include>
 		</control>
 		
 		<control type="group">

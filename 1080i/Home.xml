@@ -65,7 +65,7 @@
 			<onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)">900</onleft>
 			<onright>Noop</onright>
 
-            <include>InvisibleItemsForMenu</include>
+            <include>InvisibleVerticalListItemsForMenu</include>
 
 			<content>
 				<include>HomeMenuItems</include>

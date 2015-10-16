@@ -1422,7 +1422,7 @@
         <textcolor>TextColor</textcolor>
     </include>
 
-    <include name="InvisibleItemsForMenu">
+    <include name="InvisibleVerticalListItemsForMenu">
 		<itemlayout width="1920" height="125">
             <control type="group">
                 <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
@@ -1437,7 +1437,7 @@
                 <control type="label">
                     <width>1900</width>
                     <height>125</height>
-                    <font>MenuListFont</font>
+                    <font>MenuDebugFont</font>
                     <textcolor>TextColor</textcolor>
                     <align>right</align>
                     <label>$INFO[ListItem.Label]</label>
@@ -1459,12 +1459,61 @@
                 <control type="label">
                     <width>1900</width>
                     <height>330</height>
-                    <font>MenuListFont</font>
+                    <font>MenuDebugFont</font>
                     <textcolor>MainColor</textcolor>
                     <align>right</align>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
 			</control>
         </focusedlayout>
+    </include>
+    
+    <include name="InvisibleHorizontalListItemsForMenu">
+		<itemlayout width="300" height="1080">
+            <control type="group">
+                <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                    
+                <control type="image">
+                    <width>300</width>
+                    <height>1080</height>
+                    <texture colordiffuse="TextColor" border="20">controls/rectangle-clear.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            
+                <control type="label">
+                    <posy>20</posy>
+                    <width>300</width>
+                    <height>40</height>
+                    <font>MenuDebugFont</font>
+                    <textcolor>TextColor</textcolor>
+                    <align>center</align>
+                    <label>$VAR[ContentNameLabel]</label>
+                </control>
+            </control>
+		</itemlayout>
+
+		<focusedlayout width="720" height="1080">
+            <control type="group">
+                <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                    
+                <control type="image">
+                    <width>720</width>
+                    <height>1080</height>
+                    <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            
+                <control type="label">
+                    <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                    <posy>20</posy>
+                    <width>720</width>
+                    <height>40</height>
+                    <font>MenuDebugFont</font>
+                    <textcolor>MainColor</textcolor>
+                    <align>center</align>
+                    <label>$VAR[ContentNameLabel]</label>
+                </control>
+			</control>
+		</focusedlayout>			
     </include>
 </includes>
