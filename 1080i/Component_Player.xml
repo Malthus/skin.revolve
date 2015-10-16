@@ -392,54 +392,54 @@
 	</include>
 
 	<include name="DescriptionForControlsForPlayer">
-			<control type="label">
-				<posx>-2</posx>
-				<posy>-2</posy>
-				<width>520</width>
-				<height>20</height>
-				<textcolor>MainColor</textcolor>
-				<font>DefaultInformationFont</font>
-				<align>center</align>
-				<label>$INFO[System.CurrentControl]</label>
-			</control>
-			<control type="label">
-				<posx>2</posx>
-				<posy>-2</posy>
-				<width>520</width>
-				<height>20</height>
-				<textcolor>MainColor</textcolor>
-				<font>DefaultInformationFont</font>
-				<align>center</align>
-				<label>$INFO[System.CurrentControl]</label>
-			</control>
-			<control type="label">
-				<posx>-2</posx>
-				<posy>2</posy>
-				<width>520</width>
-				<height>20</height>
-				<textcolor>MainColor</textcolor>
-				<font>DefaultInformationFont</font>
-				<align>center</align>
-				<label>$INFO[System.CurrentControl]</label>
-			</control>
-			<control type="label">
-				<posx>2</posx>
-				<posy>2</posy>
-				<width>520</width>
-				<height>20</height>
-				<textcolor>MainColor</textcolor>
-				<font>DefaultInformationFont</font>
-				<align>center</align>
-				<label>$INFO[System.CurrentControl]</label>
-			</control>
-			<control type="label">
-				<width>520</width>
-				<height>20</height>
-				<textcolor>BackgroundColor</textcolor>
-				<font>DefaultInformationFont</font>
-				<align>center</align>
-				<label>$INFO[System.CurrentControl]</label>
-			</control>
+		<control type="label">
+			<posx>-2</posx>
+			<posy>-2</posy>
+			<width>520</width>
+			<height>20</height>
+			<textcolor>MainColor</textcolor>
+			<font>DefaultInformationFont</font>
+			<align>center</align>
+			<label>$INFO[System.CurrentControl]</label>
+		</control>
+		<control type="label">
+			<posx>2</posx>
+			<posy>-2</posy>
+			<width>520</width>
+			<height>20</height>
+			<textcolor>MainColor</textcolor>
+			<font>DefaultInformationFont</font>
+			<align>center</align>
+			<label>$INFO[System.CurrentControl]</label>
+		</control>
+		<control type="label">
+			<posx>-2</posx>
+			<posy>2</posy>
+			<width>520</width>
+			<height>20</height>
+			<textcolor>MainColor</textcolor>
+			<font>DefaultInformationFont</font>
+			<align>center</align>
+			<label>$INFO[System.CurrentControl]</label>
+		</control>
+		<control type="label">
+			<posx>2</posx>
+			<posy>2</posy>
+			<width>520</width>
+			<height>20</height>
+			<textcolor>MainColor</textcolor>
+			<font>DefaultInformationFont</font>
+			<align>center</align>
+			<label>$INFO[System.CurrentControl]</label>
+		</control>
+		<control type="label">
+			<width>520</width>
+			<height>20</height>
+			<textcolor>BackgroundColor</textcolor>
+			<font>DefaultInformationFont</font>
+			<align>center</align>
+			<label>$INFO[System.CurrentControl]</label>
+		</control>
 	</include>
             
 	<include name="MediaNameLabelForPlayer" description="Name (Title) Label">
