@@ -272,6 +272,16 @@
 		</control>
     </include>
     
+    <include name="DiscImageForPlayer">
+		<control type="image">
+			<visible>!VideoPlayer.HasMenu</visible>
+			<width>88</width>
+			<height>88</height>
+			<texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+    </include>
+    
 	<constant name="PosXForDialogCircleControlsForPlayer">145</constant>
 	<constant name="PosYForDialogCircleControlsForPlayer">400</constant>
 	<constant name="PosXForSideMenuCircleControlsForPlayer">120</constant>
