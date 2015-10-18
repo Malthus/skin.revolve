@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="134">
-	<defaultcontrol always="true">450</defaultcontrol>
+	<defaultcontrol always="true">400</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
 		<include>GlobalBackground</include>
 
+		<control type="button" id="400" description="Empty Favourites List Condition">
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>-</texturefocus>
+			<onfocus condition="!StringCompare(Container(450).NumItems,0)">SetFocus(450)</onfocus>
+		</control>
+        
 		<control type="fixedlist" id="450" description="Invisible Favourites Wraplist">
 			<visible>true</visible>
 			<posx>0</posx>
