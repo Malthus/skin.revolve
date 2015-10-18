@@ -87,6 +87,8 @@
 						<font>-</font>
 						<texturefocus>controls/subtitles-focus.png</texturefocus>
 						<texturenofocus>controls/subtitles-nofocus.png</texturenofocus>
+                        <onleft>6</onleft>
+                        <onright>2</onright>
 						<onclick>Close</onclick>
 						<onclick>ActivateWindow(subtitlesearch)</onclick>
 					</control>
@@ -103,6 +105,8 @@
 						<font>-</font>
 						<texturefocus>controls/audio-focus.png</texturefocus>
 						<texturenofocus>controls/audio-nofocus.png</texturenofocus>
+                        <onleft>4</onleft>
+                        <onright>3</onright>
 						<onclick>ActivateWindow(osdaudiosettings)</onclick>
 					</control>
 				</control>
@@ -119,6 +123,8 @@
 						<font>-</font>
 						<texturefocus>controls/video-focus.png</texturefocus>
 						<texturenofocus>controls/video-nofocus.png</texturenofocus>
+                        <onleft>2</onleft>
+                        <onright>12</onright>
 						<onclick>ActivateWindow(osdvideosettings)</onclick>
 					</control>
 				</control>
@@ -138,6 +144,8 @@
 						<font>-</font>
 						<texturefocus>controls/previous-focus.png</texturefocus>
 						<texturenofocus>controls/previous-nofocus.png</texturenofocus>
+                        <onleft>3</onleft>
+                        <onright>13</onright>
 						<onclick>PlayerControl(Previous)</onclick>
 					</control>
 				</control>
@@ -153,6 +161,8 @@
 						<font>-</font>
 						<texturefocus>controls/rewind-focus.png</texturefocus>
 						<texturenofocus>controls/rewind-nofocus.png</texturenofocus>
+                        <onleft>12</onleft>
+                        <onright>14</onright>
 						<onclick>PlayerControl(Rewind)</onclick>
 					</control>
 				</control>
@@ -172,6 +182,8 @@
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 						<alttexturefocus>controls/play-focus.png</alttexturefocus>
 						<alttexturenofocus>controls/play-nofocus.png</alttexturenofocus>
+                        <onleft>13</onleft>
+                        <onright>15</onright>
 						<onclick>PlayerControl(Play)</onclick>
 					</control>
 				</control>
@@ -187,6 +199,8 @@
 						<font>-</font>
 						<texturefocus>controls/stop-focus.png</texturefocus>
 						<texturenofocus>controls/stop-nofocus.png</texturenofocus>
+                        <onleft>14</onleft>
+                        <onright>16</onright>
 						<onclick>PlayerControl(Stop)</onclick>
 					</control>
 				</control>
@@ -202,6 +216,8 @@
 						<font>-</font>
 						<texturefocus>controls/fastforward-focus.png</texturefocus>
 						<texturenofocus>controls/fastforward-nofocus.png</texturenofocus>
+                        <onleft>15</onleft>
+                        <onright>17</onright>
 						<onclick>PlayerControl(Forward)</onclick>
 					</control>
 				</control>
@@ -217,6 +233,8 @@
 						<font>-</font>
 						<texturefocus>controls/next-focus.png</texturefocus>
 						<texturenofocus>controls/next-nofocus.png</texturenofocus>
+                        <onleft>16</onleft>
+                        <onright>1</onright>
 						<onclick>PlayerControl(Next)</onclick>
 					</control>
 				</control>
@@ -236,6 +254,8 @@
 						<font>-</font>
 						<texturefocus>controls/bookmarks-focus.png</texturefocus>
 						<texturenofocus>controls/bookmarks-nofocus.png</texturenofocus>
+                        <onleft>17</onleft>
+                        <onright>6</onright>
 						<onclick>ActivateWindow(videobookmarks)</onclick>
 					</control>
 				</control>
@@ -252,6 +272,8 @@
 						<texturefocus>controls/dvd-focus.png</texturefocus>
 						<texturenofocus>controls/dvd-nofocus.png</texturenofocus>
 						<enable>VideoPlayer.HasMenu</enable>
+                        <onleft>1</onleft>
+                        <onright>4</onright>
 						<onclick>PlayerControl(ShowVideoMenu)</onclick>
 					</control>
 				</control>
