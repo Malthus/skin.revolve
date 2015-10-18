@@ -29,6 +29,7 @@ def clearProperties(targetmask, targetwindow):
         targetbase = targetmask % (index)
 
         clearProperty(targetbase + '.Name', targetwindow)
+        clearProperty(targetbase + '.Subtitle', targetwindow)
         clearProperty(targetbase + '.Thumbnail', targetwindow)
         clearProperty(targetbase + '.BackgroundImage', targetwindow)
         clearProperty(targetbase + '.Action', targetwindow)
