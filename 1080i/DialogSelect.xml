@@ -29,10 +29,11 @@
 				<posy>80</posy>
 				<width>1240</width>
 				<height>520</height>
-				<onleft>5</onleft>
-				<onright>Noop</onright>
+				<pagecontrol>21</pagecontrol>
 				<onup>3</onup>
 				<ondown>3</ondown>
+				<onleft>5</onleft>
+				<onright>21</onright>
 
 				<itemlayout height="40">
 					<include>NormalItemsForNormalList</include>
@@ -55,10 +56,11 @@
 				<posy>80</posy>
 				<width>1240</width>
 				<height>520</height>
-				<onleft>5</onleft>
-				<onright>Noop</onright>
+				<pagecontrol>22</pagecontrol>
 				<onup>6</onup>
 				<ondown>6</ondown>
+				<onleft>5</onleft>
+				<onright>22</onright>
 				
 				<itemlayout height="100">
 					<include>NormalItemsForLargeThumbnailList</include>
@@ -74,6 +76,24 @@
 						<include>SelectedItemsForLargeThumbnailList</include>
 					</control>
 				</focusedlayout>
+			</control>
+            
+			<control type="scrollbar" id="21" description="Normal List Scrollbar">
+				<visible>Control.IsVisible(3)</visible>
+				<posy>80</posy>
+				<height>520</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>3</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="scrollbar" id="22" description="Thumbnail List Scrollbar">
+				<visible>Control.IsVisible(6)</visible>
+				<posy>80</posy>
+				<height>520</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>6</onleft>
+				<onright>Noop</onright>
 			</control>
 
 			<control type="label" id="2" description="Number Of Files Label">
