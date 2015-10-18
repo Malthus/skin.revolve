@@ -36,14 +36,37 @@
 				<posy>120</posy>
 				<width>1240</width>
 				<height>560</height>
+				<pagecontrol>451</pagecontrol>
 				<onup>450</onup>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
 				<ondown>450</ondown>
+				<onleft>9000</onleft>
+				<onright>451</onright>
 
-				<include>ItemsForLargeThumbnailList</include>
+                <itemlayout height="100">
+                    <include>NormalItemsForLargeThumbnailList</include>
+                </itemlayout>
+					
+                <focusedlayout height="100">
+                    <control type="group">
+                        <visible>Control.HasFocus(450)</visible>
+                        <include>FocusedItemsForLargeThumbnailList</include>
+                    </control>
+                    <control type="group">
+                        <visible>!Control.HasFocus(450)</visible>
+                        <include>SelectedItemsForLargeThumbnailList</include>
+                    </control>
+                </focusedlayout>
+
 			</control>
 
+			<control type="scrollbar" id="451" description="File List Scrollbar">
+				<posy>120</posy>
+				<height>560</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>450</onleft>
+				<onright>Noop</onright>
+			</control>
+            
 			<control type="grouplist" id="9000" description="Button Area">
 				<posx>40</posx>
 				<posy>520</posy>
