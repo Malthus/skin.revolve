@@ -425,12 +425,10 @@
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
 					<width>100</width>
 					<height>50</height>
-					<texture>icons/channels-background.png</texture>
-					<colordiffuse>$VAR[ContentMediaBackgroundInViewColor]</colordiffuse>
+					<texture>icons/channels-logo.png</texture>
+					<colordiffuse>$VAR[ContentMediaFlagInViewColor]</colordiffuse>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
@@ -438,7 +436,7 @@
 					<width>85</width>
 					<height>50</height>
 					<font>MediumMediaFlagFont</font>
-					<textcolor>$VAR[ContentMediaFlagInViewColor]</textcolor>
+					<textcolor>$VAR[ContentMediaBackgroundInViewColor]</textcolor>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$VAR[ContentAudioChannels]</label>
