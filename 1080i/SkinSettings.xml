@@ -275,7 +275,16 @@
 						<onclick>Skin.ToggleSetting(TitleScreen.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="801" description="Visible Unfocused Side Menu Option">
+					<control type="radiobutton" id="810" description="Group Items In Side Menu Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31152]</label>
+						<selected>Skin.HasSetting(SideMenu.Grouped)</selected>
+						<onclick>Skin.ToggleSetting(SideMenu.Grouped)</onclick>
+					</control>
+					
+					<control type="radiobutton" id="801" description="Show Unfocused Side Menu Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -284,7 +293,7 @@
 						<onclick>Skin.ToggleSetting(SideMenu.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="802" description="Visible Unfocused Scroll Bar In View Option">
+					<control type="radiobutton" id="802" description="Show Unfocused Scroll Bar In View Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -293,7 +302,7 @@
 						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="809" description="Visible Back Button Option">
+					<control type="radiobutton" id="809" description="Show Back Button Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -302,7 +311,7 @@
 						<onclick>Skin.ToggleSetting(BackButton.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="806" description="Visible OSD Player Icon Option">
+					<control type="radiobutton" id="806" description="Show OSD Player Icon Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -311,7 +320,7 @@
 						<onclick>Skin.ToggleSetting(PlayerArtwork.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="804" description="Visible Media Icons Option">
+					<control type="radiobutton" id="804" description="Show Media Icons Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -334,7 +343,7 @@
 						<onclick>ActivateWindow(1188)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="805" description="Visible No Information Available Option">
+					<control type="radiobutton" id="805" description="Show No Information Available Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -343,7 +352,7 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
-					<control type="radiobutton" id="808" description="Visible Description in Landscape Option">
+					<control type="radiobutton" id="808" description="Show Description in Landscape Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -589,6 +598,11 @@
 						<visible>Control.HasFocus(809)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31213]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(810)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31214]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>
