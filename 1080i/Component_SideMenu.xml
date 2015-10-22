@@ -23,7 +23,7 @@
 				<posx>-30</posx>
 				<posy>-30</posy>
 				<width>588</width>
-				<height>820</height>
+				<height>840</height>
 				<fadetime>100</fadetime>
 				<aspectratio>stretch</aspectratio>
 				<texture border="30" background="true">elements/poster-shadow.png</texture>
@@ -33,7 +33,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>528</width>
-				<height>760</height>
+				<height>780</height>
 				<fadetime>100</fadetime>
 				<aspectratio>stretch</aspectratio>
 				<texture colordiffuse="BackgroundColor" fallback="white.png">elements/poster-background.png</texture>
@@ -51,7 +51,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>528</width>
-				<height>760</height>
+				<height>780</height>
                 <texturenofocus>-</texturenofocus>
                 <texturefocus>-</texturefocus>
 				<font>-</font>
@@ -82,6 +82,66 @@
 				<angle>270</angle>
 				<label>[UPPERCASE]$LOCALIZE[31909][/UPPERCASE]</label>
 			</control>
+		</control>
+	</include>
+
+	<include name="ViewGroupLabelForSideMenu" description="View Options Label For Side Menu">
+		<control type="label" id="990">
+            <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+            <height>30</height>
+			<align>left</align>
+			<font>SideMenuGroupFont</font>
+			<textcolor>SelectColor</textcolor>
+			<align>center</align>
+			<label>  [UPPERCASE]$LOCALIZE[14018][/UPPERCASE]</label>
+		</control>
+	</include>
+
+	<include name="NavigateGroupLabelForSideMenu" description="Navigate Options Label For Side Menu">
+		<control type="label" id="991">
+            <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+            <height>30</height>
+			<align>left</align>
+			<font>SideMenuGroupFont</font>
+			<textcolor>SelectColor</textcolor>
+			<align>center</align>
+			<label>  [UPPERCASE]$LOCALIZE[31106][/UPPERCASE]</label>
+		</control>
+	</include>
+
+	<include name="ManageGroupLabelForSideMenu" description="Manage Options Label For Side Menu">
+		<control type="label" id="992">
+            <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+            <height>30</height>
+			<align>left</align>
+			<font>SideMenuGroupFont</font>
+			<textcolor>SelectColor</textcolor>
+			<align>center</align>
+			<label>  [UPPERCASE]$LOCALIZE[31107][/UPPERCASE]</label>
+		</control>
+	</include>
+
+	<include name="DisplayGroupLabelForSideMenu" description="Display Options Label For Side Menu">
+		<control type="label" id="993">
+            <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+            <height>30</height>
+			<align>left</align>
+			<font>SideMenuGroupFont</font>
+			<textcolor>SelectColor</textcolor>
+			<align>center</align>
+			<label>  [UPPERCASE]$LOCALIZE[31108][/UPPERCASE]</label>
+		</control>
+	</include>
+
+	<include name="SetGroupLabelForSideMenu" description="Set Options Label For Side Menu">
+		<control type="label" id="994">
+            <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+            <height>30</height>
+			<align>left</align>
+			<font>SideMenuGroupFont</font>
+			<textcolor>SelectColor</textcolor>
+			<align>center</align>
+			<label>  [UPPERCASE]$LOCALIZE[31109][/UPPERCASE]</label>
 		</control>
 	</include>
 
@@ -290,7 +350,7 @@
 		</control>
 	</include>
 	
-	<include name="MusicSearchButtonForSideMenu" description="Music Search Button For Side Menu">
+	<include name="MusicRipCDButtonForSideMenu" description="Music Rip CD Button For Side Menu">
 		<control type="button" id="11" description="">
 			<align>left</align>
 			<label>$LOCALIZE[600]</label>
@@ -409,10 +469,6 @@
 	<include name="ChannelGroupButtonForSideMenu" description="Channel Group Button For Side Menu">
         <control type="button" id="28" description="Channel Group Button">
 			<align>left</align>
-            <label>$INFO[Control.GetLabel(29)]</label>
-        </control>
-        <control type="label" id="29" description="TV/Radio Guide View Label">
-            <visible>false</visible>
             <label>-</label>
         </control>
 	</include>
