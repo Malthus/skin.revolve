@@ -27,13 +27,16 @@
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
+                <include>ViewGroupLabelForSideMenu</include>
 				<include>ViewTypeButtonForSideMenu</include>
 				<include>SortCriteriumButtonForSideMenu</include>
 				<include>SortOrderButtonForSideMenu</include>
-				<include>AutoUpdatesButtonForSideMenu</include>
-				<include>NotificationsButtonForSideMenu</include>
 				<include>LanguageFilterButtonForSideMenu</include>
 				<include>HideBrokenButtonForSideMenu</include>
+
+                <include>SetGroupLabelForSideMenu</include>
+				<include>AutoUpdatesButtonForSideMenu</include>
+				<include>NotificationsButtonForSideMenu</include>
 			</control>
 
 			<control type="group" description="Player Controls">

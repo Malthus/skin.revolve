@@ -41,16 +41,19 @@
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
+                <include>ViewGroupLabelForSideMenu</include>
 				<include>ViewTypeButtonForSideMenu</include>
 				<include>SortCriteriumButtonForSideMenu</include>
 				<include>SortOrderButtonForSideMenu</include>
+				<include>ChannelGroupButtonForSideMenu</include>
+                <include>HiddenChannelsButtonForSideMenu</include>
+                <include>PVRFilterButtonForSideMenu</include>
+
+                <include>NavigateGroupLabelForSideMenu</include>
 				<include>GuideButtonForSideMenu</include>
 				<include>RecordingsButtonForSideMenu</include>
 				<include>TimersButtonForSideMenu</include>
 				<include>PVRSearchButtonForSideMenu</include>
-                <include>HiddenChannelsButtonForSideMenu</include>
-                <include>PVRFilterButtonForSideMenu</include>
-				<include>ChannelGroupButtonForSideMenu</include>
 			</control>
 
 			<control type="group" description="Player Controls">

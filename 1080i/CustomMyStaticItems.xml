@@ -237,7 +237,10 @@
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
+                <include>ViewGroupLabelForSideMenu</include>
 				<include>MyItemsMenuTypeButtonForSideMenu</include>
+
+                <include>ManageGroupLabelForSideMenu</include>
                 <include>GenericPlaylistButtonForSideMenu</include>
                 <include>ClearPlaylistButtonForSideMenu</include>
 			</control>

@@ -25,9 +25,12 @@
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
+                <include>ViewGroupLabelForSideMenu</include>
 				<include>ViewTypeButtonForSideMenu</include>
 				<include>SortCriteriumButtonForSideMenu</include>
 				<include>SortOrderButtonForSideMenu</include>
+                
+                <include>ManageGroupLabelForSideMenu</include>
 				<include>ShuffleButtonForSideMenu</include>
 				<include>SaveButtonForSideMenu</include>
 				<include>ClearButtonForSideMenu</include>

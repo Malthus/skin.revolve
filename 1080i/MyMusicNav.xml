@@ -31,16 +31,21 @@
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
+                <include>ViewGroupLabelForSideMenu</include>
 				<include>ViewTypeButtonForSideMenu</include>
 				<include>SortCriteriumButtonForSideMenu</include>
 				<include>SortOrderButtonForSideMenu</include>
                 <include>DescriptionForLandscapeButtonForSideMenu</include>
-				<include>MusicPlaylistButtonForSideMenu</include>
-				<include>FilesButtonForSideMenu</include>
 				<include>LibrarySearchButtonForSideMenu</include>
-				<include>PartyModeButtonForSideMenu</include>
 				<include>MusicFilterActivateButtonForSideMenu</include>
 				<include>MusicFilterShowButtonForSideMenu</include>
+                
+                <include>NavigateGroupLabelForSideMenu</include>
+				<include>FilesButtonForSideMenu</include>
+				<include>MusicPlaylistButtonForSideMenu</include>
+
+                <include>ManageGroupLabelForSideMenu</include>
+				<include>PartyModeButtonForSideMenu</include>
 			</control>
 			
 			<control type="group" description="Player Controls">

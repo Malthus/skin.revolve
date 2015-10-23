@@ -382,8 +382,16 @@
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
+                <include>ViewGroupLabelForSideMenu</include>
+                <control type="label" id="998">
+                    <width>482</width>
+                    <height>40</height>
+                    <label>$LOCALIZE[31153]</label>
+                </control>
 				<include>WeatherLocationSpinnerForSideMenu</include>
 				<include>WeatherRefreshButtonForSideMenu</include>
+                
+                <include>SetGroupLabelForSideMenu</include>
 				<include>WeatherSettingsButtonForSideMenu</include>
 			</control>
 

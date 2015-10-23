@@ -80,17 +80,9 @@
 		<control type="group" id="9000">
 			<include>SideMenu</include>
 
-			<control type="label">
-				<posx>24</posx>
-				<posy>20</posy>
-				<width>482</width>
-				<height>40</height>
-				<label>31139</label>
-			</control>
-			
 			<control type="grouplist" id="9001">
 				<posx>24</posx>
-				<posy>60</posy>
+				<posy>20</posy>
 				<width>482</width>
 				<height>440</height>
 				<itemgap>0</itemgap>
@@ -100,6 +92,12 @@
 				<ondown>9010</ondown>
 				<orientation>vertical</orientation>
 
+                <include>ViewGroupLabelForSideMenu</include>
+                <control type="label" id="998">
+                    <width>482</width>
+                    <height>40</height>
+                    <label>$LOCALIZE[31139]</label>
+                </control>
 				<include>SettingsLevelButtonForSideMenu</include>
 			</control>
 
