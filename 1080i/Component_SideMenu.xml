@@ -97,7 +97,7 @@
 		</control>
 	</include>
 
-	<include name="NavigateGroupLabelForSideMenu" description="Navigate Options Label For Side Menu">
+	<include name="NavigationGroupLabelForSideMenu" description="Navigation Options Label For Side Menu">
 		<control type="label" id="991">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
             <height>30</height>
@@ -109,7 +109,7 @@
 		</control>
 	</include>
 
-	<include name="ManageGroupLabelForSideMenu" description="Manage Options Label For Side Menu">
+	<include name="PlaylistLibraryGroupLabelForSideMenu" description="Manage Options Label For Side Menu">
 		<control type="label" id="992">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
             <height>30</height>
@@ -121,7 +121,7 @@
 		</control>
 	</include>
 
-	<include name="DisplayGroupLabelForSideMenu" description="Display Options Label For Side Menu">
+	<include name="SlideshowGroupLabelForSideMenu" description="Display Options Label For Side Menu">
 		<control type="label" id="993">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
             <height>30</height>
@@ -133,7 +133,7 @@
 		</control>
 	</include>
 
-	<include name="SetGroupLabelForSideMenu" description="Set Options Label For Side Menu">
+	<include name="SettingsGroupLabelForSideMenu" description="Set Options Label For Side Menu">
 		<control type="label" id="994">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
             <height>30</height>
