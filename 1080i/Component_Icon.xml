@@ -20,6 +20,14 @@
         <visible>IsEmpty(ListItem.Art(banner))</visible>
     </include>
 	
+    <include name="VisibilityForThumbnail">
+        <visible>!IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Icon)</visible>
+    </include>
+	
+    <include name="VisibilityForNoThumbnail">
+        <visible>IsEmpty(ListItem.Art(thumb)) + IsEmpty(ListItem.Icon)</visible>
+    </include>
+	
 	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
         <include>BackgroundForTinyCircleThumbnailIcon</include>
 
@@ -163,6 +171,7 @@
         <include>BackgroundForDefaultCircleThumbnailIcon</include>
 
 		<control type="label">
+            <include>VisibilityForNoThumbnail</include>
 			<posx>35</posx>
 			<posy>35</posy>
 			<width>200</width>
