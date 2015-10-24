@@ -337,8 +337,10 @@
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,BusyAnimation.Type,1188)</onclick>
 						<onclick>SetProperty(List01Option.Name,$LOCALIZE[31951],1188)</onclick>
+						<onclick>SetProperty(List01Option.Thumbnail,icons/busy-arrows.png,1188)</onclick>
 						<onclick>SetProperty(List01Option.Action,A,1188)</onclick>
 						<onclick>SetProperty(List02Option.Name,$LOCALIZE[31952],1188)</onclick>
+						<onclick>SetProperty(List02Option.Thumbnail,icons/busy-circles.png,1188)</onclick>
 						<onclick>SetProperty(List02Option.Action,C,1188)</onclick>
 						<onclick>ActivateWindow(1188)</onclick>
 					</control>
