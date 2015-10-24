@@ -40,10 +40,10 @@
 				<effect type="slide" start="0,0" end="0,-40" time="100" />
 			</animation>
 
-			<posx>1000</posx>
-			<posy>8</posy>
-			<width>860</width>
-			<height>20</height>
+			<posx>PosXForHorizontalScrollbarForView</posx>
+			<posy>PosYForHorizontalScrollbarForView</posy>
+			<width>WidthForHorizontalScrollbarForView</width>
+			<height>HeightForHorizontalScrollbarForView</height>
 			<orientation>horizontal</orientation>
 			<texturesliderbackground border="14,0,14,0" colordiffuse="BackgroundColor">controls/verticalbar-thick.png</texturesliderbackground>
 			<texturesliderbar border="14,0,14,0" colordiffuse="SelectColor">controls/verticalbar-thin.png</texturesliderbar>

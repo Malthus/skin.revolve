@@ -441,9 +441,10 @@
 				<effect type="slide" start="0,0" end="40,0" time="100" />
 			</animation>
 
-			<posx>1880</posx>
-			<posy>100</posy>
-			<height>760</height>
+            <posx>PosXForVerticalScrollbarForView</posx>
+			<posy>PosYForVerticalScrollbarForView</posy>
+            <width>WidthForVerticalScrollbarForView</width>
+			<height>HeightForVerticalScrollbarForView</height>
 			<onleft>58</onleft>
 			<onright>Noop</onright>
 		</control>
