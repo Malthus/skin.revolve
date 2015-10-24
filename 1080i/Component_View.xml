@@ -7,7 +7,17 @@
 	<include name="VisibilityOfSortLetterInView">
 		<visible>Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</visible>
 	</include>
-	
+    
+	<constant name="PosXForHorizontalScrollbarForView">1000</constant>
+	<constant name="PosYForHorizontalScrollbarForView">8</constant>
+	<constant name="WidthForHorizontalScrollbarForView">860</constant>
+	<constant name="HeightForHorizontalScrollbarForView">20</constant>
+    
+	<constant name="PosXForVerticalScrollbarForView">1880</constant>
+	<constant name="PosYForVerticalScrollbarForView">100</constant>
+	<constant name="WidthForVerticalScrollbarForView">20</constant>
+	<constant name="HeightForVerticalScrollbarForView">780</constant>
+    
 	<include file="View_RevolveList.xml" />
 	<include file="View_DropList.xml" />
 	<include file="View_CircleList.xml" />
