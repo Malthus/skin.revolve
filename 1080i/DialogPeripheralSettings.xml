@@ -47,15 +47,20 @@
 				<align>left</align>
 			</control>
 
-			<control type="radiobutton" id="8" description="Default RadioButton">
+			<control type="radiobutton" id="8" description="Default Radiobutton">
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-			<control type="spincontrolex" id="9" description="Default SpinControlex">
+			<control type="spincontrolex" id="9" description="Default Spincontrolex">
 				<width>1240</width>
 				<align>left</align>
 				<reverse>yes</reverse>
+			</control>
+
+			<control type="image" id="11" description="Default Spacer Image">
+				<height>10</height>
+				<texture>-</texture>
 			</control>
 
 			<control type="sliderex" id="13" description="Default Slider">
@@ -63,11 +68,12 @@
 				<align>left</align>
 			</control>
 
-			<control type="image" id="11" description="Separator Image">
-				<height>4</height>
-				<texture>-</texture>
-			</control>
-
+            <control type="label" id="14" description="Default Label">
+				<width>1240</width>
+                <textcolor>SelectColor</textcolor>
+                <label>-</label>
+            </control>
+            
 			<control type="group" id="9000">
 				<control type="button" id="28" description="OK Button">
 					<posx>40</posx>

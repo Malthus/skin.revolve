@@ -69,9 +69,11 @@
 				<align>left</align>
 			</control>
 
-			<control type="sliderex" id="10" description="Default Slider">
+			<control type="label" id="14" description="Default Label">
 				<width>1240</width>
 				<align>left</align>
+                <textcolor>BackgroundColor</textcolor>
+				<label>-</label>
 			</control>
 
 			<control type="button" id="28" description="Ok Button">

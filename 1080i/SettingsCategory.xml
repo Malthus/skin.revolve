@@ -35,26 +35,36 @@
 				<onright>Noop</onright>
 			</control>
             
-			<control type="button" id="7" description="Default Button">
-				<align>left</align>
-			</control>
+            <control type="button" id="7" description="Default Button">
+                <align>left</align>
+            </control>
 
-			<control type="radiobutton" id="8" description="Default Radio Button">
-				<radioposx>1040</radioposx>
-				<align>left</align>
-			</control>
+            <control type="radiobutton" id="8" description="Default Radio Button">
+                <radioposx>1040</radioposx>
+                <align>left</align>
+            </control>
 
-			<control type="spincontrolex" id="9" description="Default Spin Control">
-				<align>left</align>
-			</control>
+            <control type="spincontrolex" id="9" description="Default Spin Control">
+                <align>left</align>
+            </control>
 
-			<control type="button" id="10" description="Default Category Button">
-				<align>left</align>
-			</control>
+            <control type="button" id="10" description="Default Category Button">
+                <align>left</align>
+            </control>
 
-			<control type="sliderex" id="13" description="Default Slider">
-				<align>left</align>
-			</control>
+            <control type="image" id="11" description="Default Spacer">
+                <height>20</height>
+                <texture>-</texture>
+            </control>
+            
+            <control type="sliderex" id="13" description="Default Slider">
+                <align>left</align>
+            </control>
+            
+            <control type="label" id="14" description="Default Label">
+                <textcolor>BackgroundColor</textcolor>
+                <label>-</label>
+            </control>
             
 			<control type="group">
 				<visible>ControlGroup(5).HasFocus</visible>

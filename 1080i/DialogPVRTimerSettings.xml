@@ -34,7 +34,7 @@
 
 			<control type="grouplist" id="5" description="Controls">
 				<posx>560</posx>
-				<posy>80-</posy>
+				<posy>80</posy>
 				<width>1240</width>
 				<height>900</height>
 				<itemgap>0</itemgap>
@@ -45,26 +45,37 @@
 			</control>
 
 			<control type="button" id="7" description="Default Button">
+				<width>1240</width>
 				<align>left</align>
 			</control>
-			
+
 			<control type="radiobutton" id="8" description="Default RadioButton">
+				<width>1240</width>
 				<align>left</align>
 			</control>
 			
 			<control type="spincontrolex" id="9" description="Default Spinner Control">
+				<width>1240</width>
 				<align>left</align>
 				<reverse>yes</reverse>
 			</control>
 			
-			<control type="sliderex" id="13" description="Default Slider">
-				<align>left</align>
-			</control>
-			
 			<control type="edit" id="12" description="Default Edit Box">
+				<width>1240</width>
 				<align>left</align>
 			</control>
 
+			<control type="sliderex" id="13" description="Default Slider">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+			
+            <control type="label" id="14" description="Default Label">
+				<width>1240</width>
+                <textcolor>SelectColor</textcolor>
+                <label>-</label>
+            </control>
+            
 			<control type="grouplist" id="9001">
 				<posx>40</posx>
 				<posy>480</posy>
