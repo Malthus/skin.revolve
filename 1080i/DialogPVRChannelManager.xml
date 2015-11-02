@@ -27,7 +27,7 @@
 				<width>1240</width>
 				<font>DialogTitleFont</font>
 				<align>left</align>
-				<label>19199</label>
+				<label>$LOCALIZE[19199]</label>
 			</control>
 
 			<control type="group" description="Dialog Thumbnail Icon">
@@ -50,7 +50,7 @@
 					<height>40</height>
 					<textcolor>BackgroundColor</textcolor>
 					<align>left</align>
-					<label>19019</label>
+					<label>$LOCALIZE[19019]</label>
 				</control>
 
 				<control type="list" id="20" description="Channels List Control">
@@ -89,7 +89,7 @@
 					<width>600</width>
 					<radioposx>540</radioposx>
 					<align>left</align>
-					<label>31405</label>
+					<label>$LOCALIZE[31405]</label>
 					<onup>11</onup>
 					<ondown>8</ondown>
 					<onleft>20</onleft>
@@ -100,7 +100,7 @@
 					<posy>40</posy>
 					<width>600</width>
 					<align>left</align>
-					<label>19075</label>
+					<label>$LOCALIZE[19075]</label>
 					<onup>7</onup>
 					<ondown>9</ondown>
 					<onleft>20</onleft>
@@ -111,7 +111,7 @@
 					<posy>80</posy>
 					<width>600</width>
 					<align>left</align>
-					<label>31406</label>
+					<label>$LOCALIZE[31406]</label>
 					<onup>8</onup>
 					<ondown>12</ondown>
 					<onleft>20</onleft>
@@ -123,7 +123,7 @@
 					<width>600</width>
 					<radioposx>540</radioposx>
 					<align>left</align>
-					<label>31407</label>
+					<label>$LOCALIZE[31407]</label>
 					<onup>9</onup>
 					<ondown>13</ondown>
 					<onleft>20</onleft>
@@ -134,7 +134,7 @@
 					<posy>160</posy>
 					<width>600</width>
 					<align>left</align>
-					<label>31408</label>
+					<label>$LOCALIZE[31408]</label>
 					<onup>12</onup>
 					<ondown>11</ondown>
 					<onleft>20</onleft>
@@ -142,29 +142,11 @@
 				</control>
 			</control>
 			
-			<control type="button" id="33" description="New Channel Button">
-				<posx>40</posx>
-				<posy>320</posy>
-				<label>15019</label>
-				<onup>6</onup>
-				<ondown>31</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
-			</control>
-			<control type="button" id="31" description="Edit Channel Button">
-				<posx>40</posx>
-				<posy>360</posy>
-				<label>21435</label>
-				<onup>33</onup>
-				<ondown>32</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
-			</control>
-			<control type="button" id="32" description="Delete Channel Button">
+			<control type="button" id="31" description="New Channel Button">
 				<posx>40</posx>
 				<posy>400</posy>
-				<label>117</label>
-				<onup>31</onup>
+				<label>$LOCALIZE[19204]</label>
+				<onup>6</onup>
 				<ondown>34</ondown>
 				<onleft>Noop</onleft>
 				<onright>20</onright>
@@ -173,9 +155,9 @@
 			<control type="togglebutton" id="34" description="Radio / TV Toggle Button">
 				<posx>40</posx>
 				<posy>560</posy>
-				<label>19023</label>
-				<altlabel>19024</altlabel>
-				<onup>32</onup>
+				<label>$LOCALIZE[19023]</label>
+				<altlabel>$LOCALIZE[19024]</altlabel>
+				<onup>31</onup>
 				<ondown>30</ondown>
 				<onleft>Noop</onleft>
 				<onright>20</onright>
@@ -183,7 +165,7 @@
 			<control type="button" id="30" description="Group Management Button">
 				<posx>40</posx>
 				<posy>600</posy>
-				<label>19143</label>
+				<label>$LOCALIZE[19143]</label>
 				<onup>34</onup>
 				<ondown>4</ondown>
 				<onleft>Noop</onleft>
@@ -193,7 +175,7 @@
 			<control type="button" id="4" description="Ok Button">
 				<posx>40</posx>
 				<posy>760</posy>
-				<label>186</label>
+				<label>$LOCALIZE[186]</label>
 				<onup>30</onup>
 				<ondown>5</ondown>
 				<onleft>Noop</onleft>
@@ -203,7 +185,7 @@
 			<control type="button" id="5" description="Apply Button">
 				<posx>40</posx>
 				<posy>800</posy>
-				<label>732</label>
+				<label>$LOCALIZE[732]</label>
 				<onup>4</onup>
 				<ondown>6</ondown>
 				<onleft>Noop</onleft>
@@ -213,9 +195,9 @@
 			<control type="button" id="6" description="Cancel Button">
 				<posx>40</posx>
 				<posy>840</posy>
-				<label>222</label>
+				<label>$LOCALIZE[222]</label>
 				<onup>5</onup>
-				<ondown>33</ondown>
+				<ondown>31</ondown>
 				<onleft>Noop</onleft>
 				<onright>20</onright>
 			</control>
