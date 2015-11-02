@@ -23,17 +23,17 @@
 				</control>
 			</control>
             
-			<control type="label" description="Visualization Preset List Header Label">
+			<control type="label" id="2" description="Visualization Preset List Header Label">
 				<posx>560</posx>
 				<posy>20</posy>
 				<width>1240</width>
 				<font>DialogTitleFont</font>
 				<textcolor>SecondaryColor</textcolor>
 				<align>left</align>
-				<label>$LOCALIZE[31925]</label>
+				<label>-</label>
 			</control>
 
-			<control type="list" id="2" description="Preset List">
+			<control type="list" id="5" description="Preset List">
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
