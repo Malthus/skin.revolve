@@ -345,6 +345,13 @@
 		</control>
 	</include>
 	
+	<include name="AddonUpdateButtonForSideMenu" description="Addon Update Button For Side Menu">
+		<control type="button" id="9">
+			<align>left</align>
+			<label>$LOCALIZE[24034]</label>
+		</control>
+	</include>
+	
 	<include name="MusicRipCDButtonForSideMenu" description="Music Rip CD Button For Side Menu">
 		<control type="button" id="11" description="">
 			<align>left</align>
@@ -479,7 +486,7 @@
 	</include>
 
 	<include name="PVRFilterButtonForSideMenu" description="PVR Filter Button For Side Menu">
-		<control type="radiobutton" id="7">
+		<control type="radiobutton" id="31">
 			<align>left</align>
 			<label>$LOCALIZE[25001]</label>
 		</control>
