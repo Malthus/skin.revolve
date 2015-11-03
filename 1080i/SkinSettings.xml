@@ -147,7 +147,13 @@
 						<onclick>Skin.ToggleSetting(BackgroundVideo.Faded)</onclick>
 					</control>
                     
-					<control type="button" id="320" description="Reset Page Setting Button">
+					<control type="label" id="121" description="Spacer">
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+                    
+					<control type="button" id="120" description="Reset Page Setting Button">
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[10041]</label>
@@ -214,6 +220,12 @@
 						<onclick>Skin.ToggleSetting(CircleExitMenu.Enable)</onclick>
 					</control>
                     
+					<control type="label" id="321" description="Spacer">
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+                    
 					<control type="button" id="320" description="Reset Page Setting Button">
 						<width>1100</width>
 						<align>left</align>
@@ -242,6 +254,12 @@
 						<label>$LOCALIZE[31126]:</label>
 						<label2>$INFO[Skin.String(AddonLyrics)]</label2>
 						<onclick>Skin.SetAddon(AddonLyrics,xbmc.python.lyrics)</onclick>
+					</control>
+                    
+					<control type="label" id="721" description="Spacer">
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
 					</control>
                     
 					<control type="button" id="720" description="Reset Page Setting Button">
@@ -361,6 +379,12 @@
 						<label>$LOCALIZE[31150]</label>
 						<selected>Skin.HasSetting(LandscapeDescription.Visible)</selected>
 						<onclick>Skin.ToggleSetting(LandscapeDescription.Visible)</onclick>
+					</control>
+                    
+					<control type="label" id="821" description="Spacer">
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
 					</control>
                     
 					<control type="button" id="820" description="Reset Page Setting Button">

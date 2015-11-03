@@ -28,6 +28,12 @@
 				<label>  $LOCALIZE[31121]</label>
 			</control>
 					
+			<control type="label" id="252" description="Spacer">
+				<width>1100</width>
+                <height>20</height>
+				<label>-</label>
+			</control>
+                    
 			<control type="radiobutton" id="294" description="Play Disc Option">
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -912,6 +918,12 @@
 				<onclick>Skin.ToggleSetting(ExitOption.Active)</onclick>
 			</control>
             
+			<control type="label" id="251" description="Spacer">
+				<width>1100</width>
+                <height>20</height>
+				<label>-</label>
+			</control>
+                    
 			<control type="button" id="250" description="Reset Page Setting Button">
 				<width>1100</width>
 				<align>left</align>
