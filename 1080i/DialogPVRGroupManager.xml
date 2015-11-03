@@ -27,7 +27,7 @@
 				<width>1240</width>
 				<font>DialogTitleFont</font>
 				<align>left</align>
-				<label>19143</label>
+				<label>$LOCALIZE[19143]</label>
 			</control>
 
 			<control type="group" description="List With Groups And Border Around List">
@@ -44,7 +44,7 @@
 					<height>40</height>
 					<textcolor>BackgroundColor</textcolor>
 					<align>left</align>
-					<label>19146</label>
+					<label>$LOCALIZE[19146]</label>
 				</control>
 
 				<control type="list" id="13" description="Group List Control">
@@ -74,7 +74,7 @@
 				</control>
 			</control>
 		
-			<control type="group" description="List With Channels In Group And Border Around List">
+			<control type="group">
 				<control type="group">
 					<posx>560</posx>
 					<posy>490</posy>
@@ -118,7 +118,7 @@
 				</control>
 			</control>
 
-			<control type="group" description="List With Ungrouped Channels And Border Around List">
+			<control type="group">
 				<control type="group">
 					<posx>1200</posx>
 					<posy>80</posy>
@@ -132,7 +132,7 @@
 					<height>40</height>
 					<textcolor>BackgroundColor</textcolor>
 					<align>left</align>
-					<label>19219</label>
+					<label>$LOCALIZE[19219]</label>
 				</control>
 
 				<control type="list" id="11" description="Ungrouped Channels List Control">
@@ -165,7 +165,7 @@
 			<control type="button" id="26" description="New Group Button">
 				<posx>40</posx>
 				<posy>320</posy>
-				<label>15019</label>
+				<label>$LOCALIZE[15019]</label>
 				<onup>29</onup>
 				<ondown>27</ondown>
 				<onleft>Noop</onleft>
@@ -174,17 +174,26 @@
 			<control type="button" id="27" description="Edit Group Button">
 				<posx>40</posx>
 				<posy>360</posy>
-				<label>21435</label>
+				<label>$LOCALIZE[21435]</label>
 				<onup>26</onup>
+				<ondown>25</ondown>
+				<onleft>Noop</onleft>
+				<onright>13</onright>
+			</control>
+			<control type="radiobutton" id="25" description="Hide/Unhide Group Radiobutton">
+				<posx>40</posx>
+				<posy>400</posy>
+				<label>$LOCALIZE[19289]</label>
+				<onup>27</onup>
 				<ondown>28</ondown>
 				<onleft>Noop</onleft>
 				<onright>13</onright>
 			</control>
 			<control type="button" id="28" description="Delete Group Button">
 				<posx>40</posx>
-				<posy>400</posy>
-				<label>117</label>
-				<onup>27</onup>
+				<posy>440</posy>
+				<label>$LOCALIZE[117]</label>
+				<onup>25</onup>
 				<ondown>29</ondown>
 				<onleft>Noop</onleft>
 				<onright>13</onright>
@@ -193,7 +202,7 @@
 			<control type="button" id="29" description="Ok Button">
 				<posx>40</posx>
 				<posy>840</posy>
-				<label>186</label>
+				<label>$LOCALIZE[186]</label>
 				<onup>28</onup>
 				<ondown>26</ondown>
 				<onleft>Noop</onleft>
