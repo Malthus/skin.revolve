@@ -475,21 +475,21 @@
         </control>
 	</include>
 
+	<include name="PVRFilterButtonForSideMenu" description="PVR Filter Button For Side Menu">
+		<control type="radiobutton" id="31">
+			<align>left</align>
+			<label>$LOCALIZE[587]</label>
+		</control>
+	</include>
+
 	<include name="GuideButtonForSideMenu" description="Guide Button For Side Menu">
-        <control type="button" id="31" description="TV/Radio Guide Button">
+        <control type="button" id="32" description="TV/Radio Guide Button">
 			<align>left</align>
             <label>$LOCALIZE[22020]</label>
             <onclick condition="IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvguide)</onclick>
             <onclick condition="!IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radioguide)</onclick>
             <onclick>Control.SetFocus(10)</onclick>
         </control>
-	</include>
-
-	<include name="PVRFilterButtonForSideMenu" description="PVR Filter Button For Side Menu">
-		<control type="radiobutton" id="31">
-			<align>left</align>
-			<label>$LOCALIZE[25001]</label>
-		</control>
 	</include>
 
 	<include name="ChannelsButtonForSideMenu" description="Channels Button For Side Menu">
