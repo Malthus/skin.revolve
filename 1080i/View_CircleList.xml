@@ -433,64 +433,23 @@
 	</include>
 
 	<include name="FocusedListItemInformationLabelForCircleListView">
-		<include>BackgroundForListItemInformationLabelForCircleListView</include>
-		<control type="label">
-			<width>1160</width>
-			<height>30</height>
-			<font>DetailViewFont</font>
-			<textcolor>MainColor</textcolor>
-			<label>$VAR[ContentInformationLabel]</label>
-		</control>
+        <include name="ThinOutlineLabel">
+            <param name="width" value="1160" />
+            <param name="height" value="30" />
+            <param name="font" value="DetailViewFont" />
+            <param name="textcolor" value="MainColor" />
+            <param name="label" value="$VAR[ContentInformationLabel]" />
+        </include>
 	</include>
 
 	<include name="UnfocusedListItemInformationLabelForCircleListView">
-		<include>BackgroundForListItemInformationLabelForCircleListView</include>
-		<control type="label">
-			<width>1160</width>
-			<height>30</height>
-			<font>DetailViewFont</font>
-			<textcolor>TextColor</textcolor>
-			<label>$VAR[ContentInformationLabel]</label>
-		</control>
-	</include>
-	
-	<include name="BackgroundForListItemInformationLabelForCircleListView">
-		<control type="label">
-			<posx>-1</posx>
-			<posy>-1</posy>
-			<width>1160</width>
-			<height>30</height>
-			<font>DetailViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentInformationLabel]</label>
-		</control>
-		<control type="label">
-			<posx>-1</posx>
-			<posy>1</posy>
-			<width>1160</width>
-			<height>30</height>
-			<font>DetailViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentInformationLabel]</label>
-		</control>
-		<control type="label">
-			<posx>1</posx>
-			<posy>-1</posy>
-			<width>1160</width>
-			<height>30</height>
-			<font>DetailViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentInformationLabel]</label>
-		</control>
-		<control type="label">
-			<posx>1</posx>
-			<posy>1</posy>
-			<width>1160</width>
-			<height>30</height>
-			<font>DetailViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentInformationLabel]</label>
-		</control>
+        <include name="ThinOutlineLabel">
+            <param name="width" value="1160" />
+            <param name="height" value="30" />
+            <param name="font" value="DetailViewFont" />
+            <param name="textcolor" value="TextColor" />
+            <param name="label" value="$VAR[ContentInformationLabel]" />
+        </include>
 	</include>
 
 	<include name="NormalListItemMarkupForCircleListView">
