@@ -20,6 +20,8 @@
 				<posx>PosXForDefaultIconFrameForDialog</posx>
 				<posy>PosYForDefaultIconFrameForDialog</posy>
 				
+                <include>BackgroundForDefaultCircleThumbnailIcon</include>
+
 				<control type="image">
 					<posx>4</posx>
 					<posy>4</posy>
@@ -27,16 +29,6 @@
 					<height>262</height>
 					<texture background="true" diffuse="elements/circle-mask.png">$INFO[Container(50).ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				</control>
-		
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>270</width>
-					<height>270</height>
-					<texture background="true">elements/circle-border.png</texture>
-					<colordiffuse>MainColor</colordiffuse>
-					<aspectratio>stretch</aspectratio>
 				</control>
 			</control>
 			
@@ -107,19 +99,32 @@
 				<height>280</height>
 				<font>DescriptionFont</font>
 				<align>left</align>
+                <pagecontrol>61</pagecontrol>
 			</control>
 
+			<control type="scrollbar" id="61">
+				<visible>!Control.IsVisible(50)</visible>
+                <posy>400</posy>
+				<height>280</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+            
 			<control type="list" id="50" description="Cast List">
 				<posx>560</posx>
 				<posy>400</posy>
 				<width>1240</width>
 				<height>280</height>
+                <pagecontrol>51</pagecontrol>
+				<orientation>vertical</orientation>
+				<scrolltime>200</scrolltime>
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<orientation>vertical</orientation>
-				<scrolltime>200</scrolltime>
+				<onright>51</onright>
 				
 				<itemlayout height="40">
 					<include>NormalItemsForNormalList</include>
@@ -136,45 +141,57 @@
 					</control>
 				</focusedlayout>
 			</control>
+            
+			<control type="scrollbar" id="51">
+				<visible>Control.IsVisible(50)</visible>
+                <posy>400</posy>
+				<height>280</height>
+				<include>MarkupForScrollbarForDialog</include>
+				<onleft>50</onleft>
+				<onright>Noop</onright>
+				<ondown>51</ondown>
+				<onup>51</onup>
+			</control>
 			
 			<control type="grouplist" id="9000">
 				<posx>40</posx>
 				<posy>400</posy>
 				<width>480</width>
 				<height>280</height>
+				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<onright>50</onright>
-				<onleft>50</onleft>
-				<orientation>vertical</orientation>
+				<onleft>Noop</onleft>
+				<onright condition="Control.IsVisible(50)">50</onright>
+				<onright condition="!Control.IsVisible(50)">61</onright>
 
 				<control type="button" id ="5" description="Plot/Cast Button">
-					<label>206</label>
-				</control>
-
-				<control type="button" id ="8" description="Play Button">
-					<label>208</label>
-				</control>
-
-				<control type="button" id ="9" description="Resume Button">
-					<label>13404</label>
+					<label>$LOCALIZE[206]</label>
 				</control>
 
 				<control type="button" id ="6" description="Refresh Button">
-					<label>184</label>
+					<label>$LOCALIZE[184]</label>
+				</control>
+
+				<control type="button" id ="8" description="Play Button">
+					<label>$LOCALIZE[208]</label>
+				</control>
+
+				<control type="button" id ="9" description="Resume Button">
+					<label>$LOCALIZE[13404]</label>
 				</control>
 
 				<control type="button" id ="10" description="Choose Art Button">
-					<label>13511</label>
+					<label>$LOCALIZE[13511]</label>
 				</control>
 
 				<control type="button" id="11" description="Trailer Button">
-					<label>20410</label>
+					<label>$LOCALIZE[20410]</label>
 				</control>
 				
 				<control type="button" id="13" description="Movies By Director Button">
-					<label>31409</label>
+					<label>$LOCALIZE[31409]</label>
 				</control>
 			</control>
 		</control>
