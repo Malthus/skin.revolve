@@ -372,64 +372,23 @@
 	</include>
 	
 	<include name="FocusedListItemNameLabelForCircleListView">
-		<include>BackgroundForListItemNameLabelForCircleListView</include>
-		<control type="label">
-			<height>40</height>
-			<width>1160</width>
-			<font>MediumViewFont</font>
-			<textcolor>$VAR[ContentMainColor]</textcolor>
-			<label>$VAR[ContentNameLabel]</label>
-		</control>
+        <include name="NormalOutlineLabel">
+            <param name="width" value="1160" />
+            <param name="height" value="40" />
+            <param name="font" value="MediumViewFont" />
+            <param name="textcolor" value="$VAR[ContentMainColor]" />
+            <param name="label" value="$VAR[ContentNameLabel]" />
+        </include>
 	</include>
 
 	<include name="UnfocusedListItemNameLabelForCircleListView">
-		<include>BackgroundForListItemNameLabelForCircleListView</include>
-		<control type="label">
-			<height>40</height>
-			<width>1160</width>
-			<font>MediumViewFont</font>
-			<textcolor>$VAR[ContentTextColor]</textcolor>
-			<label>$VAR[ContentNameLabel]</label>
-		</control>
-	</include>
-
-	<include name="BackgroundForListItemNameLabelForCircleListView">
-		<control type="label">
-			<posx>-2</posx>
-			<posy>-2</posy>
-			<height>40</height>
-			<width>1160</width>
-			<font>MediumViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentNameLabel]</label>
-		</control>
-		<control type="label">
-			<posx>-2</posx>
-			<posy>2</posy>
-			<height>40</height>
-			<width>1160</width>
-			<font>MediumViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentNameLabel]</label>
-		</control>
-		<control type="label">
-			<posx>2</posx>
-			<posy>-2</posy>
-			<height>40</height>
-			<width>1160</width>
-			<font>MediumViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentNameLabel]</label>
-		</control>
-		<control type="label">
-			<posx>2</posx>
-			<posy>2</posy>
-			<height>40</height>
-			<width>1160</width>
-			<font>MediumViewFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<label>$VAR[ContentNameLabel]</label>
-		</control>
+        <include name="NormalOutlineLabel">
+            <param name="width" value="1160" />
+            <param name="height" value="40" />
+            <param name="font" value="MediumViewFont" />
+            <param name="textcolor" value="$VAR[ContentTextColor]" />
+            <param name="label" value="$VAR[ContentNameLabel]" />
+        </include>
 	</include>
 
 	<include name="FocusedListItemInformationLabelForCircleListView">
