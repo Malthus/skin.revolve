@@ -5,8 +5,8 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include>FifteenLinesDialog</include>
 
 			<control type="group" description="Editor Dialog Icon">
 				<posx>PosXForDefaultIconFrameForDialog</posx>
@@ -36,26 +36,27 @@
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
-				<height>480</height>
-				<onleft>2</onleft>
-				<onright>2</onright>
-				<ondown>Noop</ondown>
-				<onup>Noop</onup>
+				<height>560</height>
 				<scrolltime>200</scrolltime>
 				<viewtype label="536">icon</viewtype>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol>21</pagecontrol>
 				<orientation>horizontal</orientation>
+				<onup>21</onup>
+				<ondown>21</ondown>
+				<onleft>2</onleft>
+				<onright>Noop</onright>
 
-				<itemlayout height="240" width="310">
+				<itemlayout height="280" width="310">
 					<control type="image">
 						<posx>5</posx>
 						<posy>5</posy>
 						<width>300</width>
 						<height>200</height>
-						<info>ListItem.Icon</info>
+						<texture diffuse="elements/poster-mask.png">$INFO[ListItem.Icon]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="label">
-						<posx>160</posx>
+						<posx>5</posx>
 						<posy>210</posy>
 						<width>300</width>
 						<height>30</height>
@@ -64,25 +65,36 @@
 						<textcolor>MainColor</textcolor>
 						<info>ListItem.Label</info>
 					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>240</posy>
+						<width>300</width>
+						<height>30</height>
+						<align>center</align>
+						<font>BookmarkButtonFont</font>
+						<textcolor>MainColor</textcolor>
+						<info>ListItem.Label2</info>
+					</control>
 				</itemlayout>
 
-				<focusedlayout height="240" width="310">
+				<focusedlayout height="280" width="310">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>310</width>
-						<height>240</height>
-						<texture colordiffuse="MainColor">white.png</texture>
+						<height>280</height>
+						<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
 					</control>
 					<control type="image">
 						<posx>5</posx>
 						<posy>5</posy>
 						<width>300</width>
 						<height>200</height>
-						<info>ListItem.Icon</info>
+						<texture diffuse="elements/poster-mask.png">$INFO[ListItem.Icon]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="label">
-						<posx>160</posx>
+						<posx>5</posx>
 						<posy>210</posy>
 						<width>300</width>
 						<height>30</height>
@@ -91,19 +103,47 @@
 						<textcolor>BackgroundColor</textcolor>
 						<info>ListItem.Label</info>
 					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>240</posy>
+						<width>300</width>
+						<height>30</height>
+						<align>center</align>
+						<font>BookmarkButtonFont</font>
+						<textcolor>BackgroundColor</textcolor>
+						<info>ListItem.Label2</info>
+					</control>
 				</focusedlayout>
 			</control>
 
-			<control type="label" description="Number of Bookmarks Label">
+            <control type="scrollbar" id="21" description="Scrollbar">
 				<posx>560</posx>
-				<posy>560</posy>
+				<posy>650</posy>
+				<width>1240</width>
+                <height>20</height>
+                <orientation>horizontal</orientation>
+                <texturesliderbackground border="14,0,14,0" colordiffuse="BackgroundColor">controls/horizontalbar-thick.png</texturesliderbackground>
+                <texturesliderbar border="14,0,14,0" colordiffuse="SelectColor">controls/horizontalbar-thin.png</texturesliderbar>
+                <texturesliderbarfocus border="14,0,14,0" colordiffuse="MainColor">controls/horizontalbar-thin.png</texturesliderbarfocus>
+                <onup>11</onup>
+                <ondown>11</ondown>
+                <onleft>21</onleft>
+                <onright>21</onright>
+            </control>
+            
+			<control type="label" description="Number of Bookmarks Label">
+				<posx>40</posx>
+				<posy>320</posy>
+				<width>480</width>
+				<height>30</height>
 				<font>DialogTextFont</font>
-				<label>$INFO[Container(11).NumItems] $LOCALIZE[31900] - $LOCALIZE[31903] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</label>
+				<align>center</align>
+				<label>$INFO[Container(11).NumItems] $LOCALIZE[298] | $LOCALIZE[31903] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</label>
 			</control>
 			
 			<control type="grouplist" id="9000">
 				<posx>40</posx>
-				<posy>320</posy>
+				<posy>560</posy>
 				<width>480</width>
 				<height>120</height>
 				<itemgap>0</itemgap>
@@ -115,16 +155,16 @@
 				<ondown>9000</ondown>
 
 				<control type="button" id="2" description="Create Bookmark Button">
-					<label>294</label>
+					<label>$LOCALIZE[294]</label>
 				</control>
 
 				<control type="button" id="3" description="Clear Bookmark Button">
-					<label>296</label>
+					<label>$LOCALIZE[296]</label>
 				</control>
 
 				<control type="button" id="4" description="Clear Bookmark Button">
-					<visible>videoplayer.content(episodes)</visible>
-					<label>20406</label>
+<!--					<visible>VideoPlayer.Content(episodes)</visible> -->
+					<label>$LOCALIZE[20406]</label>
 				</control>
 			</control>
 		</control>
