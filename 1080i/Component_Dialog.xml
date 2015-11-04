@@ -93,244 +93,101 @@
 		<colordiffuse>BackgroundColor</colordiffuse>
 	</include>
 
-    <constant name="PosYForSingleLineDialog">630</constant>
-	<include name="SingleLineDialog" description="Dialog For Title and a Single Line">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>140</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
+	<include name="BasicDialog">
+        <param name="height" default="220" />
+    
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>-40</posy>
+                    <include>UpperShadowForDialog</include>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>$PARAM[height]</posy>
+                    <include>LowerShadowForDialog</include>
+                </control>
 
-			<control type="image">
-				<width>1920</width>
-				<height>140</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+                <control type="image">
+                    <width>1920</width>
+                    <height>$PARAM[height]</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="BackgroundColor">white.png</texture>
+                </control>
+            </control>
+        </definition>
+	</include>
+
+    <constant name="PosYForSingleLineDialog">630</constant>
+	<include name="SingleLineDialog">
+        <include name="BasicDialog">
+            <param name="height" value="140" />
+        </include>
 	</include>
 
     <constant name="PosYForTwoLinesDialogBand">450</constant>
-	<include name="TwoLinesDialogBand" description="Dialog For Title and Two Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>180</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>180</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="TwoLinesDialogBand">
+        <include name="BasicDialog">
+            <param name="height" value="180" />
+        </include>
 	</include>
 
     <constant name="PosYForThreeLinesDialog">430</constant>
-	<include name="ThreeLinesDialog" description="Dialog For Title and Three Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>220</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>220</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="ThreeLinesDialog">
+        <include name="BasicDialog">
+            <param name="height" value="220" />
+        </include>
 	</include>
 	
     <constant name="PosYForFourLinesDialog">410</constant>
-	<include name="FourLinesDialog" description="Dialog For Title and Four Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>260</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>260</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="FourLinesDialog">
+        <include name="BasicDialog">
+            <param name="height" value="260" />
+        </include>
 	</include>
 	
     <constant name="PosYForSixLinesDialog">370</constant>
-	<include name="SixLinesDialog" description="Dialog For Title and Six Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>340</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>340</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="SixLinesDialog">
+        <include name="BasicDialog">
+            <param name="height" value="340" />
+        </include>
 	</include>
 	
     <constant name="PosYForTenLinesDialog">290</constant>
-	<include name="TenLinesDialog" description="Dialog For Title and Ten Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>500</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>500</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="TenLinesDialog">
+        <include name="BasicDialog">
+            <param name="height" value="500" />
+        </include>
 	</include>
 	
     <constant name="PosYForThirteenLinesDialog">230</constant>
-	<include name="ThirteenLinesDialog" description="Dialog For Title and Thirteen Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>620</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-				
-			<control type="image">
-				<width>1920</width>
-				<height>620</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="ThirteenLinesDialog">
+        <include name="BasicDialog">
+            <param name="height" value="620" />
+        </include>
 	</include>
 
     <constant name="PosYForFifteenLinesDialog">190</constant>
-	<include name="FifteenLinesDialog" description="Dialog For Title and Fifteen Lines">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>700</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>700</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="FifteenLinesDialog">
+        <include name="BasicDialog">
+            <param name="height" value="700" />
+        </include>
 	</include>
 	
     <constant name="PosYForFullWindowDialog">90</constant>
-	<include name="FullWindowDialog" description="Huge Dialog (Title and Twenty Lines)">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>900</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>900</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="FullWindowDialog">
+        <include name="BasicDialog">
+            <param name="height" value="900" />
+        </include>
 	</include>
 	
     <constant name="PosYForKeyboardDialogBand">270</constant>
-	<include name="KeyboardDialogBand" description="Dialog For Keyboard">
-		<control type="group">
-			<control type="image">
-			    <posx>0</posx>
-				<posy>-40</posy>
-				<include>UpperShadowForDialog</include>
-			</control>
-			<control type="image">
-			    <posx>0</posx>
-				<posy>540</posy>
-				<include>LowerShadowForDialog</include>
-			</control>
-
-			<control type="image">
-				<width>1920</width>
-				<height>540</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-		</control>
+	<include name="KeyboardDialogBand">
+        <include name="BasicDialog">
+            <param name="height" value="540" />
+        </include>
 	</include>
 	
     <constant name="PosYForMessageBand">500</constant>
