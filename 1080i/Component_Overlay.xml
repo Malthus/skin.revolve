@@ -1,46 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <constant name="PosYForInformationForOverlay">1030</constant>
+    <constant name="PosYForPlayerInformationForOverlay">1030</constant>
 
-    <include name="MusicPlayerInformationForOverlay">
-		<posy>PosYForInformationForOverlay</posy>
-		<height>30</height>
-		<font>DefaultInformationFont</font>
-		<textcolor>SecondaryColor</textcolor>
-		<align>right</align>
-		<scroll>true</scroll>
-		<scrollspeed>50</scrollspeed>
-		<scrollsuffix> | </scrollsuffix>
-		<label>$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]</label>
+    <include name="BackgroundForOverlay">
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>1020</posy>
+                <width>1920</width>
+                <height>60</height>
+                <texture colordiffuse="BackgroundColor">white.png</texture>
+            </control>
+        </definition>
     </include>
     
-    <include name="MusicPlayerTimeForOverlay">
-		<posy>PosYForInformationForOverlay</posy>
-		<height>30</height>
-		<font>DefaultInformationFont</font>
-		<textcolor>SecondaryColor</textcolor>
-		<scroll>false</scroll>
-		<label>| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+    <include name="PlayerMediaIconForOverlay">
+        <definition>
+            <control type="group">
+                <posx>1630</posx>
+                <posy>806</posy>
+                <include>DefaultCirclePlayerMediaIcon</include>
+            </control>
+                
+            <control type="button" id="9990" description="Invisible Mouse Control For Media Controls Button">
+                <posx>1650</posx>
+                <posy>826</posy>
+                <width>230</width>
+                <height>230</height>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus>-</texturefocus>
+                <font>-</font>
+                <label>-</label>
+                <onclick>SetProperty(DialogCloseButton,True,114)</onclick>
+                <onclick>ActivateWindow(playercontrols)</onclick>
+            </control>
+        </definition>
     </include>
     
-    <include name="VideoPlayerInformationForOverlay">
-		<posy>PosYForInformationForOverlay</posy>
-		<height>30</height>
-		<font>DefaultInformationFont</font>
-		<textcolor>SecondaryColor</textcolor>
-		<align>right</align>
-		<scroll>true</scroll>
-		<scrollspeed>50</scrollspeed>
-		<scrollsuffix> | </scrollsuffix>
-		<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</label>
+    <include name="NormalMusicPlayerInformationForOverlay">
+        <param name="width" default="1300" />
+        <param name="height" default="30" />
+
+        <definition>
+            <control type="label">
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <font>DefaultInformationFont</font>
+                <textcolor>SecondaryColor</textcolor>
+                <align>right</align>
+                <scroll>true</scroll>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> | </scrollsuffix>
+                <label>$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="NormalMusicPlayerTimeForOverlay">
+        <param name="width" default="400" />
+        <param name="height" default="30" />
+
+        <definition>
+            <control type="label">
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <font>DefaultInformationFont</font>
+                <textcolor>SecondaryColor</textcolor>
+                <scroll>false</scroll>
+                <label>| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+            </control>
+        </definition>
     </include>
     
-    <include name="VideoPlayerTimeForOverlay">
-		<posy>PosYForInformationForOverlay</posy>
-		<height>30</height>
-		<font>DefaultInformationFont</font>
-		<textcolor>SecondaryColor</textcolor>
-		<scroll>false</scroll>
-		<label>| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+    <include name="OutlineMusicPlayerInformationForOverlay">
+        <param name="width" default="1300" />
+        <param name="height" default="30" />
+
+        <definition>
+            <include name="NormalOutlineLabel">
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="font" value="DefaultInformationFont" />
+                <param name="textcolor" value="SecondaryColor" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="align" value="right" />
+                <param name="label" value="$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="OutlineMusicPlayerTimeForOverlay">
+        <param name="width" default="400" />
+        <param name="height" default="30" />
+
+        <definition>
+            <include name="NormalOutlineLabel">
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="font" value="DefaultInformationFont" />
+                <param name="textcolor" value="SecondaryColor" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="scroll" value="false" />
+                <param name="label" value="| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]" />
+            </include>
+        </definition>
+    </include>
+    
+    <include name="NormalVideoPlayerInformationForOverlay">
+        <param name="width" default="1300" />
+        <param name="height" default="30" />
+
+        <definition>
+            <control type="label">
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <font>DefaultInformationFont</font>
+                <textcolor>SecondaryColor</textcolor>
+                <align>right</align>
+                <scroll>true</scroll>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> | </scrollsuffix>
+                <label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="NormalVideoPlayerTimeForOverlay">
+        <param name="width" default="400" />
+        <param name="height" default="30" />
+
+        <definition>
+            <control type="label">
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <font>DefaultInformationFont</font>
+                <textcolor>SecondaryColor</textcolor>
+                <scroll>false</scroll>
+                <label>| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+            </control>
+        </definition>
+    </include>
+    
+    <include name="OutlineVideoPlayerInformationForOverlay">
+        <param name="width" default="1300" />
+        <param name="height" default="30" />
+
+        <definition>
+            <include name="NormalOutlineLabel">
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="font" value="DefaultInformationFont" />
+                <param name="textcolor" value="SecondaryColor" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="align" value="right" />
+                <param name="label" value="$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="OutlineVideoPlayerTimeForOverlay">
+        <param name="width" default="400" />
+        <param name="height" default="30" />
+
+        <definition>
+            <include name="NormalOutlineLabel">
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="font" value="DefaultInformationFont" />
+                <param name="textcolor" value="SecondaryColor" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="scroll" value="false" />
+                <param name="label" value="| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]" />
+            </include>
+        </definition>
     </include>
 </includes>

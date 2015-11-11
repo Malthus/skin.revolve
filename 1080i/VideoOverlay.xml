@@ -7,60 +7,93 @@
         <control type="group">
 			<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration)</visible>
 
-			<control type="image">
-				<posx>0</posx>
-				<posy>1020</posy>
-				<width>1920</width>
-				<height>60</height>
-				<texture>white.png</texture>
-			</control>
-
             <control type="group" description="Video Overlay With Artwork Group">
-                <visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration) + Skin.HasSetting(PlayerArtwork.Visible)</visible>
+                <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
-                <control type="label">
-                    <posx>1320</posx>
-                    <width>1300</width>
-                    <include>VideoPlayerInformationForOverlay</include>
-                </control>
-                <control type="label">
-                    <posx>1330</posx>
-                    <width>400</width>
-                    <include>VideoPlayerTimeForOverlay</include>
-                </control>
-				
                 <control type="group">
-                    <posx>1630</posx>
-                    <posy>806</posy>
-                    <include>DefaultCirclePlayerMediaIcon</include>
-                </control>
+                    <visible>Skin.HasSetting(OverlayBackground.Visible)</visible>
                 
-                <control type="button" id="9990" description="Invisible Mouse Control For Media Controls Button">
-                    <posx>1650</posx>
-                    <posy>826</posy>
-                    <width>230</width>
-                    <height>230</height>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
-                    <font>-</font>
-                    <label>-</label>
-                    <onclick>SetProperty(DialogCloseButton,True,114)</onclick>
-                    <onclick>ActivateWindow(playercontrols)</onclick>
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
                 </control>
+
+                <control type="group">
+                    <visible>!Skin.HasSetting(OverlayBackground.Visible)</visible>
+                
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+
+                <include name="PlayerMediaIconForOverlay" />
             </control>
         
             <control type="group" description="Video Overlay Without Artwork Group">
                 <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
-                <control type="label">
-                    <posx>1520</posx>
-                    <width>1500</width>
-                    <include>VideoPlayerInformationForOverlay</include>
+                <control type="group">
+                    <visible>Skin.HasSetting(OverlayBackground.Visible)</visible>
+                
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
                 </control>
-                <control type="label">
-                    <posx>1530</posx>
-                    <width>400</width>
-                    <include>VideoPlayerTimeForOverlay</include>
+
+                <control type="group">
+                    <visible>!Skin.HasSetting(OverlayBackground.Visible)</visible>
+                
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
                 </control>
             </control>
 		</control>

@@ -7,64 +7,97 @@
         <control type="group">
 			<visible>!Window.IsActive(visualisation) + !Window.IsActive(karaoke)</visible>
 
-			<control type="image">
-				<posx>0</posx>
-				<posy>1020</posy>
-				<width>1920</width>
-				<height>60</height>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-            
             <control type="group" description="Music Overlay With Artwork Group">
                 <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
-                <control type="label">
-                    <posx>1320</posx>
-                    <width>1300</width>
-                    <include>MusicPlayerInformationForOverlay</include>
-                </control>
-                <control type="label">
-                    <posx>1330</posx>
-                    <width>400</width>
-                    <include>MusicPlayerTimeForOverlay</include>
+                <control type="group">
+                    <visible>Skin.HasSetting(OverlayBackground.Visible)</visible>
+                
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
                 </control>
 
                 <control type="group">
-                    <posx>1630</posx>
-                    <posy>806</posy>
-                    <include>DefaultCirclePlayerMediaIcon</include>
-                </control>
+                    <visible>!Skin.HasSetting(OverlayBackground.Visible)</visible>
                 
-                <control type="button" id="9990" description="Invisible Mouse Control For Media Controls Button">
-                    <posx>1650</posx>
-                    <posy>826</posy>
-                    <width>230</width>
-                    <height>230</height>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
-                    <font>-</font>
-                    <label>-</label>
-                    <onclick>SetProperty(DialogCloseButton,True,114)</onclick>
-                    <onclick>ActivateWindow(playercontrols)</onclick>
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
                 </control>
+
+                <include name="PlayerMediaIconForOverlay" />
             </control>
 
             <control type="group" description="Music Overlay Without Artwork Group">
                 <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
-                <control type="label">
-                    <posx>1520</posx>
-                    <width>1500</width>
-                    <include>MusicPlayerInformationForOverlay</include>
+                <control type="group">
+                    <visible>Skin.HasSetting(OverlayBackground.Visible)</visible>
+                
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
                 </control>
-                <control type="label">
-                    <posx>1530</posx>
-                    <width>400</width>
-                    <include>MusicPlayerTimeForOverlay</include>
+
+                <control type="group">
+                    <visible>!Skin.HasSetting(OverlayBackground.Visible)</visible>
+                
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
                 </control>
             </control>
 		</control>
-        
+
         <control type="group">
             <include>VisibilityForBackButton</include>
             <include>BackButton</include>
