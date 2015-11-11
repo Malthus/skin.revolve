@@ -329,7 +329,16 @@
 						<onclick>Skin.ToggleSetting(BackButton.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="806" description="Show OSD Player Icon Option">
+					<control type="radiobutton" id="811" description="Show Background For Overlay Option">
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31154]</label>
+						<selected>Skin.HasSetting(OverlayBackground.Visible)</selected>
+						<onclick>Skin.ToggleSetting(OverlayBackground.Visible)</onclick>
+					</control>
+					
+					<control type="radiobutton" id="806" description="Show OSD / Overlay Player Icon Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -630,6 +639,11 @@
 						<visible>Control.HasFocus(810)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31214]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(811)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31215]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>
