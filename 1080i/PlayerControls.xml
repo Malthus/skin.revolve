@@ -27,14 +27,19 @@
 		<control type="group" description="Player Controls">
 			<posx>825</posx>
 			<posy>405</posy>
-			<include>CircleControlsForPlayer</include>
+			<include name="CircleControlsForPlayer">
+                <param name="onup" value="9001" />
+                <param name="ondown" value="9001" />
+                <param name="onleft" value="9001" />
+                <param name="onright" value="9001" />
+            </include>
 		</control>
 
 		<control type="button" id="408" description="Close Button">
             <visible>Substring(Window.Property(DialogCloseButton),T,left)</visible>
 			<posx>920</posx>
 			<posy>500</posy>
-            <include>CloseButtonForPlayer</include>
+            <include>CloseButtonForPlayerControl</include>
             <onup>403</onup>
 			<ondown>404</ondown>
 			<onleft>401</onleft>
@@ -45,7 +50,7 @@
 			<visible>Window.IsActive(playercontrols)</visible>
 			<posx>700</posx>
 			<posy>700</posy>
-            <include>DescriptionForControlsForPlayer</include>
+            <include>DescriptionForControlsForPlayerControl</include>
 		</control>
 	</controls>
 </window>

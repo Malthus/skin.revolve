@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <constant name="PosYForInformationForOverlay">1030</constant>
+
+    <include name="MusicPlayerInformationForOverlay">
+		<posy>PosYForInformationForOverlay</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<align>right</align>
+		<scroll>true</scroll>
+		<scrollspeed>50</scrollspeed>
+		<scrollsuffix> | </scrollsuffix>
+		<label>$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]</label>
+    </include>
+    
+    <include name="MusicPlayerTimeForOverlay">
+		<posy>PosYForInformationForOverlay</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<scroll>false</scroll>
+		<label>| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+    </include>
+    
+    <include name="VideoPlayerInformationForOverlay">
+		<posy>PosYForInformationForOverlay</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<align>right</align>
+		<scroll>true</scroll>
+		<scrollspeed>50</scrollspeed>
+		<scrollsuffix> | </scrollsuffix>
+		<label>$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</label>
+    </include>
+    
+    <include name="VideoPlayerTimeForOverlay">
+		<posy>PosYForInformationForOverlay</posy>
+		<height>30</height>
+		<font>DefaultInformationFont</font>
+		<textcolor>SecondaryColor</textcolor>
+		<scroll>false</scroll>
+		<label>| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+    </include>
+</includes>

@@ -12,11 +12,11 @@
 			<visible>Player.ShowInfo + ![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
 
 			<control type="group">
-				<include>MediaInformationLabelForPlayer</include>
-				<include>MediaPlaylistPositionLabelForPlayer</include>
-				<include>MediaNameLabelForPlayer</include>
-				<include>MediaStarRatingIconForPlayer</include>
-				<include>MediaSeekBarForPlayer</include>
+				<include>MediaInformationLabelForPlayerInfo</include>
+				<include>MediaPlaylistPositionLabelForPlayerInfo</include>
+				<include>MediaNameLabelForPlayerInfo</include>
+				<include>MediaStarRatingIconForPlayerInfo</include>
+				<include>MediaSeekBarForPlayerInfo</include>
 			</control>
 		</control>
         
@@ -30,7 +30,7 @@
 			</animation>
 
             <control type="group">
-				<include>MediaVisualisationLabelForPlayer</include>
+				<include>MediaVisualisationLabelForPlayerInfo</include>
 			</control>
 		</control>
         
