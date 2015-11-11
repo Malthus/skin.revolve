@@ -119,24 +119,49 @@
 		</control>
     </include>
 
-	<include name="BackgroundForSmallCircleThumbnailIcon" description="Background For Small Circle Icon">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>90</width>
-			<height>90</height>
-			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-		</control>
+	<include name="BackgroundForSmallCircleThumbnailIcon">
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>90</width>
+                <height>90</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+            </control>
+        </definition>
 	</include>
 	
-	<include name="ShadowForSmallCircleThumbnailIcon" description="Shadow For Small Circle Thumbnail Icon">
-		<control type="image">
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>130</width>
-			<height>130</height>
-			<texture background="true">elements/circle-shadow.png</texture>
-		</control>
+	<include name="BorderedBackgroundForSmallCircleThumbnailIcon">
+        <definition>
+            <control type="image" description="Volume Logo Background">
+                <posx>-5</posx>
+                <posy>-5</posy>
+                <width>100</width>
+                <height>100</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+            <control type="image" description="Volume Logo Border">
+                <posx>-3</posx>
+                <posy>-3</posy>
+                <width>96</width>
+                <height>96</height>
+                <texture colordiffuse="BackgroundColor">elements/circle-border.png</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+        </definition>
+	</include>
+	
+	<include name="ShadowForSmallCircleThumbnailIcon">
+        <definition>
+            <control type="image">
+                <posx>-20</posx>
+                <posy>-20</posy>
+                <width>130</width>
+                <height>130</height>
+                <texture background="true">elements/circle-shadow.png</texture>
+            </control>
+        </definition>
 	</include>
     
 	<include name="DefaultCircleThumbnailIcon" description="Default Circle Thumbnail Icon Without Shadow">
