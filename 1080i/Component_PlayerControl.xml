@@ -284,9 +284,9 @@
     
 	<constant name="PosXForDialogCircleControlsForPlayerControl">145</constant>
 	<constant name="PosYForDialogCircleControlsForPlayerControl">400</constant>
-	<constant name="PosXForSideMenuCircleControlsForPlayer">120</constant>
-	<constant name="PosYForSideMenuCircleControlsForPlayer">490</constant>
-	<include name="CircleControlsForPlayer">
+	<constant name="PosXForSideMenuCircleControlsForPlayerControl">120</constant>
+	<constant name="PosYForSideMenuCircleControlsForPlayerControl">490</constant>
+	<include name="CircleControlsForPlayerControl">
         <param name="onup" default="9001" />
         <param name="ondown" default="9001" />
         <param name="onleft" default="Noop" />
@@ -324,9 +324,9 @@
                     <posx>28</posx>
                     <posy>28</posy>
                     <include>RewindButtonForPlayerControl</include>
-                    <onup>$PARAM[onup]</onup>
+                    <onup>403</onup>
                     <ondown>401</ondown>
-                    <onleft>$PARAM[onleft]</onleft>
+                    <onleft>401</onleft>
                     <onright>403</onright>
                 </control>
 
@@ -334,10 +334,10 @@
                     <posx>162</posx>
                     <posy>28</posy>
                     <include>FastForwardButtonForPlayerControl</include>
-                    <onup>$PARAM[onup]</onup>
+                    <onup>403</onup>
                     <ondown>406</ondown>
                     <onleft>403</onleft>
-                    <onright>$PARAM[onright]</onright>
+                    <onright>406</onright>
                 </control>
 
                 <control type="button" id="401" description="Previous Button">
@@ -367,8 +367,8 @@
                     <control type="button" id="407">
                         <include>RepeatButtonForPlayerControl</include>
                         <onup>401</onup>
-                        <ondown>$PARAM[ondown]</ondown>
-                        <onleft>$PARAM[onleft]</onleft>
+                        <ondown>404</ondown>
+                        <onleft>401</onleft>
                         <onright>404</onright>
                     </control>
 
@@ -380,9 +380,9 @@
                     <posy>162</posy>
                     <include>RandomButtonForPlayerControl</include>
                     <onup>406</onup>
-                    <ondown>$PARAM[ondown]</ondown>
+                    <ondown>404</ondown>
                     <onleft>404</onleft>
-                    <onright>$PARAM[onright]</onright>
+                    <onright>406</onright>
                 </control>
 
                 <control type="button" id="404" description="Stop Button">

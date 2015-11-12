@@ -1,94 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="ButtonListForSideMenu">
+        <param name="onup" default="9010" />
+        <param name="ondown" default="9010" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="52" />
+        
+        <definition>
+    		<posx>24</posx>
+			<posy>20</posy>
+			<width>482</width>
+			<height>460</height>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+			<onup>$PARAM[onup]</onup>
+			<ondown>$PARAM[ondown]</ondown>
+			<onleft>$PARAM[onleft]</onleft>
+			<onright>$PARAM[onright]</onright>
+        </definition>
+    </include>
+
+    <include name="PlayerControlsForSideMenu">
+        <param name="onup" default="9001" />
+        <param name="ondown" default="9001" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="52" />
+        
+        <definition>
+			<control type="group">
+				<visible>Player.HasMedia</visible>
+				<posx>120</posx>
+				<posy>490</posy>
+				<include name="CircleControlsForPlayerControl">
+                    <param name="onup" value="$PARAM[onup]" />
+                    <param name="ondown" value="$PARAM[ondown]" />
+                    <param name="onleft" value="$PARAM[onleft]" />
+                    <param name="onright" value="$PARAM[onright]" />
+                </include>
+			</control>
+        </definition>
+    </include>
+
 	<include name="SideMenu">
-		<posx>20</posx>
-		<posy>100</posy>
+        <definition>
+            <posx>20</posx>
+            <posy>100</posy>
 		
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
-			<effect type="slide" start="0,0" end="-610,0" time="200" />
-		</animation>
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
-			<effect type="slide" start="0,0" end="-515,0" time="200" />
-		</animation>
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
+                <effect type="slide" start="0,0" end="-610,0" time="200" />
+            </animation>
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
+                <effect type="slide" start="0,0" end="-515,0" time="200" />
+            </animation>
 		
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
-			<effect type="rotate" start="0" end="90" center="0,0" time="200" />
-		</animation>
-		<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
-			<effect type="rotate" start="0" end="90" center="0,45" time="200" />
-		</animation>
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
+                <effect type="rotate" start="0" end="90" center="0,0" time="200" />
+            </animation>
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
+                <effect type="rotate" start="0" end="90" center="0,45" time="200" />
+            </animation>
 
-		<control type="group">
-			<control type="image">
-				<posx>-30</posx>
-				<posy>-30</posy>
-				<width>588</width>
-				<height>840</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture border="30" background="true">elements/poster-shadow.png</texture>
-			</control>
+            <control type="group">
+                <control type="image">
+                    <posx>-30</posx>
+                    <posy>-30</posy>
+                    <width>588</width>
+                    <height>840</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio>stretch</aspectratio>
+                    <texture border="30" background="true">elements/poster-shadow.png</texture>
+                </control>
 			
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>528</width>
-				<height>780</height>
-				<fadetime>100</fadetime>
-				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor" fallback="white.png">elements/poster-background.png</texture>
-			</control>
-		</control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>528</width>
+                    <height>780</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="BackgroundColor" fallback="white.png">elements/poster-background.png</texture>
+                </control>
+            </control>
 			
-		<control type="group" description="Side Menu Label When Side Menu Is Unfocused">
-			<visible>Skin.HasSetting(SideMenu.Visible)</visible>
+            <control type="group" description="Side Menu Label When Side Menu Is Unfocused">
+                <visible>Skin.HasSetting(SideMenu.Visible)</visible>
 
-			<animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + Skin.HasSetting(SideMenu.Visible)">
-				<effect type="fade" start="0" end="100" time="200" />
-			</animation>
+                <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + Skin.HasSetting(SideMenu.Visible)">
+                    <effect type="fade" start="0" end="100" time="200" />
+                </animation>
 
-			<control type="button" id="9020" description="Invisible Mouse Control Side Menu Button">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>528</width>
-				<height>780</height>
-                <texturenofocus>-</texturenofocus>
-                <texturefocus>-</texturefocus>
-				<font>-</font>
-				<label>-</label>
-                <onfocus>Control.SetFocus(9001)</onfocus>
-			</control>
+                <control type="button" id="9020" description="Invisible Mouse Control Side Menu Button">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>528</width>
+                    <height>780</height>
+                    <texturenofocus>-</texturenofocus>
+                    <texturefocus>-</texturefocus>
+                    <font>-</font>
+                    <label>-</label>
+                    <onfocus>Control.SetFocus(9001)</onfocus>
+                </control>
 			
-			<control type="label" description="Left Side Menu Label">
-				<posx>113</posx>
-				<posy>400</posy>
-				<width>800</width>
-				<height>20</height>
-				<font>SideMenuLabelFont</font>
-				<textcolor>SelectColor</textcolor>
-				<align>center</align>
-				<angle>90</angle>
-				<label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
-			</control>
+                <control type="label" description="Left Side Menu Label">
+                    <posx>113</posx>
+                    <posy>400</posy>
+                    <width>800</width>
+                    <height>20</height>
+                    <font>SideMenuLabelFont</font>
+                    <textcolor>SelectColor</textcolor>
+                    <align>center</align>
+                    <angle>90</angle>
+                    <label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
+                </control>
 			
-			<control type="label" id="9021" description="Top Side Menu Label">
-				<posx>-387</posx>
-				<posy>400</posy>
-				<width>800</width>
-				<height>20</height>
-				<font>SideMenuLabelFont</font>
-				<textcolor>SelectColor</textcolor>
-				<align>center</align>
-				<angle>270</angle>
-				<label>[UPPERCASE]$LOCALIZE[31909][/UPPERCASE]</label>
-			</control>
-		</control>
+                <control type="label" id="9021" description="Top Side Menu Label">
+                    <posx>-387</posx>
+                    <posy>400</posy>
+                    <width>800</width>
+                    <height>20</height>
+                    <font>SideMenuLabelFont</font>
+                    <textcolor>SelectColor</textcolor>
+                    <align>center</align>
+                    <angle>270</angle>
+                    <label>[UPPERCASE]$LOCALIZE[31909][/UPPERCASE]</label>
+                </control>
+            </control>
+        </definition>
 	</include>
 
 	<include name="ViewGroupLabelForSideMenu" description="View Options Label For Side Menu">
 		<control type="label" id="990">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
-            <height>30</height>
+            <height>20</height>
 			<align>left</align>
 			<font>SideMenuGroupFont</font>
 			<textcolor>SelectColor</textcolor>
@@ -99,7 +142,7 @@
 	<include name="NavigationGroupLabelForSideMenu" description="Navigation Options Label For Side Menu">
 		<control type="label" id="991">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
-            <height>30</height>
+            <height>20</height>
 			<align>left</align>
 			<font>SideMenuGroupFont</font>
 			<textcolor>SelectColor</textcolor>
@@ -110,7 +153,7 @@
 	<include name="PlaylistLibraryGroupLabelForSideMenu" description="Manage Options Label For Side Menu">
 		<control type="label" id="992">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
-            <height>30</height>
+            <height>20</height>
 			<align>left</align>
 			<font>SideMenuGroupFont</font>
 			<textcolor>SelectColor</textcolor>
@@ -121,7 +164,7 @@
 	<include name="SlideshowGroupLabelForSideMenu" description="Display Options Label For Side Menu">
 		<control type="label" id="993">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
-            <height>30</height>
+            <height>20</height>
 			<align>left</align>
 			<font>SideMenuGroupFont</font>
 			<textcolor>SelectColor</textcolor>
@@ -132,7 +175,7 @@
 	<include name="SettingsGroupLabelForSideMenu" description="Set Options Label For Side Menu">
 		<control type="label" id="994">
             <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
-            <height>30</height>
+            <height>20</height>
 			<align>left</align>
 			<font>SideMenuGroupFont</font>
 			<textcolor>SelectColor</textcolor>

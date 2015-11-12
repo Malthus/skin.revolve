@@ -133,7 +133,7 @@
 				<label>$ADDON[script.cu.lrclyrics 32199]</label>
 			</control>
 			
-			<control type="label" description="Scraper Label">
+			<control type="label" id="200" description="Scraper Label">
 				<posx>40</posx>
 				<posy>340</posy>
 				<width>480</width>
@@ -142,22 +142,15 @@
 				<textcolor>TextColor</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>$INFO[Control.GetLabel(200)]</label>
-			</control>
-			<control type="label" id="200" description="Scraper Label">
-				<visible>false</visible>
+				<label>-</label>
 			</control>
 			
 			<control type="group" description="Player Controls">
 				<posx>PosXForDialogCircleControlsForPlayerControl</posx>
 				<posy>PosYForDialogCircleControlsForPlayerControl</posy>
-				<include>CircleControlsForPlayer</include>
-			</control>
-			<control type="button" description="Focus Button">
-				<visible allowhiddenfocus="true">false</visible>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<onfocus>SetFocus(110)</onfocus>
+				<include name="CircleControlsForPlayerControl">
+                    <param name="onright" value="110" />
+                </include>
 			</control>
 		</control>
 	</controls>

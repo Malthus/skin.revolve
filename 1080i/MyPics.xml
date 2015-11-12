@@ -5,7 +5,9 @@
 	<views>52,55,51,53,56,57,58</views>
 
 	<controls>
+		<include>FullscreenDimensions</include>
 		<include>GlobalBackground</include>
+
 		<include>DropListView</include>
 		<include>CircleListView</include>
      	<include>LandscapeView</include>
@@ -18,16 +20,7 @@
 			<include>SideMenu</include>
 
 			<control type="grouplist" id="9001">
-				<posx>24</posx>
-				<posy>20</posy>
-				<width>482</width>
-				<height>480</height>
-				<itemgap>0</itemgap>
-				<onleft>Noop</onleft>
-				<onright>52</onright>
-				<onup>9010</onup>
-				<ondown>9010</ondown>
-				<orientation>vertical</orientation>
+                <include name="ButtonListForSideMenu" />
 
                 <include>ViewGroupLabelForSideMenu</include>
 				<include>ViewTypeButtonForSideMenu</include>
@@ -41,12 +34,7 @@
 				<include>RandomiseButtonForSideMenu</include>
 			</control>
 
-			<control type="group" description="Player Controls">
-				<visible>Player.HasMedia</visible>
-				<posx>PosXForSideMenuCircleControlsForPlayer</posx>
-				<posy>PosYForSideMenuCircleControlsForPlayer</posy>
-				<include>CircleControlsForPlayer</include>
-			</control>
+            <include name="PlayerControlsForSideMenu" />
 		</control>
         
         <include>BackButton</include>

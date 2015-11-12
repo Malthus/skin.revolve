@@ -4,6 +4,7 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
+		<include>FullscreenDimensions</include>
 		<include>GlobalBackground</include>
 
 		<control type="group" description="Ring">
@@ -371,16 +372,9 @@
 			<include>SideMenu</include>
 
 			<control type="grouplist" id="9001">
-				<posx>24</posx>
-				<posy>20</posy>
-				<width>482</width>
-				<height>480</height>
-				<itemgap>0</itemgap>
-				<onleft>Noop</onleft>
-				<onright>300</onright>
-				<onup>9010</onup>
-				<ondown>9010</ondown>
-				<orientation>vertical</orientation>
+                <include name="ButtonListForSideMenu">
+                    <param name="onright" value="300" />
+                </include>
 
                 <include>ViewGroupLabelForSideMenu</include>
                 <control type="label" id="998">
@@ -396,12 +390,9 @@
 				<include>WeatherSettingsButtonForSideMenu</include>
 			</control>
 
-			<control type="group" description="Player Controls">
-				<visible>Player.HasMedia</visible>
-				<posx>PosXForSideMenuCircleControlsForPlayer</posx>
-				<posy>PosYForSideMenuCircleControlsForPlayer</posy>
-				<include>CircleControlsForPlayer</include>
-			</control>
+            <include name="PlayerControlsForSideMenu">
+                <param name="onright" value="300" />
+            </include>
 		</control>
         
         <include>BackButton</include>
