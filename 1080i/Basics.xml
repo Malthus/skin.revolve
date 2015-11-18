@@ -253,4 +253,39 @@
             </control>
         </definition>
 	</include>
+    
+	<include name="DialogWindow">
+        <param name="height" default="220" />
+    
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>-40</posy>
+                    <width>1920</width>
+                    <height>40</height>
+                    <fadetime>100</fadetime>
+                    <texture>elements/shadow-upperborder.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>$PARAM[height]</posy>
+                    <width>1920</width>
+                    <height>40</height>
+                    <fadetime>100</fadetime>
+                    <texture>elements/shadow-lowerborder.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="image">
+                    <width>1920</width>
+                    <height>$PARAM[height]</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="BackgroundColor">white.png</texture>
+                </control>
+            </control>
+        </definition>
+	</include>
 </includes>
