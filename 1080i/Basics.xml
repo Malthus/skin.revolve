@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="BackgroundForThinOutlineLabel">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallInformationFont" />
@@ -13,66 +15,73 @@
         <param name="label" default="-" />
         
         <definition>
-            <control type="label">
-                <posx>-1</posx>
-                <posy>-1</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
-            </control>
-            <control type="label">
-                <posx>1</posx>
-                <posy>-1</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
-            </control>
-            <control type="label">
-                <posx>-1</posx>
-                <posy>1</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
-            </control>
-            <control type="label">
-                <posx>1</posx>
-                <posy>1</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                
+                <control type="label">
+                    <posx>-1</posx>
+                    <posy>-1</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
+                <control type="label">
+                    <posx>1</posx>
+                    <posy>-1</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
+                <control type="label">
+                    <posx>-1</posx>
+                    <posy>1</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
+                <control type="label">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
             </control>
         </definition>
 	</include>
 
 	<include name="ThinOutlineLabel">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallInformationFont" />
@@ -87,6 +96,8 @@
         
         <definition>
             <include name="BackgroundForThinOutlineLabel">
+                <param name="posx" value="$PARAM[posx]" />
+                <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="$PARAM[font]" />
@@ -100,6 +111,8 @@
             </include>
         
             <control type="label">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
                 <font>$PARAM[font]</font>
@@ -115,6 +128,8 @@
 	</include>
 
 	<include name="BackgroundForNormalOutlineLabel">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallInformationFont" />
@@ -127,66 +142,73 @@
         <param name="label" default="-" />
         
         <definition>
-            <control type="label">
-                <posx>-2</posx>
-                <posy>-2</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
-            </control>
-            <control type="label">
-                <posx>2</posx>
-                <posy>-2</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
-            </control>
-            <control type="label">
-                <posx>-2</posx>
-                <posy>2</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
-            </control>
-            <control type="label">
-                <posx>2</posx>
-                <posy>2</posy>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[outlinecolor]</textcolor>
-                <scroll>$PARAM[scroll]</scroll>
-                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
-                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
-                <align>$PARAM[align]</align>
-                <aligny>$PARAM[aligny]</aligny>
-                <label>$PARAM[label]</label>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                
+                <control type="label">
+                    <posx>-2</posx>
+                    <posy>-2</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
+                <control type="label">
+                    <posx>2</posx>
+                    <posy>-2</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
+                <control type="label">
+                    <posx>-2</posx>
+                    <posy>2</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
+                <control type="label">
+                    <posx>2</posx>
+                    <posy>2</posy>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <font>$PARAM[font]</font>
+                    <textcolor>$PARAM[outlinecolor]</textcolor>
+                    <scroll>$PARAM[scroll]</scroll>
+                    <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                    <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                    <align>$PARAM[align]</align>
+                    <aligny>$PARAM[aligny]</aligny>
+                    <label>$PARAM[label]</label>
+                </control>
             </control>
         </definition>
 	</include>
 
 	<include name="NormalOutlineLabel">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallInformationFont" />
@@ -201,6 +223,8 @@
         
         <definition>
             <include name="BackgroundForNormalOutlineLabel">
+                <param name="posx" value="$PARAM[posx]" />
+                <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="$PARAM[font]" />
@@ -214,6 +238,8 @@
             </include>
         
             <control type="label">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
                 <font>$PARAM[font]</font>
