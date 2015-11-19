@@ -1,26 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="ItemForDebug">
+        <param name="textcolor" value="White" />
+        <param name="label" value="-" />
+    
+        <definition>
+            <height>20</height>
+            <include name="NormalOutlineLabel">
+                <param name="width" value="780" />
+                <param name="height" value="20" />
+                <param name="font" value="SmallInformationFont" />
+                <param name="textcolor" value="$PARAM[textcolor]" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="align" value="left" />
+                <param name="label" value="$PARAM[label]" />
+            </include>
+        </definition>
+	</include>
+
 	<include name="ContentTypeForDebug">
-		<width>780</width>
-		<height>20</height>
-		<textcolor>Red</textcolor>
-		<shadowcolor>Black</shadowcolor>
-		<align>left</align>
+        <param name="label" value="-" />
+    
+        <definition>
+            <include name="ItemForDebug">
+                <param name="textcolor" value="Red" />
+                <param name="label" value="$PARAM[label]" />
+            </include>
+        </definition>
 	</include>
 
-	<include name="WindowIDForDebug">
-		<width>780</width>
-		<height>20</height>
-		<textcolor>Blue</textcolor>
-		<shadowcolor>Black</shadowcolor>
-		<align>left</align>
+	<include name="WindowNameForDebug">
+        <param name="label" value="-" />
+    
+        <definition>
+            <include name="ItemForDebug">
+                <param name="textcolor" value="Blue" />
+                <param name="label" value="$PARAM[label]" />
+            </include>
+        </definition>
 	</include>
 
-	<include name="DialogIDForDebug">
-		<width>780</width>
-		<height>20</height>
-		<textcolor>Green</textcolor>
-		<shadowcolor>Black</shadowcolor>
-		<align>left</align>
+	<include name="DialogNameForDebug">
+        <param name="label" value="-" />
+    
+        <definition>
+            <include name="ItemForDebug">
+                <param name="textcolor" value="Green" />
+                <param name="label" value="$PARAM[label]" />
+            </include>
+        </definition>
 	</include>
 </includes>
