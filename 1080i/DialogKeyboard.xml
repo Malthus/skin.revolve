@@ -7,35 +7,21 @@
 		<control type="group">
 			<visible>!Window.IsVisible(numericinput)</visible>
 			<posy>PosYForKeyboardDialogBand</posy>
-			<include>KeyboardDialogBand</include>
+			<include name="KeyboardDialogBand" />
 	
-			<control type="group" description="Keyboard Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-			  
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-keyboard.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
+            <include name="DefaultIconForDialog">
+                <param name="texture" value ="icons/icon-keyboard.png" />
+            </include>
+
+			<control type="label" id="311">
+                <include name="MarkupForHeaderForDialog" />
+                <label>-</label>
 			</control>
 
 			<control type="group">
 				<posx>560</posx>
 				<posy>0</posy>
 			
-				<control type="label" id="311" description="Keyboard Header Label">
-					<posx>0</posx>
-					<posy>20</posy>
-					<width>1240</width>
-					<height>40</height>
-					<font>DialogTitleFont</font>
-					<textcolor>SecondaryColor</textcolor>
-					<align>left</align>
-				</control>
-
 				<control type="image" description="Text Box">
 					<posx>0</posx>
 					<posy>80</posy>
@@ -64,7 +50,8 @@
                         <orientation>horizontal</orientation> 
                         <onleft>309</onleft>
 
-                        <control type="radiobutton" id="303" description="Caps Lock Button"> 
+                        <control type="radiobutton" id="303">
+                            <description>Caps Lock Button</description> 
                             <width>400</width> 
                             <height>72</height> 
                             <align>center</align> 
@@ -165,7 +152,8 @@
                         <orientation>horizontal</orientation>
                         <onleft>309</onleft>
                         
-                        <control type="radiobutton" id="302" description="Shift Button"> 
+                        <control type="radiobutton" id="302">
+                            <description>Shift Button</description> 
                             <width>400</width> 
                             <height>72</height> 
                             <align>center</align> 
@@ -266,7 +254,8 @@
                         <orientation>horizontal</orientation>
                         <onleft>309</onleft>
                         
-                        <control type="button" id="307" description="IP Address Button"> 
+                        <control type="button" id="307">
+                            <description>IP Address Button</description> 
                             <width>400</width> 
                             <height>72</height> 
                             <align>center</align> 
@@ -367,7 +356,8 @@
                         <orientation>horizontal</orientation>
                         <onleft>309</onleft>
                         
-                        <control type="radiobutton" id="304" description="Symbols Button"> 
+                        <control type="radiobutton" id="304">
+                            <description>Symbols Button</description> 
                             <width>400</width> 
                             <height>72</height> 
                             <align>center</align> 
@@ -462,14 +452,14 @@
                         </control>
                     </control>
                     
-                    
                     <control type="grouplist"> 
                         <posy>288</posy>
                         <itemgap>0</itemgap> 
                         <orientation>horizontal</orientation>
                         <onleft>309</onleft>
                         
-                        <control type="button" id="300" description="Done Button"> 
+                        <control type="button" id="300">
+                            <description>Done Button</description> 
                             <width>400</width> 
                             <height>72</height> 
                             <align>center</align> 
@@ -479,7 +469,8 @@
                             <ondown>312</ondown> 
                         </control>
                         
-                        <control type="button" id="32" description="Space Button"> 
+                        <control type="button" id="32">
+                            <description>Space Button</description> 
                             <width>300</width> 
                             <height>72</height> 
                             <align>center</align> 
@@ -489,7 +480,8 @@
                             <ondown>312</ondown> 
                         </control>                    
                         
-                        <control type="button" id="8" description="Backspace Button"> 
+                        <control type="button" id="8">
+                            <description>Backspace Button</description> 
                             <width>300</width> 
                             <height>72</height> 
                             <align>center</align> 
@@ -499,7 +491,8 @@
                             <ondown>312</ondown> 
                         </control>                    
                         
-                        <control type="button" id="305" description="Left Button">
+                        <control type="button" id="305">
+                            <description>Left Button</description>
                             <width>112</width>
                             <height>72</height>
                             <label>$LOCALIZE[31917]</label>
@@ -507,7 +500,8 @@
                             <ondown>312</ondown>
                         </control>
 
-                        <control type="button" id="306" description="Right Button">
+                        <control type="button" id="306">
+                            <description>Right Button</description>
                             <width>112</width>
                             <height>72</height>
                             <label>$LOCALIZE[31918]</label>
@@ -519,7 +513,8 @@
 			</control>
 
             <control type="group">
-                <control type="button" id="309" description="Keyboard Layout Button"> 
+                <control type="button" id="309">
+                    <description>Keyboard Layout Button</description> 
                     <posx>40</posx>
                     <posy>320</posy>
                     <label>$LOCALIZE[20177]</label> 
