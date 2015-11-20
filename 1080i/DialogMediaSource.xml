@@ -6,44 +6,24 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForTenLinesDialog</posy>
-			<include>TenLinesDialog</include>
+			<include name="TenLinesDialog" />
 
-			<control type="group" description="Dialog Icon">
-				<posx>PosXForSmallIconFrameForDialog</posx>
-				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>BackgroundForSmallCircleThumbnailIcon</include>
-                
-				<control type="image">
-				    <posx>3</posx>
-				    <posy>3</posy>
-					<width>84</width>
-					<height>84</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-disc.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
+            <include name="SmallIconForDialog">
+                <param name="texture" value="icons/icon-disc.png" />
+            </include>
             
-			<control type="label" id="2" description="Heading Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
+			<control type="label" id="2">
+                <include name="MarkupForHeaderForDialog" />
 				<label>$LOCALIZE[13406]</label>
 			</control>
 
-			<control type="label" description="Paths Label">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[15311]</label>
-			</control>
+            <include name="LabelForDialog">
+                <param name="posy" value="80" />
+                <param name="label" value="$LOCALIZE[15311]" />
+            </include>
 
-			<control type="list" id="10" description="Media Sources List">
+			<control type="list" id="10">
+                <description>Media Sources List</description>
 				<posx>560</posx>
 				<posy>120</posy>
 				<width>1240</width>
@@ -69,15 +49,10 @@
 				</focusedlayout>
 			</control>
 			
-			<control type="label" description="Name Label">
-				<posx>560</posx>
-				<posy>400</posy>
-				<width>1240</width>
-				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[31400]</label>
-			</control>
+            <include name="LabelForDialog">
+                <param name="posy" value="400" />
+                <param name="label" value="$LOCALIZE[31400]" />
+            </include>
 
 			<control type="edit" id="12" description="Name For Selected Source Edit Box">
 				<posx>560</posx>
@@ -90,34 +65,31 @@
 			</control>
 			
 			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>160</posy>
-				<itemgap>0</itemgap>
-				<usecontrolcoords>true</usecontrolcoords>
-                <orientation>vertical</orientation>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onleft>Noop</onleft>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="240" />
+                    <param name="height" value="240" />
+                </include>
 				<onright>10</onright>
 
-				<control type="button" id="11" description="Browse For Location Button">
+				<control type="button" id="11">
+                    <description>Browse For Location Button</description>
 					<label>$LOCALIZE[1024]</label>
 				</control>
-
-				<control type="button" id="13" description="Add New Source Button">
+				<control type="button" id="13">
+                    <description>Add New Source Button</description>
 					<label>$LOCALIZE[1026]</label>
 				</control>
-
-				<control type="button" id="14" description="Delete Source Button">
+				<control type="button" id="14">
+                    <description>Delete Source Button</description>
 					<label>$LOCALIZE[117]</label>
 				</control>
-
-				<control type="button" id="18" description="Ok Button">
-                    <posy>120</posy>
+				<control type="button" id="18">
+                    <description>Ok Button</description>
+                    <posy>40</posy>
 					<label>$LOCALIZE[186]</label>
 				</control>
-
-				<control type="button" id="19" description="Cancel Button">
+				<control type="button" id="19">
+                    <description>Cancel Button</description>
 					<label>$LOCALIZE[222]</label>
 				</control>
 			</control>
