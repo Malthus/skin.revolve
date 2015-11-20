@@ -6,34 +6,40 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForSingleLineDialogForProgressBar</posy>
-			<include>SingleLineDialogForProgressBar</include>
+			<include name="SingleLineDialogForProgressBar" />
 
-			<control type="label" id="30" description="Progress Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<align>left</align>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
+			<control type="label" id="30">
+                <include name="MarkupForHeaderForDialog" />
 				<label>-</label>
 			</control>
-		
-			<control type="label" id="31" description="Single Line Label">
-				<description>Line 1</description>
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<align>left</align>
-				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
+
+			<control type="label" id="31">
+                <include name="MarkupForLabelForDialog" />
 				<label>-</label>
 			</control>
-			
-			<control type="group" description="Progress Bar">
-				<posx>560</posx>
-				<posy>124</posy>
-				<include>ProgressBarForProgressBar</include>
-			</control>
+
+            <control type="group">
+                <posx>560</posx>
+                <posy>124</posy>
+                
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>12</posy>
+                    <width>1240</width>
+                    <height>24</height>
+                    <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="progress" id="32">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>1240</width>
+                    <height>24</height>
+                    <texturebg border="6">-</texturebg>
+                    <midtexture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thin.png</midtexture>
+                    <info>-</info>
+                </control>
+            </control>
 		</control>
 	</controls>
 </window>
