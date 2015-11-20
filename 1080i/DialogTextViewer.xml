@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="147">
-	<defaultcontrol>61</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
 		<control type="group">
-			<posy>PosYForFullWindowDialog</posy>
-			<include>FullWindowDialog</include>
+			<posy>PosYForFifteenLinesDialog</posy>
+			<include name="FifteenLinesDialog" />
 
-			<control type="group" description="Textfile Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-				
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-textfile.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-            
-			<control type="label" id="1" description="Text Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
+            <include name="DefaultIconForDialog">
+                <param name="texture" value="icons/icon-textfile.png" />
+            </include>
+
+			<control type="label" id="1">
+                <include name="MarkupForHeaderForDialog" />
 				<label>-</label>
 			</control>
 			
-			<control type="textbox" id="5" description="Text Area">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>800</height>
-				<align>left</align>
+			<control type="textbox" id="5">
+                <include name="MarkupForTextboxForDialog">
+                    <param name="height" value="600" />
+                    <param name="pagecontrol" value="61" />
+                </include>
 			</control>
 
 			<control type="scrollbar" id="61">
-				<posy>80</posy>
-				<height>800</height>
-				<include>MarkupForScrollbarForDialog</include>
-				<onleft>Noop</onleft>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="600" />
+                </include>
+				<onleft>9000</onleft>
 				<onright>Noop</onright>
-				<ondown>61</ondown>
-				<onup>61</onup>
+			</control>
+            
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="640" />
+                    <param name="height" value="40" />
+                </include>
+                <onright>61</onright>
+            
+                <control type="button" id="21">
+                    <description>Close Button</description>
+                    <label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+                </control>
 			</control>
 		</control>
 	</controls>
