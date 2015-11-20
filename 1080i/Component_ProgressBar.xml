@@ -1,68 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="BusyAnimationForProgressBar" description="Busy Anitmation For Progress Bar">
-		<control type="image">
-			<width>240</width>
-			<height>240</height>
-			<texture>$VAR[BusyAnimationThumbnail]</texture>
-			<colordiffuse>BackgroundColor</colordiffuse>
-			<aspectratio>keep</aspectratio>
-			<animation effect="rotate" start="360" end="0" center="120,120" time="1200" loop="true" condition="true">conditional</animation>
-		</control>
-	</include>
-	
-	<include name="ProgressBarForProgressBar" description="Progress Bar With Id 32 For Progress Bar">
-		<control type="group" description="Progress Bar">
-			<control type="image">
-				<posx>0</posx>
-				<posy>12</posy>
-				<width>1240</width>
-				<height>24</height>
-				<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="progress" id="32">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1240</width>
-				<height>24</height>
-				<texturebg border="6">-</texturebg>
-				<midtexture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thin.png</midtexture>
-				<info>-</info>
-			</control>
-		</control>
+	<include name="BusyAnimationForProgressBar">
+        <param name="posy" default="0" />
+        
+        <definition>
+            <control type="group">
+                <posx>155</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="image">
+                    <width>240</width>
+                    <height>240</height>
+                    <texture colordiffure="BackgroundColor">$VAR[BusyAnimationThumbnail]</texture>
+                    <aspectratio>keep</aspectratio>
+                    <animation effect="rotate" start="360" end="0" center="120,120" time="1200" loop="true" condition="true">conditional</animation>
+                </control>
+            </control>
+        </definition>
 	</include>
 
     <constant name="PosYForMessageDialogForProgressBar">490</constant>
-	<include name="MessageDialogForProgressBar" description="Message Band For Busy Dialog">
-		<include>DefaultIconInMessageBand</include>
+	<include name="MessageDialogForProgressBar">
+        <definition>
+            <control type="group">
+                <include>DefaultIconInMessageBand</include>
 
-		<control type="group" description="Busy Animation">
-			<posx>155</posx>
-			<posy>-70</posy>
-			<include>BusyAnimationForProgressBar</include>
-		</control>
+                <include name="BusyAnimationForProgressBar">
+                    <param name="posy" value="-70" />
+                </include>
+            </control>
+        </definition>
 	</include>
-	
+    
     <constant name="PosYForSingleLineDialogForProgressBar">440</constant>
-	<include name="SingleLineDialogForProgressBar" description="Message Band For Extended Progress Bar">
-		<include>DefaultIconInDialogBand</include>
+	<include name="SingleLineDialogForProgressBar">
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <posx>90</posx>
+                    <posy>-85</posy>
+                    <width>370</width>
+                    <height>370</height>
+                    <texture>elements/circle-shadow.png</texture>
+                </control>
+            
+                <include name="DialogWindow">
+                    <param name="height" value="200" />
+                </include>
+
+                <control type="group">
+                    <posx>140</posx>
+                    <posy>-35</posy>
+                    <include>BackgroundForDefaultCircleThumbnailIcon</include>
+                </control>
 		
-		<control type="group" description="Busy Animation">
-			<posx>155</posx>
-			<posy>-20</posy>
-			<include>BusyAnimationForProgressBar</include>
-		</control>
+                <include name="BusyAnimationForProgressBar">
+                    <param name="posy" value="-20" />
+                </include>
+            </control>
+        </definition>
 	</include>
 
     <constant name="PosYForMultiLineDialogForProgressBar">410</constant>
-	<include name="MultiLineDialogForProgressBar" description="Message Band For (Normal) Progress Bar">
-		<include>DefaultIconInBigDialogBand</include>
-		
-		<control type="group" description="Busy Animation">
-			<posx>155</posx>
-			<posy>-75</posy>
-			<include>BusyAnimationForProgressBar</include>
-		</control>
+	<include name="MultiLineDialogForProgressBar">
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <posx>90</posx>
+                    <posy>-140</posy>
+                    <width>370</width>
+                    <height>370</height>
+                    <texture>elements/circle-shadow.png</texture>
+                </control>
+
+                <include name="DialogWindow">
+                    <param name="height" value="260" />
+                </include>
+
+                <control type="group">
+                    <posx>140</posx>
+                    <posy>-90</posy>
+                    <include>BackgroundForDefaultCircleThumbnailIcon</include>
+                </control>
+
+                <include name="BusyAnimationForProgressBar">
+                    <param name="posy" value="-75" />
+                </include>
+            </control>
+        </definition>
 	</include>
 </includes>
