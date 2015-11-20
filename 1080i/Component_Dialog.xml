@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <constant name="PosXForSmallIconFrameForDialog">230</constant>
+    <constant name="PosXForSmallIconFrameForDialog">235</constant>
     <constant name="PosYForSmallIconFrameForDialog">20</constant>
     <include name="SmallIconForDialog">
         <param name="posx" default="PosXForSmallIconFrameForDialog" />
@@ -25,6 +25,19 @@
         </definition>
     </include>
 
+    <include name="SmallQuestionMarkForDialog">
+        <param name="posx" default="PosXForSmallIconFrameForDialog" />
+        <param name="posy" default="PosYForSmallIconFrameForDialog" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <include>SmallCircleQuestionThumbnailIcon</include>
+			</control>
+        </definition>
+    </include>
+    
     <constant name="PosXForDefaultIconFrameForDialog">145</constant>
     <constant name="PosYForDefaultIconFrameForDialog">20</constant>
     <include name="DefaultIconForDialog">
@@ -59,6 +72,19 @@
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <include>DefaultCircleThumbnailIcon</include>
+			</control>
+        </definition>
+    </include>
+
+    <include name="DefaultQuestionMarkForDialog">
+        <param name="posx" default="PosXForDefaultIconFrameForDialog" />
+        <param name="posy" default="PosYForDefaultIconFrameForDialog" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <include>DefaultCircleQuestionThumbnailIcon</include>
 			</control>
         </definition>
     </include>
@@ -196,17 +222,19 @@
 	</include>
 
     <include name="HelpFrameForDialog">
+        <param name="height" default="280" />
+        
         <definition>
             <control type="image">
                 <width>480</width>
-                <height>280</height>
+                <height>$PARAM[height]</height>
                 <aspectratio>stretch</aspectratio>
                 <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
             </control>
                 
             <control type="image">
                 <width>480</width>
-                <height>280</height>
+                <height>$PARAM[height]</height>
                 <aspectratio>stretch</aspectratio>
                 <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
             </control>
@@ -218,7 +246,7 @@
                 <height>35</height>
                 <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
             </control>
-                
+
             <control type="label">
                 <description>Question Mark Label</description>
                 <posx>-17</posx>
