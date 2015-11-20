@@ -6,115 +6,88 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThreeLinesDialog</posy>
-			<include>ThreeLinesDialog</include>
+			<include name="ThreeLinesDialog" />
 			
-			<control type="group" description="Dialog Icon (?)">
-				<posx>PosXForSmallIconFrameForDialog</posx>
-				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>BackgroundForSmallCircleThumbnailIcon</include>
-			  
-				<control type="label">
-					<posx>25</posx>
-					<posy>25</posy>
-					<width>40</width>
-					<height>40</height>
-					<font>DialogIconFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>center</align>
-					<label>$LOCALIZE[31904]</label>
-				</control>
-			</control>
+            <include name="SmallQuestionMarkForDialog" />
 
-			<control type="label" id="1" description="Dialog Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>MainColor</textcolor>
-				<label>$INFO[Window.Property(DialogTitle)]</label>
-			</control>
+            <include name="HeaderForDialog">
+                <param name="label" value="$INFO[Window.Property(DialogTitle)]" />
+            </include>
 
-			<control type="textbox" id="9" description="Message Area">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>120</height>
-				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
+			<control type="textbox" id="9">
+				<include name="MarkupForTextboxForDialog" />
 				<label>$INFO[Window.Property(DialogMessage)]</label>
 			</control>
 
-			<control type="button" id="11" description="Yes Button">
-				<posx>40</posx>
-				<posy>120</posy>
-				<width>480</width>
-				<height>40</height>
-				<label>$LOCALIZE[107]</label>
-				<onleft>Noop</onleft>
-				<onright>Noop</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-                <onclick>$INFO[Window.Property(DialogAction)]</onclick>
-                <onclick>Close</onclick>
-			</control>
-
-			<control type="button" id="10" description="No Button">
-				<posx>40</posx>
-				<posy>160</posy>
-				<width>480</width>
-				<height>40</height>
-				<label>$LOCALIZE[106]</label>
-				<onleft>Noop</onleft>
-				<onright>Noop</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
-                <onclick>Close</onclick>
-			</control>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="80" />
+                </include>
             
-			<control type="button" id="51" description="Background Visuals Settings Reset Button">
+                <control type="button" id="11">
+                    <description>Yes Button</description>
+                    <label>$LOCALIZE[107]</label>
+                    <onclick>$INFO[Window.Property(DialogAction)]</onclick>
+                    <onclick>Close</onclick>
+                </control>
+                <control type="button" id="10">
+                    <description>No Button</description>
+                    <label>$LOCALIZE[106]</label>
+                    <onclick>Close</onclick>
+                </control>
+            </control>
+            
+			<control type="button" id="51">
+				<description>Background Visuals Settings Reset Button</description>
 				<visible allowhiddenfocus="true">false</visible>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<include>BackgroundSettingsForSkinSettings</include>
 			</control>
             
-			<control type="button" id="52" description="Home Menu Items Reset Button">
+			<control type="button" id="52">
+				<description>Home Menu Items Reset Button</description>
 				<visible allowhiddenfocus="true">false</visible>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<include>HomeMenuItemsSettingsForSkinSettings</include>
 			</control>
             
-			<control type="button" id="53" description="Circle Items Reset Button">
+			<control type="button" id="53">
+				<description>Circle Items Reset Button</description>
 				<visible allowhiddenfocus="true">false</visible>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<include>CircleItemsSettingsForSkinSettings</include>
 			</control>
             
-			<control type="button" id="57" description="default Add-ons Reset Button">
+			<control type="button" id="57">
+				<description>default Add-ons Reset Button</description>
 				<visible allowhiddenfocus="true">false</visible>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<include>AddonSettingsForSkinSettings</include>
 			</control>
             
-			<control type="button" id="58" description="Miscellaneous Settings Reset Button">
+			<control type="button" id="58">
+				<description>Miscellaneous Settings Reset Button</description>
 				<visible allowhiddenfocus="true">false</visible>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<include>MiscellaneousSettingsForSkinSettings</include>
 			</control>
             
-			<control type="button" id="59" description="Debug Settings Reset Button">
+			<control type="button" id="59">
+				<description>Debug Settings Reset Button</description>
 				<visible allowhiddenfocus="true">false</visible>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<include>DebugSettingsForSkinSettings</include>
 			</control>
 
-			<control type="button" id="60" description="All Revolve Settings Reset Button">
+			<control type="button" id="60">
+				<description>All Revolve Settings Reset Button</description>
 				<visible allowhiddenfocus="true">false</visible>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
