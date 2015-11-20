@@ -6,36 +6,20 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
-			<include>FifteenLinesDialog</include>
+			<include name="FifteenLinesDialog" />
 
-			<control type="group" description="Dialog Icon (thumbnail of selected item)">
-				<posx>150</posx>
-				<posy>20</posy>
-				<include>DefaultCircleThumbnailIcon</include>
-			</control>
+			<include name="DefaultThumbnailForDialog" />
 
-			<control type="label" id="411" description="File Browser Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<label>1023</label>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-			</control>
-
-			<control type="label" id="412" description="Path Label">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<haspath>true</haspath>
+			<control type="label" id="411">
+                <include name="MarkupForHeaderForDialog" />
+				<label>$LOCALIZE[1023]</label>
 			</control>
 
 			<control type="list" id="450">
 				<posx>560</posx>
-				<posy>120</posy>
+				<posy>80</posy>
 				<width>1240</width>
-				<height>560</height>
+				<height>550</height>
 				<pagecontrol>451</pagecontrol>
 				<onup>450</onup>
 				<ondown>450</ondown>
@@ -59,38 +43,45 @@
 
 			</control>
 
-			<control type="scrollbar" id="451" description="File List Scrollbar">
-				<posy>120</posy>
-				<height>560</height>
-				<include>MarkupForScrollbarForDialog</include>
+			<control type="scrollbar" id="451">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="550" />
+                </include>
 				<onleft>450</onleft>
 				<onright>Noop</onright>
 			</control>
             
-			<control type="grouplist" id="9000" description="Button Area">
-				<posx>40</posx>
-				<posy>520</posy>
-				<itemgap>0</itemgap>
-				<orientation>vertical</orientation>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+			<control type="label" id="412">
+                <include name="MarkupForLabelForDialog">
+                    <param name="posy" value="640" />
+                </include>
+				<haspath>true</haspath>
+			</control>
+            
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="480" />
+                    <param name="height" value="200" />
+                </include>
 				<onright>450</onright>
-				<onleft>Noop</onleft>
 
-				<control type="button" id="413" description="Ok Button">
-					<label>186</label>
+				<control type="button" id="415">
+                    <description>Create Folder Button</description>
+					<label>$LOCALIZE[119]</label>
 				</control>
-
-				<control type="button" id="414" description="Cancel Button">
-					<label>222</label>
+				<control type="radiobutton" id="416">
+                    <description>Horizontal Flip Button</description>
+					<label>$LOCALIZE[749]</label>
 				</control>
-
-				<control type="button" id="415" description="Create Folder Button">
-					<label>119</label>
+				<control type="button" id="413">
+                    <description>Ok Button</description>
+                    <posy>40</posy>
+					<label>$LOCALIZE[186]</label>
 				</control>
-
-				<control type="radiobutton" id="416" description="Horizontal Flip Button">
-					<label>749</label>
+				<control type="button" id="414">
+                    <description>Cancel Button</description>
+					<label>$LOCALIZE[222]</label>
 				</control>
 			</control>
 		</control>
