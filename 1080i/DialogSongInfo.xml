@@ -126,7 +126,6 @@
 
 			<control type="scrollbar" id="24">
                 <description>Review Scrollbar</description>
-				<visible>Control.IsVisible(4)</visible>
 				<include name="MarkupForScrollbarForDialog">
                     <param name="posy" value="360" />
                     <param name="height" value="240" />
@@ -140,6 +139,7 @@
                     <param name="posy" value="400" />
                     <param name="height" value="200" />
                     <param name="onup" value="9001" />
+                    <param name="ondown" value="9001" />
                 </include>
 				<onright>24</onright>
 
