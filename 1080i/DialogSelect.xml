@@ -6,25 +6,17 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="ThirteenLinesDialog" />
 
-			<control type="group" description="Dialog Thumbnail Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>DefaultCircleQuestionThumbnailIcon</include>
+			<include name="DefaultQuestionMarkForDialog" />
+
+			<control type="label" id="1">
+                <include name="MarkupForHeaderForDialog" />
+				<label>$LOCALIZE[13406]</label>
 			</control>
 
-			<control type="label" id="1" description="Selection Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>13406</label>
-			</control>
-
-			<control type="list" id="3" description="Normal Selection List">
+			<control type="list" id="3">
+                <description>Normal Selection List</description>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
@@ -51,7 +43,8 @@
 				</focusedlayout>
 			</control>
 
-			<control type="list" id="6" description="Selection List With Thumbnails For Addons">
+			<control type="list" id="6">
+                <description>Selection List With Thumbnails For Addons</description>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
@@ -78,25 +71,30 @@
 				</focusedlayout>
 			</control>
             
-			<control type="scrollbar" id="21" description="Normal List Scrollbar">
+			<control type="scrollbar" id="21">
+                <description>Normal List Scrollbar</description>
 				<visible>Control.IsVisible(3)</visible>
-				<posy>80</posy>
-				<height>520</height>
-				<include>MarkupForScrollbarForDialog</include>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
 				<onleft>3</onleft>
 				<onright>Noop</onright>
 			</control>
 
-			<control type="scrollbar" id="22" description="Thumbnail List Scrollbar">
+			<control type="scrollbar" id="22">
+                <description>Thumbnail List Scrollbar</description>
 				<visible>Control.IsVisible(6)</visible>
-				<posy>80</posy>
-				<height>520</height>
-				<include>MarkupForScrollbarForDialog</include>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
 				<onleft>6</onleft>
 				<onright>Noop</onright>
 			</control>
 
-			<control type="label" id="2" description="Number Of Files Label">
+			<control type="label" id="2">
+                <description>Number Of Files Label</description>
 				<posx>40</posx>
 				<posy>520</posy>
 				<width>480</width>
@@ -106,14 +104,23 @@
 				<label>-</label>
 			</control>
 
-			<control type="button" id="5" description="Manual Search/Get More Button">
-				<posx>40</posx>
-				<posy>560</posy>
-				<label>368</label>
-				<onleft>Noop</onleft>
-				<onright>3</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="480" />
+                    <param name="height" value="120" />
+                </include>
+                <onright>3</onright>
+
+                <control type="button" id="5">
+                    <description>Manual Search/Get More Button</description>
+                    <label>$LOCALIZE[368]</label>
+                </control>
+                <control type="button" id="9">
+                    <description>Close Button</description>
+                    <posy>40</posy>
+                    <label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+                </control>
 			</control>
 		</control>
 	</controls>
