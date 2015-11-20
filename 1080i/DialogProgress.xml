@@ -1,49 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="101">
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
 		<control type="group">
 			<posy>PosYForMultiLineDialogForProgressBar</posy>
-			<include>MultiLineDialogForProgressBar</include>
+			<include name="MultiLineDialogForProgressBar" />
 
-			<control type="label" id="1" description="Progress Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
+			<control type="label" id="1">
+                <include name="MarkupForHeaderForDialog" />
 				<label>-</label>
 			</control>
 
-			<control type="textbox" id="9" description="Progress Message Area">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>120</height>
-				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
+			<control type="textbox" id="9">
+                <include name="MarkupForTextboxForDialog" />
 				<label>-</label>
 			</control>
 
-			<control type="group" description="Progress Bar">
-				<posx>560</posx>
-				<posy>200</posy>
-				<include>ProgressBarForProgressBar</include>
-			</control>
+            <control type="group">
+                <posx>560</posx>
+                <posy>200</posy>
+                
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>12</posy>
+                    <width>1240</width>
+                    <height>24</height>
+                    <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="progress" id="20">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>1240</width>
+                    <height>24</height>
+                    <texturebg border="6">-</texturebg>
+                    <midtexture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thin.png</midtexture>
+                    <info>-</info>
+                </control>
+            </control>
 			
-			<control type="button" id="10" description="Cancel Button">
-				<posx>40</posx>
-				<posy>200</posy>
-				<width>480</width>
-				<label>106</label>
-				<onleft>Noop</onleft>
-				<onright>Noop</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="200" />
+                    <param name="height" value="40" />
+                </include>
+
+                <control type="button" id="10">
+                    <description>Cancel Button</description>
+                    <label>$LOCALIZE[106]</label>
+                </control>
 			</control>
 		</control>
 	</controls>
