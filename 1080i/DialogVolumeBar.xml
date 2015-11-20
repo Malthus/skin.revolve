@@ -9,11 +9,20 @@
                 <posx>PosXForIconForMessage</posx>
 				<posy>PosYForIconForMessage</posy>
                 <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
-                    
-                <control type="image" description="Normal Volume Logo">
+
+                <control type="image">
+                    <visible>!Player.Muted</visible>
                     <width>90</width>
                     <height>90</height>
                     <texture colordiffuse="BackgroundColor">icons/volume-sound.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                
+                <control type="image">
+                    <visible>Player.Muted</visible>
+                    <width>90</width>
+                    <height>90</height>
+                    <texture colordiffuse="BackgroundColor">icons/volume-mute.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
             </control>
@@ -23,11 +32,12 @@
                 <posy>PosYForContentForMessage</posy>
             
                 <control type="group">
+                    <description>Volume Control</description>
                     <visible>!Player.PassThrough</visible>
 				
                     <control type="image">
                         <posx>0</posx>
-                        <posy>30</posy>
+                        <posy>26</posy>
                         <width>1015</width>
                         <height>28</height>
                         <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
@@ -35,15 +45,15 @@
                     </control>
                     <control type="image">
                         <posx>2</posx>
-                        <posy>32</posy>
+                        <posy>28</posy>
                         <width>1010</width>
                         <height>24</height>
                         <texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
                         <aspectratio>stretch</aspectratio>
                     </control>
-                    <control type="progress" id="1" description="Volume Control">
+                    <control type="progress" id="1">
                         <posx>2</posx>
-                        <posy>20</posy>
+                        <posy>16</posy>
                         <width>1010</width>
                         <height>24</height>
                         <texturebg border="6">-</texturebg>
@@ -55,7 +65,7 @@
                 
                 <control type="group">
                     <visible>Player.PassThrough</visible>
-                    <posy>24</posy>
+                    <posy>20</posy>
 
                     <include name="NormalOutlineLabel">
                         <param name="width" value="1020" />
