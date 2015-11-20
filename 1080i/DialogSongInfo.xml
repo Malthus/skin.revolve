@@ -1,67 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
+<window id="135">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
 		<control type="group">
-			<posy>PosYForFifteenLinesDialog</posy>
-			<include>FifteenLinesDialog</include>
+			<posy>PosYForThirteenLinesDialog</posy>
+			<include name="ThirteenLinesDialog" />
 
-			<control type="group" description="Dialog Icon For Song">
-				<visible>!Control.HasFocus(50)</visible>
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>DefaultCircleThumbnailIcon</include>
-			</control>
+			<include name="DefaultThumbnailForDialog" />
 
-			<control type="label" description="Song Title Header">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>$INFO[ListItem.Title]</label>
-			</control>
+            <include name="HeaderForDialog">
+                <param name="label" value="$INFO[ListItem.Title]" />
+            </include>
 			
-			<control type="list" id="20" description="Song Information List">
+			<control type="list" id="20">
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
-				<height>240</height>
+				<height>200</height>
 				<itemgap>0</itemgap>
 				<pagecontrol>21</pagecontrol>
 				
 				<include>ItemsForInfoListInDialog</include>
 				
 				<content>
-					<item description="Artist Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Artist)</visible>
 						<label>$LOCALIZE[557]:</label>
 						<label2>$INFO[ListItem.Artist]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Album Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Album)</visible>
 						<label>$LOCALIZE[558]:</label>
 						<label2>$INFO[ListItem.Album]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Year Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Year)</visible>
 						<label>$LOCALIZE[562]:</label>
 						<label2>$INFO[ListItem.Year]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Duration Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 						<label>$LOCALIZE[180]:</label>
 						<label2>$INFO[ListItem.Duration]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Genre Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
 						<label>$LOCALIZE[515]:</label>
 						<label2>$INFO[ListItem.Genre]</label2>
@@ -70,30 +58,35 @@
 				</content>
 			</control>
 			
-			<control type="scrollbar" id="21" description="Song Information Scrollbar">
-				<posy>80</posy>
-				<height>280</height>
-				<include>MarkupForScrollbarForDialog</include>
+			<control type="scrollbar" id="21">
+                <description>Song Information Scrollbar</description>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="200" />
+                </include>
 				<onleft>9001</onleft>
 				<onright>Noop</onright>
 			</control>
 
-			<control type="group" description="Song Details Icons">
+			<control type="group">
+                <description>Song Details Icons</description>
 				<posx>560</posx>
-				<posy>320</posy>
+				<posy>280</posy>
 				<include>HorizontalDialogListOfContentMediaFlag</include>
 			</control>
 
-			<control type="group" id="9001" description="Song Rating Controls">
+			<control type="group" id="9001">
+                <description>Song Rating Controls</description>
 				<posx>40</posx>
 				<posy>320</posy>
 
-				<control type="group" description="Song Rating Icons">
+				<control type="group">
 					<posx>160</posx>
 					<include>StarRatingMediaFlag</include>
 				</control>
 				
-				<control type="button" id="14" description="Decrease Rating Button">
+				<control type="button" id="14">
+                    <description>Decrease Rating Button</description>
 					<posx>400</posx>
 					<width>40</width>
 					<height>40</height>
@@ -106,7 +99,8 @@
 					<onclick>DecreaseRating</onclick>
 				</control>
 
-				<control type="button" id="15" description="Increase Rating Button">
+				<control type="button" id="15">
+                    <description>Increase Rating Button</description>
 					<posx>440</posx>
 					<width>40</width>
 					<height>40</height>
@@ -120,53 +114,51 @@
 				</control>
 			</control>
 
-			<control type="textbox" id="4" description="Review">
-				<posx>560</posx>
-				<posy>400</posy>
-				<width>1240</width>
-				<height>280</height>
-				<align>left</align>
+			<control type="textbox" id="4">
+                <description>Review</description>
+				<include name="MarkupForTextboxForDialog">
+                    <param name="posy" value="360" />
+                    <param name="height" value="240" />
+                </include>
 				<pagecontrol>24</pagecontrol>
 				<label>$VAR[ContentDescription]</label>
 			</control>
 
-			<control type="scrollbar" id="24" description="Review Scrollbar">
+			<control type="scrollbar" id="24">
+                <description>Review Scrollbar</description>
 				<visible>Control.IsVisible(4)</visible>
-				<posy>400</posy>
-				<height>280</height>
-				<include>MarkupForScrollbarForDialog</include>
-				<onup>24</onup>
-				<ondown>24</ondown>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="360" />
+                    <param name="height" value="240" />
+                </include>
 				<onleft>9000</onleft>
 				<onright>Noop</onright>
 			</control>
 
 			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>400</posy>
-				<width>480</width>
-				<height>160</height>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
-				<onup>9001</onup>
-				<ondown>9001</ondown>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="400" />
+                    <param name="height" value="200" />
+                    <param name="onup" value="9001" />
+                </include>
 				<onright>24</onright>
-				<onleft>Noop</onleft>
 
-				<control type="button" id ="10" description="Ok Button">
-					<label>186</label>
+				<control type="button" id ="12">
+                    <description>Album Info Button</description>
+					<label>$LOCALIZE[10523]</label>
 				</control>
-
-				<control type="button" id ="11" description="Cancel Button">
-					<label>222</label>
+				<control type="button" id ="13">
+                    <description>Get Thumbnail Button</description>
+					<label>$LOCALIZE[13405]</label>
 				</control>
-
-				<control type="button" id ="12" description="Album Info Button">
-					<label>10523</label>
+				<control type="button" id ="10">
+                    <description>Ok Button</description>
+                    <posy>40</posy>
+					<label>$LOCALIZE[186]</label>
 				</control>
-
-				<control type="button" id ="13" description="Get Thumbnail Button">
-					<label>13405</label>
+				<control type="button" id ="11">
+                    <description>Cancel Button</description>
+					<label>$LOCALIZE[222]</label>
 				</control>
 			</control>
 		</control>
