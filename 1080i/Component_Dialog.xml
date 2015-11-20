@@ -448,6 +448,13 @@
         </include>
 	</include>
 	
+    <constant name="PosYForTwelveLinesDialog">250</constant>
+	<include name="TwelveLinesDialog">
+        <include name="WindowForDialog">
+            <param name="height" value="580" />
+        </include>
+	</include>
+
     <constant name="PosYForThirteenLinesDialog">230</constant>
 	<include name="ThirteenLinesDialog">
         <include name="WindowForDialog">
