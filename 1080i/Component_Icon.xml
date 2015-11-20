@@ -384,14 +384,16 @@
         </control>
 	</include>
     
-	<include name="BackgroundForDefaultCircleThumbnailIcon" description="Default Circle Background Icon Without Shadow">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>270</width>
-			<height>270</height>
-			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-		</control>
+	<include name="BackgroundForDefaultCircleThumbnailIcon">
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>270</width>
+                <height>270</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="ShadowForDefaultCircleThumbnailIcon" description="Shadow For Circle Thumbnail Icon">
