@@ -6,70 +6,39 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThreeLinesDialog</posy>
-			<include>ThreeLinesDialog</include>
+			<include name="ThreeLinesDialog" />
 			
-			<control type="group" description="Dialog Icon (?)">
+			<control type="group">
 				<posx>PosXForSmallIconFrameForDialog</posx>
 				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>BackgroundForSmallCircleThumbnailIcon</include>
-			  
-				<control type="label">
-					<posx>25</posx>
-					<posy>25</posy>
-					<width>40</width>
-					<height>40</height>
-					<font>DialogIconFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>center</align>
-					<label>$LOCALIZE[31904]</label>
-				</control>
+                <include name="SmallCircleQuestionThumbnailIcon" />
 			</control>
-
-			<control type="label" id="1" description="Dialog Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>MainColor</textcolor>
-				<align>left</align>
+            
+			<control type="label" id="1">
+                <include name="MarkupForHeaderForDialog" />
 				<label>-</label>
 			</control>
 
-			<control type="textbox" id="9" description="Message Area">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>120</height>
-				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
+			<control type="textbox" id="9">
+                <include name="MarkupForTextboxForDialog" />
 				<label>-</label>
 			</control>
 
-			<control type="button" id="11" description="Yes Button">
-				<posx>40</posx>
-				<posy>120</posy>
-				<width>480</width>
-				<height>40</height>
-				<label>107</label>
-				<onleft>Noop</onleft>
-				<onright>Noop</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-			</control>
-
-			<control type="button" id="10" description="No Button">
-				<posx>40</posx>
-				<posy>160</posy>
-				<width>480</width>
-				<height>40</height>
-				<label>106</label>
-				<onleft>Noop</onleft>
-				<onright>Noop</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
-			</control>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="80" />
+                </include>
+            
+                <control type="button" id="11">
+                    <description>Yes Button</description>
+                    <label>$LOCALIZE[107]</label>
+                </control>
+                <control type="button" id="10">
+                    <description>No Button</description>
+                    <label>$LOCALIZE[106]</label>
+                </control>
+            </control>
 		</control>
 	</controls>
 </window>
