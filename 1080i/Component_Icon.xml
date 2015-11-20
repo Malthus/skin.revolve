@@ -51,72 +51,95 @@
 		</control>
 	</include>
     
-	<include name="SmallCircleThumbnailIcon" description="Small Circle Thumbnail Icon Without Shadow">
-        <include>BackgroundForSmallCircleThumbnailIcon</include>
+	<include name="SmallCircleThumbnailIcon">
+        <definition>
+            <include name="BackgroundForSmallCircleThumbnailIcon" />
 		
-		<control type="image">
-			<posx>3</posx>
-			<posy>3</posy>
-			<width>84</width>
-			<height>84</height>
-			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-		</control>
+            <control type="image">
+                <posx>3</posx>
+                <posy>3</posy>
+                <width>84</width>
+                <height>84</height>
+                <texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+            </control>
+        </definition>
+	</include>
+    
+	<include name="SmallCircleQuestionThumbnailIcon">
+        <definition>
+            <include name="BackgroundForSmallCircleThumbnailIcon" />
+
+            <control type="label">
+                <posx>25</posx>
+                <posy>25</posy>
+                <width>40</width>
+                <height>40</height>
+                <font>DialogIconFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <align>center</align>
+                <label>$LOCALIZE[31904]</label>
+            </control>
+        </definition>
 	</include>
     
     <include name="SmallCircleMuteBugIcon">
-		<include>ShadowForSmallCircleThumbnailIcon</include>
-		<include>BackgroundForSmallCircleThumbnailIcon</include>
+        <definition>
+            <include name="ShadowForSmallCircleThumbnailIcon" />
+            <include name="BackgroundForSmallCircleThumbnailIcon" />
 			
-		<control type="image" id="901" description="Mute Image">
-            <posx>5</posx>
-            <posy>5</posy>
-			<width>80</width>
-			<height>80</height>
-			<texture>icons/volume-mute.png</texture>
-        </control>
+            <control type="image" id="901" description="Mute Image">
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>80</width>
+                <height>80</height>
+                <texture>icons/volume-mute.png</texture>
+            </control>
+        </definition>
 	</include>
 
     <include name="SmallCirclePlayerStateIcon">
-        <include>ShadowForSmallCircleThumbnailIcon</include>
-        <include>BackgroundForSmallCircleThumbnailIcon</include>
+        <definition>
+            <include name="ShadowForSmallCircleThumbnailIcon" />
+            <include name="BackgroundForSmallCircleThumbnailIcon" />
 
-		<control type="group">
-			<visible>Player.Paused</visible>
+            <control type="group">
+                <visible>Player.Paused</visible>
 					
-			<control type="image" description="Player Direction Icon">
-				<posx>20</posx>
-				<posy>20</posy>
-				<width>50</width>
-				<height>50</height>
-				<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		</control>
+                <control type="image" description="Player Direction Icon">
+                    <posx>20</posx>
+                    <posy>20</posy>
+                    <width>50</width>
+                    <height>50</height>
+                    <texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            </control>
 
-		<control type="group">
-			<visible>[Player.Forwarding | Player.Rewinding]</visible>
+            <control type="group">
+                <visible>[Player.Forwarding | Player.Rewinding]</visible>
 					
-			<control type="image" description="Player Direction Icon">
-				<posx>25</posx>
-				<posy>15</posy>
-				<width>40</width>
-				<height>40</height>
-				<texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
+                <control type="image">
+                    <posx>25</posx>
+                    <posy>15</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texture colordiffuse="BackgroundColor">$VAR[PlayerDirectionIcon]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
 					
-			<control type="label">
-				<posx>0</posx>
-				<posy>55</posy>
-				<width>90</width>
-				<height>20</height>
-				<font>PlayerSpeedFont</font>
-				<textcolor>BackgroundColor</textcolor>
-				<align>center</align>
-				<label>$VAR[PlayerSpeedLabel]</label>
-			</control>
-		</control>
+                <control type="label">
+                    <posx>0</posx>
+                    <posy>55</posy>
+                    <width>90</width>
+                    <height>20</height>
+                    <font>PlayerSpeedFont</font>
+                    <textcolor>BackgroundColor</textcolor>
+                    <align>center</align>
+                    <label>$VAR[PlayerSpeedLabel]</label>
+                </control>
+            </control>
+        </definition>
     </include>
 
 	<include name="BackgroundForSmallCircleThumbnailIcon">
@@ -295,7 +318,8 @@
 				</control>
 			</control>
             
-			<control type="image" id="901" description="Mute Image">
+			<control type="image" id="901">
+                <description>Mute Image</description>
 				<posx>140</posx>
 				<posy>85</posy>
 				<width>100</width>
