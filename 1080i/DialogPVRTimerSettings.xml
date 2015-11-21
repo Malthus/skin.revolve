@@ -5,92 +5,45 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<posy>PosYForTenLinesDialog</posy>
+			<include name="TenLinesDialog" />
 		
-			<control type="group" description="Clock Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
+            <include name="DefaultIconForDialog">
+                <param name="texture" value="icons/icon-clock.png" />
+            </include>
 
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-clock.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
+            <include name="HeaderForDialog">
+                <param name="label" value="$LOCALIZE[19065]" />
+            </include>
 
-			<control type="label" id="2" description="Timer Settings Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>MainColor</textcolor>
-				<align>left</align>
-				<label>-</label>
-			</control>
-
-			<control type="grouplist" id="5" description="Controls">
+			<control type="grouplist" id="5">
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
-				<height>900</height>
+				<height>400</height>
 				<itemgap>0</itemgap>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				<onleft>9001</onleft>
+				<onleft>9000</onleft>
 				<onright>Noop</onright>
 			</control>
 
-			<control type="button" id="7" description="Default Button">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-
-			<control type="radiobutton" id="8" description="Default RadioButton">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-			
-			<control type="spincontrolex" id="9" description="Default Spinner Control">
-				<width>1240</width>
-				<align>left</align>
-				<reverse>yes</reverse>
-			</control>
-			
-			<control type="edit" id="12" description="Default Edit Box">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-
-			<control type="sliderex" id="13" description="Default Slider">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-			
-            <control type="label" id="14" description="Default Label">
-				<width>1240</width>
-                <textcolor>SelectColor</textcolor>
-                <label>-</label>
-            </control>
+            <include name="DefaultControlsForDialog" />
             
-			<control type="grouplist" id="9001">
-				<posx>40</posx>
-				<posy>480</posy>
-				<itemgap>0</itemgap>
-				<orientation>vertical</orientation>
-				<onup>9001</onup>
-				<ondown>9001</ondown>
-				<onleft>Noop</onleft>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="400" />
+                    <param name="height" value="80" />
+                </include>
 				<onright>5</onright>
 		
-				<control type="button" id="28" description="OK Button">
-					<label>186</label>
+				<control type="button" id="28">
+                    <description>OK Button</description>
+					<label>$LOCALIZE[186]</label>
 				</control>
-				<control type="button" id="29" description="Cancel Button">
-					<label>222</label>
+				<control type="button" id="29">
+                    <description>Cancel Button</description>
+					<label>$LOCALIZE[222]</label>
 				</control>
 			</control>
 		</control>
