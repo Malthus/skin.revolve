@@ -6,78 +6,63 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
-			<include>FifteenLinesDialog</include>
+			<include name="FifteenLinesDialog" />
 
-			<control type="group" description="Dialog Icon For Movie">
+			<control type="group">
+                <description>Dialog Icon For Movie</description>
 				<visible>!Control.HasFocus(50)</visible>
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>DefaultCircleThumbnailIcon</include>
+                <include name="DefaultThumbnailForDialog" />
 			</control>
 
-			<control type="group" description="Dialog Icon For Cast List">
+			<control type="group">
+                <description>Dialog Icon For Cast List</description>
 				<visible>Control.HasFocus(50)</visible>
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				
-                <include>BackgroundForDefaultCircleThumbnailIcon</include>
+                <include name="DefaultImageForDialog">
+                    <param name="texture" value="$INFO[Container(50).ListItem.Icon]" />
+                </include>
+			</control>
+			
+            <include name="HeaderForDialog">
+                <param name="label" value="$VAR[ContentNameLabel]" />
+            </include>
 
-				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
-					<width>262</width>
-					<height>262</height>
-					<texture background="true" diffuse="elements/circle-mask.png">$INFO[Container(50).ListItem.Icon]</texture>
-					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				</control>
-			</control>
-			
-			<control type="label" description="Video Title Header">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>$VAR[ContentNameLabel]</label>
-			</control>
-			
-			<control type="list" description="Video Information List">
+			<control type="list" id="22">
+                <description>Video Information List</description>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
-				<height>240</height>
+				<height>200</height>
 				<itemgap>0</itemgap>
+				<pagecontrol>23</pagecontrol>
 				
 				<include>ItemsForInfoListInDialog</include>
 				
 				<content>
-					<item description="Year Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Year)</visible>
 						<label>$LOCALIZE[172]</label>
 						<label2>$INFO[ListItem.Year]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Duration Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 						<label>$LOCALIZE[180]</label>
 						<label2>$INFO[ListItem.Duration] $LOCALIZE[31901]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Genre Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Genre)</visible>
 						<label>$LOCALIZE[515]</label>
 						<label2>$INFO[ListItem.Genre]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="MPAA Rating Label">
+					<item>
 						<visible>!IsEmpty(ListItem.MPAA)</visible>
 						<label>$LOCALIZE[20074]</label>
 						<label2>$INFO[ListItem.MPAA]</label2>
 						<onclick>Noop</onclick>
 					</item>
-					<item description="Rating Label">
+					<item>
 						<visible>!IsEmpty(ListItem.Rating)</visible>
 						<label>$LOCALIZE[563]</label>
 						<label2>$INFO[ListItem.Rating]</label2>
@@ -86,38 +71,51 @@
 				</content>
 			</control>
 			
-			<control type="group" description="Video Details Icons">
+			<control type="scrollbar" id="23">
+                <description>Video Information Scrollbar</description>
+				<visible>Control.IsVisible(22)</visible>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="200" />
+                </include>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="group">
+                <description>Video Details Icons</description>
 				<posx>560</posx>
-				<posy>320</posy>
+				<posy>280</posy>
 				<include>HorizontalDialogListOfContentMediaFlag</include>
 			</control>
 
-			<control type="textbox" id="4" description="Plot">
-				<posx>560</posx>
-				<posy>400</posy>
-				<width>1240</width>
-				<height>280</height>
-				<font>DescriptionFont</font>
-				<align>left</align>
-                <pagecontrol>61</pagecontrol>
+			<control type="textbox" id="4">
+                <description>Plot</description>
+                <include name="MarkupForTextboxForDialog">
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
+                    <param name="pagecontrol" value="61" />
+                </include>
 			</control>
 
 			<control type="scrollbar" id="61">
 				<visible>!Control.IsVisible(50)</visible>
-                <posy>400</posy>
-				<height>280</height>
-				<include>MarkupForScrollbarForDialog</include>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
+                </include>
 				<onleft>9000</onleft>
 				<onright>Noop</onright>
 				<ondown>61</ondown>
 				<onup>61</onup>
 			</control>
             
-			<control type="list" id="50" description="Cast List">
+			<control type="list" id="50">
+                <description>Cast List</description>
 				<posx>560</posx>
-				<posy>400</posy>
+				<posy>360</posy>
 				<width>1240</width>
-				<height>280</height>
+				<height>320</height>
                 <pagecontrol>51</pagecontrol>
 				<orientation>vertical</orientation>
 				<scrolltime>200</scrolltime>
@@ -144,9 +142,10 @@
             
 			<control type="scrollbar" id="51">
 				<visible>Control.IsVisible(50)</visible>
-                <posy>400</posy>
-				<height>280</height>
-				<include>MarkupForScrollbarForDialog</include>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
+                </include>
 				<onleft>50</onleft>
 				<onright>Noop</onright>
 				<ondown>51</ondown>
@@ -154,45 +153,47 @@
 			</control>
 			
 			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>400</posy>
-				<width>480</width>
-				<height>280</height>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onleft>Noop</onleft>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="320" />
+                    <param name="height" value="360" />
+                </include>
 				<onright condition="Control.IsVisible(50)">50</onright>
 				<onright condition="!Control.IsVisible(50)">61</onright>
 
-				<control type="button" id ="5" description="Plot/Cast Button">
+				<control type="button" id="5">
+                    <description>Plot/Cast Button</description>
 					<label>$LOCALIZE[206]</label>
 				</control>
-
-				<control type="button" id ="6" description="Refresh Button">
+				<control type="button" id="6">
+                    <description>Refresh Button</description>
 					<label>$LOCALIZE[184]</label>
 				</control>
-
-				<control type="button" id ="8" description="Play Button">
+				<control type="button" id="8">
+                    <description>Play Button</description>
 					<label>$LOCALIZE[208]</label>
 				</control>
-
-				<control type="button" id ="9" description="Resume Button">
+				<control type="button" id="9">
+                    <description>Resume Button</description>
 					<label>$LOCALIZE[13404]</label>
 				</control>
-
-				<control type="button" id ="10" description="Choose Art Button">
+				<control type="button" id="10">
+                    <description>Choose Art Button</description>
 					<label>$LOCALIZE[13511]</label>
 				</control>
-
-				<control type="button" id="11" description="Trailer Button">
+				<control type="button" id="11">
+                    <description>Trailer Button</description>
 					<label>$LOCALIZE[20410]</label>
 				</control>
-				
-				<control type="button" id="13" description="Movies By Director Button">
+				<control type="button" id="13">
+                    <description>Movies By Director Button</description>
 					<label>$LOCALIZE[31409]</label>
 				</control>
+                <control type="button" id="21">
+                    <description>Ok Button</description>
+                    <posy>40</posy>
+                    <label>$LOCALIZE[186]</label>
+                    <onclick>Close</onclick>
+                </control>
 			</control>
 		</control>
 	</controls>
