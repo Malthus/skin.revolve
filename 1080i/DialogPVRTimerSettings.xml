@@ -6,27 +6,19 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForTenLinesDialog</posy>
-			<include name="TenLinesDialog" />
-		
-            <include name="DefaultIconForDialog">
-                <param name="texture" value="icons/icon-clock.png" />
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForTenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[19065]" />
+                <param name="icontexture" value="icons/icon-clock.png" />
             </include>
 
-            <include name="HeaderForDialog">
-                <param name="label" value="$LOCALIZE[19065]" />
+            <include name="ControlListForDialog">
+                <param name="id" value="5" />
+                <param name="posy" value="80" />
+                <param name="height" value="400" />
+                <param name="onup" value="5" />
+                <param name="ondown" value="5" />
             </include>
-
-			<control type="grouplist" id="5">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>400</height>
-				<itemgap>0</itemgap>
-				<onup>5</onup>
-				<ondown>5</ondown>
-				<onleft>9000</onleft>
-				<onright>Noop</onright>
-			</control>
 
             <include name="DefaultControlsForDialog" />
             

@@ -6,36 +6,19 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value ="$INFO[ListItem.Label]" />
+                <param name="icontexture" value ="icons/icon-television.png" />
+            </include>
 
-			<control type="group" description="Television Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-television.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-
-			<control type="label" description="PVR Guide Info Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<align>left</align>
-				<label fallback="19047">$INFO[ListItem.Label]</label>
-			</control>
-			
-			<control type="list" id="49" description="Program Information List">
+			<control type="list" id="49">
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
 				<height>200</height>
 				<itemgap>0</itemgap>
+                <pagecontrol>60</pagecontrol>
 				
 				<include>ItemsForLabelList</include>
 				
@@ -94,52 +77,48 @@
 				</content>
 			</control>
 			
-			<control type="textbox" description="Plot Text Box">
-				<posx>560</posx>
-				<posy>320</posy>
-				<width>1240</width>
-				<height>280</height>
-				<font>DescriptionFont</font>
-				<align>left</align>
-				<label>$INFO[ListItem.Plot]</label>
-			</control>
-			
-			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>480</posy>
-				<itemgap>0</itemgap>
-				<orientation>vertical</orientation>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onleft>Noop</onleft>
+			<control type="scrollbar" id="60">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="200" />
+                </include>
+				<onleft>9000</onleft>
 				<onright>Noop</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+            
+            <include name="TextboxForDialog">
+                <param name="textboxid" value="4" />
+                <param name="scrollbarid" value="61" />
+                <param name="posy" value="320" />
+                <param name="height" value="280" />
+                <param name="label" value="$INFO[ListItem.Plot]" />
+                <param name="onup" value="60" />
+                <param name="ondown" value="60" />
+                <param name="onleft" value="9000" />
+            </include>
+            
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="480" />
+                    <param name="height" value="120" />
+                </include>
+				<onright>61</onright>
 
-				<control type="button" id="5" description="Play Button">
-					<label>19165</label>
+				<control type="button" id="5">
+                    <description>Play Button</description>
+					<label>$LOCALIZE[19165]</label>
 				</control>
-				<control type="button" id="6" description="Record Button">
+				<control type="button" id="6">
+                    <description>Record Button</description>
 					<label>-</label>
 				</control>
-				<control type="button" id="7" description="Close Button">
-					<label>186</label>
+				<control type="button" id="7">
+                    <description>Close Button</description>
+					<label>$LOCALIZE[31915]</label>
 				</control>
 			</control>
-			
-<!--
-      <control type="label" description="Clock other windows">
-        <posx>30r</posx>
-        <posy>3</posy>
-        <width>195</width>
-        <height>75</height>
-        <align>right</align>
-        <aligny>center</aligny>
-        <font>size19</font>
-        <textcolor>White</textcolor>
-        <label>$INFO[System.Time]</label>
-      </control>
-    </control>
-  </controls>
--->			
 		</control>
 	</controls>
 </window>

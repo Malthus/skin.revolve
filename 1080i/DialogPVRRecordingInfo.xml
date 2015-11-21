@@ -6,38 +6,20 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$VAR[ContentNameLabel]" />
+                <param name="icontexture" value="icons/icon-clapperboard.png" />
+            </include>
 
-			<control type="group" description="Clapperboard Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-clapperboard.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-			
-			<control type="label" description="PVR Recording Title Header">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label fallback="19053">$VAR[ContentNameLabel]</label>
-			</control>
-
-			<control type="list" id="49" description="Program Information List">
+			<control type="list" id="49">
+                <description>Program Information List</description>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
 				<height>200</height>
 				<itemgap>0</itemgap>
+                <pagecontrol>60</pagecontrol>
 				
 				<include>ItemsForLabelList</include>
 				
@@ -72,29 +54,39 @@
 				</content>
 			</control>
 		
-			<control type="textbox" id="400" description="Plot Text Box">
-				<visible>!IsEmpty(ListItem.Plot)</visible>
-				<posx>560</posx>
-				<posy>320</posy>
-				<width>1240</width>
-				<height>280</height>
-				<font>DescriptionFont</font>
-				<align>left</align>
-				<label>$INFO[ListItem.Plot]</label>
+			<control type="scrollbar" id="60">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="200" />
+                </include>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
 			</control>
+            
+            <include name="TextboxForDialog">
+                <param name="textboxid" value="4" />
+                <param name="scrollbarid" value="61" />
+                <param name="posy" value="320" />
+                <param name="height" value="280" />
+                <param name="label" value="$INFO[ListItem.Plot]" />
+                <param name="onup" value="60" />
+                <param name="ondown" value="60" />
+                <param name="onleft" value="9000" />
+            </include>
 			
 			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>560</posy>
-				<itemgap>0</itemgap>
-				<orientation>vertical</orientation>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onleft>Noop</onleft>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="560" />
+                    <param name="height" value="40" />
+                </include>
+                <onleft>61</onleft>
 				<onright>Noop</onright>
 
-				<control type="button" id="10" description="OK Button">
-					<label>186</label>
+				<control type="button" id="10">
+                    <description>OK Button</description>
+					<label>$LOCALIZE[186]</label>
 				</control>
 			</control>
 		</control>
