@@ -6,44 +6,34 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFullWindowDialog</posy>
-			<include>FullWindowDialog</include>
+			<include name="FullWindowDialog" />
 		
-			<control type="group" description="Television Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
+            <include name="DefaultIconForDialog">
+                <param name="texture" value ="icons/icon-television.png" />
+            </include>
 
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-television.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-
-			<control type="label" description="Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<align>left</align>
+			<control type="label">
+                <include name="MarkupForHeaderForDialog" />
 				<label>$LOCALIZE[19199]</label>
 			</control>
 
-			<control type="group" description="Dialog Thumbnail Icon">
+			<control type="group">
+                <description>Dialog Thumbnail Icon</description>
 				<posx>1400</posx>
 				<posy>320</posy>
 				<include>DefaultCircleThumbnailIcon</include>
 			</control>
 
-			<control type="group" description="List With Channels And Border Around List">
+			<control type="group">
+                <description>List With Channels And Border Around List</description>
 				<control type="group">
 					<posx>560</posx>
 					<posy>80</posy>
 					<include>TitledFullListFrameForDialog</include>
 				</control>
 				
-				<control type="label" description="Channels List Label">
+				<control type="label">
+                    <description>Channels List Label</description>
 					<posx>580</posx>
 					<posy>90</posy>
 					<width>680</width>
@@ -53,7 +43,8 @@
 					<label>$LOCALIZE[19019]</label>
 				</control>
 
-				<control type="list" id="20" description="Channels List Control">
+				<control type="list" id="20">
+                    <description>Channels List Control</description>
 					<posx>566</posx>
 					<posy>140</posy>
 					<width>608</width>
@@ -80,11 +71,13 @@
 				</control>
 			</control>
 			
-			<control type="group" id="9002" description="Control Area">
+			<control type="group" id="9002">
+                <description>Control Area</description>
 				<posx>1200</posx>
 				<posy>80</posy>
 				
-				<control type="radiobutton" id="7" description="Channel Activation Radiobutton">
+				<control type="radiobutton" id="7">
+                    <description>Channel Activation Radiobutton</description>
 					<posy>0</posy>
 					<width>600</width>
 					<radioposx>540</radioposx>
@@ -96,7 +89,8 @@
 					<onright>Noop</onright>
 				</control>
 
-				<control type="edit" id="8" description="Channel Name Edit Box">
+				<control type="edit" id="8">
+                    <description>Channel Name Edit Box</description>
 					<posy>40</posy>
 					<width>600</width>
 					<align>left</align>
@@ -107,7 +101,8 @@
 					<onright>Noop</onright>
 				</control>
 
-				<control type="button" id="9" description="Channel Logo Button">
+				<control type="button" id="9">
+                    <description>Channel Logo Button</description>
 					<posy>80</posy>
 					<width>600</width>
 					<align>left</align>
@@ -118,7 +113,8 @@
 					<onright>Noop</onright>
 				</control>
 
-				<control type="radiobutton" id="12" description="Channel EPG Activation Radiobutton">
+				<control type="radiobutton" id="12">
+                    <description>Channel EPG Activation Radiobutton</description>
 					<posy>120</posy>
 					<width>600</width>
 					<radioposx>540</radioposx>
@@ -130,7 +126,8 @@
 					<onright>Noop</onright>
 				</control>
 
-				<control type="spincontrolex" id="13" description="EPG Source Spinner">
+				<control type="spincontrolex" id="13">
+                    <description>EPG Source Spinner</description>
 					<posy>160</posy>
 					<width>600</width>
 					<align>left</align>
@@ -142,64 +139,40 @@
 				</control>
 			</control>
 			
-			<control type="button" id="31" description="New Channel Button">
-				<posx>40</posx>
-				<posy>400</posy>
-				<label>$LOCALIZE[19204]</label>
-				<onup>6</onup>
-				<ondown>34</ondown>
-				<onleft>Noop</onleft>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="600" />
+                    <param name="height" value="320" />
+                </include>
 				<onright>20</onright>
-			</control>
-			
-			<control type="togglebutton" id="34" description="Radio / TV Toggle Button">
-				<posx>40</posx>
-				<posy>560</posy>
-				<label>$LOCALIZE[19023]</label>
-				<altlabel>$LOCALIZE[19024]</altlabel>
-				<onup>31</onup>
-				<ondown>30</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
-			</control>
-			<control type="button" id="30" description="Group Management Button">
-				<posx>40</posx>
-				<posy>600</posy>
-				<label>$LOCALIZE[19143]</label>
-				<onup>34</onup>
-				<ondown>4</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
-			</control>
-			
-			<control type="button" id="4" description="Ok Button">
-				<posx>40</posx>
-				<posy>760</posy>
-				<label>$LOCALIZE[186]</label>
-				<onup>30</onup>
-				<ondown>5</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
-			</control>
 
-			<control type="button" id="5" description="Apply Button">
-				<posx>40</posx>
-				<posy>800</posy>
-				<label>$LOCALIZE[732]</label>
-				<onup>4</onup>
-				<ondown>6</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
-			</control>
-
-			<control type="button" id="6" description="Cancel Button">
-				<posx>40</posx>
-				<posy>840</posy>
-				<label>$LOCALIZE[222]</label>
-				<onup>5</onup>
-				<ondown>31</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
+                <control type="button" id="31">
+                    <description>New Channel Button</description>
+                    <label>$LOCALIZE[19204]</label>
+                </control>
+                <control type="togglebutton" id="34">
+                    <description>Radio / TV Toggle Button</description>
+                    <posy>40</posy>
+                    <label>$LOCALIZE[19023]</label>
+                    <altlabel>$LOCALIZE[19024]</altlabel>
+                </control>
+                <control type="button" id="30">
+                    <description>Group Management Button</description>
+                    <label>$LOCALIZE[19143]</label>
+                </control>
+                <control type="button" id="4">
+                    <description>Ok Button</description>
+                    <posy>40</posy>
+                    <label>$LOCALIZE[186]</label>
+                </control>
+                <control type="button" id="5">
+                    <description>Apply Button</description>
+                    <label>$LOCALIZE[732]</label>
+                </control>
+                <control type="button" id="6">
+                    <description>Cancel Button</description>
+                    <label>$LOCALIZE[222]</label>
+                </control>
 			</control>
 		</control>
 	</controls>
