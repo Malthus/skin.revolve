@@ -80,6 +80,7 @@
 	</include>
 
 	<include name="ThinOutlineLabel">
+        <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -110,7 +111,7 @@
                 <param name="label" value="$PARAM[label]" />
             </include>
         
-            <control type="label">
+            <control type="label" id="$PARAM[id]">
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>$PARAM[width]</width>
@@ -207,6 +208,7 @@
 	</include>
 
 	<include name="NormalOutlineLabel">
+        <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -237,7 +239,7 @@
                 <param name="label" value="$PARAM[label]" />
             </include>
         
-            <control type="label">
+            <control type="label" id="$PARAM[id]">
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>$PARAM[width]</width>
@@ -253,7 +255,7 @@
             </control>
         </definition>
 	</include>
-    
+
 	<include name="DialogWindow">
         <param name="height" default="220" />
     
