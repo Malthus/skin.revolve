@@ -6,54 +6,23 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerid" value ="2" />
+                <param name="iconsize" value ="Default" />
+                <param name="iconthumbnail" value ="logos/rsseditor.png" />
+            </include>
 
-			<control type="group" description="Editor Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-
-				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
-					<width>262</width>
-					<height>262</height>
-					<texture diffuse="elements/circle-mask.png" background="true">logos/rsseditor.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
-
-			<control type="label" id="2" description="Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>-</label>
-			</control>
+            <include name="LabelForDialog">
+                <param name="id" value="3" />
+			</include>
 			
-			<control type="label" id="3" description="Instruction Label">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTextFont</font>
-				<textcolor>TextColor</textcolor>
-				<align>left</align>
-				<label>-</label>
-			</control>
-			
-			<control type="list" id="10" description="Control Area">
-				<posx>560</posx>
-				<posy>120</posy>
-				<width>1240</width>
-				<height>440</height>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
+			<control type="list" id="10">
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="440" />
+                    <param name="pagecontrol" value="60" />
+                </include>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 
@@ -73,44 +42,42 @@
 				</focusedlayout>
 			</control>
 			
-			<control type="scrollbar" id="60" description="RSS Feed List Scrollbar">
+			<control type="scrollbar" id="60">
 				<visible>Control.IsVisible(10)</visible>
-				<posy>120</posy>
-				<height>440</height>
-				<include>MarkupForScrollbarForDialog</include>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="440" />
+                </include>
 				<onleft>10</onleft>
 				<onright>Noop</onright>
 			</control>
 
 			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>360</posy>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
-				<usecontrolcoords>true</usecontrolcoords>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onleft>Noop</onleft>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="360" />
+                    <param name="height" value="240" />
+                </include>
 				<onright>10</onright>
 
-				<control type="button" id="11" description="Change Set Button">
+				<control type="button" id="11">
+                    <description>Change Set Button</description>
 					<label>-</label>
 				</control>
-				
-				<control type="button" id="13" description="Add Button">
+				<control type="button" id="13">
+                    <description>Add Button</description>
 					<label>$LOCALIZE[15019]</label>
 				</control>
-				
-				<control type="button" id="14" description="Remove Button">
+				<control type="button" id="14">
+                    <description>Remove Button</description>
 					<label>$LOCALIZE[1210]</label>
 				</control>
-				
-				<control type="button" id="18" description="Ok Button">
+				<control type="button" id="18">
+                    <description>Ok Button</description>
 					<posy>40</posy>
 					<label>$LOCALIZE[186]</label>
 				</control>
-
-				<control type="button" id="19" description="Cancel Button">
+				<control type="button" id="19">
+                    <description>Cancel Button</description>
 					<label>$LOCALIZE[222]</label>
 				</control>
 			</control>
