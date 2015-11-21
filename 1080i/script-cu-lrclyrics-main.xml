@@ -5,35 +5,13 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
-			<include>FifteenLinesDialog</include>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForFifteenLinesDialog" />
+                <param name="headerlabel" value ="$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Title]" />
+                <param name="iconthumbnail" value ="logos/culrclyrics.png" />
+            </include>
 
-			<control type="group" description="Editor Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-
-				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
-					<width>262</width>
-					<height>262</height>
-					<texture diffuse="elements/circle-mask.png" background="true">logos/culrclyrics.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
-
-			<control type="label" description="Artist And Song Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<height>40</height>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Title]</label>
-			</control>
-
-			<control type="list" id="110" description="Smooth Scrolling Lyrics List">
+			<control type="list" id="110">
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
@@ -61,7 +39,7 @@
 				</focusedlayout>
 			</control>
 
-			<control type="scrollbar" id="111" description="Lyrics Scrollbar">
+			<control type="scrollbar" id="111">
 				<visible>Control.IsVisible(110)</visible>
 				<posy>80</posy>
 				<height>600</height>
@@ -70,7 +48,8 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="label" id="2" description="Pick Label">
+			<control type="label" id="2">
+                <description>Pick Label</description>
 				<visible>Control.IsVisible(120) + !Control.IsVisible(110)</visible>
 				<posx>560</posx>
 				<posy>80</posy>
@@ -83,7 +62,8 @@
 				<label>$LOCALIZE[31203]</label>
 			</control>
 			
-			<control type="list" id="120" description="Song Chooser List">
+			<control type="list" id="120">
+                <description>Song Chooser List</description>
 				<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
 				<posx>560</posx>
 				<posy>120</posy>
@@ -112,7 +92,7 @@
 				</focusedlayout>
 			</control>
 			
-			<control type="scrollbar" id="121" description="Song Chooser Scrollbar">
+			<control type="scrollbar" id="121">
 				<visible>Control.IsVisible(120)</visible>
 				<posy>120</posy>
 				<height>560</height>
@@ -121,21 +101,10 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="label" description="CU LRC Lyrics Label">
+			<control type="label" id="200">
+                <description>Lyrics Source Label</description>
 				<posx>40</posx>
 				<posy>300</posy>
-				<width>480</width>
-				<height>40</height>
-				<font>DialogTextFont</font>
-				<textcolor>TextColor</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$ADDON[script.cu.lrclyrics 32199]</label>
-			</control>
-			
-			<control type="label" id="200" description="Scraper Label">
-				<posx>40</posx>
-				<posy>340</posy>
 				<width>480</width>
 				<height>40</height>
 				<font>DialogTextFont</font>
@@ -145,12 +114,30 @@
 				<label>-</label>
 			</control>
 			
-			<control type="group" description="Player Controls">
-				<posx>PosXForDialogCircleControlsForPlayerControl</posx>
-				<posy>PosYForDialogCircleControlsForPlayerControl</posy>
+			<control type="group">
 				<include name="CircleControlsForPlayerControl">
+                    <param name="posx" value="145" />
+                    <param name="posy" value="360" />
+                    <param name="onup" value="9000" />
+                    <param name="ondown" value="9000" />
                     <param name="onright" value="110" />
                 </include>
+			</control>
+            
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="640" />
+                    <param name="height" value="40" />
+                </include>
+				<onup>9010</onup>
+				<ondown>9010</ondown>
+				<onright>110</onright>
+
+				<control type="button" id="7">
+                    <description>Close Button</description>
+					<label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+				</control>
 			</control>
 		</control>
 	</controls>

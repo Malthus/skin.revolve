@@ -282,11 +282,11 @@
 		</control>
     </include>
     
-	<constant name="PosXForDialogCircleControlsForPlayerControl">145</constant>
-	<constant name="PosYForDialogCircleControlsForPlayerControl">400</constant>
 	<constant name="PosXForSideMenuCircleControlsForPlayerControl">120</constant>
 	<constant name="PosYForSideMenuCircleControlsForPlayerControl">490</constant>
 	<include name="CircleControlsForPlayerControl">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
         <param name="onup" default="9001" />
         <param name="ondown" default="9001" />
         <param name="onleft" default="Noop" />
@@ -294,8 +294,8 @@
     
         <definition>
             <control type="group" id="9010">
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
                 <width>270</width>
                 <height>270</height>
                 <onup>$PARAM[onup]</onup>
@@ -399,14 +399,21 @@
 	</include>
 
 	<include name="DescriptionForControlsForPlayerControl">
-        <include name="NormalOutlineLabel">
-            <param name="width" value="520" />
-            <param name="height" value="20" />
-            <param name="font" value="DefaultInformationFont" />
-            <param name="textcolor" value="BackgroundColor" />
-            <param name="outlinecolor" value="MainColor" />
-            <param name="align" value="center" />
-            <param name="label" value="$INFO[System.CurrentControl]" />
-        </include>
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        
+        <definition>
+            <include name="NormalOutlineLabel">
+                <param name="posx" value="$PARAM[posx]" />
+                <param name="posy" value="$PARAM[posy]" />
+                <param name="width" value="520" />
+                <param name="height" value="20" />
+                <param name="font" value="DefaultInformationFont" />
+                <param name="textcolor" value="BackgroundColor" />
+                <param name="outlinecolor" value="MainColor" />
+                <param name="align" value="center" />
+                <param name="label" value="$INFO[System.CurrentControl]" />
+            </include>
+        </definition>
 	</include>
 </includes>
