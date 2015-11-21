@@ -8,43 +8,23 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="ThirteenLinesDialog" />
 
-			<control type="group" description="Editor Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-				
-				<control type="image">
-				    <posx>4</posx>
-				    <posy>4</posy>
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-pencil.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
+            <include name="DefaultIconForDialog">
+                <param name="texture" value="icons/icon-pencil.png" />
+            </include>
 			
-			<control type="label" description="Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<align>left</align>
-				<label>$LOCALIZE[31800]</label>
-			</control>
-			
-			<control type="label" description="Custom Option Appearance Label">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<font>DialogTextFont</font>
-                <textcolor>TextColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[480]:</label>
-			</control>
+            <include name="HeaderForDialog">
+                <param name="label" value="$LOCALIZE[31800]" />
+            </include>
 
-			<control type="button" id="30" description="Name For Custom Option Button">
+            <include name="LabelForDialog">
+                <param name="posy" value="80" />
+                <param name="label" value="$LOCALIZE[480]:" />
+            </include>
+
+			<control type="button" id="30">
+                <description>Name For Custom Option Button</description>
 				<posx>560</posx>
 				<posy>120</posy>
 				<width>1240</width>
@@ -61,7 +41,8 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
 			</control>
 
-			<control type="button" id="31" description="Subtitle For Custom Option Button">
+			<control type="button" id="31">
+                <description>Subtitle For Custom Option Button</description>
 				<posx>560</posx>
 				<posy>160</posy>
 				<width>1240</width>
@@ -78,7 +59,8 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
 			</control>
 
-			<control type="button" id="32" description="Background Image For Custom Option Button">
+			<control type="button" id="32">
+                <description>Background Image For Custom Option Button</description>
 				<posx>560</posx>
 				<posy>200</posy>
 				<width>1240</width>
@@ -94,15 +76,10 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
 			</control>
 
-			<control type="label" description="Custom Option Action Label">
-				<posx>560</posx>
-				<posy>280</posy>
-				<width>1240</width>
-				<font>DialogTextFont</font>
-                <textcolor>TextColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[31906]:</label>
-			</control>
+            <include name="LabelForDialog">
+                <param name="posy" value="280" />
+                <param name="label" value="$LOCALIZE[31906]:" />
+            </include>
 
 			<control type="group">
                 <posx>560</posx>
@@ -122,7 +99,8 @@
 				</control>
             </control>
 
-            <control type="group" description="Custom Static Item Label">
+            <control type="group">
+                <description>Custom Static Item Label</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),S)</visible>
                 <posx>580</posx>
                 <posy>320</posy>
@@ -145,7 +123,8 @@
                 </control>
             </control>
 
-            <control type="group" description="Custom Dynamic Item Item Label">
+            <control type="group">
+                <description>Custom Dynamic Item Item Label</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),D)</visible>
                 <posx>580</posx>
                 <posy>320</posy>
@@ -168,7 +147,8 @@
                 </control>
             </control>
 
-            <control type="group" description="Custom Action Label">
+            <control type="group">
+                <description>Custom Action Label</description>
                 <visible>!StringCompare(Window.Property(CustomOptionType),S) + !StringCompare(Window.Property(CustomOptionType),D)</visible>
                 <posx>580</posx>
                 <posy>320</posy>
@@ -191,7 +171,8 @@
                 </control>
             </control>
 
-			<control type="button" id="34" description="Next Predefined Option Type Button">
+			<control type="button" id="34">
+                <description>Next Predefined Option Type Button</description>
 				<posx>1700</posx>
 				<posy>320</posy>
 				<width>40</width>
@@ -207,7 +188,8 @@
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,S)</onclick>
 			</control>
 			
-			<control type="button" id="35" description="Previous Predefined Option Type Button">
+			<control type="button" id="35">
+                <description>Previous Predefined Option Type Button</description>
 				<posx>1740</posx>
 				<posy>320</posy>
 				<width>40</width>
@@ -223,7 +205,8 @@
 				<onclick condition="StringCompare(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,D)</onclick>
 			</control>
 
-			<control type="button" id="36" description="Menu/Window Title For Custom Option Button">
+			<control type="button" id="36">
+                <description>Menu/Window Title For Custom Option Button</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),S) | StringCompare(Window.Property(CustomOptionType),D)</visible>
 				<posx>560</posx>
 				<posy>400</posy>
@@ -241,7 +224,8 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
 			</control>
 
-			<control type="button" id="37" description="Source Description For Custom Option Button">
+			<control type="button" id="37">
+                <description>Source Description For Custom Option Button</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),S)</visible>
 				<posx>560</posx>
 				<posy>440</posy>
@@ -259,7 +243,8 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
 			</control>
 
-			<control type="button" id="38" description="Source Description For Custom Dynamic Items Button">
+			<control type="button" id="38">
+                <description>Source Description For Custom Dynamic Items Button</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),D)</visible>
 				<posx>560</posx>
 				<posy>440</posy>
@@ -277,17 +262,13 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
 			</control>
 
-            <control type="label" description="Custom Command Label">
-                <posx>560</posx>
-                <posy>520</posy>
-                <width>1240</width>
-                <font>DialogTextFont</font>
-                <textcolor>TextColor</textcolor>
-                <align>left</align>
-                <label>$LOCALIZE[31910]:</label>
-            </control>
+            <include name="LabelForDialog">
+                <param name="posy" value="520" />
+                <param name="label" value="$LOCALIZE[31910]:" />
+            </include>
 
-            <control type="button" id="40" description="Custom Static Items Action Button">
+            <control type="button" id="40">
+                <description>Custom Static Items Action Button</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),S)</visible>
                 <enable>false</enable>
                 <posx>560</posx>
@@ -300,7 +281,8 @@
                 <ondown>30</ondown>
             </control>
 
-            <control type="button" id="40" description="Custom Dynamic Items Action Button">
+            <control type="button" id="40">
+                <description>Custom Dynamic Items Action Button</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),D)</visible>
                 <enable>false</enable>
                 <posx>560</posx>
@@ -313,7 +295,8 @@
                 <ondown>30</ondown>
             </control>
 
-            <control type="button" id="40" description="Custom Option Action Button">
+            <control type="button" id="40">
+                <description>Custom Option Action Button</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),A)</visible>
                 <posx>560</posx>
                 <posy>560</posy>
@@ -331,22 +314,17 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
             </control>
 
-			<control type="group" id="9000">
-                <defaultcontrol>22</defaultcontrol>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onleft>Noop</onleft>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="320" />
+                    <param name="height" value="280" />
+                </include>
 				<onright>34</onright>
 
-				<control type="button" id="23" description="Choose Items Button">
+				<control type="button" id="23">
+                    <description>Choose Items Button</description>
                     <visible>StringCompare(Window.Property(CustomOptionType),S) | StringCompare(Window.Property(CustomOptionType),D)</visible>
-                    <posx>40</posx>
-                    <posy>320</posy>
 					<label>$LOCALIZE[31807]</label>
-                    <onup>21</onup>
-                    <ondown>22</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
 					<onclick>SetProperty(TargetType,CustomOptionType,1193)</onclick>
 					<onclick>SetProperty(TargetMenuTitle,CustomMenuTitle,1193)</onclick>
 					<onclick>SetProperty(TargetSourceInfo,CustomSourceInfo,1193)</onclick>
@@ -354,16 +332,10 @@
 					<onclick>SetProperty(TargetWindow,1195,1193)</onclick>
 					<onclick>ActivateWindow(1193)</onclick>
 				</control>
-
-				<control type="button" id="22" description="Create Command Button">
+				<control type="button" id="22">
+                    <description>Create Command Button</description>
                     <visible>StringCompare(Window.Property(CustomOptionType),A)</visible>
-                    <posx>40</posx>
-                    <posy>320</posy>
 					<label>$LOCALIZE[31808]</label>
-                    <onup>23</onup>
-                    <ondown>25</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
 					<onclick>SetProperty(TargetType,CustomOptionType,1191)</onclick>
 					<onclick>SetProperty(TargetMenuTitle,CustomMenuTitle,1191)</onclick>
 					<onclick>SetProperty(TargetSourceInfo,CustomSourceInfo,1191)</onclick>
@@ -371,15 +343,9 @@
 					<onclick>SetProperty(TargetWindow,1195,1191)</onclick>
 					<onclick>ActivateWindow(1191)</onclick>
 				</control>
-
-				<control type="button" id="25" description="Clear Button">
-                    <posx>40</posx>
-                    <posy>360</posy>
+				<control type="button" id="25">
+                    <description>Clear Button</description>
 					<label>$LOCALIZE[192]</label>
-                    <onup>22</onup>
-                    <ondown>26</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
 					<onclick>ClearProperty(CustomOptionName)</onclick>
 					<onclick>ClearProperty(CustomSubtitle)</onclick>
 					<onclick>ClearProperty(CustomBackgroundImage)</onclick>
@@ -388,27 +354,17 @@
 					<onclick>ClearProperty(CustomSourceInfo)</onclick>
 					<onclick>ClearProperty(CustomAction)</onclick>
 				</control>
-                
-				<control type="radiobutton" id="26" description="Help Radiobutton">
-                    <posx>40</posx>
-                    <posy>440</posy>
+				<control type="radiobutton" id="26">
+                    <description>Help Radiobutton</description>
+                    <posy>40</posy>
 					<label>$LOCALIZE[10043]</label>
-                    <onup>25</onup>
-                    <ondown>20</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
                     <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
 					<onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
 				</control>
-                
-				<control type="button" id="20" description="Ok Button">
-                    <posx>40</posx>
-                    <posy>520</posy>
+				<control type="button" id="20">
+                    <description>Ok Button</description>
+                    <posy>40</posy>
 					<label>$LOCALIZE[186]</label>
-                    <onup>26</onup>
-                    <ondown>21</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomOptionName)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
@@ -422,27 +378,21 @@
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Control.GetLabel(40)])</onclick>
 					<onclick>Close</onclick>
 				</control>
-
-				<control type="button" id="21" description="Cancel Button">
-                    <posx>40</posx>
-                    <posy>560</posy>
+				<control type="button" id="21">
+                    <description>Cancel Button</description>
 					<label>$LOCALIZE[222]</label>
-                    <onup>20</onup>
-                    <ondown>23</ondown>
-                    <onleft>Noop</onleft>
-                    <onright>34</onright>
 					<onclick>Close</onclick>
 				</control>
 			</control>
             
-            <control type="group" description="Help Textbox">
+            <control type="group">
                 <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
                 <posx>40</posx>
                 <posy>20</posy>
             
-                <include>DefaultHelpFrameForDialog</include>
+                <include>HelpFrameForDialog</include>
             
-                <control type="group" description="Settings Description Textbox">
+                <control type="group">
                     <posx>20</posx>
                     <posy>20</posy>
                     <width>440</width>
