@@ -24,7 +24,7 @@
 				<pagecontrol>21</pagecontrol>
 				<onup>3</onup>
 				<ondown>3</ondown>
-				<onleft>5</onleft>
+				<onleft>9000</onleft>
 				<onright>21</onright>
 
 				<itemlayout height="40">
@@ -52,7 +52,7 @@
 				<pagecontrol>22</pagecontrol>
 				<onup>6</onup>
 				<ondown>6</ondown>
-				<onleft>5</onleft>
+				<onleft>9000</onleft>
 				<onright>22</onright>
 				
 				<itemlayout height="100">
@@ -114,6 +114,12 @@
                 <control type="button" id="5">
                     <description>Manual Search/Get More Button</description>
                     <label>$LOCALIZE[368]</label>
+                </control>
+                <control type="image" id="8">
+                    <description>Spacer Image</description>
+                    <visible>!Control.IsVisible(5)</visible>
+                    <height>40</height>
+                    <texture>-</texture>
                 </control>
                 <control type="button" id="9">
                     <description>Close Button</description>
