@@ -1,5 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="MarkupForButtonListForDialog">
+        <param name="posy" default="320" />
+        <param name="height" default="-" />
+    
+        <definition>
+			<posx>40</posx>
+			<posy>$PARAM[posy]</posy>
+			<width>480</width>
+			<height>$PARAM[height]</height>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+            <usecontrolcoords>true</usecontrolcoords>
+        </definition>
+    </include>
+
+    <include name="MarkupForListForDialog">
+        <param name="posy" default="80" />
+        <param name="height" default="-" />
+    
+        <definition>
+			<posx>560</posx>
+			<posy>$PARAM[posy]</posy>
+			<width>1240</width>
+			<height>$PARAM[height]</height>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+        </definition>
+    </include>
+    
+	<include name="MarkupForScrollbarForDialog">
+        <param name="posy" default="0" />
+        <param name="height" default="0" />
+    
+        <definition>
+            <posx>1840</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>20</width>
+            <height>$PARAM[height]</height>
+            <texturesliderbackground border="0,14,0,14" colordiffuse="MainColor">controls/horizontalbar-thick.png</texturesliderbackground>
+            <texturesliderbar border="0,14,0,14" colordiffuse="FadeDiffuseColor">controls/horizontalbar-thin.png</texturesliderbar>
+            <texturesliderbarfocus border="0,14,0,14" colordiffuse="BackgroundColor">controls/horizontalbar-thin.png</texturesliderbarfocus>
+            <orientation>vertical</orientation>
+            <showonepage>false</showonepage>
+        </definition>
+	</include>
+
+    <include name="LabelForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="80" />
+        <param name="label" default="-" />
+    
+        <definition>
+   			<control type="label" id="$PARAM[id]">
+                <include name="MarkupForLabelForDialog">
+                    <param name="posy" value="$PARAM[posy]" />
+                </include>
+				<label>$PARAM[label]</label>
+			</control>
+        </definition>
+    </include>
+    
+    <include name="TextboxForDialog">
+        <param name="textboxid" default="0" />
+        <param name="scrollbarid" default="-" />
+        <param name="posy" default="80" />
+        <param name="height" default="120" />
+        <param name="label" default="-" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="textbox" id="$PARAM[textboxid]">
+                <posx>560</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>1240</width>
+                <height>$PARAM[height]</height>
+                <font>DialogTextFont</font>
+                <textcolor>SecondaryColor</textcolor>
+                <align>left</align>
+                <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
+                <label>$PARAM[label]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[scrollbarid]</onright>
+            </control>
+            
+            <control type="scrollbar" id="$PARAM[scrollbarid]">
+                <include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                </include>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[textboxid]</onleft>
+                <onright>$PARAM[onright]</onright>
+            </control>
+        </definition>
+    </include>
+
+	<include name="ControlListForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="80" />
+        <param name="height" default="220" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="9000" />
+        <param name="onright" default="Noop" />
+        
+        <definition>
+  			<control type="grouplist" id="$PARAM[id]">
+                <posx>560</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>1240</width>
+                <height>$PARAM[height]</height>
+                <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+			</control>
+        </definition>
+    </include>
+    
+	<include name="WindowForDialog">
+        <param name="headerid" default="0" />
+        <param name="iconid" default="0" />
+        <param name="height" default="220" />
+        <param name="headerlabel" default="-" />
+        <param name="iconthumbnail" default="-" />
+        <param name="icontexture" default="-" />
+        <param name="iconlabel" default="-" />
+        
+        <definition>
+            <include name="DialogWindow">
+                <param name="height" value="$PARAM[height]" />
+            </include>
+            
+            <control type="image">
+                <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="60000" delay="0" loop="true" condition="true">Conditional</animation>
+                <posy>10</posy>
+                <width>60</width>
+                <height>60</height>
+                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+            </control>
+<!--            
+            <control type="image">
+                <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="23000" delay="2500" loop="true" condition="true">Conditional</animation>
+                <posy>10</posy>
+                <width>60</width>
+                <height>60</height>
+                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+            </control>
+            
+            <control type="image">
+                <animation effect="slide" tween="linear" start="-40,0" end="1920,0" time="35000" delay="3500" loop="true" condition="true">Conditional</animation>
+                <posy>20</posy>
+                <width>40</width>
+                <height>40</height>
+                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+            </control>
+            
+            <control type="image">
+                <animation effect="slide" tween="linear" start="1920,0" end="-30,0" time="20000" delay="5000" loop="true" condition="true">Conditional</animation>
+                <posy>25</posy>
+                <width>30</width>
+                <height>30</height>
+                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+            </control>
+-->            
+            <control type="label" id="$PARAM[headerid]">
+                <posx>560</posx>
+                <posy>20</posy>
+                <width>1240</width>
+                <height>40</height>
+                <font>DialogTitleFont</font>
+                <textcolor>SecondaryColor</textcolor>
+                <align>left</align>
+                <label>$PARAM[headerlabel]</label>
+            </control>
+            
+            <control type="group">
+                <posx>PosXForDefaultIconFrameForDialog</posx>
+                <posy>PosYForDefaultIconFrameForDialog</posy>
+                <include>BackgroundForDefaultCircleThumbnailIcon</include>
+				
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>4</posy>
+					<width>262</width>
+					<height>262</height>
+					<texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+                
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>262</width>
+					<height>262</height>
+					<texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+        </definition>
+	</include>
+
+    <!-- ============================================================== -->
+
+    <include name="MarkupForControlListForDialog">
+        <param name="posy" default="80" />
+        <param name="height" default="-" />
+    
+        <definition>
+			<posx>560</posx>
+			<posy>$PARAM[posy]</posy>
+			<width>1240</width>
+			<height>$PARAM[height]</height>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+            <usecontrolcoords>true</usecontrolcoords>
+        </definition>
+    </include>
+    
     <constant name="PosXForSmallIconFrameForDialog">235</constant>
     <constant name="PosYForSmallIconFrameForDialog">20</constant>
     <include name="SmallIconForDialog">
@@ -89,6 +317,20 @@
         </definition>
     </include>
 
+    <include name="DefaultSettingsIconForDialog">
+        <param name="posx" default="PosXForDefaultIconFrameForDialog" />
+        <param name="posy" default="PosYForDefaultIconFrameForDialog" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <include>DefaultCircleSettingsThumbnailIcon</include>
+			</control>
+        </definition>
+    </include>
+
+    
     <include name="DefaultImageForDialog">
         <param name="posx" default="PosXForDefaultIconFrameForDialog" />
         <param name="posy" default="PosYForDefaultIconFrameForDialog" />
@@ -127,11 +369,12 @@
     </include>
     
     <include name="HeaderForDialog">
+        <param name="id" default="0" />
         <param name="posy" default="20" />
         <param name="label" default="-" />
     
         <definition>
-   			<control type="label">
+   			<control type="label" id="$PARAM[id]">
                 <include name="MarkupForHeaderForDialog">
                     <param name="posy" value="$PARAM[posy]" />
                 </include>
@@ -154,20 +397,6 @@
         </definition>
     </include>
     
-    <include name="LabelForDialog">
-        <param name="posy" default="80" />
-        <param name="label" default="-" />
-    
-        <definition>
-   			<control type="label">
-                <include name="MarkupForLabelForDialog">
-                    <param name="posy" value="$PARAM[posy]" />
-                </include>
-				<label>$PARAM[label]</label>
-			</control>
-        </definition>
-    </include>
-    
     <include name="MarkupForTextboxForDialog">
         <param name="posy" default="80" />
         <param name="height" default="120" />
@@ -184,42 +413,6 @@
             <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
         </definition>
     </include>
-
-    <include name="MarkupForButtonListForDialog">
-        <param name="posy" default="320" />
-        <param name="height" default="-" />
-        <param name="onup" default="9000" />
-        <param name="ondown" default="9000" />
-    
-        <definition>
-			<posx>40</posx>
-			<posy>$PARAM[posy]</posy>
-			<width>480</width>
-			<height>$PARAM[height]</height>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-            <usecontrolcoords>true</usecontrolcoords>
-			<onup>$PARAM[onup]</onup>
-			<ondown>$PARAM[ondown]</ondown>
-        </definition>
-    </include>
-    
-	<include name="MarkupForScrollbarForDialog">
-        <param name="posy" default="0" />
-        <param name="height" default="0" />
-    
-        <definition>
-            <posx>1840</posx>
-            <posy>$PARAM[posy]</posy>
-            <width>20</width>
-            <height>$PARAM[height]</height>
-            <texturesliderbackground border="0,14,0,14" colordiffuse="MainColor">controls/horizontalbar-thick.png</texturesliderbackground>
-            <texturesliderbar border="0,14,0,14" colordiffuse="FadeDiffuseColor">controls/horizontalbar-thin.png</texturesliderbar>
-            <texturesliderbarfocus border="0,14,0,14" colordiffuse="BackgroundColor">controls/horizontalbar-thin.png</texturesliderbarfocus>
-            <orientation>vertical</orientation>
-            <showonepage>false</showonepage>
-        </definition>
-	</include>
 
     <include name="HelpFrameForDialog">
         <param name="height" default="280" />
@@ -361,54 +554,14 @@
         </definition>
     </include>
 
-	<include name="WindowForDialog">
-        <param name="height" default="220" />
-        
-        <definition>
-            <include name="DialogWindow">
-                <param name="height" value="$PARAM[height]" />
-            </include>
-            
-            <control type="image">
-                <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="60000" delay="0" loop="true" condition="true">Conditional</animation>
-                <posy>10</posy>
-                <width>60</width>
-                <height>60</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
-            </control>
-<!--            
-            <control type="image">
-                <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="23000" delay="2500" loop="true" condition="true">Conditional</animation>
-                <posy>10</posy>
-                <width>60</width>
-                <height>60</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
-            </control>
-            
-            <control type="image">
-                <animation effect="slide" tween="linear" start="-40,0" end="1920,0" time="35000" delay="3500" loop="true" condition="true">Conditional</animation>
-                <posy>20</posy>
-                <width>40</width>
-                <height>40</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
-            </control>
-            
-            <control type="image">
-                <animation effect="slide" tween="linear" start="1920,0" end="-30,0" time="20000" delay="5000" loop="true" condition="true">Conditional</animation>
-                <posy>25</posy>
-                <width>30</width>
-                <height>30</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
-            </control>
--->            
-        </definition>
-	</include>
 
     <constant name="PosYForSingleLineDialog">630</constant>
 	<include name="SingleLineDialog">
-        <include name="WindowForDialog">
-            <param name="height" value="140" />
-        </include>
+        <definition>
+            <include name="WindowForDialog">
+                <param name="height" value="140" />
+            </include>
+        </definition>
 	</include>
 
     <constant name="PosYForTwoLinesDialogBand">450</constant>
@@ -442,9 +595,10 @@
 	</include>
 	
     <constant name="PosYForTenLinesDialog">290</constant>
+    <constant name="HeightForTenLinesDialog">500</constant>
 	<include name="TenLinesDialog">
         <include name="WindowForDialog">
-            <param name="height" value="500" />
+            <param name="height" value="HeightForTenLinesDialog" />
         </include>
 	</include>
 	
@@ -456,9 +610,10 @@
 	</include>
 
     <constant name="PosYForThirteenLinesDialog">230</constant>
+    <constant name="HeightForThirteenLinesDialog">620</constant>
 	<include name="ThirteenLinesDialog">
         <include name="WindowForDialog">
-            <param name="height" value="620" />
+            <param name="height" value="HeightForThirteenLinesDialog" />
         </include>
 	</include>
 
