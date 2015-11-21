@@ -11,15 +11,7 @@
                 <param name="headerlabel" value="$INFO[ListItem.Title]" />
                 <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
             </include>
-<!--
-			<include name="ThirteenLinesDialog" />
 
-			<include name="DefaultThumbnailForDialog" />
-
-            <include name="HeaderForDialog">
-                <param name="label" value="$INFO[ListItem.Title]" />
-            </include>
--->			
 			<control type="list" id="20">
 				<posx>560</posx>
 				<posy>80</posy>
@@ -128,27 +120,7 @@
                 <param name="label" value="$VAR[ContentDescription]" />
                 <param name="onleft" value="9000" />
             </include>
-<!--            
-			<control type="textbox" id="4">
-                <description>Review</description>
-				<include name="MarkupForTextboxForDialog">
-                    <param name="posy" value="360" />
-                    <param name="height" value="240" />
-                    <param name="pagecontrol" value="24" />
-                </include>
-				<label>$VAR[ContentDescription]</label>
-			</control>
 
-			<control type="scrollbar" id="24">
-                <description>Review Scrollbar</description>
-				<include name="MarkupForScrollbarForDialog">
-                    <param name="posy" value="360" />
-                    <param name="height" value="240" />
-                </include>
-				<onleft>9000</onleft>
-				<onright>Noop</onright>
-			</control>
--->
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
                     <param name="posy" value="400" />
