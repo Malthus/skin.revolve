@@ -18,6 +18,7 @@
     <include name="MarkupForListForDialog">
         <param name="posy" default="80" />
         <param name="height" default="-" />
+        <param name="pagecontrol" default="-" />
     
         <definition>
 			<posx>560</posx>
@@ -26,6 +27,8 @@
 			<height>$PARAM[height]</height>
 			<orientation>vertical</orientation>
 			<itemgap>0</itemgap>
+			<pagecontrol>$PARAM[pagecontrol]</pagecontrol>
+            <scrolltime>200</scrolltime>
         </definition>
     </include>
     
@@ -128,9 +131,52 @@
         </definition>
     </include>
     
+	<include name="DefaultControlsForDialog">
+        <definition>
+			<control type="button" id="7">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+
+			<control type="radiobutton" id="8">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+
+			<control type="spincontrolex" id="9">
+				<width>1240</width>
+				<align>left</align>
+				<reverse>yes</reverse>
+			</control>
+
+			<control type="image" id="11">
+				<height>10</height>
+				<texture>-</texture>
+			</control>
+
+			<control type="edit" id="12">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+
+			<control type="sliderex" id="13">
+				<width>1240</width>
+				<align>left</align>
+			</control>
+
+            <control type="label" id="14">
+				<width>1240</width>
+                <textcolor>SelectColor</textcolor>
+                <label>-</label>
+            </control>
+        </definition>
+    </include>
+    
 	<include name="WindowForDialog">
         <param name="headerid" default="0" />
         <param name="iconid" default="0" />
+        <param name="iconsmall" default="false" />
+        <param name="icondefault" default="true" />
         <param name="height" default="220" />
         <param name="headerlabel" default="-" />
         <param name="iconthumbnail" default="-" />
@@ -186,6 +232,32 @@
             </control>
             
             <control type="group">
+                <visible>$PARAM[iconsmall]</visible>
+                <posx>PosXForSmallIconFrameForDialog</posx>
+                <posy>PosYForSmallIconFrameForDialog</posy>
+                <include>BackgroundForSmallCircleThumbnailIcon</include>
+				
+                <control type="image">
+                    <posx>2</posx>
+                    <posy>2</posy>
+					<width>86</width>
+					<height>86</height>
+					<texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+                
+				<control type="image">
+                    <posx>2</posx>
+                    <posy>2</posy>
+					<width>86</width>
+					<height>86</height>
+					<texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+
+            <control type="group">
+                <visible>$PARAM[icondefault]</visible>
                 <posx>PosXForDefaultIconFrameForDialog</posx>
                 <posy>PosYForDefaultIconFrameForDialog</posy>
                 <include>BackgroundForDefaultCircleThumbnailIcon</include>
@@ -211,6 +283,111 @@
         </definition>
 	</include>
 
+    <include name="HelpFrameForDialog">
+        <param name="height" default="280" />
+        
+        <definition>
+            <control type="image">
+                <width>480</width>
+                <height>$PARAM[height]</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+                
+            <control type="image">
+                <width>480</width>
+                <height>$PARAM[height]</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+            </control>
+            
+            <control type="image">
+                <posx>-17</posx>
+                <posy>20</posy>
+                <width>35</width>
+                <height>35</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+            </control>
+
+            <control type="label">
+                <description>Question Mark Label</description>
+                <posx>-17</posx>
+                <posy>20</posy>
+                <width>35</width>
+                <height>35</height>
+                <font>DialogTextFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <align>center</align>
+                <label>$LOCALIZE[31904]</label>
+            </control>
+        </definition>
+    </include>
+    
+	<include name="ItemsForInfoListInDialog">
+        <definition>
+            <itemlayout height="40">
+                <include>NormalItemsForInfoListInDialog</include>
+            </itemlayout>
+					
+            <focusedlayout height="40">
+                <include>FocusedItemsForInfoListInDialog</include>
+            </focusedlayout>
+        </definition>
+	</include>
+
+	<include name="NormalItemsForInfoListInDialog">
+        <definition>
+            <control type="label">
+                <posx>0</posx>
+                <width>300</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>TextColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label">
+                <posx>320</posx>
+                <width>900</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>left</align>
+                <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+            </control>
+        </definition>
+	</include>
+	
+	<include name="FocusedItemsForInfoListInDialog">
+        <definition>
+            <control type="image">
+                <posx>300</posx>
+                <width>940</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>0</posx>
+                <width>300</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>TextColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label">
+                <posx>320</posx>
+                <width>900</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <align>left</align>
+                <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+            </control>
+        </definition>
+	</include>
+	
     <!-- ============================================================== -->
 
     <include name="MarkupForControlListForDialog">
@@ -414,151 +591,11 @@
         </definition>
     </include>
 
-    <include name="HelpFrameForDialog">
-        <param name="height" default="280" />
-        
-        <definition>
-            <control type="image">
-                <width>480</width>
-                <height>$PARAM[height]</height>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
-            </control>
-                
-            <control type="image">
-                <width>480</width>
-                <height>$PARAM[height]</height>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
-            </control>
-            
-            <control type="image">
-                <posx>-17</posx>
-                <posy>20</posy>
-                <width>35</width>
-                <height>35</height>
-                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-            </control>
-
-            <control type="label">
-                <description>Question Mark Label</description>
-                <posx>-17</posx>
-                <posy>20</posy>
-                <width>35</width>
-                <height>35</height>
-                <font>DialogTextFont</font>
-                <textcolor>BackgroundColor</textcolor>
-                <align>center</align>
-                <label>$LOCALIZE[31904]</label>
-            </control>
-        </definition>
-    </include>
-    
-	<include name="ItemsForInfoListInDialog">
-		<itemlayout height="40">
-			<include>NormalItemsForInfoListInDialog</include>
-		</itemlayout>
-					
-		<focusedlayout height="40">
-			<include>NormalItemsForInfoListInDialog</include>
-		</focusedlayout>
-	</include>
-
-	<include name="NormalItemsForInfoListInDialog">
-		<control type="label">
-			<posx>0</posx>
-			<width>300</width>
-			<height>40</height>
-			<font>DialogTextFont</font>
-			<textcolor>TextColor</textcolor>
-			<align>left</align>
-			<label>$INFO[ListItem.Label]</label>
-		</control>
-		<control type="label">
-			<posx>320</posx>
-			<width>900</width>
-			<height>40</height>
-			<font>DialogTextFont</font>
-			<textcolor>MainColor</textcolor>
-			<align>left</align>
-			<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-		</control>
-	</include>
-	
-	<include name="FocusedItemsForInfoListInDialog">
-		<control type="image">
-			<posx>300</posx>
-			<width>940</width>
-			<height>40</height>
-			<aspectratio>stretch</aspectratio>
-			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
-		</control>
-		<control type="label">
-			<posx>0</posx>
-			<width>300</width>
-			<height>40</height>
-			<font>DialogTextFont</font>
-			<textcolor>TextColor</textcolor>
-			<align>left</align>
-			<label>$INFO[ListItem.Label]</label>
-		</control>
-		<control type="label">
-			<posx>320</posx>
-			<width>900</width>
-			<height>40</height>
-			<font>DialogTextFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<align>left</align>
-			<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-		</control>
-	</include>
-	
-	<include name="DefaultControlsForDialog">
-        <definition>
-			<control type="button" id="7">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-
-			<control type="radiobutton" id="8">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-
-			<control type="spincontrolex" id="9">
-				<width>1240</width>
-				<align>left</align>
-				<reverse>yes</reverse>
-			</control>
-
-			<control type="image" id="11">
-				<height>10</height>
-				<texture>-</texture>
-			</control>
-
-			<control type="edit" id="12">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-
-			<control type="sliderex" id="13">
-				<width>1240</width>
-				<align>left</align>
-			</control>
-
-            <control type="label" id="14">
-				<width>1240</width>
-                <textcolor>SelectColor</textcolor>
-                <label>-</label>
-            </control>
-        </definition>
-    </include>
-
-
     <constant name="PosYForSingleLineDialog">630</constant>
 	<include name="SingleLineDialog">
         <definition>
             <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
                 <param name="height" value="140" />
             </include>
         </definition>
@@ -568,6 +605,7 @@
 	<include name="TwoLinesDialogBand">
         <definition>
             <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
                 <param name="height" value="180" />
             </include>
         </definition>
@@ -576,6 +614,7 @@
     <constant name="PosYForThreeLinesDialog">430</constant>
 	<include name="ThreeLinesDialog">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="220" />
         </include>
 	</include>
@@ -583,13 +622,15 @@
     <constant name="PosYForFourLinesDialog">410</constant>
 	<include name="FourLinesDialog">
         <include name="WindowForDialog">
-            <param name="height" value="260" />
+                 <param name="icondefault" value="false" />
+           <param name="height" value="260" />
         </include>
 	</include>
 	
     <constant name="PosYForSixLinesDialog">370</constant>
 	<include name="SixLinesDialog">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="340" />
         </include>
 	</include>
@@ -598,6 +639,7 @@
     <constant name="HeightForTenLinesDialog">500</constant>
 	<include name="TenLinesDialog">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="HeightForTenLinesDialog" />
         </include>
 	</include>
@@ -605,6 +647,7 @@
     <constant name="PosYForTwelveLinesDialog">250</constant>
 	<include name="TwelveLinesDialog">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="580" />
         </include>
 	</include>
@@ -613,6 +656,7 @@
     <constant name="HeightForThirteenLinesDialog">620</constant>
 	<include name="ThirteenLinesDialog">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="HeightForThirteenLinesDialog" />
         </include>
 	</include>
@@ -620,6 +664,7 @@
     <constant name="PosYForFifteenLinesDialog">190</constant>
 	<include name="FifteenLinesDialog">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="700" />
         </include>
 	</include>
@@ -627,6 +672,7 @@
     <constant name="PosYForFullWindowDialog">90</constant>
 	<include name="FullWindowDialog">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="900" />
         </include>
 	</include>
@@ -634,6 +680,7 @@
     <constant name="PosYForKeyboardDialogBand">270</constant>
 	<include name="KeyboardDialogBand">
         <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
             <param name="height" value="540" />
         </include>
 	</include>
