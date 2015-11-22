@@ -6,14 +6,12 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="ThirteenLinesDialog" />
-
-			<include name="DefaultQuestionMarkForDialog" />
-
-			<control type="label" id="1">
-                <include name="MarkupForHeaderForDialog" />
-				<label>$LOCALIZE[13406]</label>
-			</control>
+			<include name="WindowForDialog">
+                <param name="headerid" value="1" />
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[13406]" />
+                <param name="iconlabel" value="$LOCALIZE[31904]" />
+            </include>
 
 			<control type="list" id="3">
                 <description>Normal Selection List</description>
