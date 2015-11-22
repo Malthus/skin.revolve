@@ -172,6 +172,24 @@
         </definition>
     </include>
     
+    <constant name="PosYForTwoLinesDialog">450</constant>
+    <constant name="HeightForTwoLinesDialog">180</constant>
+
+    <constant name="PosYForThreeLinesDialog">430</constant>
+    <constant name="HeightForThreeLinesDialog">220</constant>
+    
+    <constant name="PosYForSixLinesDialog">370</constant>
+    <constant name="HeightForSixLinesDialog">340</constant>
+    
+    <constant name="PosYForTenLinesDialog">290</constant>
+    <constant name="HeightForTenLinesDialog">500</constant>
+
+    <constant name="PosYForThirteenLinesDialog">230</constant>
+    <constant name="HeightForThirteenLinesDialog">620</constant>
+
+    <constant name="PosYForFifteenLinesDialog">190</constant>
+    <constant name="HeightForFifteenLinesDialog">700</constant>
+
 	<include name="WindowForDialog">
         <param name="height" default="220" />
         <param name="headerid" default="0" />
@@ -599,28 +617,6 @@
         </definition>
     </include>
 
-    <constant name="PosYForSingleLineDialog">630</constant>
-	<include name="SingleLineDialog">
-        <definition>
-            <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
-                <param name="height" value="140" />
-            </include>
-        </definition>
-	</include>
-
-    <constant name="PosYForTwoLinesDialogBand">450</constant>
-	<include name="TwoLinesDialogBand">
-        <definition>
-            <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
-                <param name="height" value="180" />
-            </include>
-        </definition>
-	</include>
-
-    <constant name="PosYForThreeLinesDialog">430</constant>
-    <constant name="HeightForThreeLinesDialog">220</constant>
 	<include name="ThreeLinesDialog">
         <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
@@ -636,8 +632,6 @@
         </include>
 	</include>
 	
-    <constant name="PosYForSixLinesDialog">370</constant>
-    <constant name="HeightForSixLinesDialog">340</constant>
 	<include name="SixLinesDialog">
         <definition>
             <include name="WindowForDialog">
@@ -647,8 +641,6 @@
         </definition>
 	</include>
 	
-    <constant name="PosYForTenLinesDialog">290</constant>
-    <constant name="HeightForTenLinesDialog">500</constant>
 	<include name="TenLinesDialog">
         <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
@@ -664,8 +656,6 @@
         </include>
 	</include>
 
-    <constant name="PosYForThirteenLinesDialog">230</constant>
-    <constant name="HeightForThirteenLinesDialog">620</constant>
 	<include name="ThirteenLinesDialog">
         <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
@@ -673,8 +663,6 @@
         </include>
 	</include>
 
-    <constant name="PosYForFifteenLinesDialog">190</constant>
-    <constant name="HeightForFifteenLinesDialog">700</constant>
 	<include name="FifteenLinesDialog">
         <definition>
             <include name="WindowForDialog">

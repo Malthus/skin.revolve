@@ -4,50 +4,25 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForTwoLinesDialogBand</posy>
-			<include>TwoLinesDialogBand</include>
-
-			<control type="group" description="Dialog Microphone Icon">
-				<posx>PosXForSmallIconFrameForDialog</posx>
-				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>BackgroundForSmallCircleThumbnailIcon</include>
-                
-				<control type="image">
-                    <posx>1</posx>
-                    <posy>1</posy>
-					<width>88</width>
-					<height>88</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-microphone.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
+			<posy>PosYForTwoLinesDialog</posy>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForTwoLinesDialog" />
+                <param name="headerid" value="1" />
+                <param name="headerlabel" value="$LOCALIZE[31416]" />
+                <param name="icondefault" value="false" />
+                <param name="iconsmall" value="true" />
+                <param name="icontexture" value="icons/icon-microphone.png" />
+            </include>
             
-			<control type="label" id="1" description="Karaoke Heading Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<align>left</align>
-				<label>31416</label>
-			</control>
-
-			<control type="label" id="401" description="Song Number Label">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<font>DialogTextFont</font>
-				<align>left</align>
-				<label>-</label>
-			</control>
-
-			<control type="label" id="402" description="Song Name Label">
-				<posx>560</posx>
-				<posy>120</posy>
-				<width>1240</width>
-				<font>DialogTextFont</font>
-				<align>left</align>
-				<label>-</label>
-			</control>
+            <include name="LabelForDialog">
+                <param name="posy" value="80" />
+                <param name="id" value="401" />
+            </include>
+            
+            <include name="LabelForDialog">
+                <param name="posy" value="120" />
+                <param name="id" value="402" />
+            </include>
 		</control>
 	</controls>
 </window>
