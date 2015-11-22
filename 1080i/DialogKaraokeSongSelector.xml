@@ -25,7 +25,7 @@
                     <description>Song Number Label</description>
                     
                     <include name="BackgroundForNormalOutlineLabel">
-                        <param name="width" value="1020" />
+                        <param name="width" value="WidthForContentForMessage" />
                         <param name="height" value="40" />
                         <param name="font" value="BigInformationFont" />
                         <param name="outlinecolor" value="BackgroundColor" />
@@ -33,7 +33,7 @@
                     </include>
                     
                     <control type="label" id="401">
-                        <width>1020</width>
+                        <width>WidthForContentForMessage</width>
                         <height>40</height>
                         <font>BigInformationFont</font>
                         <textcolor>MainColor</textcolor>
@@ -46,7 +46,7 @@
                     <posy>40</posy>
                     
                     <include name="BackgroundForNormalOutlineLabel">
-                        <param name="width" value="1020" />
+                        <param name="width" value="WidthForContentForMessage" />
                         <param name="height" value="40" />
                         <param name="font" value="BigInformationFont" />
                         <param name="outlinecolor" value="BackgroundColor" />
@@ -54,7 +54,7 @@
                     </include>
                     
                     <control type="label" id="402">
-                        <width>1020</width>
+                        <width>WidthForContentForMessage</width>
                         <height>40</height>
                         <font>BigInformationFont</font>
                         <textcolor>MainColor</textcolor>
