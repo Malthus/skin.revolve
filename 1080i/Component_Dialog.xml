@@ -178,6 +178,9 @@
     <constant name="PosYForThreeLinesDialog">430</constant>
     <constant name="HeightForThreeLinesDialog">220</constant>
     
+    <constant name="PosYForFourLinesDialog">410</constant>
+    <constant name="HeightForFourLinesDialog">260</constant>
+
     <constant name="PosYForSixLinesDialog">370</constant>
     <constant name="HeightForSixLinesDialog">340</constant>
     
@@ -624,11 +627,10 @@
         </include>
 	</include>
 	
-    <constant name="PosYForFourLinesDialog">410</constant>
 	<include name="FourLinesDialog">
         <include name="WindowForDialog">
                  <param name="icondefault" value="false" />
-           <param name="height" value="260" />
+           <param name="height" value="HeightForFourLinesDialog" />
         </include>
 	</include>
 	
