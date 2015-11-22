@@ -4,25 +4,63 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForMessageBand</posy>
-			<include>MessageBand</include>
+            <control type="group">
+                <posx>PosXForIconForMessage</posx>
+				<posy>PosYForIconForMessage</posy>
+                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
+                    
+                <control type="image">
+                    <width>90</width>
+                    <height>90</height>
+                    <texture colordiffuse="BackgroundColor">icons/icon-microphone.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
 
-			<control type="label" id="401" description="Song Number Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>320</width>
-				<font>DialogTextFont</font>
-				<align>left</align>
-				<label>-</label>
-			</control>
+            <control type="group">
+                <posx>PosXForContentForMessage</posx>
+                <posy>PosYForContentForMessage</posy>
+                
+                <control type="group">
+                    <description>Song Number Label</description>
+                    
+                    <include name="BackgroundForNormalOutlineLabel">
+                        <param name="width" value="1020" />
+                        <param name="height" value="40" />
+                        <param name="font" value="BigInformationFont" />
+                        <param name="outlinecolor" value="BackgroundColor" />
+                        <param name="label" value="$INFO[Control.GetLabel(401)]" />
+                    </include>
+                    
+                    <control type="label" id="401">
+                        <width>1020</width>
+                        <height>40</height>
+                        <font>BigInformationFont</font>
+                        <textcolor>MainColor</textcolor>
+                        <label>-</label>
+                    </control>
+                </control>
 
-			<control type="label" id="402" description="Song Name Label">
-				<posx>900</posx>
-				<posy>20</posy>
-				<width>900</width>
-				<font>DialogTextFont</font>
-				<align>left</align>
-				<label>-</label>
+                <control type="group">
+                    <description>Song Name Label</description>
+                    <posy>40</posy>
+                    
+                    <include name="BackgroundForNormalOutlineLabel">
+                        <param name="width" value="1020" />
+                        <param name="height" value="40" />
+                        <param name="font" value="BigInformationFont" />
+                        <param name="outlinecolor" value="BackgroundColor" />
+                        <param name="label" value="$INFO[Control.GetLabel(402)]" />
+                    </include>
+                    
+                    <control type="label" id="402">
+                        <width>1020</width>
+                        <height>40</height>
+                        <font>BigInformationFont</font>
+                        <textcolor>MainColor</textcolor>
+                        <label>-</label>
+                    </control>
+                </control>
 			</control>
 		</control>
 	</controls>
