@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <constant name="PosXForIconForMessage">400</constant>
+    <constant name="PosXForIconForMessage">420</constant>
     <constant name="PosYForIconForMessage">120</constant>
 
     <constant name="PosXForContentForMessage">560</constant>
-    <constant name="PosYForContentForMessage">120</constant>
+    <constant name="PosYForContentForMessage">124</constant>
+    <constant name="WidthForContentForMessage">1020</constant>
+    
+    <constant name="PosYForPauseMessageBand">690</constant>
+
+    <constant name="PosYForDefaultIconInMessageBand">490</constant>
+	<include name="DefaultIconInMessageBand">
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <posx>90</posx>
+                    <posy>-135</posy>
+                    <width>370</width>
+                    <height>370</height>
+                    <texture>elements/circle-shadow.png</texture>
+                </control>
+
+                <include name="DialogWindow">
+                    <param name="height" value="100" />
+                </include>
+
+                <control type="group">
+                    <posx>140</posx>
+                    <posy>-85</posy>
+                    <include>BackgroundForDefaultCircleThumbnailIcon</include>
+                </control>
+            </control>
+        </definition>
+	</include>
 </includes>
