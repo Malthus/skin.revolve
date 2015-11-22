@@ -14,18 +14,7 @@
                 <param name="iconsmall" value="true" />
                 <param name="icontexture" value="icons/icon-settings.png" />
             </include>
-<!--
-			<include name="SixLinesDialog" />
 
-            <include name="SmallIconForDialog">
-                <param name="texture" value="icons/icon-settings.png" />
-            </include>
-            
-			<control type="label" id="2">
-                <include name="MarkupForHeaderForDialog" />
-				<label>$LOCALIZE[1007]</label>
-			</control>
--->
 			<control type="spincontrolex" id="10" description="Protocol Spinner">
 				<posx>560</posx>
 				<posy>80</posy>
