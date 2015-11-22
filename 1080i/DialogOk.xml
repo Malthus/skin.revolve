@@ -14,36 +14,7 @@
                 <param name="iconsmall" value="true" />
                 <param name="iconlabel" value="$LOCALIZE[31905]" />
             </include>
-<!--
-			<include name="ThreeLinesDialog" />
-			
-			<control type="group">
-				<posx>PosXForSmallIconFrameForDialog</posx>
-				<posy>PosYForSmallIconFrameForDialog</posy>
-				<include>BackgroundForSmallCircleThumbnailIcon</include>
-			  
-				<control type="label">
-					<posx>25</posx>
-					<posy>25</posy>
-					<width>40</width>
-					<height>40</height>
-					<font>DialogIconFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>center</align>
-					<label>$LOCALIZE[31905]</label>
-				</control>
-			</control>
 
-			<control type="label" id="1">
-                <include name="MarkupForHeaderForDialog" />
-				<label>-</label>
-			</control>
-
-			<control type="textbox" id="9">
-                <include name="MarkupForTextboxForDialog" />
-				<label>-</label>
-			</control>
--->
             <include name="TextboxForDialog">
 				<param name="textboxid" value="9" />
 				<param name="scrollbarid" value="12" />
