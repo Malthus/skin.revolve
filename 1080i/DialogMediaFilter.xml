@@ -6,25 +6,13 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
-	
-			<control type="group" description="Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>DefaultCircleThumbnailIcon</include>
-			</control>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerid" value="1" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+            </include>
 
-			<control type="label" id="1" description="Heading Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<align>left</align>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<label>-</label>
-			</control>
-
-			<control type="grouplist" id="5" description="Filter Options List">
+			<control type="grouplist" id="5">
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
@@ -37,53 +25,31 @@
 				<onright>6</onright>
 			</control>
 			
-			<control type="scrollbar" id="6" description="Filter Options Scrollbar">
-				<posy>80</posy>
-				<height>520</height>
-				<include>MarkupForScrollbarForDialog</include>
+            <include name="DefaultControlsForDialog" />
+            
+			<control type="scrollbar" id="6">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
 				<onleft>5</onleft>
 				<onright>Noop</onright>
 			</control>
 
-			<control type="button" id="7" description="Default Button">
-				<align>left</align>
-			</control>
-
-			<control type="radiobutton" id="8" description="Default Radio Button">
-				<radioposx>1055</radioposx>
-				<align>left</align>
-			</control>
-
-			<control type="spincontrolex" id="9" description="Default Spin Control">
-				<align>left</align>
-			</control>
-
-			<control type="edit" id="12" description="Default Edit Control">
-			</control>
-
-			<control type="sliderex" id="13" description="Default Slider Control">
-			</control>
-
 			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>520</posy>
-				<width>480</width>
-				<height>80</height>
-				<itemgap>0</itemgap>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onleft>Noop</onleft>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="520" />
+                    <param name="height" value="80" />
+                </include>
 				<onright>5</onright>
-				<orientation>vertical</orientation>
 
-				<control type="button" id ="28" description="Ok Button">
-					<posy>0</posy>
-					<label>186</label>
+				<control type="button" id ="28">
+                    <description>Ok Button</description>
+					<label>$LOCALIZE[186]</label>
 				</control>
-
-				<control type="button" id ="29" description="Cancel Button">
-					<posy>40</posy>
-					<label>222</label>
+				<control type="button" id ="29">
+                    <description>Cancel Button</description>
+					<label>$LOCALIZE[222]</label>
 				</control>
 			</control>
 		</control>
