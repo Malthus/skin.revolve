@@ -193,6 +193,12 @@
     <constant name="PosYForFifteenLinesDialog">190</constant>
     <constant name="HeightForFifteenLinesDialog">700</constant>
 
+    <constant name="PosYForFullWindowDialog">90</constant>
+    <constant name="HeightForFullWindowDialog">900</constant>
+
+    <constant name="PosYForKeyboardDialog">270</constant>
+    <constant name="HeightForKeyboardDialog">540</constant>
+    
 	<include name="WindowForDialog">
         <param name="height" default="220" />
         <param name="headerid" default="0" />
@@ -674,19 +680,17 @@
         </definition>
 	</include>
 	
-    <constant name="PosYForFullWindowDialog">90</constant>
 	<include name="FullWindowDialog">
         <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
-            <param name="height" value="900" />
+            <param name="height" value="HeightForFullWindowDialog" />
         </include>
 	</include>
 	
-    <constant name="PosYForKeyboardDialogBand">270</constant>
-	<include name="KeyboardDialogBand">
+	<include name="KeyboardDialog">
         <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
-            <param name="height" value="540" />
+            <param name="height" value="HeightForKeyboardDialog" />
         </include>
 	</include>
 	

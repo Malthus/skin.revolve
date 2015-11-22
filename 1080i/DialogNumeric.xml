@@ -5,37 +5,18 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForKeyboardDialogBand</posy>
-			<include>KeyboardDialogBand</include>
-	
-			<control type="group" description="Keyboard Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-			  
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-keyboard.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
+			<posy>PosYForKeyboardDialog</posy>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForKeyboardDialog" />
+                <param name="headerid" value ="1" />
+                <param name="icontexture" value ="icons/icon-keyboard.png" />
+            </include>
 
 			<control type="group">
 				<posx>560</posx>
 				<posy>0</posy>
 
-				<control type="label" id="1" description="Keyboard Header Label">
-					<posx>0</posx>
-					<posy>20</posy>
-					<width>1240</width>
-					<height>40</height>
-					<font>DialogTitleFont</font>
-					<textcolor>SecondaryColor</textcolor>
-					<align>left</align>
-				</control>
-
-				<control type="image" description="Text Box">
+				<control type="image">
 					<posx>0</posx>
 					<posy>80</posy>
 					<width>700</width>
@@ -44,12 +25,15 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 
-				<control type="label" id="4" description="Edit Text">
+				<control type="label" id="4">
+                    <description>Edit Text</description>
 					<posx>20</posx>
 					<posy>84</posy>
 					<width>660</width>
 					<height>60</height>
 					<align>center</align>
+                    <onup>21</onup>
+                    <ondown>12</ondown>
 				</control>
 
 				<control type="group">
@@ -57,28 +41,30 @@
 					<posy>160</posy>
 
                     <control type="grouplist"> 
-                        <posx>120</posx>
                         <itemgap>0</itemgap> 
                         <orientation>horizontal</orientation> 
 
-                        <control type="button" id="11" description="'1' Button">
-                            <width>90</width>
+                        <control type="button" id="11">
+							<description>'1' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12311]</label>
                             <onup>21</onup>
                             <ondown>14</ondown>
                         </control>
 
-                        <control type="button" id="12" description="'2' Button">
-                            <width>90</width>
+                        <control type="button" id="12">
+							<description>'2' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12312]</label>
                             <onup>21</onup>
                             <ondown>15</ondown>
                         </control>
 
-                        <control type="button" id="13" description="'3' Button">
-                            <width>90</width>
+                        <control type="button" id="13">
+							<description>'3' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12313]</label>
                             <onup>23</onup>
@@ -87,29 +73,31 @@
 					</control>
 
                     <control type="grouplist"> 
-                        <posx>120</posx>
                         <posy>72</posy>
                         <itemgap>0</itemgap> 
                         <orientation>horizontal</orientation> 
 
-                        <control type="button" id="14" description="'4' Button">
-                            <width>90</width>
+                        <control type="button" id="14">
+							<description>'4' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12314]</label>
                             <onup>11</onup>
                             <ondown>17</ondown>
                         </control>
 
-                        <control type="button" id="15" description="'5' Button">
-                            <width>90</width>
+                        <control type="button" id="15">
+							<description>'5' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12315]</label>
                             <onup>12</onup>
                             <ondown>18</ondown>
                         </control>
 
-                        <control type="button" id="16" description="'6' Button">
-                            <width>90</width>
+                        <control type="button" id="16">
+							<description>'6' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12316]</label>
                             <onup>13</onup>
@@ -118,29 +106,31 @@
 					</control>
 
                     <control type="grouplist"> 
-                        <posx>120</posx>
                         <posy>144</posy>
                         <itemgap>0</itemgap> 
                         <orientation>horizontal</orientation> 
 
-                        <control type="button" id="17" description="'7' Button">
-                            <width>90</width>
+                        <control type="button" id="17">
+							<description>'7' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12317]</label>
                             <onup>14</onup>
                             <ondown>20</ondown>
                         </control>
 
-                        <control type="button" id="18" description="'8' Button">
-                            <width>90</width>
+                        <control type="button" id="18">
+							<description>'8' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12318]</label>
                             <onup>15</onup>
                             <ondown>10</ondown>
                         </control>
 
-                        <control type="button" id="19" description="'9' Button">
-                            <width>90</width>
+                        <control type="button" id="19">
+							<description>'9' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12319]</label>
                             <onup>16</onup>
@@ -149,29 +139,31 @@
 					</control>
 
                     <control type="grouplist"> 
-                        <posx>120</posx>
                         <posy>216</posy>
                         <itemgap>0</itemgap> 
                         <orientation>horizontal</orientation> 
                         
-                        <control type="button" id="20" description="Previous Button">
-                            <width>90</width>
+                        <control type="button" id="20">
+							<description>Previous Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[31917]</label>
                             <onup>17</onup>
                             <ondown>21</ondown>
                         </control>
 
-                        <control type="button" id="10" description="'0' Button">
-                            <width>90</width>
+                        <control type="button" id="10">
+							<description>'0' Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[12310]</label>
                             <onup>18</onup>
                             <ondown>21</ondown>
                         </control>
                     
-                        <control type="button" id="22" description="Next Button">
-                            <width>90</width>
+                        <control type="button" id="22">
+							<description>Next Button</description>
+                            <width>170</width>
                             <height>72</height>
                             <label>$LOCALIZE[31918]</label>
                             <onup>19</onup>
@@ -184,7 +176,8 @@
                         <itemgap>0</itemgap> 
                         <orientation>horizontal</orientation> 
                         
-                        <control type="button" id="21" description="Done Button">
+                        <control type="button" id="21">
+							<description>Done Button</description>
                             <width>255</width>
                             <height>72</height>
                             <label>$LOCALIZE[20177]</label>
@@ -192,7 +185,8 @@
                             <ondown>11</ondown>
                         </control>
 
-                        <control type="button" id="23" description="Backspace Button">
+                        <control type="button" id="23">
+							<description>Backspace Button</description>
                             <width>255</width>
                             <height>72</height>
                             <label>$LOCALIZE[20181]</label>
@@ -200,7 +194,6 @@
                             <ondown>13</ondown>
                         </control>
 					</control>
-
 				</control>
 			</control>
 		</control>
