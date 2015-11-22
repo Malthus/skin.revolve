@@ -6,18 +6,20 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThreeLinesDialog</posy>
-			<include name="ThreeLinesDialog" />
-			
-            <include name="SmallQuestionMarkForDialog" />
-
-            <include name="HeaderForDialog">
-                <param name="label" value="$INFO[Window.Property(DialogTitle)]" />
+			<include name="WindowForDialog">
+                <param name="headerid" value="100" />
+                <param name="height" value="HeightForThreeLinesDialog" />
+                <param name="headerlabel" value="$INFO[Window.Property(DialogTitle)]" />
+                <param name="icondefault" value="false" />
+                <param name="iconsmall" value="true" />
+                <param name="iconlabel" value="$LOCALIZE[31904]" />
             </include>
 
-			<control type="textbox" id="9">
-				<include name="MarkupForTextboxForDialog" />
-				<label>$INFO[Window.Property(DialogMessage)]</label>
-			</control>
+            <include name="TextboxForDialog">
+				<param name="textboxid" value="9" />
+				<param name="scrollbarid" value="12" />
+				<param name="label" value="$INFO[Window.Property(DialogMessage)]" />
+			</include>
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">

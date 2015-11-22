@@ -6,24 +6,21 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThreeLinesDialog</posy>
-			<include name="ThreeLinesDialog" />
-			
-			<control type="group">
-				<posx>PosXForSmallIconFrameForDialog</posx>
-				<posy>PosYForSmallIconFrameForDialog</posy>
-                <include name="SmallCircleQuestionThumbnailIcon" />
-			</control>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForThreeLinesDialog" />
+                <param name="headerid" value="1" />
+                <param name="headerlabel" value="-" />
+                <param name="icondefault" value="false" />
+                <param name="iconsmall" value="true" />
+                <param name="iconlabel" value="$LOCALIZE[31904]" />
+            </include>
+
+            <include name="TextboxForDialog">
+				<param name="textboxid" value="9" />
+				<param name="scrollbarid" value="12" />
+				<param name="label" value="-" />
+			</include>
             
-			<control type="label" id="1">
-                <include name="MarkupForHeaderForDialog" />
-				<label>-</label>
-			</control>
-
-			<control type="textbox" id="9">
-                <include name="MarkupForTextboxForDialog" />
-				<label>-</label>
-			</control>
-
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
                     <param name="posy" value="120" />
