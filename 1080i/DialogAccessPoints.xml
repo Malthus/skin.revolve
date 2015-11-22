@@ -6,35 +6,49 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="WindowForDialog">
+                <param name="headerid" value="1" />
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[1046]" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+            </include>
 
-			<control type="group" description="Dialog Thumbnail Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>DefaultCircleThumbnailIcon</include>
-			</control>
-
-			<control type="label" description="Access Points Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>1046</label>
-			</control>
-
-			<control type="list" id="3" description="Selection List">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>520</height>
-				<onleft>5</onleft>
-				<onright>Noop</onright>
+			<control type="list" id="3">
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="21" />
+                </include>
+				<onleft>9000</onleft>
+				<onright>21</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
 
-				<include>ItemsForNormalList</include>
+				<include name="ItemsForNormalList" />
+			</control>
+            
+			<control type="scrollbar" id="21">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
+				<onleft>3</onleft>
+				<onright>Noop</onright>
+			</control>
+
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="560" />
+                    <param name="height" value="40" />
+                </include>
+                <onright>3</onright>
+
+                <control type="button" id="9">
+                    <description>Close Button</description>
+                    <posy>40</posy>
+                    <label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+                </control>
 			</control>
 		</control>
 	</controls>

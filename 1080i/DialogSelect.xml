@@ -16,11 +16,11 @@
 
 			<control type="list" id="3">
                 <description>Normal Selection List</description>
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>520</height>
-				<pagecontrol>21</pagecontrol>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="21" />
+                </include>
 				<onup>3</onup>
 				<ondown>3</ondown>
 				<onleft>9000</onleft>
@@ -44,11 +44,11 @@
 
 			<control type="list" id="6">
                 <description>Selection List With Thumbnails For Addons</description>
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>520</height>
-				<pagecontrol>22</pagecontrol>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="22" />
+                </include>
 				<onup>6</onup>
 				<ondown>6</ondown>
 				<onleft>9000</onleft>

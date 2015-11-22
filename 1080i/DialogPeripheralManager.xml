@@ -6,43 +6,27 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
-
-			<control type="group" description="Peripheral Dialog Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-connector.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-
-			<control type="label" id="1" description="Peripheral Manager Header Label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<align>left</align>
-				<font>DialogTitleFont</font>
-				<label>35000</label>
-			</control>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerid" value="1" />
+                <param name="headerlabel" value="$LOCALIZE[35000]" />
+                <param name="icontexture" value="icons/icon-connector.png" />
+            </include>
 
 			<control type="list" id="20">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>520</height>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="21" />
+                </include>
 				<onup>20</onup>
 				<ondown>20</ondown>
 				<onleft>10</onleft>
-				<onright>Noop</onright>
-				<scrolltime>200</scrolltime>
+				<onright>21</onright>
 
 				<itemlayout height="120" width="1240">
-					<control type="label" description="Name Label">
+					<control type="label">
+                        <description>Name Label</description>
 						<posx>20</posx>
 						<posy>15</posy>
 						<width>1200</width>
@@ -50,7 +34,8 @@
 						<textcolor>MainColor</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="label" description="Product and Vendor Label">
+					<control type="label">
+                        <description>Product and Vendor Label</description>
 						<posx>20</posx>
 						<posy>45</posy>
 						<width>1200</width>
@@ -58,7 +43,8 @@
 						<textcolor>MainColor</textcolor>
 						<label>$LOCALIZE[35504]: $INFO[ListItem.Property(Product)] - $LOCALIZE[35503]: $INFO[ListItem.Property(Vendor)]</label>
 					</control>
-					<control type="label" description="Class Label">
+					<control type="label">
+                        <description>Class Label</description>
 						<posx>20</posx>
 						<posy>75</posy>
 						<width>1200</width>
@@ -77,7 +63,8 @@
 						<colordiffuse>MainColor</colordiffuse>
 					</control>
 
-					<control type="label" description="Name Label">
+					<control type="label">
+                        <description>Name Label</description>
 						<posx>20</posx>
 						<posy>15</posy>
 						<width>1200</width>
@@ -85,7 +72,8 @@
 						<textcolor>BackgroundColor</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="label" description="Product and Vendor Label">
+					<control type="label">
+                        <description>Product and Vendor Label</description>
 						<posx>20</posx>
 						<posy>45</posy>
 						<width>1200</width>
@@ -93,7 +81,8 @@
 						<textcolor>BackgroundColor</textcolor>
 						<label>$LOCALIZE[35504]: $INFO[ListItem.Property(Product)] - $LOCALIZE[35503]: $INFO[ListItem.Property(Vendor)]</label>
 					</control>
-					<control type="label" description="Class Label">
+					<control type="label">
+                        <description>Class Label</description>
 						<posx>20</posx>
 						<posy>75</posy>
 						<width>1200</width>
@@ -104,26 +93,31 @@
 				</focusedlayout>
 			</control>
 
-			<control type="button" id="11" description="Settings Button">
-				<posx>40</posx>
-				<posy>520</posy>
-				<width>480</width>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<onleft>Noop</onleft>
-				<onright>20</onright>
-				<label>5</label>
+			<control type="scrollbar" id="21">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
+				<onleft>20</onleft>
+				<onright>Noop</onright>
 			</control>
-
-			<control type="button" id="10" description="OK Button">
-				<posx>40</posx>
-				<posy>560</posy>
-				<width>480</width>
-				<onup>11</onup>
-				<ondown>11</ondown>
-				<onleft>Noop</onleft>
+            
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="480" />
+                    <param name="height" value="120" />
+                </include>
 				<onright>20</onright>
-				<label>186</label>
+            
+                <control type="button" id="11">
+                    <description>Settings Button</description>
+                    <label>$LOCALIZE[5]</label>
+                </control>
+                <control type="button" id="10">
+                    <description>OK Button</description>
+                    <posy>40</posy>
+                    <label>$LOCALIZE[186]</label>
+                </control>
 			</control>
 		</control>
 	</controls>

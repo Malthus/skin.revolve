@@ -6,41 +6,48 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$INFO[ListItem.Label]" />
+                <param name="icontexture" value="icons/icon-stackofpapers.png" />
+            </include>
 
-			<control type="group" description="File Stacking Icon">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-				
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-stackofpapers.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-			
-			<control type="label">
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<align>left</align>
-				<font>DialogTitleFont</font>
-				<info>ListItem.Label</info>
-			</control>
-
-			<control type="list" id="450" description="List of Stacked Parts">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>520</height>
-				<onleft>450</onleft>
-				<onright>450</onright>
+			<control type="list" id="450">
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="21" />
+                </include>
 				<onup>450</onup>
 				<ondown>450</ondown>
-				
+				<onleft>9000</onleft>
+				<onright>21</onright>
+
 				<include>ItemsForNormalList</include>
+			</control>
+            
+			<control type="scrollbar" id="21">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
+				<onleft>450</onleft>
+				<onright>Noop</onright>
+			</control>
+            
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="560" />
+                    <param name="height" value="40" />
+                </include>
+                <onright>3</onright>
+
+                <control type="button" id="9">
+                    <description>Close Button</description>
+                    <posy>40</posy>
+                    <label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+                </control>
 			</control>
 		</control>
 	</controls>
