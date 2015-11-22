@@ -6,23 +6,18 @@
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(numericinput)</visible>
-			<posy>PosYForKeyboardDialogBand</posy>
-			<include name="KeyboardDialogBand" />
-	
-            <include name="DefaultIconForDialog">
-                <param name="texture" value ="icons/icon-keyboard.png" />
+			<posy>PosYForKeyboardDialog</posy>
+			<include name="WindowForDialog">
+                <param name="height" value="HeightForKeyboardDialog" />
+                <param name="headerid" value ="311" />
+                <param name="icontexture" value ="icons/icon-keyboard.png" />
             </include>
-
-			<control type="label" id="311">
-                <include name="MarkupForHeaderForDialog" />
-                <label>-</label>
-			</control>
 
 			<control type="group">
 				<posx>560</posx>
 				<posy>0</posy>
 			
-				<control type="image" description="Text Box">
+				<control type="image">
 					<posx>0</posx>
 					<posy>80</posy>
 					<width>1225</width>
@@ -31,7 +26,8 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 
-				<control type="edit" id="312" description="Edit Text">
+				<control type="edit" id="312">
+                    <description>Edit Text</description>
 					<posx>4</posx>
 					<posy>84</posy>
 					<width>1217</width>

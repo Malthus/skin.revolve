@@ -687,13 +687,6 @@
         </include>
 	</include>
 	
-	<include name="KeyboardDialog">
-        <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
-            <param name="height" value="HeightForKeyboardDialog" />
-        </include>
-	</include>
-	
 	<include name="TitledFullListFrameForDialog">
 		<control type="group">
 			<control type="image">
