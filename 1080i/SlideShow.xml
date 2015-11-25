@@ -3,15 +3,8 @@
 	<defaultcontrol always="true">-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 
-<!--
-10 	label 	 (LABEL_ROW1) 
-11 	label 	 (LABEL_ROW2) 
-12 	label 	 (LABEL_ROW2_EXTRA) 
-13 	[any] 	These controls are visible when the slideshow is paused
--->
-
 	<controls>
-		<control type="group" description="Picture Information Group">
+		<control type="group">
 			<visible>Player.ShowInfo</visible>
 
 			<control type="group">
@@ -33,7 +26,7 @@
 					<include>MediaInformationLabelForPlayerInfo</include>
 					<include>MediaPlaylistPositionLabelForPlayerInfo</include>
 					<include>MediaNameLabelForPlayerInfo</include>
-					<include>MediaBackgroundMusicLabelForPlayerInfo</include>
+					<include name="MediaBackgroundMusicLabelForOSD" />
 				</control>
 			</control>
 

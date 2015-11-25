@@ -52,189 +52,48 @@
 					<effect type="fade" start="100" end="0" time="500" />
 				</animation>
 			
-				<control type="label">
-					<posx>323</posx>
-					<posy>928</posy>
-					<width>1500</width>
-					<align>left</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>327</posx>
-					<posy>928</posy>
-					<width>1500</width>
-					<align>left</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>323</posx>
-					<posy>932</posy>
-					<width>1500</width>
-					<align>left</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>327</posx>
-					<posy>932</posy>
-					<width>1500</width>
-					<align>left</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>325</posx>
-					<posy>930</posy>
-					<width>1500</width>
-					<align>left</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]</label>
-				</control>
-					<control type="label">
-					<posx>323</posx>
-					<posy>973</posy>
-					<width>1500</width>
-					<scroll>true</scroll>
-					<align>left</align>
-					<font>BigInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>327</posx>
-					<posy>973</posy>
-					<width>1500</width>
-					<scroll>true</scroll>
-					<align>left</align>
-					<font>BigInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>323</posx>
-					<posy>977</posy>
-					<width>1500</width>
-					<scroll>true</scroll>
-					<align>left</align>
-					<font>BigInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>327</posx>
-					<posy>977</posy>
-					<width>1500</width>
-					<scroll>true</scroll>
-					<align>left</align>
-					<font>BigInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
-				</control>
-				<control type="label">
-					<posx>325</posx>
-					<posy>975</posy>
-					<width>1500</width>
-					<scroll>true</scroll>
-					<align>left</align>
-					<font>BigInformationFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
-				</control>
-	
-				<control type="label">
-					<posx>323</posx>
-					<posy>1013</posy>
-					<width>200</width>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.StartTime]</label>
-				</control>
-				<control type="label">
-					<posx>327</posx>
-					<posy>1013</posy>
-					<width>200</width>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.StartTime]</label>
-				</control>
-				<control type="label">
-					<posx>323</posx>
-					<posy>1017</posy>
-					<width>200</width>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.StartTime]</label>
-				</control>
-				<control type="label">
-					<posx>327</posx>
-					<posy>1017</posy>
-					<width>200</width>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.StartTime]</label>
-				</control>
-				<control type="label" description="Program Start Time Label">
-					<posx>325</posx>
-					<posy>1015</posy>
-					<width>200</width>
-					<font>DefaultInformationFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<label>$INFO[Container(11).ListItem.StartTime]</label>
-				</control>
+                <include name="NormalOutlineLabel">
+                    <param name="posx" value="325" />
+                    <param name="posy" value="930" />
+                    <param name="width" value="1500" />
+                    <param name="font" value="DefaultInformationFont" />
+                    <param name="textcolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="MainColor" />
+                    <param name="label" value="[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]" />
+                </include>
+                
+                <include name="NormalOutlineLabel">
+                    <param name="posx" value="325" />
+                    <param name="posy" value="975" />
+                    <param name="width" value="1500" />
+                    <param name="font" value="BigInformationFont" />
+                    <param name="textcolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="MainColor" />
+                    <param name="label" value="[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]" />
+                </include>
+
+                <include name="NormalOutlineLabel">
+                    <param name="posx" value="325" />
+                    <param name="posy" value="1015" />
+                    <param name="width" value="200" />
+                    <param name="font" value="DefaultInformationFont" />
+                    <param name="textcolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="MainColor" />
+                    <param name="label" value="$INFO[Container(11).ListItem.StartTime]" />
+                </include>
 		
-				<control type="label">
-					<posx>1868</posx>
-					<posy>1013</posy>
-					<width>200</width>
-					<align>right</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.EndTime]</label>
-				</control>
-				<control type="label">
-					<posx>1872</posx>
-					<posy>1013</posy>
-					<width>200</width>
-					<align>right</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.EndTime]</label>
-				</control>
-				<control type="label">
-					<posx>1868</posx>
-					<posy>1017</posy>
-					<width>200</width>
-					<align>right</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.EndTime]</label>
-				</control>
-				<control type="label">
-					<posx>1872</posx>
-					<posy>1017</posy>
-					<width>200</width>
-					<align>right</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>MainColor</textcolor>
-					<label>$INFO[Container(11).ListItem.EndTime]</label>
-				</control>
-				<control type="label" description="Program End Time Label">
-					<posx>1870</posx>
-					<posy>1015</posy>
-					<width>200</width>
-					<align>right</align>
-					<font>DefaultInformationFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<label>$INFO[Container(11).ListItem.EndTime]</label>
-				</control>
-					<control type="image">
+                <include name="NormalOutlineLabel">
+                    <param name="posx" value="1870" />
+                    <param name="posy" value="1015" />
+                    <param name="width" value="200" />
+                    <param name="font" value="DefaultInformationFont" />
+                    <param name="textcolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="MainColor" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$INFO[Container(11).ListItem.EndTime]" />
+                </include>
+		
+				<control type="image">
 					<posx>493</posx>
 					<posy>1020</posy>
 					<width>1215</width>
