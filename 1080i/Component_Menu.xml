@@ -1408,18 +1408,50 @@
         <angle>90</angle>
     </include>
 
-    <include name="MarkupForTitleForCircleMenu">
-        <animation effect="slide" tween="quadratic" easing="out" start="1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
-        <animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="1000,0" time="400" reversible="false">WindowClose</animation>
+    <include name="TitleForRevolveMenu">
+        <param name="label" default="" />
+    
+        <definition>
+            <control type="label">
+                <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
+                <animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="400" reversible="false">WindowClose</animation>
 
-        <posx>1900</posx>
-        <posy>20</posy>
-		<height>40</height>
-		<width>800</width>
-		<font>MenuTitleFont</font>
-		<align>right</align>
-        <scroll>false</scroll>
-        <textcolor>TextColor</textcolor>
+                <posx>40</posx>
+                <posy>100</posy>
+                <height>40</height>
+                <width>800</width>
+                <font>MenuTitleFont</font>
+                <align>right</align>
+                <scroll>false</scroll>
+                <textcolor>BackgroundColor</textcolor>
+                <angle>90</angle>
+                <label>$PARAM[label]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="TitleForCircleMenu">
+        <param name="label" default="" />
+    
+        <definition>
+            <control type="group">
+                <animation effect="slide" tween="quadratic" easing="out" start="1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
+                <animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="1000,0" time="400" reversible="false">WindowClose</animation>
+
+                <include name="NormalOutlineLabel">
+                    <param name="posx" value="1900" />
+                    <param name="posy" value="20" />
+                    <param name="width" value="800" />
+                    <param name="height" value="40" />
+                    <param name="font" value="MenuTitleFont" />
+                    <param name="textcolor" value="TextColor" />
+                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="scroll" value="false" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+            </control>
+        </definition>
     </include>
 
     <include name="InvisibleVerticalListItemsForMenu">

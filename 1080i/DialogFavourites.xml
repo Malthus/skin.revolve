@@ -4,8 +4,8 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>FullscreenDimensions</include>
-		<include>GlobalBackground</include>
+		<include name="FullscreenDimensions" />
+		<include name="GlobalBackground" />
 
 		<control type="button" id="400" description="Empty Favourites List Condition">
 			<texturenofocus>-</texturenofocus>
@@ -13,7 +13,7 @@
 			<onfocus condition="!StringCompare(Container(450).NumItems,0)">SetFocus(450)</onfocus>
 		</control>
         
-		<control type="fixedlist" id="450" description="Invisible Favourites Wraplist">
+		<control type="fixedlist" id="450">
 			<visible allowhiddenfocus="true">Skin.HasSetting(DebugListBorder.Visible)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
@@ -26,13 +26,13 @@
 			<onleft>9000</onleft>
 			<onright>Noop</onright>
 
-            <include>InvisibleVerticalListItemsForMenu</include>
+            <include name="InvisibleVerticalListItemsForMenu" />
         </control>
 
-        <control type="group" description="Revolve Menu">
+        <control type="group">
             <visible>Skin.HasSetting(FavouritesMenu.Default)</visible>
-            <include>ListForRevolveMenu</include>
-            <include>RingForRevolveMenu</include>
+            <include name="ListForRevolveMenu" />
+            <include name="RingForRevolveMenu" />
             
        		<control type="group" description="Favourites Circle Image">
                 <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
@@ -49,35 +49,31 @@
                 </control>
             </control>
             
-            <include>IconForRevolveMenu</include>
-
-            <control type="label" description="Favourites Menu Title">
-                <include>MarkupForTitleForRevolveMenu</include>
-                <label>$LOCALIZE[1036]</label>
-            </control>
+            <include name="IconForRevolveMenu" />
+            <include name="TitleForRevolveMenu">
+                <param name="label" value="$LOCALIZE[1036]" />
+            </include>
         </control>
 
-        <control type="group" description="Circle Menu">
+        <control type="group">
             <visible>!Skin.HasSetting(FavouritesMenu.Default)</visible>
-            <include>CenterIconForCircleMenu</include>
-            <include>ListForCircleMenu</include>
-            
-            <control type="label" description="Favourites Menu Title">
-                <include>MarkupForTitleForCircleMenu</include>
-                <label>$LOCALIZE[1036]</label> 
-            </control>
+            <include name="CenterIconForCircleMenu" />
+            <include name="ListForCircleMenu" />
+            <include name="TitleForCircleMenu">
+                <param name="label" value="$LOCALIZE[1036]" />
+            </include>
         </control>
         
 		<control type="group" id="9000">
-			<include>SideMenu</include>
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu">
                     <param name="onright" value="450" />
                 </include>
 
-                <include>ViewGroupLabelForSideMenu</include>
-				<include>FavouritesMenuTypeButtonForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
+				<include name="FavouritesMenuTypeButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu">
@@ -85,6 +81,6 @@
             </include>
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>
