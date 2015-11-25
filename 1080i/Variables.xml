@@ -707,6 +707,7 @@
     
     <variable name="BusyAnimationThumbnail">
         <value condition="StringCompare(Skin.String(BusyAnimation.Type),C)">icons/busy-circles.png</value>
+        <value condition="StringCompare(Skin.String(BusyAnimation.Type),S)">icons/busy-spiral.png</value>
         <value>icons/busy-arrows.png</value>
     </variable>
 
