@@ -6,86 +6,89 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include>ThirteenLinesDialog</include>
+			<include name="WindowForDialog">
+                <param name="headerid" value ="100" />
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value ="$LOCALIZE[13406]" />
+                <param name="icontexture" value ="icons/icon-subtitles.png" />
+            </include>
 
-			<control type="group" description="Dialog Icon For Subtitle Service">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-
-				<control type="image">
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-subtitles.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-			
-			<control type="label" id="100" description="Subtitle Service Name Label">
+            <include name="LabelForDialog">
+                <param name="label" value="$LOCALIZE[287]:" />
+            </include>
+            
+			<control type="list" id="120">
+                <description>Available Subtitles List</description>
 				<posx>560</posx>
-				<posy>20</posy>
+				<posy>120</posy>
 				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>left</align>
-				<label>13406</label>
-			</control>
+				<height>200</height>
+				<onleft>160</onleft>
+				<onright>Noop</onright>
+				<onup>120</onup>
+				<ondown>150</ondown>
 
-			<control type="group" id="9000">
-				<control type="list" id="120" description="Available Subtitles List">
-					<posx>560</posx>
-					<posy>80</posy>
-					<width>1240</width>
-					<height>240</height>
-					<onleft>160</onleft>
-					<onright>Noop</onright>
-					<onup>120</onup>
-					<ondown>150</ondown>
-
-					<itemlayout height="40">
-						<include>NormalItemsForNormalList</include>
-					</itemlayout>
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
 					
-					<focusedlayout height="40">
-						<control type="group">
-							<visible>Control.HasFocus(120)</visible>
-							<include>FocusedItemsForNormalList</include>
-						</control>
-						<control type="group">
-							<visible>!Control.HasFocus(120)</visible>
-							<include>NormalItemsForNormalList</include>
-						</control>
-					</focusedlayout>
-				</control>
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(120)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(120)</visible>
+						<include>NormalItemsForNormalList</include>
+					</control>
+				</focusedlayout>
+			</control>
 		
-				<control type="list" id="150" description="Available Subtitle Services List">
-					<posx>560</posx>
-					<posy>360</posy>
-					<width>1240</width>
-					<height>240</height>
-					<onleft>160</onleft>
-					<onright>Noop</onright>
-					<onup>120</onup>
-					<ondown>150</ondown>
+            <include name="LabelForDialog">
+                <param name="posy" value="360" />
+                <param name="label" value="$LOCALIZE[24018]:" />
+            </include>
+        
+			<control type="list" id="150">
+                <description>Available Subtitle Services List</description>
+				<posx>560</posx>
+				<posy>400</posy>
+				<width>1240</width>
+				<height>160</height>
+				<onleft>160</onleft>
+				<onright>Noop</onright>
+				<onup>120</onup>
+				<ondown>150</ondown>
 
-					<itemlayout height="40">
-						<include>NormalItemsForNormalList</include>
-					</itemlayout>
+				<itemlayout height="40">
+					<include>NormalItemsForNormalList</include>
+				</itemlayout>
 					
-					<focusedlayout height="40">
-						<control type="group">
-							<visible>Control.HasFocus(150)</visible>
-							<include>FocusedItemsForNormalList</include>
-						</control>
-						<control type="group">
-							<visible>!Control.HasFocus(150)</visible>
-							<include>NormalItemsForNormalList</include>
-						</control>
-					</focusedlayout>
-				</control>
+				<focusedlayout height="40">
+					<control type="group">
+						<visible>Control.HasFocus(150)</visible>
+						<include>FocusedItemsForNormalList</include>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(150)</visible>
+						<include>NormalItemsForNormalList</include>
+					</control>
+				</focusedlayout>
 			</control>
 
-			<control type="label" id="130" description="Local Available Subtitle Label">
+			<control type="label" id="130">
+                <description>Local Available Subtitle Label</description>
+				<posx>40</posx>
+				<posy>440</posy>
+				<width>480</width>
+				<font>DialogTextFont</font>
+				<textcolor>SecondaryColor</textcolor>
+				<align>center</align>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="140">
+                <description>Number Of Available Subtitles Label</description>
 				<posx>40</posx>
 				<posy>480</posy>
 				<width>480</width>
@@ -95,24 +98,22 @@
 				<label>-</label>
 			</control>
 
-			<control type="label" id="140" description="Number Of Available Subtitles Label">
-				<posx>40</posx>
-				<posy>520</posy>
-				<width>480</width>
-				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
-				<align>center</align>
-				<label>-</label>
-			</control>
-
-			<control type="button" id="160" description="Manual Search Button">
-				<posx>40</posx>
-				<posy>560</posy>
-				<label>368</label>
-				<onleft>Noop</onleft>
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="520" />
+                    <param name="height" value="80" />
+                </include>
 				<onright>9000</onright>
-				<onup>160</onup>
-				<ondown>160</ondown>
+
+                <control type="button" id="160">
+                    <description>Manual Search Button</description>
+                    <label>$LOCALIZE[24120]</label>
+                </control>
+				<control type="button" id="7">
+                    <description>Close Button</description>
+					<label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+				</control>
 			</control>
 		</control>
 	</controls>
