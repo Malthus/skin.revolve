@@ -18,6 +18,38 @@
             </control>
         </definition>
 	</include>
+    
+	<include name="ProgressBar">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="width" default="1240" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>12</posy>
+                    <width>$PARAM[width]</width>
+                    <height>24</height>
+                    <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="progress" id="$PARAM[id]">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>$PARAM[width]</width>
+                    <height>24</height>
+                    <texturebg border="6">-</texturebg>
+                    <midtexture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thin.png</midtexture>
+                    <info>-</info>
+                </control>
+            </control>
+        </definition>
+	</include>
 
     <constant name="PosYForMessageDialogForProgressBar">490</constant>
 	<include name="MessageDialogForProgressBar">

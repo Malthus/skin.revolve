@@ -12,26 +12,12 @@
                 <param name="label" value="$LOCALIZE[20186]" />
 			</include>
 			
-			<control type="group">
-                <description>Progress Bar</description>
-				<control type="image">
-					<posx>560</posx>
-					<posy>62</posy>
-					<width>1240</width>
-					<height>24</height>
-					<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="progress" id="10">
-					<posx>560</posx>
-					<posy>50</posy>
-					<width>1240</width>
-					<height>24</height>
-					<info>-</info>
-					<texturebg border="6">-</texturebg>
-					<midtexture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thin.png</midtexture>
-				</control>
-			</control>
+            <include name="ProgressBar">
+                <param name="id" value="10" />
+                <param name="posx" value="560" />
+                <param name="posy" value="50" />
+                <param name="width" value="1240" />
+            </include>
 		</control>
 	</controls>
 </window>
