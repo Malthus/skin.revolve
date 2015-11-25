@@ -713,6 +713,7 @@
 
     <variable name="BusyAnimationNameLabel">
         <value condition="StringCompare(Skin.String(BusyAnimation.Type),C)">$LOCALIZE[31952]</value>
+        <value condition="StringCompare(Skin.String(BusyAnimation.Type),S)">$LOCALIZE[31953]</value>
         <value>$LOCALIZE[31951]</value>
     </variable>
 
