@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="CircleListView">
-		<control type="fixedlist" id="52" description="Circle List">
-			<viewtype label="31932">list</viewtype>
-			<visible allowhiddenfocus="true">true</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<pagecontrol>62</pagecontrol>
-			<defaultcontrol>6</defaultcontrol>
-			<focusposition>3</focusposition>
-			<scrolltime>200</scrolltime>
-			<onup>52</onup>
-			<ondown>52</ondown>
-			<onleft>9000</onleft>
-			<onright>62</onright>
+        <definition>
+            <control type="fixedlist" id="52">
+                <viewtype label="31932">list</viewtype>
+                <visible allowhiddenfocus="true">true</visible>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>1080</height>
+                <pagecontrol>62</pagecontrol>
+                <defaultcontrol>6</defaultcontrol>
+                <focusposition>3</focusposition>
+                <scrolltime>200</scrolltime>
+                <onup>52</onup>
+                <ondown>52</ondown>
+                <onleft>9000</onleft>
+                <onright>62</onright>
 
-            <include>InvisibleVerticalListItemsForMenu</include>
-		</control>
+                <include name="InvisibleVerticalListItemsForMenu" />
+            </control>
 		
-		<include>MainCircleListView</include>
+            <include name="MainCircleListView" />
+        </definition>
 	</include>
 
 	<include name="MainCircleListView">
@@ -28,7 +30,7 @@
 			<visible>Control.IsVisible(52)</visible>
 			
 			<control type="group">
-				<include>VisibilityOfListIconInView</include>
+				<include name="VisibilityOfListIconInView" />
 					
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="100" time="500" />
@@ -39,9 +41,9 @@
 
 				<posx>15</posx>
 				<posy>255</posy>
-				<include>ShadowForHugeCircleThumbnailIcon</include>
-				<include>HugeCircleThumbnailIcon</include>
-				<include>OverlayForHugeCircleThumbnailIcon</include>
+				<include name="ShadowForHugeCircleThumbnailIcon" />
+				<include name="HugeCircleThumbnailIcon" />
+				<include name="OverlayForHugeCircleThumbnailIcon" />
 			</control>
 				
 			<control type="group">
@@ -49,8 +51,8 @@
 
 				<posx>15</posx>
 				<posy>255</posy>
-				<include>ShadowForHugeCircleThumbnailIcon</include>
-				<include>HugeCircleSortLetterIcon</include>
+				<include name="ShadowForHugeCircleThumbnailIcon" />
+				<include name="HugeCircleSortLetterIcon" />
 			</control>
 		</control>
 				
@@ -69,294 +71,163 @@
 			<animation effect="rotate" center="320,560" start="0" end="10" time="100" condition="Container(52).OnScrollNext">conditional</animation>
 
 			<control type="group">
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="152" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusFifteenColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusFifteenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="142" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusFourteenColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusFourteenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="132" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusThirteenColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusThirteenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="122" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusTwelveColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusTwelveLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="112" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusElevenColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusElevenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="102" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusTenColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusTenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="92" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusNineColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusNineLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="82" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusEightColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusEightLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="72" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusSevenColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusSevenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="62" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusSixColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusSixLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="52" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusFiveColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusFiveLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="42" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusFourColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusFourLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="32" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusThreeColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusThreeLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="22" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusTwoColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusTwoLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="12" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapMinusOneColor]</textcolor>
-						<label>$VAR[ContentNoWrapMinusOneLabel]</label>
-					</control>
-				</control>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="152" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusFifteenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusFifteenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="142" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusFourteenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusFourteenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="132" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusThirteenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusThirteenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="122" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusTwelveColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusTwelveLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="112" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusElevenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusElevenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="102" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusTenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusTenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="92" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusNineColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusNineLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="82" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusEightColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusEightLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="72" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusSevenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusSevenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="62" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusSixColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusSixLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="52" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusFiveColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusFiveLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="42" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusFourColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusFourLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="32" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusThreeColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusThreeLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="22" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusTwoColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusTwoLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="12" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapMinusOneColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapMinusOneLabel]" />
+                </include>
 
-				<control type="group">
-					<control type="group" description="Unfocused Selected List Item Label">
-						<visible>!Control.HasFocus(52)</visible>
-					
-						<control type="group">
-							<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-							<posx>780</posx>
-							<posy>490</posy>
-							<include>HorizontalViewListOfContentMediaFlag</include>
-						</control>
-						<control type="group">
-							<posx>680</posx>
-							<posy>540</posy>
-							<include>UnfocusedListItemNameLabelForCircleListView</include>
-						</control>
-						<control type="group">
-							<posx>680</posx>
-							<posy>580</posy>
-							<include>UnfocusedListItemInformationLabelForCircleListView</include>
-						</control>
-					</control>
-					<control type="group" description="Focused Selected List Item Label">
-						<visible>Control.HasFocus(52)</visible>
-					
-						<control type="group">
-							<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-							<posx>780</posx>
-							<posy>490</posy>
-							<include>HorizontalViewListOfContentMediaFlag</include>
-						</control>
-						<control type="group">
-							<posx>680</posx>
-							<posy>540</posy>
-							<include>FocusedListItemNameLabelForCircleListView</include>
-						</control>
-						<control type="group">
-							<posx>680</posx>
-							<posy>580</posy>
-							<include>FocusedListItemInformationLabelForCircleListView</include>
-						</control>
-					</control>
-				</control>
+                <include name="MainListItemForCircleListView" />
 
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-12" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusOneColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusOneLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-22" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusTwoColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusTwoLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-32" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusThreeColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusThreeLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-42" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusFourColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusFourLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-52" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusFiveColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusFiveLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-62" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusSixColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusSixLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-72" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusSevenColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusSevenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-82" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusEightColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusEightLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-92" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusNineColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusNineLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-102" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusTenColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusTenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-112" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusElevenColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusElevenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-122" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusTwelveColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusTwelveLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-132" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusThirteenColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusThirteenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-142" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusFourteenColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusFourteenLabel]</label>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="rotate" center="320,560" end="-152" condition="true">Conditional</animation>
-					<control type="label">
-						<include>NormalListItemMarkupForCircleListView</include>
-						<textcolor>$VAR[ContentNoWrapPlusFifteenColor]</textcolor>
-						<label>$VAR[ContentNoWrapPlusFifteenLabel]</label>
-					</control>
-				</control>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-12" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusOneColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusOneLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-22" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusTwoColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusTwoLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-32" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusThreeColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusThreeLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-42" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusFourColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusFourLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-52" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusFiveColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusFiveLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-62" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusSixColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusSixLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-72" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusSevenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusSevenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-82" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusEightColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusEightLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-92" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusNineColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusNineLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-102" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusTenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusTenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-112" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusElevenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusElevenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-122" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusTwelveColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusTwelveLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-132" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusThirteenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusThirteenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-142" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusFourteenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusFourteenLabel]" />
+                </include>
+                <include name="ListItemForCircleListView">
+                    <param name="angle" value="-152" />
+                    <param name="textcolor" value="$VAR[ContentNoWrapPlusFifteenColor]" />
+                    <param name="label" value="$VAR[ContentNoWrapPlusFifteenLabel]" />
+                </include>
 			</control>
 		</control>		
 
-		<control type="scrollbar" id="62" description="Scrollbar">
+		<control type="scrollbar" id="62">
 			<visible allowhiddenfocus="true">Control.IsVisible(52)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(62) + !Container(52).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="40,0" time="100" />
@@ -370,54 +241,99 @@
 			<onright>Noop</onright>
 		</control>
 	</include>
-	
-	<include name="FocusedListItemNameLabelForCircleListView">
-        <include name="NormalOutlineLabel">
-            <param name="width" value="1160" />
-            <param name="height" value="40" />
-            <param name="font" value="MediumViewFont" />
-            <param name="textcolor" value="$VAR[ContentMainColor]" />
-            <param name="label" value="$VAR[ContentNameLabel]" />
-        </include>
+
+	<include name="MainListItemNameLabelForCircleListView">
+        <param name="textcolor" default="$VAR[ContentMainColor]" />
+        
+        <definition>
+            <include name="NormalOutlineLabel">
+                <param name="posx" value="680" />
+                <param name="posy" value="540" />
+                <param name="width" value="1160" />
+                <param name="height" value="40" />
+                <param name="font" value="MediumViewFont" />
+                <param name="textcolor" value="$PARAM[textcolor]" />
+                <param name="label" value="$VAR[ContentNameLabel]" />
+            </include>
+        </definition>
 	</include>
 
-	<include name="UnfocusedListItemNameLabelForCircleListView">
-        <include name="NormalOutlineLabel">
-            <param name="width" value="1160" />
-            <param name="height" value="40" />
-            <param name="font" value="MediumViewFont" />
-            <param name="textcolor" value="$VAR[ContentTextColor]" />
-            <param name="label" value="$VAR[ContentNameLabel]" />
-        </include>
+	<include name="MainListItemInformationLabelForCircleListView">
+        <param name="textcolor" default="MainColor" />
+        
+        <definition>
+            <include name="ThinOutlineLabel">
+                <param name="posx" value="680" />
+                <param name="posy" value="580" />
+                <param name="width" value="1160" />
+                <param name="height" value="30" />
+                <param name="font" value="DetailViewFont" />
+                <param name="textcolor" value="$PARAM[textcolor]" />
+                <param name="label" value="$VAR[ContentInformationLabel]" />
+            </include>
+        </definition>
 	</include>
 
-	<include name="FocusedListItemInformationLabelForCircleListView">
-        <include name="ThinOutlineLabel">
-            <param name="width" value="1160" />
-            <param name="height" value="30" />
-            <param name="font" value="DetailViewFont" />
-            <param name="textcolor" value="MainColor" />
-            <param name="label" value="$VAR[ContentInformationLabel]" />
-        </include>
-	</include>
-
-	<include name="UnfocusedListItemInformationLabelForCircleListView">
-        <include name="ThinOutlineLabel">
-            <param name="width" value="1160" />
-            <param name="height" value="30" />
-            <param name="font" value="DetailViewFont" />
-            <param name="textcolor" value="TextColor" />
-            <param name="label" value="$VAR[ContentInformationLabel]" />
-        </include>
-	</include>
-
-	<include name="NormalListItemMarkupForCircleListView">
-		<posx>680</posx>
-		<posy>540</posy>
-		<height>40</height>
-		<width>1200</width>
-		<font>SmallViewFont</font>
-		<align>left</align>
-		<scroll>false</scroll>
+	<include name="MainListItemForCircleListView">
+        <definition>
+            <control type="group">
+				<control type="group">
+					<visible>!Control.HasFocus(52)</visible>
+					
+					<control type="group">
+						<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+						<posx>780</posx>
+						<posy>490</posy>
+						<include>HorizontalViewListOfContentMediaFlag</include>
+					</control>
+                    <include name="MainListItemNameLabelForCircleListView">
+                        <param name="textcolor" value="$VAR[ContentTextColor]" />
+                    </include>
+                    <include name="MainListItemInformationLabelForCircleListView">
+                        <param name="textcolor" value="TextColor" />
+                    </include>
+				</control>
+				<control type="group" description="Focused Selected List Item Label">
+					<visible>Control.HasFocus(52)</visible>
+					
+					<control type="group">
+						<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+						<posx>780</posx>
+						<posy>490</posy>
+						<include>HorizontalViewListOfContentMediaFlag</include>
+					</control>
+                    <include name="MainListItemNameLabelForCircleListView">
+                        <param name="textcolor" value="$VAR[ContentMainColor]" />
+                    </include>
+                    <include name="MainListItemInformationLabelForCircleListView">
+                        <param name="textcolor" value="MainColor" />
+                    </include>
+				</control>
+			</control>
+        </definition>
+    </include>
+    
+	<include name="ListItemForCircleListView">
+        <param name="angle" default="0" />
+        <param name="textcolor" default="$VAR[ContentTextColor]" />
+        <param name="label" default="$VAR[ContentNameLabel]" />
+        
+        <definition>
+            <control type="group">
+				<animation effect="rotate" center="320,560" end="$PARAM[angle]" condition="true">Conditional</animation>
+                
+                <control type="label">
+                    <posx>680</posx>
+                    <posy>540</posy>
+                    <height>40</height>
+                    <width>1200</width>
+                    <font>SmallViewFont</font>
+                    <textcolor>$PARAM[textcolor]</textcolor>
+                    <align>left</align>
+                    <scroll>false</scroll>
+                    <label>$PARAM[label]</label>
+                </control>
+            </control>
+        </definition>
 	</include>
 </includes>

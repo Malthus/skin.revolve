@@ -27,4 +27,32 @@
 	<include file="View_Gallery.xml" />
 	<include file="View_RotateList.xml" />
 	<include file="View_Banners.xml" />
+    
+	<include name="InvisibleVerticalListForView">
+        <param name="listtype" default="fixedlist" />
+        <param name="listid" default="" />
+        <param name="label" default="" />
+        <param name="scrollbarid" default="" />
+        
+        <definition>
+            <control type="$PARAM[listtype]" id="$PARAM[listid]">
+                <viewtype label="$PARAM[label]">list</viewtype>
+                <visible allowhiddenfocus="true">true</visible>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>1080</height>
+                <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
+                <defaultcontrol>6</defaultcontrol>
+                <focusposition>3</focusposition>
+                <scrolltime>200</scrolltime>
+                <onup>$PARAM[listid]</onup>
+                <ondown>$PARAM[listid]</ondown>
+                <onleft>9000</onleft>
+                <onright>$PARAM[scrollbarid]</onright>
+
+                <include name="InvisibleVerticalListItemsForMenu" />
+            </control>
+        </definition>
+    </include>
 </includes>
