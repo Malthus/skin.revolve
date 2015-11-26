@@ -8,7 +8,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 
-			<control type="group" description="Current Control Label">
+			<control type="group">
 				<visible>Window.IsActive(musicosd) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(addonsettings) + !Window.IsVisible(selectdialog)</visible>
 				<posx>700</posx>
 				<posy>92</posy>
@@ -34,7 +34,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 					
-					<control type="button" id="412" description="Playlist Button">
+					<control type="button" id="412">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>PlaylistButtonForPlayerControl</include>
@@ -44,10 +44,12 @@
 				</control>
 				
 				<control type="group">
+					<posx>1</posx>
+					<posy>1</posy>
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="413" description="Lyrics Button">
+					<control type="button" id="413">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>LyricsButtonForPlayerControl</include>
@@ -56,7 +58,7 @@
 					</control>
 				</control>
 
-				<control type="label" description="Spacer">
+				<control type="label">
 					<width>60</width>
 				</control>
 				
@@ -66,7 +68,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="407" description="Repeat Button">
+					<control type="button" id="407">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>RepeatButtonForPlayerControl</include>
@@ -87,7 +89,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="togglebutton" id="400" description="Random Button">
+					<control type="togglebutton" id="400">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>RandomButtonForPlayerControl</include>
@@ -96,7 +98,7 @@
 					</control>
 				</control>
 				
-				<control type="label" description="Spacer">
+				<control type="label">
 					<width>60</width>
 				</control>
 				
@@ -106,7 +108,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="401" description="Previous Button">
+					<control type="button" id="401">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>PreviousButtonForPlayerControl</include>
@@ -121,7 +123,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="402" description="Rewind Button">
+					<control type="button" id="402">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>RewindButtonForPlayerControl</include>
@@ -136,7 +138,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="togglebutton" id="403" description="Play/Pause Button">
+					<control type="togglebutton" id="403">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>PlayPauseButtonForPlayerControl</include>
@@ -151,7 +153,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="404" description="Stop Button">
+					<control type="button" id="404">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>StopButtonForPlayerControl</include>
@@ -166,7 +168,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="405" description="Fast Forward Button">
+					<control type="button" id="405">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>FastForwardButtonForPlayerControl</include>
@@ -181,7 +183,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="406" description="Next Button">
+					<control type="button" id="406">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>NextButtonForPlayerControl</include>
@@ -190,7 +192,7 @@
 					</control>
 				</control>
 
-				<control type="label" description="Spacer">
+				<control type="label">
 					<width>60</width>
 				</control>
 				
@@ -200,7 +202,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="410" description="Hate/Decrease Rating Button">
+					<control type="button" id="410">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>HateButtonForPlayerControl</include>
@@ -215,7 +217,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="411" description="Love/Increase Rating Button">
+					<control type="button" id="411">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>LoveButtonForPlayerControl</include>
@@ -224,7 +226,7 @@
 					</control>
 				</control>
 
-				<control type="label" description="Spacer">
+				<control type="label">
 					<width>60</width>
 				</control>
 				
@@ -234,7 +236,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="500" description="Visualisation Button">
+					<control type="button" id="500">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>VisualisationButtonForPlayerControl</include>
@@ -249,7 +251,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="420" description="Visualisation Presets Button">
+					<control type="button" id="420">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>PresetsButtonForPlayerControl</include>
@@ -264,7 +266,7 @@
 					<width>90</width>
 					<include>FrameForPlayerControl</include>
 
-					<control type="button" id="419" description="Visualisation Settings Button">
+					<control type="button" id="419">
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>AddonButtonForPlayerControl</include>

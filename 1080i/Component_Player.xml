@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="FrameForPlayerControl" description="Single Button Control Frame For Player">
-		<control type="image">
-			<width>88</width>
-			<height>88</height>
-			<texture colordiffuse="MainColor">elements/circle-mask.png</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
+	<include name="FrameForPlayerControl">
+        <definition>
+            <control type="image">
+                <width>88</width>
+                <height>88</height>
+                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+        </definition>
 	</include>
     
     <include name="PlayPauseButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/pause.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/pause.png</texturenofocus>
-		<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-		<alttexturefocus colordiffuse="HighlightColor">controls/play.png</alttexturefocus>
-		<alttexturenofocus colordiffuse="BackgroundColor">controls/play.png</alttexturenofocus>
-		<label>$LOCALIZE[31922]</label>
-		<altlabel>$LOCALIZE[208]</altlabel>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(play)</onclick>
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/pause.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/pause.png</texturenofocus>
+            <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+            <alttexturefocus colordiffuse="HighlightColor">controls/play.png</alttexturefocus>
+            <alttexturenofocus colordiffuse="BackgroundColor">controls/play.png</alttexturenofocus>
+            <label>$LOCALIZE[31922]</label>
+            <altlabel>$LOCALIZE[208]</altlabel>
+            <font>-</font>
+            <onclick>XBMC.PlayerControl(play)</onclick>
+        </definition>
     </include>
 
     <include name="RewindButtonForPlayerControl">
@@ -127,24 +131,29 @@
     </include>
     
     <include name="PlaylistButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/playlist.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/playlist.png</texturenofocus>
-		<label>$LOCALIZE[559]</label>
-		<font>-</font>
-		<onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/playlist.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/playlist.png</texturenofocus>
+            <label>$LOCALIZE[559]</label>
+            <font>-</font>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(musicplaylist)</onclick>
+        </definition>
     </include>
     
     <include name="LyricsButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/lyrics.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/lyrics.png</texturenofocus>
-		<label>$LOCALIZE[24013]</label>
-		<font>-</font>
-		<onclick>Close</onclick>
-		<onclick>RunScript($INFO[Skin.String(AddonLyrics)])</onclick>
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/lyrics.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/lyrics.png</texturenofocus>
+            <label>$LOCALIZE[24013]</label>
+            <font>-</font>
+            <onclick>Close</onclick>
+            <onclick>RunScript($INFO[Skin.String(AddonLyrics)])</onclick>
+        </definition>
     </include>
     
     <include name="AudioButtonForPlayerControl">
