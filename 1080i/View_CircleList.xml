@@ -279,34 +279,34 @@
             <control type="group">
 				<control type="group">
 					<visible>!Control.HasFocus(52)</visible>
-					
-					<control type="group">
-						<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-						<posx>780</posx>
-						<posy>490</posy>
-						<include>HorizontalViewListOfContentMediaFlag</include>
-					</control>
+
+                    <include name="HorizontalViewListOfContentMediaFlag">
+                        <param name="posx" value="780" />
+                        <param name="posy" value="490" />
+                        <param name="mediaflagcolor" value="$VAR[ContentTextColor]" />
+                        <param name="outlinecolor" value="BackgroundColor" />
+                    </include>
                     <include name="MainListItemNameLabelForCircleListView">
                         <param name="textcolor" value="$VAR[ContentTextColor]" />
                     </include>
                     <include name="MainListItemInformationLabelForCircleListView">
-                        <param name="textcolor" value="TextColor" />
+                        <param name="textcolor" value="$VAR[ContentTextColor]" />
                     </include>
 				</control>
 				<control type="group" description="Focused Selected List Item Label">
 					<visible>Control.HasFocus(52)</visible>
-					
-					<control type="group">
-						<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-						<posx>780</posx>
-						<posy>490</posy>
-						<include>HorizontalViewListOfContentMediaFlag</include>
-					</control>
+
+                    <include name="HorizontalViewListOfContentMediaFlag">
+                        <param name="posx" value="780" />
+                        <param name="posy" value="490" />
+                        <param name="mediaflagcolor" value="$VAR[ContentMainColor]" />
+                        <param name="outlinecolor" value="BackgroundColor" />
+                    </include>
                     <include name="MainListItemNameLabelForCircleListView">
                         <param name="textcolor" value="$VAR[ContentMainColor]" />
                     </include>
                     <include name="MainListItemInformationLabelForCircleListView">
-                        <param name="textcolor" value="MainColor" />
+                        <param name="textcolor" value="$VAR[ContentMainColor]" />
                     </include>
 				</control>
 			</control>
