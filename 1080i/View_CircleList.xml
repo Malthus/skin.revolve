@@ -71,155 +71,155 @@
 			<animation effect="rotate" center="320,560" start="0" end="10" time="100" condition="Container(52).OnScrollNext">conditional</animation>
 
 			<control type="group">
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="152" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusFifteenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusFifteenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="142" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusFourteenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusFourteenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="132" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusThirteenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusThirteenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="122" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusTwelveColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusTwelveLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="112" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusElevenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusElevenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="102" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusTenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusTenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="92" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusNineColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusNineLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="82" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusEightColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusEightLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="72" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusSevenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusSevenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="62" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusSixColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusSixLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="52" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusFiveColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusFiveLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="42" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusFourColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusFourLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="32" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusThreeColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusThreeLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="22" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusTwoColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusTwoLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="12" />
                     <param name="textcolor" value="$VAR[ContentNoWrapMinusOneColor]" />
                     <param name="label" value="$VAR[ContentNoWrapMinusOneLabel]" />
                 </include>
 
-                <include name="MainListItemForCircleListView" />
+                <include name="MainElementForCircleListView" />
 
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-12" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusOneColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusOneLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-22" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusTwoColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusTwoLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-32" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusThreeColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusThreeLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-42" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusFourColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusFourLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-52" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusFiveColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusFiveLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-62" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusSixColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusSixLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-72" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusSevenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusSevenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-82" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusEightColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusEightLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-92" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusNineColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusNineLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-102" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusTenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusTenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-112" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusElevenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusElevenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-122" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusTwelveColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusTwelveLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-132" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusThirteenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusThirteenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-142" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusFourteenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusFourteenLabel]" />
                 </include>
-                <include name="ListItemForCircleListView">
+                <include name="OtherElementForCircleListView">
                     <param name="angle" value="-152" />
                     <param name="textcolor" value="$VAR[ContentNoWrapPlusFifteenColor]" />
                     <param name="label" value="$VAR[ContentNoWrapPlusFifteenLabel]" />
@@ -242,39 +242,7 @@
 		</control>
 	</include>
 
-	<include name="MainListItemNameLabelForCircleListView">
-        <param name="textcolor" default="$VAR[ContentMainColor]" />
-        
-        <definition>
-            <include name="NormalOutlineLabel">
-                <param name="posx" value="680" />
-                <param name="posy" value="540" />
-                <param name="width" value="1160" />
-                <param name="height" value="40" />
-                <param name="font" value="MediumViewFont" />
-                <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="label" value="$VAR[ContentNameLabel]" />
-            </include>
-        </definition>
-	</include>
-
-	<include name="MainListItemInformationLabelForCircleListView">
-        <param name="textcolor" default="MainColor" />
-        
-        <definition>
-            <include name="ThinOutlineLabel">
-                <param name="posx" value="680" />
-                <param name="posy" value="580" />
-                <param name="width" value="1160" />
-                <param name="height" value="30" />
-                <param name="font" value="DetailViewFont" />
-                <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="label" value="$VAR[ContentInformationLabel]" />
-            </include>
-        </definition>
-	</include>
-
-	<include name="MainListItemForCircleListView">
+	<include name="MainElementForCircleListView">
         <definition>
             <control type="group">
 				<control type="group">
@@ -286,14 +254,14 @@
                         <param name="mediaflagcolor" value="$VAR[ContentTextColor]" />
                         <param name="outlinecolor" value="BackgroundColor" />
                     </include>
-                    <include name="MainListItemNameLabelForCircleListView">
+                    <include name="NameForMainElementForCircleListView">
                         <param name="textcolor" value="$VAR[ContentTextColor]" />
                     </include>
-                    <include name="MainListItemInformationLabelForCircleListView">
+                    <include name="InformationForMainElementForCircleListView">
                         <param name="textcolor" value="$VAR[ContentTextColor]" />
                     </include>
 				</control>
-				<control type="group" description="Focused Selected List Item Label">
+				<control type="group">
 					<visible>Control.HasFocus(52)</visible>
 
                     <include name="HorizontalViewListOfContentMediaFlag">
@@ -302,10 +270,10 @@
                         <param name="mediaflagcolor" value="$VAR[ContentMainColor]" />
                         <param name="outlinecolor" value="BackgroundColor" />
                     </include>
-                    <include name="MainListItemNameLabelForCircleListView">
+                    <include name="NameForMainElementForCircleListView">
                         <param name="textcolor" value="$VAR[ContentMainColor]" />
                     </include>
-                    <include name="MainListItemInformationLabelForCircleListView">
+                    <include name="InformationForMainElementForCircleListView">
                         <param name="textcolor" value="$VAR[ContentMainColor]" />
                     </include>
 				</control>
@@ -313,7 +281,7 @@
         </definition>
     </include>
     
-	<include name="ListItemForCircleListView">
+	<include name="OtherElementForCircleListView">
         <param name="angle" default="0" />
         <param name="textcolor" default="$VAR[ContentTextColor]" />
         <param name="label" default="$VAR[ContentNameLabel]" />
@@ -334,6 +302,38 @@
                     <label>$PARAM[label]</label>
                 </control>
             </control>
+        </definition>
+	</include>
+    
+	<include name="NameForMainElementForCircleListView">
+        <param name="textcolor" default="$VAR[ContentMainColor]" />
+        
+        <definition>
+            <include name="NormalOutlineLabel">
+                <param name="posx" value="680" />
+                <param name="posy" value="540" />
+                <param name="width" value="1160" />
+                <param name="height" value="40" />
+                <param name="font" value="MediumViewFont" />
+                <param name="textcolor" value="$PARAM[textcolor]" />
+                <param name="label" value="$VAR[ContentNameLabel]" />
+            </include>
+        </definition>
+	</include>
+
+	<include name="InformationForMainElementForCircleListView">
+        <param name="textcolor" default="MainColor" />
+        
+        <definition>
+            <include name="ThinOutlineLabel">
+                <param name="posx" value="680" />
+                <param name="posy" value="580" />
+                <param name="width" value="1160" />
+                <param name="height" value="30" />
+                <param name="font" value="DetailViewFont" />
+                <param name="textcolor" value="$PARAM[textcolor]" />
+                <param name="label" value="$VAR[ContentInformationLabel]" />
+            </include>
         </definition>
 	</include>
 </includes>
