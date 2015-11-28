@@ -24,33 +24,32 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 
-		<control type="group" description="Player Controls">
-			<posx>825</posx>
-			<posy>405</posy>
-			<include name="CircleControlsForPlayerControl">
-                <param name="onup" value="9001" />
-                <param name="ondown" value="9001" />
-                <param name="onleft" value="9001" />
-                <param name="onright" value="9001" />
-            </include>
-		</control>
+		<include name="CircleControlsForPlayer">
+            <param name="posx" value="825" />
+            <param name="posy" value="405" />
+            <param name="onup" value="9001" />
+            <param name="ondown" value="9001" />
+            <param name="onleft" value="9001" />
+            <param name="onright" value="9001" />
+        </include>
 
-		<control type="button" id="408" description="Close Button">
+		<control type="button" id="408">
             <visible>Substring(Window.Property(DialogCloseButton),T,left)</visible>
 			<posx>920</posx>
 			<posy>500</posy>
-            <include>CloseButtonForPlayerControl</include>
+            <include>CloseButtonForPlayer</include>
             <onup>403</onup>
 			<ondown>404</ondown>
 			<onleft>401</onleft>
 			<onright>406</onright>
 		</control>
 
-		<control type="group" description="Current Control Label">
+		<control type="group">
 			<visible>Window.IsActive(playercontrols)</visible>
-			<posx>700</posx>
-			<posy>700</posy>
-            <include>DescriptionForControlsForPlayerControl</include>
+            <include name="DescriptionForControlsForPlayer">
+                <param name="posx" value="700" />
+                <param name="posy" value="700" />
+            </include>
 		</control>
 	</controls>
 </window>

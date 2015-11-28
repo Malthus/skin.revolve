@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="FrameForPlayerControl">
+	<include name="FrameForPlayer">
         <definition>
             <control type="image">
                 <width>88</width>
@@ -11,7 +11,7 @@
         </definition>
 	</include>
     
-    <include name="PlayPauseButtonForPlayerControl">
+    <include name="PlayPauseButtonForPlayer">
         <definition>
             <width>80</width>
             <height>80</height>
@@ -20,280 +20,320 @@
             <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
             <alttexturefocus colordiffuse="HighlightColor">controls/play.png</alttexturefocus>
             <alttexturenofocus colordiffuse="BackgroundColor">controls/play.png</alttexturenofocus>
+            <font>-</font>
             <label>$LOCALIZE[31922]</label>
             <altlabel>$LOCALIZE[208]</altlabel>
-            <font>-</font>
-            <onclick>XBMC.PlayerControl(play)</onclick>
+            <onclick>PlayerControl(play)</onclick>
         </definition>
     </include>
 
-    <include name="RewindButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/rewind.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/rewind.png</texturenofocus>
-		<label>$LOCALIZE[31921]</label>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(rewind)</onclick>
+    <include name="RewindButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/rewind.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/rewind.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[31921]</label>
+            <onclick>PlayerControl(rewind)</onclick>
+        </definition>
     </include>
 
-    <include name="FastForwardButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/fastforward.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/fastforward.png</texturenofocus>
-		<label>$LOCALIZE[31923]</label>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(forward)</onclick>
+    <include name="FastForwardButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/fastforward.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/fastforward.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[31923]</label>
+            <onclick>PlayerControl(forward)</onclick>
+        </definition>
     </include>
 
-    <include name="PreviousButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/previous.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/previous.png</texturenofocus>
-		<label>$LOCALIZE[210]</label>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(previous)</onclick>
+    <include name="PreviousButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/previous.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/previous.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[210]</label>
+            <onclick>PlayerControl(previous)</onclick>
+        </definition>
     </include>
 
-    <include name="NextButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/next.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/next.png</texturenofocus>
-		<label>$LOCALIZE[209]</label>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(next)</onclick>
+    <include name="NextButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/next.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/next.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[209]</label>
+            <onclick>PlayerControl(next)</onclick>
+        </definition>
     </include>
 
-    <include name="RepeatButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<label>$LOCALIZE[486]$INFO[Playlist.Repeat,: ]</label>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(repeat)</onclick>
+    <include name="RepeatButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[486]$INFO[Playlist.Repeat,: ]</label>
+            <onclick>PlayerControl(repeat)</onclick>
+        </definition>
     </include>
     
-    <include name="RandomButtonForPlayerControl">
-        <width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/randomoff.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/randomoff.png</texturenofocus>
-		<usealttexture>Playlist.IsRandom</usealttexture>
-		<alttexturefocus colordiffuse="HighlightColor">controls/randomon.png</alttexturefocus>
-		<alttexturenofocus colordiffuse="BackgroundColor">controls/randomon.png</alttexturenofocus>
-        <label>$LOCALIZE[590]$INFO[Playlist.Random,: ]</label>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(random)</onclick>
+    <include name="RandomButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/randomoff.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/randomoff.png</texturenofocus>
+            <usealttexture>Playlist.IsRandom</usealttexture>
+            <alttexturefocus colordiffuse="HighlightColor">controls/randomon.png</alttexturefocus>
+            <alttexturenofocus colordiffuse="BackgroundColor">controls/randomon.png</alttexturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[590]$INFO[Playlist.Random,: ]</label>
+            <onclick>PlayerControl(random)</onclick>
+        </definition>
     </include>
     
-    <include name="StopButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/stop.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/stop.png</texturenofocus>
-		<label>$LOCALIZE[31920]</label>
-		<font>-</font>
-		<onclick>XBMC.PlayerControl(stop)</onclick>
+    <include name="StopButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/stop.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/stop.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[31920]</label>
+            <onclick>PlayerControl(stop)</onclick>
+        </definition>
     </include>
 
-    <include name="CloseButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/close.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/close.png</texturenofocus>
-		<label>$LOCALIZE[31915]</label>
-		<font>-</font>
-		<onclick>Close</onclick>
+    <include name="CloseButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/close.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/close.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[31915]</label>
+            <onclick>Close</onclick>
+        </definition>
     </include>
     
-    <include name="HateButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/hate.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/hate.png</texturenofocus>
-		<label>$LOCALIZE[33080]</label>
-        <font>-</font>
-		<onclick>DecreaseRating</onclick>
+    <include name="HateButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/hate.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/hate.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[33080]</label>
+            <onclick>DecreaseRating</onclick>
+        </definition>
     </include>
     
-    <include name="LoveButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/love.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/love.png</texturenofocus>
-		<label>$LOCALIZE[33079]</label>
-		<font>-</font>
-		<onclick>IncreaseRating</onclick>
+    <include name="LoveButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/love.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/love.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[33079]</label>
+            <onclick>IncreaseRating</onclick>
+        </definition>
     </include>
     
-    <include name="PlaylistButtonForPlayerControl">
+    <include name="PlaylistButtonForPlayer">
         <definition>
             <width>80</width>
             <height>80</height>
             <texturefocus colordiffuse="HighlightColor">controls/playlist.png</texturefocus>
             <texturenofocus colordiffuse="BackgroundColor">controls/playlist.png</texturenofocus>
-            <label>$LOCALIZE[559]</label>
             <font>-</font>
+            <label>$LOCALIZE[559]</label>
             <onclick>Close</onclick>
             <onclick>ActivateWindow(musicplaylist)</onclick>
         </definition>
     </include>
     
-    <include name="LyricsButtonForPlayerControl">
+    <include name="LyricsButtonForPlayer">
         <definition>
             <width>80</width>
             <height>80</height>
             <texturefocus colordiffuse="HighlightColor">controls/lyrics.png</texturefocus>
             <texturenofocus colordiffuse="BackgroundColor">controls/lyrics.png</texturenofocus>
-            <label>$LOCALIZE[24013]</label>
             <font>-</font>
+            <label>$LOCALIZE[24013]</label>
             <onclick>Close</onclick>
             <onclick>RunScript($INFO[Skin.String(AddonLyrics)])</onclick>
         </definition>
     </include>
     
-    <include name="AudioButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/audio.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/audio.png</texturenofocus>
-		<label>$LOCALIZE[13396]</label>
-		<font>-</font>
-		<onclick>ActivateWindow(osdaudiosettings)</onclick>
+    <include name="AudioButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/audio.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/audio.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[13396]</label>
+            <onclick>ActivateWindow(osdaudiosettings)</onclick>
+        </definition>
     </include>
     
-    <include name="VideoButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/video.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/video.png</texturenofocus>
-		<label>$LOCALIZE[13395]</label>
-		<font>-</font>
-		<onclick>ActivateWindow(osdvideosettings)</onclick>
+    <include name="VideoButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/video.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/video.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[13395]</label>
+            <onclick>ActivateWindow(osdvideosettings)</onclick>
+        </definition>
     </include>
     
-    <include name="SubtitlesButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/subtitles.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/subtitles.png</texturenofocus>
-		<label>$LOCALIZE[287]</label>
-		<font>-</font>
-		<onclick>Close</onclick>
-		<onclick>ActivateWindow(subtitlesearch)</onclick>
+    <include name="SubtitlesButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/subtitles.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/subtitles.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[287]</label>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(subtitlesearch)</onclick>
+        </definition>
     </include>
     
-    <include name="BookmarksButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/bookmarks.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/bookmarks.png</texturenofocus>
-		<label>$LOCALIZE[298]</label>
-		<font>-</font>
-		<onclick>ActivateWindow(videobookmarks)</onclick>
+    <include name="BookmarksButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/bookmarks.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/bookmarks.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[298]</label>
+            <onclick>ActivateWindow(videobookmarks)</onclick>
+        </definition>
     </include>
     
-    <include name="DiscButtonForPlayerControl">
-		<enable>VideoPlayer.HasMenu</enable>
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/disc.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/disc.png</texturenofocus>
-		<label>$LOCALIZE[31924]</label>
-		<font>-</font>
-		<onclick>PlayerControl(ShowVideoMenu)</onclick>
+    <include name="DiscButtonForPlayer">
+        <definition>
+            <enable>VideoPlayer.HasMenu</enable>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/disc.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/disc.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[31924]</label>
+            <onclick>PlayerControl(ShowVideoMenu)</onclick>
+        </definition>
     </include>
     
-    <include name="VisualisationButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/visualisation.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/visualisation.png</texturenofocus>
-		<label>$LOCALIZE[12006]</label>
-		<font>-</font>
+    <include name="VisualisationButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/visualisation.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/visualisation.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[12006]</label>
+        </definition>
     </include>
     
-    <include name="PresetsButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/presets.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/presets.png</texturenofocus>
-		<label>$LOCALIZE[31925]</label>
-		<font>-</font>
-		<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+    <include name="PresetsButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/presets.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/presets.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[31925]</label>
+            <onclick>ActivateWindow(visualisationpresetlist)</onclick>
+        </definition>
     </include>
     
-    <include name="AddonButtonForPlayerControl">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="HighlightColor">controls/addon.png</texturefocus>
-		<texturenofocus colordiffuse="BackgroundColor">controls/addon.png</texturenofocus>
-		<label>$LOCALIZE[31926]</label>
-		<font>-</font>
-		<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+    <include name="AddonButtonForPlayer">
+        <definition>
+            <width>80</width>
+            <height>80</height>
+            <texturefocus colordiffuse="HighlightColor">controls/addon.png</texturefocus>
+            <texturenofocus colordiffuse="BackgroundColor">controls/addon.png</texturenofocus>
+            <font>-</font>
+            <label>$LOCALIZE[31926]</label>
+            <onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+        </definition>
     </include>
 
-    <include name="RepeatImageForPlayerControl">
-		<control type="image">
-			<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
-			<width>80</width>
-			<height>80</height>
-			<texture colordiffuse="BackgroundColor">controls/repeat.png</texture>
-		</control>
+    <include name="RepeatImageForPlayer">
+        <definition>
+            <control type="image">
+                <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+                <width>80</width>
+                <height>80</height>
+                <texture colordiffuse="BackgroundColor">controls/repeat.png</texture>
+            </control>
 
-		<control type="image">
-			<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
-			<width>80</width>
-			<height>80</height>
-			<texture colordiffuse="HighlightColor">controls/repeat.png</texture>
-		</control>
+            <control type="image">
+                <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+                <width>80</width>
+                <height>80</height>
+                <texture colordiffuse="HighlightColor">controls/repeat.png</texture>
+            </control>
 
-		<control type="image">
-			<visible>Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
-			<width>80</width>
-			<height>80</height>
-			<texture colordiffuse="BackgroundColor">controls/repeatone.png</texture>
-		</control>
+            <control type="image">
+                <visible>Playlist.IsRepeatOne + !Control.HasFocus(407)</visible>
+                <width>80</width>
+                <height>80</height>
+                <texture colordiffuse="BackgroundColor">controls/repeatone.png</texture>
+            </control>
 
-		<control type="image">
-			<visible>Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
-			<width>80</width>
-			<height>80</height>
-			<texture colordiffuse="HighlightColor">controls/repeatone.png</texture>
-		</control>
+            <control type="image">
+                <visible>Playlist.IsRepeatOne + Control.HasFocus(407)</visible>
+                <width>80</width>
+                <height>80</height>
+                <texture colordiffuse="HighlightColor">controls/repeatone.png</texture>
+            </control>
 
-		<control type="image">
-			<visible>Playlist.IsRepeat + !Control.HasFocus(407)</visible>
-			<width>80</width>
-			<height>80</height>
-			<texture colordiffuse="BackgroundColor">controls/repeatall.png</texture>
-		</control>
+            <control type="image">
+                <visible>Playlist.IsRepeat + !Control.HasFocus(407)</visible>
+                <width>80</width>
+                <height>80</height>
+                <texture colordiffuse="BackgroundColor">controls/repeatall.png</texture>
+            </control>
 
-		<control type="image">
-			<visible>Playlist.IsRepeat + Control.HasFocus(407)</visible>
-			<width>80</width>
-			<height>80</height>
-			<texture colordiffuse="HighlightColor">controls/repeatall.png</texture>
-		</control>
+            <control type="image">
+                <visible>Playlist.IsRepeat + Control.HasFocus(407)</visible>
+                <width>80</width>
+                <height>80</height>
+                <texture colordiffuse="HighlightColor">controls/repeatall.png</texture>
+            </control>
+        </definition>
     </include>
     
-    <include name="DiscImageForPlayerControl">
-		<control type="image">
-			<visible>!VideoPlayer.HasMenu</visible>
-			<width>88</width>
-			<height>88</height>
-			<texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
+    <include name="DiscImageForPlayer">
+        <definition>
+            <control type="image">
+                <visible>!VideoPlayer.HasMenu</visible>
+                <width>88</width>
+                <height>88</height>
+                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+        </definition>
     </include>
     
-	<constant name="PosXForSideMenuCircleControlsForPlayerControl">120</constant>
-	<constant name="PosYForSideMenuCircleControlsForPlayerControl">490</constant>
-	<include name="CircleControlsForPlayerControl">
+	<constant name="PosXForSideMenuCircleControlsForPlayer">120</constant>
+	<constant name="PosYForSideMenuCircleControlsForPlayer">490</constant>
+	<include name="CircleControlsForPlayer">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="onup" default="9001" />
@@ -319,85 +359,85 @@
                     <aspectratio>stretch</aspectratio>
                 </control>
 
-                <control type="togglebutton" id="403" description="Play/Pause Button">
+                <control type="togglebutton" id="403">
                     <posx>95</posx>
                     <posy>0</posy>
-                    <include>PlayPauseButtonForPlayerControl</include>
+                    <include name="PlayPauseButtonForPlayer" />
                     <onup>$PARAM[onup]</onup>
                     <ondown>404</ondown>
                     <onleft>402</onleft>
                     <onright>405</onright>
                 </control>
 
-                <control type="button" id="402" description="Rewind Button">
+                <control type="button" id="402">
                     <posx>28</posx>
                     <posy>28</posy>
-                    <include>RewindButtonForPlayerControl</include>
+                    <include name="RewindButtonForPlayer" />
                     <onup>403</onup>
                     <ondown>401</ondown>
                     <onleft>401</onleft>
                     <onright>403</onright>
                 </control>
 
-                <control type="button" id="405" description="Fast Forward Button">
+                <control type="button" id="405">
                     <posx>162</posx>
                     <posy>28</posy>
-                    <include>FastForwardButtonForPlayerControl</include>
+                    <include name="FastForwardButtonForPlayer" />
                     <onup>403</onup>
                     <ondown>406</ondown>
                     <onleft>403</onleft>
                     <onright>406</onright>
                 </control>
 
-                <control type="button" id="401" description="Previous Button">
+                <control type="button" id="401">
                     <posx>0</posx>
                     <posy>95</posy>
-                    <include>PreviousButtonForPlayerControl</include>
+                    <include name="PreviousButtonForPlayer" />
                     <onup>402</onup>
                     <ondown>407</ondown>
                     <onleft>$PARAM[onleft]</onleft>
                     <onright>406</onright>
                 </control>
 
-                <control type="button" id="406" description="Next Button">
+                <control type="button" id="406">
                     <posx>190</posx>
                     <posy>95</posy>
-                    <include>NextButtonForPlayerControl</include>
+                    <include name="NextButtonForPlayer" />
                     <onup>405</onup>
                     <ondown>400</ondown>
                     <onleft>401</onleft>
                     <onright>$PARAM[onright]</onright>
                 </control>
 			
-                <control type="group" description="Repeat Button">
+                <control type="group">
                     <posx>28</posx>
                     <posy>162</posy>
 
                     <control type="button" id="407">
-                        <include>RepeatButtonForPlayerControl</include>
+                        <include name="RepeatButtonForPlayer" />
                         <onup>401</onup>
                         <ondown>404</ondown>
                         <onleft>401</onleft>
                         <onright>404</onright>
                     </control>
 
-                    <include>RepeatImageForPlayerControl</include>
+                    <include name="RepeatImageForPlayer" />
                 </control>
 
-                <control type="togglebutton" id="400" description="Random Button">
+                <control type="togglebutton" id="400">
                     <posx>162</posx>
                     <posy>162</posy>
-                    <include>RandomButtonForPlayerControl</include>
+                    <include name="RandomButtonForPlayer" />
                     <onup>406</onup>
                     <ondown>404</ondown>
                     <onleft>404</onleft>
                     <onright>406</onright>
                 </control>
 
-                <control type="button" id="404" description="Stop Button">
+                <control type="button" id="404">
                     <posx>95</posx>
                     <posy>190</posy>
-                    <include>StopButtonForPlayerControl</include>
+                    <include name="StopButtonForPlayer" />
                     <onup>403</onup>
                     <ondown>$PARAM[ondown]</ondown>
                     <onleft>407</onleft>
@@ -407,7 +447,7 @@
         </definition>
 	</include>
 
-	<include name="DescriptionForControlsForPlayerControl">
+	<include name="DescriptionForControlsForPlayer">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         
