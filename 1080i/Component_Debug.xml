@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="ItemForDebug">
-        <param name="textcolor" value="White" />
-        <param name="label" value="-" />
+        <param name="textcolor" default="White" />
+        <param name="label" default="-" />
     
         <definition>
             <height>20</height>
@@ -19,7 +19,7 @@
 	</include>
 
 	<include name="ContentTypeForDebug">
-        <param name="label" value="-" />
+        <param name="label" default="-" />
     
         <definition>
             <include name="ItemForDebug">
@@ -30,7 +30,7 @@
 	</include>
 
 	<include name="WindowNameForDebug">
-        <param name="label" value="-" />
+        <param name="label" default="-" />
     
         <definition>
             <include name="ItemForDebug">
@@ -41,7 +41,7 @@
 	</include>
 
 	<include name="DialogNameForDebug">
-        <param name="label" value="-" />
+        <param name="label" default="-" />
     
         <definition>
             <include name="ItemForDebug">
