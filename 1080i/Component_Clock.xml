@@ -2,7 +2,7 @@
 <includes>
     <constant name="PosXForBigClock">1900</constant>
     <constant name="PosYForBigClock">10</constant>
-	<include name="BigClock" description="Big Clock">
+	<include name="BigClock">
 		<control type="group">
 			<control type="group">
 				<visible>!SubString(System.Time(xx),M)</visible> 
