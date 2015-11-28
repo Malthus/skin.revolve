@@ -19,10 +19,11 @@
             <control type="group">
                 <posx>1630</posx>
                 <posy>806</posy>
-                <include>DefaultCirclePlayerMediaIcon</include>
+                <include name="DefaultCirclePlayerMediaIcon" />
             </control>
                 
-            <control type="button" id="9990" description="Invisible Mouse Control For Media Controls Button">
+            <control type="button" id="9990">
+                <description>Invisible Mouse Control For Media Controls Button</description>
                 <posx>1650</posx>
                 <posy>826</posy>
                 <width>230</width>
