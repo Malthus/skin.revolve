@@ -83,7 +83,9 @@
 	
 	<variable name="ContentThumbnail">
 		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-		<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
+		<value condition="SubString(ListItem.FileExtension,jpg) | SubString(ListItem.FileExtension,jpeg)">$INFO[ListItem.FileNameAndPath]</value>
+		<value condition="SubString(ListItem.FileExtension,png)">$INFO[ListItem.FileNameAndPath]</value>
+		<value condition="SubString(ListItem.FileExtension,gif)">$INFO[ListItem.FileNameAndPath]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 
