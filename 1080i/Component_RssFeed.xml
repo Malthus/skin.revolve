@@ -14,23 +14,23 @@
     
     <include name="RssFeed">
         <definition>
-		<control type="group" description="RSS Feed">
-			<visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
+            <control type="group" description="RSS Feed">
+                <visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
             
-            <include name="BackgroundForRssFeed" />
+                <include name="BackgroundForRssFeed" />
 
-			<control type="rss" id="1">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1920</width>
-				<height>40</height>
-				<font>RSSFont</font>
-				<titlecolor>MainColor</titlecolor>
-				<headlinecolor>SecondaryColor</headlinecolor>
-				<textcolor>TextColor</textcolor>
-				<urlset>1</urlset>
-			</control>
-		</control>
+                <control type="rss" id="1">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>1920</width>
+                    <height>40</height>
+                    <font>RSSFont</font>
+                    <titlecolor>MainColor</titlecolor>
+                    <headlinecolor>SecondaryColor</headlinecolor>
+                    <textcolor>TextColor</textcolor>
+                    <urlset>1</urlset>
+                </control>
+            </control>
         </definition>
     </include>
 </includes>
