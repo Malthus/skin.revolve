@@ -1,80 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="GlobalBackground">
-		<control type="group" description="Global Background Image">
-			<visible>!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(BackgroundVisualiser.Active)] | [Player.HasVideo + !Skin.HasSetting(BackgroundVideo.Active)]</visible>
-
-			<control type="largeimage">
-				<include>FullscreenDimensions</include>
-				<texture colordiffuse="BackgroundColor">white.png</texture>
-			</control>
-			
-			<control type="largeimage">
-				<visible>Skin.HasSetting(BackgroundImage.Active)</visible>
-				<include>FullscreenDimensions</include>
-				<texture background="true">$VAR[ContentBackground]</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<timeperimage>8000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>500</fadetime>
-		 		<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
-				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
-		 		<animation effect="fade" start="100" end="0" time="500">Hidden</animation>
-		 		<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
-			</control>
-
-			<control type="largeimage">
-				<visible>Skin.HasSetting(BackgroundImage.Active) + Skin.HasSetting(BackgroundImage.Faded)</visible>
-				<include>FullscreenDimensions</include>
-				<texture colordiffuse="FadeDiffuseColor">white.png</texture>
-				<timeperimage>8000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>500</fadetime>
-		 		<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
-				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
-		 		<animation effect="fade" start="100" end="0" time="500">Hidden</animation>
-		 		<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
-			</control>
-		</control>
-
-		<control type="group" description="Global Background Visualisation">
-			<visible>Player.HasAudio + Skin.HasSetting(BackgroundVisualiser.Active)</visible>
-
-			<control type="visualisation">
-				<include>FullscreenDimensions</include>
-			</control>
-			
-			<control type="largeimage">
-				<visible>Skin.HasSetting(BackgroundVisualiser.Faded)</visible>
-				<include>FullscreenDimensions</include>
-				<texture colordiffuse="FadeDiffuseColor" background="true">white.png</texture>
-				<timeperimage>8000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
-				<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		 		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-		 		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
-			</control>
-		</control>
-		
-		<control type="group" description="Global Background Video">
-			<visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo.Active)</visible>
-
-			<control type="videowindow">
-				<include>FullscreenDimensions</include>
-			</control>
-			
-			<control type="largeimage">
-				<visible>Skin.HasSetting(BackgroundVideo.Faded)</visible>
-				<include>FullscreenDimensions</include>
-				<texture colordiffuse="FadeDiffuseColor" background="true">white.png</texture>
-				<timeperimage>8000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
-				<animation effect="fade" start="0" end="100" time="600">Visible</animation>
-		 		<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
-		 		<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
-			</control>
-		</control>
+        <definition>
+            <include name="ImageBackground" />
+            <include name="MusicVisualizationBackground" />
+            <include name="VideoBackground" />
+        </definition>
 	</include>
+
+    <include name="ImageBackground">
+        <definition>
+            <control type="group">
+                <visible>!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(BackgroundVisualiser.Active)] | [Player.HasVideo + !Skin.HasSetting(BackgroundVideo.Active)]</visible>
+
+                <control type="largeimage">
+                    <include name="FullscreenDimensions" />
+                    <texture colordiffuse="BackgroundColor">white.png</texture>
+                </control>
+			
+                <control type="largeimage">
+                    <visible>Skin.HasSetting(BackgroundImage.Active)</visible>
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
+                    <texture background="true">$VAR[ContentBackground]</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <timeperimage>8000</timeperimage>
+                    <randomize>true</randomize>
+                    <fadetime>500</fadetime>
+                </control>
+
+                <control type="largeimage">
+                    <visible>Skin.HasSetting(BackgroundImage.Active) + Skin.HasSetting(BackgroundImage.Faded)</visible>
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
+                    <texture colordiffuse="FadeDiffuseColor">white.png</texture>
+                    <timeperimage>8000</timeperimage>
+                    <randomize>true</randomize>
+                    <fadetime>500</fadetime>
+                </control>
+		</control>
+        </definition>
+	</include>
+
+    <include name="MusicVisualizationBackground">
+        <definition>
+            <control type="group">
+                <visible>Player.HasAudio + Skin.HasSetting(BackgroundVisualiser.Active)</visible>
+
+                <control type="visualisation">
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
+                </control>
+			
+                <control type="largeimage">
+                    <visible>Skin.HasSetting(BackgroundVisualiser.Faded)</visible>
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
+                    <texture colordiffuse="FadeDiffuseColor" background="true">white.png</texture>
+                    <timeperimage>8000</timeperimage>
+                    <randomize>true</randomize>
+                    <fadetime>1000</fadetime>
+                </control>
+            </control>
+        </definition>
+	</include>
+
+    <include name="VideoBackground">
+        <definition>
+            <control type="group">
+                <visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo.Active)</visible>
+
+                <control type="videowindow">
+                    <include name="FullscreenDimensions" />
+                </control>
+			
+                <control type="largeimage">
+                    <visible>Skin.HasSetting(BackgroundVideo.Faded)</visible>
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
+                    <texture colordiffuse="FadeDiffuseColor" background="true">white.png</texture>
+                    <timeperimage>8000</timeperimage>
+                    <randomize>true</randomize>
+                    <fadetime>1000</fadetime>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="FadeAnimationForBackground">
+        <definition>
+            <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+            <animation effect="fade" start="0" end="100" time="500">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
+            <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+<!--
+                    <animation effect="fade" start="0" end="100" time="600">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+                    <animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+-->            
+        </definition>
+    </include>
 </includes>
