@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="ThumbnailsView">
-		<control type="panel" id="55" description="Thumbnails">
+		<control type="panel" id="55">
 			<viewtype label="31935">list</viewtype>
 			<visible>true</visible>
 			<animation effect="slide" start="0,1080" end="0,0" time="500">WindowOpen</animation>
@@ -25,15 +25,30 @@
 				<control type="group">
 					<posx>5</posx>
 					<posy>5</posy>
-					<include>DefaultCircleThumbnailIcon</include>
-					<include>OverlayForDefaultCircleThumbnailIcon</include>
+					<include name="DefaultCircleThumbnailIcon" />
+					<include name="OverlayForDefaultCircleThumbnailIcon" />
+				</control>
+				<control type="group">
+                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+					<posx>10</posx>
+					<posy>220</posy>
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="260" />
+                        <param name="height" value="40" />
+                        <param name="font" value="TinyViewFont" />
+                        <param name="textcolor" value="MainColor" />
+                        <param name="outlinecolor" value="BackgroundColor" />
+                        <param name="wrapmultiline" value="true" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$VAR[ContentNameLabel]" />
+                    </include>
 				</control>
 			</itemlayout>
 			
 			<focusedlayout height="280" width="280">
 				<control type="group">
-					<animation effect="zoom" start="100" end="140" time="100" condition="true">conditional</animation>
-					<animation effect="slide" end="-38,-38" time="100" condition="true">conditional</animation>				
+					<animation effect="zoom" start="100" end="140" time="200" condition="true">conditional</animation>
+					<animation effect="slide" end="-38,-38" time="200" condition="true">conditional</animation>				
 				
 					<posx>5</posx>
 					<posy>5</posy>
@@ -44,12 +59,12 @@
 			</focusedlayout>
 		</control>
 
-		<control type="group" description="Bottom Ring">
+		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
 			<include>BottomRing</include>
 		</control>
 		
-		<control type="scrollbar" id="65" description="Scrollbar">
+		<control type="scrollbar" id="65">
 			<visible allowhiddenfocus="true">Control.IsVisible(55)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(65) + !Container(55).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="40,0" time="100" />

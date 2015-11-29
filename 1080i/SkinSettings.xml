@@ -384,6 +384,16 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
+					<control type="radiobutton" id="812">
+                        <description>Show Description in Landscape Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31155]</label>
+						<selected>Skin.HasSetting(ThumbnailsName.Visible)</selected>
+						<onclick>Skin.ToggleSetting(ThumbnailsName.Visible)</onclick>
+					</control>
+                    
 					<control type="radiobutton" id="808" description="Show Description in Landscape Option">
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -647,6 +657,11 @@
 						<visible>Control.HasFocus(811)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31215]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(812)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31216]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>

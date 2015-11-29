@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PanelsView">
-		<control type="panel" id="56" description="Panels">
+		<control type="panel" id="56">
 			<viewtype label="31936">list</viewtype>
 			<visible>true</visible>
 			<animation effect="slide" start="0,1080" end="0,0" time="500">WindowOpen</animation>
@@ -26,8 +26,22 @@
 				<control type="group">
 					<posx>5</posx>
 					<posy>5</posy>
-					<include>DefaultSquareThumbnailIcon</include>
-					<include>OverlayForDefaultSquareThumbnailIcon</include>
+					<include name="DefaultSquareThumbnailIcon" />
+					<include name="OverlayForDefaultSquareThumbnailIcon" />
+				</control>
+				<control type="group">
+                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+					<posx>15</posx>
+					<posy>245</posy>
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="250" />
+                        <param name="height" value="20" />
+                        <param name="font" value="TinyViewFont" />
+                        <param name="textcolor" value="MainColor" />
+                        <param name="outlinecolor" value="BackgroundColor" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$VAR[ContentNameLabel]" />
+                    </include>
 				</control>
 			</itemlayout>
 			
@@ -35,8 +49,22 @@
 				<control type="group">
 					<posx>5</posx>
 					<posy>5</posy>
-					<include>DefaultVerticalThumbnailIcon</include>
-					<include>OverlayForDefaultVerticalThumbnailIcon</include>
+					<include name="DefaultVerticalThumbnailIcon" />
+					<include name="OverlayForDefaultVerticalThumbnailIcon" />
+				</control>
+				<control type="group">
+                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+					<posx>10</posx>
+					<posy>385</posy>
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="260" />
+                        <param name="height" value="20" />
+                        <param name="font" value="TinyViewFont" />
+                        <param name="textcolor" value="MainColor" />
+                        <param name="outlinecolor" value="BackgroundColor" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$VAR[ContentNameLabel]" />
+                    </include>
 				</control>
 			</itemlayout>
 			
@@ -47,9 +75,9 @@
 			
 					<posx>5</posx>
 					<posy>5</posy>
-					<include>ShadowForDefaultSquareThumbnailIcon</include>
-					<include>DefaultSquareThumbnailIcon</include>
-					<include>OverlayForDefaultSquareThumbnailIcon</include>
+					<include name="ShadowForDefaultSquareThumbnailIcon" />
+					<include name="DefaultSquareThumbnailIcon" />
+					<include name="OverlayForDefaultSquareThumbnailIcon" />
 				</control>
 			</focusedlayout>
 
@@ -60,9 +88,9 @@
 				
 					<posx>5</posx>
 					<posy>5</posy>
-					<include>ShadowForDefaultVerticalThumbnailIcon</include>
-					<include>DefaultVerticalThumbnailIcon</include>
-					<include>OverlayForDefaultVerticalThumbnailIcon</include>
+					<include name="ShadowForDefaultVerticalThumbnailIcon" />
+					<include name="DefaultVerticalThumbnailIcon" />
+					<include name="OverlayForDefaultVerticalThumbnailIcon" />
 				</control>
 			</focusedlayout>
 		</control>
