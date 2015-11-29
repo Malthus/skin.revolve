@@ -12,6 +12,7 @@
         <param name="scrollsuffix" default=" | " />
         <param name="align" default="left" />
         <param name="aligny" default="center" />
+        <param name="wrapmultiline" default="false" />
         <param name="angle" default="0" />
         <param name="label" default="-" />
         
@@ -32,6 +33,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -47,6 +49,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -62,6 +65,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -77,6 +81,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -98,6 +103,7 @@
         <param name="scrollsuffix" default=" | " />
         <param name="align" default="left" />
         <param name="aligny" default="center" />
+        <param name="wrapmultiline" default="false" />
         <param name="angle" default="0" />
         <param name="label" default="-" />
         
@@ -114,6 +120,7 @@
                 <param name="scrollsuffix" value="$PARAM[scrollsuffix]" />
                 <param name="align" value="$PARAM[align]" />
                 <param name="aligny" value="$PARAM[aligny]" />
+                <param name="wrapmultiline" value="$PARAM[wrapmultiline]" />
                 <param name="angle" default="$PARAM[angle]" />
                 <param name="label" value="$PARAM[label]" />
             </include>
@@ -130,6 +137,7 @@
                 <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                 <align>$PARAM[align]</align>
                 <aligny>$PARAM[aligny]</aligny>
+                <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                 <angle>$PARAM[angle]</angle>
                 <label>$PARAM[label]</label>
             </control>
@@ -148,6 +156,7 @@
         <param name="scrollsuffix" default=" | " />
         <param name="align" default="left" />
         <param name="aligny" default="center" />
+        <param name="wrapmultiline" default="false" />
         <param name="angle" default="0" />
         <param name="label" default="-" />
         
@@ -168,6 +177,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -183,6 +193,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -198,6 +209,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -213,6 +225,7 @@
                     <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                     <align>$PARAM[align]</align>
                     <aligny>$PARAM[aligny]</aligny>
+                    <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                     <angle>$PARAM[angle]</angle>
                     <label>$PARAM[label]</label>
                 </control>
@@ -234,6 +247,7 @@
         <param name="scrollsuffix" default=" | " />
         <param name="align" default="left" />
         <param name="aligny" default="center" />
+        <param name="wrapmultiline" default="false" />
         <param name="angle" default="0" />
         <param name="label" default="-" />
         
@@ -250,6 +264,7 @@
                 <param name="scrollsuffix" value="$PARAM[scrollsuffix]" />
                 <param name="align" value="$PARAM[align]" />
                 <param name="aligny" value="$PARAM[aligny]" />
+                <param name="wrapmultiline" value="$PARAM[wrapmultiline]" />
                 <param name="angle" default="$PARAM[angle]" />
                 <param name="label" value="$PARAM[label]" />
             </include>
@@ -266,6 +281,7 @@
                 <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                 <align>$PARAM[align]</align>
                 <aligny>$PARAM[aligny]</aligny>
+                <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                 <angle>$PARAM[angle]</angle>
                 <label>$PARAM[label]</label>
             </control>
