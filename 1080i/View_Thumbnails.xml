@@ -30,6 +30,7 @@
 				</control>
 				<control type="group">
                     <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+                    
 					<posx>10</posx>
 					<posy>220</posy>
                     <include name="NormalOutlineLabel">
@@ -47,14 +48,36 @@
 			
 			<focusedlayout height="280" width="280">
 				<control type="group">
-					<animation effect="zoom" start="100" end="140" time="200" condition="true">conditional</animation>
-					<animation effect="slide" end="-38,-38" time="200" condition="true">conditional</animation>				
-				
+					<animation type="Focus">
+						<effect type="zoom" start="100" end="140" time="200" />
+						<effect type="slide" end="-38,-38" time="200" />
+					</animation>
+
 					<posx>5</posx>
 					<posy>5</posy>
 					<include name="ShadowForDefaultCircleThumbnailIcon" />
 					<include name="DefaultCircleThumbnailIcon" />
 					<include name="OverlayForDefaultCircleThumbnailIcon" />
+				</control>
+				<control type="group">
+                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+                    
+					<animation type="Focus">
+						<effect type="fade" start="100" end="0" time="200" />
+					</animation>
+                    
+					<posx>10</posx>
+					<posy>220</posy>
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="260" />
+                        <param name="height" value="40" />
+                        <param name="font" value="TinyViewFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="wrapmultiline" value="true" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$VAR[ContentNameLabel]" />
+                    </include>
 				</control>
 			</focusedlayout>
 		</control>
