@@ -4,8 +4,8 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>FullscreenDimensions</include>
-		<include>GlobalBackground</include>
+		<include name="FullscreenDimensions" />
+		<include name="GlobalBackground" />
 
 		<control type="group" description="Ring">
 			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
@@ -33,7 +33,7 @@
 			</control>
 		</control>
 
-		<include>ListForHomeRevolveList</include>
+		<include name="ListForHomeRevolveList" />
 
 		<control type="wraplist" id="300" description="Invisible Weather Wraplist">
 			<visible allowhiddenfocus="true">false</visible>
@@ -150,7 +150,8 @@
 		</control>
 
 		<control type="group">
-			<control type="group" description="Weather Provider Icon">
+			<control type="group">
+                <description>Weather Provider Icon</description>
 				<posx>1615</posx>
 				<posy>20</posy>
 			
@@ -177,7 +178,8 @@
 			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
 			<animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="400" reversible="false">WindowClose</animation>
 			
-			<control type="group" description="Weather Condition Icon">
+			<control type="group">
+                <description>Weather Condition Icon</description>
 				<posx>140</posx>
 				<posy>200</posy>
 
@@ -201,7 +203,8 @@
 				</control>
 			</control>
 			
-			<control type="group" description="Location And Update Information">
+			<control type="group">
+                <description>Location And Update Information</description>
 				<control type="label">
 					<posx>40</posx>
 					<posy>550</posy>
@@ -246,7 +249,8 @@
 				</control>
 			</control>
 
-			<control type="group" description="Current Weather Information">
+			<control type="group">
+                <description>Current Weather Information</description>
 				<visible>Container(300).HasFocus(99)</visible>
 				<control type="label">
 					<posx>40</posx>
@@ -335,7 +339,8 @@
 				</control>
 			</control>
 				
-			<control type="group" description="Next Days Weather Information">
+			<control type="group">
+                <description>Next Days Weather Information</description>
 				<visible>!Container(300).HasFocus(99)</visible>
 				<control type="label">
 					<posx>40</posx>
@@ -368,26 +373,26 @@
 			</control>
 		</control>
 
-		<control type="group" id="9000" description="Side Menu Area">
-			<include>SideMenu</include>
+		<control type="group" id="9000">
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu">
                     <param name="onright" value="300" />
                 </include>
 
-                <include>ViewGroupLabelForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
                 <control type="label" id="998">
                     <width>482</width>
                     <height>30</height>
                     <textcolor>MainColor</textcolor>
                     <label>$LOCALIZE[31153]</label>
                 </control>
-				<include>WeatherLocationSpinnerForSideMenu</include>
-				<include>WeatherRefreshButtonForSideMenu</include>
+				<include name="WeatherLocationSpinnerForSideMenu" />
+				<include name="WeatherRefreshButtonForSideMenu" />
                 
-                <include>SettingsGroupLabelForSideMenu</include>
-				<include>WeatherSettingsButtonForSideMenu</include>
+                <include name="SettingsGroupLabelForSideMenu" />
+				<include name="WeatherSettingsButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu">
@@ -395,6 +400,6 @@
             </include>
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>
