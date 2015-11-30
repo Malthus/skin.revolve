@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <constant name="PosXForContentForOSD">340</constant>
+    <constant name="PosXForAdditionalContentForOSD">1880</constant>
     <constant name="WidthForContentForOSD">1350</constant>
+    <constant name="WidthForAdditionalContentForOSD">200</constant>
+
+  	<include name="DefaultAnimationForOSD">
+        <definition>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="500" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="500" />
+			</animation>
+        </definition>
+    </include>
 
 	<include name="MediaNameLabelForOSD">
         <param name="label" default="$VAR[PlayerNameLabel]" />
     
         <definition>
             <control type="group">
+                <include name="DefaultAnimationForOSD" />
                 <posx>PosXForContentForOSD</posx>
                 <posy>975</posy>
 				
@@ -27,6 +41,7 @@
     
         <definition>
             <control type="group">
+                <include name="DefaultAnimationForOSD" />
                 <posx>PosXForContentForOSD</posx>
                 <posy>934</posy>
 					
@@ -41,6 +56,25 @@
         </definition>
 	</include>
     
+	<include name="MediaPlaylistPositionLabelForOSD">
+        <definition>
+            <control type="group">
+                <include name="DefaultAnimationForOSD" />
+                <posx>PosXForAdditionalContentForOSD</posx>
+                <posy>934</posy>
+					
+                <include name="NormalOutlineLabel">
+                    <param name="width" value="WidthForAdditionalContentForOSD" />
+                    <param name="font" value="DefaultInformationFont" />
+                    <param name="textcolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="MainColor" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$VAR[PlayerPlaylistPositionLabel]" />
+                </include>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="MediaSeekBarForOSD">
         <param name="playertimelabel" default="$VAR[PlayerTimeLabel]" />
         <param name="playerdurationlabel" default="$VAR[PlayerDurationLabel]" />
@@ -49,68 +83,109 @@
     
         <definition>
             <control type="group">
-                <posx>PosXForContentForOSD</posx>
-                <posy>1015</posy>
-					
-                <include name="NormalOutlineLabel">
-                    <param name="width" value="200" />
-                    <param name="font" value="DefaultInformationFont" />
-                    <param name="textcolor" value="BackgroundColor" />
-                    <param name="outlinecolor" value="MainColor" />
-                    <param name="label" value="$PARAM[playertimelabel]" />
-                </include>
+                <include name="DefaultAnimationForOSD" />
+
+                <control type="group">
+                    <posx>PosXForContentForOSD</posx>
+                    <posy>1015</posy>
+                        
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="200" />
+                        <param name="font" value="DefaultInformationFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="label" value="$PARAM[playertimelabel]" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <posx>PosXForAdditionalContentForOSD</posx>
+                    <posy>1015</posy>
+
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="200" />
+                        <param name="font" value="DefaultInformationFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="align" value="right" />
+                        <param name="label" value="$PARAM[playerdurationlabel]" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <posx>510</posx>
+                    <posy>1025</posy>
+
+                    <control type="image">
+                        <posx>-2</posx>
+                        <posy>-2</posy>
+                        <width>1185</width>
+                        <height>28</height>
+                        <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1180</width>
+                        <height>24</height>
+                        <texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="progress">
+                        <posx>0</posx>
+                        <posy>-12</posy>
+                        <width>1185</width>
+                        <height>24</height>
+                        <midtexture colordiffuse="SelectColor" border="6">controls/horizontalbar-thin.png</midtexture>
+                        <info>$PARAM[playercache]</info>
+                    </control>
+                    <control type="progress">
+                        <posx>0</posx>
+                        <posy>-12</posy>
+                        <width>1185</width>
+                        <height>24</height>
+                        <midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
+                        <info>$PARAM[playerprogress]</info>
+                    </control>
+                </control>
             </control>
+        </definition>
+	</include>
 
-            <control type="group">
-                <posx>1870</posx>
-                <posy>1015</posy>
+	<include name="MediaThumbnailIconForOSD">
+        <definition>
+			<control type="group">
+                <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
+				<animation type="WindowOpen">
+					<effect type="slide" tween="quadratic" easing="out" start="1590,0" end="0,0" time="500" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1590,0" time="500" />
+				</animation>
 
-                <include name="NormalOutlineLabel">
-                    <param name="width" value="200" />
-                    <param name="font" value="DefaultInformationFont" />
-                    <param name="textcolor" value="BackgroundColor" />
-                    <param name="outlinecolor" value="MainColor" />
-                    <param name="label" value="$PARAM[playerdurationlabel]" />
-                </include>
-            </control>
+				<control type="group">
+					<posx>40</posx>
+					<posy>806</posy>
+					<include name="DefaultCirclePlayerMediaIcon" />
+				</control>
+			</control>
+            
+			<control type="group">
+                <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
+				<animation type="WindowOpen">
+					<effect type="slide" tween="quadratic" easing="out" start="1900,0" end="0,0" time="500" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1900,0" time="500" />
+				</animation>
 
-            <control type="group">
-                <posx>510</posx>
-                <posy>1025</posy>
-
-                <control type="image">
-                    <posx>-2</posx>
-                    <posy>-2</posy>
-                    <width>1185</width>
-                    <height>28</height>
-                    <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>1180</width>
-                    <height>24</height>
-                    <texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="progress">
-                    <posx>0</posx>
-                    <posy>-12</posy>
-                    <width>1185</width>
-                    <height>24</height>
-                    <midtexture colordiffuse="SelectColor" border="6">controls/horizontalbar-thin.png</midtexture>
-                    <info>$PARAM[playercache]</info>
-                </control>
-                <control type="progress">
-                    <posx>0</posx>
-                    <posy>-12</posy>
-                    <width>1185</width>
-                    <height>24</height>
-                    <midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
-                    <info>$PARAM[playerprogress]</info>
-                </control>
-            </control>
+				<control type="group">
+					<posx>40</posx>
+					<posy>806</posy>
+					<include name="DefaultCirclePlayerMediaIcon" />
+				</control>
+			</control>
         </definition>
 	</include>
 
@@ -118,6 +193,7 @@
         <definition>
             <control type="group">
                 <visible>Player.Playing</visible>
+                <include name="DefaultAnimationForOSD" />
 
                 <control type="group" description="Play Icon">
                     <posx>PosXForContentForOSD</posx>
@@ -156,253 +232,80 @@
         </definition>
 	</include>
 
-    <!-- ============================================================== -->
-    
-	<include name="MediaNameLabelForPlayerInfo" description="Name (Title) Label">
-		<control type="group">
-			<posx>PosXForContentForOSD</posx>
-			<posy>975</posy>
-				
-            <include name="NormalOutlineLabel">
-                <param name="width" value="WidthForContentForOSD" />
-                <param name="font" value="BigInformationFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
-                <param name="label" value="$VAR[PlayerNameLabel]" />
-            </include>
-		</control>
+	<include name="MediaStarRatingIconForOSD">
+        <definition>
+            <control type="group">
+                <include name="DefaultAnimationForOSD" />
+                <posx>1704</posx>
+                <posy>975</posy>
+
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>180</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">icons/rating-5.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>-2</posx>
+                    <posy>-2</posy>
+                    <width>180</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>2</posx>
+                    <posy>-2</posy>
+                    <width>180</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>-2</posx>
+                    <posy>2</posy>
+                    <width>180</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>2</posx>
+                    <posy>2</posy>
+                    <width>180</width>
+                    <height>40</height>
+                    <texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>180</width>
+                    <height>40</height>
+                    <texture colordiffuse="BackgroundColor">$VAR[PlayerStarRating]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+        </definition>
 	</include>
 	
-	<include name="MediaInformationLabelForPlayerInfo">
-		<control type="group" description="Information Label">
-			<posx>PosXForContentForOSD</posx>
-			<posy>934</posy>
+	<include name="MediaVisualisationLabelForOSD">
+        <definition>
+            <control type="group">
+                <include name="DefaultAnimationForOSD" />
+                <posx>PosXForContentForOSD</posx>
+                <posy>824</posy>
 					
-            <include name="NormalOutlineLabel">
-                <param name="width" value="WidthForContentForOSD" />
-                <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
-                <param name="label" value="$VAR[PlayerInformationLabel]" />
-            </include>
-		</control>
+                <include name="NormalOutlineLabel">
+                    <param name="width" value="1530" />
+                    <param name="font" value="DefaultInformationFont" />
+                    <param name="textcolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="MainColor" />
+                    <param name="label" value="$VAR[PlayerVisualisationLabel]" />
+                </include>
+            </control>
+        </definition>
 	</include>
-	
-	<include name="MediaPlaylistPositionLabelForPlayerInfo">
-		<control type="group" description="Playlist Position Label">
-			<posx>1870</posx>
-			<posy>934</posy>
-					
-            <include name="NormalOutlineLabel">
-                <param name="width" value="200" />
-                <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
-                <param name="align" value="right" />
-                <param name="label" value="$VAR[PlayerPlaylistPositionLabel]" />
-            </include>
-		</control>
-	</include>
-    
-	<include name="MediaAudioCodecLabelForPlayerInfo">
-		<control type="group" description="Information Label">
-			<posx>PosXForContentForOSD</posx>
-			<posy>780</posy>
-					
-            <include name="NormalOutlineLabel">
-                <param name="width" value="1530" />
-                <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
-                <param name="label" value="$VAR[PlayerAudioCodecLabel]" />
-            </include>
-		</control>
-	</include>
-    
-	<include name="MediaVideoCodecLabelForPlayerInfo">
-		<control type="group" description="Information Label">
-			<posx>PosXForContentForOSD</posx>
-			<posy>820</posy>
-					
-            <include name="NormalOutlineLabel">
-                <param name="width" value="1530" />
-                <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
-                <param name="label" value="$VAR[PlayerVideoCodecLabel]" />
-            </include>
-		</control>
-	</include>
-    
-	<include name="MediaVisualisationLabelForPlayerInfo">
-		<control type="group" description="Information Label">
-			<posx>PosXForContentForOSD</posx>
-			<posy>824</posy>
-					
-            <include name="NormalOutlineLabel">
-                <param name="width" value="1530" />
-                <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
-                <param name="label" value="$VAR[PlayerVisualisationLabel]" />
-            </include>
-		</control>
-	</include>
-    
-	<include name="MediaStarRatingIconForPlayerInfo">
-		<control type="group" description="Rating Icon">
-			<posx>1704</posx>
-			<posy>975</posy>
-
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>180</width>
-				<height>40</height>
-				<texture colordiffuse="MainColor">icons/rating-5.png</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>-2</posx>
-				<posy>-2</posy>
-				<width>180</width>
-				<height>40</height>
-				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>2</posx>
-				<posy>-2</posy>
-				<width>180</width>
-				<height>40</height>
-				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>-2</posx>
-				<posy>2</posy>
-				<width>180</width>
-				<height>40</height>
-				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>2</posx>
-				<posy>2</posy>
-				<width>180</width>
-				<height>40</height>
-				<texture colordiffuse="MainColor">$VAR[PlayerStarRating]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>180</width>
-				<height>40</height>
-				<texture colordiffuse="BackgroundColor">$VAR[PlayerStarRating]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-		</control>
-	</include>
-	
-	<include name="MediaSeekBarForPlayerInfo">
-		<control type="group" description="Playing Time Label">
-			<posx>PosXForContentForOSD</posx>
-			<posy>1015</posy>
-					
-			<control type="label">
-				<posx>-2</posx>
-				<posy>-2</posy>
-				<width>200</width>
-				<font>DefaultInformationFont</font>
-				<textcolor>MainColor</textcolor>
-				<label>$VAR[PlayerTimeLabel]</label>
-			</control>
-			<control type="label">
-				<posx>-2</posx>
-				<posy>2</posy>
-				<width>200</width>
-				<font>DefaultInformationFont</font>
-				<textcolor>MainColor</textcolor>
-				<label>$VAR[PlayerTimeLabel]</label>
-			</control>
-			<control type="label">
-				<posx>2</posx>
-				<posy>-2</posy>
-				<width>200</width>
-				<font>DefaultInformationFont</font>
-				<textcolor>MainColor</textcolor>
-				<label>$VAR[PlayerTimeLabel]</label>
-			</control>
-			<control type="label">
-				<posx>2</posx>
-				<posy>2</posy>
-				<width>200</width>
-				<font>DefaultInformationFont</font>
-				<textcolor>MainColor</textcolor>
-				<label>$VAR[PlayerTimeLabel]</label>
-			</control>
-			<control type="label" description="Player Times Label">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>200</width>
-				<font>DefaultInformationFont</font>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$VAR[PlayerTimeLabel]</label>
-			</control>
-		</control>
-
-		<control type="group" description="Duration Label">
-			<posx>1870</posx>
-			<posy>1015</posy>
-
-            <include name="NormalOutlineLabel">
-                <param name="width" value="200" />
-                <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
-                <param name="align" value="right" />
-                <param name="label" value="$VAR[PlayerDurationLabel]" />
-            </include>
-		</control>
-
-		<control type="group" description="Player Seek Bar">
-			<posx>510</posx>
-			<posy>1025</posy>
-
-			<control type="image">
-				<posx>-2</posx>
-				<posy>-2</posy>
-				<width>1185</width>
-				<height>28</height>
-				<texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1180</width>
-				<height>24</height>
-				<texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="progress" description="Cache Progress Bar">
-				<posx>0</posx>
-				<posy>-12</posy>
-				<width>1185</width>
-				<height>24</height>
-				<midtexture colordiffuse="SelectColor" border="6">controls/horizontalbar-thin.png</midtexture>
-				<info>Player.ProgressCache</info>
-			</control>
-			<control type="progress" description="Player Seek Bar">
-				<posx>0</posx>
-				<posy>-12</posy>
-				<width>1185</width>
-				<height>24</height>
-				<midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
-				<info>Player.Progress</info>
-			</control>
-		</control>
-	</include>
-    
 </includes>

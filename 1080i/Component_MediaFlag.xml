@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="StarRatingMediaFlag">
-		<control type="image" description="Star Rating Flag">
-			<width>180</width>
-			<height>40</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ContentStarRating]</texture>
-			<colordiffuse>MainColor</colordiffuse>
-		</control>
+        <definition>
+            <control type="image">
+                <width>180</width>
+                <height>40</height>
+                <aspectratio>keep</aspectratio>
+                <texture>$VAR[ContentStarRating]</texture>
+                <colordiffuse>MainColor</colordiffuse>
+            </control>
+        </definition>
 	</include>
 
-	<include name="DefaultOverlayMediaFlag" description="Transparant Default Flag Overlay">
-		<control type="image">
-			<width>200</width>
-			<height>200</height>
-			<texture colordiffuse="FadeDiffuseColor" background="true">$VAR[ContentOverlay]</texture>
-			<aspectratio scalediffuse="false">keep</aspectratio>
-		</control>
+	<include name="DefaultOverlayMediaFlag">
+        <definition>
+            <control type="image">
+                <width>200</width>
+                <height>200</height>
+                <texture colordiffuse="FadeDiffuseColor" background="true">$VAR[ContentOverlay]</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+        </definition>
 	</include>
 	
-	<include name="DefaultUnderlayMediaFlag" description="Transparant Default Flag Underlay">
-		<control type="image">
-			<width>200</width>
-			<height>200</height>
-			<texture colordiffuse="SelectColor" background="true">$VAR[ContentUnderlay]</texture>
-			<aspectratio scalediffuse="false">keep</aspectratio>
-		</control>
+	<include name="DefaultUnderlayMediaFlag">
+        <definition>
+            <control type="image">
+                <width>200</width>
+                <height>200</height>
+                <texture colordiffuse="SelectColor" background="true">$VAR[ContentUnderlay]</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="VideoCodecVisibilityForContentMediaFlag">
@@ -711,423 +717,447 @@
 	</include>
 
     <include name="HorizontalListOfVideoPlayerMediaFlag">
-		<control type="grouplist">
-			<width>900</width>
-			<height>60</height>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
 
-			<control type="group" description="Video Codec Icon">
-				<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
-				<width>160</width>
-				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>156</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/video-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>160</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerVideoCodec]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+        <definition>
+            <control type="grouplist">
+                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>900</width>
+                <height>60</height>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
 
-			<control type="group" description="Video Resolution Icon">
-				<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
-				<width>100</width>
+                <control type="group">
+                    <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+                    <width>160</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>96</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/resolution-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>100</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerVideoResolution]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>156</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/video-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>160</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">$VAR[PlayerVideoCodec]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group" description="Aspectratio Icon">
-				<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
-				<width>70</width>
+                <control type="group">
+                    <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+                    <width>100</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>66</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/aspectratio-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>70</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerVideoAspectRatio]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>96</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/resolution-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>100</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">$VAR[PlayerVideoResolution]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group" description="Stereoscopic Icon">
-				<visible>VideoPlayer.IsStereoscopic</visible>
-				<width>100</width>
+                <control type="group">
+                    <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+                    <width>70</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>96</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/property-3dbackground.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>100</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/property-3d.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>66</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/aspectratio-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>70</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">$VAR[PlayerVideoAspectRatio]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group" description="Audio Codec Icon">
-				<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
-				<width>160</width>
+                <control type="group">
+                    <visible>VideoPlayer.IsStereoscopic</visible>
+                    <width>100</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>156</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/audio-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>160</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerAudioCodec]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>96</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/property-3dbackground.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>100</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/property-3d.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+                    <width>160</width>
+				
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>156</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/audio-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>160</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">$VAR[PlayerAudioCodec]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 			
-			<control type="group" description="Audio Channels Icon">
-				<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
-				<width>120</width>
+                <control type="group">
+                    <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+                    <width>120</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>116</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/channels-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>120</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/channels-logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-                    <posx>105</posx>
-					<width>105</width>
-					<height>60</height>
-					<font>LargeMediaFlagFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$VAR[PlayerAudioChannels]</label>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>116</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/channels-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>120</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/channels-logo.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>105</posx>
+                        <width>105</width>
+                        <height>60</height>
+                        <font>LargeMediaFlagFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$VAR[PlayerAudioChannels]</label>
+                    </control>
+                </control>
 
-			<control type="group" description="Medium Icon">
-				<visible>SubString(Player.FileName,bluray) | SubString(Player.FileName,blu-ray) | SubString(ListItem.FileName,brrip) | SubString(ListItem.FileName,bd25) | SubString(ListItem.FileName,bd50) | SubString(ListItem.FileName,dvd) | SubString(Player.FileName,hdtv) | SubString(ListItem.FileName,pdtv) | SubString(ListItem.FileName,dsr) | SubString(ListItem.FileName,vhs)</visible>
-				<width>160</width>
+                <control type="group">
+                    <visible>SubString(Player.FileName,bluray) | SubString(Player.FileName,blu-ray) | SubString(ListItem.FileName,brrip) | SubString(ListItem.FileName,bd25) | SubString(ListItem.FileName,bd50) | SubString(ListItem.FileName,dvd) | SubString(Player.FileName,hdtv) | SubString(ListItem.FileName,pdtv) | SubString(ListItem.FileName,dsr) | SubString(ListItem.FileName,vhs)</visible>
+                    <width>160</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>156</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/medium-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>160</width>
-					<height>60</height>
-					<texture colordiffuse="BackgroundColor">$VAR[PlayerMedium]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>156</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/medium-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>160</width>
+                        <height>60</height>
+                        <texture colordiffuse="BackgroundColor">$VAR[PlayerMedium]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group" description="MPAA Rating Icon">
-				<visible>SubString(VideoPlayer.Mpaa,rated)</visible>
-				<width>160</width>
+                <control type="group">
+                    <visible>SubString(VideoPlayer.Mpaa,rated)</visible>
+                    <width>160</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>156</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/mpaarating-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>160</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerMpaaRating]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>156</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/mpaarating-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>160</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">$VAR[PlayerMpaaRating]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group" description="EPG Icon">
-				<visible>VideoPlayer.HasEpg</visible>
-				<width>60</width>
+                <control type="group">
+                    <visible>VideoPlayer.HasEpg</visible>
+                    <width>60</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>56</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/property-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>60</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/property-epg.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>56</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/property-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/property-epg.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group" description="Teletext Icon">
-				<visible>VideoPlayer.Content(LiveTV) + Pvr.HasTxt</visible>
-				<width>60</width>
+                <control type="group">
+                    <visible>VideoPlayer.Content(LiveTV) + Pvr.HasTxt</visible>
+                    <width>60</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>56</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/property-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>60</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/property-txt.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>56</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/property-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/property-txt.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group" description="Encrypted Stream Icon">
-				<visible>VideoPlayer.Content(LiveTV) + Pvr.ActStreamIsEncrypted</visible>
-				<width>60</width>
+                <control type="group">
+                    <visible>VideoPlayer.Content(LiveTV) + Pvr.ActStreamIsEncrypted</visible>
+                    <width>60</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>56</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/property-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>60</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/property-locked.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
-		</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>56</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/property-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/property-locked.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
+            </control>
+        </definition>
 	</include>
 
     <include name="HorizontalListOfMusicPlayerMediaFlag">
-		<control type="grouplist">
-			<width>900</width>
-			<height>60</height>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="grouplist">
+                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>900</width>
+                <height>60</height>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
 			
-			<control type="group">
-				<visible>!IsEmpty(MusicPlayer.Codec)</visible>
-				<width>160</width>
+                <control type="group">
+                    <visible>!IsEmpty(MusicPlayer.Codec)</visible>
+                    <width>160</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>156</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/audio-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image" description="Audio Codec Icon">
-					<width>160</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">$VAR[PlayerAudioCodec]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>156</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/audio-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image" description="Audio Codec Icon">
+                        <width>160</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">$VAR[PlayerAudioCodec]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
 
-			<control type="group">
-				<visible>!IsEmpty(MusicPlayer.BitRate)</visible>
-				<width>180</width>
+                <control type="group">
+                    <visible>!IsEmpty(MusicPlayer.BitRate)</visible>
+                    <width>180</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>176</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/bitrate-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>180</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/bitrate-logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<posy>10</posy>
-					<width>180</width>
-					<height>50</height>
-					<font>MediumMediaFlagFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$VAR[PlayerBitRate] $LOCALIZE[31911]</label>
-				</control>
-			</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>176</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/bitrate-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>180</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/bitrate-logo.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posy>10</posy>
+                        <width>180</width>
+                        <height>50</height>
+                        <font>MediumMediaFlagFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$VAR[PlayerBitRate] $LOCALIZE[31911]</label>
+                    </control>
+                </control>
 
-			<control type="group" description="Audio Channels Icon">
-				<visible>!IsEmpty(MusicPlayer.Channels)</visible>
-				<width>120</width>
+                <control type="group">
+                    <visible>!IsEmpty(MusicPlayer.Channels)</visible>
+                    <width>120</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>116</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/channels-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>120</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/channels-logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-                    <posx>105</posx>
-					<width>105</width>
-					<height>60</height>
-					<font>LargeMediaFlagFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$VAR[PlayerAudioChannels]</label>
-				</control>
-			</control>
-		</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>116</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/channels-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>120</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/channels-logo.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>105</posx>
+                        <width>105</width>
+                        <height>60</height>
+                        <font>LargeMediaFlagFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$VAR[PlayerAudioChannels]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
 	</include>
 
     <include name="HorizontalListOfSlideshowMediaFlag">
-		<control type="grouplist">
-			<width>900</width>
-			<height>60</height>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			
-			<control type="group">
-				<width>160</width>
-				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>156</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/picture-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>160</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/picture-logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<width>160</width>
-					<height>60</height>
-					<font>LargeMediaFlagFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>center</align>
-					<label>$VAR[PlayerPictureCodec]</label>
-				</control>
-			</control>
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
 
-			<control type="group">
-				<width>180</width>
-				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>176</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/size-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>180</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/size-logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<posy>10</posy>
-					<width>180</width>
-					<height>50</height>
-					<font>MediumMediaFlagFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>center</align>
-					<label>$VAR[PlayerPictureResolution]</label>
-				</control>
-			</control>
+        <definition>
+            <control type="grouplist">
+                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>900</width>
+                <height>60</height>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
 			
-			<control type="group">
-                <visible>!IsEmpty(Slideshow.Aperture)</visible>
-				<width>160</width>
+                <control type="group">
+                    <width>160</width>
 				
-				<control type="image">
-					<posx>2</posx>
-					<posy>2</posy>
-					<width>156</width>
-					<height>56</height>
-					<texture colordiffuse="BackgroundColor">icons/aperture-background.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<width>160</width>
-					<height>60</height>
-					<texture colordiffuse="MainColor">icons/aperture-logo.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-                    <posx>60</posx>
-					<width>100</width>
-					<height>60</height>
-					<font>MediumMediaFlagFont</font>
-					<textcolor>BackgroundColor</textcolor>
-					<align>left</align>
-					<label>$VAR[PlayerPictureAperture]</label>
-				</control>
-			</control>
-		</control>
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>156</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/picture-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>160</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/picture-logo.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <width>160</width>
+                        <height>60</height>
+                        <font>LargeMediaFlagFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>center</align>
+                        <label>$VAR[PlayerPictureCodec]</label>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <width>180</width>
+				
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>176</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/size-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>180</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/size-logo.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posy>10</posy>
+                        <width>180</width>
+                        <height>50</height>
+                        <font>MediumMediaFlagFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>center</align>
+                        <label>$VAR[PlayerPictureResolution]</label>
+                    </control>
+                </control>
+			
+                <control type="group">
+                    <visible>!IsEmpty(Slideshow.Aperture)</visible>
+                    <width>160</width>
+				
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>156</width>
+                        <height>56</height>
+                        <texture colordiffuse="BackgroundColor">icons/aperture-background.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>160</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/aperture-logo.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>60</posx>
+                        <width>100</width>
+                        <height>60</height>
+                        <font>MediumMediaFlagFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>left</align>
+                        <label>$VAR[PlayerPictureAperture]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
 	</include>
 </includes>

@@ -5,42 +5,18 @@
 	
 	<controls>
 		<control type="group">
-			<control type="group">
-				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="100" time="500" />
-				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="500" />
-				</animation>
-
-				<control type="group">
-					<visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-					<posx>340</posx>
-					<posy>870</posy>
-					<include>HorizontalListOfVideoPlayerMediaFlag</include>
-				</control>
-				
-				<control type="group">
-					<include>MediaInformationLabelForPlayerInfo</include>
-					<include>MediaNameLabelForPlayerInfo</include>
-					<include>MediaSeekBarForPlayerInfo</include>
-				</control>
-			</control>
-
-			<control type="group">
-				<animation type="WindowOpen">
-					<effect type="slide" tween="quadratic" easing="out" start="1590,0" end="0,0" time="500" />
-				</animation>
-				<animation type="WindowClose">
-					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1590,0" time="500" />
-				</animation>
-
-				<control type="group">
-					<posx>40</posx>
-					<posy>806</posy>
-					<include>DefaultCirclePlayerMediaIcon</include>
-				</control>
-			</control>
+			<include name="MediaInformationLabelForOSD" />
+			<include name="MediaNameLabelForOSD" />
+			<include name="MediaSeekBarForOSD" />
+            
+            <control type="group">
+                <include name="DefaultAnimationForOSD" />
+                <include name="HorizontalListOfVideoPlayerMediaFlag">
+                    <param name="posx" value="340" />
+                    <param name="posx" value="870" />
+                </include>
+            </control>
+            <include name="MediaThumbnailIconForOSD" />
 		</control>
 	</controls>
 </window>
