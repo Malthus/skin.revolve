@@ -5,38 +5,39 @@
 	<views>52,55,51,53,56,57,58</views>
 
 	<controls>
-		<include>FullscreenDimensions</include>
-		<include>GlobalBackground</include>
+		<include name="FullscreenDimensions" />
+		<include name="GlobalBackground" />
 
-		<include>DropListView</include>
-		<include>CircleListView</include>
-     	<include>LandscapeView</include>
-		<include>ThumbnailsView</include>
-		<include>PanelsView</include>
-		<include>GalleryView</include>
-		<include>RotateListView</include>
+		<include name="DropListView" />
+		<include name="CircleListView" />
+     	<include name="LandscapeView" />
+		<include name="ThumbnailsView" />
+		<include name="PanelsView" />
+		<include name="GalleryView" />
+		<include name="RotateListView" />
 
 		<control type="group" id="9000">
-			<include>SideMenu</include>
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu" />
 
-                <include>ViewGroupLabelForSideMenu</include>
-				<include>ViewTypeButtonForSideMenu</include>
-				<include>SortCriteriumButtonForSideMenu</include>
-				<include>SortOrderButtonForSideMenu</include>
-                <include>DescriptionForLandscapeButtonForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
+				<include name="ViewTypeButtonForSideMenu" />
+				<include name="SortCriteriumButtonForSideMenu" />
+				<include name="SortOrderButtonForSideMenu" />
+                <include name="NameForThumbnailsButtonForSideMenu" />
+                <include name="DescriptionForLandscapeButtonForSideMenu" />
                 
-                <include>SlideshowGroupLabelForSideMenu</include>
-				<include>SlideshowButtonForSideMenu</include>
-				<include>RecursiveSlideshowButtonForSideMenu</include>
-				<include>RandomiseButtonForSideMenu</include>
+                <include name="SlideshowGroupLabelForSideMenu" />
+				<include name="SlideshowButtonForSideMenu" />
+				<include name="RecursiveSlideshowButtonForSideMenu" />
+				<include name="RandomiseButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu" />
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>
