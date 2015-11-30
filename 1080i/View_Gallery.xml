@@ -1,5 +1,5 @@
 <includes>
-	<include name="GalleryView" description="Gallery View (Relyter)">
+	<include name="GalleryView">
 		<control type="fixedlist" id="57">
 			<viewtype label="31937">list</viewtype>
 			<visible allowhiddenfocus="true">true</visible>
@@ -17,7 +17,7 @@
 			<onleft>57</onleft>
 			<onright>57</onright>
 	
-            <include>InvisibleHorizontalListItemsForMenu</include>
+            <include name="InvisibleHorizontalListItemsForMenu" />
 		</control>
 		
 		<control type="group">
@@ -42,7 +42,7 @@
 				
 					<width>300</width>
 					<height>300</height>
-					<include>ItemMinusThreeForGalleryView</include>
+					<include name="ItemMinusThreeForGalleryView" />
 				</control>	
 			</control>	
 			
@@ -63,7 +63,7 @@
 				
 					<width>300</width>
 					<height>300</height>
-					<include>ItemPlusThreeForGalleryView</include>
+					<include name="ItemPlusThreeForGalleryView" />
 				</control>	
 			</control>	
 			
@@ -77,8 +77,8 @@
 
 					<width>300</width>
 					<height>300</height>
-					<include>ItemMinusTwoForGalleryView</include>
-				</control>	
+					<include name="ItemMinusTwoForGalleryView" />
+				</control>
 				<control type="group">
 					<visible>Container(57).OnPrevious</visible>
 					<animation type="Visible">
@@ -92,7 +92,7 @@
 				
 					<width>300</width>
 					<height>300</height>
-					<include>ItemMinusTwoForGalleryView</include>
+					<include name="ItemMinusTwoForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnNext</visible>
@@ -107,7 +107,7 @@
 				
 					<width>300</width>
 					<height>300</height>
-					<include>ItemMinusTwoForGalleryView</include>
+					<include name="ItemMinusTwoForGalleryView" />
 				</control>	
 			</control>	
 			
@@ -121,7 +121,7 @@
 					
 					<width>300</width>
 					<height>300</height>
-					<include>ItemPlusTwoForGalleryView</include>
+					<include name="ItemPlusTwoForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnPrevious</visible>
@@ -136,7 +136,7 @@
 				
 					<width>300</width>
 					<height>300</height>
-					<include>ItemPlusTwoForGalleryView</include>
+					<include name="ItemPlusTwoForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnNext</visible>
@@ -151,7 +151,7 @@
 				
 					<width>300</width>
 					<height>300</height>
-					<include>ItemPlusTwoForGalleryView</include>
+					<include name="ItemPlusTwoForGalleryView" />
 				</control>	
 			</control>	
 			
@@ -165,7 +165,7 @@
 					
 					<width>450</width>
 					<height>450</height>
-					<include>ItemMinusOneForGalleryView</include>
+					<include name="ItemMinusOneForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnPrevious</visible>
@@ -180,7 +180,7 @@
 				
 					<width>450</width>
 					<height>450</height>
-					<include>ItemMinusOneForGalleryView</include>
+					<include name="ItemMinusOneForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnNext</visible>
@@ -195,7 +195,7 @@
 				
 					<width>450</width>
 					<height>450</height>
-					<include>ItemMinusOneForGalleryView</include>
+					<include name="ItemMinusOneForGalleryView" />
 				</control>	
 			</control>
 			
@@ -209,7 +209,7 @@
 					
 					<width>450</width>
 					<height>450</height>
-					<include>ItemPlusOneForGalleryView</include>
+					<include name="ItemPlusOneForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnPrevious</visible>
@@ -224,7 +224,7 @@
 				
 					<width>450</width>
 					<height>450</height>
-					<include>ItemPlusOneForGalleryView</include>
+					<include name="ItemPlusOneForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnNext</visible>
@@ -239,7 +239,7 @@
 				
 					<width>450</width>
 					<height>450</height>
-					<include>ItemPlusOneForGalleryView</include>
+					<include name="ItemPlusOneForGalleryView" />
 				</control>	
 			</control>
 				
@@ -253,7 +253,7 @@
 					
 					<width>850</width>
 					<height>850</height>
-					<include>ItemOnOriginForGalleryView</include>
+					<include name="ItemOnOriginForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnPrevious</visible>
@@ -268,7 +268,7 @@
 				
 					<width>850</width>
 					<height>850</height>
-					<include>ItemOnOriginForGalleryView</include>
+					<include name="ItemOnOriginForGalleryView" />
 				</control>	
 				<control type="group">
 					<visible>Container(57).OnNext</visible>
@@ -283,17 +283,17 @@
 				
 					<width>850</width>
 					<height>850</height>
-					<include>ItemOnOriginForGalleryView</include>
+					<include name="ItemOnOriginForGalleryView" />
 				</control>	
 			</control>
 		</control>		
 		
 		<control type="group">
 			<visible>Control.IsVisible(57)</visible>
-			<include>BottomRing</include>
+			<include name="BottomRing" />
 		</control>		
 
-		<control type="scrollbar" id="67" description="Scrollbar">
+		<control type="scrollbar" id="67">
 			<visible allowhiddenfocus="true">Control.IsVisible(57)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(67) + !Container(57).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="0,-40" time="100" />
@@ -415,7 +415,7 @@
 		<control type="group">
 			<posx>335</posx>
 			<posy>640</posy>
-			<include>DefaultOverlayMediaFlag</include>
+			<include name="DefaultOverlayMediaFlag" />
 		</control>
 	</include>
 	
