@@ -82,7 +82,7 @@
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="SecondaryColor" />
+                <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
                 <param name="align" value="right" />
                 <param name="label" value="$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]" />
@@ -99,7 +99,7 @@
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="SecondaryColor" />
+                <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
                 <param name="scroll" value="false" />
                 <param name="label" value="| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]" />
@@ -151,7 +151,7 @@
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="SecondaryColor" />
+                <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
                 <param name="align" value="right" />
                 <param name="label" value="$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]" />
@@ -168,7 +168,7 @@
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
-                <param name="textcolor" value="SecondaryColor" />
+                <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
                 <param name="scroll" value="false" />
                 <param name="label" value="| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]" />
