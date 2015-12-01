@@ -5,44 +5,45 @@
 	<views>52,55,51,53,54,56,57,58</views>
 
 	<controls>
-		<include>FullscreenDimensions</include>
-		<include>GlobalBackground</include>
+		<include name="FullscreenDimensions" />
+		<include name="GlobalBackground" />
 
-		<include>CircleListView</include>
-		<include>DropListView</include>
-     	<include>LandscapeView</include>
-		<include>ThumbnailsView</include>
-		<include>RevolveListView</include>
-		<include>PanelsView</include>
-		<include>GalleryView</include>
-		<include>RotateListView</include>
+		<include name="CircleListView" />
+		<include name="DropListView" />
+     	<include name="LandscapeView" />
+		<include name="ThumbnailsView" />
+		<include name="RevolveListView" />
+		<include name="PanelsView" />
+		<include name="GalleryView" />
+		<include name="RotateListView" />
 
 		<control type="group" id="9000">
-			<include>SideMenu</include>
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu" />
 
-                <include>ViewGroupLabelForSideMenu</include>
-				<include>ViewTypeButtonForSideMenu</include>
-				<include>SortCriteriumButtonForSideMenu</include>
-				<include>SortOrderButtonForSideMenu</include>
-                <include>DescriptionForLandscapeButtonForSideMenu</include>
-				<include>LibrarySearchButtonForSideMenu</include>
-				<include>MusicFilterActivateButtonForSideMenu</include>
-				<include>MusicFilterShowButtonForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
+				<include name="ViewTypeButtonForSideMenu" />
+				<include name="SortCriteriumButtonForSideMenu" />
+				<include name="SortOrderButtonForSideMenu" />
+                <include name="NameForThumbnailsButtonForSideMenu" />
+                <include name="DescriptionForLandscapeButtonForSideMenu" />
+				<include name="LibrarySearchButtonForSideMenu" />
+				<include name="MusicFilterActivateButtonForSideMenu" />
+				<include name="MusicFilterShowButtonForSideMenu" />
                 
-                <include>NavigationGroupLabelForSideMenu</include>
-				<include>FilesButtonForSideMenu</include>
-				<include>MusicPlaylistButtonForSideMenu</include>
+                <include name="NavigationGroupLabelForSideMenu" />
+				<include name="FilesButtonForSideMenu" />
+				<include name="MusicPlaylistButtonForSideMenu" />
 
-                <include>PlaylistLibraryGroupLabelForSideMenu</include>
-				<include>PartyModeButtonForSideMenu</include>
+                <include name="PlaylistLibraryGroupLabelForSideMenu" />
+				<include name="PartyModeButtonForSideMenu" />
 			</control>
 			
             <include name="PlayerControlsForSideMenu" />
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>
