@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="BannersView">
-		<control type="panel" id="59" description="Panels">
+		<control type="panel" id="59">
 			<viewtype label="31939">list</viewtype>
 			<visible>true</visible>
 			<animation effect="slide" start="0,1080" end="0,0" time="500">WindowOpen</animation>
@@ -26,10 +26,7 @@
 				<control type="group">
 					<posx>18</posx>
 					<posy>3</posy>
-					<include>DefaultBannerIcon</include>
-<!--
-					<include>OverlayForDefaultSquareThumbnailIcon</include>
--->                    
+					<include name="DefaultBannerIcon" />
 				</control>
 			</itemlayout>
 			
@@ -40,21 +37,18 @@
 			
 					<posx>18</posx>
 					<posy>3</posy>
-					<include>ShadowForDefaultBannerIcon</include>
-					<include>DefaultBannerIcon</include>
-<!--                    
-					<include>OverlayForDefaultSquareThumbnailIcon</include>
--->                    
-				</control>
+					<include name="ShadowForDefaultBannerIcon" />
+					<include name="DefaultBannerIcon" />
+                </control>
 			</focusedlayout>
 		</control>
         
-		<control type="group" description="Bottom Ring">
+		<control type="group">
 			<visible>Control.IsVisible(59)</visible>
-			<include>BottomRing</include>
+			<include name="BottomRing" />
 		</control>
         
-		<control type="scrollbar" id="69" description="Scrollbar">
+		<control type="scrollbar" id="69">
 			<visible allowhiddenfocus="true">Control.IsVisible(59)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(69) + !Container(59).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="40,0" time="100" />
