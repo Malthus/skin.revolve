@@ -674,98 +674,63 @@
 	</include>
 
 	<include name="DefaultBannerIcon">
-		<control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-			<height>146</height>
-			<width>764</width>
-			<texture colordiffuse="MainColor">elements/banner-mask.png</texture>
-		</control>
-		<control type="image">
-            <posx>3</posx>
-            <posy>3</posy>
-			<height>140</height>
-			<width>758</width>
-			<texture diffuse="elements/banner-mask.png" background="true">$VAR[ContentBanner]</texture>
-            <aspectratio scalediffuse="false">scale</aspectratio>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>146</height>
+                <width>764</width>
+                <texture colordiffuse="MainColor">elements/banner-mask.png</texture>
+            </control>
+            <control type="image">
+                <posx>3</posx>
+                <posy>3</posy>
+                <height>140</height>
+                <width>758</width>
+                <texture diffuse="elements/banner-mask.png" background="true">$VAR[ContentBanner]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
 
-        <control type="group">
-            <include>VisibilityForNoBanner</include>
-            
-            <control type="label">
-                <posx>380</posx>
-                <posy>108</posy>
-                <height>30</height>
-                <width>720</width>
-                <font>SmallViewFont</font>
-                <textcolor>$VAR[ContentMainColor]</textcolor>
-                <align>center</align>
-                <label>$VAR[ContentNameLabel]</label>
+            <control type="group">
+                <include name="VisibilityForNoBanner" />
+                <include name="NormalOutlineLabel">
+                    <param name="posx" value="22" />
+                    <param name="posy" value="110" />
+                    <param name="width" value="720" />
+                    <param name="height" value="30" />
+                    <param name="font" value="SmallViewFont" />
+                    <param name="textcolor" value="$VAR[ContentBackgroundColor]" />
+                    <param name="outlinecolor" value="$VAR[ContentMainColor]" />
+                    <param name="align" value="center" />
+                    <param name="label" value="$VAR[ContentNameLabel]" />
+                </include>
             </control>
-            <control type="label">
-                <posx>384</posx>
-                <posy>108</posy>
-                <height>30</height>
-                <width>720</width>
-                <font>SmallViewFont</font>
-                <textcolor>$VAR[ContentMainColor]</textcolor>
-                <align>center</align>
-                <label>$VAR[ContentNameLabel]</label>
-            </control>
-            <control type="label">
-                <posx>380</posx>
-                <posy>112</posy>
-                <height>30</height>
-                <width>720</width>
-                <font>SmallViewFont</font>
-                <textcolor>$VAR[ContentMainColor]</textcolor>
-                <align>center</align>
-                <label>$VAR[ContentNameLabel]</label>
-            </control>
-            <control type="label">
-                <posx>384</posx>
-                <posy>112</posy>
-                <height>30</height>
-                <width>720</width>
-                <font>SmallViewFont</font>
-                <textcolor>$VAR[ContentMainColor]</textcolor>
-                <align>center</align>
-                <label>$VAR[ContentNameLabel]</label>
-            </control>
-            
-            <control type="label">
-                <posx>382</posx>
-                <posy>110</posy>
-                <height>30</height>
-                <width>720</width>
-                <font>SmallViewFont</font>
-                <textcolor>$VAR[ContentBackgroundColor]</textcolor>
-                <align>center</align>
-                <label>$VAR[ContentNameLabel]</label>
-            </control>
-        </control>
+        </definition>
 	</include>
 
 	<include name="FadeMaskForDefaultBannerIcon">
-		<control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-			<height>146</height>
-			<width>764</width>
-			<texture colordiffuse="SelectColor">elements/banner-mask.png</texture>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>146</height>
+                <width>764</width>
+                <texture colordiffuse="SelectColor">elements/banner-mask.png</texture>
+            </control>
+        </definition>
 	</include>
 
 	<include name="ShadowForDefaultBannerIcon">
-		<control type="image">
-			<posx>-30</posx>
-			<posy>-30</posy>
-			<height>206</height>
-			<width>824</width>
-			<texture border="30" background="true">elements/poster-shadow.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>-30</posx>
+                <posy>-30</posy>
+                <height>206</height>
+                <width>824</width>
+                <texture border="30" background="true">elements/poster-shadow.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="SquarePosterIcon">
