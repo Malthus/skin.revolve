@@ -187,6 +187,9 @@
     <constant name="PosYForTenLinesDialog">290</constant>
     <constant name="HeightForTenLinesDialog">500</constant>
 
+    <constant name="PosYForTwelveLinesDialog">250</constant>
+    <constant name="HeightForTwelveLinesDialog">580</constant>
+
     <constant name="PosYForThirteenLinesDialog">230</constant>
     <constant name="HeightForThirteenLinesDialog">620</constant>
 
@@ -438,7 +441,7 @@
 	</include>
 	
     <!-- ============================================================== -->
-
+<!--
     <include name="MarkupForControlListForDialog">
         <param name="posy" default="80" />
         <param name="height" default="-" />
@@ -453,7 +456,7 @@
             <usecontrolcoords>true</usecontrolcoords>
         </definition>
     </include>
-    
+-->    
     <constant name="PosXForSmallIconFrameForDialog">235</constant>
     <constant name="PosYForSmallIconFrameForDialog">20</constant>
     <include name="SmallIconForDialog">
@@ -627,17 +630,21 @@
     </include>
 
 	<include name="ThreeLinesDialog">
-        <include name="WindowForDialog">
+        <definition>
+            <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
-            <param name="height" value="HeightForThreeLinesDialog" />
-        </include>
+                <param name="height" value="HeightForThreeLinesDialog" />
+            </include>
+        </definition>
 	</include>
 	
 	<include name="FourLinesDialog">
-        <include name="WindowForDialog">
-                 <param name="icondefault" value="false" />
-           <param name="height" value="HeightForFourLinesDialog" />
-        </include>
+        <definition>
+            <include name="WindowForDialog">
+                <param name="icondefault" value="false" />
+                <param name="height" value="HeightForFourLinesDialog" />
+            </include>
+        </definition>
 	</include>
 	
 	<include name="SixLinesDialog">
@@ -650,25 +657,30 @@
 	</include>
 	
 	<include name="TenLinesDialog">
-        <include name="WindowForDialog">
+        <definition>
+            <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
-            <param name="height" value="HeightForTenLinesDialog" />
-        </include>
+                <param name="height" value="HeightForTenLinesDialog" />
+            </include>
+        </definition>
 	</include>
 	
-    <constant name="PosYForTwelveLinesDialog">250</constant>
 	<include name="TwelveLinesDialog">
-        <include name="WindowForDialog">
+        <definition>
+            <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
-            <param name="height" value="580" />
-        </include>
+                <param name="height" value="HeightForTwelveLinesDialog" />
+            </include>
+        </definition>
 	</include>
 
 	<include name="ThirteenLinesDialog">
-        <include name="WindowForDialog">
+        <definition>
+            <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
-            <param name="height" value="HeightForThirteenLinesDialog" />
-        </include>
+                <param name="height" value="HeightForThirteenLinesDialog" />
+            </include>
+        </definition>
 	</include>
 
 	<include name="FifteenLinesDialog">
@@ -681,10 +693,12 @@
 	</include>
 	
 	<include name="FullWindowDialog">
-        <include name="WindowForDialog">
+        <definition>
+            <include name="WindowForDialog">
                 <param name="icondefault" value="false" />
-            <param name="height" value="HeightForFullWindowDialog" />
-        </include>
+                <param name="height" value="HeightForFullWindowDialog" />
+            </include>
+        </definition>
 	</include>
 	
 	<include name="TitledFullListFrameForDialog">
