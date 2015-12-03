@@ -4,12 +4,12 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>GlobalBackground</include>
+		<include name="GlobalBackground" />
 		
 	    <control type="group">
-			<include>ButtonLeftRingForSettings</include>
+			<include name="ButtonLeftRingForSettings" />
 
-			<control type="grouplist" id="3" description="Button Area">
+			<control type="grouplist" id="3">
 				<posx>40</posx>
 				<posy>600</posy>
 				<width>482</width>
@@ -22,7 +22,7 @@
 				<onright>5</onright>
 			</control>
 
-			<control type="grouplist" id="5" description="Control Area">
+			<control type="grouplist" id="5">
 				<posx>700</posx>
 				<posy>100</posy>
 				<width>1100</width>
@@ -35,33 +35,33 @@
 				<onright>Noop</onright>
 			</control>
             
-            <control type="button" id="7" description="Default Button">
+            <control type="button" id="7">
                 <align>left</align>
             </control>
 
-            <control type="radiobutton" id="8" description="Default Radio Button">
+            <control type="radiobutton" id="8">
                 <radioposx>1040</radioposx>
                 <align>left</align>
             </control>
 
-            <control type="spincontrolex" id="9" description="Default Spin Control">
+            <control type="spincontrolex" id="9">
                 <align>left</align>
             </control>
 
-            <control type="button" id="10" description="Default Category Button">
+            <control type="button" id="10">
                 <align>left</align>
             </control>
 
-            <control type="image" id="11" description="Default Spacer">
+            <control type="image" id="11">
                 <height>20</height>
                 <texture>-</texture>
             </control>
             
-            <control type="sliderex" id="13" description="Default Slider">
+            <control type="sliderex" id="13">
                 <align>left</align>
             </control>
             
-            <control type="label" id="14" description="Default Label">
+            <control type="label" id="14">
                 <textcolor>BackgroundColor</textcolor>
                 <label>-</label>
             </control>
@@ -76,7 +76,8 @@
 					<aspectratio>stretch</aspectratio>
 					<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
 				</control>
-				<control type="textbox" id="6" description="Settings Description Textbox">
+				<control type="textbox" id="6">
+                    <description>Settings Description Textbox</description>
 					<posx>720</posx>
 					<posy>880</posy>
 					<width>880</width>
@@ -88,21 +89,21 @@
 		</control>
 		
 		<control type="group" id="9000">
-			<include>SideMenu</include>
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu">
                     <param name="onright" value="3" />
                 </include>
 
-                <include>ViewGroupLabelForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
                 <control type="label" id="998">
                     <width>482</width>
                     <height>30</height>
                     <textcolor>MainColor</textcolor>
                     <label>$LOCALIZE[31139]</label>
                 </control>
-				<include>SettingsLevelButtonForSideMenu</include>
+				<include name="SettingsLevelButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu">
@@ -110,6 +111,6 @@
             </include>
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>

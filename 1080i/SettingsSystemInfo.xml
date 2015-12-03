@@ -4,12 +4,12 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>GlobalBackground</include>
+		<include name="GlobalBackground" />
 
 		<control type="group">
-			<include>ButtonLeftRingForSettings</include>
+			<include name="ButtonLeftRingForSettings" />
 
-			<control type="grouplist" id="9000" description="Menu Buttons">
+			<control type="grouplist" id="9000">
 				<posx>40</posx>
 				<posy>600</posy>
 				<width>480</width>
@@ -20,38 +20,45 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 
-				<control type="button" id="95" description="General Button">
+				<control type="button" id="95">
+					<description>General Button</description>
 					<align>left</align>
 					<label>20037</label>
 				</control>
 
-				<control type="button" id="94" description="Storage Button">
+				<control type="button" id="94">
+					<description>Storage Button</description>
 					<align>left</align>
 					<label>13277</label>
 				</control>
 
-				<control type="button" id="96" description="Network Button">
+				<control type="button" id="96">
+					<description>Network Button</description>
 					<align>left</align>
 					<label>13279</label>
 				</control>
 
-				<control type="button" id="97" description="Video Button">
+				<control type="button" id="97">
+					<description>Video Button</description>
 					<align>left</align>
 					<label>13280</label>
 				</control>
 
-				<control type="button" id="98" description="Hardware Button">
+				<control type="button" id="98">
+					<description>Hardware Button</description>
 					<align>left</align>
 					<label>13281</label>
 				</control>
 
-				<control type="button" id="99" description="PVR Button">
+				<control type="button" id="99">
+					<description>PVR Button</description>
 					<align>left</align>
 					<label>31101</label>
 				</control>
 			</control>
 
-			<control type="image" description="Background For Fixed Information">
+			<control type="image">
+				<description>Background For Fixed Information</description>
 				<posx>700</posx>
 				<posy>90</posy>
 				<width>1100</width>
@@ -60,7 +67,8 @@
 				<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
 			</control>
 			
-			<control type="image" description="Background For Page Specific Information">
+			<control type="image">
+				<description>Background For Page Specific Information</description>
 				<posx>700</posx>
 				<posy>330</posy>
 				<width>1100</width>
@@ -76,80 +84,85 @@
 				<height>900</height>
 				<itemgap>0</itemgap>
 
-				<control type="label" id="52" description="XBMC Build Version">
+				<control type="label" id="52">
+					<description>XBMC Build Version</description>
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="21" description="Processor Text">
+				<control type="label" id="21">
+					<description>Processor Text</description>
 					<width>1060</width>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 				</control>
 
-				<control type="progress" id="22" description="Processor Bar">
+				<control type="progress" id="22">
+					<description>Processor Bar</description>
 					<width>1060</width>
 					<height>40</height>
 					<info>System.CPUUsage</info>
 				</control>
 
-				<control type="label" id="23" description="Memory Text">
+				<control type="label" id="23">
+					<description>Memory Text</description>
 					<width>1060</width>
 					<label>$LOCALIZE[31103] $INFO[System.Memory(used.percent)]</label>
 				</control>
 
-				<control type="progress" id="24" description="Memory Bar">
+				<control type="progress" id="24">
+					<description>Memory Bar</description>
 					<width>1060</width>
 					<height>40</height>
 					<info>System.Memory(used)</info>
 				</control>
 
-				<control type="label" id="25" description="Spacer">
+				<control type="label" id="25">
 					<width>1060</width>
 					<height>40</height>
 					<font>-</font>
 				</control>
 
-				<control type="label" id="2" description="Label 2">
+				<control type="label" id="2">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="3" description="Label 3">
+				<control type="label" id="3">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="4" description="Label 4">
+				<control type="label" id="4">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="5" description="Label 5">
+				<control type="label" id="5">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="6" description="Label 6">
+				<control type="label" id="6">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="7" description="Label 7">
+				<control type="label" id="7">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="8" description="Label 8">
+				<control type="label" id="8">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="9" description="Label 9">
+				<control type="label" id="9">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="10" description="Label 10">
+				<control type="label" id="10">
 					<width>1060</width>
 				</control>
 
-				<control type="label" id="11" description="Label 11">
+				<control type="label" id="11">
 					<width>1060</width>
 				</control>
 			</control>
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>

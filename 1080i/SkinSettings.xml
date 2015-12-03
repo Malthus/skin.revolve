@@ -38,37 +38,44 @@
 				</focusedlayout>
 
 				<content>
-					<item id="1" description="Background Visuals Option">
+					<item id="1">
+						<description>Background Visuals Option</description>
 						<label>$LOCALIZE[31122]</label>
 						<onclick>Noop</onclick>
 					</item>
 
-					<item id="2" description="Home Menu Option">
+					<item id="2">
+						<description>Home Menu Option</description>
 						<label>$LOCALIZE[31120]</label>
 						<onclick>Noop</onclick>
 					</item>
 
-					<item id="3" description="Circle Items Option">
+					<item id="3">
+						<description>Circle Items Option</description>
 						<label>$LOCALIZE[31197]</label>
 						<onclick>Noop</onclick>
 					</item>
 
-					<item id="7" description="Default Add-ons Option">
+					<item id="7">
+						<description>Default Add-ons Option</description>
 						<label>$LOCALIZE[31125]</label>
 						<onclick>Noop</onclick>
 					</item>
 
-					<item id="8" description="Miscellaneous Option">
+					<item id="8">
+						<description>Miscellaneous Option</description>
 						<label>$LOCALIZE[31132]</label>
 						<onclick>Noop</onclick>
 					</item>
 
-					<item id="9" description="Debug Option">
+					<item id="9">
+						<description>Debug Option</description>
 						<label>$LOCALIZE[31133]</label>
 						<onclick>Noop</onclick>
 					</item>
 
-					<item id="10" description="Skin Information Option">
+					<item id="10">
+						<description>Skin Information Option</description>
 						<label>$LOCALIZE[31146]</label>
 						<onclick>Noop</onclick>
 					</item>
@@ -79,7 +86,8 @@
 				<posx>700</posx>
 				<posy>100</posy>
 
-				<control type="grouplist" id="100" description="Control Area For Background Visuals">
+				<control type="grouplist" id="100">
+					<description>Control Area For Background Visuals</description>
 					<visible>Container(99).Hasfocus(1)</visible>
 					<width>1100</width>
 					<height>760</height>
@@ -90,7 +98,8 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
-					<control type="radiobutton" id="101" description="Background Image and Picture Option">
+					<control type="radiobutton" id="101">
+						<description>Background Image and Picture Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -99,7 +108,8 @@
 						<onclick>Skin.ToggleSetting(BackgroundImage.Active)</onclick>
 					</control>
 
-					<control type="radiobutton" id="102" description="Faded Background Image Option">
+					<control type="radiobutton" id="102">
+						<description>Faded Background Image Option</description>
 						<enable>Skin.HasSetting(BackgroundImage.Active)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -109,7 +119,8 @@
 						<onclick>Skin.ToggleSetting(BackgroundImage.Faded)</onclick>
 					</control>
 
-					<control type="radiobutton" id="103" description="Background Visualiser Option">
+					<control type="radiobutton" id="103">
+						<description>Background Visualiser Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -118,7 +129,8 @@
 						<onclick>Skin.ToggleSetting(BackgroundVisualiser.Active)</onclick>
 					</control>
 
-					<control type="radiobutton" id="104" description="Faded Background Visualiser Option">
+					<control type="radiobutton" id="104">
+						<description>Faded Background Visualiser Option</description>
 						<enable>Skin.HasSetting(BackgroundVisualiser.Active)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -128,7 +140,8 @@
 						<onclick>Skin.ToggleSetting(BackgroundVisualiser.Faded)</onclick>
 					</control>
 
-					<control type="radiobutton" id="105" description="Background Video Option">
+					<control type="radiobutton" id="105">
+						<description>Background Video Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -137,7 +150,8 @@
 						<onclick>Skin.ToggleSetting(BackgroundVideo.Active)</onclick>
 					</control>
 
-					<control type="radiobutton" id="106" description="Faded Background Video Option">
+					<control type="radiobutton" id="106">
+						<description>Faded Background Video Option</description>
 						<enable>Skin.HasSetting(BackgroundVideo.Active)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -147,13 +161,15 @@
 						<onclick>Skin.ToggleSetting(BackgroundVideo.Faded)</onclick>
 					</control>
                     
-					<control type="label" id="121" description="Spacer">
+					<control type="label" id="121">
+						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
 						<label>-</label>
 					</control>
                     
-					<control type="button" id="120" description="Reset Page Setting Button">
+					<control type="button" id="120">
+						<description>Reset Page Setting Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[10041]</label>
@@ -166,7 +182,8 @@
 
                 <include name="OptionsForHomeMenuSkinSettings" />
 
-				<control type="grouplist" id="300" description="Control Area For Background Visuals">
+				<control type="grouplist" id="300">
+					<description>Control Area For Background Visuals</description>
 					<visible>Container(99).Hasfocus(3)</visible>
 					<width>1100</width>
 					<height>760</height>
@@ -177,7 +194,8 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
-					<control type="radiobutton" id="305" description="Circle Next Aired Option">
+					<control type="radiobutton" id="305">
+						<description>Circle Next Aired Option</description>
                         <enable>System.HasAddon(script.tv.show.next.aired)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
@@ -187,7 +205,8 @@
 						<onclick>Skin.ToggleSetting(CircleNextAired.Enable)</onclick>
 					</control>
                     
-					<control type="button" id="301" description="Circle Movies Source Option">
+					<control type="button" id="301">
+						<description>Circle Movies Source Option</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31198]: $INFO[Skin.String(CircleMovieOption.Name)]</label>
@@ -195,7 +214,8 @@
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
 
-					<control type="button" id="302" description="Circle Episodes Source Option">
+					<control type="button" id="302">
+						<description>Circle Episodes Source Option</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31199]: $INFO[Skin.String(CircleEpisodeOption.Name)]</label>
@@ -203,7 +223,8 @@
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
 
-					<control type="button" id="303" description="Circle Albums Source Option">
+					<control type="button" id="303">
+						<description>Circle Albums Source Option</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31200]: $INFO[Skin.String(CircleAlbumOption.Name)]</label>
@@ -211,7 +232,8 @@
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
                     
-					<control type="radiobutton" id="304" description="Circle Exit Menu Option">
+					<control type="radiobutton" id="304">
+						<description>Circle Exit Menu Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -220,13 +242,15 @@
 						<onclick>Skin.ToggleSetting(CircleExitMenu.Enable)</onclick>
 					</control>
                     
-					<control type="label" id="321" description="Spacer">
+					<control type="label" id="321">
+						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
 						<label>-</label>
 					</control>
                     
-					<control type="button" id="320" description="Reset Page Setting Button">
+					<control type="button" id="320">
+						<description>Reset Page Setting Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[10041]</label>
@@ -237,7 +261,8 @@
 					</control>
 				</control>
                 
-				<control type="grouplist" id="700" description="Control Area For Default Add-ons Options">
+				<control type="grouplist" id="700">
+					<description>Control Area For Default Add-ons Options</description>
 					<visible>Container(99).Hasfocus(7)</visible>
 					<width>1100</width>
 					<height>760</height>
@@ -248,7 +273,8 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
-					<control type="button" id="701" description="Lyrics Button">
+					<control type="button" id="701">
+						<description>Lyrics Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31126]:</label>
@@ -256,13 +282,15 @@
 						<onclick>Skin.SetAddon(AddonLyrics,xbmc.python.lyrics)</onclick>
 					</control>
                     
-					<control type="label" id="721" description="Spacer">
+					<control type="label" id="721">
+						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
 						<label>-</label>
 					</control>
                     
-					<control type="button" id="720" description="Reset Page Setting Button">
+					<control type="button" id="720">
+						<description>Reset Page Setting Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[10041]</label>
@@ -273,7 +301,8 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="800" description="Control Area For Miscellaneous Settings">
+				<control type="grouplist" id="800">
+					<description>Control Area For Miscellaneous Settings</description>
 					<visible>Container(99).Hasfocus(8)</visible>
 					<width>1100</width>
 					<height>760</height>
@@ -284,7 +313,8 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
-					<control type="radiobutton" id="803" description="Visible Title Screen Option">
+					<control type="radiobutton" id="803">
+						<description>Visible Title Screen Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -293,7 +323,8 @@
 						<onclick>Skin.ToggleSetting(TitleScreen.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="810" description="Group Items In Side Menu Option">
+					<control type="radiobutton" id="810">
+						<description>Group Items In Side Menu Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -302,7 +333,8 @@
 						<onclick>Skin.ToggleSetting(SideMenu.Grouped)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="801" description="Show Unfocused Side Menu Option">
+					<control type="radiobutton" id="801">
+						<description>Show Unfocused Side Menu Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -311,7 +343,8 @@
 						<onclick>Skin.ToggleSetting(SideMenu.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="802" description="Show Unfocused Scroll Bar In View Option">
+					<control type="radiobutton" id="802">
+						<description>Show Unfocused Scroll Bar In View Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -320,7 +353,8 @@
 						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="809" description="Show Back Button Option">
+					<control type="radiobutton" id="809">
+						<description>Show Back Button Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -329,7 +363,8 @@
 						<onclick>Skin.ToggleSetting(BackButton.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="811" description="Show Background For Overlay Option">
+					<control type="radiobutton" id="811">
+						<description>Show Background For Overlay Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -338,7 +373,8 @@
 						<onclick>Skin.ToggleSetting(OverlayBackground.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="806" description="Show OSD / Overlay Player Icon Option">
+					<control type="radiobutton" id="806">
+						<description>Show OSD / Overlay Player Icon Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -347,7 +383,8 @@
 						<onclick>Skin.ToggleSetting(PlayerArtwork.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="804" description="Show Media Icons Option">
+					<control type="radiobutton" id="804">
+						<description>Show Media Icons Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -356,7 +393,8 @@
 						<onclick>Skin.ToggleSetting(MediaIcons.Visible)</onclick>
 					</control>
 					
-					<control type="button" id="807" description="Busy Animation Option">
+					<control type="button" id="807">
+						<description>Busy Animation Option</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31788]: $VAR[BusyAnimationNameLabel]</label>
@@ -422,13 +460,15 @@
 						<onclick>Skin.ToggleSetting(LandscapeDescription.Visible)</onclick>
 					</control>
                     
-					<control type="label" id="821" description="Spacer">
+					<control type="label" id="821">
+						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
 						<label>-</label>
 					</control>
                     
-					<control type="button" id="820" description="Reset Page Setting Button">
+					<control type="button" id="820">
+						<description>Reset Page Setting Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[10041]</label>
@@ -439,7 +479,8 @@
 					</control>
 				</control>
 
-				<control type="grouplist" id="900" description="Control Area for Debug Settings">
+				<control type="grouplist" id="900">
+					<description>Control Area for Debug Settings</description>
 					<visible>Container(99).Hasfocus(9)</visible>
 					<width>1100</width>
 					<height>760</height>
@@ -450,7 +491,8 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
-					<control type="radiobutton" id="901" description="Debug Grid Setting">
+					<control type="radiobutton" id="901">
+						<description>Debug Grid Setting</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -459,7 +501,8 @@
 						<onclick>Skin.ToggleSetting(DebugGrid.Visible)</onclick>
 					</control>
 
-					<control type="radiobutton" id="902" description="Debug Info Setting">
+					<control type="radiobutton" id="902">
+						<description>Debug Info Setting</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -468,7 +511,8 @@
 						<onclick>Skin.ToggleSetting(DebugInfo.Visible)</onclick>
 					</control>
 
-					<control type="radiobutton" id="904" description="Debug List Border Setting">
+					<control type="radiobutton" id="904">
+						<description>Debug List Border Setting</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -477,20 +521,23 @@
 						<onclick>Skin.ToggleSetting(DebugListBorder.Visible)</onclick>
 					</control>
                     
-					<control type="label" id="903" description="Spacer">
+					<control type="label" id="903">
+						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
 						<label>-</label>
 					</control>
 
-					<control type="button" id="910" description="Reload Skin Button">
+					<control type="button" id="910">
+						<description>Reload Skin Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31871]</label>
 						<onclick>ReloadSkin()</onclick>
 					</control>
 
-					<control type="button" id="920" description="Reset Page Setting Button">
+					<control type="button" id="920">
+						<description>Reset Page Setting Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[10041]</label>
@@ -500,7 +547,8 @@
 						<onclick>ActivateWindow(1189)</onclick>
 					</control>
 
-					<control type="button" id="930" description="Reset Skin Setting Button">
+					<control type="button" id="930">
+						<description>Reset Skin Setting Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31141]</label>
@@ -511,7 +559,8 @@
 					</control>
 				</control>
                 
-				<control type="grouplist" id="1000" description="Control Area for Skin Information">
+				<control type="grouplist" id="1000">
+					<description>Control Area for Skin Information</description>
 					<visible>Container(99).Hasfocus(10)</visible>
 					<width>1100</width>
 					<height>760</height>
@@ -522,7 +571,8 @@
 					<onright>Noop</onright>
 					<orientation>vertical</orientation>
 
-					<control type="button" id="1003" description="Changelog Button">
+					<control type="button" id="1003">
+						<description>Changelog Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31147]</label>
@@ -531,7 +581,8 @@
 						<onclick>ActivateWindow(1187)</onclick>
 					</control>
 
-					<control type="button" id="1004" description="Credits Button">
+					<control type="button" id="1004">
+						<description>Credits Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31148]</label>
@@ -555,7 +606,8 @@
                 
                 <include name="AnnotationsForHomeMenuSkinSettings" />
                 
-				<control type="group" description="Settings Description Textbox">
+				<control type="group">
+					<description>Settings Description Textbox</description>
                     <visible>ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
 					<posx>720</posx>
 					<posy>880</posy>

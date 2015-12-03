@@ -4,11 +4,12 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<control type="videowindow" id="20" description="Videowindow">
-			<include>FullscreenDimensions</include>
+		<control type="videowindow" id="20">
+			<include name="FullscreenDimensions" />
 		</control>
 
-		<control type="mover" id="8" description="Top Left Mover">
+		<control type="mover" id="8">
+            <description>Top Left Mover</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>250</width>
@@ -17,7 +18,8 @@
 			<texturenofocus>-</texturenofocus>
 		</control>
 
-		<control type="mover" id="9" description="Bottom Right Mover">
+		<control type="mover" id="9">
+            <description>Bottom Right Mover</description>
 			<posx>1050</posx>
 			<posy>750</posy>
 			<width>250</width>
@@ -26,7 +28,8 @@
 			<texturenofocus>-</texturenofocus>
 		</control>
 
-		<control type="mover" id="10" description="Subtitle Position Mover">
+		<control type="mover" id="10">
+            <description>Subtitle Position Mover</description>
 			<posx>300</posx>
 			<posy>750</posy>
 			<width>500</width>
@@ -35,7 +38,8 @@
 			<texturenofocus>-</texturenofocus>
 		</control>
 
-		<control type="resize" id="11" description="Pixel Aspect Ratio Box Resizer">
+		<control type="resize" id="11">
+            <description>Pixel Aspect Ratio Box Resizer</description>
 			<posx>0</posx>
 			<posy>348</posy>
 			<width>250</width>
@@ -44,86 +48,44 @@
 			<texturenofocus>-</texturenofocus>
 		</control>
 
-		<control type="group" description="Coordinates Label">
-			<control type="label">
-				<posx>28</posx>
-				<posy>58</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(2)]</label>
-			</control>
-			<control type="label">
-				<posx>32</posx>
-				<posy>58</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(2)]</label>
-			</control>
-			<control type="label">
-				<posx>28</posx>
-				<posy>62</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(2)]</label>
-			</control>
-			<control type="label">
-				<posx>32</posx>
-				<posy>62</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(2)]</label>
-			</control>
+		<control type="group">
+            <description>Coordinates Label</description>
+			<posx>30</posx>
+			<posy>60</posy>
+            
+            <include name="BackgroundForNormalOutlineLabel">
+                <param name="width" value="1860" />
+                <param name="height" value="30" />
+                <param name="font" value="SmallInformationFont" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="align" value="center" />
+                <param name="label" value="$INFO[Control.GetLabel(2)]" />
+            </include>
 			<control type="label" id="2">
-				<posx>30</posx>
-				<posy>60</posy>
 				<width>1860</width>
+                <height>30</height>
 				<align>center</align>
 				<textcolor>MainColor</textcolor>
 				<label>-</label>
 			</control>
 		</control>
 
-		<control type="group" description="Help Information Label">
-			<control type="label">
-				<posx>28</posx>
-				<posy>98</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(3)]</label>
-			</control>
-			<control type="label">
-				<posx>32</posx>
-				<posy>98</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(3)]</label>
-			</control>
-			<control type="label">
-				<posx>28</posx>
-				<posy>102</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(3)]</label>
-			</control>
-			<control type="label">
-				<posx>32</posx>
-				<posy>102</posy>
-				<width>1860</width>
-				<align>center</align>
-				<textcolor>BackgroundColor</textcolor>
-				<label>$INFO[Control.GetLabel(3)]</label>
-			</control>
+		<control type="group">
+            <description>Help Information Label</description>
+			<posx>30</posx>
+			<posy>100</posy>
+            
+            <include name="BackgroundForNormalOutlineLabel">
+                <param name="width" value="1860" />
+                <param name="height" value="30" />
+                <param name="font" value="SmallInformationFont" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="align" value="center" />
+                <param name="label" value="$INFO[Control.GetLabel(3)]" />
+            </include>
 			<control type="label" id="3">
-				<posx>30</posx>
-				<posy>100</posy>
 				<width>1860</width>
+                <height>30</height>
 				<align>center</align>
 				<textcolor>MainColor</textcolor>
 				<label>-</label>

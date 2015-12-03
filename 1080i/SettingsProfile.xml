@@ -4,12 +4,13 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>GlobalBackground</include>
+		<include name="GlobalBackground" />
 			
 	    <control type="group">
-			<include>CleanLeftRingForSettings</include>
+			<include name="CleanLeftRingForSettings" />
 
-			<control type="radiobutton" id="4" description="Enable Login Screen Radiobutton">
+			<control type="radiobutton" id="4">
+                <description>Enable Login Screen Radiobutton</description>
 				<posx>700</posx>
 				<posy>100</posy>
 				<width>1100</width>
@@ -21,7 +22,8 @@
 				<ondown>5</ondown>
 			</control>
 
-			<control type="button" id="5" description="Auto Login Button">
+			<control type="button" id="5">
+                <description>Auto Login Button</description>
 				<posx>700</posx>
 				<posy>140</posy>
 				<width>1100</width>
@@ -33,7 +35,8 @@
 				<ondown>2</ondown>
 			</control>
 
-			<control type="list" id="2" description="Logins List">
+			<control type="list" id="2">
+                <description>Logins List</description>
 				<posx>700</posx>
 				<posy>220</posy>
 				<width>1100</width>
@@ -44,22 +47,22 @@
 				<ondown>4</ondown>
 
 				<itemlayout height="60">
-					<include>NormalItemsForProfileList</include>
+					<include name="NormalItemsForProfileList" />
 				</itemlayout>
 					
 				<focusedlayout height="60">
 					<control type="group">
 						<visible>Control.HasFocus(2)</visible>
-						<include>FocusedItemsForProfileList</include>
+						<include name="FocusedItemsForProfileList" />
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(2)</visible>
-						<include>NormalItemsForProfileList</include>
+						<include name="NormalItemsForProfileList" />
 					</control>
 				</focusedlayout>
 			</control>
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>
