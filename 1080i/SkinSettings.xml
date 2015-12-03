@@ -4,10 +4,10 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>GlobalBackground</include>
+		<include name="GlobalBackground" />
 
 	    <control type="group">
-			<include>ButtonLeftRingForSettings</include>
+			<include name="ButtonLeftRingForSettings" />
 
 			<control type="list" id="99">
 				<posx>40</posx>
@@ -23,17 +23,17 @@
 				<onright>98</onright>
 
 				<itemlayout height="40">
-					<include>NormalItemsForButtonList</include>
+					<include name="NormalItemsForButtonList" />
 				</itemlayout>
 					
 				<focusedlayout height="40">
 					<control type="group">
 						<visible>Control.HasFocus(99)</visible>
-						<include>FocusedItemsForButtonList</include>
+						<include name="FocusedItemsForButtonList" />
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(99)</visible>
-						<include>SelectedItemsForButtonList</include>
+						<include name="SelectedItemsForButtonList" />
 					</control>
 				</focusedlayout>
 
@@ -164,7 +164,7 @@
 					</control>
 				</control>
 
-                <include>OptionsForHomeMenuSkinSettings</include>
+                <include name="OptionsForHomeMenuSkinSettings" />
 
 				<control type="grouplist" id="300" description="Control Area For Background Visuals">
 					<visible>Container(99).Hasfocus(3)</visible>
@@ -375,7 +375,8 @@
 						<onclick>ActivateWindow(1188)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="805" description="Show No Information Available Option">
+					<control type="radiobutton" id="805">
+                        <description>Show No Information Available Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -384,8 +385,25 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
+					<control type="button" id="813">
+                        <description>Dialog Animation Option</description>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31798]: $VAR[DialogAnimationNameLabel]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31798],1188)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31217],1188)</onclick>
+						<onclick>SetProperty(DialogTarget,DialogAnimation.Type,1188)</onclick>
+						<onclick>SetProperty(List01Option.Name,$LOCALIZE[231],1188)</onclick>
+						<onclick>SetProperty(List01Option.Action,N,1188)</onclick>
+						<onclick>SetProperty(List02Option.Name,$LOCALIZE[21388],1188)</onclick>
+						<onclick>SetProperty(List02Option.Action,Q,1188)</onclick>
+						<onclick>SetProperty(List03Option.Name,$LOCALIZE[31929],1188)</onclick>
+						<onclick>SetProperty(List03Option.Action,W,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
+					</control>
+					
 					<control type="radiobutton" id="812">
-                        <description>Show Description in Landscape Option</description>
+                        <description>Show Name in Thumbnails and Panels Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -394,7 +412,8 @@
 						<onclick>Skin.ToggleSetting(ThumbnailsName.Visible)</onclick>
 					</control>
                     
-					<control type="radiobutton" id="808" description="Show Description in Landscape Option">
+					<control type="radiobutton" id="808">
+                        <description>Show Description in Landscape Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -534,7 +553,7 @@
 					<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
 				</control>
                 
-                <include>AnnotationsForHomeMenuSkinSettings</include>
+                <include name="AnnotationsForHomeMenuSkinSettings" />
                 
 				<control type="group" description="Settings Description Textbox">
                     <visible>ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
@@ -664,6 +683,11 @@
 						<label>$LOCALIZE[31216]</label>
 					</control>
 					<control type="textbox">
+						<visible>Control.HasFocus(813)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31218]</label>
+					</control>
+					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31192]</label>
@@ -697,6 +721,6 @@
 			</control>
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>

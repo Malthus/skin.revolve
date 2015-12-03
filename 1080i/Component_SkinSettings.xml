@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="DefaultSettingsForSkinSettings" description="Default Skin Settings">
+	<include name="DefaultSettingsForSkinSettings">
 		<onfocus>Skin.ResetSettings</onfocus>
 		
 		<include>BackgroundSettingsForSkinSettings</include>
@@ -13,7 +13,7 @@
 		<onfocus>Skin.SetBool(RevolveConfiguration)</onfocus>
 	</include>
 	
-	<include name="BackgroundSettingsForSkinSettings" description="Background Skin Settings">
+	<include name="BackgroundSettingsForSkinSettings">
 		<onfocus>Skin.SetBool(BackgroundImage.Active)</onfocus>
 		<onfocus>Skin.SetBool(BackgroundImage.Faded)</onfocus>
 		<onfocus>Skin.SetBool(BackgroundVisualiser.Active)</onfocus>
@@ -22,7 +22,7 @@
 		<onfocus>Skin.Reset(BackgroundVideo.Faded)</onfocus>
 	</include>
 	
-	<include name="HomeMenuItemsSettingsForSkinSettings" description="Home Menu Items Skin Settings">
+	<include name="HomeMenuItemsSettingsForSkinSettings">
 		<onfocus>Skin.SetBool(PlayDiscOption.Active)</onfocus>
 		<onfocus>Skin.SetBool(FavouritesOption.Active)</onfocus>
 		<onfocus>Skin.Reset(Custom01Option.Active)</onfocus>
@@ -80,11 +80,11 @@
 		<onfocus>Skin.Reset(CircleExitMenu.Enable)</onfocus>
 	</include>
 
-	<include name="AddonSettingsForSkinSettings" description="Background Skin Settings">
+	<include name="AddonSettingsForSkinSettings">
 		<onfocus>Skin.SetString(AddonLyrics,script.cu.lrclyrics)</onfocus>
 	</include>
 	
-	<include name="MiscellaneousSettingsForSkinSettings" description="Miscellaneous Skin Settings">
+	<include name="MiscellaneousSettingsForSkinSettings">
 		<onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
 		<onfocus>Skin.SetBool(SideMenu.Grouped)</onfocus>
 		<onfocus>Skin.SetBool(SideMenu.Visible)</onfocus>
@@ -98,9 +98,10 @@
 		<onfocus>Skin.SetBool(NoInformationLabel.Visible)</onfocus>
 		<onfocus>Skin.Reset(ThumbnailsName.Visible)</onfocus>
 		<onfocus>Skin.SetBool(LandscapeDescription.Visible)</onfocus>
+		<onfocus>Skin.SetString(DialogAnimation.Type,N)</onfocus>
 	</include>
     
-	<include name="DebugSettingsForSkinSettings" description="Debug Skin Settings">
+	<include name="DebugSettingsForSkinSettings">
 		<onfocus>Skin.Reset(DebugGrid.Visible)</onfocus>
 		<onfocus>Skin.Reset(DebugInfo.Visible)</onfocus>
 		<onfocus>Skin.Reset(DebugListBorder.Visible)</onfocus>

@@ -219,6 +219,7 @@
             </include>
             
             <control type="image">
+                <visible>StringCompare(Skin.String(DialogAnimation.Type),Q) | StringCompare(Skin.String(DialogAnimation.Type),W)</visible>
                 <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="30000" delay="0" loop="true" condition="true">Conditional</animation>
                 <posy>10</posy>
                 <width>60</width>
@@ -441,22 +442,7 @@
 	</include>
 	
     <!-- ============================================================== -->
-<!--
-    <include name="MarkupForControlListForDialog">
-        <param name="posy" default="80" />
-        <param name="height" default="-" />
-    
-        <definition>
-			<posx>560</posx>
-			<posy>$PARAM[posy]</posy>
-			<width>1240</width>
-			<height>$PARAM[height]</height>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-            <usecontrolcoords>true</usecontrolcoords>
-        </definition>
-    </include>
--->    
+
     <constant name="PosXForSmallIconFrameForDialog">235</constant>
     <constant name="PosYForSmallIconFrameForDialog">20</constant>
     <include name="SmallIconForDialog">

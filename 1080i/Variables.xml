@@ -719,6 +719,12 @@
         <value>$LOCALIZE[31951]</value>
     </variable>
 
+    <variable name="DialogAnimationNameLabel">
+        <value condition="StringCompare(Skin.String(DialogAnimation.Type),Q)">$LOCALIZE[21388]</value>
+        <value condition="StringCompare(Skin.String(DialogAnimation.Type),W)">$LOCALIZE[31929]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+
     <variable name="MenuNameLabel">
         <value>$INFO[Container(450).ListItem.Label]</value>
     </variable>
