@@ -14,7 +14,7 @@
     
     <include name="RssFeed">
         <definition>
-            <control type="group" description="RSS Feed">
+            <control type="group">
                 <visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
             
                 <include name="BackgroundForRssFeed" />
