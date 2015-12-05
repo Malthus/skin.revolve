@@ -219,15 +219,16 @@
             </include>
             
             <control type="image">
-                <visible>StringCompare(Skin.String(DialogAnimation.Type),Q) | StringCompare(Skin.String(DialogAnimation.Type),W)</visible>
+                <visible>StringCompare(Skin.String(DialogAnimation.Type),Q) | StringCompare(Skin.String(DialogAnimation.Type),B) | StringCompare(Skin.String(DialogAnimation.Type),W)</visible>
                 <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="30000" delay="0" loop="true" condition="true">Conditional</animation>
                 <posy>10</posy>
                 <width>60</width>
                 <height>60</height>
                 <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
             </control>
-<!--            
+
             <control type="image">
+                <visible>StringCompare(Skin.String(DialogAnimation.Type),B) | StringCompare(Skin.String(DialogAnimation.Type),W)</visible>
                 <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="23000" delay="2500" loop="true" condition="true">Conditional</animation>
                 <posy>10</posy>
                 <width>60</width>
@@ -236,6 +237,7 @@
             </control>
             
             <control type="image">
+                <visible>StringCompare(Skin.String(DialogAnimation.Type),B) | StringCompare(Skin.String(DialogAnimation.Type),W)</visible>
                 <animation effect="slide" tween="linear" start="-40,0" end="1920,0" time="35000" delay="3500" loop="true" condition="true">Conditional</animation>
                 <posy>20</posy>
                 <width>40</width>
@@ -244,13 +246,14 @@
             </control>
             
             <control type="image">
+                <visible>StringCompare(Skin.String(DialogAnimation.Type),B) | StringCompare(Skin.String(DialogAnimation.Type),W)</visible>
                 <animation effect="slide" tween="linear" start="1920,0" end="-30,0" time="20000" delay="5000" loop="true" condition="true">Conditional</animation>
                 <posy>25</posy>
                 <width>30</width>
                 <height>30</height>
                 <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
             </control>
--->            
+
             <control type="label" id="$PARAM[headerid]">
                 <posx>560</posx>
                 <posy>20</posy>
