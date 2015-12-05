@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<default type="label" description="Default Text Label">
-		<include>DefaultControlDimensions</include>
+	<default type="label">
+		<include name="DefaultControlDimensions" />
 		<font>SmallInformationFont</font>
 		<textcolor>SecondaryColor</textcolor>
 		<focusedcolor>MainColor</focusedcolor>
@@ -15,8 +15,8 @@
 		<label>-</label>
 	</default>
 
-	<default type="edit" description="Default Edit Box">
-		<include>DefaultControlDimensions</include>
+	<default type="edit">
+		<include name="DefaultControlDimensions" />
 		<font>DialogTextFont</font>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
@@ -36,8 +36,8 @@
 		<texture>-</texture>
 	</default>
 
-	<default type="button" description="Default Button Control">
-	    <include>DefaultButtonDimensions</include>
+	<default type="button">
+	    <include name="DefaultButtonDimensions" />
 		<font>DefaultButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
@@ -51,8 +51,8 @@
 		<label>-</label>
 	</default>
 
-	<default type="togglebutton" description="Default Togglebutton Control">
-	    <include>DefaultButtonDimensions</include>
+	<default type="togglebutton">
+	    <include name="DefaultButtonDimensions" />
 		<font>DefaultButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
@@ -68,8 +68,8 @@
 		<label>-</label>
 	</default>
 
-	<default type="radiobutton" description="Default Radiobutton Control">
-	    <include>DefaultButtonDimensions</include>
+	<default type="radiobutton">
+	    <include name="DefaultButtonDimensions" />
 		<font>DefaultButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
@@ -89,7 +89,7 @@
 		<label>-</label>
 	</default>
 
-	<default type="spincontrol" description="Default Spinner Control">
+	<default type="spincontrol">
 		<posx>0</posx>
 		<posy>0</posy>
 		<height>40</height>
@@ -111,8 +111,8 @@
 		<pulseonselect>false</pulseonselect>
 	</default>
 
-	<default type="spincontrolex" description="Default Spinner Control for Settings">
-	    <include>DefaultButtonDimensions</include>
+	<default type="spincontrolex">
+	    <include name="DefaultButtonDimensions" />
 		<font>DefaultButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
@@ -146,7 +146,7 @@
 	</default>
 
 	<default type="sliderex">
-	    <include>DefaultButtonDimensions</include>
+	    <include name="DefaultButtonDimensions" />
 		<sliderwidth>346</sliderwidth>
 		<sliderheight>40</sliderheight>
 		<texturesliderbar colordiffuse="SecondaryColor">controls/line-horizontal.png</texturesliderbar>
@@ -163,7 +163,7 @@
 		<textoffsetx>20</textoffsetx>
 	</default>
 
-	<default type="progress" description="Default Horizontal Progressbar">
+	<default type="progress">
 		<texturebg border="6">-</texturebg>
 		<midtexture colordiffuse="MainColor" border="6">controls/horizontalbar-thin.png</midtexture>
 		<lefttexture>-</lefttexture>
@@ -171,7 +171,7 @@
 		<overlaytexture>-</overlaytexture>
 	</default>
 
-	<default type="scrollbar" description="Default Vertical Scrollbar">
+	<default type="scrollbar">
 		<width>20</width>
 		<texturesliderbackground border="0,14,0,14" colordiffuse="BackgroundColor">controls/horizontalbar-thick.png</texturesliderbackground>
 		<texturesliderbar border="0,14,0,14" colordiffuse="SelectColor">controls/horizontalbar-thin.png</texturesliderbar>
