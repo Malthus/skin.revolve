@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="50" type="dialog">
 	<zorder>2</zorder>
-	<visible>!Window.IsVisible(startup)</visible>
 	
 	<controls>
-		<control type="grouplist" description="Window/Dialog Debug Information List">
+		<control type="grouplist">
+            <description>Window/Dialog Debug Information List</description>
 			<visible>Skin.HasSetting(DebugInfo.Visible)</visible>
 			<posx>20</posx>
 			<posy>20</posy>
@@ -321,6 +321,13 @@
 				<visible>Window.IsVisible(SkinSettings.xml)</visible>
 				<include name="WindowNameForDebug">
 					<param name="label" value="SkinSettings.xml" />
+                </include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(Startup.xml)</visible>
+				<include name="WindowNameForDebug">
+					<param name="label" value="Startup.xml" />
                 </include>
 			</control>
 
@@ -896,9 +903,10 @@
 			</control>
 		</control>
 
-		<control type="image" description="Global Debug Grid">
+		<control type="image">
+            <description>Global Debug Grid</description>
 			<visible>Skin.HasSetting(DebugGrid.Visible)</visible>
-			<include>FullscreenDimensions</include>
+			<include name="FullscreenDimensions" />
 			<texture>special://skin/backgrounds/debuggrid1080.png</texture>
 		</control>
 	</controls>
