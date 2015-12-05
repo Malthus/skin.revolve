@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="50" type="dialog">
 	<zorder>2</zorder>
+    <visible>!Window.IsVisible(startup)</visible>
 	
 	<controls>
 		<control type="grouplist">
@@ -321,13 +322,6 @@
 				<visible>Window.IsVisible(SkinSettings.xml)</visible>
 				<include name="WindowNameForDebug">
 					<param name="label" value="SkinSettings.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(Startup.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="Startup.xml" />
                 </include>
 			</control>
 
