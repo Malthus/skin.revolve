@@ -77,7 +77,7 @@
         </definition>
 	</include>
 
-	<include name="CircleItemsSettingsForSkinSettings" description="Circle Items Skin Settings">
+	<include name="CircleItemsSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.Reset(CircleNextAired.Enable)</onfocus>
             <onfocus>Skin.SetString(CircleMovieOption.Name,$LOCALIZE[31721] ($LOCALIZE[31711])</onfocus>
