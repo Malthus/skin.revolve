@@ -3,130 +3,151 @@
     <constant name="PosXForBigClock">1900</constant>
     <constant name="PosYForBigClock">10</constant>
 	<include name="BigClock">
-		<control type="group">
-			<control type="group">
-				<visible>!SubString(System.Time(xx),M)</visible> 
-				<posx>0</posx>
-				<posy>0</posy>
-				<include>TimeForBigClock</include>
-			</control>
+        <param name="posx" default="PosXForBigClock" />
+        <param name="posy" default="PosYForBigClock" />
+    
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
 
-			<control type="group">
-				<visible>SubString(System.Time(xx),M)</visible> 
-				<posx>-70</posx>
-				<posy>0</posy>
-				<include>TimeForBigClock</include>
-			</control>
-				
-			<control type="group">
-				<visible>SubString(System.Time(xx),M)</visible> 
-				<posx>-60</posx>
-				<posy>0</posy>
-				<include>AmPmForBigClock</include>
-			</control>
+                <control type="group">
+                    <visible>!SubString(System.Time(xx),M)</visible> 
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <include name="TimeForBigClock" />
+                </control>
 
-			<control type="group">
-				<posx>0</posx>
-				<posy>120</posy>
-				<include>DateForBigClock</include>
-			</control>
-		</control>
+                <control type="group">
+                    <visible>SubString(System.Time(xx),M)</visible> 
+                    <posx>-70</posx>
+                    <posy>0</posy>
+                    <include name="TimeForBigClock" />
+                </control>
+                    
+                <control type="group">
+                    <visible>SubString(System.Time(xx),M)</visible> 
+                    <posx>-60</posx>
+                    <posy>0</posy>
+                    <include name="AmPmForBigClock" />
+                </control>
+
+                <control type="group">
+                    <posx>0</posx>
+                    <posy>120</posy>
+                    <include name="DateForBigClock" />
+                </control>
+            </control>
+        </definition>
 	</include>
 	
     <constant name="PosXForDefaultClock">1900</constant>
     <constant name="PosYForDefaultClock">20</constant>
 	<include name="DefaultClock">
-		<control type="group">
-            <include name="NormalOutlineLabel">
-                <param name="width" value="200" />
-                <param name="height" value="40" />
-                <param name="font" value="DefaultClockTimeFont" />
-                <param name="textcolor" value="MainColor" />
-                <param name="align" value="right" />
-                <param name="label" value="$INFO[System.Time(hh:mm)]" />
-            </include>
-		</control>
+        <param name="posx" default="PosXForDefaultClock" />
+        <param name="posy" default="PosYForDefaultClock" />
+
+        <definition>
+            <control type="group">
+                <include name="NormalOutlineLabel">
+                    <param name="posx" value="$PARAM[posx]" />
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="width" value="200" />
+                    <param name="height" value="40" />
+                    <param name="font" value="DefaultClockTimeFont" />
+                    <param name="textcolor" value="MainColor" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$INFO[System.Time(hh:mm)]" />
+                </include>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="TimeForBigClock">
-		<control type="group">
-            <include name="NormalOutlineLabel">
-                <param name="width" value="600" />
-                <param name="height" value="120" />
-                <param name="font" value="HugeClockTimeFont" />
-                <param name="textcolor" value="MainColor" />
-                <param name="align" value="right" />
-                <param name="label" value="$INFO[System.Time(hh:mm)]" />
-            </include>
-		</control>
+        <definition>
+            <control type="group">
+                <include name="NormalOutlineLabel">
+                    <param name="width" value="600" />
+                    <param name="height" value="120" />
+                    <param name="font" value="HugeClockTimeFont" />
+                    <param name="textcolor" value="MainColor" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$INFO[System.Time(hh:mm)]" />
+                </include>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="DateForBigClock">
-		<control type="group">
-            <include name="ThinOutlineLabel">
-                <param name="width" value="600" />
-                <param name="height" value="40" />
-                <param name="font" value="HugeClockDateFont" />
-                <param name="textcolor" value="MainColor" />
-                <param name="align" value="right" />
-                <param name="label" value="[UPPERCASE]$INFO[System.Date(DDD)][/UPPERCASE]" />
-            </include>
-		</control>
+        <definition>
+            <control type="group">
+                <include name="ThinOutlineLabel">
+                    <param name="width" value="600" />
+                    <param name="height" value="40" />
+                    <param name="font" value="HugeClockDateFont" />
+                    <param name="textcolor" value="MainColor" />
+                    <param name="align" value="right" />
+                    <param name="label" value="[UPPERCASE]$INFO[System.Date(DDD)][/UPPERCASE]" />
+                </include>
+            </control>
 
-		<control type="group">
-			<posy>40</posy>
-            <include name="ThinOutlineLabel">
-                <param name="width" value="600" />
-                <param name="height" value="40" />
-                <param name="font" value="HugeClockDateFont" />
-                <param name="textcolor" value="MainColor" />
-                <param name="align" value="right" />
-                <param name="label" value="[UPPERCASE]$INFO[System.Date(d mmm yyyy)][/UPPERCASE]" />
-            </include>
-		</control>
+            <control type="group">
+                <posy>40</posy>
+                <include name="ThinOutlineLabel">
+                    <param name="width" value="600" />
+                    <param name="height" value="40" />
+                    <param name="font" value="HugeClockDateFont" />
+                    <param name="textcolor" value="MainColor" />
+                    <param name="align" value="right" />
+                    <param name="label" value="[UPPERCASE]$INFO[System.Date(d mmm yyyy)][/UPPERCASE]" />
+                </include>
+            </control>
+        </definition>
 	</include>
 
 	<include name="AmPmForBigClock">
-		<control type="group">
-			<visible>SubString(System.Time(xx),M)</visible> 
-					
-			<control type="group">
-				<visible>SubString(System.Time(xx),A)</visible> 
-				<posy>2</posy>
-                <include name="NormalOutlineLabel">
-                    <param name="width" value="70" />
-                    <param name="height" value="60" />
-                    <param name="font" value="HugeClockAMPMFont" />
-                    <param name="textcolor" value="MainColor" />
-                    <param name="align" value="center" />
-                    <param name="label" value="A" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>SubString(System.Time(xx),P)</visible> 
-				<posy>2</posy>
-                <include name="NormalOutlineLabel">
-                    <param name="width" value="70" />
-                    <param name="height" value="60" />
-                    <param name="font" value="HugeClockAMPMFont" />
-                    <param name="textcolor" value="MainColor" />
-                    <param name="align" value="center" />
-                    <param name="label" value="P" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<posy>60</posy>
-                <include name="NormalOutlineLabel">
-                    <param name="width" value="70" />
-                    <param name="height" value="60" />
-                    <param name="font" value="HugeClockAMPMFont" />
-                    <param name="textcolor" value="MainColor" />
-                    <param name="align" value="center" />
-                    <param name="label" value="M" />
-                </include>
-			</control>
-		</control>
+        <definition>
+            <control type="group">
+                <visible>SubString(System.Time(xx),M)</visible> 
+                        
+                <control type="group">
+                    <visible>SubString(System.Time(xx),A)</visible> 
+                    <posy>2</posy>
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="70" />
+                        <param name="height" value="60" />
+                        <param name="font" value="HugeClockAMPMFont" />
+                        <param name="textcolor" value="MainColor" />
+                        <param name="align" value="center" />
+                        <param name="label" value="A" />
+                    </include>
+                </control>
+                
+                <control type="group">
+                    <visible>SubString(System.Time(xx),P)</visible> 
+                    <posy>2</posy>
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="70" />
+                        <param name="height" value="60" />
+                        <param name="font" value="HugeClockAMPMFont" />
+                        <param name="textcolor" value="MainColor" />
+                        <param name="align" value="center" />
+                        <param name="label" value="P" />
+                    </include>
+                </control>
+                
+                <control type="group">
+                    <posy>60</posy>
+                    <include name="NormalOutlineLabel">
+                        <param name="width" value="70" />
+                        <param name="height" value="60" />
+                        <param name="font" value="HugeClockAMPMFont" />
+                        <param name="textcolor" value="MainColor" />
+                        <param name="align" value="center" />
+                        <param name="label" value="M" />
+                    </include>
+                </control>
+            </control>
+        </definition>
 	</include>
 </includes>

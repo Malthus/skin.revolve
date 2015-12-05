@@ -15,12 +15,7 @@
 		<include name="PanelsView" />
 		<include name="RotateListView" />
 
-		<control type="group">
-			<posx>PosXForDefaultClock</posx>
-			<posy>PosYForDefaultClock</posy>
-			<include name="DefaultClock" />
-        </control>
-
+		<include name="DefaultClock" />
         <include name="ChannelGroupLabelForPVR" />
 		
 		<control type="group" id="9000">

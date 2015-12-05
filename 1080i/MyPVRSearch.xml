@@ -15,13 +15,9 @@
 		<include name="PanelsView" />
 		<include name="RotateListView" />
 
-		<control type="group">
-			<posx>PosXForDefaultClock</posx>
-			<posy>PosYForDefaultClock</posy>
-			<include name="DefaultClock" />
-        </control>
+        <include name="DefaultClock" />
 
-		<control type="group" id="9000">
+        <control type="group" id="9000">
 			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">

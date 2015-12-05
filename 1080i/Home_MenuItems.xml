@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="HomeMenuItems">
+		<content>
 		<item id="13" description="Play Disc Option">
 			<visible>System.HasMediaDVD + Skin.HasSetting(PlayDiscOption.Active)</visible>
 			<label>$LOCALIZE[427]</label>
@@ -441,5 +442,6 @@
 			<thumb>$INFO[Skin.String(ExitOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(1150)</onclick>				
 		</item>
+		</content>
 	</include>
 </includes>

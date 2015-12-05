@@ -4,9 +4,10 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>GlobalBackground</include>
+		<include name="GlobalBackground" />
     
-		<control type="button" id="200" description="Default Skin Settings Initialisation">
+		<control type="button" id="200">
+            <description>Default Skin Settings Initialisation</description>
 			<visible>!Skin.HasSetting(RevolveConfiguration)</visible>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
@@ -14,23 +15,26 @@
 			<onfocus>SetFocus(210)</onfocus>
 		</control>
 
-		<control type="button" id="200" description="Default Skin Settings Evasion">
+		<control type="button" id="200">
+            <description>Default Skin Settings Evasion</description>
 			<visible>Skin.HasSetting(RevolveConfiguration)</visible>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
 			<onfocus>SetFocus(210)</onfocus>
 		</control>
 	
-		<control type="button" id="210" description="Script and Plugin Initialisation">
+		<control type="button" id="210">
+            <description>Script and Plugin Initialisation</description>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
             <onfocus condition="System.HasAddon(service.skin.widgets) + !Window(home).Property(SkinWidgets_Running)">RunScript(service.skin.widgets)</onfocus>
 			<onfocus>SetFocus(300)</onfocus>
 		</control>
 
-		<include>RssFeed</include>
+		<include name="RssFeed" />
 
-		<control type="wraplist" id="300" description="Invisible Home Wraplist">
+		<control type="wraplist" id="300">
+            <description>Invisible Home Wraplist</description>
 			<visible allowhiddenfocus="true">Skin.HasSetting(DebugListBorder.Visible)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
@@ -44,31 +48,26 @@
 			<onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)">900</onleft>
 			<onright>Noop</onright>
 
-            <include>InvisibleVerticalListItemsForMenu</include>
-
-			<content>
-				<include>HomeMenuItems</include>
-			</content>
+            <include name="InvisibleVerticalListItemsForMenu" />
+			<include name="HomeMenuItems" />
 		</control>
 		
-		<include>RingForHomeRevolveList</include>
-		<include>ListForHomeRevolveList</include>
+		<include name="RingForHomeRevolveList" />
+		<include name="ListForHomeRevolveList" />
 
-		<control type="group" description="Clock">
+		<control type="group">
 			<animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
 			<animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
             
             <control type="group">
                 <visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
-                <posx>PosXForBigClock</posx>
-                <posy>50</posy>
-                <include>BigClock</include>
+                <include name="BigClock">
+                    <param name="posy" value="50" />
+                </include>
             </control>
             <control type="group">
                 <visible>!System.GetBool(lookandfeel.enablerssfeeds)</visible>
-                <posx>PosXForBigClock</posx>
-                <posy>PosYForBigClock</posy>
-                <include>BigClock</include>
+                <include name="BigClock" />
             </control>
 		</control>
 	</controls>
