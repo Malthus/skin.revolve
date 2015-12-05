@@ -18,17 +18,17 @@
 			<onleft>9000</onleft>
 			<onright>68</onright>
 
-            <include>InvisibleVerticalListItemsForMenu</include>
+            <include name="InvisibleVerticalListItemsForMenu" />
 		</control>
 		
-		<include>MainRotateListView</include>
+		<include name="MainRotateListView" />
 	</include>
 
 	<include name="MainRotateListView">
 		<control type="group">
 			<visible>Control.IsVisible(58)</visible>
 
-			<include>RightRing</include>
+			<include name="RightRing" />
 			
 			<control type="group">
 				<animation type="WindowOpen">
@@ -115,7 +115,7 @@
 					</control>
 				</control>
 				
-				<control type="group" description="Selected List Item Label">
+				<control type="group">
 					<control type="group">
 						<include>NoMovementAnimationForRotateListView</include>
                         <include>LabelOnOriginForRotateListView</include>
@@ -435,7 +435,7 @@
 			</control>
 		</control>
 		
-		<control type="scrollbar" id="68" description="Scrollbar">
+		<control type="scrollbar" id="68">
 			<visible allowhiddenfocus="true">Control.IsVisible(58)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(68) + !Container(58).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="40,0" time="100" />

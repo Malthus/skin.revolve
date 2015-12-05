@@ -22,7 +22,8 @@
 				</itemlayout>
 				
 				<focusedlayout width="800" height="662">
-                    <control type="button" description="Invisible Circle Items Loading Button">
+                    <control type="button">
+                        <description>Invisible Circle Items Loading Button</description>
                         <texturenofocus>-</texturenofocus>
                         <texturefocus>-</texturefocus>
                         <onfocus condition="Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/PopulateStaticItemsFromHomeProperties.py,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onfocus>

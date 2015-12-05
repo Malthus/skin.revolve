@@ -121,7 +121,8 @@
 				</content>
 			</control>
 
-			<control type="button" id="31" description="Next Predefined Category Button">
+			<control type="button" id="31">
+                <description>Next Predefined Category Button</description>
 				<posx>1700</posx>
 				<posy>120</posy>
 				<width>40</width>
@@ -135,7 +136,8 @@
 				<onclick>Control.Move(30,1)</onclick>
 			</control>
 			
-			<control type="button" id="32" description="Previous Predefined Category Button">
+			<control type="button" id="32">
+                <description>Previous Predefined Category Button</description>
 				<posx>1740</posx>
 				<posy>120</posy>
 				<width>40</width>
@@ -770,7 +772,8 @@
                 <param name="label" value="$LOCALIZE[31910]:" />
             </include>
             
-			<control type="button" id="39" description="Custom Action Label">
+			<control type="button" id="39">
+                <description>Custom Action Label</description>
 				<enable>false</enable>
 				<posx>560</posx>
 				<posy>640</posy>
@@ -866,14 +869,13 @@
 				</control>
 			</control>
             
-            <control type="group" description="Help Textbox">
+            <control type="group">
                 <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
                 <posx>40</posx>
                 <posy>20</posy>
+                <include name="HelpFrameForDialog" />
             
-                <include>HelpFrameForDialog</include>
-            
-                <control type="group" description="Settings Description Textbox">
+                <control type="group">
                     <posx>20</posx>
                     <posy>20</posy>
                     <width>440</width>

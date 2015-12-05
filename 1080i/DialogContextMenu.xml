@@ -8,7 +8,8 @@
 			<posx>681</posx>
 			<posy>300</posy>
 			
-			<control type="group" description="Context Menu Background">
+			<control type="group">
+                <description>Context Menu Background</description>
 				<control type="image">
 					<posx>-30</posx>
 					<posy>-30</posy>
@@ -28,14 +29,14 @@
 				</control>
 			</control>
 
-			<control type="grouplist" id="996" description="Context Buttons Grouplist">
+			<control type="grouplist" id="996">
 				<posx>24</posx>
 				<posy>20</posy>
 				<width>512</width>
 				<height max="800">auto</height>
 				<itemgap>0</itemgap>
 
-				<control type="button" id="1000" description="Default Button">
+				<control type="button" id="1000">
 					<width>512</width>
 				</control>
 			</control>

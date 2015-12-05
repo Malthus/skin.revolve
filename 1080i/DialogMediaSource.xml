@@ -34,17 +34,17 @@
 				<onright>Noop</onright>
 
 				<itemlayout height="40">
-					<include>NormalItemsForNormalList</include>
+					<include name="NormalItemsForNormalList" />
 				</itemlayout>
 					
 				<focusedlayout height="40">
 					<control type="group">
 						<visible>Control.HasFocus(10)</visible>
-						<include>FocusedItemsForNormalList</include>
+						<include name="FocusedItemsForNormalList" />
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(10)</visible>
-						<include>NormalItemsForNormalList</include>
+						<include name="NormalItemsForNormalList" />
 					</control>
 				</focusedlayout>
 			</control>
@@ -54,7 +54,8 @@
                 <param name="label" value="$LOCALIZE[31400]" />
             </include>
 
-			<control type="edit" id="12" description="Name For Selected Source Edit Box">
+			<control type="edit" id="12">
+                <description>Name For Selected Source Edit Box</description>
 				<posx>560</posx>
 				<posy>440</posy>
 				<width>1240</width>

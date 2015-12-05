@@ -34,7 +34,7 @@
             <include>ContentDescriptionForLandscapeView</include>
 		</control>
 
-		<control type="scrollbar" id="63" description="Scrollbar">
+		<control type="scrollbar" id="63">
 			<visible allowhiddenfocus="true">Control.IsVisible(53)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(63) + !Container(53).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="0,-40" time="100" />

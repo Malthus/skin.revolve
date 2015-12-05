@@ -4,13 +4,14 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>GlobalBackground</include>
+		<include name="GlobalBackground" />
 
 		<control type="group">
 			<posy>PosYForSixLinesDialog</posy>
 			<include>SixLinesDialog</include>
 
-			<control type="group" description="Login Icon">
+			<control type="group">
+                <description>Login Icon</description>
 				<posx>150</posx>
 				<posy>20</posy>
 				
@@ -34,7 +35,8 @@
 				</control>
 			</control>
 
-			<control type="fixedlist" id="52" description="Logins List">
+			<control type="fixedlist" id="52">
+                <description>Logins List</description>
 				<posx>560</posx>
 				<posy>20</posy>
 				<width>1240</width>
@@ -46,7 +48,7 @@
 				<focusposition>2</focusposition>
 				<scrolltime>200</scrolltime>
 
-				<include>ItemsForLargeList</include>
+				<include name="ItemsForLargeList" />
 			</control>
 		</control>
 	</controls>
