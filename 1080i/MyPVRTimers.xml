@@ -5,42 +5,42 @@
 	<views>52,51,54,58</views>
 
 	<controls>
-		<include>FullscreenDimensions</include>
-		<include>GlobalBackground</include>
+		<include name="FullscreenDimensions" />
+		<include name="GlobalBackground" />
 
-		<include>DropListView</include>
-		<include>CircleListView</include>
-		<include>RevolveListView</include>
-		<include>RotateListView</include>
+		<include name="DropListView" />
+		<include name="CircleListView" />
+		<include name="RevolveListView" />
+		<include name="RotateListView" />
 
-		<control type="group" description="Clock Label">
+		<control type="group">
 			<posx>PosXForDefaultClock</posx>
 			<posy>PosYForDefaultClock</posy>
-			<include>DefaultClock</include>
+			<include name="DefaultClock" />
         </control>
 
 		<control type="group" id="9000">
-			<include>SideMenu</include>
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu" />
 
-                <include>ViewGroupLabelForSideMenu</include>
-				<include>ViewTypeButtonForSideMenu</include>
-				<include>SortCriteriumButtonForSideMenu</include>
-				<include>SortOrderButtonForSideMenu</include>
-				<include>ChannelGroupButtonForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
+				<include name="ViewTypeButtonForSideMenu" />
+				<include name="SortCriteriumButtonForSideMenu" />
+				<include name="SortOrderButtonForSideMenu" />
+				<include name="ChannelGroupButtonForSideMenu" />
 
-                <include>NavigationGroupLabelForSideMenu</include>
-				<include>GuideButtonForSideMenu</include>
-				<include>ChannelsButtonForSideMenu</include>
-				<include>RecordingsButtonForSideMenu</include>
-				<include>PVRSearchButtonForSideMenu</include>
+                <include name="NavigationGroupLabelForSideMenu" />
+				<include name="GuideButtonForSideMenu" />
+				<include name="ChannelsButtonForSideMenu" />
+				<include name="RecordingsButtonForSideMenu" />
+				<include name="PVRSearchButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu" />
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="EPGTimelineViewForPVR">
-		<control type="epggrid" id="10" description="EPG Grid">
+		<control type="epggrid" id="10">
             <viewtype label="19032">list</viewtype>
 			<posx>40</posx>
 			<posy>100</posy>
@@ -18,7 +18,7 @@
 			<ondown>Noop</ondown>
 			<onback>50</onback>
 
-			<rulerlayout height="40" width="60" description="EPG Header Row">
+			<rulerlayout height="40" width="60">
 				<control type="image" id="1">
 					<width>60</width>
 					<height>40</height>
@@ -37,7 +37,7 @@
 				</control>
 			</rulerlayout>
 				
-			<channellayout height="80" width="480" description="Normal EPG First Column">
+			<channellayout height="80" width="480">
 				<control type="image">					
 					<posx>20</posx>
 					<posy>0</posy>
@@ -69,7 +69,7 @@
 				</control>
 			</channellayout>
 				
-			<focusedchannellayout height="80" width="480" description="Focused EPG First Column">
+			<focusedchannellayout height="80" width="480">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -94,7 +94,7 @@
 				</control>
 			</focusedchannellayout>
 				
-			<itemlayout height="80" width="60" description="Normal EPG Row">
+			<itemlayout height="80" width="60">
 				<control type="image" id="2">
 					<width>60</width>
 					<height>80</height>
@@ -112,7 +112,7 @@
 				</control>
 			</itemlayout>
 				
-			<focusedlayout height="80" width="60" description="Focused EPG Row">
+			<focusedlayout height="80" width="60">
 				<control type="image" id="2">
 					<posy>0</posy>
 					<width>60</width>
@@ -144,7 +144,7 @@
 
 		<control type="group">
 			<visible>Control.IsVisible(10)</visible>
-			<control type="group" description="Bottom Ring">
+			<control type="group">
 				<include>BottomRing</include>
 			</control>
 		</control>
@@ -165,19 +165,19 @@
 			<onleft>9000</onleft>
 			<onright>71</onright>
   
-			<include>NormalListItemForDropListView</include>
-			<include>FocusedListItemForDropListView</include>
+			<include name="NormalListItemForDropListView" />
+			<include name="FocusedListItemForDropListView" />
 		</control>
 			
 		<control type="group">
 			<visible>Control.IsVisible(11)</visible>
-            <include>ContentCategoryForDropListView</include>
-            <include>ContentNameForDropListView</include>
-            <include>ContentDetailForDropListView</include>
-            <include>ContentMediaFlagsForDropListView</include>
-            <include>ContentDescriptionForDropListView</include>
+            <include name="ContentCategoryForDropListView" />
+            <include name="ContentNameForDropListView" />
+            <include name="ContentDetailForDropListView" />
+            <include name="ContentMediaFlagsForDropListView" />
+            <include name="ContentDescriptionForDropListView" />
 			
-            <control type="scrollbar" id="71" description="Scrollbar">
+            <control type="scrollbar" id="71">
                 <visible allowhiddenfocus="true">true</visible>
                 <animation type="Conditional" condition="!Control.HasFocus(71) + !Container(11).Scrolling">
                     <effect type="slide" start="0,0" end="100,0" time="100" />
@@ -190,7 +190,7 @@
                 <onright>Noop</onright>
             </control>
 
-			<include>PreviewForPVR</include>
+			<include name="PreviewForPVR" />
 		</control>
 	</include>
 
@@ -209,19 +209,19 @@
 			<onleft>9000</onleft>
 			<onright>72</onright>
 		  
-			<include>NormalListItemForDropListView</include>
-			<include>FocusedListItemForDropListView</include>
+			<include name="NormalListItemForDropListView" />
+			<include name="FocusedListItemForDropListView" />
 		</control>
 			
 		<control type="group">
 			<visible>Control.IsVisible(12)</visible>
-            <include>ContentCategoryForDropListView</include>
-            <include>ContentNameForDropListView</include>
-            <include>ContentDetailForDropListView</include>
-            <include>ContentMediaFlagsForDropListView</include>
-            <include>ContentDescriptionForDropListView</include>
+            <include name="ContentCategoryForDropListView" />
+            <include name="ContentNameForDropListView" />
+            <include name="ContentDetailForDropListView" />
+            <include name="ContentMediaFlagsForDropListView" />
+            <include name="ContentDescriptionForDropListView" />
 			
-            <control type="scrollbar" id="72" description="Scrollbar">
+            <control type="scrollbar" id="72">
                 <visible allowhiddenfocus="true">true</visible>
                 <animation type="Conditional" condition="!Control.HasFocus(72) + !Container(12).Scrolling">
                     <effect type="slide" start="0,0" end="100,0" time="100" />
@@ -234,7 +234,7 @@
                 <onright>Noop</onright>
             </control>
         
-			<include>PreviewForPVR</include>
+			<include name="PreviewForPVR" />
 		</control>
 	</include>
     
@@ -253,19 +253,19 @@
 			<onleft>9000</onleft>
 			<onright>73</onright>
 		  
-			<include>NormalListItemForDropListView</include>
-			<include>FocusedListItemForDropListView</include>
+			<include name="NormalListItemForDropListView" />
+			<include name="FocusedListItemForDropListView" />
 		</control>
 
 		<control type="group">
 			<visible>Control.IsVisible(13)</visible>
-            <include>ContentCategoryForDropListView</include>
-            <include>ContentNameForDropListView</include>
-            <include>ContentDetailForDropListView</include>
-            <include>ContentMediaFlagsForDropListView</include>
-            <include>ContentDescriptionForDropListView</include>
+            <include name="ContentCategoryForDropListView" />
+            <include name="ContentNameForDropListView" />
+            <include name="ContentDetailForDropListView" />
+            <include name="ContentMediaFlagsForDropListView" />
+            <include name="ContentDescriptionForDropListView" />
 			
-            <control type="scrollbar" id="73" description="Scrollbar">
+            <control type="scrollbar" id="73">
                 <visible allowhiddenfocus="true">true</visible>
                 <animation type="Conditional" condition="!Control.HasFocus(73) + !Container(13).Scrolling">
                     <effect type="slide" start="0,0" end="100,0" time="100" />
@@ -278,148 +278,92 @@
                 <onright>Noop</onright>
             </control>
         
-			<include>PreviewForPVR</include>
+			<include name="PreviewForPVR" />
 		</control>
 	</include>
 
     <constant name="PosXForChannelGroupLabelForPVR">1900</constant>
     <constant name="PosYForChannelGroupLabelForPVR">60</constant>
     <include name="ChannelGroupLabelForPVR">
-		<control type="group">
-            <control type="label">
-                <posx>-2</posx>
-                <posy>-2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(29)]</label>
+        <param name="posx" default="PosXForChannelGroupLabelForPVR" />
+        <param name="posy" default="PosYForChannelGroupLabelForPVR" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+            
+                <control type="label" id="29">
+                    <visible>false</visible>
+                </control>
+                <include name="NormalOutlineLabel">
+                    <param name="width" value="760" />
+                    <param name="height" value="40" />
+                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="font" value="DialogTitleFont" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$INFO[Control.GetLabel(29)]" />
+                </include>
             </control>
-            <control type="label">
-                <posx>2</posx>
-                <posy>-2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(29)]</label>
-            </control>
-            <control type="label">
-                <posx>-2</posx>
-                <posy>2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(29)]</label>
-            </control>
-            <control type="label">
-                <posx>2</posx>
-                <posy>2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(29)]</label>
-            </control>
-            <control type="label" id="29">
-                <width>760</width>
-                <height>40</height>
-                <textcolor>MainColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>-</label>
-			</control>
-		</control>
+        </definition>
     </include>
     
     <constant name="PosXForChannelGroupLabelForGuidePVR">1900</constant>
     <constant name="PosYForChannelGroupLabelForGuidePVR">60</constant>
     <include name="ChannelGroupLabelForGuidePVR">
-		<control type="group">
-            <control type="label">
-                <posx>-2</posx>
-                <posy>-2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(30)]</label>
+        <param name="posx" default="PosXForChannelGroupLabelForGuidePVR" />
+        <param name="posy" default="PosYForChannelGroupLabelForGuidePVR" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+            
+                <control type="label" id="30">
+                    <visible>false</visible>
+                </control>
+                <include name="NormalOutlineLabel">
+                    <param name="width" value="760" />
+                    <param name="height" value="40" />
+                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="font" value="DialogTitleFont" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$INFO[Control.GetLabel(30)]" />
+                </include>
             </control>
-            <control type="label">
-                <posx>2</posx>
-                <posy>-2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(30)]</label>
-            </control>
-            <control type="label">
-                <posx>-2</posx>
-                <posy>2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(30)]</label>
-            </control>
-            <control type="label">
-                <posx>2</posx>
-                <posy>2</posy>
-                <width>760</width>
-                <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>$INFO[Control.GetLabel(30)]</label>
-            </control>
-            <control type="label" id="30">
-                <width>760</width>
-                <height>40</height>
-                <textcolor>MainColor</textcolor>
-                <font>DialogTitleFont</font>
-                <align>right</align>
-                <label>-</label>
-			</control>
-		</control>
+        </definition>
     </include>
     
 	<include name="PreviewForPVR">
-		<control type="group">
-			<visible>Player.HasVideo + !Skin.HasSetting(BackgroundVideo.Active)</visible>
-			<posx>120</posx>
-			<posy>260</posy>
+        <definition>
+            <control type="group">
+                <visible>Player.HasVideo + !Skin.HasSetting(BackgroundVideo.Active)</visible>
+                <posx>120</posx>
+                <posy>260</posy>
 
-			<control type="image">
-                <posx>4</posx>
-                <posy>4</posy>
-                <width>520</width>
-                <height>353</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="Black" fallback="white.png">elements/view-mask.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="videowindow">
-				<posx>10</posx>
-				<posy>10</posy>
-				<width>500</width>
-				<height>341</height>
-			</control>
-			<control type="image">
-                <width>528</width>
-                <height>361</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="MainColor" fallback="white.png">elements/view-thickborder.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		</control>
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>4</posy>
+                    <width>520</width>
+                    <height>353</height>
+                    <fadetime>100</fadetime>
+                    <texture colordiffuse="Black" fallback="white.png">elements/view-mask.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="videowindow">
+                    <posx>10</posx>
+                    <posy>10</posy>
+                    <width>500</width>
+                    <height>341</height>
+                </control>
+                <control type="image">
+                    <width>528</width>
+                    <height>361</height>
+                    <fadetime>100</fadetime>
+                    <texture colordiffuse="MainColor" fallback="white.png">elements/view-thickborder.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            </control>
+        </definition>
 	</include>
 </includes>

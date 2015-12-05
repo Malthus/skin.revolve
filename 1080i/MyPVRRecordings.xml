@@ -5,155 +5,48 @@
 	<views>52,55,51,54,56,58</views>
 
 	<controls>
-		<include>FullscreenDimensions</include>
-		<include>GlobalBackground</include>
+		<include name="FullscreenDimensions" />
+		<include name="GlobalBackground" />
 
-		<include>DropListView</include>
-		<include>CircleListView</include>
-		<include>ThumbnailsView</include>
-		<include>RevolveListView</include>
-		<include>PanelsView</include>
-		<include>RotateListView</include>
+		<include name="DropListView" />
+		<include name="CircleListView" />
+		<include name="ThumbnailsView" />
+		<include name="RevolveListView" />
+		<include name="PanelsView" />
+		<include name="RotateListView" />
 
-		<control type="group" description="Clock Label">
+		<control type="group">
 			<posx>PosXForDefaultClock</posx>
 			<posy>PosYForDefaultClock</posy>
-			<include>DefaultClock</include>
+			<include name="DefaultClock" />
         </control>
 
-		<control type="group" description="Channel Group Label">
-			<control type="label" id="29" description="Empty Label To Receive Channel Type">
-				<visible>false</visible>
-			</control>
-			<control type="label" id="30" description="Empty Label to Receive Channel Group">
-				<visible>false</visible>
-			</control>
-
-			<control type="group">
-                <control type="group">
-					<posx>1080</posx>
-					<posy>100</posy>
-
-                    <control type="label">
-                        <posx>-2</posx>
-                        <posy>-2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>DialogTitleFont</font>
-                        <label>$INFO[Control.GetLabel(29),,:]</label>
-                    </control>
-                    <control type="label">
-                        <posx>2</posx>
-                        <posy>-2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>DialogTitleFont</font>
-                        <label>$INFO[Control.GetLabel(29),,:]</label>
-                    </control>
-                    <control type="label">
-                        <posx>-2</posx>
-                        <posy>2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>DialogTitleFont</font>
-                        <label>$INFO[Control.GetLabel(29),,:]</label>
-                    </control>
-                    <control type="label">
-                        <posx>2</posx>
-                        <posy>2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>DialogTitleFont</font>
-                        <label>$INFO[Control.GetLabel(29),,:]</label>
-                    </control>
-                    <control type="label">
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>TextColor</textcolor>
-                        <font>DialogTitleFont</font>
-                        <label>$INFO[Control.GetLabel(29),,:]</label>
-                    </control>
-				</control>
-				
-                <control type="group">
-					<posx>1080</posx>
-					<posy>140</posy>
-
-                    <control type="label">
-                        <posx>-2</posx>
-                        <posy>-2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>MediumViewFont</font>
-                        <label>$INFO[Control.GetLabel(30)]</label>
-                    </control>
-                    <control type="label">
-                        <posx>2</posx>
-                        <posy>-2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>MediumViewFont</font>
-                        <label>$INFO[Control.GetLabel(30)]</label>
-                    </control>
-                    <control type="label">
-                        <posx>-2</posx>
-                        <posy>2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>MediumViewFont</font>
-                        <label>$INFO[Control.GetLabel(30)]</label>
-                    </control>
-                    <control type="label">
-                        <posx>2</posx>
-                        <posy>2</posy>
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>BackgroundColor</textcolor>
-                        <font>MediumViewFont</font>
-                        <label>$INFO[Control.GetLabel(30)]</label>
-                    </control>
-                    <control type="label">
-                        <width>760</width>
-                        <height>40</height>
-                        <textcolor>TextColor</textcolor>
-                        <font>MediumViewFont</font>
-                        <label>$INFO[Control.GetLabel(30)]</label>
-                    </control>
-				</control>
-			</control>
-		</control>
+        <include name="ChannelGroupLabelForPVR" />
 		
 		<control type="group" id="9000">
-			<include>SideMenu</include>
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu" />
 
-                <include>ViewGroupLabelForSideMenu</include>
-				<include>ViewTypeButtonForSideMenu</include>
-				<include>SortCriteriumButtonForSideMenu</include>
-				<include>SortOrderButtonForSideMenu</include>
-				<include>ChannelGroupButtonForSideMenu</include>
-                <include>GroupByButtonForSideMenu</include>
-                <include>DeletedRecordingsButtonForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
+				<include name="ViewTypeButtonForSideMenu" />
+				<include name="SortCriteriumButtonForSideMenu" />
+				<include name="SortOrderButtonForSideMenu" />
+				<include name="ChannelGroupButtonForSideMenu" />
+                <include name="GroupByButtonForSideMenu" />
+                <include name="DeletedRecordingsButtonForSideMenu" />
 
-                <include>NavigationGroupLabelForSideMenu</include>
-				<include>GuideButtonForSideMenu</include>
-				<include>ChannelsButtonForSideMenu</include>
-				<include>TimersButtonForSideMenu</include>
-				<include>PVRSearchButtonForSideMenu</include>
+                <include name="NavigationGroupLabelForSideMenu" />
+				<include name="GuideButtonForSideMenu" />
+				<include name="ChannelsButtonForSideMenu" />
+				<include name="TimersButtonForSideMenu" />
+				<include name="PVRSearchButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu" />
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>

@@ -5,52 +5,48 @@
 	<views>52,55,51,54,56,58</views>
 
 	<controls>
-		<include>FullscreenDimensions</include>
-		<include>GlobalBackground</include>
+		<include name="FullscreenDimensions" />
+		<include name="GlobalBackground" />
 
-		<include>DropListView</include>
-		<include>CircleListView</include>
-		<include>ThumbnailsView</include>
-		<include>RevolveListView</include>
-		<include>PanelsView</include>
-		<include>RotateListView</include>
+		<include name="DropListView" />
+		<include name="CircleListView" />
+		<include name="ThumbnailsView" />
+		<include name="RevolveListView" />
+		<include name="PanelsView" />
+		<include name="RotateListView" />
 
-		<control type="group" description="Clock Label">
+		<control type="group">
 			<posx>PosXForDefaultClock</posx>
 			<posy>PosYForDefaultClock</posy>
-			<include>DefaultClock</include>
+			<include name="DefaultClock" />
         </control>
         
-        <control type="group">
-			<posx>PosXForChannelGroupLabelForPVR</posx>
-			<posy>PosYForChannelGroupLabelForPVR</posy>
-			<include>ChannelGroupLabelForPVR</include>
-        </control>
+        <include name="ChannelGroupLabelForPVR" />
 
 		<control type="group" id="9000">
-			<include>SideMenu</include>
+			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
                 <include name="ButtonListForSideMenu" />
 
-                <include>ViewGroupLabelForSideMenu</include>
-				<include>ViewTypeButtonForSideMenu</include>
-				<include>SortCriteriumButtonForSideMenu</include>
-				<include>SortOrderButtonForSideMenu</include>
-				<include>ChannelGroupButtonForSideMenu</include>
-                <include>HiddenChannelsButtonForSideMenu</include>
-                <include>PVRFilterButtonForSideMenu</include>
+                <include name="ViewGroupLabelForSideMenu" />
+				<include name="ViewTypeButtonForSideMenu" />
+				<include name="SortCriteriumButtonForSideMenu" />
+				<include name="SortOrderButtonForSideMenu" />
+				<include name="ChannelGroupButtonForSideMenu" />
+                <include name="HiddenChannelsButtonForSideMenu" />
+                <include name="PVRFilterButtonForSideMenu" />
 
-                <include>NavigationGroupLabelForSideMenu</include>
-				<include>GuideButtonForSideMenu</include>
-				<include>RecordingsButtonForSideMenu</include>
-				<include>TimersButtonForSideMenu</include>
-				<include>PVRSearchButtonForSideMenu</include>
+                <include name="NavigationGroupLabelForSideMenu" />
+				<include name="GuideButtonForSideMenu" />
+				<include name="RecordingsButtonForSideMenu" />
+				<include name="TimersButtonForSideMenu" />
+				<include name="PVRSearchButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu" />
 		</control>
         
-        <include>BackButton</include>
+        <include name="BackButton" />
 	</controls>
 </window>
