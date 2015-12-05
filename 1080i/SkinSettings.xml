@@ -462,6 +462,16 @@
 						<onclick>Skin.ToggleSetting(LandscapeDescription.Visible)</onclick>
 					</control>
                     
+					<control type="radiobutton" id="814">
+                        <description>Show Settings Help Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31156]</label>
+						<selected>Skin.HasSetting(SettingsHelp.Visible)</selected>
+						<onclick>Skin.ToggleSetting(SettingsHelp.Visible)</onclick>
+					</control>
+                    
 					<control type="label" id="821">
 						<description>Spacer</description>
 						<width>1100</width>
@@ -596,7 +606,7 @@
 			</control>
 			
 			<control type="group">
-				<visible>ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
+				<visible>Skin.HasSetting(SettingsHelp.Visible) + [ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus]</visible>
 				<control type="image">
 					<posx>700</posx>
 					<posy>870</posy>
@@ -740,6 +750,11 @@
 						<visible>Control.HasFocus(813)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31218]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(814)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31219]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>

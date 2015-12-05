@@ -947,7 +947,8 @@
     </include>
     
 	<include name="AnnotationsForHomeMenuSkinSettings">
-		<control type="group" description="Settings Description Textbox">
+		<control type="group">
+            <description>Settings Description Textbox</description>
             <visible>ControlGroup(200).HasFocus</visible>
                     
 			<posx>720</posx>

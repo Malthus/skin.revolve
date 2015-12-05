@@ -67,7 +67,7 @@
             </control>
             
 			<control type="group">
-				<visible>ControlGroup(5).HasFocus</visible>
+				<visible>ControlGroup(5).HasFocus | Skin.HasSetting(SettingsHelp.Visible)</visible>
 				<control type="image">
 					<posx>700</posx>
 					<posy>870</posy>
@@ -104,6 +104,7 @@
                     <label>$LOCALIZE[31139]</label>
                 </control>
 				<include name="SettingsLevelButtonForSideMenu" />
+                <include name="SettingsHelpButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu">

@@ -629,6 +629,16 @@
         </control>
 	</include>
 	
+    <include name="SettingsHelpButtonForSideMenu">
+        <description>Help For Settings Button For Side Menu</description>
+		<control type="radiobutton" id="92">
+			<align>left</align>
+			<label>$LOCALIZE[10043]</label>
+			<selected>Skin.HasSetting(SettingsHelp.Visible)</selected>
+			<onclick>Skin.ToggleSetting(SettingsHelp.Visible)</onclick>
+		</control>
+	</include>
+    
     <include name="NameForThumbnailsButtonForSideMenu">
         <description>Name in Thumbnails And Panels Button For Side Menu</description>
 		<control type="radiobutton" id="97">
