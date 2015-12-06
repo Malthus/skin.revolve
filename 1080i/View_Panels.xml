@@ -31,14 +31,16 @@
 				</control>
 				<control type="group">
                     <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
-					<posx>15</posx>
-					<posy>245</posy>
-                    <include name="NormalOutlineLabel">
+                    <include name="OutlineTextBox">
+                        <param name="posx" value="15" />
+                        <param name="posy" value="210" />
                         <param name="width" value="250" />
-                        <param name="height" value="20" />
+                        <param name="height" value="60" />
                         <param name="font" value="TinyViewFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="autoscroll" value="false" />
                         <param name="align" value="center" />
                         <param name="label" value="$VAR[ContentNameLabel]" />
                     </include>
@@ -54,14 +56,16 @@
 				</control>
 				<control type="group">
                     <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
-					<posx>10</posx>
-					<posy>385</posy>
-                    <include name="NormalOutlineLabel">
-                        <param name="width" value="260" />
-                        <param name="height" value="20" />
+                    <include name="OutlineTextBox">
+                        <param name="posx" value="15" />
+                        <param name="posy" value="345" />
+                        <param name="width" value="250" />
+                        <param name="height" value="60" />
                         <param name="font" value="TinyViewFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="autoscroll" value="false" />
                         <param name="align" value="center" />
                         <param name="label" value="$VAR[ContentNameLabel]" />
                     </include>
@@ -88,14 +92,16 @@
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
 
-					<posx>15</posx>
-					<posy>245</posy>
-                    <include name="NormalOutlineLabel">
+                    <include name="OutlineTextBox">
+                        <param name="posx" value="15" />
+                        <param name="posy" value="210" />
                         <param name="width" value="250" />
-                        <param name="height" value="20" />
+                        <param name="height" value="60" />
                         <param name="font" value="TinyViewFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="autoscroll" value="false" />
                         <param name="align" value="center" />
                         <param name="label" value="$VAR[ContentNameLabel]" />
                     </include>
@@ -122,14 +128,16 @@
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
 
-					<posx>10</posx>
-					<posy>385</posy>
-                    <include name="NormalOutlineLabel">
-                        <param name="width" value="260" />
-                        <param name="height" value="20" />
+                    <include name="OutlineTextBox">
+                        <param name="posx" value="15" />
+                        <param name="posy" value="345" />
+                        <param name="width" value="250" />
+                        <param name="height" value="60" />
                         <param name="font" value="TinyViewFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="autoscroll" value="false" />
                         <param name="align" value="center" />
                         <param name="label" value="$VAR[ContentNameLabel]" />
                     </include>
