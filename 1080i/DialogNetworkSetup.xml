@@ -15,7 +15,8 @@
                 <param name="icontexture" value="icons/icon-settings.png" />
             </include>
 
-			<control type="spincontrolex" id="10" description="Protocol Spinner">
+			<control type="spincontrolex" id="10">
+                <description>Protocol Spinner</description>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
@@ -26,7 +27,8 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="edit" id="11" description="Server Address Button">
+			<control type="edit" id="11">
+                <description>Server Address Button</description>
 				<posx>560</posx>
 				<posy>120</posy>
 				<width>1240</width>
@@ -39,7 +41,8 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="edit" id="13" description="Port Button">
+			<control type="edit" id="13">
+                <description>Port Button</description>
 				<posx>560</posx>
 				<posy>160</posy>
 				<width>1240</width>
@@ -50,7 +53,8 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="edit" id="14" description="Username Button">
+			<control type="edit" id="14">
+                <description>Username Button</description>
 				<posx>560</posx>
 				<posy>200</posy>
 				<width>1240</width>
@@ -62,7 +66,8 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="edit" id="15" description="Password Button">
+			<control type="edit" id="15">
+                <description>Password Button</description>
 				<posx>560</posx>
 				<posy>240</posy>
 				<width>1240</width>
@@ -74,7 +79,8 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="edit" id="16" description="Remote Shared Button">
+			<control type="edit" id="16">
+                <description>Remote Shared Button</description>
 				<posx>560</posx>
 				<posy>280</posy>
 				<width>1240</width>

@@ -147,7 +147,7 @@
         </definition>
 	</include>
 
-	<include name="BackgroundForOutlineTextBox">
+	<include name="BackgroundForOutlineTextbox">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -225,7 +225,7 @@
         </definition>
 	</include>
 
-	<include name="OutlineTextBox">
+	<include name="OutlineTextbox">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -245,7 +245,7 @@
         <param name="label" default="-" />
         
         <definition>
-            <include name="BackgroundForOutlineTextBox">
+            <include name="BackgroundForOutlineTextbox">
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />

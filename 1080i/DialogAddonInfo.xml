@@ -6,15 +6,13 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="ThirteenLinesDialog" />
-			
-            <include name="DefaultThumbnailForDialog" />
-			
-            <include name="HeaderForDialog">
-                <param name="scroll" value="true" />
-                <param name="label" value="$VAR[ContentNameLabel]" />
+			<include name="WindowForDialog">
+                <param name="headerid" value="2" />
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$VAR[ContentNameLabel]" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
             </include>
-            
+
 			<control type="list" id="20">
 				<posx>560</posx>
 				<posy>80</posy>
@@ -53,7 +51,7 @@
 				<posx>560</posx>
 				<posy>240</posy>
 
-				<control type="image" description="Background">
+				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1240</width>
@@ -61,7 +59,8 @@
 					<texture>white.png</texture>
 				</control>
 
-				<control type="image" description="Broken Icon Image">
+				<control type="image">
+                    <description>Broken Icon Image</description>
 					<posx>16</posx>
 					<posy>16</posy>
 					<width>48</width>
@@ -69,7 +68,8 @@
 					<texture>DefaultIconError.png</texture>
 				</control>
 				
-				<control type="textbox" description="Reason For Broken Label">
+				<control type="textbox">
+                    <description>Reason For Broken Label</description>
 					<posx>100</posx>
 					<posy>0</posy>
 					<width>1140</width>
@@ -81,24 +81,14 @@
 				</control>
 			</control>
             
-			<control type="textbox" id="400">
-                <include name="MarkupForTextboxForDialog">
+            <include name="TextboxForDialog">
                     <param name="posy" value="320" />
                     <param name="height" value="280" />
-                    <param name="pagecontrol" value="410" />
-                </include>
-				<label>$VAR[ContentDescription]</label>
-			</control>
-			
-			<control type="scrollbar" id="410">
-				<include name="MarkupForScrollbarForDialog">
-                    <param name="posy" value="320" />
-                    <param name="height" value="280" />
-                </include>
-				<onleft>9000</onleft>
-				<onright>Noop</onright>
-			</control>
-            
+                    <param name="scrollbarid" value="410" />
+                    <param name="label" value="$VAR[ContentDescription]" />
+                    <param name="onleft" value="9000" />
+            </include>
+
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
                     <param name="posy" value="320" />

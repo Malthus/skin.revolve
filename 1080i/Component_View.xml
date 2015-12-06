@@ -49,7 +49,7 @@
         <param name="label" default="$VAR[ContentNameLabel]" />
     
         <definition>
-            <include name="OutlineTextBox">
+            <include name="OutlineTextbox">
                 <param name="posx" value="15" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="250" />
