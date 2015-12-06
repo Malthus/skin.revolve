@@ -1,162 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="HomeExitItems">
-		<control type="group">
-			<posx>-100</posx>
-			<posy>330</posy>
-                
+        <definition>
             <control type="group">
-                <visible>Control.HasFocus(900)</visible>
-                <animation effect="fade" start="0" end="100" time="500">Visible</animation>
-                <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
-                
-                <control type="group">
-                    <visible>System.HasAlarm(shutdowntimer)</visible>
+                <posx>-100</posx>
+                <posy>330</posy>
 
-                    <posx>600</posx>
-                    <posy>430</posy>
-                        
-                    <control type="image">
-                        <width>80</width>
-                        <height>80</height>
-                        <texture colordiffuse="BackgroundColor">icons/overlay-timer.png</texture>
-                        <aspectratio>stretch</aspectratio>
+                <control type="group">
+                    <visible>Control.HasFocus(900)</visible>
+                    <animation effect="fade" start="0" end="100" time="500">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
+                    
+                    <control type="group">
+                        <visible>System.HasAlarm(shutdowntimer)</visible>
+
+                        <posx>600</posx>
+                        <posy>430</posy>
+                            
+                        <control type="image">
+                            <width>80</width>
+                            <height>80</height>
+                            <texture colordiffuse="BackgroundColor">icons/overlay-timer.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
+                            
+                        <control type="label">
+                            <posx>90</posx>
+                            <posy>20</posy>
+                            <width>300</width>
+                            <height>40</height>
+                            <font>MediumViewFont</font>
+                            <textcolor>BackgroundColor</textcolor>
+                            <align>left</align>
+                            <scroll>true</scroll>
+                            <label>[UPPERCASE]$INFO[System.AlarmPos][/UPPERCASE]</label>
+                        </control>
                     </control>
-                        
-                    <control type="label">
-                        <posx>90</posx>
-                        <posy>20</posy>
-                        <width>300</width>
-                        <height>40</height>
-                        <font>MediumViewFont</font>
-                        <textcolor>BackgroundColor</textcolor>
-                        <align>left</align>
-                        <scroll>true</scroll>
-                        <label>[UPPERCASE]$INFO[System.AlarmPos][/UPPERCASE]</label>
+                
+                    <control type="group">
+                        <visible>System.HasLocks + System.IsMaster</visible>
+
+                        <posx>600</posx>
+                        <posy>510</posy>
+
+                        <control type="image">
+                            <width>80</width>
+                            <height>80</height>
+                            <texture colordiffuse="BackgroundColor">icons/overlay-locked.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                        </control>
                     </control>
                 </control>
-            
-                <control type="group">
-                    <visible>System.HasLocks + System.IsMaster</visible>
 
-                    <posx>600</posx>
-                    <posy>510</posy>
+                <control type="fixedlist" id="900">
+                    <description>Exit Options In Circle List</description>
+                    <visible allowhiddenfocus="true">Control.HasFocus(900) + Container(300).HasFocus(20)</visible>
+                    <animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="500" />
+                        <effect type="rotate" center="331,331" start="90" end="0" time="100" delay="400" />
+                    </animation>
+                    <animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="500" />
+                        <effect type="rotate" center="331,331" start="0" end="90" time="100" />
+                    </animation>
 
-                    <control type="image">
-                        <width>80</width>
-                        <height>80</height>
-                        <texture colordiffuse="BackgroundColor">icons/overlay-locked.png</texture>
-                        <aspectratio>stretch</aspectratio>
-                    </control>
+                    <width>800</width>
+                    <height>662</height>
+                    <scrolltime>0</scrolltime>
+                    <onup>900</onup>
+                    <ondown>900</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>300</onright>
+                    
+                    <itemlayout width="800" height="0">
+                    </itemlayout>
+                    
+                    <focusedlayout width="800" height="662">
+                        <control type="image">
+                            <width>662</width>
+                            <height>662</height>
+                            <texture background="true">circle/exit-focus.png</texture>
+                            <aspectratio scalediffuse="false">stretch</aspectratio>
+                        </control>
+                
+                        <control type="label">
+                            <posx>292</posx>
+                            <posy>311</posy>
+                            <width>300</width>
+                            <height>40</height>
+                            <font>MediumViewFont</font>
+                            <textcolor>MainColor</textcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </focusedlayout>
+                    
+                    <include name="OptionsForExitMenu" />
                 </control>
             </control>
-
-            <control type="fixedlist" id="900" description="Exit Options In Circle List">
-                <visible allowhiddenfocus="true">Control.HasFocus(900) + Container(300).HasFocus(20)</visible>
-   				<animation type="Visible">
-					<effect type="fade" start="0" end="100" time="500" />
-					<effect type="rotate" center="331,331" start="90" end="0" time="100" delay="400" />
-				</animation>
-   				<animation type="Hidden">
-					<effect type="fade" start="100" end="0" time="500" />
-					<effect type="rotate" center="331,331" start="0" end="90" time="100" />
-				</animation>
-
-				<width>800</width>
-				<height>662</height>
-				<scrolltime>0</scrolltime>
-				<onup>900</onup>
-				<ondown>900</ondown>
-				<onleft>Noop</onleft>
-				<onright>300</onright>
-				
-				<itemlayout width="800" height="0">
-				</itemlayout>
-				
-				<focusedlayout width="800" height="662">
-                    <control type="image">
-                        <width>662</width>
-                        <height>662</height>
-                        <texture background="true">circle/exit-focus.png</texture>
-                        <aspectratio scalediffuse="false">stretch</aspectratio>
-                    </control>
-            
-                    <control type="label">
-                        <posx>290</posx>
-                        <posy>310</posy>
-                        <width>300</width>
-                        <height>40</height>
-                        <font>MediumViewFont</font>
-                        <textcolor>MainColor</textcolor>
-                        <align>center</align>
-                        <scroll>true</scroll>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-				</focusedlayout>
-				
-				<content>
-					<include>ListOfExitCircleItems</include>
-				</content>
-			</control>
-		</control>
-	</include>
-	
-	<include name="ListOfExitCircleItems">
-		<item id="1" description="Exit Option">
-			<visible>System.ShowExitButton</visible>
-			<label>$LOCALIZE[13012]</label>
-			<onclick>Quit()</onclick>
-		</item>
-		<item id="2" description="Shutdown Option">
-            <visible>System.CanPowerDown</visible>
-			<label>$LOCALIZE[13005]</label>
-			<onclick>ShutDown()</onclick>
-		</item>
-		<item id="3" description="Logoff Profile Option">
-			<visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]</visible>
-			<label>$LOCALIZE[20126] $INFO[System.ProfileName]</label>
-			<onclick>Dialog.Close(all,true)</onclick>
-			<onclick>System.LogOff()</onclick>
-		</item>
-		<item id="4" description="Suspend Option">
-            <visible>System.CanSuspend</visible>
-			<label>$LOCALIZE[13011]</label>
-			<onclick>Suspend()</onclick>
-		</item>
-		<item id="5" description="Hibernate Option">
-            <visible>System.CanHibernate</visible>
-			<label>$LOCALIZE[13010]</label>
-			<onclick>Hibernate()</onclick>
-		</item>
-		<item id="6" description="Reboot Option">
-            <visible>System.CanReboot</visible>
-			<label>$LOCALIZE[13013]</label>
-			<onclick>Reset()</onclick>
-		</item>
-		<item id="7" description="(Custom Shutdown) Timer Option">
-			<visible>!System.HasAlarm(shutdowntimer)</visible>
-			<label>$LOCALIZE[19040]</label>
-			<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
-		</item>
-		<item id="8" description="Custom Cancel Timer Option">
-			<visible>System.HasAlarm(shutdowntimer)</visible>
-			<label>$LOCALIZE[19040]</label>
-			<onclick>CancelAlarm(shutdowntimer)</onclick>
-		</item>
-		<item id="9" description="Enter Master Mode Option">
-			<visible>System.HasLocks + !System.IsMaster</visible>
-			<label>$LOCALIZE[20045]</label>
-			<onclick>Mastermode()</onclick>
-		</item>
-		<item id="10" description="Leave Master Mode Option">
-			<visible>System.HasLocks + System.IsMaster</visible>
-			<label>$LOCALIZE[20046]</label>
-			<onclick>Mastermode()</onclick>
-		</item>
-		<item id="11" description="Settings Option">
-            <visible>!Skin.HasSetting(SettingsOption.Active)</visible>
-			<label>$LOCALIZE[5]</label>
-            <onclick>ActivateWindow(settings)</onclick>
-		</item>
+        </definition>
 	</include>
 </includes>

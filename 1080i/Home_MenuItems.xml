@@ -2,7 +2,8 @@
 <includes>
 	<include name="HomeMenuItems">
 		<content>
-		<item id="13" description="Play Disc Option">
+		<item id="13">
+			<description>Play Disc Option</description>
 			<visible>System.HasMediaDVD + Skin.HasSetting(PlayDiscOption.Active)</visible>
 			<label>$LOCALIZE[427]</label>
 			<label2>$INFO[System.DVDLabel]</label2>
@@ -12,7 +13,8 @@
 			<onclick>PlayDVD</onclick>
 		</item>
 
-		<item id="8" description="Favourites Option">
+		<item id="8">
+			<description>Favourites Option</description>
 			<visible>Skin.HasSetting(FavouritesOption.Active)</visible>
 			<label>$LOCALIZE[1036]</label>
 			<property name="Label3">$LOCALIZE[31026]</property>
@@ -21,7 +23,8 @@
 			<onclick>ActivateWindow(favourites)</onclick>
 		</item>
 
-		<item id="22" description="Custom 1 Option">
+		<item id="22">
+			<description>Custom 1 Option</description>
 			<visible>Skin.HasSetting(Custom01Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom01Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom01Option.Subtitle)]</property>
@@ -31,7 +34,8 @@
 			<onclick>$INFO[Skin.String(Custom01Option.Action)]</onclick>
 		</item>
 
-		<item id="23" description="Custom 2 Option">
+		<item id="23">
+			<description>Custom 2 Option</description>
 			<visible>Skin.HasSetting(Custom02Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom02Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom02Option.Subtitle)]</property>
@@ -41,7 +45,8 @@
 			<onclick>$INFO[Skin.String(Custom02Option.Action)]</onclick>
 		</item>
 		
-		<item id="24" description="Custom 3 Option">
+		<item id="24">
+			<description>Custom 3 Option</description>
 			<visible>Skin.HasSetting(Custom03Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom03Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom03Option.Subtitle)]</property>
@@ -51,7 +56,8 @@
 			<onclick>$INFO[Skin.String(Custom03Option.Action)]</onclick>
 		</item>
 		
-		<item id="25" description="Custom 4 Option">
+		<item id="25">
+			<description>Custom 4 Option</description>
 			<visible>Skin.HasSetting(Custom04Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom04Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom04Option.Subtitle)]</property>
@@ -61,7 +67,8 @@
 			<onclick>$INFO[Skin.String(Custom04Option.Action)]</onclick>
 		</item>
 		
-		<item id="26" description="Custom 5 Option">
+		<item id="26">
+			<description>Custom 5 Option</description>
 			<visible>Skin.HasSetting(Custom05Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom05Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom05Option.Subtitle)]</property>
@@ -71,7 +78,8 @@
 			<onclick>$INFO[Skin.String(Custom05Option.Action)]</onclick>
 		</item>
 
-		<item id="27" description="Custom 6 Option">
+		<item id="27">
+			<description>Custom 6 Option</description>
 			<visible>Skin.HasSetting(Custom06Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom06Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom06Option.Subtitle)]</property>
@@ -81,7 +89,8 @@
 			<onclick>$INFO[Skin.String(Custom06Option.Action)]</onclick>
 		</item>
 
-		<item id="28" description="Custom 7 Option">
+		<item id="28">
+			<description>Custom 7 Option</description>
 			<visible>Skin.HasSetting(Custom07Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom07Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom07Option.Subtitle)]</property>
@@ -91,7 +100,8 @@
 			<onclick>$INFO[Skin.String(Custom07Option.Action)]</onclick>
 		</item>
 
-		<item id="29" description="Custom 8 Option">
+		<item id="29">
+			<description>Custom 8 Option</description>
 			<visible>Skin.HasSetting(Custom08Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom08Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom08Option.Subtitle)]</property>
@@ -101,7 +111,8 @@
 			<onclick>$INFO[Skin.String(Custom08Option.Action)]</onclick>
 		</item>
 
-		<item id="30" description="Custom 9 Option">
+		<item id="30">
+			<description>Custom 9 Option</description>
 			<visible>Skin.HasSetting(Custom09Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom09Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom09Option.Subtitle)]</property>
@@ -111,7 +122,8 @@
 			<onclick>$INFO[Skin.String(Custom09Option.Action)]</onclick>
 		</item>
 
-		<item id="31" description="Custom 10 Option">
+		<item id="31">
+			<description>Custom 10 Option</description>
 			<visible>Skin.HasSetting(Custom10Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom10Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom10Option.Subtitle)]</property>
@@ -121,7 +133,8 @@
 			<onclick>$INFO[Skin.String(Custom10Option.Action)]</onclick>
 		</item>
 
-		<item id="32" description="Custom 11 Option">
+		<item id="32">
+			<description>Custom 11 Option</description>
 			<visible>Skin.HasSetting(Custom11Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom11Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom11Option.Subtitle)]</property>
@@ -131,7 +144,8 @@
 			<onclick>$INFO[Skin.String(Custom11Option.Action)]</onclick>
 		</item>
 
-		<item id="33" description="Custom 12 Option">
+		<item id="33">
+			<description>Custom 12 Option</description>
 			<visible>Skin.HasSetting(Custom12Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom12Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom12Option.Subtitle)]</property>
@@ -141,7 +155,8 @@
 			<onclick>$INFO[Skin.String(Custom12Option.Action)]</onclick>
 		</item>
 		
-		<item id="34" description="Custom 13 Option">
+		<item id="34">
+			<description>Custom 13 Option</description>
 			<visible>Skin.HasSetting(Custom13Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom13Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom13Option.Subtitle)]</property>
@@ -151,7 +166,8 @@
 			<onclick>$INFO[Skin.String(Custom13Option.Action)]</onclick>
 		</item>
 		
-		<item id="35" description="Custom 14 Option">
+		<item id="35">
+			<description>Custom 14 Option</description>
 			<visible>Skin.HasSetting(Custom14Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom14Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom14Option.Subtitle)]</property>
@@ -161,7 +177,8 @@
 			<onclick>$INFO[Skin.String(Custom14Option.Action)]</onclick>
 		</item>
 		
-		<item id="36" description="Custom 15 Option">
+		<item id="36">
+			<description>Custom 15 Option</description>
 			<visible>Skin.HasSetting(Custom15Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom15Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom15Option.Subtitle)]</property>
@@ -171,7 +188,8 @@
 			<onclick>$INFO[Skin.String(Custom15Option.Action)]</onclick>
 		</item>
 
-		<item id="37" description="Custom 16 Option">
+		<item id="37">
+			<description>Custom 16 Option</description>
 			<visible>Skin.HasSetting(Custom16Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom16Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom16Option.Subtitle)]</property>
@@ -181,7 +199,8 @@
 			<onclick>$INFO[Skin.String(Custom16Option.Action)]</onclick>
 		</item>
 
-		<item id="38" description="Custom 17 Option">
+		<item id="38">
+			<description>Custom 17 Option</description>
 			<visible>Skin.HasSetting(Custom17Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom17Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom17Option.Subtitle)]</property>
@@ -191,7 +210,8 @@
 			<onclick>$INFO[Skin.String(Custom17Option.Action)]</onclick>
 		</item>
 
-		<item id="39" description="Custom 18 Option">
+		<item id="39">
+			<description>Custom 18 Option</description>
 			<visible>Skin.HasSetting(Custom18Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom18Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom18Option.Subtitle)]</property>
@@ -201,7 +221,8 @@
 			<onclick>$INFO[Skin.String(Custom18Option.Action)]</onclick>
 		</item>
 
-		<item id="40" description="Custom 19 Option">
+		<item id="40">
+			<description>Custom 19 Option</description>
 			<visible>Skin.HasSetting(Custom19Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom19Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom19Option.Subtitle)]</property>
@@ -211,7 +232,8 @@
 			<onclick>$INFO[Skin.String(Custom19Option.Action)]</onclick>
 		</item>
 
-		<item id="41" description="Custom 20 Option">
+		<item id="41">
+			<description>Custom 20 Option</description>
 			<visible>Skin.HasSetting(Custom20Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom20Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom20Option.Subtitle)]</property>
@@ -221,7 +243,8 @@
 			<onclick>$INFO[Skin.String(Custom20Option.Action)]</onclick>
 		</item>
 
-		<item id="15" description="TV Option">
+		<item id="15">
+			<description>TV Option</description>
 			<visible>System.GetBool(pvrmanager.enabled) + Skin.HasSetting(TVOption.Active)</visible>
 			<label>$LOCALIZE[19020]</label>
             <label2>$INFO[Pvr.BackendChannels] $LOCALIZE[19019] | $INFO[Pvr.BackendRecordings] $LOCALIZE[19163]</label2>
@@ -232,7 +255,8 @@
 			<onclick>ActivateWindowAndFocus(tvchannels)</onclick>
 		</item>
 
-		<item id="18" description="Radio Option">
+		<item id="18">
+			<description>Radio Option</description>
 			<visible>System.GetBool(pvrmanager.enabled) + Skin.HasSetting(RadioOption.Active)</visible>
 			<label>$LOCALIZE[19021]</label>
             <label2>$INFO[Pvr.BackendChannels] $LOCALIZE[19019] | $INFO[Pvr.BackendRecordings] $LOCALIZE[19163]</label2>
@@ -243,7 +267,8 @@
 			<onclick>ActivateWindowAndFocus(radiochannels)</onclick>
 		</item>
 
-		<item id="2" description="Videos Option">
+		<item id="2">
+			<description>Videos Option</description>
 			<visible>Skin.HasSetting(VideosOption.Active)</visible>
 			<label>$LOCALIZE[3]</label>
             <label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31902] | $INFO[Window(Home).Property(MusicVideos.Count)] $LOCALIZE[20389]</label2>
@@ -255,7 +280,8 @@
 			<onclick condition="!Skin.HasSetting(VideosOption.Immutable)">ActivateWindow(videos)</onclick>
 		</item>
 
-		<item id="5" description="Movies Option">
+		<item id="5">
+			<description>Movies Option</description>
 			<visible>Library.HasContent(Movies) + Skin.HasSetting(MoviesOption.Active)</visible>
 			<label>$LOCALIZE[342]</label>
 			<label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(Movies.UnWatched)] $LOCALIZE[16101]</label2>
@@ -266,7 +292,8 @@
 			<onclick>ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
 		</item>
 
-		<item id="6" description="TV Shows Option">
+		<item id="6">
+			<description>TV Shows Option</description>
 			<visible>Library.HasContent(TVShows) + Skin.HasSetting(TVShowsOption.Active)</visible>
 			<label>$LOCALIZE[31003]</label>
 			<label2>$INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31902] | $INFO[Window(Home).Property(Episodes.Count)] $LOCALIZE[20360] | $INFO[Window(Home).Property(Episodes.UnWatched)] $LOCALIZE[16101]</label2>
@@ -277,7 +304,8 @@
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 		</item>
 					
-		<item id="17" description="Music Videos Option">
+		<item id="17">
+			<description>Music Videos Option</description>
 			<visible>Library.HasContent(MusicVideos) + Skin.HasSetting(MusicVideosOption.Active)</visible>
 			<label>$LOCALIZE[20389]</label>
 			<label2>$INFO[Window(Home).Property(MusicVideos.Count)] $LOCALIZE[20389] | $INFO[Window(Home).Property(MusicVideos.UnWatched)] $LOCALIZE[16101]</label2>
@@ -287,7 +315,8 @@
 			<onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
 		</item>
 					
-		<item id="42" description="Custom Videos Option">
+		<item id="42">
+			<description>Custom Videos Option</description>
 			<visible>Skin.HasSetting(CustomVideosOption.Active)</visible>
 			<label>$INFO[Skin.String(CustomVideosOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomVideosOption.Subtitle)]</property>
@@ -297,7 +326,8 @@
 			<onclick>$INFO[Skin.String(CustomVideosOption.Action)]</onclick>
 		</item>
 
-		<item id="3" description="Music Option">
+		<item id="3">
+			<description>Music Option</description>
 			<visible>Skin.HasSetting(MusicOption.Active)</visible>
 			<label>$LOCALIZE[2]</label>
 			<label2>$INFO[Window(Home).Property(Music.ArtistsCount)] $LOCALIZE[133] | $INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
@@ -309,7 +339,8 @@
 			<onclick condition="!Skin.HasSetting(MusicOption.Immutable)">ActivateWindow(music)</onclick>
 		</item>
 	
-		<item id="16" description="Albums Option">
+		<item id="16">
+			<description>Albums Option</description>
 			<visible>Library.HasContent(Music) + Skin.HasSetting(AlbumsOption.Active)</visible>
 			<label>$LOCALIZE[132]</label>
 			<label2>$INFO[Window(Home).Property(Music.ArtistsCount)] $LOCALIZE[133] | $INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
@@ -320,7 +351,8 @@
 			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
 		</item>
 
-		<item id="43" description="Custom Music Option">
+		<item id="43">
+			<description>Custom Music Option</description>
 			<visible>Skin.HasSetting(CustomMusicOption.Active)</visible>
 			<label>$INFO[Skin.String(CustomMusicOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomMusicOption.Subtitle)]</property>
@@ -330,7 +362,8 @@
 			<onclick>$INFO[Skin.String(CustomMusicOption.Action)]</onclick>
 		</item>
 
-		<item id="10" description="Books Option">
+		<item id="10">
+			<description>Books Option</description>
 			<visible>Skin.HasSetting(BooksOption.Active)</visible>
 			<label>$LOCALIZE[31004]</label>
 			<property name="Label3">$LOCALIZE[31027]</property>
@@ -341,7 +374,8 @@
 			<onclick>$INFO[Skin.String(BooksOption.Action)]</onclick>
 		</item>
 
-		<item id="4" description="Pictures Option">
+		<item id="4">
+			<description>Pictures Option</description>
 			<visible>Skin.HasSetting(PicturesOption.Active)</visible>
 			<label>$LOCALIZE[1]</label>
 			<property name="Label3">$LOCALIZE[33058]</property>
@@ -351,7 +385,8 @@
 			<onclick>ActivateWindow(pictures)</onclick>
 		</item>
 
-		<item id="44" description="Custom Pictures Option">
+		<item id="44">
+			<description>Custom Pictures Option</description>
 			<visible>Skin.HasSetting(CustomPicturesOption.Active)</visible>
 			<label>$INFO[Skin.String(CustomPicturesOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomPicturesOption.Subtitle)]</property>
@@ -361,7 +396,8 @@
 			<onclick>$INFO[Skin.String(CustomPicturesOption.Action)]</onclick>
 		</item>
 
-		<item id="12" description="Games Option">
+		<item id="12">
+			<description>Games Option</description>
 			<visible>Skin.HasSetting(GamesOption.Active)</visible>
 			<label>$LOCALIZE[15016]</label>
 			<property name="Label3">$LOCALIZE[31020]</property>
@@ -372,7 +408,8 @@
 			<onclick>$INFO[Skin.String(GamesOption.Action)]</onclick>
 		</item>
 
-		<item id="1" description="Programs Option">
+		<item id="1">
+			<description>Programs Option</description>
 			<visible>Skin.HasSetting(ProgramsOption.Active)</visible>
 			<label>$LOCALIZE[0]</label>
 			<property name="Label3">$LOCALIZE[33055]</property>
@@ -382,7 +419,8 @@
 			<onclick>ActivateWindow(programs,addons)</onclick>
 		</item>
 
-		<item id="9" description="Weather Option">
+		<item id="9">
+			<description>Weather Option</description>
 			<visible>Skin.HasSetting(WeatherOption.Active) + Weather.IsFetched</visible>
 			<label>$LOCALIZE[8]</label>
             <label2>$INFO[Weather.Location,$LOCALIZE[31479]: ,]$INFO[Weather.Temperature, | ,]$INFO[Weather.Conditions, | ,]</label2>
@@ -393,7 +431,8 @@
 			<onclick>ActivateWindow(weather)</onclick>
 		</item>
 
-		<item id="19" description="Weather Unavailable Option">
+		<item id="19">
+			<description>Weather Unavailable Option</description>
 			<visible>Skin.HasSetting(WeatherOption.Active) + !Weather.IsFetched</visible>
 			<label>$LOCALIZE[8]</label>
             <label2>$LOCALIZE[31927]</label2>
@@ -404,7 +443,8 @@
 			<onclick>ActivateWindow(weathersettings)</onclick>
 		</item>
 
-		<item id="7" description="File Manager Option">
+		<item id="7">
+			<description>File Manager Option</description>
 			<visible>Skin.HasSetting(FileManagerOption.Active)</visible>
 			<label>$LOCALIZE[744]</label>
             <label2>$INFO[System.FreeSpace] / $INFO[System.TotalSpace]</label2>
@@ -413,7 +453,8 @@
 			<onclick>ActivateWindow(filemanager)</onclick>
 		</item>
 
-		<item id="14" description="Add-ons Option">
+		<item id="14">
+			<description>Add-ons Option</description>
 			<visible>Skin.HasSetting(AddonsOption.Active)</visible>
 			<label>$LOCALIZE[24001]</label>
 			<property name="Label3">$LOCALIZE[31023]</property>
@@ -423,7 +464,8 @@
 			<onclick>ActivateWindow(addonbrowser)</onclick>
 		</item>
 
-		<item id="11" description="Settings Option">
+		<item id="11">
+			<description>Settings Option</description>
 			<visible>Skin.HasSetting(SettingsOption.Active)</visible>
 			<label>$LOCALIZE[5]</label>
 			<property name="Label3">$LOCALIZE[31023]</property>
@@ -433,7 +475,8 @@
 			<onclick>ActivateWindow(settings)</onclick>
 		</item>
 
-		<item id="20" description="Exit Option">
+		<item id="20">
+			<description>Exit Option</description>
 			<visible>Skin.HasSetting(ExitOption.Active)</visible>
 			<label>$LOCALIZE[13012]</label>
 			<property name="Label3">$LOCALIZE[31025]</property>
