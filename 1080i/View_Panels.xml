@@ -31,19 +31,7 @@
 				</control>
 				<control type="group">
                     <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
-                    <include name="OutlineTextBox">
-                        <param name="posx" value="15" />
-                        <param name="posy" value="210" />
-                        <param name="width" value="250" />
-                        <param name="height" value="60" />
-                        <param name="font" value="TinyViewFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
-                        <param name="outlinesize" value="2" />
-                        <param name="autoscroll" value="false" />
-                        <param name="align" value="center" />
-                        <param name="label" value="$VAR[ContentNameLabel]" />
-                    </include>
+                    <include name="NameInThumbnailOrPanelForView" />
 				</control>
 			</itemlayout>
 			
@@ -56,18 +44,8 @@
 				</control>
 				<control type="group">
                     <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
-                    <include name="OutlineTextBox">
-                        <param name="posx" value="15" />
+                    <include name="NameInThumbnailOrPanelForView">
                         <param name="posy" value="345" />
-                        <param name="width" value="250" />
-                        <param name="height" value="60" />
-                        <param name="font" value="TinyViewFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
-                        <param name="outlinesize" value="2" />
-                        <param name="autoscroll" value="false" />
-                        <param name="align" value="center" />
-                        <param name="label" value="$VAR[ContentNameLabel]" />
                     </include>
 				</control>
 			</itemlayout>
@@ -88,23 +66,27 @@
 				<control type="group">
                     <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
 
-					<animation type="Focus">
-						<effect type="fade" start="100" end="0" time="200" />
-					</animation>
+                    <control type="group">
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="140" time="200" />
+                            <effect type="slide" end="-38,-38" time="200" />
+                            <effect type="fade" start="0" end="100" time="200" />
+                        </animation>
 
-                    <include name="OutlineTextBox">
-                        <param name="posx" value="15" />
-                        <param name="posy" value="210" />
-                        <param name="width" value="250" />
-                        <param name="height" value="60" />
-                        <param name="font" value="TinyViewFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
-                        <param name="outlinesize" value="2" />
-                        <param name="autoscroll" value="false" />
-                        <param name="align" value="center" />
-                        <param name="label" value="$VAR[ContentNameLabel]" />
-                    </include>
+                        <include name="NameInThumbnailOrPanelForView">
+                            <param name="textcolor" value="MainColor" />
+                        </include>
+                    </control>
+                    
+                    <control type="group">
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="140" time="200" />
+                            <effect type="slide" end="-38,-38" time="200" />
+                            <effect type="fade" start="100" end="0" time="200" />
+                        </animation>
+                    
+                        <include name="NameInThumbnailOrPanelForView" />
+                    </control>
 				</control>
 			</focusedlayout>
 
@@ -124,23 +106,30 @@
 				<control type="group">
                     <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
 
-					<animation type="Focus">
-						<effect type="fade" start="100" end="0" time="200" />
-					</animation>
+                    <control type="group">
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="140" time="200" />
+                            <effect type="slide" end="-38,-38" time="200" />
+                            <effect type="fade" start="0" end="100" time="200" />
+                        </animation>
 
-                    <include name="OutlineTextBox">
-                        <param name="posx" value="15" />
-                        <param name="posy" value="345" />
-                        <param name="width" value="250" />
-                        <param name="height" value="60" />
-                        <param name="font" value="TinyViewFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
-                        <param name="outlinesize" value="2" />
-                        <param name="autoscroll" value="false" />
-                        <param name="align" value="center" />
-                        <param name="label" value="$VAR[ContentNameLabel]" />
-                    </include>
+                        <include name="NameInThumbnailOrPanelForView">
+                            <param name="posy" value="345" />
+                            <param name="textcolor" value="MainColor" />
+                        </include>
+                    </control>
+                    
+                    <control type="group">
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="140" time="200" />
+                            <effect type="slide" end="-38,-38" time="200" />
+                            <effect type="fade" start="100" end="0" time="200" />
+                        </animation>
+                    
+                        <include name="NameInThumbnailOrPanelForView">
+                            <param name="posy" value="345" />
+                        </include>
+                    </control>
 				</control>
 			</focusedlayout>
 		</control>
