@@ -2,12 +2,12 @@
 
 import sys
 
-import xbmclibrary
-import populatestaticitemsfromhomeproperties
-import populatesubmenufromskinvariables
-import clearproperties
-import fillpropertyfromtextfile
-import generaterandomnumber
+import resources.xbmclibrary as xbmclibrary
+import resources.populatestaticitemsfromhomeproperties as populatestaticitemsfromhomeproperties
+import resources.populatesubmenufromskinvariables as populatesubmenufromskinvariables
+import resources.clearproperties as clearproperties
+import resources.fillpropertyfromtextfile as fillpropertyfromtextfile
+import resources.generaterandomnumber as generaterandomnumber
 
 SCRIPTNAME = 'Revolve/Main'
 
