@@ -9,7 +9,8 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			
-			<control type="group" description="Current Control Label">
+			<control type="group">
+				<description>Current Control Label</description>
 				<visible>Window.IsActive(videoosd) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks)</visible>
 				<posx>700</posx>
 				<posy>92</posy>
@@ -35,7 +36,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="420" description="Subtitles Button">
+					<control type="button" id="420">
+						<description>Subtitles Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>SubtitlesButtonForPlayer</include>
@@ -50,7 +52,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="421" description="Audio Settings Button">
+					<control type="button" id="421">
+						<description>Audio Settings Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>AudioButtonForPlayer</include>
@@ -65,7 +68,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="422" description="Video Settings Button">
+					<control type="button" id="422">
+						<description>Video Settings Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>VideoButtonForPlayer</include>
@@ -74,7 +78,8 @@
 					</control>
 				</control>
 
-				<control type="label" description="Spacer">
+				<control type="label">
+					<description>Spacer</description>
 					<width>60</width>
 				</control>
 
@@ -84,7 +89,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="401" description="Previous Button">
+					<control type="button" id="401">
+						<description>Previous Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>PreviousButtonForPlayer</include>
@@ -99,7 +105,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="402" description="Rewind Button">
+					<control type="button" id="402">
+						<description>Rewind Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>RewindButtonForPlayer</include>
@@ -114,7 +121,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="togglebutton" id="403" description="Play/Pause Button">
+					<control type="togglebutton" id="403">
+						<description>Play/Pause Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>PlayPauseButtonForPlayer</include>
@@ -129,7 +137,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="404" description="Stop Button">
+					<control type="button" id="404">
+						<description>Stop Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>StopButtonForPlayer</include>
@@ -144,7 +153,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="405" description="Fast Forward Button">
+					<control type="button" id="405">
+						<description>Fast Forward Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>FastForwardButtonForPlayer</include>
@@ -159,7 +169,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="406" description="Next Button">
+					<control type="button" id="406">
+						<description>Next Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>NextButtonForPlayer</include>
@@ -168,7 +179,8 @@
 					</control>
 				</control>
 
-				<control type="label" description="Spacer">
+				<control type="label">
+					<description>Spacer</description>
 					<width>60</width>
 				</control>
 				
@@ -178,7 +190,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 	
-					<control type="button" id="411" description="Bookmarks Button">
+					<control type="button" id="411">
+						<description>Bookmarks Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>BookmarksButtonForPlayer</include>
@@ -193,7 +206,8 @@
 					<width>90</width>
 					<include>FrameForPlayer</include>
 
-					<control type="button" id="416" description="DVD Menu Button">
+					<control type="button" id="416">
+						<description>DVD Menu Button</description>
                         <posx>4</posx>
                         <posy>4</posy>
                         <include>DiscButtonForPlayer</include>

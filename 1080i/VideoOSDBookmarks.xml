@@ -8,7 +8,8 @@
 			<posy>PosYForFifteenLinesDialog</posy>
 			<include>FifteenLinesDialog</include>
 
-			<control type="group" description="Editor Dialog Icon">
+			<control type="group">
+				<description>Editor Dialog Icon</description>
 				<posx>PosXForDefaultIconFrameForDialog</posx>
 				<posy>PosYForDefaultIconFrameForDialog</posy>
 				<include>BackgroundForDefaultCircleThumbnailIcon</include>
@@ -23,7 +24,8 @@
 				</control>
 			</control>
 			
-			<control type="label" description="Video Bookmarks Header Label">
+			<control type="label">
+				<description>Video Bookmarks Header Label</description>
 				<posx>560</posx>
 				<posy>20</posy>
 				<width>1240</width>
@@ -116,7 +118,7 @@
 				</focusedlayout>
 			</control>
 
-            <control type="scrollbar" id="21" description="Scrollbar">
+            <control type="scrollbar" id="21">
 				<posx>560</posx>
 				<posy>650</posy>
 				<width>1240</width>
@@ -131,7 +133,8 @@
                 <onright>21</onright>
             </control>
             
-			<control type="label" description="Number of Bookmarks Label">
+			<control type="label">
+				<description>Number of Bookmarks Label</description>
 				<posx>40</posx>
 				<posy>320</posy>
 				<width>480</width>
@@ -154,15 +157,18 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 
-				<control type="button" id="2" description="Create Bookmark Button">
+				<control type="button" id="2">
+				<description>Create Bookmark Button</description>
 					<label>$LOCALIZE[294]</label>
 				</control>
 
-				<control type="button" id="3" description="Clear Bookmark Button">
+				<control type="button" id="3">
+				<description>Clear Bookmark Button</description>
 					<label>$LOCALIZE[296]</label>
 				</control>
 
-				<control type="button" id="4" description="Clear Bookmark Button">
+				<control type="button" id="4">
+				<description>Clear Bookmark Button</description>
 <!--					<visible>VideoPlayer.Content(episodes)</visible> -->
 					<label>$LOCALIZE[20406]</label>
 				</control>

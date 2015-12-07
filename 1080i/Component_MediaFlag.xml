@@ -105,7 +105,8 @@
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
 
-			<control type="image" description="Video Codec Icon">
+			<control type="image">
+				<description>Video Codec Icon</description>
 				<include>VideoCodecVisibilityForContentMediaFlag</include>
 				<width>160</width>
 				<height>60</height>
@@ -113,7 +114,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="Video Resolution Icon">
+			<control type="image">
+				<description>Video Resolution Icon</description>
 				<include>VideoResolutionVisibilityForContentMediaFlag</include>
 				<width>100</width>
 				<height>60</height>
@@ -121,7 +123,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="Aspectratio Icon">
+			<control type="image">
+				<description>Aspectratio Icon</description>
 				<include>VideoAspectRatioVisibilityForContentMediaFlag</include>
 				<width>70</width>
 				<height>60</height>
@@ -129,7 +132,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="Stereoscopic Icon">
+			<control type="image">
+				<description>Stereoscopic Icon</description>
 				<include>VideoStereoscopicVisibilityForContentMediaFlag</include>
 				<width>100</width>
 				<height>60</height>
@@ -137,7 +141,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 				
-			<control type="image" description="Audio Codec Icon">
+			<control type="image">
+				<description>Audio Codec Icon</description>
 				<include>AudioCodecVisibilityForContentMediaFlag</include>
 				<width>160</width>
 				<height>60</height>
@@ -145,7 +150,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="group" description="Audio Channels Icon">
+			<control type="group">
+				<description>Audio Channels Icon</description>
 				<include>AudioChannelsVisibilityForContentMediaFlag</include>
 				<width>120</width>
                 
@@ -167,7 +173,8 @@
 				</control>
 			</control>
 
-			<control type="group" description="Picture Codec Icon">
+			<control type="group">
+				<description>Picture Codec Icon</description>
 				<include>PictureCodecVisibilityForContentMediaFlag</include>
 				<width>160</width>
 				
@@ -187,7 +194,8 @@
 				</control>
 			</control>
 			
-			<control type="group" description="Picture Size Icon">
+			<control type="group">
+				<description>Picture Size Icon</description>
 				<include>PictureSizeVisibilityForContentMediaFlag</include>
 				<width>180</width>
 				
@@ -208,7 +216,8 @@
 				</control>
 			</control>
 			
-			<control type="group" description="Picture ISO Icon">
+			<control type="group">
+				<description>Picture ISO Icon</description>
 				<include>PictureISOVisibilityForContentMediaFlag</include>
 				<width>100</width>
 				
@@ -229,7 +238,8 @@
 				</control>
 			</control>
 			
-			<control type="group" description="Picture Aperture Icon">
+			<control type="group">
+				<description>Picture Aperture Icon</description>
 				<include>PictureApertureVisibilityForContentMediaFlag</include>
 				<width>160</width>
 				
@@ -250,7 +260,8 @@
 				</control>
 			</control>
 			
-			<control type="image" description="Medium Icon">
+			<control type="image">
+				<description>Medium Icon</description>
 				<include>MediumVisibilityForContentMediaFlag</include>
 				<width>160</width>
 				<height>60</height>
@@ -258,7 +269,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="Compressed Property Icon">
+			<control type="image">
+				<description>Compressed Property Icon</description>
 				<include>CompressedPropertyVisibilityForContentMediaFlag</include>
 				<width>60</width>
 				<height>60</height>
@@ -266,7 +278,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="Locked Property Icon">
+			<control type="image">
+				<description>Locked Property Icon</description>
 				<include>LockedPropertyVisibilityForContentMediaFlag</include>
 				<width>60</width>
 				<height>60</height>
@@ -274,7 +287,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="Trainer Property Icon">
+			<control type="image">
+				<description>Trainer Property Icon</description>
 				<include>LockedPropertyVisibilityForContentMediaFlag</include>
 				<width>60</width>
 				<height>60</height>
@@ -282,7 +296,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="EPG Property Icon">
+			<control type="image">
+				<description>EPG Property Icon</description>
 				<include>EpgPropertyVisibilityForContentMediaFlag</include>
 				<width>60</width>
 				<height>60</height>
@@ -290,7 +305,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 
-			<control type="image" description="MPAA Rating Icon">
+			<control type="image">
+				<description>MPAA Rating Icon</description>
 				<include>MpaaRatingVisibilityForContentMediaFlag</include>
 				<width>160</width>
 				<height>60</height>
@@ -989,7 +1005,8 @@
                         <texture colordiffuse="BackgroundColor">icons/audio-background.png</texture>
                         <aspectratio>keep</aspectratio>
                     </control>
-                    <control type="image" description="Audio Codec Icon">
+                    <control type="image">
+				<description>Audio Codec Icon</description>
                         <width>160</width>
                         <height>60</height>
                         <texture colordiffuse="MainColor">$VAR[PlayerAudioCodec]</texture>

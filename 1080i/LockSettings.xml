@@ -8,7 +8,7 @@
 			<posy>PosYForThirteenLinesDialog</posy>
 			<include>ThirteenLinesDialog</include>
 
-			<control type="group" description="Lock Settings Icon">
+			<control type="group">
 				<posx>150</posx>
 				<posy>20</posy>
 				
@@ -32,7 +32,7 @@
 				</control>
 			</control>
 			
-			<control type="label" id="2" description="Lock Settings Heading Label">
+			<control type="label" id="2">
 				<posx>560</posx>
 				<posy>20</posy>
 				<width>1240</width>
@@ -41,7 +41,7 @@
 				<label>$LOCALIZE[20043]</label>
 			</control>
 
-			<control type="grouplist" id="5" description="Control Area">
+			<control type="grouplist" id="5">
 				<posx>560</posx>
 				<posy>80</posy>
 				<height>520</height>
@@ -54,29 +54,30 @@
 				<ondown>5</ondown>
 			</control>
 
-			<control type="button" id="7" description="Default Button">
+			<control type="button" id="7">
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-			<control type="radiobutton" id="8" description="Default Radiobutton">
+			<control type="radiobutton" id="8">
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-			<control type="spincontrolex" id="9" description="Default Spinner">
+			<control type="spincontrolex" id="9">
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-			<control type="label" id="14" description="Default Label">
+			<control type="label" id="14">
 				<width>1240</width>
 				<align>left</align>
                 <textcolor>BackgroundColor</textcolor>
 				<label>-</label>
 			</control>
 
-			<control type="button" id="28" description="Ok Button">
+			<control type="button" id="28">
+                <description>Ok Button</description>
 				<posx>40</posx>
 				<posy>520</posy>
 				<width>480</width>
@@ -87,7 +88,8 @@
 				<ondown>29</ondown>
 			</control>
 
-			<control type="button" id="29" description="Cancel Button">
+			<control type="button" id="29">
+                <description>Cancel Button</description>
 				<posx>40</posx>
 				<posy>560</posy>
 				<width>480</width>

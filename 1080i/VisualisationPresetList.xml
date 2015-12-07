@@ -8,7 +8,7 @@
 			<posy>PosYForThirteenLinesDialog</posy>
 			<include>ThirteenLinesDialog</include>
 
-			<control type="group" description="Dialog Icon">
+			<control type="group">
 				<posx>PosXForDefaultIconFrameForDialog</posx>
 				<posy>PosYForDefaultIconFrameForDialog</posy>
 				<include>BackgroundForDefaultCircleThumbnailIcon</include>
@@ -23,7 +23,8 @@
 				</control>
 			</control>
             
-			<control type="label" id="2" description="Visualization Preset List Header Label">
+			<control type="label" id="2">
+                <description>Visualization Preset List Header Label</description>
 				<posx>560</posx>
 				<posy>20</posy>
 				<width>1240</width>
@@ -33,7 +34,8 @@
 				<label>-</label>
 			</control>
 
-			<control type="list" id="5" description="Preset List">
+			<control type="list" id="5">
+                <description>Preset List</description>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>

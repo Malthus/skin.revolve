@@ -21,10 +21,11 @@
 			<include>FocusedListItemForDropListView</include>
 		</control>
 		
-		<control type="group" description="Poster">
+		<control type="group">
+            <description>Poster</description>
 			<visible>Control.IsVisible(51)</visible>
 
-			<control type="group" description="Vertical Poster">
+			<control type="group">
 				<include>VisibilityForVerticalIcon</include>
 				<posx>120</posx>
 				<posy>150</posy>
@@ -33,7 +34,7 @@
 				<include>OverlayForVerticalPosterIcon</include>
 			</control>
 
-			<control type="group" description="Square Icon">
+			<control type="group">
 				<include>VisibilityForSquareIcon</include>
 				<posx>120</posx>
 				<posy>150</posy>
@@ -57,7 +58,7 @@
 			</control>
 		</control>
 
-		<control type="scrollbar" id="61" description="Scrollbar">
+		<control type="scrollbar" id="61">
 			<visible allowhiddenfocus="true">Control.IsVisible(51)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(61) + !Container(51).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="40,0" time="100" />

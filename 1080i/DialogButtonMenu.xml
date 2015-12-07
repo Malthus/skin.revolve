@@ -8,7 +8,8 @@
 			<posx>681</posx>
 			<posy>200</posy>
 			
-			<control type="group" description="Background for Button Menu">
+			<control type="group">
+					<description>Background for Button Menu</description>
 				<control type="image">
 					<posx>-30</posx>
 					<posy>-30</posy>
@@ -40,7 +41,8 @@
 				<onright>Noop</onright>
 				<orientation>vertical</orientation>
 
-				<control type="button" id="1" description="Exit Button">
+				<control type="button" id="1">
+					<description>Exit Button</description>
 					<visible>System.ShowExitButton</visible>
 					<width>512</width>
 					<height>60</height>
@@ -48,7 +50,8 @@
 					<onclick>Quit()</onclick>
 				</control>
 
-				<control type="button" id="2" description="Shutdown Button">
+				<control type="button" id="2">
+					<description>Shutdown Button</description>
                     <visible>System.CanPowerDown</visible>
 					<width>512</width>
 					<height>60</height>
@@ -56,7 +59,8 @@
 					<onclick>ShutDown()</onclick>
 				</control>
 
-				<control type="button" id="3" description="Logoff Profile Button">
+				<control type="button" id="3">
+					<description>Logoff Profile Button</description>
 					<visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]</visible>
 					<width>512</width>
 					<height>60</height>
@@ -65,7 +69,8 @@
 					<onclick>System.LogOff()</onclick>
 				</control>
 
-				<control type="button" id="4" description="Suspend Button">
+				<control type="button" id="4">
+					<description>Suspend Button</description>
 					<visible>System.CanSuspend</visible>
                     <width>512</width>
 					<height>60</height>
@@ -73,7 +78,8 @@
 					<onclick>Suspend()</onclick>
 				</control>
 
-				<control type="button" id="5" description="Hibernate Button">
+				<control type="button" id="5">
+					<description>Hibernate Button</description>
 					<visible>System.CanHibernate</visible>
                     <width>512</width>
 					<height>60</height>
@@ -81,7 +87,8 @@
 					<onclick>Hibernate()</onclick>
 				</control>
 
-				<control type="button" id="6" description="Reboot Button">
+				<control type="button" id="6">
+					<description>Reboot Button</description>
 					<visible>System.CanReboot</visible>
                     <width>512</width>
 					<height>60</height>
@@ -89,7 +96,8 @@
 					<onclick>Reset()</onclick>
 				</control>
 
-				<control type="button" id="7" description="Custom Shutdown Timer Button">
+				<control type="button" id="7">
+					<description>Custom Shutdown Timer Button</description>
 					<visible>!System.HasAlarm(shutdowntimer)</visible>
 					<width>512</width>
 					<height>60</height>
@@ -97,7 +105,8 @@
 					<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 				</control>
 
-				<control type="button" id="8" description="Custom Cancel Timer Button">
+				<control type="button" id="8">
+					<description>Custom Cancel Timer Button</description>
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 					<width>512</width>
 					<height>60</height>
@@ -105,7 +114,8 @@
 					<onclick>CancelAlarm(shutdowntimer)</onclick>
 				</control>
 
-				<control type="togglebutton" id="9" description="Master Mode Button">
+				<control type="togglebutton" id="9">
+					<description>Master Mode Button</description>
 					<visible>System.HasLocks</visible>
 					<width>512</width>
 					<height>60</height>
@@ -114,7 +124,8 @@
 					<onclick>Mastermode()</onclick>
 				</control>
 
-				<control type="button" id="10" description="Settings Button">
+				<control type="button" id="10">
+					<description>Settings Button</description>
 					<visible>!Skin.HasSetting(SettingsOption.Active)</visible>
 					<width>512</width>
 					<height>60</height>
@@ -122,7 +133,8 @@
 					<onclick>ActivateWindow(settings)</onclick>
 				</control>
 
-				<control type="label" id="20" description="Alarm Time Label">
+				<control type="label" id="20">
+					<description>Alarm Time Label</description>
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 					<width>512</width>
 					<height>60</height>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="RevolveListView">
-		<control type="fixedlist" id="54" description="Invisible Revolve List (for mouse control)">
+		<control type="fixedlist" id="54">
+            <description>Invisible Revolve List (for mouse control)</description>
 			<viewtype label="31934">list</viewtype>
 			<visible allowhiddenfocus="true">true</visible>
 			<animation effect="fade" start="100" end="0" time="200" condition="Container(54).Scrolling">conditional</animation>
@@ -25,7 +26,7 @@
 	</include>
 			
 	<include name="MainRevolveListView">
-		<control type="group" description="Left Ring Image">
+		<control type="group">
 			<visible>Control.IsVisible(54)</visible>
 			<include>LeftRing</include>
 		</control>
@@ -76,7 +77,7 @@
 				<label>$VAR[ContentCategoryLabel]</label>
 				<align>left</align>
 			</control>
-			<control type="label" description="Top Label">
+			<control type="label">
 				<posx>865</posx>
 				<posy>645</posy>
 				<height>100</height>
@@ -126,7 +127,7 @@
 				<label>$VAR[ContentDetailLabel]</label>
 				<align>left</align>
 			</control>
-			<control type="label" description="Bottom Label">
+			<control type="label">
 				<posx>865</posx>
 				<posy>755</posy>
 				<height>100</height>
@@ -140,7 +141,7 @@
 
 		<include>ItemsForRevolveListView</include>
 
-		<control type="scrollbar" id="64" description="Scrollbar">
+		<control type="scrollbar" id="64">
 			<visible allowhiddenfocus="true">Control.IsVisible(54)</visible>
 			<animation type="Conditional" condition="!Control.HasFocus(64) + !Container(54).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
 				<effect type="slide" start="0,0" end="40,0" time="100" />

@@ -8,25 +8,29 @@
      </coordinates>
 
 	 <controls>
-		<control type="image" id="1" description="Default Pointer">
+		<control type="image" id="1">
+			<description>Default Pointer</description>
 			<width>45</width>
 			<height>45</height>
 			<texture>pointers/pointer-normal.png</texture>
 		</control>
 
-		<control type="image" id="2" description="Focused Pointer">
+		<control type="image" id="2">
+			<description>Focused Pointer</description>
 			<width>45</width>
 			<height>45</height>
 			<texture>pointers/pointer-focus.png</texture>
 		</control>
 
-		<control type="image" id="3" description="Dragging Pointer">
+		<control type="image" id="3">
+			<description>Dragging Pointer</description>
 			<width>45</width>
 			<height>45</height>
 			<texture>pointers/pointer-drag.png</texture>
 		</control>
 
-		<control type="image" id="4" description="Clicking Pointer">
+		<control type="image" id="4">
+			<description>Clicking Pointer</description>
 			<width>45</width>
 			<height>45</height>
 			<texture>pointers/pointer-click.png</texture>

@@ -7,7 +7,7 @@
 		<include name="FullscreenDimensions" />
 		<include name="GlobalBackground" />
 
-		<control type="group" description="Ring">
+		<control type="group">
 			<animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
 			<animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
 			
@@ -35,7 +35,8 @@
 
 		<include name="ListForHomeRevolveList" />
 
-		<control type="wraplist" id="300" description="Invisible Weather Wraplist">
+		<control type="wraplist" id="300">
+            <description>Invisible Weather Wraplist</description>
 			<visible allowhiddenfocus="true">false</visible>
 			<posx>0</posx>
 			<posy>40</posy>
@@ -212,7 +213,8 @@
 					<textcolor>TextColor</textcolor>
 					<label>$LOCALIZE[31481]</label>
 				</control>
-				<control type="label" description="Provider Label">
+				<control type="label">
+                    <description>Provider Label</description>
 					<posx>340</posx>
 					<posy>550</posy>
 					<width>360</width>
@@ -226,7 +228,8 @@
 					<textcolor>TextColor</textcolor>
 					<label>$LOCALIZE[31478]</label>
 				</control>
-				<control type="label" id="11" description="Last Update Label">
+				<control type="label" id="11">
+                    <description>Last Update Label</description>
 					<posx>340</posx>
 					<posy>590</posy>
 					<width>360</width>
@@ -240,7 +243,8 @@
 					<textcolor>TextColor</textcolor>
 					<label>$LOCALIZE[31479]</label>
 				</control>
-				<control type="label" description="Location Label">
+				<control type="label">
+                    <description>Location Label</description>
 					<posx>340</posx>
 					<posy>630</posy>
 					<width>360</width>

@@ -8,7 +8,7 @@
 			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
 		</control>
         
-		<control type="grouplist" id="200" description="Control Area For Home Menu Items">
+		<control type="grouplist" id="200">
 			<visible>Container(99).Hasfocus(2)</visible>
 			<width>1100</width>
 			<height>760</height>
@@ -20,7 +20,8 @@
 			<onleft>99</onleft>
 			<onright>299</onright>
 
-			<control type="label" id="298" description="Home Menu Items Label">
+			<control type="label" id="298">
+				<description>Home Menu Items Label</description>
 				<width>1100</width>
 				<font>DefaultButtonFont</font>
 				<textcolor>TextColor</textcolor>
@@ -28,13 +29,15 @@
 				<label>  $LOCALIZE[31121]</label>
 			</control>
 					
-			<control type="label" id="252" description="Spacer">
+			<control type="label" id="252">
+				<description>Spacer</description>
 				<width>1100</width>
                 <height>20</height>
 				<label>-</label>
 			</control>
                     
-			<control type="radiobutton" id="294" description="Play Disc Option">
+			<control type="radiobutton" id="294">
+				<description>Play Disc Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -43,7 +46,8 @@
 				<onclick>Skin.ToggleSetting(PlayDiscOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="281" description="Favourites Option">
+			<control type="radiobutton" id="281">
+				<description>Favourites Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -52,7 +56,8 @@
 				<onclick>Skin.ToggleSetting(FavouritesOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="201" description="Custom Option 1 Activation Button">
+			<control type="radiobutton" id="201">
+				<description>Custom Option 1 Activation Button</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -61,7 +66,8 @@
 				<onclick>Skin.ToggleSetting(Custom01Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="202" description="Custom Option 1 Edit Button">
+			<control type="button" id="202">
+				<description>Custom Option 1 Edit Button</description>
 				<enable>Skin.HasSetting(Custom01Option.Active)</enable>
 				<width>1100</width>
 				<align>left</align>
@@ -79,7 +85,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="203" description="Custom Option 2 Activation Button">
+			<control type="radiobutton" id="203">
+				<description>Custom Option 2 Activation Button</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -88,7 +95,8 @@
 				<onclick>Skin.ToggleSetting(Custom02Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="204" description="Custom Option 2 Edit Button">
+			<control type="button" id="204">
+				<description>Custom Option 2 Edit Button</description>
 				<enable>Skin.HasSetting(Custom02Option.Active)</enable>
 				<width>1100</width>
 				<align>left</align>
@@ -106,7 +114,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 				
-			<control type="radiobutton" id="205" description="Custom Option 3 Activation Button">
+			<control type="radiobutton" id="205">
+				<description>Custom Option 3 Activation Button</description>
                 <visible>Skin.HasSetting(Custom02Option.Active) | Skin.HasSetting(Custom03Option.Active) | !IsEmpty(Skin.String(Custom03Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -116,7 +125,8 @@
 				<onclick>Skin.ToggleSetting(Custom03Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="206" description="Custom Option 3 Edit Button">
+			<control type="button" id="206">
+				<description>Custom Option 3 Edit Button</description>
                 <visible>Skin.HasSetting(Custom02Option.Active) | Skin.HasSetting(Custom03Option.Active) | !IsEmpty(Skin.String(Custom03Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom03Option.Active)</enable>
 				<width>1100</width>
@@ -135,7 +145,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="207" description="Custom Option 4 Activation Button">
+			<control type="radiobutton" id="207">
+				<description>Custom Option 4 Activation Button</description>
                 <visible>Skin.HasSetting(Custom03Option.Active) | Skin.HasSetting(Custom04Option.Active) | !IsEmpty(Skin.String(Custom04Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -145,7 +156,8 @@
 				<onclick>Skin.ToggleSetting(Custom04Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="208" description="Custom Option 4 Edit Button">
+			<control type="button" id="208">
+				<description>Custom Option 4 Edit Button</description>
                 <visible>Skin.HasSetting(Custom03Option.Active) | Skin.HasSetting(Custom04Option.Active) | !IsEmpty(Skin.String(Custom04Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom04Option.Active)</enable>
 				<width>1100</width>
@@ -164,7 +176,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="209" description="Custom Option 5 Activation Button">
+			<control type="radiobutton" id="209">
+				<description>Custom Option 5 Activation Button</description>
                 <visible>Skin.HasSetting(Custom04Option.Active) | Skin.HasSetting(Custom05Option.Active) | !IsEmpty(Skin.String(Custom05Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -174,7 +187,8 @@
 				<onclick>Skin.ToggleSetting(Custom05Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="210" description="Custom Option 5 Edit Button">
+			<control type="button" id="210">
+				<description>Custom Option 5 Edit Button</description>
                 <visible>Skin.HasSetting(Custom04Option.Active) | Skin.HasSetting(Custom05Option.Active) | !IsEmpty(Skin.String(Custom05Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom05Option.Active)</enable>
 				<width>1100</width>
@@ -193,7 +207,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="211" description="Custom Option 6 Activation Button">
+			<control type="radiobutton" id="211">
+				<description>Custom Option 6 Activation Button</description>
                 <visible>Skin.HasSetting(Custom05Option.Active) | Skin.HasSetting(Custom06Option.Active) | !IsEmpty(Skin.String(Custom06Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -203,7 +218,8 @@
 				<onclick>Skin.ToggleSetting(Custom06Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="212" description="Custom Option 6 Edit Button">
+			<control type="button" id="212">
+				<description>Custom Option 6 Edit Button</description>
                 <visible>Skin.HasSetting(Custom05Option.Active) | Skin.HasSetting(Custom06Option.Active) | !IsEmpty(Skin.String(Custom06Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom06Option.Active)</enable>
 				<width>1100</width>
@@ -222,7 +238,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="213" description="Custom Option 7 Activation Button">
+			<control type="radiobutton" id="213">
+				<description>Custom Option 7 Activation Button</description>
                 <visible>Skin.HasSetting(Custom06Option.Active) | Skin.HasSetting(Custom07Option.Active) | !IsEmpty(Skin.String(Custom07Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -232,7 +249,8 @@
 				<onclick>Skin.ToggleSetting(Custom07Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="214" description="Custom Option 7 Edit Button">
+			<control type="button" id="214">
+				<description>Custom Option 7 Edit Button</description>
                 <visible>Skin.HasSetting(Custom06Option.Active) | Skin.HasSetting(Custom07Option.Active) | !IsEmpty(Skin.String(Custom07Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom07Option.Active)</enable>
 				<width>1100</width>
@@ -251,7 +269,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="215" description="Custom Option 8 Activation Button">
+			<control type="radiobutton" id="215">
+				<description>Custom Option 8 Activation Button</description>
                 <visible>Skin.HasSetting(Custom07Option.Active) | Skin.HasSetting(Custom08Option.Active) | !IsEmpty(Skin.String(Custom08Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -261,7 +280,8 @@
 				<onclick>Skin.ToggleSetting(Custom08Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="216" description="Custom Option 8 Edit Button">
+			<control type="button" id="216">
+				<description>Custom Option 8 Edit Button</description>
                 <visible>Skin.HasSetting(Custom07Option.Active) | Skin.HasSetting(Custom08Option.Active) | !IsEmpty(Skin.String(Custom08Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom08Option.Active)</enable>
 				<width>1100</width>
@@ -280,7 +300,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="217" description="Custom Option 9 Activation Button">
+			<control type="radiobutton" id="217">
+				<description>Custom Option 9 Activation Button</description>
                 <visible>Skin.HasSetting(Custom08Option.Active) | Skin.HasSetting(Custom09Option.Active) | !IsEmpty(Skin.String(Custom09Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -290,7 +311,8 @@
 				<onclick>Skin.ToggleSetting(Custom09Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="218" description="Custom Option 9 Edit Button">
+			<control type="button" id="218">
+				<description>Custom Option 9 Edit Button</description>
                 <visible>Skin.HasSetting(Custom08Option.Active) | Skin.HasSetting(Custom09Option.Active) | !IsEmpty(Skin.String(Custom09Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom09Option.Active)</enable>
 				<width>1100</width>
@@ -309,7 +331,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="219" description="Custom Option 10 Activation Button">
+			<control type="radiobutton" id="219">
+				<description>Custom Option 10 Activation Button</description>
                 <visible>Skin.HasSetting(Custom09Option.Active) | Skin.HasSetting(Custom10Option.Active) | !IsEmpty(Skin.String(Custom10Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -319,7 +342,8 @@
 				<onclick>Skin.ToggleSetting(Custom10Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="220" description="Custom Option 10 Edit Button">
+			<control type="button" id="220">
+				<description>Custom Option 10 Edit Button</description>
                 <visible>Skin.HasSetting(Custom09Option.Active) | Skin.HasSetting(Custom10Option.Active) | !IsEmpty(Skin.String(Custom10Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom10Option.Active)</enable>
 				<width>1100</width>
@@ -338,7 +362,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="221" description="Custom Option 11 Activation Button">
+			<control type="radiobutton" id="221">
+				<description>Custom Option 11 Activation Button</description>
                 <visible>Skin.HasSetting(Custom10Option.Active) | Skin.HasSetting(Custom11Option.Active) | !IsEmpty(Skin.String(Custom11Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -348,7 +373,8 @@
 				<onclick>Skin.ToggleSetting(Custom11Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="222" description="Custom Option 11 Edit Button">
+			<control type="button" id="222">
+				<description>Custom Option 11 Edit Button</description>
                 <visible>Skin.HasSetting(Custom10Option.Active) | Skin.HasSetting(Custom11Option.Active) | !IsEmpty(Skin.String(Custom11Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom11Option.Active)</enable>
 				<width>1100</width>
@@ -367,7 +393,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="223" description="Custom Option 12 Activation Button">
+			<control type="radiobutton" id="223">
+				<description>Custom Option 12 Activation Button</description>
                 <visible>Skin.HasSetting(Custom11Option.Active) | Skin.HasSetting(Custom12Option.Active) | !IsEmpty(Skin.String(Custom12Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -377,7 +404,8 @@
 				<onclick>Skin.ToggleSetting(Custom12Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="224" description="Custom Option 12 Edit Button">
+			<control type="button" id="224">
+				<description>Custom Option 12 Edit Button</description>
                 <visible>Skin.HasSetting(Custom11Option.Active) | Skin.HasSetting(Custom12Option.Active) | !IsEmpty(Skin.String(Custom12Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom12Option.Active)</enable>
 				<width>1100</width>
@@ -396,7 +424,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 				
-			<control type="radiobutton" id="225" description="Custom Option 13 Activation Button">
+			<control type="radiobutton" id="225">
+				<description>Custom Option 13 Activation Button</description>
                 <visible>Skin.HasSetting(Custom12Option.Active) | Skin.HasSetting(Custom13Option.Active) | !IsEmpty(Skin.String(Custom13Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -406,7 +435,8 @@
 				<onclick>Skin.ToggleSetting(Custom13Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="226" description="Custom Option 13 Edit Button">
+			<control type="button" id="226">
+				<description>Custom Option 13 Edit Button</description>
                 <visible>Skin.HasSetting(Custom12Option.Active) | Skin.HasSetting(Custom13Option.Active) | !IsEmpty(Skin.String(Custom13Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom13Option.Active)</enable>
 				<width>1100</width>
@@ -425,7 +455,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="227" description="Custom Option 14 Activation Button">
+			<control type="radiobutton" id="227">
+				<description>Custom Option 14 Activation Button</description>
                 <visible>Skin.HasSetting(Custom13Option.Active) | Skin.HasSetting(Custom14Option.Active) | !IsEmpty(Skin.String(Custom14Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -435,7 +466,8 @@
 				<onclick>Skin.ToggleSetting(Custom14Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="228" description="Custom Option 14 Edit Button">
+			<control type="button" id="228">
+				<description>Custom Option 14 Edit Button</description>
                 <visible>Skin.HasSetting(Custom13Option.Active) | Skin.HasSetting(Custom14Option.Active) | !IsEmpty(Skin.String(Custom14Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom14Option.Active)</enable>
 				<width>1100</width>
@@ -454,7 +486,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="229" description="Custom Option 15 Activation Button">
+			<control type="radiobutton" id="229">
+				<description>Custom Option 15 Activation Button</description>
                 <visible>Skin.HasSetting(Custom14Option.Active) | Skin.HasSetting(Custom15Option.Active) | !IsEmpty(Skin.String(Custom15Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -464,7 +497,8 @@
 				<onclick>Skin.ToggleSetting(Custom15Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="230" description="Custom Option 15 Edit Button">
+			<control type="button" id="230">
+				<description>Custom Option 15 Edit Button</description>
                 <visible>Skin.HasSetting(Custom14Option.Active) | Skin.HasSetting(Custom15Option.Active) | !IsEmpty(Skin.String(Custom15Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom15Option.Active)</enable>
 				<width>1100</width>
@@ -483,7 +517,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="231" description="Custom Option 16 Activation Button">
+			<control type="radiobutton" id="231">
+				<description>Custom Option 16 Activation Button</description>
                 <visible>Skin.HasSetting(Custom15Option.Active) | Skin.HasSetting(Custom16Option.Active) | !IsEmpty(Skin.String(Custom16Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -493,7 +528,8 @@
 				<onclick>Skin.ToggleSetting(Custom16Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="232" description="Custom Option 16 Edit Button">
+			<control type="button" id="232">
+				<description>Custom Option 16 Edit Button</description>
                 <visible>Skin.HasSetting(Custom15Option.Active) | Skin.HasSetting(Custom16Option.Active) | !IsEmpty(Skin.String(Custom16Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom16Option.Active)</enable>
 				<width>1100</width>
@@ -512,7 +548,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="233" description="Custom Option 17 Activation Button">
+			<control type="radiobutton" id="233">
+				<description>Custom Option 17 Activation Button</description>
                 <visible>Skin.HasSetting(Custom16Option.Active) | Skin.HasSetting(Custom17Option.Active) | !IsEmpty(Skin.String(Custom17Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -522,7 +559,8 @@
 				<onclick>Skin.ToggleSetting(Custom17Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="234" description="Custom Option 17 Edit Button">
+			<control type="button" id="234">
+				<description>Custom Option 17 Edit Button</description>
                 <visible>Skin.HasSetting(Custom16Option.Active) | Skin.HasSetting(Custom17Option.Active) | !IsEmpty(Skin.String(Custom17Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom17Option.Active)</enable>
 				<width>1100</width>
@@ -541,7 +579,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="235" description="Custom Option 18 Activation Button">
+			<control type="radiobutton" id="235">
+				<description>Custom Option 18 Activation Button</description>
                 <visible>Skin.HasSetting(Custom17Option.Active) | Skin.HasSetting(Custom18Option.Active) | !IsEmpty(Skin.String(Custom18Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -551,7 +590,8 @@
 				<onclick>Skin.ToggleSetting(Custom18Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="236" description="Custom Option 18 Edit Button">
+			<control type="button" id="236">
+				<description>Custom Option 18 Edit Button</description>
                 <visible>Skin.HasSetting(Custom17Option.Active) | Skin.HasSetting(Custom18Option.Active) | !IsEmpty(Skin.String(Custom18Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom18Option.Active)</enable>
 				<width>1100</width>
@@ -570,7 +610,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="237" description="Custom Option 19 Activation Button">
+			<control type="radiobutton" id="237">
+				<description>Custom Option 19 Activation Button</description>
                 <visible>Skin.HasSetting(Custom18Option.Active) | Skin.HasSetting(Custom19Option.Active) | !IsEmpty(Skin.String(Custom19Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -580,7 +621,8 @@
 				<onclick>Skin.ToggleSetting(Custom19Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="238" description="Custom Option 19 Edit Button">
+			<control type="button" id="238">
+				<description>Custom Option 19 Edit Button</description>
                 <visible>Skin.HasSetting(Custom18Option.Active) | Skin.HasSetting(Custom19Option.Active) | !IsEmpty(Skin.String(Custom19Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom19Option.Active)</enable>
 				<width>1100</width>
@@ -599,7 +641,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="239" description="Custom Option 20 Activation Button">
+			<control type="radiobutton" id="239">
+				<description>Custom Option 20 Activation Button</description>
                 <visible>Skin.HasSetting(Custom19Option.Active) | Skin.HasSetting(Custom20Option.Active) | !IsEmpty(Skin.String(Custom20Option.Name))</visible>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -609,7 +652,8 @@
 				<onclick>Skin.ToggleSetting(Custom20Option.Active)</onclick>
 			</control>
 
-			<control type="button" id="240" description="Custom Option 20 Edit Button">
+			<control type="button" id="240">
+				<description>Custom Option 20 Edit Button</description>
                 <visible>Skin.HasSetting(Custom19Option.Active) | Skin.HasSetting(Custom20Option.Active) | !IsEmpty(Skin.String(Custom20Option.Name))</visible>
 				<enable>Skin.HasSetting(Custom20Option.Active)</enable>
 				<width>1100</width>
@@ -628,7 +672,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="293" description="TV Option">
+			<control type="radiobutton" id="293">
+				<description>TV Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -637,7 +682,8 @@
 				<onclick>Skin.ToggleSetting(TVOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="269" description="Radio Option">
+			<control type="radiobutton" id="269">
+				<description>Radio Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -646,7 +692,8 @@
 				<onclick>Skin.ToggleSetting(RadioOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="282" description="Videos Option">
+			<control type="radiobutton" id="282">
+				<description>Videos Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -655,7 +702,8 @@
 				<onclick>Skin.ToggleSetting(VideosOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="276" description="Videos Root Option">
+			<control type="radiobutton" id="276">
+				<description>Videos Root Option</description>
                 <enable>Skin.HasSetting(VideosOption.Active)</enable>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -665,7 +713,8 @@
 				<onclick>Skin.ToggleSetting(VideosOption.Immutable)</onclick>
 			</control>
                     
-			<control type="radiobutton" id="283" description="Movies Option">
+			<control type="radiobutton" id="283">
+				<description>Movies Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -674,7 +723,8 @@
 				<onclick>Skin.ToggleSetting(MoviesOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="284" description="TVShows Option">
+			<control type="radiobutton" id="284">
+				<description>TVShows Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -683,7 +733,8 @@
 				<onclick>Skin.ToggleSetting(TVShowsOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="270" description="Music Videos Option">
+			<control type="radiobutton" id="270">
+				<description>Music Videos Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -692,7 +743,8 @@
 				<onclick>Skin.ToggleSetting(MusicVideosOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="241" description="Custom Videos Option Activation Button">
+			<control type="radiobutton" id="241">
+				<description>Custom Videos Option Activation Button</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -701,7 +753,8 @@
 				<onclick>Skin.ToggleSetting(CustomVideosOption.Active)</onclick>
 			</control>
 
-			<control type="button" id="242" description="Custom Videos Option Edit Button">
+			<control type="button" id="242">
+				<description>Custom Videos Option Edit Button</description>
 				<enable>Skin.HasSetting(CustomVideosOption.Active)</enable>
 				<width>1100</width>
 				<align>left</align>
@@ -719,7 +772,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="285" description="Music Option">
+			<control type="radiobutton" id="285">
+				<description>Music Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -728,7 +782,8 @@
 				<onclick>Skin.ToggleSetting(MusicOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="277" description="Music Root Option">
+			<control type="radiobutton" id="277">
+				<description>Music Root Option</description>
                 <enable>Skin.HasSetting(MusicOption.Active)</enable>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
@@ -738,7 +793,8 @@
 				<onclick>Skin.ToggleSetting(MusicOption.Immutable)</onclick>
 			</control>
                     
-			<control type="radiobutton" id="275" description="Albums Option">
+			<control type="radiobutton" id="275">
+				<description>Albums Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -747,7 +803,8 @@
 				<onclick>Skin.ToggleSetting(AlbumsOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="243" description="Custom Music Option Activation Button">
+			<control type="radiobutton" id="243">
+				<description>Custom Music Option Activation Button</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -756,7 +813,8 @@
 				<onclick>Skin.ToggleSetting(CustomMusicOption.Active)</onclick>
 			</control>
 
-			<control type="button" id="244" description="Custom Music Option Edit Button">
+			<control type="button" id="244">
+				<description>Custom Music Option Edit Button</description>
 				<enable>Skin.HasSetting(CustomMusicOption.Active)</enable>
 				<width>1100</width>
 				<align>left</align>
@@ -774,7 +832,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="271" description="Books Option">
+			<control type="radiobutton" id="271">
+				<description>Books Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -783,7 +842,8 @@
 				<onclick>Skin.ToggleSetting(BooksOption.Active)</onclick>
 			</control>
 					
-			<control type="button" id="272" description="Books Option Edit Button">
+			<control type="button" id="272">
+				<description>Books Option Edit Button</description>
 				<enable>Skin.HasSetting(BooksOption.Active)</enable>
 				<width>1100</width>
 				<align>left</align>
@@ -801,7 +861,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="286" description="Pictures Option">
+			<control type="radiobutton" id="286">
+				<description>Pictures Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -810,7 +871,8 @@
 				<onclick>Skin.ToggleSetting(PicturesOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="245" description="Custom Pictures Option Activation Button">
+			<control type="radiobutton" id="245">
+				<description>Custom Pictures Option Activation Button</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -819,7 +881,8 @@
 				<onclick>Skin.ToggleSetting(CustomPicturesOption.Active)</onclick>
 			</control>
 
-			<control type="button" id="246" description="Custom Pictures Option Edit Button">
+			<control type="button" id="246">
+				<description>Custom Pictures Option Edit Button</description>
 				<enable>Skin.HasSetting(CustomPicturesOption.Active)</enable>
 				<width>1100</width>
 				<align>left</align>
@@ -837,7 +900,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
 			</control>
 
-			<control type="radiobutton" id="273" description="Games Option">
+			<control type="radiobutton" id="273">
+				<description>Games Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -846,7 +910,8 @@
 				<onclick>Skin.ToggleSetting(GamesOption.Active)</onclick>
 			</control>
 					
-			<control type="button" id="274" description="Games Option Edit Button">
+			<control type="button" id="274">
+				<description>Games Option Edit Button</description>
 				<enable>Skin.HasSetting(GamesOption.Active)</enable>
 				<width>1100</width>
 				<align>left</align>
@@ -864,7 +929,8 @@
 				<onclick>ActivateWindow(1190)</onclick>
             </control>
 
-            <control type="radiobutton" id="287" description="Programs Option">
+            <control type="radiobutton" id="287">
+				<description>Programs Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -873,7 +939,8 @@
 				<onclick>Skin.ToggleSetting(ProgramsOption.Active)</onclick>
 			</control>
 			
-			<control type="radiobutton" id="288" description="Weather Option">
+			<control type="radiobutton" id="288">
+				<description>Weather Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -882,7 +949,8 @@
 				<onclick>Skin.ToggleSetting(WeatherOption.Active)</onclick>
 			</control>
 			
-			<control type="radiobutton" id="289" description="Files Manager Option">
+			<control type="radiobutton" id="289">
+				<description>Files Manager Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -891,7 +959,8 @@
 				<onclick>Skin.ToggleSetting(FileManagerOption.Active)</onclick>
 			</control>
 			
-			<control type="radiobutton" id="290" description="Addons Option">
+			<control type="radiobutton" id="290">
+				<description>Addons Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -900,7 +969,8 @@
 				<onclick>Skin.ToggleSetting(AddonsOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="291" description="Settings Option">
+			<control type="radiobutton" id="291">
+				<description>Settings Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -909,7 +979,8 @@
 				<onclick>Skin.ToggleSetting(SettingsOption.Active)</onclick>
 			</control>
 					
-			<control type="radiobutton" id="292" description="Exit Option">
+			<control type="radiobutton" id="292">
+				<description>Exit Option</description>
 				<width>1100</width>
 				<radioposx>1040</radioposx>
 				<align>left</align>
@@ -918,13 +989,15 @@
 				<onclick>Skin.ToggleSetting(ExitOption.Active)</onclick>
 			</control>
             
-			<control type="label" id="251" description="Spacer">
+			<control type="label" id="251">
+				<description>Spacer</description>
 				<width>1100</width>
                 <height>20</height>
 				<label>-</label>
 			</control>
                     
-			<control type="button" id="250" description="Reset Page Setting Button">
+			<control type="button" id="250">
+				<description>Reset Page Setting Button</description>
 				<width>1100</width>
 				<align>left</align>
 				<label>$LOCALIZE[10041]</label>
@@ -935,7 +1008,7 @@
 			</control>
 		</control>
                 
-		<control type="scrollbar" id="299" description="Scrollbar">
+		<control type="scrollbar" id="299">
 			<visible>Container(99).Hasfocus(2)</visible>
 
 			<posx>1140</posx>

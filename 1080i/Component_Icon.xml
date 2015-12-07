@@ -28,7 +28,7 @@
         <visible>IsEmpty(ListItem.Art(thumb)) + IsEmpty(ListItem.Icon)</visible>
     </include>
 	
-	<include name="TinyCircleThumbnailIcon" description="Tiny Circle Thumbnail Icon">
+	<include name="TinyCircleThumbnailIcon">
         <definition>
             <include name="BackgroundForTinyCircleThumbnailIcon" />
 
@@ -43,7 +43,7 @@
         </definition>
 	</include>
 	
-	<include name="BackgroundForTinyCircleThumbnailIcon" description="Tiny Circle Background Icon">
+	<include name="BackgroundForTinyCircleThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -75,7 +75,8 @@
             <include name="ShadowForSmallCircleThumbnailIcon" />
             <include name="BackgroundForSmallCircleThumbnailIcon" />
 			
-            <control type="image" id="901" description="Mute Image">
+            <control type="image" id="901">
+                <description>Mute Image</description>
                 <posx>5</posx>
                 <posy>5</posy>
                 <width>80</width>
@@ -93,7 +94,8 @@
             <control type="group">
                 <visible>Player.Paused</visible>
 					
-                <control type="image" description="Player Direction Icon">
+                <control type="image">
+                    <description>Player Direction Icon</description>
                     <posx>20</posx>
                     <posy>20</posy>
                     <width>50</width>
@@ -143,7 +145,8 @@
 	
 	<include name="BorderedBackgroundForSmallCircleThumbnailIcon">
         <definition>
-            <control type="image" description="Volume Logo Background">
+            <control type="image">
+                <description>Volume Logo Background</description>
                 <posx>-5</posx>
                 <posy>-5</posy>
                 <width>100</width>
@@ -151,7 +154,8 @@
                 <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
-            <control type="image" description="Volume Logo Border">
+            <control type="image">
+                <description>Volume Logo Border</description>
                 <posx>-3</posx>
                 <posy>-3</posy>
                 <width>96</width>
@@ -366,7 +370,8 @@
                 <visible>![Player.Forwarding | Player.Rewinding | Player.Paused] + Window.IsVisible(mutebug)</visible>
                 <include name="FadeMaskForDefaultCircleThumbnailIcon" />
             
-                <control type="image" id="901" description="Mute Image">
+                <control type="image" id="901">
+                    <description>Mute Image</description>
                     <posx>55</posx>
                     <posy>55</posy>
                     <width>160</width>
@@ -518,7 +523,7 @@
 		</control>
 	</include>
 
-	<include name="OverlayForDefaultSquareThumbnailIcon" description="Overlay For Square Thumbnail Icon">
+	<include name="OverlayForDefaultSquareThumbnailIcon">
 		<control type="group">
 			<posx>35</posx>
 			<posy>35</posy>
@@ -583,7 +588,7 @@
 		</control>
 	</include>
 
-	<include name="OverlayForDefaultVerticalThumbnailIcon" description="Overlay For Vertical Thumbnail Icon">
+	<include name="OverlayForDefaultVerticalThumbnailIcon">
 		<control type="group">
 			<posx>35</posx>
 			<posy>170</posy>

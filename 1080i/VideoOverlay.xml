@@ -7,7 +7,8 @@
         <control type="group">
 			<visible>!VideoPlayer.IsFullscreen + !Window.IsVisible(screencalibration)</visible>
 
-            <control type="group" description="Video Overlay With Artwork Group">
+            <control type="group">
+                <description>Video Overlay With Artwork Group</description>
                 <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
                 <control type="group">
@@ -53,7 +54,8 @@
                 <include name="PlayerMediaIconForOverlay" />
             </control>
         
-            <control type="group" description="Video Overlay Without Artwork Group">
+            <control type="group">
+                <description>Video Overlay Without Artwork Group</description>
                 <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
                 <control type="group">
