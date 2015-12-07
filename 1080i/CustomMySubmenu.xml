@@ -6,8 +6,8 @@
     <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
     <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
-    <onload>RunScript(special://skin/scripts/PopulateSubmenuFromSkinVariables.py,$INFO[Window.Property(SourceInfo)]%02dOption,MySubmenu%02dOption,1103)</onload>
-    <onunload>RunScript(special://skin/scripts/ClearProperties.py,MySubmenu%02dOption,1103)</onunload>
+    <onload>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(SourceInfo)]%02dOption,MySubmenu%02dOption,1103)</onload>
+    <onunload>RunScript(special://skin/scripts/default.py,ClearProperties,MySubmenu%02dOption,1103)</onunload>
 
 	<controls>
 		<include name="GlobalBackground" />

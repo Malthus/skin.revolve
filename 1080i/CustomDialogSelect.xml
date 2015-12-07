@@ -2,7 +2,7 @@
 <window type="dialog" id="1188">
 	<defaultcontrol always="true">40</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-    <onunload>RunScript(special://skin/scripts/ClearProperties.py,List%02dOption,1188)</onunload>
+    <onunload>RunScript(special://skin/scripts/default.py,ClearProperties,List%02dOption,1188)</onunload>
 
 	<controls>
 		<control type="group">
