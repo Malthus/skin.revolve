@@ -1,60 +1,44 @@
-# *  This Program is free software; you can redistribute it and/or modify
-# *  it under the terms of the GNU General Public License as published by
-# *  the Free Software Foundation; either version 2, or (at your option)
-# *  any later version.
-# *
-# *  This Program is distributed in the hope that it will be useful,
-# *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-# *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# *  GNU General Public License for more details.
+# *  Function: Revolve/PopulateSubmenuFromSkinVariables
 
 import sys
 import xbmc
 
-from library_xbmc import *
+import xbmclibrary
 
-SCRIPT_NAME = 'Revolve/PopulateSubmenuFromSkinVariables'
-DEFAULT_TARGETMASK = 'MySubmenu%02dOption'
-DEFAULT_TARGETWINDOW = '0'
-TOTAL_ITEMS = 20
-
-def logMessage(annotation):
-    if isinstance(annotation, str):
-        annotation = annotation.decode("utf-8")
-    message = u'%s: %s' % (SCRIPT_NAME, annotation)
-    xbmc.log(msg=message.encode("utf-8"), level=xbmc.LOGDEBUG)
+FUNCTIONNAME = 'Revolve/PopulateSubmenuFromSkinVariables'
+DEFAULTTARGETMASK = 'MySubmenu%02dOption'
+DEFAULTTARGETWINDOW = '0'
+TOTALITEMS = 20
 
 def copyProperties(sourcemask, targetmask, targetwindow):
-    for index in range (1, TOTAL_ITEMS + 1):
+    for index in range (1, TOTALITEMS + 1):
         sourcebase = sourcemask % (index)
         targetbase = targetmask % (index)
 
-        copySkinSettingToProperty(sourcebase + '.Type', targetbase + '.Type', targetwindow)
-        copyBooleanSkinSettingToProperty(sourcebase + '.Active', targetbase + '.Active', targetwindow)
-        copySkinSettingToProperty(sourcebase + '.Name', targetbase + '.Name', targetwindow)
-        copySkinSettingToProperty(sourcebase + '.Subtitle', targetbase + '.Subtitle', targetwindow)
-        copySkinSettingToProperty(sourcebase + '.BackgroundImage', targetbase + '.BackgroundImage', targetwindow)
-        copySkinSettingToProperty(sourcebase + '.MenuTitle', targetbase + '.MenuTitle', targetwindow)
-        copySkinSettingToProperty(sourcebase + '.SourceInfo', targetbase + '.SourceInfo', targetwindow)
-        copySkinSettingToProperty(sourcebase + '.Window', targetbase + '.Window', targetwindow)
-        copySkinSettingToProperty(sourcebase + '.Action', targetbase + '.Action', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.Type', targetbase + '.Type', targetwindow)
+        xbmclibrary.copyBooleanSkinSettingToProperty(sourcebase + '.Active', targetbase + '.Active', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.Name', targetbase + '.Name', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.Subtitle', targetbase + '.Subtitle', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.BackgroundImage', targetbase + '.BackgroundImage', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.MenuTitle', targetbase + '.MenuTitle', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.SourceInfo', targetbase + '.SourceInfo', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.Window', targetbase + '.Window', targetwindow)
+        xbmclibrary.copySkinSettingToProperty(sourcebase + '.Action', targetbase + '.Action', targetwindow)
 
+def execute(arguments):
+    if len(arguments) > 2:
+        sourcemask = arguments[2]
 
-if len(sys.argv) > 1:
-    logMessage('Call to ' + SCRIPT_NAME + ' script with arguments: ' + str(sys.argv) + '.')	
-    sourcemask = sys.argv[1]
-
-    if len(sys.argv) > 2:
-        targetmask = sys.argv[2]
+        if len(arguments) > 3:
+            targetmask = arguments[3]
+        else:
+            targetmask = DEFAULTTARGETMASK
+        
+        if len(arguments) > 4:
+            targetwindow = arguments[4]
+        else:
+            targetwindow = DEFAULTTARGETWINDOW
+        
+        copyProperties(sourcemask, targetmask, targetwindow)
     else:
-        targetmask = DEFAULT_TARGETMASK
-    
-    if len(sys.argv) > 3:
-        targetwindow = sys.argv[3]
-    else:
-        targetwindow = DEFAULT_TARGETWINDOW
-    
-    logMessage(SCRIPT_NAME + ' copies variables: ' + sourcemask + ' to ' + targetmask + ' on window ' + targetwindow)	
-    copyProperties(sourcemask, targetmask, targetwindow)
-else:
-    logMessage(SCRIPT_NAME + ' terminates: Missing argument(s) in call to script.')	
+        xbmclibrary.writeErrorMessage(FUNCTIONNAME, FUNCTIONNAME + ' terminates: Missing argument(s) in call to script.')	

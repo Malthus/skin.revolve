@@ -1,54 +1,34 @@
-# *  This Program is free software; you can redistribute it and/or modify
-# *  it under the terms of the GNU General Public License as published by
-# *  the Free Software Foundation; either version 2, or (at your option)
-# *  any later version.
-# *
-# *  This Program is distributed in the hope that it will be useful,
-# *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-# *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# *  GNU General Public License for more details.
+# *  Function: Revolve/ClearProperties
 
 import sys
 import xbmc
 
-from library_xbmc import *
+import xbmclibrary
 
-SCRIPT_NAME = 'Revolve/ClearProperties'
-DEFAULT_TARGETWINDOW = '0'
-DEFAULT_TARGETMASK = 'List%02dOption'
-TOTAL_ITEMS = 20
+FUNCTIONNAME = 'Revolve/ClearProperties'
+DEFAULTTARGETWINDOW = '0'
+DEFAULTTARGETMASK = 'List%02dOption'
+TOTALITEMS = 20
 
-def logMessage(annotation):
-    if isinstance(annotation, str):
-        annotation = annotation.decode("utf-8")
-    message = u'%s: %s' % (SCRIPT_NAME, annotation)
-    xbmc.log(msg=message.encode("utf-8"), level=xbmc.LOGDEBUG)
-
-def clearProperties(targetmask, targetwindow):
-    for index in range (1, TOTAL_ITEMS + 1):
+def clearPropertiesByMask(targetmask, targetwindow):
+    for index in range (1, TOTALITEMS + 1):
         targetbase = targetmask % (index)
 
-        clearProperty(targetbase + '.Name', targetwindow)
-        clearProperty(targetbase + '.Subtitle', targetwindow)
-        clearProperty(targetbase + '.Thumbnail', targetwindow)
-        clearProperty(targetbase + '.BackgroundImage', targetwindow)
-        clearProperty(targetbase + '.Action', targetwindow)
+        xbmclibrary.clearProperty(targetbase + '.Name', targetwindow)
+        xbmclibrary.clearProperty(targetbase + '.Subtitle', targetwindow)
+        xbmclibrary.clearProperty(targetbase + '.Thumbnail', targetwindow)
+        xbmclibrary.clearProperty(targetbase + '.BackgroundImage', targetwindow)
+        xbmclibrary.clearProperty(targetbase + '.Action', targetwindow)
 
-        
-if len(sys.argv) > 1:
-    logMessage('Call to ' + SCRIPT_NAME + ' script with arguments: ' + str(sys.argv) + '.')	
-
-    if len(sys.argv) > 1:
-        targetmask = sys.argv[1]
+def execute(arguments):
+    if len(arguments) > 2:
+        targetmask = arguments[2]
     else:
-        targetmask = DEFAULT_TARGETMASK
+        targetmask = DEFAULTTARGETMASK
     
-    if len(sys.argv) > 2:
-        targetwindow = sys.argv[2]
+    if len(arguments) > 3:
+        targetwindow = arguments[3]
     else:
-        targetwindow = DEFAULT_TARGETWINDOW
+        targetwindow = DEFAULTTARGETWINDOW
     
-    logMessage(SCRIPT_NAME + ' clears properties: ' + targetmask + ' on window ' + targetwindow)	
-    clearProperties(targetmask, targetwindow)
-else:
-    logMessage(SCRIPT_NAME + ' terminates: Missing argument(s) in call to script.')	
+    clearPropertiesByMask(targetmask, targetwindow)

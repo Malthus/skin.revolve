@@ -1,12 +1,4 @@
-# *  This Program is free software; you can redistribute it and/or modify
-# *  it under the terms of the GNU General Public License as published by
-# *  the Free Software Foundation; either version 2, or (at your option)
-# *  any later version.
-# *
-# *  This Program is distributed in the hope that it will be useful,
-# *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-# *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# *  GNU General Public License for more details.
+# *  Library: XBMC/Kodi Wrapper
 
 import sys
 import xbmc
@@ -130,3 +122,16 @@ def translatePath(filename):
     else:
         return filename
 
+# Log Methods
+
+def writeErrorMessage(source, message):
+    if isinstance(message, str):
+        message = message.decode("utf-8")
+    logmessage = u'%s: %s' % (source, message)
+    xbmc.log(msg=logmessage.encode("utf-8"), level=xbmc.LOGNOTICE)
+
+def writeDebugMessage(source, message):
+    if isinstance(message, str):
+        message = message.decode("utf-8")
+    logmessage = u'%s: %s' % (source, message)
+    xbmc.log(msg=logmessage.encode("utf-8"), level=xbmc.LOGDEBUG)
