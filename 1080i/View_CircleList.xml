@@ -289,7 +289,18 @@
         <definition>
             <control type="group">
 				<animation effect="rotate" center="320,560" end="$PARAM[angle]" condition="true">Conditional</animation>
-                
+
+                <include name="ThinOutlineLabel">
+                    <param name="posx" value="680" />
+                    <param name="posy" value="540" />
+                    <param name="width" value="1800" />
+                    <param name="height" value="40" />
+                    <param name="font" value="SmallViewFont" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="scroll" value="false" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+<!--                
                 <control type="label">
                     <posx>680</posx>
                     <posy>540</posy>
@@ -301,6 +312,7 @@
                     <scroll>false</scroll>
                     <label>$PARAM[label]</label>
                 </control>
+-->                
             </control>
         </definition>
 	</include>
