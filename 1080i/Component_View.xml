@@ -43,9 +43,50 @@
         </definition>
     </include>
     
+    <include name="BackgroundForNameInThumbnailOrPanelForView">
+        <param name="posy" default="210" />
+        <param name="outlinecolor" default="TextColor" />
+        <param name="label" default="$VAR[ContentNameLabel]" />
+    
+        <definition>
+            <include name="BackgroundForOutlineTextbox">
+                <param name="posx" value="15" />
+                <param name="posy" value="$PARAM[posy]" />
+                <param name="width" value="250" />
+                <param name="height" value="60" />
+                <param name="font" value="TinyViewFont" />
+                <param name="outlinecolor" value="$PARAM[outlinecolor]" />
+                <param name="outlinesize" value="2" />
+                <param name="autoscroll" value="false" />
+                <param name="align" value="center" />
+                <param name="label" value="$PARAM[label]" />
+            </include>
+        </definition>
+    </include>
+    
+    <include name="TextForNameInThumbnailOrPanelForView">
+        <param name="posy" default="210" />
+        <param name="label" default="$VAR[ContentNameLabel]" />
+    
+        <definition>
+            <control type="textbox">
+                <posx>15</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>250</width>
+                <height>60</height>
+                <font>TinyViewFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <scrolltime>200</scrolltime>
+                <autoscroll>false</autoscroll>
+                <align>center</align>
+                <label>$PARAM[label]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="NameInThumbnailOrPanelForView">
         <param name="posy" default="210" />
-        <param name="textcolor" default="TextColor" />
+        <param name="outlinecolor" default="TextColor" />
         <param name="label" default="$VAR[ContentNameLabel]" />
     
         <definition>
@@ -56,7 +97,7 @@
                 <param name="height" value="60" />
                 <param name="font" value="TinyViewFont" />
                 <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="$PARAM[textcolor]" />
+                <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                 <param name="outlinesize" value="2" />
                 <param name="autoscroll" value="false" />
                 <param name="align" value="center" />

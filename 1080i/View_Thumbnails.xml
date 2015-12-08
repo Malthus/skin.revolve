@@ -54,11 +54,10 @@
                         <animation type="Focus">
                             <effect type="zoom" start="100" end="140" time="200" />
                             <effect type="slide" end="-38,-38" time="200" />
-                            <effect type="fade" start="0" end="100" time="200" />
                         </animation>
 
-                        <include name="NameInThumbnailOrPanelForView">
-                            <param name="textcolor" value="MainColor" />
+                        <include name="BackgroundForNameInThumbnailOrPanelForView">
+                            <param name="outlinecolor" value="MainColor" />
                         </include>
                     </control>
                     
@@ -69,7 +68,16 @@
                             <effect type="fade" start="100" end="0" time="200" />
                         </animation>
                     
-                        <include name="NameInThumbnailOrPanelForView" />
+                        <include name="BackgroundForNameInThumbnailOrPanelForView" />
+                    </control>
+                    
+                    <control type="group">
+                        <animation type="Focus">
+                            <effect type="zoom" start="100" end="140" time="200" />
+                            <effect type="slide" end="-38,-38" time="200" />
+                        </animation>
+
+                        <include name="TextForNameInThumbnailOrPanelForView" />
                     </control>
 				</control>
 			</focusedlayout>
