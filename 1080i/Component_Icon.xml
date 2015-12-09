@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="VisibilityForSquareIcon">
-		<visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons)</visible>
+        <definition>
+            <visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons)</visible>
+        </definition>
 	</include>
 	
 	<include name="VisibilityForVerticalIcon">
-		<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)</visible>
+        <definition>
+            <visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)</visible>
+        </definition>
 	</include>
 
 	<include name="VisibilityForHorizontalIcon">
-		<visible>false</visible>
+        <definition>
+            <visible>false</visible>
+        </definition>
 	</include>
     
     <include name="VisibilityForBanner">
-    	<visible>!IsEmpty(ListItem.Art(banner))</visible>
+        <definition>
+            <visible>!IsEmpty(ListItem.Art(banner))</visible>
+        </definition>
     </include>
 	
     <include name="VisibilityForNoBanner">
-        <visible>IsEmpty(ListItem.Art(banner))</visible>
+        <definition>
+            <visible>IsEmpty(ListItem.Art(banner))</visible>
+        </definition>
     </include>
 	
     <include name="VisibilityForThumbnail">
-        <visible>!IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Icon)</visible>
+        <definition>
+            <visible>!IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Icon)</visible>
+        </definition>
     </include>
 	
     <include name="VisibilityForNoThumbnail">
-        <visible>IsEmpty(ListItem.Art(thumb)) + IsEmpty(ListItem.Icon)</visible>
+        <definition>
+            <visible>IsEmpty(ListItem.Art(thumb)) + IsEmpty(ListItem.Icon)</visible>
+        </definition>
     </include>
 	
 	<include name="TinyCircleThumbnailIcon">
@@ -211,57 +225,61 @@
 	</include>
 	
 	<include name="DefaultCircleQuestionThumbnailIcon">
-        <include>BackgroundForDefaultCircleThumbnailIcon</include>
+        <definition>
+            <include name="BackgroundForDefaultCircleThumbnailIcon" />
 
-		<control type="label">
-            <include>VisibilityForNoThumbnail</include>
-			<posx>35</posx>
-			<posy>35</posy>
-			<width>200</width>
-			<height>200</height>
-			<font>HugeSortLetterFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<align>center</align>
-			<label>$LOCALIZE[31904]</label>
-		</control>
+            <control type="label">
+                <include>VisibilityForNoThumbnail</include>
+                <posx>35</posx>
+                <posy>35</posy>
+                <width>200</width>
+                <height>200</height>
+                <font>HugeSortLetterFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <align>center</align>
+                <label>$LOCALIZE[31904]</label>
+            </control>
 
-        <control type="image">
-			<posx>4</posx>
-			<posy>4</posy>
-			<width>262</width>
-			<height>262</height>
-			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-		</control>
+            <control type="image">
+                <posx>4</posx>
+                <posy>4</posy>
+                <width>262</width>
+                <height>262</height>
+                <texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="DefaultCircleSettingsThumbnailIcon">
-        <include>BackgroundForDefaultCircleThumbnailIcon</include>
+        <definition>
+            <include name="BackgroundForDefaultCircleThumbnailIcon" />
 
-		<control type="image">
-		    <posx>4</posx>
-		    <posy>4</posy>
-			<width>262</width>
-			<height>262</height>
-			<texture colordiffuse="BackgroundColor">icons/icon-settings.png</texture>
-			<aspectratio>scale</aspectratio>
-		</control>
+            <control type="image">
+                <posx>4</posx>
+                <posy>4</posy>
+                <width>262</width>
+                <height>262</height>
+                <texture colordiffuse="BackgroundColor">icons/icon-settings.png</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
 
-        <control type="image">
-			<posx>4</posx>
-			<posy>4</posy>
-			<width>262</width>
-			<height>262</height>
-			<texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-		</control>
+            <control type="image">
+                <posx>4</posx>
+                <posy>4</posy>
+                <width>262</width>
+                <height>262</height>
+                <texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="DefaultCirclePlayerMediaIcon">
         <definition>
             <control type="group">
-                <include>ShadowForDefaultCircleThumbnailIcon</include>
-                <include>BackgroundForDefaultCircleThumbnailIcon</include>
+                <include name="ShadowForDefaultCircleThumbnailIcon" />
+                <include name="BackgroundForDefaultCircleThumbnailIcon" />
         
                 <control type="image">
                     <posx>4</posx>
@@ -494,188 +512,216 @@
 	</include>
 	
 	<include name="DefaultSquareThumbnailIcon">
-		<control type="image">
-			<posx>0</posx> 
-			<posy>0</posy>
-			<width>270</width>
-			<height>270</height>
-			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx> 
+                <posy>0</posy>
+                <width>270</width>
+                <height>270</height>
+                <texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+            </control>
 
-		<control type="image">
-			<posx>4</posx>
-			<posy>4</posy>
-			<width>262</width>
-			<height>262</height>
-			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-		</control>
+            <control type="image">
+                <posx>4</posx>
+                <posy>4</posy>
+                <width>262</width>
+                <height>262</height>
+                <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="ShadowForDefaultSquareThumbnailIcon">
-		<control type="group">
-			<posx>-30</posx>
-			<posy>-30</posy>
-			<width>330</width>
-			<height>330</height>
-			<texture border="30" background="true">elements/poster-shadow.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
+        <definition>
+            <control type="group">
+                <posx>-30</posx>
+                <posy>-30</posy>
+                <width>330</width>
+                <height>330</height>
+                <texture border="30" background="true">elements/poster-shadow.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+        </definition>
 	</include>
 
 	<include name="OverlayForDefaultSquareThumbnailIcon">
-		<control type="group">
-			<posx>35</posx>
-			<posy>35</posy>
-			<include>DefaultOverlayMediaFlag</include>
-		</control>
+        <definition>
+            <control type="group">
+                <posx>35</posx>
+                <posy>35</posy>
+                <include>DefaultOverlayMediaFlag</include>
+            </control>
+        </definition>
 	</include>
 
 	<include name="SquareThumbnailIcon">
-		<control type="image">
-			<posx>0</posx> 
-			<posy>0</posy>
-			<width>362</width>
-			<height>362</height>
-			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx> 
+                <posy>0</posy>
+                <width>362</width>
+                <height>362</height>
+                <texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+            </control>
 
-		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>350</width>
-			<height>350</height>
-			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-		</control>
+            <control type="image">
+                <posx>6</posx>
+                <posy>6</posy>
+                <width>350</width>
+                <height>350</height>
+                <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+        </definition>
 	</include>
 
 	<include name="OverlayForSquareThumbnailIcon">
-		<control type="group">
-			<posx>81</posx>
-			<posy>122</posy>
-			<include>DefaultOverlayMediaFlag</include>
-		</control>
+        <definition>
+            <control type="group">
+                <posx>81</posx>
+                <posy>122</posy>
+                <include name="DefaultOverlayMediaFlag" />
+            </control>
+        </definition>
 	</include>
 	
 	<include name="DefaultVerticalThumbnailIcon">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>270</width>
-			<height>405</height>
-			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
-		</control>
-	
-		<control type="image">
-			<posx>4</posx>
-			<posy>4</posy>
-			<width>262</width>
-			<height>397</height>
-			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>270</width>
+                <height>405</height>
+                <texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+            </control>
+        
+            <control type="image">
+                <posx>4</posx>
+                <posy>4</posy>
+                <width>262</width>
+                <height>397</height>
+                <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+        </definition>
 	</include>
 
 	<include name="ShadowForDefaultVerticalThumbnailIcon">
-		<control type="group">
-			<posx>-30</posx>
-			<posy>-30</posy>
-			<width>330</width>
-			<height>465</height>
-			<texture border="30" background="true">elements/poster-shadow.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
+        <definition>
+            <control type="group">
+                <posx>-30</posx>
+                <posy>-30</posy>
+                <width>330</width>
+                <height>465</height>
+                <texture border="30" background="true">elements/poster-shadow.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+        </definition>
 	</include>
 
 	<include name="OverlayForDefaultVerticalThumbnailIcon">
-		<control type="group">
-			<posx>35</posx>
-			<posy>170</posy>
-			<include>DefaultOverlayMediaFlag</include>
-		</control>
+        <definition>
+            <control type="group">
+                <posx>35</posx>
+                <posy>170</posy>
+                <include>DefaultOverlayMediaFlag</include>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="VerticalThumbnailIcon">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>312</width>
-			<height>462</height>
-			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
-		</control>
-	
-		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>300</width>
-			<height>450</height>
-			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>312</width>
+                <height>462</height>
+                <texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+            </control>
+        
+            <control type="image">
+                <posx>6</posx>
+                <posy>6</posy>
+                <width>300</width>
+                <height>450</height>
+                <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+        </definition>
 	</include>
 
 	<include name="OverlayForVerticalThumbnailIcon">
-		<control type="group">
-			<posx>56</posx>
-			<posy>222</posy>
-			<include>DefaultOverlayMediaFlag</include>
-		</control>
+        <definition>
+            <control type="group">
+                <posx>56</posx>
+                <posy>222</posy>
+                <include>DefaultOverlayMediaFlag</include>
+            </control>
+        </definition>
 	</include>
 	
 	<include name="HorizontalThumbnailIcon">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>462</width>
-			<height>312</height>
-			<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>462</width>
+                <height>312</height>
+                <texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+            </control>
 
-		<control type="image">
-			<posx>6</posx>
-			<posy>6</posy>
-			<width>450</width>
-			<height>300</height>
-			<texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-		</control>
+            <control type="image">
+                <posx>6</posx>
+                <posy>6</posy>
+                <width>450</width>
+                <height>300</height>
+                <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+        </definition>
 	</include>
 
 	<include name="OverlayForHorizontalThumbnailIcon">
-		<control type="group">
-			<posx>131</posx>
-			<posy>72</posy>
-			<include>DefaultOverlayMediaFlag</include>
-		</control>
+        <definition>
+            <control type="group">
+                <posx>131</posx>
+                <posy>72</posy>
+                <include>DefaultOverlayMediaFlag</include>
+            </control>
+        </definition>
 	</include>
     
 	<include name="SmallBannerIcon">
-		<control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-			<height>74</height>
-			<width>382</width>
-			<texture colordiffuse="MainColor">elements/banner-mask.png</texture>
-		</control>
-		<control type="image">
-            <posx>2</posx>
-            <posy>2</posy>
-			<height>70</height>
-			<width>378</width>
-			<texture diffuse="elements/banner-mask.png" background="true">$VAR[ContentBanner]</texture>
-            <aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>74</height>
+                <width>382</width>
+                <texture colordiffuse="MainColor">elements/banner-mask.png</texture>
+            </control>
+            <control type="image">
+                <posx>2</posx>
+                <posy>2</posy>
+                <height>70</height>
+                <width>378</width>
+                <texture diffuse="elements/banner-mask.png" background="true">$VAR[ContentBanner]</texture>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
+            </control>
+        </definition>
 	</include>
 
 	<include name="FadeMaskForSmallBannerIcon">
-		<control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-			<height>74</height>
-			<width>382</width>
-			<texture colordiffuse="SelectColor">elements/banner-mask.png</texture>
-		</control>
+        <definition>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <height>74</height>
+                <width>382</width>
+                <texture colordiffuse="SelectColor">elements/banner-mask.png</texture>
+            </control>
+        </definition>
 	</include>
 
 	<include name="DefaultBannerIcon">
