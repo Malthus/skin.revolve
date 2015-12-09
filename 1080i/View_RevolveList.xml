@@ -33,10 +33,11 @@
                 <animation effect="rotate" tween="quadratic" easing="out" center="0,773" start="180" end="360" time="1000" reversible="false">WindowOpen</animation>
                 <animation effect="rotate" tween="quadratic" easing="in" center="0,773" start="360" end="180" time="1000" reversible="false">WindowClose</animation>
                 <animation effect="fade" start="100" end="30" time="500" condition="!Control.HasFocus(54)">Conditional</animation>
-                <animation effect="fade" start="0" end="100" time="100">Visible</animation>
+                <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
+                <animation effect="fade" end="0" reversible="false">Hidden</animation>
                 
                 <include name="OutlineLabel">
-                    <param name="posx" value="865" />
+                    <param name="posx" value="860" />
                     <param name="posy" value="645" />
                     <param name="width" value="1000" />
                     <param name="height" value="100" />
@@ -49,8 +50,8 @@
                 </include>
                 
                 <include name="OutlineLabel">
-                    <param name="posx" value="865" />
-                    <param name="posy" value="755" />
+                    <param name="posx" value="860" />
+                    <param name="posy" value="745" />
                     <param name="width" value="1000" />
                     <param name="height" value="100" />
                     <param name="font" value="DetailViewFont" />
@@ -73,7 +74,7 @@
 		</control>
 
         <control type="scrollbar" id="64">
-            <visible allowhiddenfocus="true">true</visible>
+            <visible allowhiddenfocus="true">Control.IsVisible(54)</visible>
             <animation type="Conditional" condition="!Control.HasFocus(64) + !Container(54).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
                 <effect type="slide" start="0,0" end="40,0" time="100" />
             </animation>
