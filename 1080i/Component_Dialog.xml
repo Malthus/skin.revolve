@@ -207,8 +207,8 @@
         <param name="headerid" default="0" />
         <param name="headerlabel" default="-" />
         <param name="iconid" default="0" />
-        <param name="iconsmall" default="false" />
-        <param name="icondefault" default="true" />
+        <param name="iconsmallvisible" default="false" />
+        <param name="icondefaultvisible" default="true" />
         <param name="iconthumbnail" default="-" />
         <param name="icontexture" default="-" />
         <param name="iconlabel" default="-" />
@@ -266,7 +266,7 @@
             </control>
             
             <control type="group">
-                <visible>$PARAM[iconsmall]</visible>
+                <visible>$PARAM[iconsmallvisible]</visible>
                 <posx>PosXForSmallIconFrameForDialog</posx>
                 <posy>PosYForSmallIconFrameForDialog</posy>
                 <include name="BackgroundForSmallCircleThumbnailIcon" />
@@ -302,7 +302,7 @@
 			</control>
 
             <control type="group">
-                <visible>$PARAM[icondefault]</visible>
+                <visible>$PARAM[icondefaultvisible]</visible>
                 <posx>PosXForDefaultIconFrameForDialog</posx>
                 <posy>PosYForDefaultIconFrameForDialog</posy>
                 <include name="BackgroundForDefaultCircleThumbnailIcon" />
@@ -621,7 +621,7 @@
 	<include name="ThreeLinesDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForThreeLinesDialog" />
             </include>
         </definition>
@@ -630,7 +630,7 @@
 	<include name="FourLinesDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForFourLinesDialog" />
             </include>
         </definition>
@@ -639,7 +639,7 @@
 	<include name="SixLinesDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForSixLinesDialog" />
             </include>
         </definition>
@@ -648,7 +648,7 @@
 	<include name="TenLinesDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForTenLinesDialog" />
             </include>
         </definition>
@@ -657,7 +657,7 @@
 	<include name="TwelveLinesDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForTwelveLinesDialog" />
             </include>
         </definition>
@@ -666,7 +666,7 @@
 	<include name="ThirteenLinesDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForThirteenLinesDialog" />
             </include>
         </definition>
@@ -675,7 +675,7 @@
 	<include name="FifteenLinesDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForFifteenLinesDialog" />
             </include>
         </definition>
@@ -684,7 +684,7 @@
 	<include name="FullWindowDialog">
         <definition>
             <include name="WindowForDialog">
-                <param name="icondefault" value="false" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="height" value="HeightForFullWindowDialog" />
             </include>
         </definition>
