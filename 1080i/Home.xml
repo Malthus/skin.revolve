@@ -52,8 +52,8 @@
 			<include name="HomeMenuItems" />
 		</control>
 		
-		<include name="RingForHomeRevolveList" />
 		<include name="ListForHomeRevolveList" />
+		<include name="RingForHomeRevolveList" />
 
 		<control type="group">
 			<animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
