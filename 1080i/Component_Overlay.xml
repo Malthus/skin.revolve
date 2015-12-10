@@ -78,12 +78,13 @@
         <param name="height" default="30" />
 
         <definition>
-            <include name="NormalOutlineLabel">
+            <include name="OutlineLabel">
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
                 <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
+                <param name="outlinesize" value="2" />
                 <param name="align" value="right" />
                 <param name="label" value="$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]" />
             </include>
@@ -95,12 +96,13 @@
         <param name="height" default="30" />
 
         <definition>
-            <include name="NormalOutlineLabel">
+            <include name="OutlineLabel">
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
                 <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
+                <param name="outlinesize" value="2" />
                 <param name="scroll" value="false" />
                 <param name="label" value="| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]" />
             </include>
@@ -147,12 +149,13 @@
         <param name="height" default="30" />
 
         <definition>
-            <include name="NormalOutlineLabel">
+            <include name="OutlineLabel">
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
                 <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
+                <param name="outlinesize" value="2" />
                 <param name="align" value="right" />
                 <param name="label" value="$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]" />
             </include>
@@ -164,12 +167,13 @@
         <param name="height" default="30" />
 
         <definition>
-            <include name="NormalOutlineLabel">
+            <include name="OutlineLabel">
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="DefaultInformationFont" />
                 <param name="textcolor" value="TextColor" />
                 <param name="outlinecolor" value="BackgroundColor" />
+                <param name="outlinesize" value="2" />
                 <param name="scroll" value="false" />
                 <param name="label" value="| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]" />
             </include>
