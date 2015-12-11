@@ -12,6 +12,7 @@
 			<visible>Container(99).Hasfocus(2)</visible>
 			<width>1100</width>
 			<height>760</height>
+			<height condition="!Skin.HasSetting(SettingsHelp.Visible)">880</height>
 			<orientation>vertical</orientation>
             <pagecontrol>299</pagecontrol>
 			<itemgap>0</itemgap>
@@ -20,7 +21,23 @@
 			<onleft>99</onleft>
 			<onright>299</onright>
 
-			<control type="label" id="298">
+            <include name="ItemsForHomeMenuSkinSettings" />
+		</control>
+                
+		<control type="scrollbar" id="299">
+			<visible>Container(99).Hasfocus(2)</visible>
+
+			<posx>1140</posx>
+			<posy>0</posy>
+			<height>760</height>
+			<onleft>200</onleft>
+			<onright>Noop</onright>
+		</control>
+    </include>
+    
+	<include name="ItemsForHomeMenuSkinSettings">
+        <definition>
+ 			<control type="label" id="298">
 				<description>Home Menu Items Label</description>
 				<width>1100</width>
 				<font>DefaultButtonFont</font>
@@ -1006,150 +1023,142 @@
 				<onclick>SetProperty(DialogAction,SetFocus(52),1189)</onclick>
 				<onclick>ActivateWindow(1189)</onclick>
 			</control>
-		</control>
-                
-		<control type="scrollbar" id="299">
-			<visible>Container(99).Hasfocus(2)</visible>
-
-			<posx>1140</posx>
-			<posy>0</posy>
-			<height>760</height>
-			<onleft>200</onleft>
-			<onright>Noop</onright>
-		</control>
+       </definition>
     </include>
     
 	<include name="AnnotationsForHomeMenuSkinSettings">
-		<control type="group">
-            <description>Settings Description Textbox</description>
-            <visible>ControlGroup(200).HasFocus</visible>
-                    
-			<posx>720</posx>
-			<posy>880</posy>
-			<width>880</width>
-			<height>90</height>
+        <definition>
+            <control type="group">
+                <description>Settings Description Textbox</description>
+                <visible>ControlGroup(200).HasFocus</visible>
+                        
+                <posx>720</posx>
+                <posy>880</posy>
+                <width>880</width>
+                <height>90</height>
 
-			<control type="textbox">
-				<visible>Control.HasFocus(201) | Control.HasFocus(203) | Control.HasFocus(205) | Control.HasFocus(207) | Control.HasFocus(209) | Control.HasFocus(211) | Control.HasFocus(213) | Control.HasFocus(215) | Control.HasFocus(217) | Control.HasFocus(219) | Control.HasFocus(221) | Control.HasFocus(223) | Control.HasFocus(225) | Control.HasFocus(227) | Control.HasFocus(229) | Control.HasFocus(231) | Control.HasFocus(233) | Control.HasFocus(235) | Control.HasFocus(237) | Control.HasFocus(239) | Control.HasFocus(241) | Control.HasFocus(243) | Control.HasFocus(245)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31168]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(202) | Control.HasFocus(204) | Control.HasFocus(206) | Control.HasFocus(208) | Control.HasFocus(210) | Control.HasFocus(212) | Control.HasFocus(214) | Control.HasFocus(216) | Control.HasFocus(218) | Control.HasFocus(220) | Control.HasFocus(222) | Control.HasFocus(224) | Control.HasFocus(226) | Control.HasFocus(228) | Control.HasFocus(230) | Control.HasFocus(232) | Control.HasFocus(234) | Control.HasFocus(236) | Control.HasFocus(238) | Control.HasFocus(240) | Control.HasFocus(242) | Control.HasFocus(244) | Control.HasFocus(246)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31169]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(269)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31211]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(270)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31160]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(271)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31170]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(272) | Control.HasFocus(274)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31167]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(273)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31171]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(275)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31189]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(276) | Control.HasFocus(277)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31205]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(281)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31172]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(282)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31173]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(283)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31174]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(284)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31175]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(285)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31176]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(286)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31177]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(287)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31178]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(288)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31179]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(289)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31180]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(290)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31181]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(291)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31182]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(292)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31183]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(293)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31210]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(294)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31187]</label>
-			</control>
-			<control type="textbox">
-				<visible>Control.HasFocus(250)</visible>
-				<font>AnnotationFont</font>
-				<label>$LOCALIZE[31897]</label>
-			</control>
-		</control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(201) | Control.HasFocus(203) | Control.HasFocus(205) | Control.HasFocus(207) | Control.HasFocus(209) | Control.HasFocus(211) | Control.HasFocus(213) | Control.HasFocus(215) | Control.HasFocus(217) | Control.HasFocus(219) | Control.HasFocus(221) | Control.HasFocus(223) | Control.HasFocus(225) | Control.HasFocus(227) | Control.HasFocus(229) | Control.HasFocus(231) | Control.HasFocus(233) | Control.HasFocus(235) | Control.HasFocus(237) | Control.HasFocus(239) | Control.HasFocus(241) | Control.HasFocus(243) | Control.HasFocus(245)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31168]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(202) | Control.HasFocus(204) | Control.HasFocus(206) | Control.HasFocus(208) | Control.HasFocus(210) | Control.HasFocus(212) | Control.HasFocus(214) | Control.HasFocus(216) | Control.HasFocus(218) | Control.HasFocus(220) | Control.HasFocus(222) | Control.HasFocus(224) | Control.HasFocus(226) | Control.HasFocus(228) | Control.HasFocus(230) | Control.HasFocus(232) | Control.HasFocus(234) | Control.HasFocus(236) | Control.HasFocus(238) | Control.HasFocus(240) | Control.HasFocus(242) | Control.HasFocus(244) | Control.HasFocus(246)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31169]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(269)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31211]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(270)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31160]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(271)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31170]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(272) | Control.HasFocus(274)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31167]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(273)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31171]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(275)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31189]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(276) | Control.HasFocus(277)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31205]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(281)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31172]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(282)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31173]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(283)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31174]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(284)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31175]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(285)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31176]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(286)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31177]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(287)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31178]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(288)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31179]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(289)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31180]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(290)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31181]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(291)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31182]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(292)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31183]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(293)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31210]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(294)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31187]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(250)</visible>
+                    <font>AnnotationFont</font>
+                    <label>$LOCALIZE[31897]</label>
+                </control>
+            </control>
+        </definition>
     </include>
 </includes>
     
