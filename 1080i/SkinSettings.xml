@@ -19,7 +19,7 @@
 				<scrolltime>0</scrolltime>
 				<onup>99</onup>
 				<ondown>99</ondown>
-				<onleft>Noop</onleft>
+				<onleft>9000</onleft>
 				<onright>98</onright>
 
 				<itemlayout height="40">
@@ -617,7 +617,7 @@
 			</control>
 			
 			<control type="group">
-				<visible>Skin.HasSetting(SettingsHelp.Visible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus]</visible>
+				<visible>Skin.HasSetting(SettingsHelp.Visible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
 				<control type="image">
 					<posx>700</posx>
 					<posy>870</posy>
@@ -631,14 +631,14 @@
                 
 				<control type="group">
 					<description>Settings Description Textbox</description>
-                    <visible>Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus</visible>
+                    <visible>Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus</visible>
 					<posx>720</posx>
 					<posy>880</posy>
 					<width>880</width>
 					<height>90</height>
 
 					<control type="textbox">
-						<visible>Control.HasFocus(99)</visible>
+						<visible>Control.HasFocus(99) | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus</visible>
 						<font>AnnotationFont</font>
 						<label>$INFO[Container(99).ListItem.Label2]</label>
 					</control>
@@ -805,6 +805,23 @@
 					</control>
 				</control>
 			</control>
+		</control>
+        
+		<control type="group" id="9000">
+			<include name="SideMenu" />
+
+			<control type="grouplist" id="9001">
+                <include name="ButtonListForSideMenu">
+                    <param name="onright" value="99" />
+                </include>
+
+                <include name="ViewGroupLabelForSideMenu" />
+                <include name="SettingsHelpButtonForSideMenu" />
+			</control>
+
+            <include name="PlayerControlsForSideMenu">
+                <param name="onright" value="99" />
+            </include>
 		</control>
         
         <include name="BackButton" />
