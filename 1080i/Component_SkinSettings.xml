@@ -19,12 +19,12 @@
 	
 	<include name="BackgroundSettingsForSkinSettings">
         <definition>
-            <onfocus>Skin.SetBool(BackgroundImage.Active)</onfocus>
-            <onfocus>Skin.SetBool(BackgroundImage.Faded)</onfocus>
-            <onfocus>Skin.SetBool(BackgroundVisualiser.Active)</onfocus>
-            <onfocus>Skin.Reset(BackgroundVisualiser.Faded)</onfocus>
-            <onfocus>Skin.SetBool(BackgroundVideo.Active)</onfocus>
-            <onfocus>Skin.Reset(BackgroundVideo.Faded)</onfocus>
+            <onfocus>Skin.SetBool(Background.ImageActive)</onfocus>
+            <onfocus>Skin.SetBool(Background.ImageFaded)</onfocus>
+            <onfocus>Skin.SetBool(Background.VisualiserActive)</onfocus>
+            <onfocus>Skin.Reset(Background.VisualiserFaded)</onfocus>
+            <onfocus>Skin.SetBool(Background.VideoActive)</onfocus>
+            <onfocus>Skin.Reset(Background.VideoFaded)</onfocus>
         </definition>
 	</include>
 	
@@ -103,24 +103,25 @@
             <onfocus>Skin.SetBool(SideMenu.Visible)</onfocus>
             <onfocus>Skin.SetBool(ViewScrollbar.Visible)</onfocus>
             <onfocus>Skin.SetBool(BackButton.Visible)</onfocus>
-            <onfocus>Skin.SetBool(OverlayBackground.Visible)</onfocus>
-            <onfocus>Skin.SetBool(RSSFeedBackground.Visible)</onfocus>
+            <onfocus>Skin.SetBool(Overlay.BackgroundVisible)</onfocus>
+            <onfocus>Skin.SetBool(RSSFeed.BackgroundVisible)</onfocus>
             <onfocus>Skin.SetBool(PlayerArtwork.Visible)</onfocus>
             <onfocus>Skin.SetBool(MediaIcons.Visible)</onfocus>
             <onfocus>Skin.SetString(BusyAnimation.Type,A)</onfocus>
             <onfocus>Skin.SetBool(NoInformationLabel.Visible)</onfocus>
-            <onfocus>Skin.Reset(ThumbnailsName.Visible)</onfocus>
-            <onfocus>Skin.SetBool(LandscapeDescription.Visible)</onfocus>
-            <onfocus>Skin.SetBool(SettingsHelp.Visible)</onfocus>
+            <onfocus>Skin.SetString(Thumbnails.Type,C)</onfocus>
+            <onfocus>Skin.Reset(Thumbnails.NameVisible)</onfocus>
+            <onfocus>Skin.SetBool(Landscape.DescriptionVisible)</onfocus>
+            <onfocus>Skin.SetBool(Settings.HelpVisible)</onfocus>
             <onfocus>Skin.SetString(DialogAnimation.Type,N)</onfocus>
         </definition>
 	</include>
     
 	<include name="DebugSettingsForSkinSettings">
         <definition>
-            <onfocus>Skin.Reset(DebugGrid.Visible)</onfocus>
-            <onfocus>Skin.Reset(DebugInfo.Visible)</onfocus>
-            <onfocus>Skin.Reset(DebugListBorder.Visible)</onfocus>
+            <onfocus>Skin.Reset(Debug.GridVisible)</onfocus>
+            <onfocus>Skin.Reset(Debug.InfoVisible)</onfocus>
+            <onfocus>Skin.Reset(Debug.ListBorderVisible)</onfocus>
         </definition>
 	</include>
 </includes>

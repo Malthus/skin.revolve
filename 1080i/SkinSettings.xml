@@ -97,8 +97,8 @@
 					<description>Control Area For Background Visuals</description>
 					<visible>Container(99).Hasfocus(1)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(SettingsHelp.Visible)">760</height>
-					<height condition="!Skin.HasSetting(SettingsHelp.Visible)">880</height>
+					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
+					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
 					<itemgap>0</itemgap>
 					<onup>100</onup>
 					<ondown>100</ondown>
@@ -112,19 +112,19 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31131]</label>
-						<selected>Skin.HasSetting(BackgroundImage.Active)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundImage.Active)</onclick>
+						<selected>Skin.HasSetting(Background.ImageActive)</selected>
+						<onclick>Skin.ToggleSetting(Background.ImageActive)</onclick>
 					</control>
 
 					<control type="radiobutton" id="102">
 						<description>Faded Background Image Option</description>
-						<enable>Skin.HasSetting(BackgroundImage.Active)</enable>
+						<enable>Skin.HasSetting(Background.ImageActive)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31128]</label>
-						<selected>Skin.HasSetting(BackgroundImage.Faded)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundImage.Faded)</onclick>
+						<selected>Skin.HasSetting(Background.ImageFaded)</selected>
+						<onclick>Skin.ToggleSetting(Background.ImageFaded)</onclick>
 					</control>
 
 					<control type="radiobutton" id="103">
@@ -133,19 +133,19 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31123]</label>
-						<selected>Skin.HasSetting(BackgroundVisualiser.Active)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundVisualiser.Active)</onclick>
+						<selected>Skin.HasSetting(Background.VisualiserActive)</selected>
+						<onclick>Skin.ToggleSetting(Background.VisualiserActive)</onclick>
 					</control>
 
 					<control type="radiobutton" id="104">
 						<description>Faded Background Visualiser Option</description>
-						<enable>Skin.HasSetting(BackgroundVisualiser.Active)</enable>
+						<enable>Skin.HasSetting(Background.VisualiserActive)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31129]</label>
-						<selected>Skin.HasSetting(BackgroundVisualiser.Faded)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundVisualiser.Faded)</onclick>
+						<selected>Skin.HasSetting(Background.VisualiserFaded)</selected>
+						<onclick>Skin.ToggleSetting(Background.VisualiserFaded)</onclick>
 					</control>
 
 					<control type="radiobutton" id="105">
@@ -154,19 +154,19 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31124]</label>
-						<selected>Skin.HasSetting(BackgroundVideo.Active)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundVideo.Active)</onclick>
+						<selected>Skin.HasSetting(Background.VideoActive)</selected>
+						<onclick>Skin.ToggleSetting(Background.VideoActive)</onclick>
 					</control>
 
 					<control type="radiobutton" id="106">
 						<description>Faded Background Video Option</description>
-						<enable>Skin.HasSetting(BackgroundVideo.Active)</enable>
+						<enable>Skin.HasSetting(Background.VideoActive)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31130]</label>
-						<selected>Skin.HasSetting(BackgroundVideo.Faded)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundVideo.Faded)</onclick>
+						<selected>Skin.HasSetting(Background.VideoFaded)</selected>
+						<onclick>Skin.ToggleSetting(Background.VideoFaded)</onclick>
 					</control>
                     
 					<control type="label" id="121">
@@ -194,8 +194,8 @@
 					<description>Control Area For Background Visuals</description>
 					<visible>Container(99).Hasfocus(3)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(SettingsHelp.Visible)">760</height>
-					<height condition="!Skin.HasSetting(SettingsHelp.Visible)">880</height>
+					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
+					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
 					<itemgap>0</itemgap>
 					<onup>300</onup>
 					<ondown>300</ondown>
@@ -274,8 +274,8 @@
 					<description>Control Area For Default Add-ons Options</description>
 					<visible>Container(99).Hasfocus(7)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(SettingsHelp.Visible)">760</height>
-					<height condition="!Skin.HasSetting(SettingsHelp.Visible)">880</height>
+					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
+					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
 					<itemgap>0</itemgap>
 					<onup>700</onup>
 					<ondown>700</ondown>
@@ -315,8 +315,8 @@
 					<description>Control Area For Miscellaneous Settings</description>
 					<visible>Container(99).Hasfocus(8)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(SettingsHelp.Visible)">760</height>
-					<height condition="!Skin.HasSetting(SettingsHelp.Visible)">880</height>
+					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
+					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
 					<itemgap>0</itemgap>
 					<onup>800</onup>
 					<ondown>800</ondown>
@@ -380,8 +380,8 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31154]</label>
-						<selected>Skin.HasSetting(OverlayBackground.Visible)</selected>
-						<onclick>Skin.ToggleSetting(OverlayBackground.Visible)</onclick>
+						<selected>Skin.HasSetting(Overlay.BackgroundVisible)</selected>
+						<onclick>Skin.ToggleSetting(Overlay.BackgroundVisible)</onclick>
 					</control>
 					
 					<control type="radiobutton" id="806">
@@ -459,18 +459,33 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31155]</label>
-						<selected>Skin.HasSetting(ThumbnailsName.Visible)</selected>
-						<onclick>Skin.ToggleSetting(ThumbnailsName.Visible)</onclick>
+						<selected>Skin.HasSetting(Thumbnails.NameVisible)</selected>
+						<onclick>Skin.ToggleSetting(Thumbnails.NameVisible)</onclick>
 					</control>
                     
+					<control type="button" id="815">
+                        <description>Type of Thumbnails Option</description>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31799]: $VAR[ThumbnailsTypeLabel]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31799],1188)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31220],1188)</onclick>
+						<onclick>SetProperty(DialogTarget,Thumbnails.Type,1188)</onclick>
+						<onclick>SetProperty(List01Option.Name,$LOCALIZE[31952],1188)</onclick>
+						<onclick>SetProperty(List01Option.Action,C,1188)</onclick>
+						<onclick>SetProperty(List02Option.Name,$LOCALIZE[31954],1188)</onclick>
+						<onclick>SetProperty(List02Option.Action,S,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
+					</control>
+					
 					<control type="radiobutton" id="808">
                         <description>Show Description in Landscape Option</description>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31150]</label>
-						<selected>Skin.HasSetting(LandscapeDescription.Visible)</selected>
-						<onclick>Skin.ToggleSetting(LandscapeDescription.Visible)</onclick>
+						<selected>Skin.HasSetting(Landscape.DescriptionVisible)</selected>
+						<onclick>Skin.ToggleSetting(Landscape.DescriptionVisible)</onclick>
 					</control>
                     
 					<control type="radiobutton" id="814">
@@ -479,8 +494,8 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31156]</label>
-						<selected>Skin.HasSetting(SettingsHelp.Visible)</selected>
-						<onclick>Skin.ToggleSetting(SettingsHelp.Visible)</onclick>
+						<selected>Skin.HasSetting(Settings.HelpVisible)</selected>
+						<onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
 					</control>
                     
 					<control type="label" id="821">
@@ -520,8 +535,8 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31134]</label>
-						<selected>Skin.HasSetting(DebugGrid.Visible)</selected>
-						<onclick>Skin.ToggleSetting(DebugGrid.Visible)</onclick>
+						<selected>Skin.HasSetting(Debug.GridVisible)</selected>
+						<onclick>Skin.ToggleSetting(Debug.GridVisible)</onclick>
 					</control>
 
 					<control type="radiobutton" id="902">
@@ -530,8 +545,8 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31135]</label>
-						<selected>Skin.HasSetting(DebugInfo.Visible)</selected>
-						<onclick>Skin.ToggleSetting(DebugInfo.Visible)</onclick>
+						<selected>Skin.HasSetting(Debug.InfoVisible)</selected>
+						<onclick>Skin.ToggleSetting(Debug.InfoVisible)</onclick>
 					</control>
 
 					<control type="radiobutton" id="904">
@@ -540,8 +555,8 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31789]</label>
-						<selected>Skin.HasSetting(DebugListBorder.Visible)</selected>
-						<onclick>Skin.ToggleSetting(DebugListBorder.Visible)</onclick>
+						<selected>Skin.HasSetting(Debug.ListBorderVisible)</selected>
+						<onclick>Skin.ToggleSetting(Debug.ListBorderVisible)</onclick>
 					</control>
                     
 					<control type="label" id="903">
@@ -617,7 +632,7 @@
 			</control>
 			
 			<control type="group">
-				<visible>Skin.HasSetting(SettingsHelp.Visible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
+				<visible>Skin.HasSetting(Settings.HelpVisible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
 				<control type="image">
 					<posx>700</posx>
 					<posy>870</posy>
@@ -772,6 +787,11 @@
 						<visible>Control.HasFocus(814)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31219]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(815)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31231]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>

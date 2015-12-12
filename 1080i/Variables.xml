@@ -722,6 +722,11 @@
         <value>$LOCALIZE[231]</value>
     </variable>
 
+    <variable name="ThumbnailsTypeLabel">
+        <value condition="StringCompare(Skin.String(Thumbnails.Type),S)">$LOCALIZE[31954]</value>
+        <value>$LOCALIZE[31952]</value>
+    </variable>
+
     <variable name="MenuNameLabel">
         <value>$INFO[Container(450).ListItem.Label]</value>
     </variable>
