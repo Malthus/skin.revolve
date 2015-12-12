@@ -634,8 +634,8 @@
 		<control type="radiobutton" id="92">
 			<align>left</align>
 			<label>$LOCALIZE[10043]</label>
-			<selected>Skin.HasSetting(SettingsHelp.Visible)</selected>
-			<onclick>Skin.ToggleSetting(SettingsHelp.Visible)</onclick>
+			<selected>Skin.HasSetting(Settings.HelpVisible)</selected>
+			<onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
 		</control>
 	</include>
     
@@ -645,8 +645,8 @@
             <visible>Control.IsVisible(55) | Control.IsVisible(56)</visible>
 			<align>left</align>
 			<label>$LOCALIZE[31928]</label>
-			<selected>Skin.HasSetting(ThumbnailsName.Visible)</selected>
-			<onclick>Skin.ToggleSetting(ThumbnailsName.Visible)</onclick>
+			<selected>Skin.HasSetting(Thumbnails.NameVisible)</selected>
+			<onclick>Skin.ToggleSetting(Thumbnails.NameVisible)</onclick>
 		</control>
 	</include>
     
@@ -656,8 +656,8 @@
             <visible>Control.IsVisible(53)</visible>
 			<align>left</align>
 			<label>$LOCALIZE[21821]</label>
-			<selected>Skin.HasSetting(LandscapeDescription.Visible)</selected>
-			<onclick>Skin.ToggleSetting(LandscapeDescription.Visible)</onclick>
+			<selected>Skin.HasSetting(Landscape.DescriptionVisible)</selected>
+			<onclick>Skin.ToggleSetting(Landscape.DescriptionVisible)</onclick>
 		</control>
 	</include>
     

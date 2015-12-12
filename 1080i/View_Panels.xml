@@ -30,7 +30,7 @@
 					<include name="OverlayForDefaultSquareThumbnailIcon" />
 				</control>
 				<control type="group">
-                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+                    <visible>Skin.HasSetting(Thumbnails.NameVisible)</visible>
                     <include name="NameInThumbnailOrPanelForView" />
 				</control>
 			</itemlayout>
@@ -43,7 +43,7 @@
 					<include name="OverlayForDefaultVerticalThumbnailIcon" />
 				</control>
 				<control type="group">
-                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+                    <visible>Skin.HasSetting(Thumbnails.NameVisible)</visible>
                     <include name="NameInThumbnailOrPanelForView">
                         <param name="posy" value="345" />
                     </include>
@@ -64,7 +64,7 @@
 					<include name="OverlayForDefaultSquareThumbnailIcon" />
 				</control>
 				<control type="group">
-                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+                    <visible>Skin.HasSetting(Thumbnails.NameVisible)</visible>
 
                     <control type="group">
                         <animation type="Focus">
@@ -112,7 +112,7 @@
 					<include name="OverlayForDefaultVerticalThumbnailIcon" />
 				</control>
 				<control type="group">
-                    <visible>Skin.HasSetting(ThumbnailsName.Visible)</visible>
+                    <visible>Skin.HasSetting(Thumbnails.NameVisible)</visible>
 
                     <control type="group">
                         <animation type="Focus">

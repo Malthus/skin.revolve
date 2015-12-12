@@ -67,7 +67,7 @@
             </control>
             
 			<control type="group">
-				<visible>ControlGroup(5).HasFocus | Skin.HasSetting(SettingsHelp.Visible)</visible>
+				<visible>ControlGroup(5).HasFocus | Skin.HasSetting(Settings.HelpVisible)</visible>
 				<control type="image">
 					<posx>700</posx>
 					<posy>870</posy>

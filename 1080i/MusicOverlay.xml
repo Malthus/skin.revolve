@@ -12,7 +12,7 @@
                 <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
                 <control type="group">
-                    <visible>Skin.HasSetting(OverlayBackground.Visible)</visible>
+                    <visible>Skin.HasSetting(Overlay.BackgroundVisible)</visible>
                 
                     <include name="BackgroundForOverlay" />
 
@@ -33,7 +33,7 @@
                 </control>
 
                 <control type="group">
-                    <visible>!Skin.HasSetting(OverlayBackground.Visible)</visible>
+                    <visible>!Skin.HasSetting(Overlay.BackgroundVisible)</visible>
                 
                     <control type="group">
                         <posx>1320</posx>
@@ -59,7 +59,7 @@
                 <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
 
                 <control type="group">
-                    <visible>Skin.HasSetting(OverlayBackground.Visible)</visible>
+                    <visible>Skin.HasSetting(Overlay.BackgroundVisible)</visible>
                 
                     <include name="BackgroundForOverlay" />
 
@@ -80,7 +80,7 @@
                 </control>
 
                 <control type="group">
-                    <visible>!Skin.HasSetting(OverlayBackground.Visible)</visible>
+                    <visible>!Skin.HasSetting(Overlay.BackgroundVisible)</visible>
                 
                     <control type="group">
                         <posx>1520</posx>

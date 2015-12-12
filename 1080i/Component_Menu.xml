@@ -963,7 +963,7 @@
         <definition>
             <itemlayout width="1920" height="125">
                 <control type="group">
-                    <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                    <visible>Skin.HasSetting(Debug.ListBorderVisible)</visible>
                 
                     <control type="image">
                         <width>1920</width>
@@ -985,7 +985,7 @@
 
             <focusedlayout width="1920" height="330">
                 <control type="group">
-                    <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                    <visible>Skin.HasSetting(Debug.ListBorderVisible)</visible>
 
                     <control type="image">
                         <width>1920</width>
@@ -1011,7 +1011,7 @@
         <definition>
             <itemlayout width="300" height="1080">
                 <control type="group">
-                    <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                    <visible>Skin.HasSetting(Debug.ListBorderVisible)</visible>
                         
                     <control type="image">
                         <width>300</width>
@@ -1034,7 +1034,7 @@
 
             <focusedlayout width="720" height="1080">
                 <control type="group">
-                    <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                    <visible>Skin.HasSetting(Debug.ListBorderVisible)</visible>
                         
                     <control type="image">
                         <width>720</width>
@@ -1044,7 +1044,7 @@
                     </control>
                 
                     <control type="label">
-                        <visible>Skin.HasSetting(DebugListBorder.Visible)</visible>
+                        <visible>Skin.HasSetting(Debug.ListBorderVisible)</visible>
                         <posy>20</posy>
                         <width>720</width>
                         <height>40</height>

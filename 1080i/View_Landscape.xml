@@ -60,7 +60,7 @@
 	<include name="ContentDescriptionForLandscapeView">
         <definition>
             <control type="group">
-                <visible>Skin.HasSetting(LandscapeDescription.Visible)</visible>
+                <visible>Skin.HasSetting(Landscape.DescriptionVisible)</visible>
                 <include name="OutlineTextbox">
                     <param name="posx" value="40" />
                     <param name="posy" value="40" />

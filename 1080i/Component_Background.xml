@@ -11,7 +11,7 @@
     <include name="ImageBackground">
         <definition>
             <control type="group">
-                <visible>!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(BackgroundVisualiser.Active)] | [Player.HasVideo + !Skin.HasSetting(BackgroundVideo.Active)]</visible>
+                <visible>!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(Background.VisualiserActive)] | [Player.HasVideo + !Skin.HasSetting(Background.VideoActive)]</visible>
 
                 <control type="largeimage">
                     <include name="FullscreenDimensions" />
@@ -19,7 +19,7 @@
                 </control>
 			
                 <control type="largeimage">
-                    <visible>Skin.HasSetting(BackgroundImage.Active)</visible>
+                    <visible>Skin.HasSetting(Background.ImageActive)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
                     <texture background="true">$VAR[ContentBackground]</texture>
@@ -30,7 +30,7 @@
                 </control>
 
                 <control type="largeimage">
-                    <visible>Skin.HasSetting(BackgroundImage.Active) + Skin.HasSetting(BackgroundImage.Faded)</visible>
+                    <visible>Skin.HasSetting(Background.ImageActive) + Skin.HasSetting(Background.ImageFaded)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
                     <texture colordiffuse="FadeDiffuseColor">white.png</texture>
@@ -45,7 +45,7 @@
     <include name="MusicVisualizationBackground">
         <definition>
             <control type="group">
-                <visible>Player.HasAudio + Skin.HasSetting(BackgroundVisualiser.Active)</visible>
+                <visible>Player.HasAudio + Skin.HasSetting(Background.VisualiserActive)</visible>
 
                 <control type="visualisation">
                     <include name="FadeAnimationForBackground" />
@@ -53,7 +53,7 @@
                 </control>
 			
                 <control type="largeimage">
-                    <visible>Skin.HasSetting(BackgroundVisualiser.Faded)</visible>
+                    <visible>Skin.HasSetting(Background.VisualiserFaded)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
                     <texture colordiffuse="FadeDiffuseColor" background="true">white.png</texture>
@@ -68,14 +68,14 @@
     <include name="VideoBackground">
         <definition>
             <control type="group">
-                <visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo.Active)</visible>
+                <visible>Player.HasVideo + Skin.HasSetting(Background.VideoActive)</visible>
 
                 <control type="videowindow">
                     <include name="FullscreenDimensions" />
                 </control>
 			
                 <control type="largeimage">
-                    <visible>Skin.HasSetting(BackgroundVideo.Faded)</visible>
+                    <visible>Skin.HasSetting(Background.VideoFaded)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
                     <texture colordiffuse="FadeDiffuseColor" background="true">white.png</texture>

@@ -6,7 +6,7 @@
 	<controls>
 		<control type="grouplist">
             <description>Window/Dialog Debug Information List</description>
-			<visible>Skin.HasSetting(DebugInfo.Visible)</visible>
+			<visible>Skin.HasSetting(Debug.InfoVisible)</visible>
 			<posx>20</posx>
 			<posy>20</posy>
 			<width>780</width>
@@ -899,7 +899,7 @@
 
 		<control type="image">
             <description>Global Debug Grid</description>
-			<visible>Skin.HasSetting(DebugGrid.Visible)</visible>
+			<visible>Skin.HasSetting(Debug.GridVisible)</visible>
 			<include name="FullscreenDimensions" />
 			<texture>special://skin/backgrounds/debuggrid1080.png</texture>
 		</control>
