@@ -169,6 +169,32 @@
 						<onclick>Skin.ToggleSetting(Background.VideoFaded)</onclick>
 					</control>
                     
+					<control type="label" id="122">
+						<description>Spacer</description>
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+                    
+					<control type="button" id="107">
+                        <description>Background Animation Option</description>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31798]: $VAR[BackgroundAnimationLevelLabel]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31798],1188)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31217],1188)</onclick>
+						<onclick>SetProperty(DialogTarget,Background.AnimationLevel,1188)</onclick>
+						<onclick>SetProperty(List01Option.Name,$LOCALIZE[231],1188)</onclick>
+						<onclick>SetProperty(List01Option.Action,N,1188)</onclick>
+						<onclick>SetProperty(List02Option.Name,$LOCALIZE[21388],1188)</onclick>
+						<onclick>SetProperty(List02Option.Action,Q,1188)</onclick>
+						<onclick>SetProperty(List03Option.Name,$LOCALIZE[503],1188)</onclick>
+						<onclick>SetProperty(List03Option.Action,B,1188)</onclick>
+						<onclick>SetProperty(List04Option.Name,$LOCALIZE[31929],1188)</onclick>
+						<onclick>SetProperty(List04Option.Action,W,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
+					</control>
+					
 					<control type="label" id="121">
 						<description>Spacer</description>
 						<width>1100</width>
@@ -434,25 +460,6 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
-					<control type="button" id="813">
-                        <description>Dialog Animation Option</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31798]: $VAR[DialogAnimationNameLabel]</label>
-						<onclick>SetProperty(DialogTitle,$LOCALIZE[31798],1188)</onclick>
-						<onclick>SetProperty(DialogMessage,$LOCALIZE[31217],1188)</onclick>
-						<onclick>SetProperty(DialogTarget,DialogAnimation.Type,1188)</onclick>
-						<onclick>SetProperty(List01Option.Name,$LOCALIZE[231],1188)</onclick>
-						<onclick>SetProperty(List01Option.Action,N,1188)</onclick>
-						<onclick>SetProperty(List02Option.Name,$LOCALIZE[21388],1188)</onclick>
-						<onclick>SetProperty(List02Option.Action,Q,1188)</onclick>
-						<onclick>SetProperty(List03Option.Name,$LOCALIZE[503],1188)</onclick>
-						<onclick>SetProperty(List03Option.Action,B,1188)</onclick>
-						<onclick>SetProperty(List04Option.Name,$LOCALIZE[31929],1188)</onclick>
-						<onclick>SetProperty(List04Option.Action,W,1188)</onclick>
-						<onclick>ActivateWindow(1188)</onclick>
-					</control>
-					
 					<control type="radiobutton" id="812">
                         <description>Show Name in Thumbnails and Panels Option</description>
 						<width>1100</width>
@@ -689,6 +696,11 @@
 						<label>$LOCALIZE[31166]</label>
 					</control>
 					<control type="textbox">
+						<visible>Control.HasFocus(107)</visible>
+						<font>AnnotationFont</font>
+						<label>$LOCALIZE[31218]</label>
+					</control>
+					<control type="textbox">
 						<visible>Control.HasFocus(301)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31201]</label>
@@ -777,11 +789,6 @@
 						<visible>Control.HasFocus(812)</visible>
 						<font>AnnotationFont</font>
 						<label>$LOCALIZE[31216]</label>
-					</control>
-					<control type="textbox">
-						<visible>Control.HasFocus(813)</visible>
-						<font>AnnotationFont</font>
-						<label>$LOCALIZE[31218]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(814)</visible>
