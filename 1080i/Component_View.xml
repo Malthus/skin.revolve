@@ -44,7 +44,7 @@
     </include>
     
     <include name="BackgroundForNameInThumbnailOrPanelForView">
-        <param name="posy" default="210" />
+        <param name="posy" default="200" />
         <param name="outlinecolor" default="TextColor" />
         <param name="label" default="$VAR[ContentNameLabel]" />
     
@@ -53,7 +53,7 @@
                 <param name="posx" value="15" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="250" />
-                <param name="height" value="60" />
+                <param name="height" value="70" />
                 <param name="font" value="TinyViewFont" />
                 <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                 <param name="outlinesize" value="2" />
@@ -65,7 +65,7 @@
     </include>
     
     <include name="TextForNameInThumbnailOrPanelForView">
-        <param name="posy" default="210" />
+        <param name="posy" default="200" />
         <param name="label" default="$VAR[ContentNameLabel]" />
     
         <definition>
@@ -73,7 +73,7 @@
                 <posx>15</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>250</width>
-                <height>60</height>
+                <height>70</height>
                 <font>TinyViewFont</font>
                 <textcolor>BackgroundColor</textcolor>
                 <scrolltime>200</scrolltime>
@@ -85,7 +85,7 @@
     </include>
 
     <include name="NameInThumbnailOrPanelForView">
-        <param name="posy" default="210" />
+        <param name="posy" default="200" />
         <param name="outlinecolor" default="TextColor" />
         <param name="label" default="$VAR[ContentNameLabel]" />
     
@@ -94,7 +94,7 @@
                 <param name="posx" value="15" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="250" />
-                <param name="height" value="60" />
+                <param name="height" value="70" />
                 <param name="font" value="TinyViewFont" />
                 <param name="textcolor" value="BackgroundColor" />
                 <param name="outlinecolor" value="$PARAM[outlinecolor]" />
