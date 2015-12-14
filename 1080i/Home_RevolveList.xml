@@ -8,7 +8,6 @@
                 <animation effect="fade" start="100" end="30" time="500" condition="!Control.HasFocus(300)">Conditional</animation>
                 
                 <control type="group">
-                    <description>Extra Information About Selected Item</description>
                     <visible>Control.IsVisible(303)</visible>
                     <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
                     <animation effect="fade" end="0" reversible="false">Hidden</animation>
@@ -28,7 +27,7 @@
                     
                     <include name="OutlineLabel">
                         <param name="posx" value="865" />
-                        <param name="posy" value="755" />
+                        <param name="posy" value="760" />
                         <param name="width" value="1000" />
                         <param name="height" value="100" />
                         <param name="font" value="HomeMenuDetailFont" />
