@@ -397,4 +397,45 @@
             </control>
         </definition>
 	</include>
+
+	<include name="MoveCircle">
+        <param name="posy" default="0" />
+        <param name="color" default="MainColor" />
+        <param name="size" default="60" />
+        <param name="time" default="20000" />
+    
+        <definition>
+            <control type="image">
+                <animation effect="slide" tween="linear" start="-$PARAM[size],0" end="1920,0" time="$PARAM[time]" loop="true" condition="true">Conditional</animation>
+                <posy>$PARAM[posy]</posy>
+                <width>$PARAM[size]</width>
+                <height>$PARAM[size]</height>
+                <texture colordiffuse="$PARAM[color]">elements/circle-mask.png</texture>
+            </control>
+        </definition>
+	</include>
+
+	<include name="OrbitCircle">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="size" default="60" />
+        <param name="color" default="MainColor" />
+        <param name="radius" default="280" />
+        <param name="time" default="10000" />
+    
+        <definition>
+            <control type="group">
+                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" begin="0" end="360" time="$PARAM[time]" loop="true" condition="true">Conditional</animation>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="image">
+                    <posy>$PARAM[radius]</posy>
+                    <width>$PARAM[size]</width>
+                    <height>$PARAM[size]</height>
+                    <texture colordiffuse="$PARAM[color]">elements/circle-mask.png</texture>
+                </control>
+            </control>
+        </definition>
+	</include>
 </includes>
