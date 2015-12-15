@@ -127,6 +127,7 @@
                 <texturesliderbackground border="14,0,14,0" colordiffuse="BackgroundColor">controls/horizontalbar-thick.png</texturesliderbackground>
                 <texturesliderbar border="14,0,14,0" colordiffuse="SelectColor">controls/horizontalbar-thin.png</texturesliderbar>
                 <texturesliderbarfocus border="14,0,14,0" colordiffuse="MainColor">controls/horizontalbar-thin.png</texturesliderbarfocus>
+                <showonepage>false</showonepage>
                 <onup>11</onup>
                 <ondown>11</ondown>
                 <onleft>21</onleft>
@@ -145,32 +146,32 @@
 			</control>
 			
 			<control type="grouplist" id="9000">
-				<posx>40</posx>
-				<posy>560</posy>
-				<width>480</width>
-				<height>120</height>
-				<itemgap>0</itemgap>
-				<align>center</align>
-				<orientation>vertical</orientation>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="480" />
+                    <param name="height" value="200" />
+                </include>
 				<onleft>Noop</onleft>
 				<onright>11</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 
 				<control type="button" id="2">
-				<description>Create Bookmark Button</description>
+                    <description>Create Bookmark Button</description>
 					<label>$LOCALIZE[294]</label>
 				</control>
-
 				<control type="button" id="3">
-				<description>Clear Bookmark Button</description>
+                    <description>Clear Bookmark Button</description>
 					<label>$LOCALIZE[296]</label>
 				</control>
-
 				<control type="button" id="4">
-				<description>Clear Bookmark Button</description>
-<!--					<visible>VideoPlayer.Content(episodes)</visible> -->
+                    <description>Clear Bookmark Button</description>
 					<label>$LOCALIZE[20406]</label>
+				</control>
+				<control type="button" id="7">
+                    <description>Close Button</description>
+                    <posy>40</posy>
+					<label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
 				</control>
 			</control>
 		</control>
