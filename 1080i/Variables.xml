@@ -716,9 +716,10 @@
     </variable>
 
     <variable name="BackgroundAnimationLevelLabel">
-        <value condition="StringCompare(Skin.String(Background.AnimationLevel),Q)">$LOCALIZE[21388]</value>
-        <value condition="StringCompare(Skin.String(Background.AnimationLevel),B)">$LOCALIZE[503]</value>
-        <value condition="StringCompare(Skin.String(Background.AnimationLevel),W)">$LOCALIZE[31929]</value>
+        <value condition="StringCompare(Skin.String(Background.AnimationLevel),1)">$LOCALIZE[21388]</value>
+        <value condition="StringCompare(Skin.String(Background.AnimationLevel),2)">$LOCALIZE[21375]</value>
+        <value condition="StringCompare(Skin.String(Background.AnimationLevel),3)">$LOCALIZE[503]</value>
+        <value condition="StringCompare(Skin.String(Background.AnimationLevel),4)">$LOCALIZE[31929]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
 

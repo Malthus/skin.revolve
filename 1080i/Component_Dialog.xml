@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <constant name="PosXForSmallIconFrameForDialog">235</constant>
+    <constant name="PosYForSmallIconFrameForDialog">20</constant>
+    <constant name="CenterXForSmallIconFrameForDialog">280</constant>
+    <constant name="CenterYForSmallIconFrameForDialog">65</constant>
+    
+    <constant name="PosXForDefaultIconFrameForDialog">145</constant>
+    <constant name="PosYForDefaultIconFrameForDialog">20</constant>
+    <constant name="CenterXForDefaultIconFrameForDialog">280</constant>
+    <constant name="CenterYForDefaultIconFrameForDialog">155</constant>
+    
     <include name="MarkupForButtonListForDialog">
         <param name="posy" default="320" />
         <param name="height" default="-" />
@@ -218,40 +228,34 @@
                 <param name="height" value="$PARAM[height]" />
             </include>
             
-            <control type="image">
-                <visible>StringCompare(Skin.String(Background.AnimationLevel),Q) | StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
-                <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="30000" delay="0" loop="true" condition="true">Conditional</animation>
-                <posy>10</posy>
-                <width>60</width>
-                <height>60</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+            <control type="group">
+                <visible>$PARAM[iconsmallvisible]</visible>
+                
+                <control type="group">
+                    <visible>StringCompare(Skin.String(Background.AnimationLevel),1) | StringCompare(Skin.String(Background.AnimationLevel),3) | StringCompare(Skin.String(Background.AnimationLevel),4)</visible>
+                    <include name="OrbitCircle">
+                        <param name="posx" value="CenterXForSmallIconFrameForDialog" />
+                        <param name="posy" value="CenterYForSmallIconFrameForDialog" />
+                        <param name="size" value="20" />
+                        <param name="radius" value="60" />
+                        <param name="time" value="9500" />
+                    </include>
+                </control>
             </control>
-
-            <control type="image">
-                <visible>StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
-                <animation effect="slide" tween="linear" start="-60,0" end="1920,0" time="23000" delay="2500" loop="true" condition="true">Conditional</animation>
-                <posy>10</posy>
-                <width>60</width>
-                <height>60</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
-            </control>
-            
-            <control type="image">
-                <visible>StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
-                <animation effect="slide" tween="linear" start="-40,0" end="1920,0" time="35000" delay="3500" loop="true" condition="true">Conditional</animation>
-                <posy>20</posy>
-                <width>40</width>
-                <height>40</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
-            </control>
-            
-            <control type="image">
-                <visible>StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
-                <animation effect="slide" tween="linear" start="1920,0" end="-30,0" time="20000" delay="5000" loop="true" condition="true">Conditional</animation>
-                <posy>25</posy>
-                <width>30</width>
-                <height>30</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                
+            <control type="group">
+                <visible>$PARAM[icondefaultvisible]</visible>
+                
+                <control type="group">
+                    <visible>StringCompare(Skin.String(Background.AnimationLevel),1) | StringCompare(Skin.String(Background.AnimationLevel),3) | StringCompare(Skin.String(Background.AnimationLevel),4)</visible>
+                    <include name="OrbitCircle">
+                        <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
+                        <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
+                        <param name="size" value="20" />
+                        <param name="radius" value="150" />
+                        <param name="time" value="9500" />
+                    </include>
+                </control>
             </control>
 
             <control type="label" id="$PARAM[headerid]">
@@ -446,8 +450,6 @@
 	
     <!-- ============================================================== -->
 
-    <constant name="PosXForSmallIconFrameForDialog">235</constant>
-    <constant name="PosYForSmallIconFrameForDialog">20</constant>
     <include name="SmallIconForDialog">
         <param name="posx" default="PosXForSmallIconFrameForDialog" />
         <param name="posy" default="PosYForSmallIconFrameForDialog" />
@@ -471,8 +473,6 @@
         </definition>
     </include>
 
-    <constant name="PosXForDefaultIconFrameForDialog">145</constant>
-    <constant name="PosYForDefaultIconFrameForDialog">20</constant>
     <include name="DefaultIconForDialog">
         <param name="posx" default="PosXForDefaultIconFrameForDialog" />
         <param name="posy" default="PosYForDefaultIconFrameForDialog" />

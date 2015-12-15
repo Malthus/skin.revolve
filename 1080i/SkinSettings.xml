@@ -185,13 +185,15 @@
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31217],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,Background.AnimationLevel,1188)</onclick>
 						<onclick>SetProperty(List01Option.Name,$LOCALIZE[231],1188)</onclick>
-						<onclick>SetProperty(List01Option.Action,N,1188)</onclick>
+						<onclick>SetProperty(List01Option.Action,0,1188)</onclick>
 						<onclick>SetProperty(List02Option.Name,$LOCALIZE[21388],1188)</onclick>
-						<onclick>SetProperty(List02Option.Action,Q,1188)</onclick>
-						<onclick>SetProperty(List03Option.Name,$LOCALIZE[503],1188)</onclick>
-						<onclick>SetProperty(List03Option.Action,B,1188)</onclick>
-						<onclick>SetProperty(List04Option.Name,$LOCALIZE[31929],1188)</onclick>
-						<onclick>SetProperty(List04Option.Action,W,1188)</onclick>
+						<onclick>SetProperty(List02Option.Action,1,1188)</onclick>
+						<onclick>SetProperty(List03Option.Name,$LOCALIZE[21375],1188)</onclick>
+						<onclick>SetProperty(List03Option.Action,2,1188)</onclick>
+						<onclick>SetProperty(List04Option.Name,$LOCALIZE[503],1188)</onclick>
+						<onclick>SetProperty(List04Option.Action,3,1188)</onclick>
+						<onclick>SetProperty(List05Option.Name,$LOCALIZE[31929],1188)</onclick>
+						<onclick>SetProperty(List05Option.Action,4,1188)</onclick>
 						<onclick>ActivateWindow(1188)</onclick>
 					</control>
 					
