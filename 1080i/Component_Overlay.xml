@@ -11,21 +11,33 @@
                 <height>60</height>
                 <texture colordiffuse="BackgroundColor">white.png</texture>
             </control>
-            
-            <control type="group">
-                <visible>StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
-                <include name="MoveCircle">
-                    <param name="posy" value="1025" />
-                    <param name="color" value="SelectColor" />
-                    <param name="size" value="50" />
-                    <param name="time" value="25000" />
-                </include>
-            </control>
         </definition>
     </include>
     
     <include name="PlayerMediaIconForOverlay">
         <definition>
+            <control type="group">
+                <visible>StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="1765" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="145" />
+                    <param name="time" value="10000" />
+                </include>
+            </control>
+            
+            <control type="group">
+                <visible>StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="1765" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="30" />
+                    <param name="radius" value="170" />
+                    <param name="time" value="4000" />
+                </include>
+            </control>
+            
             <control type="group">
                 <posx>1630</posx>
                 <posy>806</posy>

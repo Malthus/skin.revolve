@@ -9,18 +9,6 @@
 				<height>40</height>
 				<texture colordiffuse="BackgroundColor">white.png</texture>
 			</control>
-
-            <control type="group">
-                <visible>StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
-                <include name="MoveCircle">
-                    <param name="posy" value="5" />
-                    <param name="color" value="SelectColor" />
-                    <param name="size" value="30" />
-                    <param name="time" value="23000" />
-                    <param name="startleft" value="false" />
-                    <param name="startright" value="true" />
-                </include>
-            </control>
         </definition>
     </include>
     
