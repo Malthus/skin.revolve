@@ -6,6 +6,38 @@
     <onunload>SetProperty(DialogCloseButton,False,114)</onunload>
 
 	<controls>
+        <control type="group">
+            <visible>StringCompare(Skin.String(Background.AnimationLevel),B) | StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
+            
+            <include name="OrbitCircle">
+                <param name="posx" value="960" />
+                <param name="posy" value="540" />
+                <param name="size" value="60" />
+                <param name="radius" value="150" />
+                <param name="time" value="8000" />
+            </include>
+		</control>
+    
+        <control type="group">
+            <visible>StringCompare(Skin.String(Background.AnimationLevel),W)</visible>
+            
+            <include name="OrbitCircle">
+                <param name="posx" value="960" />
+                <param name="posy" value="540" />
+                <param name="size" value="20" />
+                <param name="radius" value="220" />
+                <param name="time" value="3000" />
+            </include>
+            
+            <include name="OrbitCircle">
+                <param name="posx" value="960" />
+                <param name="posy" value="540" />
+                <param name="size" value="30" />
+                <param name="radius" value="250" />
+                <param name="time" value="5000" />
+            </include>
+		</control>
+    
 		<control type="image">
 			<posx>815</posx>
 			<posy>395</posy>
