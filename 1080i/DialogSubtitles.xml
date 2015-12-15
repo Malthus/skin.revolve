@@ -19,14 +19,15 @@
             
 			<control type="list" id="120">
                 <description>Available Subtitles List</description>
-				<posx>560</posx>
-				<posy>120</posy>
-				<width>1240</width>
-				<height>200</height>
-				<onleft>160</onleft>
-				<onright>Noop</onright>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="200" />
+                    <param name="pagecontrol" value="121" />
+                </include>
 				<onup>120</onup>
 				<ondown>150</ondown>
+				<onleft>9000</onleft>
+				<onright>121</onright>
 
 				<itemlayout height="40">
 					<include>NormalItemsForNormalList</include>
@@ -44,6 +45,15 @@
 				</focusedlayout>
 			</control>
 		
+            <control type="scrollbar" id="121">
+                <include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="200" />
+                </include>
+				<onleft>120</onleft>
+				<onright>Noop</onright>
+            </control>
+        
             <include name="LabelForDialog">
                 <param name="posy" value="360" />
                 <param name="label" value="$LOCALIZE[24018]:" />
@@ -51,14 +61,15 @@
         
 			<control type="list" id="150">
                 <description>Available Subtitle Services List</description>
-				<posx>560</posx>
-				<posy>400</posy>
-				<width>1240</width>
-				<height>160</height>
-				<onleft>160</onleft>
-				<onright>Noop</onright>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="400" />
+                    <param name="height" value="160" />
+                    <param name="pagecontrol" value="151" />
+                </include>
 				<onup>120</onup>
 				<ondown>150</ondown>
+				<onleft>9000</onleft>
+				<onright>Noop</onright>
 
 				<itemlayout height="40">
 					<include>NormalItemsForNormalList</include>
@@ -76,13 +87,25 @@
 				</focusedlayout>
 			</control>
 
+            <control type="scrollbar" id="151">
+                <include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="400" />
+                    <param name="height" value="160" />
+                </include>
+				<onleft>150</onleft>
+				<onright>Noop</onright>
+            </control>
+        
+            
 			<control type="label" id="130">
                 <description>Local Available Subtitle Label</description>
 				<posx>40</posx>
-				<posy>440</posy>
+				<posy>320</posy>
 				<width>480</width>
+				<height>400</height>
 				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
+				<textcolor>TextColor</textcolor>
+				<wrapmultiline>true</wrapmultiline>
 				<align>center</align>
 				<label>-</label>
 			</control>
@@ -90,20 +113,20 @@
 			<control type="label" id="140">
                 <description>Number Of Available Subtitles Label</description>
 				<posx>40</posx>
-				<posy>480</posy>
+				<posy>320</posy>
 				<width>480</width>
 				<font>DialogTextFont</font>
-				<textcolor>SecondaryColor</textcolor>
+				<textcolor>TextColor</textcolor>
 				<align>center</align>
 				<label>-</label>
 			</control>
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="520" />
-                    <param name="height" value="80" />
+                    <param name="posy" value="480" />
+                    <param name="height" value="120" />
                 </include>
-				<onright>9000</onright>
+				<onright>120</onright>
 
                 <control type="button" id="160">
                     <description>Manual Search Button</description>
@@ -111,6 +134,7 @@
                 </control>
 				<control type="button" id="7">
                     <description>Close Button</description>
+                    <posy>40</posy>
 					<label>$LOCALIZE[31915]</label>
                     <onclick>Close</onclick>
 				</control>
