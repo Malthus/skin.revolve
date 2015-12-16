@@ -24,6 +24,67 @@
         </definition>
     </include>
     
+    <include name="ButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+        <param name="label" default="-" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$PARAM[label]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="AddButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[15019]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ApplyButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[732]</label>
+            </control>
+        </definition>
+    </include>
+    
+    <include name="DeleteButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[117]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="EditButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[21435]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="SettingsButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -747,7 +808,7 @@
             </include>
         </definition>
 	</include>
--->	
+	
 	<include name="TwelveLinesDialog">
         <definition>
             <include name="WindowForDialog">
@@ -756,7 +817,7 @@
             </include>
         </definition>
 	</include>
-
+-->
 	<include name="ThirteenLinesDialog">
         <definition>
             <include name="WindowForDialog">

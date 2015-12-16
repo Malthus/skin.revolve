@@ -6,6 +6,12 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFullWindowDialog</posy>
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForFullWindowDialog" />
+                <param name="headerlabel" value="$LOCALIZE[19143]" />
+                <param name="icontexture" value="icons/icon-television.png" />
+            </include>
+<!--
 			<include name="FullWindowDialog" />
             
             <include name="DefaultIconForDialog">
@@ -16,12 +22,12 @@
                 <include name="MarkupForHeaderForDialog" />
 				<label>$LOCALIZE[19143]</label>
 			</control>
-
+-->
 			<control type="group">
 				<control type="group">
 					<posx>560</posx>
 					<posy>80</posy>
-					<include>TitledHalfListFrameForDialog</include>
+					<include name="TitledHalfListFrameForDialog" />
 				</control>
 				
 				<control type="label">
@@ -47,17 +53,17 @@
 					<onright>11</onright>
 
 					<itemlayout height="40">
-						<include>NormalItemsForGroupList</include>
+						<include name="NormalItemsForGroupList" />
 					</itemlayout>
 					
 					<focusedlayout height="40">
 						<control type="group">
 							<visible>Control.HasFocus(13)</visible>
-							<include>FocusedItemsForGroupList</include>
+							<include name="FocusedItemsForGroupList" />
 						</control>
 						<control type="group">
 							<visible>!Control.HasFocus(13)</visible>
-							<include>SelectedItemsForGroupList</include>
+							<include name="SelectedItemsForGroupList" />
 						</control>
 					</focusedlayout>
 				</control>
@@ -67,7 +73,7 @@
 				<control type="group">
 					<posx>560</posx>
 					<posy>490</posy>
-					<include>TitledHalfListFrameForDialog</include>
+					<include name="TitledHalfListFrameForDialog" />
 				</control>
 				
 				<control type="label">
@@ -93,17 +99,17 @@
 					<onright>11</onright>
 				
 					<itemlayout height="40">
-						<include>NormalItemsForGroupList</include>
+						<include name="NormalItemsForGroupList" />
 					</itemlayout>
 					
 					<focusedlayout height="40">
 						<control type="group">
 							<visible>Control.HasFocus(12)</visible>
-							<include>FocusedItemsForGroupList</include>
+							<include name="FocusedItemsForGroupList" />
 						</control>
 						<control type="group">
 							<visible>!Control.HasFocus(12)</visible>
-							<include>SelectedItemsForGroupList</include>
+							<include name="SelectedItemsForGroupList" />
 						</control>
 					</focusedlayout>
 				</control>
@@ -113,7 +119,7 @@
 				<control type="group">
 					<posx>1200</posx>
 					<posy>80</posy>
-					<include>TitledFullListFrameForDialog</include>
+					<include name="TitledFullListFrameForDialog" />
 				</control>
 				
 				<control type="label">
@@ -139,17 +145,17 @@
 					<onright>Noop</onright>
 				
 					<itemlayout height="100">
-						<include>NormalListItemForHalfWidthDialogList</include>
+						<include name="NormalListItemForHalfWidthDialogList" />
 					</itemlayout>
 
 					<focusedlayout height="100">
 						<control type="group">
 							<visible>Control.HasFocus(11)</visible>
-							<include>FocusedListItemForHalfWidthDialogList</include>
+							<include name="FocusedListItemForHalfWidthDialogList" />
 						</control>
 						<control type="group">
 							<visible>!Control.HasFocus(11)</visible>
-							<include>NormalListItemForHalfWidthDialogList</include>
+							<include name="NormalListItemForHalfWidthDialogList" />
 						</control>
 					</focusedlayout>
 				</control>
@@ -162,27 +168,23 @@
                 </include>
                 <onright>13</onright>
 
-                <control type="button" id="26">
-                    <description>New Group Button</description>
-                    <label>$LOCALIZE[15019]</label>
-                </control>
-                <control type="button" id="27">
-                    <description>Edit Group Button</description>
-                    <label>$LOCALIZE[21435]</label>
-                </control>
+                <include name="AddButtonForDialog">
+                    <param name="id" value="26" />
+                </include>
+                <include name="EditButtonForDialog">
+                    <param name="id" value="27" />
+                </include>
                 <control type="radiobutton" id="25">
                     <description>Hide/Unhide Group Radiobutton</description>
                     <label>$LOCALIZE[19289]</label>
                 </control>
-                <control type="button" id="28">
-                    <description>Delete Group Button</description>
-                    <label>$LOCALIZE[117]</label>
-                </control>
-                <control type="button" id="29">
-                    <description>Ok Button</description>
-                    <posy>40</posy>
-                    <label>$LOCALIZE[186]</label>
-                </control>
+                <include name="DeleteButtonForDialog">
+                    <param name="id" value="28" />
+                </include>
+                <include name="OkButtonForDialog">
+                    <param name="id" value="29" />
+                    <param name="posy" value="40" />
+                </include>
 			</control>
 		</control>
 	</controls>
