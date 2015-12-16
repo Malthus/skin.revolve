@@ -6,16 +6,14 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForTenLinesDialog</posy>
-			<include name="TenLinesDialog" />
-
-            <include name="SmallIconForDialog">
-                <param name="texture" value="icons/icon-disc.png" />
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForTenLinesDialog" />
+                <param name="headerid" value="2" />
+                <param name="headerlabel" value="$LOCALIZE[13406]" />
+                <param name="iconsmallvisible" value="true" />
+                <param name="icondefaultvisible" value="false" />
+                <param name="icontexture" value="icons/icon-disc.png" />
             </include>
-            
-			<control type="label" id="2">
-                <include name="MarkupForHeaderForDialog" />
-				<label>$LOCALIZE[13406]</label>
-			</control>
 
             <include name="LabelForDialog">
                 <param name="posy" value="80" />
@@ -24,14 +22,15 @@
 
 			<control type="list" id="10">
                 <description>Media Sources List</description>
-				<posx>560</posx>
-				<posy>120</posy>
-				<width>1240</width>
-				<height>240</height>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="240" />
+                    <param name="pagecontrol" value="6" />
+                </include>
 				<onup>12</onup>
 				<ondown>12</ondown>
 				<onleft>9000</onleft>
-				<onright>Noop</onright>
+				<onright>6</onright>
 
 				<itemlayout height="40">
 					<include name="NormalItemsForNormalList" />
@@ -48,6 +47,14 @@
 					</control>
 				</focusedlayout>
 			</control>
+            
+            <control type="scrollbar" id="6">
+                <include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="240" />
+                </include>
+				<onleft>12</onleft>
+            </control>
 			
             <include name="LabelForDialog">
                 <param name="posy" value="400" />
