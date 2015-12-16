@@ -398,34 +398,6 @@
         </definition>
 	</include>
 
-	<include name="MoveCircle">
-        <param name="posy" default="0" />
-        <param name="color" default="MainColor" />
-        <param name="size" default="60" />
-        <param name="time" default="20000" />
-        <param name="startleft" default="true" />
-        <param name="startright" default="false" />
-    
-        <definition>
-            <control type="image">
-                <visible>$PARAM[startleft]</visible>
-                <animation effect="slide" tween="linear" start="-$PARAM[size],0" end="1920,0" time="$PARAM[time]" loop="true" condition="true">Conditional</animation>
-                <posy>$PARAM[posy]</posy>
-                <width>$PARAM[size]</width>
-                <height>$PARAM[size]</height>
-                <texture colordiffuse="$PARAM[color]">elements/circle-mask.png</texture>
-            </control>
-            <control type="image">
-                <visible>$PARAM[startright]</visible>
-                <animation effect="slide" tween="linear" start="1920,0" end="-$PARAM[size],0" time="$PARAM[time]" loop="true" condition="true">Conditional</animation>
-                <posy>$PARAM[posy]</posy>
-                <width>$PARAM[size]</width>
-                <height>$PARAM[size]</height>
-                <texture colordiffuse="$PARAM[color]">elements/circle-mask.png</texture>
-            </control>
-        </definition>
-	</include>
-
 	<include name="OrbitCircle">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -433,9 +405,24 @@
         <param name="color" default="MainColor" />
         <param name="radius" default="280" />
         <param name="time" default="10000" />
-    
+        <param name="direction" default="true" />
+
         <definition>
             <control type="group">
+                <visible>$PARAM[direction]</visible>
+                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" begin="0" end="-360" time="$PARAM[time]" loop="true" condition="true">Conditional</animation>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="image">
+                    <posy>$PARAM[radius]</posy>
+                    <width>$PARAM[size]</width>
+                    <height>$PARAM[size]</height>
+                    <texture colordiffuse="$PARAM[color]">elements/circle-mask.png</texture>
+                </control>
+            </control>
+            <control type="group">
+                <visible>!$PARAM[direction]</visible>
                 <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" begin="0" end="360" time="$PARAM[time]" loop="true" condition="true">Conditional</animation>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
