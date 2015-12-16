@@ -4,6 +4,9 @@
 		<definition>
             <control type="group">
                 <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+                <animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+                
                 <include name="OrbitCircle">
                     <param name="posx" value="0" />
                     <param name="posy" value="773" />
@@ -63,12 +66,15 @@
             
             <control type="group">
                 <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+                <animation effect="slide" delay="500" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="500" reversible="false">WindowClose</animation>
+
                 <include name="OrbitCircle">
                     <param name="posx" value="0" />
                     <param name="posy" value="773" />
                     <param name="size" value="50" />
                     <param name="radius" value="1000" />
-                    <param name="time" value="20000" />
+                    <param name="time" value="25000" />
                     <param name="direction" value="false" />
                 </include>
             </control>
