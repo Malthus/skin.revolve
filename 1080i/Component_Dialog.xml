@@ -61,6 +61,20 @@
         </definition>
     </include>
     
+    <include name="CloseButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+        <param name="label" default="$LOCALIZE[31915]" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$PARAM[label]</label>
+                <onclick>Close</onclick>
+            </control>
+        </definition>
+    </include>
+
     <include name="DeleteButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -492,7 +506,7 @@
 					<width>262</width>
 					<height>262</height>
 					<texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
-					<aspectratio>keep</aspectratio>
+                    <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
 			</control>
         </definition>
@@ -546,6 +560,27 @@
 					
             <focusedlayout height="40">
                 <include>NormalItemsForInfoListInDialog</include>
+            </focusedlayout>
+        </definition>
+	</include>
+
+	<include name="SelectableItemsForInfoListInDialog">
+        <param name="listid" default="0" />
+    
+        <definition>
+            <itemlayout height="40">
+                <include name="NormalItemsForInfoListInDialog" />
+            </itemlayout>
+                
+            <focusedlayout height="40">
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid])</visible>
+                    <include name="FocusedItemsForInfoListInDialog" />
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[listid])</visible>
+                    <include name="NormalItemsForInfoListInDialog" />
+                </control>
             </focusedlayout>
         </definition>
 	</include>
@@ -835,7 +870,7 @@
             </include>
         </definition>
 	</include>
-	
+<!--	
 	<include name="FullWindowDialog">
         <definition>
             <include name="WindowForDialog">
@@ -844,7 +879,7 @@
             </include>
         </definition>
 	</include>
-	
+-->	
 	<include name="TitledFullListFrameForDialog">
 		<control type="group">
 			<control type="image">

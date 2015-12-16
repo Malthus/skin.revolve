@@ -6,58 +6,37 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="ThirteenLinesDialog" />
-
-			<control type="group">
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>DefaultCircleThumbnailIcon</include>
-			</control>
-
-			<control type="label">
-                <include name="MarkupForHeaderForDialog" />
-				<label>$LOCALIZE[13406]</label>
-			</control>
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[13406]" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+            </include>
 
 			<control type="group">
                 <description>Video Details Icons</description>
 				<posx>560</posx>
 				<posy>80</posy>
-				<include>HorizontalDialogListOfContentMediaFlag</include>
+				<include name="HorizontalDialogListOfContentMediaFlag" />
 			</control>
 
 			<control type="list" id="5">
                 <description>Picture Details List</description>
-				<posx>560</posx>
-				<posy>160</posy>
-				<width>1240</width>
-				<height>440</height>
-				<font>DialogTextFont</font>
-				<pagecontrol>6</pagecontrol>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="160" />
+                    <param name="height" value="440" />
+                    <param name="pagecontrol" value="6" />
+                </include>
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<onleft>9000</onleft>
 				<onright>6</onright>
 	
-				<itemlayout height="40">
-					<include>NormalItemsForInfoListInDialog</include>
-				</itemlayout>
-					
-				<focusedlayout height="40">
-					<control type="group">
-						<visible>Control.HasFocus(5)</visible>
-						<include>FocusedItemsForInfoListInDialog</include>
-					</control>
-					<control type="group">
-						<visible>!Control.HasFocus(5)</visible>
-						<include>NormalItemsForInfoListInDialog</include>
-					</control>
-				</focusedlayout>
-			</control>
+                <include name="SelectableItemsForInfoListInDialog">
+                    <param name="listid" value="5" />
+                </include>
+            </control>
 			
 			<control type="scrollbar" id="6">
-                <description>Picture Details Scrollbar</description>
-				<visible>Control.IsVisible(5)</visible>
 				<include name="MarkupForScrollbarForDialog">
                     <param name="posy" value="160" />
                     <param name="height" value="440" />
@@ -75,11 +54,9 @@
                 </include>
                 <onright>5</onright>
             
-                <control type="button" id="21">
-                    <description>Ok Button</description>
-                    <label>$LOCALIZE[186]</label>
-                    <onclick>Close</onclick>
-                </control>
+                <include name="CloseButtonForDialog">
+                    <param name="id" value="21" />
+                </include>
 			</control>
 		</control>
 	</controls>
