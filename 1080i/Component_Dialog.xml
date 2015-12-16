@@ -493,7 +493,7 @@
 	</include>
 	
     <!-- ============================================================== -->
-
+<!--
     <include name="SmallIconForDialog">
         <param name="posx" default="PosXForSmallIconFrameForDialog" />
         <param name="posy" default="PosYForSmallIconFrameForDialog" />
@@ -516,7 +516,7 @@
 			</control>
         </definition>
     </include>
-
+-->
     <include name="DefaultIconForDialog">
         <param name="posx" default="PosXForDefaultIconFrameForDialog" />
         <param name="posy" default="PosYForDefaultIconFrameForDialog" />
@@ -661,7 +661,7 @@
             <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
         </definition>
     </include>
-
+<!--
 	<include name="ThreeLinesDialog">
         <definition>
             <include name="WindowForDialog">
@@ -688,7 +688,7 @@
             </include>
         </definition>
 	</include>
-	
+-->	
 	<include name="TenLinesDialog">
         <definition>
             <include name="WindowForDialog">
