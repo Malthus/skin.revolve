@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="BackgroundAnimationForHomeRevolveList">
+		<definition>
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="900" />
+                    <param name="time" value="10000" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="10" />
+                    <param name="radius" value="920" />
+                    <param name="time" value="9900" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="25" />
+                    <param name="radius" value="890" />
+                    <param name="time" value="10200" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="910" />
+                    <param name="time" value="10500" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="930" />
+                    <param name="time" value="9950" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="960" />
+                    <param name="time" value="9980" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="10" />
+                    <param name="radius" value="895" />
+                    <param name="time" value="9920" />
+                </include>
+            </control>
+            
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="50" />
+                    <param name="radius" value="1000" />
+                    <param name="time" value="20000" />
+                    <param name="direction" value="false" />
+                </include>
+            </control>
+		</definition>
+	</include>
+    
 	<include name="ListForHomeRevolveList">
 		<definition>
             <control type="group">
