@@ -75,6 +75,18 @@
         </definition>
     </include>
 
+    <include name="DefaultsButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[409]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="DeleteButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -131,6 +143,19 @@
             <control type="button" id="$PARAM[id]">
                 <posy>$PARAM[posy]</posy>
                 <label>$LOCALIZE[222]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="SpacerForButtonListForDialog">
+        <param name="id" default="0" />
+        <param name="buttonid" default="0" />
+    
+        <definition>
+            <control type="image" id="$PARAM[id]">
+                <visible>!Control.IsVisible($PARAM[buttonid])</visible>
+                <height>40</height>
+                <texture>-</texture>
             </control>
         </definition>
     </include>
@@ -267,39 +292,49 @@
     </include>
     
 	<include name="DefaultControlsForDialog">
+        <param name="buttonid" default="7" />
+        <param name="radiobuttonid" default="8" />
+        <param name="spincontrolexid" default="9" />
+        <param name="imageid" default="11" />
+        <param name="editvisible" default="true" />
+        <param name="editid" default="12" />
+        <param name="sliderexid" default="13" />
+        <param name="labelid" default="14" />
+        
         <definition>
-			<control type="button" id="7">
+			<control type="button" id="$PARAM[buttonid]">
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-			<control type="radiobutton" id="8">
+			<control type="radiobutton" id="$PARAM[radiobuttonid]">
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-			<control type="spincontrolex" id="9">
+			<control type="spincontrolex" id="$PARAM[spincontrolexid]">
 				<width>1240</width>
 				<align>left</align>
 				<reverse>yes</reverse>
 			</control>
 
-			<control type="image" id="11">
+			<control type="image" id="$PARAM[imageid]">
 				<height>10</height>
 				<texture>-</texture>
 			</control>
 
-			<control type="edit" id="12">
+			<control type="edit" id="$PARAM[editid]">
+                <visible>$PARAM[editvisible]</visible>
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-			<control type="sliderex" id="13">
+			<control type="sliderex" id="$PARAM[sliderexid]">
 				<width>1240</width>
 				<align>left</align>
 			</control>
 
-            <control type="label" id="14">
+            <control type="label" id="$PARAM[labelid]">
 				<width>1240</width>
                 <textcolor>SelectColor</textcolor>
                 <label>-</label>
@@ -698,7 +733,7 @@
 			</control>
         </definition>
     </include>
-
+<!--
     <include name="DefaultQuestionMarkForDialog">
         <param name="posx" default="PosXForDefaultIconFrameForDialog" />
         <param name="posy" default="PosYForDefaultIconFrameForDialog" />
@@ -711,7 +746,7 @@
 			</control>
         </definition>
     </include>
-
+-->
     <include name="DefaultSettingsIconForDialog">
         <param name="posx" default="PosXForDefaultIconFrameForDialog" />
         <param name="posy" default="PosYForDefaultIconFrameForDialog" />

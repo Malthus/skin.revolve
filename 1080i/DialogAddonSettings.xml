@@ -6,63 +6,51 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="ThirteenLinesDialog" />
-			
-            <include name="DefaultSettingsIconForDialog" />
-			
-			<control type="label" id="20">
-                <include name="MarkupForHeaderForDialog" />
-				<label>-</label>
-			</control>
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerid" value="20" />
+                <param name="icontexture" value="icons/icon-settings.png" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+            </include>
 
 			<control type="grouplist" id="2">
                 <description>Control Area</description>
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>520</height>
-				<itemgap>0</itemgap>
+                <include name="MarkupForListForDialog">
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="22" />
+                </include>
 				<onup>2</onup>
 				<ondown>2</ondown>
 				<onleft>9</onleft>
+				<onright>22</onright>
+			</control>
+
+            <include name="DefaultControlsForDialog">
+                <param name="buttonid" value="3" />
+                <param name="radiobuttonid" value="4" />
+                <param name="spincontrolexid" value="5" />
+                <param name="imageid" value="6" />
+                <param name="editvisible" value="false" />
+                <param name="labelid" value="7" />
+                <param name="sliderexid" value="8" />
+            </include>
+
+			<control type="scrollbar" id="22">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="160" />
+                    <param name="height" value="440" />
+                </include>
+				<onup>22</onup>
+				<ondown>22</ondown>
+				<onleft>2</onleft>
 				<onright>Noop</onright>
 			</control>
-
-			<control type="button" id="3">
-				<align>left</align>
-			</control>
-
-			<control type="radiobutton" id="4">
-				<radioposx>1180</radioposx>
-				<align>left</align>
-			</control>
-
-			<control type="spincontrolex" id="5">
-				<align>left</align>
-				<reverse>yes</reverse>
-			</control>
-
-			<control type="image" id="6">
-				<height>4</height>
-				<texture>-</texture>
-			</control>
-
-			<control type="label" id="7">
-				<align>left</align>
-				<label>-</label>
-			</control>
-
-			<control type="sliderex" id="8">
-				<align>left</align>
-			</control>
-
+            
 			<control type="grouplist" id="9">
-                <description>Button Area</description>
-				<posx>40</posx>
-				<posy>320</posy>
-				<width>480</width>
-				<height>120</height>
-				<itemgap>0</itemgap>
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="320" />
+                    <param name="height" value="120" />
+                </include>
 				<onleft>Noop</onleft>
 				<onright>2</onright>
 				<onup>9000</onup>
@@ -82,18 +70,15 @@
                 <ondown>9</ondown>
 				<onright>2</onright>
 
-				<control type="button" id="12">
-                    <description>Defaults Button</description>
-					<label>$LOCALIZE[409]</label>
-				</control>
-				<control type="button" id="10">
-                    <description>OK Button</description>
-					<label>$LOCALIZE[186]</label>
-				</control>
-				<control type="button" id="11">
-                    <description>Cancel Button</description>
-					<label>$LOCALIZE[222]</label>
-				</control>
+                <include name="DefaultsButtonForDialog">
+                    <param name="id" value="12" />
+                </include>
+                <include name="OkButtonForDialog">
+                    <param name="id" value="10" />
+                </include>
+                <include name="CancelButtonForDialog">
+                    <param name="id" value="11" />
+                </include>
 			</control>
 		</control>
 	</controls>
