@@ -14,16 +14,7 @@
                 <param name="iconlabel" value="$LOCALIZE[31904]" />
                 <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
             </include>
-<!--
-			<posy>PosYForTenLinesDialog</posy>
-			<include name="TenLinesDialog" />
 
-			<include name="DefaultQuestionMarkForDialog" />
-
-            <include name="HeaderForDialog">
-                <param name="label" value="$INFO[Window.Property(DialogTitle)]" />
-            </include>
--->		
             <include name="LabelForDialog">
                 <param name="posy" value="80" />
                 <param name="label" value="$INFO[Window.Property(DialogMessage)]" />
