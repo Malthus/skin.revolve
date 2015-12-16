@@ -6,14 +6,10 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForTenLinesDialog</posy>
-			<include name="TenLinesDialog" />
-
-            <include name="DefaultIconForDialog">
-                <param name="texture" value="icons/icon-pencil.png" />
-            </include>
-
-            <include name="HeaderForDialog">
-                <param name="label" value="$LOCALIZE[31888]" />
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForTenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[31888]" />
+                <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
 
             <include name="LabelForDialog">
@@ -22,13 +18,11 @@
 
 			<control type="group">
                 <control type="list" id="40">
-                    <posx>560</posx>
-                    <posy>120</posy>
-                    <height>360</height>
-                    <itemgap>0</itemgap>
-                    <align>left</align>
-                    <scrolltime>0</scrolltime>
-                    <pagecontrol>41</pagecontrol>
+                    <include name="MarkupForListForDialog">
+                        <param name="posy" value="120" />
+                        <param name="height" value="360" />
+                        <param name="pagecontrol" value="41" />
+                    </include>
                     <onup>40</onup>
                     <ondown>40</ondown>
                     <onleft>9000</onleft>
