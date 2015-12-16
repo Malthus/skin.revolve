@@ -17,7 +17,7 @@
     <include name="PlayerMediaIconForOverlay">
         <definition>
             <control type="group">
-                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),1)</visible>
                 <include name="OrbitCircle">
                     <param name="posx" value="1765" />
                     <param name="posy" value="941" />
