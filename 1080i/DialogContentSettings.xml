@@ -6,14 +6,13 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForTenLinesDialog</posy>
-			<include name="TenLinesDialog" />
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForTenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[20333]" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+                <param name="iconlabel" value="$LOCALIZE[31904]" />
+            </include>
 
-            <include name="DefaultQuestionMarkForDialog" />
-            
-			<include name="HeaderForDialog">
-				<param name="label" value="$LOCALIZE[20333]" />
-			</include>
-			
 			<control type="spincontrolex" id="20">
                 <description>Directory Content Option</description>
 				<posx>560</posx>
@@ -50,10 +49,11 @@
 
 			<control type="list" id="21">
                 <description>List With Relevant Plugins</description>
-				<posx>560</posx>
-				<posy>140</posy>
-				<width>1240</width>
-				<height>140</height>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="140" />
+                    <param name="height" value="140" />
+                    <param name="pagecontrol" value="31" />
+                </include>
 				<onup>20</onup>
 				<onleft>9000</onleft>
 				<onright>Noop</onright>
@@ -74,14 +74,22 @@
 					</control>
 				</focusedlayout>
 			</control>
+            
+            <control type="scrollbar" id="31">
+                <include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="140" />
+                    <param name="height" value="140" />
+                </include>
+				<onleft>21</onleft>
+				<onright>Noop</onright>
+            </control>
 
 			<control type="grouplist" id="5">
-				<posx>560</posx>
-				<posy>320</posy>
-				<width>1240</width>
-				<height>160</height>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="320" />
+                    <param name="height" value="160" />
+                    <param name="pagecontrol" value="6" />
+                </include>
 				<onup>21</onup>
 				<ondown>20</ondown>
 				<onleft>9000</onleft>
@@ -90,6 +98,15 @@
 
             <include name="DefaultControlsForDialog" />
             
+            <control type="scrollbar" id="6">
+                <include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="320" />
+                    <param name="height" value="160" />
+                </include>
+				<onleft>5</onleft>
+				<onright>Noop</onright>
+            </control>
+
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
                     <param name="posy" value="320" />
@@ -97,19 +114,13 @@
                 </include>
 				<onright>5</onright>
 
-                <control type="button" id="22">
-                    <description>Settings Button</description>
-                    <label>$LOCALIZE[5]</label>
-                </control>
-                <control type="button" id="28">
-                    <description>Ok Button</description>
-                    <posy>40</posy>
-                    <label>$LOCALIZE[186]</label>
-                </control>
-                <control type="button" id="29">
-                    <description>Cancel Button</description>
-                    <label>$LOCALIZE[222]</label>
-                </control>
+                <include name="SettingsButtonForDialog">
+                    <param name="id" value="22" />
+                </include>
+                <include name="OkButtonForDialog">
+                    <param name="posy" value="40" />
+                </include>
+                <include name="CancelButtonForDialog" />
 			</control>
 		</control>
 	</controls>

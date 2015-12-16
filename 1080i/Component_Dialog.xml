@@ -10,6 +10,42 @@
     <constant name="CenterXForDefaultIconFrameForDialog">280</constant>
     <constant name="CenterYForDefaultIconFrameForDialog">155</constant>
     
+    <include name="SettingsButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[5]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="OkButtonForDialog">
+        <param name="id" default="28" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[186]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="CancelButtonForDialog">
+        <param name="id" default="29" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[222]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="MarkupForButtonListForDialog">
         <param name="posy" default="320" />
         <param name="height" default="-" />
