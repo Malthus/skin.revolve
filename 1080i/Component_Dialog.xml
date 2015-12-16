@@ -10,6 +10,20 @@
     <constant name="CenterXForDefaultIconFrameForDialog">280</constant>
     <constant name="CenterYForDefaultIconFrameForDialog">155</constant>
     
+    <include name="HelpButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="radiobutton" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[10043]</label>
+                <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
+                <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
+            </control>
+        </definition>
+    </include>
+    
     <include name="SettingsButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -724,7 +738,7 @@
             </include>
         </definition>
 	</include>
--->	
+	
 	<include name="TenLinesDialog">
         <definition>
             <include name="WindowForDialog">
@@ -733,7 +747,7 @@
             </include>
         </definition>
 	</include>
-	
+-->	
 	<include name="TwelveLinesDialog">
         <definition>
             <include name="WindowForDialog">

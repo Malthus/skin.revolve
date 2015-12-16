@@ -6,17 +6,12 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForTwelveLinesDialog</posy>
-			<include name="TwelveLinesDialog" />
-
-            <include name="DefaultIconForDialog">
-                <param name="texture" value="icons/icon-lookingglass.png" />
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForTwelveLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[19142]" />
+                <param name="icontexture" value="icons/icon-lookingglass.png" />
             </include>
-            
-			<control type="label">
-                <include name="MarkupForHeaderForDialog" />
-				<label>$LOCALIZE[19142]</label>
-			</control>
-			
+
 			<control type="edit" id="9">
                 <description>Search Edit Box</description>
 				<posx>560</posx>
@@ -30,6 +25,7 @@
 				<onup>24</onup>
 				<ondown>10</ondown>
 			</control>
+
 			<control type="radiobutton" id="10">
                 <description>Include Description Radiobutton</description>
 				<posx>560</posx>
@@ -56,6 +52,7 @@
 				<onleft>10</onleft>
 				<onright>Noop</onright>
 			</control>
+
 			<control type="spincontrolex" id="18">
                 <description>Genre Selection Spinner</description>
 				<posx>560</posx>
@@ -106,6 +103,7 @@
 				<onright>Noop</onright>
 				<onleft>12</onleft>
 			</control>
+
 			<control type="edit" id="14">
                 <description>Start Date Edit Box</description>
 				<posx>560</posx>
@@ -130,6 +128,7 @@
 				<onleft>14</onleft>
 				<onright>Noop</onright>
 			</control>
+
 			<control type="edit" id="16">
                 <description>Start Time Edit Box</description>
 				<posx>560</posx>
@@ -179,6 +178,7 @@
 				<onleft>21</onleft>
 				<onright>Noop</onright>
 			</control>
+
 			<control type="radiobutton" id="19">
                 <description>Avoid Repeats Radiobutton</description>
 				<posx>560</posx>
@@ -240,12 +240,9 @@
                 </include>
 				<onright>9</onright>
 
-				<control type="radiobutton" id="29">
-                    <description>Help Radiobutton</description>
-					<label>$LOCALIZE[10043]</label>
-                    <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
-					<onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
-				</control>
+                <include name="HelpButtonForDialog">
+                    <param name="id" value="29" />
+                </include>
 				<control type="button" id="28">
                     <description>Defaults Button</description>
 					<label>$LOCALIZE[409]</label>
@@ -255,10 +252,9 @@
                     <posy>40</posy>
 					<label>$LOCALIZE[137]</label>
 				</control>
-				<control type="button" id="25">
-                    <description>Cancel Button</description>
-					<label>$LOCALIZE[222]</label>
-				</control>
+                <include name="CancelButtonForDialog">
+                    <param name="id" value="25" />
+                </include>
 			</control>
             
             <control type="group">
