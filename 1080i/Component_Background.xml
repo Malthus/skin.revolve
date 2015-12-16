@@ -95,4 +95,14 @@
             <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
         </definition>
     </include>
+    
+    <include name="EmptyBackground">
+        <definition>
+            <control type="image">
+                <include name="FullscreenDimensions" />
+                <texture background="true">black.jpg</texture>
+                <fadetime>500</fadetime>
+            </control>
+        </definition>
+    </include>
 </includes>

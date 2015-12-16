@@ -13,11 +13,7 @@
 	</animation>
 
 	<controls>
-        <control type="group">
-			<include>FullscreenDimensions</include>
-			<texture>black.png</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-        </control>
+        <include name="EmptyBackground" />
 
         <control type="group">
             <posx>560</posx>

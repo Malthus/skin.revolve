@@ -4,14 +4,7 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-        <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>1920</width>
-            <height>1080</height>
-            <texture background="true">black.jpg</texture>
-            <fadetime>500</fadetime>
-        </control>
+        <include name="EmptyBackground" />
 
         <include name="OrbitCircle">
             <param name="posx" value="960" />
