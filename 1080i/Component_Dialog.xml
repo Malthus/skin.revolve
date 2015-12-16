@@ -442,7 +442,7 @@
                 </control>
                 
                 <control type="group">
-                    <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                    <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
                     <include name="OrbitCircle">
                         <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
                         <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
