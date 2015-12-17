@@ -405,12 +405,13 @@
         <param name="color" default="MainColor" />
         <param name="radius" default="280" />
         <param name="time" default="10000" />
+        <param name="delay" default="0" />
         <param name="direction" default="true" />
 
         <definition>
             <control type="group">
                 <visible>$PARAM[direction]</visible>
-                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" begin="0" end="-360" time="$PARAM[time]" loop="true" condition="true">Conditional</animation>
+                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" begin="0" end="-360" time="$PARAM[time]" delay="$PARAM[delay]" loop="true" condition="true">Conditional</animation>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 
