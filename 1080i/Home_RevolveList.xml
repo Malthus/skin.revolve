@@ -77,6 +77,14 @@
                     <param name="time" value="25000" />
                     <param name="direction" value="false" />
                 </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="40" />
+                    <param name="radius" value="1500" />
+                    <param name="time" value="14000" />
+                </include>
             </control>
 		</definition>
 	</include>
