@@ -164,6 +164,8 @@
 					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1590,0" time="500" />
 				</animation>
 
+                <include name="BackgroundAnimationForMediaThumbnailIconForOSD" />
+                
 				<control type="group">
 					<posx>40</posx>
 					<posy>806</posy>
@@ -180,6 +182,8 @@
 					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1900,0" time="500" />
 				</animation>
 
+                <include name="BackgroundAnimationForMediaThumbnailIconForOSD" />
+                
 				<control type="group">
 					<posx>40</posx>
 					<posy>806</posy>
@@ -189,6 +193,58 @@
         </definition>
 	</include>
 
+	<include name="BackgroundAnimationForMediaThumbnailIconForOSD">
+        <definition>
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),1)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="175" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="25" />
+                    <param name="radius" value="145" />
+                    <param name="time" value="12000" />
+                </include>
+            </control>
+            
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="175" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="175" />
+                    <param name="time" value="3000" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="175" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="10" />
+                    <param name="radius" value="190" />
+                    <param name="time" value="4000" />
+                    <param name="direction" value="false" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="175" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="5" />
+                    <param name="radius" value="210" />
+                    <param name="time" value="3500" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="175" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="10" />
+                    <param name="radius" value="230" />
+                    <param name="time" value="4500" />
+                    <param name="direction" value="false" />
+                </include>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="MediaBackgroundMusicLabelForOSD">
         <definition>
             <control type="group">
