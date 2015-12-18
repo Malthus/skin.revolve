@@ -30,16 +30,18 @@
             <control type="group">
                 <visible>Control.IsVisible(52)</visible>
                 
+                <animation type="WindowOpen">
+                    <effect type="fade" start="0" end="100" time="500" />
+                </animation>
+                <animation type="WindowClose">
+                    <effect type="fade" start="100" end="0" time="500" />
+                </animation>
+
+                <include name="BackgroundAnimationForCircleListView" />
+                    
                 <control type="group">
                     <include name="VisibilityOfListIconInView" />
                         
-                    <animation type="WindowOpen">
-                        <effect type="fade" start="0" end="100" time="500" />
-                    </animation>
-                    <animation type="WindowClose">
-                        <effect type="fade" start="100" end="0" time="500" />
-                    </animation>
-
                     <posx>15</posx>
                     <posy>255</posy>
                     <include name="ShadowForHugeCircleThumbnailIcon" />
@@ -240,6 +242,67 @@
                 <height>HeightForVerticalScrollbarForView</height>
                 <onleft>52</onleft>
                 <onright>Noop</onright>
+            </control>
+        </definition>
+	</include>
+
+	<include name="BackgroundAnimationForCircleListView">
+        <definition>
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="320" />
+                    <param name="posy" value="560" />
+                    <param name="size" value="30" />
+                    <param name="radius" value="320" />
+                    <param name="time" value="16000" />
+                </include>
+            </control>
+            
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="320" />
+                    <param name="posy" value="560" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="380" />
+                    <param name="time" value="7500" />
+                    <param name="direction" value="false" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="320" />
+                    <param name="posy" value="560" />
+                    <param name="size" value="25" />
+                    <param name="radius" value="400" />
+                    <param name="time" value="7000" />
+                    <param name="direction" value="false" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="320" />
+                    <param name="posy" value="560" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="430" />
+                    <param name="time" value="6500" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="320" />
+                    <param name="posy" value="560" />
+                    <param name="size" value="35" />
+                    <param name="radius" value="800" />
+                    <param name="time" value="13000" />
+                    <param name="direction" value="false" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="320" />
+                    <param name="posy" value="560" />
+                    <param name="size" value="10" />
+                    <param name="radius" value="840" />
+                    <param name="time" value="4500" />
+                </include>
             </control>
         </definition>
 	</include>
