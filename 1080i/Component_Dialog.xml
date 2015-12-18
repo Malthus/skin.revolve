@@ -412,10 +412,7 @@
                         <param name="time" value="12000" />
                         <param name="direction" value="false" />
                     </include>
-                </control>
-                
-                <control type="group">
-                    <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+
                     <include name="OrbitCircle">
                         <param name="posx" value="CenterXForSmallIconFrameForDialog" />
                         <param name="posy" value="CenterYForSmallIconFrameForDialog" />
