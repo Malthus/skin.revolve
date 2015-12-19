@@ -53,43 +53,47 @@
 					<effect type="fade" start="100" end="0" time="500" />
 				</animation>
 			
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="posx" value="325" />
                     <param name="posy" value="930" />
                     <param name="width" value="1500" />
                     <param name="font" value="DefaultInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="label" value="[UPPERCASE]$INFO[Container(11).ListItem.ChannelGroup,, | ]$INFO[Container(11).ListItem.ChannelNumber,,. ]$INFO[Container(11).ListItem.ChannelName][/UPPERCASE]" />
                 </include>
                 
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="posx" value="325" />
                     <param name="posy" value="975" />
                     <param name="width" value="1500" />
                     <param name="font" value="BigInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="label" value="[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]" />
                 </include>
 
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="posx" value="325" />
                     <param name="posy" value="1015" />
                     <param name="width" value="200" />
                     <param name="font" value="DefaultInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="label" value="$INFO[Container(11).ListItem.StartTime]" />
                 </include>
 		
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="posx" value="1870" />
                     <param name="posy" value="1015" />
                     <param name="width" value="200" />
                     <param name="font" value="DefaultInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="align" value="right" />
                     <param name="label" value="$INFO[Container(11).ListItem.EndTime]" />
                 </include>

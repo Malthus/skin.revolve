@@ -25,11 +25,12 @@
                 <posx>PosXForContentForOSD</posx>
                 <posy>975</posy>
 				
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
                     <param name="font" value="BigInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
@@ -45,11 +46,12 @@
                 <posx>PosXForContentForOSD</posx>
                 <posy>934</posy>
 					
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
                     <param name="font" value="DefaultInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
@@ -63,11 +65,12 @@
                 <posx>PosXForAdditionalContentForOSD</posx>
                 <posy>934</posy>
 					
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="width" value="WidthForAdditionalContentForOSD" />
                     <param name="font" value="DefaultInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="align" value="right" />
                     <param name="label" value="$VAR[PlayerPlaylistPositionLabel]" />
                 </include>
@@ -89,11 +92,12 @@
                     <posx>PosXForContentForOSD</posx>
                     <posy>1015</posy>
                         
-                    <include name="NormalOutlineLabel">
+                    <include name="OutlineLabel">
                         <param name="width" value="200" />
                         <param name="font" value="DefaultInformationFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
                         <param name="label" value="$PARAM[playertimelabel]" />
                     </include>
                 </control>
@@ -102,11 +106,12 @@
                     <posx>PosXForAdditionalContentForOSD</posx>
                     <posy>1015</posy>
 
-                    <include name="NormalOutlineLabel">
+                    <include name="OutlineLabel">
                         <param name="width" value="200" />
                         <param name="font" value="DefaultInformationFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
                         <param name="align" value="right" />
                         <param name="label" value="$PARAM[playerdurationlabel]" />
                     </include>
@@ -276,11 +281,12 @@
                     <posx>390</posx>
                     <posy>1015</posy>
 					
-                    <include name="NormalOutlineLabel">
+                    <include name="OutlineLabel">
                         <param name="width" value="1480" />
                         <param name="font" value="DefaultInformationFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
                         <param name="label" value="$VAR[PlayerBackgroundMusicLabel]" />
                     </include>
                 </control>
@@ -354,11 +360,12 @@
                 <posx>PosXForContentForOSD</posx>
                 <posy>824</posy>
 					
-                <include name="NormalOutlineLabel">
+                <include name="OutlineLabel">
                     <param name="width" value="1530" />
                     <param name="font" value="DefaultInformationFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
+                    <param name="outlinesize" value="2" />
                     <param name="label" value="$VAR[PlayerVisualisationLabel]" />
                 </include>
             </control>
