@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="BannersView">
+		<control type="group">
+			<visible>Control.IsVisible(59)</visible>
+			<include name="BackgroundAnimationForBottomRing" />
+		</control>
+
 		<control type="panel" id="59">
 			<viewtype label="31939">list</viewtype>
 			<visible>true</visible>

@@ -1,5 +1,10 @@
 <includes>
 	<include name="GalleryView">
+		<control type="group">
+			<visible>Control.IsVisible(57)</visible>
+			<include name="BackgroundAnimationForBottomRing" />
+		</control>
+
 		<control type="fixedlist" id="57">
 			<viewtype label="31937">list</viewtype>
 			<visible allowhiddenfocus="true">true</visible>

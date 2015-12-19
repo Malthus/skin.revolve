@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="ThumbnailsView">
+		<control type="group">
+			<visible>Control.IsVisible(55)</visible>
+			<include name="BackgroundAnimationForBottomRing" />
+		</control>
+		
 		<control type="panel" id="55">
 			<viewtype label="31935">list</viewtype>
 			<visible>true</visible>

@@ -137,6 +137,65 @@
         </definition>
 	</include>
 
+	<include name="BackgroundAnimationForBottomRing">
+        <definition>
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="960" />
+                    <param name="posy" value="3600" />
+                    <param name="size" value="30" />
+                    <param name="radius" value="3000" />
+                    <param name="time" value="20000" />
+                </include>
+            </control>
+
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="960" />
+                    <param name="posy" value="3600" />
+                    <param name="size" value="40" />
+                    <param name="radius" value="2850" />
+                    <param name="time" value="30000" />
+                    <param name="direction" value="false" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="960" />
+                    <param name="posy" value="3600" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="3080" />
+                    <param name="time" value="21000" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="960" />
+                    <param name="posy" value="3600" />
+                    <param name="size" value="10" />
+                    <param name="radius" value="3120" />
+                    <param name="time" value="21010" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="960" />
+                    <param name="posy" value="3600" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="3150" />
+                    <param name="time" value="21020" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="960" />
+                    <param name="posy" value="3600" />
+                    <param name="size" value="25" />
+                    <param name="radius" value="3100" />
+                    <param name="time" value="21100" />
+                </include>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="BottomRing">
         <definition>
             <animation effect="slide" start="0,240" end="0,0" time="500">WindowOpen</animation>
@@ -149,7 +208,7 @@
                 <texture colordiffuse="MainColor">elements/ring-maskbottom.png</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
-                    
+
             <control type="group">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
                 <posx>560</posx>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="LandscapeView">
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<include name="BackgroundAnimationForBottomRing" />
+		</control>
+        
 		<control type="fixedlist" id="53">
 			<viewtype label="31933">list</viewtype>
 			<visible allowhiddenfocus="true">true</visible>
