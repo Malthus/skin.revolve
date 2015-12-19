@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="BackgroundAnimationForLeftRing">
+        <definition>
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="30" />
+                    <param name="radius" value="800" />
+                    <param name="time" value="20000" />
+                </include>
+            </control>
+
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="40" />
+                    <param name="radius" value="1760" />
+                    <param name="time" value="34000" />
+                    <param name="direction" value="false" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="1070" />
+                    <param name="time" value="17700" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="1100" />
+                    <param name="time" value="17500" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="773" />
+                    <param name="size" value="25" />
+                    <param name="radius" value="1120" />
+                    <param name="time" value="18000" />
+                </include>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="LeftRing">
         <definition>
             <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
@@ -50,7 +101,7 @@
                 <posy>680</posy>
                 <width>580</width>
                 <height>340</height>
-                <font>HomeMenuDetailFont</font>
+                <font>DescriptionFont</font>
                 <textcolor>BackgroundColor</textcolor>
                 <align>left</align>
                 <aligny>top</aligny>

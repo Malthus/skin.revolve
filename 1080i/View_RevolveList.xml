@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="RevolveListView">
+		<control type="group">
+			<visible>Control.IsVisible(54)</visible>
+			<include name="BackgroundAnimationForLeftRing" />
+		</control>
+
 		<control type="fixedlist" id="54">
             <description>Invisible Revolve List (for mouse control)</description>
 			<viewtype label="31934">list</viewtype>
@@ -38,7 +43,7 @@
                 
                 <include name="OutlineLabel">
                     <param name="posx" value="860" />
-                    <param name="posy" value="645" />
+                    <param name="posy" value="650" />
                     <param name="width" value="1000" />
                     <param name="height" value="100" />
                     <param name="font" value="DetailViewFont" />
@@ -51,7 +56,7 @@
                 
                 <include name="OutlineLabel">
                     <param name="posx" value="860" />
-                    <param name="posy" value="745" />
+                    <param name="posy" value="750" />
                     <param name="width" value="1000" />
                     <param name="height" value="100" />
                     <param name="font" value="DetailViewFont" />
