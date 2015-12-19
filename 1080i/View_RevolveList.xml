@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="RevolveListView">
-		<control type="group">
-			<visible>Control.IsVisible(54)</visible>
-			<include name="BackgroundAnimationForLeftRing" />
-		</control>
+        <definition>
+            <control type="group">
+                <visible>Control.IsVisible(54)</visible>
+                <include name="BackgroundAnimationForLeftRing" />
+            </control>
 
-		<control type="fixedlist" id="54">
-            <description>Invisible Revolve List (for mouse control)</description>
-			<viewtype label="31934">list</viewtype>
-			<visible allowhiddenfocus="true">true</visible>
-			<animation effect="fade" start="100" end="0" time="200" condition="Container(54).Scrolling">conditional</animation>
-			
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<pagecontrol>64</pagecontrol>
-			<focusposition>5</focusposition>
-			<scrolltime>200</scrolltime>
-			<onup>54</onup>
-			<ondown>54</ondown>
-			<onleft>9000</onleft>
-			<onright>64</onright>
+            <control type="fixedlist" id="54">
+                <description>Invisible Revolve List (for mouse control)</description>
+                <viewtype label="31934">list</viewtype>
+                <visible allowhiddenfocus="true">true</visible>
+                <animation effect="fade" start="100" end="0" time="200" condition="Container(54).Scrolling">conditional</animation>
+                
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>1080</height>
+                <pagecontrol>64</pagecontrol>
+                <focusposition>5</focusposition>
+                <scrolltime>200</scrolltime>
+                <onup>54</onup>
+                <ondown>54</ondown>
+                <onleft>9000</onleft>
+                <onright>64</onright>
 
-            <include name="InvisibleVerticalListItemsForMenu" />
-		</control>
-		
-		<include name="MainRevolveListView" />
+                <include name="InvisibleVerticalListItemsForMenu" />
+            </control>
+            
+            <include name="MainRevolveListView" />
+        </definition>
 	</include>
 			
 	<include name="MainRevolveListView">
