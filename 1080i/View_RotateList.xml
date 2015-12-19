@@ -2,6 +2,11 @@
 <includes>
 	<include name="RotateListView">
         <definition>
+            <control type="group">
+                <visible>Control.IsVisible(58)</visible>
+                <include name="BackgroundAnimationForRightRing" />
+            </control>
+
             <control type="fixedlist" id="58">
                 <viewtype label="31938">list</viewtype>
                 <visible allowhiddenfocus="true">true</visible>

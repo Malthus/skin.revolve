@@ -117,6 +117,67 @@
         </definition>
 	</include>
 	
+	<include name="BackgroundAnimationForRightRing">
+        <definition>
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),2)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="2000" />
+                    <param name="posy" value="200" />
+                    <param name="size" value="50" />
+                    <param name="radius" value="1000" />
+                    <param name="time" value="20000" />
+                </include>
+            </control>
+
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="2000" />
+                    <param name="posy" value="200" />
+                    <param name="size" value="35" />
+                    <param name="radius" value="1400" />
+                    <param name="time" value="14000" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="2000" />
+                    <param name="posy" value="200" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="1470" />
+                    <param name="time" value="11000" />
+                    <param name="direction" value="false" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="2000" />
+                    <param name="posy" value="200" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="1500" />
+                    <param name="time" value="17000" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="2000" />
+                    <param name="posy" value="200" />
+                    <param name="size" value="25" />
+                    <param name="radius" value="1620" />
+                    <param name="time" value="12000" />
+                    <param name="direction" value="false" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="2000" />
+                    <param name="posy" value="200" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="1800" />
+                    <param name="time" value="16000" />
+                    <param name="direction" value="false" />
+                </include>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="RightRing">
         <definition>
             <animation effect="slide" start="1000,0" end="0,0" time="400">WindowOpen</animation>
@@ -144,7 +205,7 @@
                 <posy>120</posy>
                 <width>740</width>
                 <height>320</height>
-                <font>HomeMenuDetailFont</font>
+                <font>DescriptionFont</font>
                 <textcolor>BackgroundColor</textcolor>
                 <align>right</align>
                 <aligny>top</aligny>
