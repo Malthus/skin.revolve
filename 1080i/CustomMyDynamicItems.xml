@@ -30,19 +30,14 @@
 
         <control type="group">
             <visible>Skin.HasSetting(MyItemsMenu.Default)</visible>
-            <include name="ListForRevolveMenu" />
-            <include name="RingForRevolveMenu" />
-            <include name="IconForRevolveMenu" />
-            <include name="TitleForRevolveMenu">
+            <include name="RevolveMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
 		</control>
         
         <control type="group">
             <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
-            <include name="CenterIconForCircleMenu" />
-            <include name="ListForCircleMenu" />
-            <include name="TitleForCircleMenu">
+            <include name="CircleMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
         </control>

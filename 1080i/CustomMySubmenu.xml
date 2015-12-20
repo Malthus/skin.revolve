@@ -219,12 +219,8 @@
 		</control>
 
         <control type="group">
-            <include name="ListForRevolveMenu" />
-            <include name="RingForRevolveMenu" />
-            <include name="CircleImageForRevolveMenu">
+            <include name="RevolveMenu">
                 <param name="texture" value="circle/submenu.png" />
-            </include>
-            <include name="TitleForRevolveMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
 		</control>
