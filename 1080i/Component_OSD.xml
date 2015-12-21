@@ -218,24 +218,24 @@
                     <param name="posy" value="941" />
                     <param name="size" value="15" />
                     <param name="radius" value="175" />
-                    <param name="time" value="3000" />
-                </include>
-                
-                <include name="OrbitCircle">
-                    <param name="posx" value="175" />
-                    <param name="posy" value="941" />
-                    <param name="size" value="10" />
-                    <param name="radius" value="190" />
-                    <param name="time" value="4000" />
-                    <param name="direction" value="false" />
+                    <param name="time" value="7000" />
                 </include>
                 
                 <include name="OrbitCircle">
                     <param name="posx" value="175" />
                     <param name="posy" value="941" />
                     <param name="size" value="5" />
+                    <param name="radius" value="190" />
+                    <param name="time" value="5000" />
+                    <param name="direction" value="false" />
+                </include>
+                
+                <include name="OrbitCircle">
+                    <param name="posx" value="175" />
+                    <param name="posy" value="941" />
+                    <param name="size" value="10" />
                     <param name="radius" value="210" />
-                    <param name="time" value="3500" />
+                    <param name="time" value="9500" />
                 </include>
 
                 <include name="OrbitCircle">
@@ -243,7 +243,7 @@
                     <param name="posy" value="941" />
                     <param name="size" value="10" />
                     <param name="radius" value="230" />
-                    <param name="time" value="4500" />
+                    <param name="time" value="8000" />
                     <param name="direction" value="false" />
                 </include>
             </control>
