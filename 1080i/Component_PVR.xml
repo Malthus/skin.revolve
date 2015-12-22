@@ -2,6 +2,11 @@
 <includes>
 	<include name="EPGTimelineViewForPVR">
         <definition>
+            <control type="group">
+                <visible>Control.IsVisible(10)</visible>
+                <include name="BackgroundAnimationForBottomRing" />
+            </control>
+        
             <control type="epggrid" id="10">
                 <viewtype label="19032">list</viewtype>
                 <posx>40</posx>
