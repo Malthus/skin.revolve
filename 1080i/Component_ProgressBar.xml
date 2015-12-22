@@ -55,7 +55,7 @@
 	<include name="MessageDialogForProgressBar">
         <definition>
             <control type="group">
-                <include>DefaultIconInMessageBand</include>
+                <include>DefaultIconInBandForMessage</include>
 
                 <include name="BusyAnimationForProgressBar">
                     <param name="posy" value="-70" />

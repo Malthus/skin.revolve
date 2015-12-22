@@ -6,6 +6,10 @@
 	<controls>
 		<control type="group">
             <control type="group">
+                <include name="BackgroundAnimationForMessage" />
+            </control>
+
+            <control type="group">
                 <posx>PosXForIconForMessage</posx>
 				<posy>PosYForIconForMessage</posy>
                 <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />

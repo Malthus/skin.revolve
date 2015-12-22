@@ -4,18 +4,9 @@
 
 	<controls>
 		<control type="group">
-            <control type="group">
-                <posx>PosXForIconForMessage</posx>
-				<posy>PosYForIconForMessage</posy>
-                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
-                    
-                <control type="image">
-                    <width>90</width>
-                    <height>90</height>
-                    <texture colordiffuse="BackgroundColor">icons/icon-microphone.png</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>
-            </control>
+            <include name="IconForMessage">
+                <param name="icontexture" value="icons/icon-microphone.png" />
+            </include>
 
             <control type="group">
                 <posx>PosXForContentForMessage</posx>

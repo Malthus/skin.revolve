@@ -5,18 +5,9 @@
 
 	<controls>
 		<control type="group">
-            <control type="group">
-                <posx>PosXForIconForMessage</posx>
-				<posy>PosYForIconForMessage</posy>
-                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
-
-                <control type="image">
-                    <width>90</width>
-                    <height>90</height>
-                    <texture colordiffuse="BackgroundColor">icons/icon-settings.png</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>
-            </control>
+            <include name="IconForMessage">
+                <param name="icontexture" value="icons/icon-settings.png" />
+            </include>
 
             <control type="group">
                 <posx>PosXForContentForMessage</posx>
@@ -33,13 +24,11 @@
                     
                 <control type="label" id="10">
                     <description>Slider Header Label</description>
-                    <font>-</font>
                     <label>-</label>
                 </control>
 
                 <control type="label" id="12">
                     <description>Slider Value Label</description>
-                    <font>-</font>
                     <label>-</label>
                 </control>
 

@@ -6,25 +6,17 @@
 	<controls>
 		<control type="group">
             <control type="group">
-                <posx>PosXForIconForMessage</posx>
-				<posy>PosYForIconForMessage</posy>
-                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
-
-                <control type="image">
-                    <visible>!Player.Muted</visible>
-                    <width>90</width>
-                    <height>90</height>
-                    <texture colordiffuse="BackgroundColor">icons/volume-sound.png</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>
-                
-                <control type="image">
-                    <visible>Player.Muted</visible>
-                    <width>90</width>
-                    <height>90</height>
-                    <texture colordiffuse="BackgroundColor">icons/volume-mute.png</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>
+                <visible>!Player.Muted</visible>
+                <include name="IconForMessage">
+                    <param name="icontexture" value="icons/volume-sound.png" />
+                </include>
+            </control>
+            
+            <control type="group">
+                <visible>Player.Muted</visible>
+                <include name="IconForMessage">
+                    <param name="icontexture" value="icons/volume-mute.png" />
+                </include>
             </control>
 
             <control type="group">

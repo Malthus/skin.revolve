@@ -2,15 +2,80 @@
 <includes>
     <constant name="PosXForIconForMessage">280</constant>
     <constant name="PosYForIconForMessage">120</constant>
+	<include name="BackgroundAnimationForMessage">
+        <param name="posx" default="325" />
+        <param name="posy" default="165" />
+        
+        <definition>
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),1)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="$PARAM[posx]" />
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="size" value="20" />
+                    <param name="radius" value="55" />
+                    <param name="time" value="7000" />
+                </include>
+            </control>
+            
+            <control type="group">
+                <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                <include name="OrbitCircle">
+                    <param name="posx" value="$PARAM[posx]" />
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="size" value="15" />
+                    <param name="radius" value="95" />
+                    <param name="time" value="4000" />
+                    <param name="direction" value="false" />
+                </include>
+
+                <include name="OrbitCircle">
+                    <param name="posx" value="$PARAM[posx]" />
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="size" value="10" />
+                    <param name="radius" value="140" />
+                    <param name="time" value="2500" />
+                    <param name="direction" value="false" />
+                </include>
+            </control>
+        </definition>
+	</include>
+    
+	<include name="IconForMessage">
+        <param name="posx" default="PosXForIconForMessage" />
+        <param name="posy" default="PosYForIconForMessage" />
+        <param name="icontexture" default="-" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+				<posy>$PARAM[posy]</posy>
+
+                <include name="BackgroundAnimationForMessage">
+                    <param name="posx" value="45" />
+                    <param name="posy" value="45" />
+                </include>
+
+                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
+
+                <control type="image">
+                    <width>90</width>
+                    <height>90</height>
+                    <texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+        </definition>
+	</include>
 
     <constant name="PosXForContentForMessage">400</constant>
     <constant name="PosYForContentForMessage">124</constant>
-    <constant name="WidthForContentForMessage">1120</constant>
+    <constant name="WidthForContentForMessage">1400</constant>
     
-    <constant name="PosYForPauseMessageBand">690</constant>
+    <constant name="PosYForPauseBandForMessage">690</constant>
 
-    <constant name="PosYForDefaultIconInMessageBand">490</constant>
-	<include name="DefaultIconInMessageBand">
+    <constant name="PosYForDefaultIconInBandForMessage">490</constant>
+	<include name="DefaultIconInBandForMessage">
         <definition>
             <control type="group">
                 <control type="image">
