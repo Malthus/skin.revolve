@@ -6,14 +6,10 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="ThirteenLinesDialog" />
-
-            <include name="DefaultIconForDialog">
-                <param name="texture" value="icons/icon-pencil.png" />
-            </include>
-
-            <include name="HeaderForDialog">
-                <param name="label" value="$LOCALIZE[31887]" />
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[31887]" />
+                <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
 
             <include name="LabelForDialog">
@@ -23,13 +19,11 @@
 
 			<control type="list" id="33">
                 <description>Predefined Option Types List</description>
-				<posx>560</posx>
-				<posy>120</posy>
-				<width>1240</width>
-				<height>40</height>
-				<itemgap>0</itemgap>
-				<align>left</align>
-				<scrolltime>0</scrolltime>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="40" />
+                    <param name="scrolltime" value="0" />
+                </include>
 				<onup>40</onup>
 				<ondown>40</ondown>
 				<onleft>9000</onleft>
@@ -100,35 +94,17 @@
 				</content>
             </control>
 
-			<control type="button" id="34">
-                <description>Next Item Group Button</description>
-				<posx>1700</posx>
-				<posy>120</posy>
-				<width>40</width>
-				<height>40</height>
-				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturenofocus>
-				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturefocus>
-				<onup>40</onup>
-				<ondown>40</ondown>
-				<onleft>9000</onleft>
-				<onright>35</onright>
-				<onclick>Control.Move(33,1)</onclick>
-			</control>
-			
-			<control type="button" id="35">
-                <description>Previous Item Group Button</description>
-				<posx>1740</posx>
-				<posy>120</posy>
-				<width>40</width>
-				<height>40</height>
-				<texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangleup.png</texturenofocus>
-				<texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</texturefocus>
-				<onup>40</onup>
-				<ondown>40</ondown>
-				<onleft>34</onleft>
-				<onright>Noop</onright>
-				<onclick>Control.Move(33,-1)</onclick>
-			</control>
+            <include name="UpDownButton">
+                <param name="posx" value="1700" />
+                <param name="posy" value="120" />
+                <param name="downbuttonid" value="34" />
+                <param name="upbuttonid" value="35" />
+                <param name="controlid" value="33" />
+                <param name="onup" value="40" />
+                <param name="ondown" value="40" />
+                <param name="onleft" value="9000" />
+                <param name="onright" value="Noop" />
+            </include>
 
             <include name="LabelForDialog">
                 <param name="posy" value="200" />
@@ -137,13 +113,11 @@
 
 			<control type="group">
                 <control type="list" id="40">
-                    <posx>560</posx>
-                    <posy>240</posy>
-                    <height>360</height>
-                    <itemgap>0</itemgap>
-                    <align>left</align>
-                    <scrolltime>0</scrolltime>
-                    <pagecontrol>41</pagecontrol>
+                    <include name="MarkupForListForDialog">
+                        <param name="posy" value="240" />
+                        <param name="height" value="360" />
+                        <param name="pagecontrol" value="41" />
+                    </include>
                     <onup>34</onup>
                     <ondown>34</ondown>
                     <onleft>9000</onleft>

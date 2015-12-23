@@ -2,20 +2,15 @@
 <window type="dialog" id="1195">
 	<allowoverlay>yes</allowoverlay>
 	<defaultcontrol>30</defaultcontrol>
-    
     <onload condition="!StringCompare(Window.Property(CustomOptionType),M) + !StringCompare(Window.Property(CustomOptionType),S) + !StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onload>
 
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="ThirteenLinesDialog" />
-
-            <include name="DefaultIconForDialog">
-                <param name="texture" value="icons/icon-pencil.png" />
-            </include>
-			
-            <include name="HeaderForDialog">
-                <param name="label" value="$LOCALIZE[31800]" />
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[31800]" />
+                <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
 
             <include name="LabelForDialog">

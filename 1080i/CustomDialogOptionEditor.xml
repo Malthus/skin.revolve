@@ -9,14 +9,10 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="ThirteenLinesDialog" />
-
-            <include name="DefaultIconForDialog">
-                <param name="texture" value="icons/icon-pencil.png" />
-            </include>
-
-            <include name="HeaderForDialog">
-                <param name="label" value="$LOCALIZE[31800]" />
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[31800]" />
+                <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
 
             <include name="LabelForDialog">
