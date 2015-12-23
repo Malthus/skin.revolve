@@ -5,50 +5,28 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForFifteenLinesDialog</posy>
-			<include>FifteenLinesDialog</include>
-
-			<control type="group">
-				<description>Editor Dialog Icon</description>
-				<posx>PosXForDefaultIconFrameForDialog</posx>
-				<posy>PosYForDefaultIconFrameForDialog</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
-				
-				<control type="image">
-				    <posx>3</posx>
-				    <posy>3</posy>
-					<width>256</width>
-					<height>256</height>
-					<texture colordiffuse="BackgroundColor">icons/icon-bookmark.png</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-			</control>
-			
-			<control type="label">
-				<description>Video Bookmarks Header Label</description>
-				<posx>560</posx>
-				<posy>20</posy>
-				<width>1240</width>
-				<font>DialogTitleFont</font>
-				<align>left</align>
-				<label>298</label>
-			</control>
+			<posy>PosYForElevenLinesDialog</posy>
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForElevenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[298]" />
+                <param name="icontexture" value="icons/icon-bookmark.png" />
+            </include>
 
 			<control type="panel" id="11">
+				<viewtype label="536">icon</viewtype>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
-				<height>560</height>
+				<height>420</height>
 				<scrolltime>200</scrolltime>
-				<viewtype label="536">icon</viewtype>
 				<pagecontrol>21</pagecontrol>
-				<orientation>horizontal</orientation>
-				<onup>21</onup>
-				<ondown>21</ondown>
-				<onleft>2</onleft>
-				<onright>Noop</onright>
+				<orientation>vertical</orientation>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<onleft>9000</onleft>
+				<onright>21</onright>
 
-				<itemlayout height="280" width="310">
+				<itemlayout height="210" width="310">
 					<control type="image">
 						<posx>5</posx>
 						<posy>5</posy>
@@ -57,34 +35,38 @@
 						<texture diffuse="elements/poster-mask.png">$INFO[ListItem.Icon]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
-					<control type="label">
-						<posx>5</posx>
-						<posy>210</posy>
-						<width>300</width>
-						<height>30</height>
-						<align>center</align>
-						<font>BookmarkButtonFont</font>
-						<textcolor>MainColor</textcolor>
-						<info>ListItem.Label</info>
-					</control>
-					<control type="label">
-						<posx>5</posx>
-						<posy>240</posy>
-						<width>300</width>
-						<height>30</height>
-						<align>center</align>
-						<font>BookmarkButtonFont</font>
-						<textcolor>MainColor</textcolor>
-						<info>ListItem.Label2</info>
-					</control>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="150" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="TextColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$INFO[ListItem.Label]" />
+                    </include>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="170" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="TextColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$INFO[ListItem.Label2]" />
+                    </include>
 				</itemlayout>
 
-				<focusedlayout height="280" width="310">
+				<focusedlayout height="210" width="310">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>310</width>
-						<height>280</height>
+						<height>210</height>
 						<texture colordiffuse="MainColor">elements/poster-mask.png</texture>
 					</control>
 					<control type="image">
@@ -95,59 +77,47 @@
 						<texture diffuse="elements/poster-mask.png">$INFO[ListItem.Icon]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
-					<control type="label">
-						<posx>5</posx>
-						<posy>210</posy>
-						<width>300</width>
-						<height>30</height>
-						<align>center</align>
-						<font>BookmarkButtonFont</font>
-						<textcolor>BackgroundColor</textcolor>
-						<info>ListItem.Label</info>
-					</control>
-					<control type="label">
-						<posx>5</posx>
-						<posy>240</posy>
-						<width>300</width>
-						<height>30</height>
-						<align>center</align>
-						<font>BookmarkButtonFont</font>
-						<textcolor>BackgroundColor</textcolor>
-						<info>ListItem.Label2</info>
-					</control>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="150" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$INFO[ListItem.Label]" />
+                    </include>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="170" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$INFO[ListItem.Label2]" />
+                    </include>
 				</focusedlayout>
 			</control>
 
             <control type="scrollbar" id="21">
-				<posx>560</posx>
-				<posy>650</posy>
-				<width>1240</width>
-                <height>20</height>
-                <orientation>horizontal</orientation>
-                <texturesliderbackground border="14,0,14,0" colordiffuse="BackgroundColor">controls/horizontalbar-thick.png</texturesliderbackground>
-                <texturesliderbar border="14,0,14,0" colordiffuse="SelectColor">controls/horizontalbar-thin.png</texturesliderbar>
-                <texturesliderbarfocus border="14,0,14,0" colordiffuse="MainColor">controls/horizontalbar-thin.png</texturesliderbarfocus>
-                <showonepage>false</showonepage>
-                <onup>11</onup>
-                <ondown>11</ondown>
-                <onleft>21</onleft>
-                <onright>21</onright>
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="420" />
+                </include>
+                <onup>21</onup>
+                <ondown>21</ondown>
+                <onleft>11</onleft>
+                <onright>Noop</onright>
             </control>
-            
-			<control type="label">
-				<description>Number of Bookmarks Label</description>
-				<posx>40</posx>
-				<posy>320</posy>
-				<width>480</width>
-				<height>30</height>
-				<font>DialogTextFont</font>
-				<align>center</align>
-				<label>$INFO[Container(11).NumItems] $LOCALIZE[298] | $LOCALIZE[31903] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</label>
-			</control>
-			
+
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="480" />
+                    <param name="posy" value="320" />
                     <param name="height" value="200" />
                 </include>
 				<onleft>Noop</onleft>
@@ -164,15 +134,13 @@
 					<label>$LOCALIZE[296]</label>
 				</control>
 				<control type="button" id="4">
-                    <description>Clear Bookmark Button</description>
+                    <description>Set Episode Bookmark Button</description>
 					<label>$LOCALIZE[20406]</label>
 				</control>
-				<control type="button" id="7">
-                    <description>Close Button</description>
-                    <posy>40</posy>
-					<label>$LOCALIZE[31915]</label>
-                    <onclick>Close</onclick>
-				</control>
+                <include name="CloseButtonForDialog">
+                    <param name="id" value="7" />
+                    <param name="posy" value="40" />
+                </include>
 			</control>
 		</control>
 	</controls>

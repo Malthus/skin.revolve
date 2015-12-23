@@ -6,13 +6,11 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
-			<include name="FifteenLinesDialog" />
-
-			<control type="group">
-                <description>Dialog Icon For Movie</description>
-				<visible>!Control.HasFocus(50)</visible>
-                <include name="DefaultThumbnailForDialog" />
-			</control>
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForFifteenLinesDialog" />
+                <param name="headerlabel" value="$VAR[ContentNameLabel]" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+            </include>
 
 			<control type="group">
                 <description>Dialog Icon For Cast List</description>
@@ -21,21 +19,15 @@
                     <param name="texture" value="$INFO[Container(50).ListItem.Icon]" />
                 </include>
 			</control>
-			
-            <include name="HeaderForDialog">
-                <param name="label" value="$VAR[ContentNameLabel]" />
-            </include>
 
 			<control type="list" id="22">
                 <description>Video Information List</description>
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>200</height>
-				<itemgap>0</itemgap>
-				<pagecontrol>23</pagecontrol>
-				
-				<include>ItemsForInfoListInDialog</include>
+                <include name="MarkupForListForDialog">
+                    <param name="height" value="200" />
+                    <param name="pagecontrol" value="23" />
+                </include>
+                
+                <include name="ItemsForInfoListInDialog" />
 				
 				<content>
 					<item>
@@ -72,7 +64,6 @@
 			</control>
 			
 			<control type="scrollbar" id="23">
-                <description>Video Information Scrollbar</description>
 				<visible>Control.IsVisible(22)</visible>
 				<include name="MarkupForScrollbarForDialog">
                     <param name="posy" value="80" />
@@ -89,36 +80,21 @@
 				<include>HorizontalDialogListOfContentMediaFlag</include>
 			</control>
 
-			<control type="textbox" id="4">
-                <description>Plot</description>
-                <include name="MarkupForTextboxForDialog">
-                    <param name="posy" value="360" />
-                    <param name="height" value="320" />
-                    <param name="pagecontrol" value="61" />
-                </include>
-			</control>
-
-			<control type="scrollbar" id="61">
-				<visible>!Control.IsVisible(50)</visible>
-				<include name="MarkupForScrollbarForDialog">
-                    <param name="posy" value="360" />
-                    <param name="height" value="320" />
-                </include>
-				<onleft>9000</onleft>
-				<onright>Noop</onright>
-				<ondown>61</ondown>
-				<onup>61</onup>
-			</control>
+            <include name="TextboxForDialog">
+                <param name="textboxid" value="4" />
+                <param name="scrollbarid" value="61" />
+                <param name="posy" value="360" />
+                <param name="height" value="320" />
+                <param name="onleft" value="9000" />
+            </include>
             
 			<control type="list" id="50">
                 <description>Cast List</description>
-				<posx>560</posx>
-				<posy>360</posy>
-				<width>1240</width>
-				<height>320</height>
-                <pagecontrol>51</pagecontrol>
-				<orientation>vertical</orientation>
-				<scrolltime>200</scrolltime>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
+                    <param name="pagecontrol" value="51" />
+                </include>
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<onleft>9000</onleft>

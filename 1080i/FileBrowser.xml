@@ -6,21 +6,18 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
-			<include name="FifteenLinesDialog" />
-
-			<include name="DefaultThumbnailForDialog" />
-
-			<control type="label" id="411">
-                <include name="MarkupForHeaderForDialog" />
-				<label>$LOCALIZE[1023]</label>
-			</control>
+            <include name="WindowForDialog">
+                <param name="height" value="HeightForFifteenLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[1023]" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+            </include>
 
 			<control type="list" id="450">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>550</height>
-				<pagecontrol>451</pagecontrol>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="550" />
+                    <param name="pagecontrol" value="451" />
+                </include>
 				<onup>450</onup>
 				<ondown>450</ondown>
 				<onleft>9000</onleft>
@@ -40,7 +37,6 @@
                         <include>SelectedItemsForLargeThumbnailList</include>
                     </control>
                 </focusedlayout>
-
 			</control>
 
 			<control type="scrollbar" id="451">
@@ -52,12 +48,11 @@
 				<onright>Noop</onright>
 			</control>
             
-			<control type="label" id="412">
-                <include name="MarkupForLabelForDialog">
-                    <param name="posy" value="640" />
-                </include>
-				<haspath>true</haspath>
-			</control>
+            <include name="LabelForDialog">
+                <param name="id" value="412" />
+                <param name="posy" value="640" />
+                <param name="haspath" value="true" />
+            </include>
             
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
@@ -74,15 +69,13 @@
                     <description>Horizontal Flip Button</description>
 					<label>$LOCALIZE[749]</label>
 				</control>
-				<control type="button" id="413">
-                    <description>Ok Button</description>
-                    <posy>40</posy>
-					<label>$LOCALIZE[186]</label>
-				</control>
-				<control type="button" id="414">
-                    <description>Cancel Button</description>
-					<label>$LOCALIZE[222]</label>
-				</control>
+                <include name="OkButtonForDialog">
+                    <param name="id" value="413" />
+                    <param name="posy" value="40" />
+                </include>
+                <include name="CancelButtonForDialog">
+                    <param name="id" value="414" />
+                </include>
 			</control>
 		</control>
 	</controls>
