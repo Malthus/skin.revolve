@@ -179,6 +179,7 @@
         <param name="posy" default="80" />
         <param name="height" default="-" />
         <param name="pagecontrol" default="-" />
+        <param name="scrolltime" default="200" />
     
         <definition>
 			<posx>560</posx>
@@ -188,7 +189,7 @@
 			<orientation>vertical</orientation>
 			<itemgap>0</itemgap>
 			<pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-            <scrolltime>200</scrolltime>
+            <scrolltime>$PARAM[scrolltime]</scrolltime>
         </definition>
     </include>
     
