@@ -316,6 +316,53 @@
         </definition>
 	</include>
 
+	<include name="UpDownButton">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="downbuttonid" default="-" />
+        <param name="upbuttonid" default="-" />
+        <param name="controlid" default="-" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="button" id="$PARAM[downbuttonid]">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturenofocus>
+                    <texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturefocus>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[upbuttonid]</onright>
+                    <onclick>Control.Move($PARAM[controlid],1)</onclick>
+                </control>
+                
+                <control type="button" id="$PARAM[upbuttonid]">
+                    <posx>40</posx>
+                    <posy>0</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangleup.png</texturenofocus>
+                    <texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</texturefocus>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[downbuttonid]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                    <onclick>Control.Move($PARAM[controlid],-1)</onclick>
+                </control>
+            </control>
+        </definition>
+	</include>
+            
 	<include name="OrbitCircle">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
