@@ -72,10 +72,14 @@
     <constant name="PosYForContentForMessage">124</constant>
     <constant name="WidthForContentForMessage">1400</constant>
     
-    <constant name="PosYForPauseBandForMessage">690</constant>
-
-    <constant name="PosYForDefaultIconInBandForMessage">490</constant>
-	<include name="DefaultIconInBandForMessage">
+    <constant name="PosYForPauseWindowForMessage">690</constant>
+    
+    <constant name="PosYForWindowForMessage">490</constant>
+    
+	<include name="WindowForMessage">
+        <param name="headerid" default="0" />
+        <param name="headerlabel" default="-" />
+    
         <definition>
             <control type="group">
                 <control type="image">
@@ -90,6 +94,17 @@
                     <param name="height" value="100" />
                 </include>
 
+                <control type="label" id="$PARAM[headerid]">
+                    <posx>560</posx>
+                    <posy>20</posy>
+                    <width>1240</width>
+                    <height>40</height>
+                    <font>DialogTitleFont</font>
+                    <textcolor>SecondaryColor</textcolor>
+                    <align>left</align>
+                    <label>$PARAM[headerlabel]</label>
+                </control>
+                
                 <control type="group">
                     <posx>140</posx>
                     <posy>-85</posy>

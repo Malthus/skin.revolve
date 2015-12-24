@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="BusyAnimationForProgressBar">
+	<include name="DefaultBusyAnimationForProgressBar">
         <param name="posy" default="0" />
         
         <definition>
@@ -51,19 +51,6 @@
         </definition>
 	</include>
 
-    <constant name="PosYForMessageDialogForProgressBar">490</constant>
-	<include name="MessageDialogForProgressBar">
-        <definition>
-            <control type="group">
-                <include>DefaultIconInBandForMessage</include>
-
-                <include name="BusyAnimationForProgressBar">
-                    <param name="posy" value="-70" />
-                </include>
-            </control>
-        </definition>
-	</include>
-    
     <constant name="PosYForSingleLineDialogForProgressBar">440</constant>
 	<include name="SingleLineDialogForProgressBar">
         <definition>
@@ -83,10 +70,10 @@
                 <control type="group">
                     <posx>140</posx>
                     <posy>-35</posy>
-                    <include>BackgroundForDefaultCircleThumbnailIcon</include>
+                    <include name="BackgroundForDefaultCircleThumbnailIcon" />
                 </control>
 		
-                <include name="BusyAnimationForProgressBar">
+                <include name="DefaultBusyAnimationForProgressBar">
                     <param name="posy" value="-20" />
                 </include>
             </control>
@@ -112,10 +99,10 @@
                 <control type="group">
                     <posx>140</posx>
                     <posy>-90</posy>
-                    <include>BackgroundForDefaultCircleThumbnailIcon</include>
+                    <include name="BackgroundForDefaultCircleThumbnailIcon" />
                 </control>
 
-                <include name="BusyAnimationForProgressBar">
+                <include name="DefaultBusyAnimationForProgressBar">
                     <param name="posy" value="-75" />
                 </include>
             </control>
