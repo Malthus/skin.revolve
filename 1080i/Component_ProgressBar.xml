@@ -44,11 +44,32 @@
         </definition>
 	</include>
     
+	<include name="BackgroundForProgressBar">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="width" default="1240" />
+        
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <posx>$PARAM[posx]</posx>
+                    <posy>$PARAM[posy]</posy>
+                    <width>$PARAM[width]</width>
+                    <height>28</height>
+                    <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            </control>
+        </definition>
+	</include>
+
 	<include name="ProgressBar">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
+        <param name="progressbarcolor" default="BackgroundColor" />
+        <param name="backgroundcolor" default="MainColor" />
         
         <definition>
             <control type="group">
@@ -60,7 +81,7 @@
                     <posy>12</posy>
                     <width>$PARAM[width]</width>
                     <height>24</height>
-                    <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="progress" id="$PARAM[id]">
@@ -69,7 +90,7 @@
                     <width>$PARAM[width]</width>
                     <height>24</height>
                     <texturebg border="6">-</texturebg>
-                    <midtexture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thin.png</midtexture>
+                    <midtexture colordiffuse="$PARAM[progressbarcolor]" border="6">controls/horizontalbar-thin.png</midtexture>
                     <info>-</info>
                 </control>
             </control>
