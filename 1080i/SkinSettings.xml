@@ -98,8 +98,7 @@
 					<description>Control Area For Background Visuals</description>
 					<visible>Container(99).Hasfocus(1)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
-					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
+					<height>760</height>
 					<itemgap>0</itemgap>
 					<onup>100</onup>
 					<ondown>100</ondown>
@@ -223,8 +222,7 @@
 					<description>Control Area For Background Visuals</description>
 					<visible>Container(99).Hasfocus(3)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
-					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
+					<height>760</height>
 					<itemgap>0</itemgap>
 					<onup>300</onup>
 					<ondown>300</ondown>
@@ -303,8 +301,7 @@
 					<description>Control Area For Default Add-ons Options</description>
 					<visible>Container(99).Hasfocus(7)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
-					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
+					<height>760</height>
 					<itemgap>0</itemgap>
 					<onup>700</onup>
 					<ondown>700</ondown>
@@ -344,8 +341,7 @@
 					<description>Control Area For Miscellaneous Settings</description>
 					<visible>Container(99).Hasfocus(8)</visible>
 					<width>1100</width>
-					<height condition="Skin.HasSetting(Settings.HelpVisible)">760</height>
-					<height condition="!Skin.HasSetting(Settings.HelpVisible)">880</height>
+					<height>760</height>
 					<itemgap>0</itemgap>
 					<onup>800</onup>
 					<ondown>800</ondown>

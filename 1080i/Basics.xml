@@ -156,7 +156,6 @@
         <param name="outlinecolor" default="BackgroundColor" />
         <param name="outlinesize" default="1" />
         <param name="pagecontrol" default="-" />
-        <param name="scrolltime" default="200" />
         <param name="autoscroll" default="true" />
         <param name="autoscrolldelay" default="3000" />
         <param name="autoscrolltime" default="5000" />
@@ -177,7 +176,6 @@
                     <font>$PARAM[font]</font>
                     <textcolor>$PARAM[outlinecolor]</textcolor>
                     <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-                    <scrolltime>$PARAM[scrolltime]</scrolltime>
                     <autoscroll delay="$PARAM[autoscrolldelay]" time="$PARAM[autoscrolltime]" repeat="$PARAM[autoscrollrepeat]">$PARAM[autoscroll]</autoscroll>
                     <align>$PARAM[align]</align>
                     <label>$PARAM[label]</label>
@@ -190,7 +188,6 @@
                     <font>$PARAM[font]</font>
                     <textcolor>$PARAM[outlinecolor]</textcolor>
                     <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-                    <scrolltime>$PARAM[scrolltime]</scrolltime>
                     <autoscroll delay="$PARAM[autoscrolldelay]" time="$PARAM[autoscrolltime]" repeat="$PARAM[autoscrollrepeat]">$PARAM[autoscroll]</autoscroll>
                     <align>$PARAM[align]</align>
                     <label>$PARAM[label]</label>
@@ -203,7 +200,6 @@
                     <font>$PARAM[font]</font>
                     <textcolor>$PARAM[outlinecolor]</textcolor>
                     <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-                    <scrolltime>$PARAM[scrolltime]</scrolltime>
                     <autoscroll delay="$PARAM[autoscrolldelay]" time="$PARAM[autoscrolltime]" repeat="$PARAM[autoscrollrepeat]">$PARAM[autoscroll]</autoscroll>
                     <align>$PARAM[align]</align>
                     <label>$PARAM[label]</label>
@@ -216,7 +212,6 @@
                     <font>$PARAM[font]</font>
                     <textcolor>$PARAM[outlinecolor]</textcolor>
                     <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-                    <scrolltime>$PARAM[scrolltime]</scrolltime>
                     <autoscroll delay="$PARAM[autoscrolldelay]" time="$PARAM[autoscrolltime]" repeat="$PARAM[autoscrollrepeat]">$PARAM[autoscroll]</autoscroll>
                     <align>$PARAM[align]</align>
                     <label>$PARAM[label]</label>
@@ -236,7 +231,6 @@
         <param name="outlinecolor" default="BackgroundColor" />
         <param name="outlinesize" default="1" />
         <param name="pagecontrol" default="-" />
-        <param name="scrolltime" default="200" />
         <param name="autoscroll" default="true" />
         <param name="autoscrolldelay" default="3000" />
         <param name="autoscrolltime" default="2000" />
@@ -254,7 +248,6 @@
                 <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                 <param name="outlinesize" value="$PARAM[outlinesize]" />
                 <param name="pagecontrol" value="$PARAM[pagecontrol]" />
-                <param name="scrolltime" value="$PARAM[scrolltime]" />
                 <param name="autoscroll" value="$PARAM[autoscroll]" />
                 <param name="autoscrolldelay" value="$PARAM[autoscrolldelay]" />
                 <param name="autoscrolltime" value="$PARAM[autoscrolltime]" />
@@ -271,7 +264,6 @@
                 <font>$PARAM[font]</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
                 <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-                <scrolltime>$PARAM[scrolltime]</scrolltime>
                 <autoscroll delay="$PARAM[autoscrolldelay]" time="$PARAM[autoscrolltime]" repeat="$PARAM[autoscrollrepeat]">$PARAM[autoscroll]</autoscroll>
                 <align>$PARAM[align]</align>
                 <label>$PARAM[label]</label>
@@ -376,7 +368,7 @@
         <definition>
             <control type="group">
                 <visible>$PARAM[direction]</visible>
-                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" begin="0" end="-360" time="$PARAM[time]" delay="$PARAM[delay]" loop="true" condition="true">Conditional</animation>
+                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" start="360" end="0" time="$PARAM[time]" delay="$PARAM[delay]" loop="true" condition="true">Conditional</animation>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 
@@ -389,7 +381,7 @@
             </control>
             <control type="group">
                 <visible>!$PARAM[direction]</visible>
-                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" begin="0" end="360" time="$PARAM[time]" delay="$PARAM[delay]" loop="true" condition="true">Conditional</animation>
+                <animation effect="rotate" center="$PARAM[posx],$PARAM[posy]" start="0" end="360" time="$PARAM[time]" delay="$PARAM[delay]" loop="true" condition="true">Conditional</animation>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 

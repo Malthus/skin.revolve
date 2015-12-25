@@ -251,10 +251,6 @@
                 <align>left</align>
                 <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
                 <label>$PARAM[label]</label>
-                <onup>$PARAM[onup]</onup>
-                <ondown>$PARAM[ondown]</ondown>
-                <onleft>$PARAM[onleft]</onleft>
-                <onright>$PARAM[scrollbarid]</onright>
             </control>
             
             <control type="scrollbar" id="$PARAM[scrollbarid]">
@@ -265,7 +261,7 @@
                 </include>
                 <onup>$PARAM[onup]</onup>
                 <ondown>$PARAM[ondown]</ondown>
-                <onleft>$PARAM[textboxid]</onleft>
+                <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
             </control>
         </definition>

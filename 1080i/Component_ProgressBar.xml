@@ -14,7 +14,7 @@
                     <posy>5</posy>
                     <width>80</width>
                     <height>80</height>
-                    <texture colordiffure="BackgroundColor">$VAR[BusyAnimationThumbnail]</texture>
+                    <texture colordiffuse="BackgroundColor">$VAR[BusyAnimationThumbnail]</texture>
                     <aspectratio>keep</aspectratio>
                     <animation effect="rotate" start="360" end="0" center="45,45" time="1200" loop="true" condition="true">conditional</animation>
                 </control>
@@ -36,7 +36,7 @@
                     <posy>15</posy>
                     <width>240</width>
                     <height>240</height>
-                    <texture colordiffure="BackgroundColor">$VAR[BusyAnimationThumbnail]</texture>
+                    <texture colordiffuse="BackgroundColor">$VAR[BusyAnimationThumbnail]</texture>
                     <aspectratio>keep</aspectratio>
                     <animation effect="rotate" start="360" end="0" center="135,135" time="1200" loop="true" condition="true">conditional</animation>
                 </control>
