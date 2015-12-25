@@ -217,14 +217,18 @@
     
         <definition>
    			<control type="label" id="$PARAM[id]">
-                <include name="MarkupForLabelForDialog">
-                    <param name="posy" value="$PARAM[posy]" />
-                </include>
+                <posx>560</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>1240</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>SecondaryColor</textcolor>
+                <align>left</align>
 				<label>$PARAM[label]</label>
 			</control>
         </definition>
     </include>
-    
+
     <include name="TextboxForDialog">
         <param name="posy" default="80" />
         <param name="height" default="120" />
