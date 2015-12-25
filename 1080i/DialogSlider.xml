@@ -5,6 +5,9 @@
 
 	<controls>
 		<control type="group">
+            <posx>0</posx>
+            <posy>760</posy>
+            
             <include name="IconForMessage">
                 <param name="icontexture" value="icons/icon-settings.png" />
             </include>
@@ -24,18 +27,20 @@
                     
                 <control type="label" id="10">
                     <description>Slider Header Label</description>
+                    <font>-</font>
                     <label>-</label>
                 </control>
 
                 <control type="label" id="12">
                     <description>Slider Value Label</description>
+                    <font>-</font>
                     <label>-</label>
                 </control>
 
                 <control type="image">
                     <posx>0</posx>
                     <posy>48</posy>
-                    <width>824</width>
+                    <width>1110</width>
                     <height>24</height>
                     <texture colordiffuse="MainColor" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
@@ -43,7 +48,7 @@
                 <control type="image">
                     <posx>2</posx>
                     <posy>50</posy>
-                    <width>820</width>
+                    <width>1106</width>
                     <height>20</height>
                     <texture colordiffuse="BackgroundColor" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
@@ -52,7 +57,7 @@
                     <description>Slider</description>
                     <posx>7</posx>
                     <posy>40</posy>
-                    <width>810</width>
+                    <width>1096</width>
                     <height>40</height>
                     <texturesliderbar colordiffuse="MainColor">controls/line-horizontal.png</texturesliderbar>
                     <textureslidernib colordiffuse="HighlightColor">controls/circle-verticalhole.png</textureslidernib>

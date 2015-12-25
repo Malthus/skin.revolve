@@ -5,13 +5,14 @@
 
 	<controls>
 		<control type="group">
-            <control type="group">
-                <include name="BackgroundAnimationForMessage" />
-            </control>
+            <posx>0</posx>
+            <posy>280</posy>
 
             <control type="group">
                 <posx>PosXForIconForMessage</posx>
 				<posy>PosYForIconForMessage</posy>
+
+                <include name="BackgroundAnimationForMessage" />
                 <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
 
                 <control type="image" id="400">

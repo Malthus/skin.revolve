@@ -578,6 +578,9 @@
     <constant name="PosYForFullWindowDialog">90</constant>
     <constant name="HeightForFullWindowDialog">900</constant>
 
+    <constant name="PosYForProgressDialog">385</constant>
+    <constant name="HeightForProgressDialog">310</constant>
+    
     <constant name="PosYForKeyboardDialog">270</constant>
     <constant name="HeightForKeyboardDialog">540</constant>
     
@@ -752,66 +755,4 @@
 			</control>
         </definition>
 	</include>
-
-    <!-- ============================================================== -->
-
-    <include name="MarkupForHeaderForDialog">
-        <param name="posy" default="20" />
-        
-        <definition>
-            <posx>560</posx>
-			<posy>$PARAM[posy]</posy>
-			<width>1240</width>
-            <height>40</height>
-			<font>DialogTitleFont</font>
-			<textcolor>SecondaryColor</textcolor>
-			<align>left</align>
-        </definition>
-    </include>
-    
-    <include name="HeaderForDialog">
-        <param name="id" default="0" />
-        <param name="posy" default="20" />
-        <param name="label" default="-" />
-    
-        <definition>
-   			<control type="label" id="$PARAM[id]">
-                <include name="MarkupForHeaderForDialog">
-                    <param name="posy" value="$PARAM[posy]" />
-                </include>
-				<label>$PARAM[label]</label>
-			</control>
-        </definition>
-    </include>
-    
-    <include name="MarkupForLabelForDialog">
-        <param name="posy" default="80" />
-        
-        <definition>
-            <posx>560</posx>
-            <posy>$PARAM[posy]</posy>
-			<width>1240</width>
-            <height>40</height>
-			<font>DialogTextFont</font>
-			<textcolor>SecondaryColor</textcolor>
-			<align>left</align>
-        </definition>
-    </include>
-    
-    <include name="MarkupForTextboxForDialog">
-        <param name="posy" default="80" />
-        <param name="height" default="120" />
-        <param name="pagecontrol" default="-" />
-
-        <definition>
-    		<posx>560</posx>
-            <posy>$PARAM[posy]</posy>
-			<width>1240</width>
-			<height>$PARAM[height]</height>
-			<font>DialogTextFont</font>
-			<textcolor>SecondaryColor</textcolor>
-			<align>left</align>
-            <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-        </definition>
-    </include>
 </includes>

@@ -5,6 +5,9 @@
 
 	<controls>
 		<control type="group">
+            <posx>0</posx>
+            <posy>600</posy>
+            
             <control type="group">
                 <visible>!Player.Muted</visible>
                 <include name="IconForMessage">
