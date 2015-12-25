@@ -304,17 +304,11 @@
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
 			</control>
 
-            <control type="label">
-                <description>Custom Command Label</description>
-                <posx>560</posx>
-                <posy>520</posy>
-                <width>1240</width>
-                <font>DialogTextFont</font>
-                <textcolor>TextColor</textcolor>
-                <align>left</align>
-                <label>$LOCALIZE[31910]:</label>
-            </control>
-
+            <include name="LabelForDialog">
+                <param name="posy" value="520" />
+                <param name="label" value="$LOCALIZE[31910]:" />
+            </include>
+            
             <control type="button" id="40">
                 <description>Custom Submenu Action Button</description>
                 <visible>StringCompare(Window.Property(CustomOptionType),M)</visible>
