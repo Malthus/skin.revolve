@@ -584,16 +584,18 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>10</posy>
-			<width>730</width>
+			<width>438</width>
 			<height>40</height>
+            <scroll>false</scroll>
 			<info>ListItem.Label</info>
 		</control>
 		<control type="label">
 			<posx>130</posx>
 			<posy>50</posy>
-			<width>730</width>
+			<width>438</width>
 			<height>40</height>
 			<font>DetailListItemFont</font>
+            <scroll>false</scroll>
 			<info>ListItem.Label2</info>
 		</control>
 	</include>
@@ -613,18 +615,20 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>10</posy>
-			<width>320</width>
+			<width>438</width>
 			<height>40</height>
 			<textcolor>BackgroundColor</textcolor>
+            <scroll>true</scroll>
 			<info>ListItem.Label</info>
 		</control>
 		<control type="label">
 			<posx>130</posx>
 			<posy>50</posy>
-			<width>320</width>
+			<width>438</width>
 			<height>40</height>
 			<font>DetailListItemFont</font>
 			<textcolor>BackgroundColor</textcolor>
+            <scroll>true</scroll>
 			<info>ListItem.Label2</info>
 		</control>
 	</include>
@@ -644,18 +648,20 @@
 		<control type="label">
 			<posx>130</posx>
 			<posy>10</posy>
-			<width>730</width>
+			<width>438</width>
 			<height>40</height>
 			<textcolor>BackgroundColor</textcolor>
+            <scroll>true</scroll>
 			<info>ListItem.Label</info>
 		</control>
 		<control type="label">
 			<posx>130</posx>
 			<posy>50</posy>
-			<width>730</width>
+			<width>438</width>
 			<height>40</height>
 			<font>DetailListItemFont</font>
 			<textcolor>BackgroundColor</textcolor>
+            <scroll>true</scroll>
 			<info>ListItem.Label2</info>
 		</control>
 	</include>
