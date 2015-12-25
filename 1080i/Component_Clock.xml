@@ -120,45 +120,45 @@
                         
                 <control type="group">
                     <visible>SubString(System.Time(xx),A)</visible> 
-                    <posy>2</posy>
+                    <posy>0</posy>
                     <include name="OutlineLabel">
                         <param name="width" value="70" />
-                        <param name="height" value="60" />
+                        <param name="height" value="50" />
                         <param name="font" value="HugeClockAMPMFont" />
                         <param name="textcolor" value="MainColor" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="aligny" value="center" />
-                        <param name="label" value="A" />
+                        <param name="label" value="$LOCALIZE[31948]" />
                     </include>
                 </control>
                 
                 <control type="group">
                     <visible>SubString(System.Time(xx),P)</visible> 
-                    <posy>2</posy>
+                    <posy>0</posy>
                     <include name="OutlineLabel">
                         <param name="width" value="70" />
-                        <param name="height" value="60" />
+                        <param name="height" value="50" />
                         <param name="font" value="HugeClockAMPMFont" />
                         <param name="textcolor" value="MainColor" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="aligny" value="center" />
-                        <param name="label" value="P" />
+                        <param name="label" value="$LOCALIZE[31949]" />
                     </include>
                 </control>
                 
                 <control type="group">
-                    <posy>60</posy>
+                    <posy>58</posy>
                     <include name="OutlineLabel">
                         <param name="width" value="70" />
-                        <param name="height" value="60" />
+                        <param name="height" value="50" />
                         <param name="font" value="HugeClockAMPMFont" />
                         <param name="textcolor" value="MainColor" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="aligny" value="center" />
-                        <param name="label" value="M" />
+                        <param name="label" value="$LOCALIZE[31950]" />
                     </include>
                 </control>
             </control>
