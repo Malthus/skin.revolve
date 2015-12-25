@@ -5,25 +5,67 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForSingleLineDialogForProgressBar</posy>
-			<include name="SingleLineDialogForProgressBar" />
+            <posx>0</posx>
+            <posy>120</posy>
 
-			<control type="label" id="30">
-                <include name="MarkupForHeaderForDialog" />
-				<label>-</label>
+            <control type="group">
+                <posx>PosXForIconForMessage</posx>
+				<posy>PosYForIconForMessage</posy>
+                
+                <include name="BackgroundAnimationForMessage" />
+                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
+                <include name="SmallBusyAnimationForProgressBar" />
 			</control>
 
-			<control type="label" id="31">
-                <include name="MarkupForLabelForDialog" />
-				<label>-</label>
+            <control type="group">
+                <posx>PosXForContentForMessage</posx>
+                <posy>PosYForContentForMessage</posy>
+                
+                <include name="BackgroundForOutlineLabel">
+                    <param name="posy" value="-20" />
+                    <param name="width" value="WidthForContentForMessage" />
+                    <param name="height" value="40" />
+                    <param name="font" value="BigInformationFont" />
+                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="outlinesize" value="2" />
+                    <param name="label" value="$INFO[Control.GetLabel(30)]" />
+                </include>
+                
+                <control type="label" id="30">
+                    <posy>-20</posy>
+                    <width>WidthForContentForMessage</width>
+                    <height>40</height>
+                    <font>BigInformationFont</font>
+                    <textcolor>HighlightColor</textcolor>
+                    <label>-</label>
+                </control>
+                
+                <include name="BackgroundForOutlineLabel">
+                    <param name="posy" value="20" />
+                    <param name="width" value="WidthForContentForMessage" />
+                    <param name="height" value="40" />
+                    <param name="font" value="BigInformationFont" />
+                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="outlinesize" value="2" />
+                    <param name="label" value="$INFO[Control.GetLabel(31)]" />
+                </include>
+                
+                <control type="label" id="31">
+                    <posy>20</posy>
+                    <width>WidthForContentForMessage</width>
+                    <height>40</height>
+                    <font>BigInformationFont</font>
+                    <textcolor>HighlightColor</textcolor>
+                    <label>-</label>
+                </control>
+                
+                <include name="ProgressBar">
+                    <param name="id" value="32" />
+                    <param name="posx" value="0" />
+                    <param name="posy" value="60" />
+                    <param name="width" value="WidthForContentForMessage" />
+                </include>
 			</control>
-
-            <include name="ProgressBar">
-                <param name="id" value="32" />
-                <param name="posx" value="560" />
-                <param name="posy" value="124" />
-                <param name="width" value="1240" />
-            </include>
 		</control>
 	</controls>
 </window>

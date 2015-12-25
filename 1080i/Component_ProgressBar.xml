@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="DefaultBusyAnimationForProgressBar">
+	<include name="SmallBusyAnimationForProgressBar">
+        <param name="posx" default="0" />
         <param name="posy" default="0" />
         
         <definition>
             <control type="group">
-                <posx>155</posx>
+                <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 
                 <control type="image">
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>80</width>
+                    <height>80</height>
+                    <texture colordiffure="BackgroundColor">$VAR[BusyAnimationThumbnail]</texture>
+                    <aspectratio>keep</aspectratio>
+                    <animation effect="rotate" start="360" end="0" center="45,45" time="1200" loop="true" condition="true">conditional</animation>
+                </control>
+            </control>
+        </definition>
+	</include>
+    
+	<include name="DefaultBusyAnimationForProgressBar">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="image">
+                    <posx>15</posx>
+                    <posy>15</posy>
                     <width>240</width>
                     <height>240</height>
                     <texture colordiffure="BackgroundColor">$VAR[BusyAnimationThumbnail]</texture>
                     <aspectratio>keep</aspectratio>
-                    <animation effect="rotate" start="360" end="0" center="120,120" time="1200" loop="true" condition="true">conditional</animation>
+                    <animation effect="rotate" start="360" end="0" center="135,135" time="1200" loop="true" condition="true">conditional</animation>
                 </control>
             </control>
         </definition>
@@ -75,35 +100,6 @@
 		
                 <include name="DefaultBusyAnimationForProgressBar">
                     <param name="posy" value="-20" />
-                </include>
-            </control>
-        </definition>
-	</include>
-
-    <constant name="PosYForMultiLineDialogForProgressBar">410</constant>
-	<include name="MultiLineDialogForProgressBar">
-        <definition>
-            <control type="group">
-                <control type="image">
-                    <posx>90</posx>
-                    <posy>-140</posy>
-                    <width>370</width>
-                    <height>370</height>
-                    <texture>elements/circle-shadow.png</texture>
-                </control>
-
-                <include name="DialogWindow">
-                    <param name="height" value="260" />
-                </include>
-
-                <control type="group">
-                    <posx>140</posx>
-                    <posy>-90</posy>
-                    <include name="BackgroundForDefaultCircleThumbnailIcon" />
-                </control>
-
-                <include name="DefaultBusyAnimationForProgressBar">
-                    <param name="posy" value="-75" />
                 </include>
             </control>
         </definition>
