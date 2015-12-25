@@ -52,7 +52,7 @@
                         <param name="font" value="DetailViewFont" />
                         <param name="textcolor" value="MainColor" />
                         <param name="outlinecolor" value="BackgroundColor" />
-                        <param name="outlinesize" value="1" />
+                        <param name="outlinesize" value="2" />
                         <param name="align" value="left" />
                         <param name="label" value="$VAR[ContentCategoryLabel]" />
                     </include>
@@ -65,7 +65,7 @@
                         <param name="font" value="DetailViewFont" />
                         <param name="textcolor" value="MainColor" />
                         <param name="outlinecolor" value="BackgroundColor" />
-                        <param name="outlinesize" value="1" />
+                        <param name="outlinesize" value="2" />
                         <param name="align" value="left" />
                         <param name="label" value="$VAR[ContentDetailLabel]" />
                     </include>
@@ -510,7 +510,7 @@
                 <param name="font" value="RevolveViewFont" />
                 <param name="textcolor" value="$PARAM[textcolor]" />
                 <param name="outlinecolor" value="BackgroundColor" />
-                <param name="outlinesize" value="1" />
+                <param name="outlinesize" value="2" />
                 <param name="align" value="left" />
                 <param name="scroll" value="false" />
                 <param name="label" value="$PARAM[label]" />
