@@ -2,7 +2,7 @@
 <includes>
 	<default type="label">
 		<include name="DefaultControlDimensions" />
-		<font>SmallInformationFont</font>
+		<font>SmallMessageFont</font>
 		<textcolor>SecondaryColor</textcolor>
 		<focusedcolor>MainColor</focusedcolor>
 		<selectedcolor>HighlightColor</selectedcolor> 
@@ -38,7 +38,7 @@
 
 	<default type="button">
 	    <include name="DefaultButtonDimensions" />
-		<font>DefaultButtonFont</font>
+		<font>NormalButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
@@ -53,7 +53,7 @@
 
 	<default type="togglebutton">
 	    <include name="DefaultButtonDimensions" />
-		<font>DefaultButtonFont</font>
+		<font>NormalButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
@@ -70,7 +70,7 @@
 
 	<default type="radiobutton">
 	    <include name="DefaultButtonDimensions" />
-		<font>DefaultButtonFont</font>
+		<font>NormalButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
@@ -100,7 +100,7 @@
 		<texturedown border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturedown>
 		<textureupfocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</textureupfocus>
 		<texturedownfocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturedownfocus>
-		<font>DefaultButtonFont</font>
+		<font>NormalButtonFont</font>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
 		<disabledcolor>TextColor</disabledcolor>
@@ -113,7 +113,7 @@
 
 	<default type="spincontrolex">
 	    <include name="DefaultButtonDimensions" />
-		<font>DefaultButtonFont</font>
+		<font>NormalButtonFont</font>
 		<textoffsetx>20</textoffsetx>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
@@ -154,7 +154,7 @@
 		<textureslidernibfocus colordiffuse="BackgroundColor">controls/circle-verticalhole.png</textureslidernibfocus>
 		<texturenofocus colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texturenofocus>
 		<texturefocus colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texturefocus>
-		<font>DefaultButtonFont</font>
+		<font>NormalButtonFont</font>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
 		<disabledcolor>TextColor</disabledcolor>
@@ -181,7 +181,7 @@
 	</default>
 
 	<default type="textbox">
-		<font>DescriptionFont</font>
+		<font>DescriptionViewFont</font>
 		<textcolor>SecondaryColor</textcolor>
 		<pagecontrol>-</pagecontrol>
 		<autoscroll delay="3000" time="2000" repeat="5000"/>

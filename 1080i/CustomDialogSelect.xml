@@ -36,17 +36,17 @@
                     <onright>41</onright>
 
                     <itemlayout height="40">
-                        <include>NormalItemsForNormalList</include>
+                        <include>NormalItemsForNormalListInDialog</include>
                     </itemlayout>
 				
                     <focusedlayout height="40">
                         <control type="group">
                             <visible>Control.HasFocus(40)</visible>
-                            <include>FocusedItemsForNormalList</include>
+                            <include>FocusedItemsForNormalListInDialog</include>
                         </control>
                         <control type="group">
                             <visible>!Control.HasFocus(40)</visible>
-                            <include>SelectedItemsForNormalList</include>
+                            <include>SelectedItemsForNormalListInDialog</include>
                         </control>
                     </focusedlayout>
 

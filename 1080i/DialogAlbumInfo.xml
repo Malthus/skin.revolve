@@ -188,17 +188,17 @@
 				<onright>25</onright>
                 
 				<itemlayout height="40">
-					<include>NormalItemsForNormalList</include>
+					<include>NormalItemsForNormalListInDialog</include>
 				</itemlayout>
 					
 				<focusedlayout height="40">
 					<control type="group">
 						<visible>Control.HasFocus(50)</visible>
-						<include>FocusedItemsForNormalList</include>
+						<include>FocusedItemsForNormalListInDialog</include>
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(50)</visible>
-						<include>NormalItemsForNormalList</include>
+						<include>NormalItemsForNormalListInDialog</include>
 					</control>
 				</focusedlayout>
 			</control>

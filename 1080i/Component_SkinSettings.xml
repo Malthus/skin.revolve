@@ -124,4 +124,74 @@
             <onfocus>Skin.Reset(Debug.ListBorderVisible)</onfocus>
         </definition>
 	</include>
+    
+	<include name="ItemsForButtonListInSkinSettings">
+        <param name="listid" default="0" />
+    
+        <definition>
+            <itemlayout height="40">
+                <include name="NormalItemsForButtonListInSkinSettings" />
+            </itemlayout>
+                
+            <focusedlayout height="40">
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid])</visible>
+                    <include name="FocusedItemsForButtonListInSkinSettings" />
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[listid])</visible>
+                    <include name="SelectedItemsForButtonListInSkinSettings" />
+                </control>
+            </focusedlayout>
+        </definition>
+	</include>
+
+	<include name="NormalItemsForButtonListInSkinSettings">
+		<control type="image">
+			<width>480</width>
+			<height>40</height>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>440</width>
+			<height>40</height>
+			<font>NormalButtonFont</font>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForButtonListInSkinSettings">
+		<control type="image">
+			<width>480</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>440</width>
+			<font>NormalButtonFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForButtonListInSkinSettings">
+		<control type="image">
+			<width>480</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>440</width>
+			<font>NormalButtonFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+	</include>
 </includes>

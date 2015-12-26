@@ -246,7 +246,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>1240</width>
                 <height>$PARAM[height]</height>
-                <font>DialogTextFont</font>
+                <font>DialogDescriptionFont</font>
                 <textcolor>SecondaryColor</textcolor>
                 <align>left</align>
                 <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
@@ -407,6 +407,89 @@
         </definition>
     </include>
     
+	<include name="ItemsForNormalListInDialog">
+		<itemlayout height="40">
+			<include>NormalItemsForNormalListInDialog</include>
+		</itemlayout>
+					
+		<focusedlayout height="40">
+			<include>FocusedItemsForNormalListInDialog</include>
+		</focusedlayout>
+	</include>
+
+	<include name="NormalItemsForNormalListInDialog">
+		<control type="image">
+			<width>1240</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+			<height>40</height>
+            <font>DialogTextFont</font>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+            <font>DialogTextFont</font>
+			<textcolor>MainColor</textcolor>
+			<align>right</align>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="FocusedItemsForNormalListInDialog">
+		<control type="image">
+			<width>1240</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+            <font>DialogTextFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+            <font>DialogTextFont</font>
+			<textcolor>BackgroundColor</textcolor>
+			<align>right</align>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
+	<include name="SelectedItemsForNormalListInDialog">
+		<control type="image">
+			<width>1240</width>
+			<height>40</height>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+            <font>DialogTextFont</font>
+			<textcolor>MainColor</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<width>1200</width>
+            <font>DialogTextFont</font>
+			<textcolor>MainColor</textcolor>
+			<align>right</align>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	
 	<include name="ItemsForInfoListInDialog">
         <definition>
             <itemlayout height="40">
@@ -729,7 +812,7 @@
                     <posy>35</posy>
                     <width>200</width>
                     <height>200</height>
-                    <font>DefaultIconFont</font>
+                    <font>DialogIconFont</font>
                     <textcolor>BackgroundColor</textcolor>
                     <align>center</align>
                     <label>$PARAM[iconlabel]</label>

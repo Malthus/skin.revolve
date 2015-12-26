@@ -41,7 +41,7 @@
 							<posy>80</posy>
 							<width>80</width>
 							<height>40</height>
-							<font>DefaultInformationFont</font>
+							<font>MessageTextFont</font>
 							<textcolor>BackgroundColor</textcolor>
 							<align>center</align>
 							<label>$VAR[PlayerSpeedLabel]</label>
@@ -90,7 +90,7 @@
 						<posy>30</posy>
 						<width>200</width>
 						<height>40</height>
-						<font>BigInformationFont</font>
+						<font>MessageTitleFont</font>
 						<textcolor>MainColor</textcolor>
 						<label>$VAR[PlayerTimeLabel]</label>
 					</control>
@@ -99,7 +99,7 @@
 						<posy>30</posy>
 						<width>200</width>
 						<height>40</height>
-						<font>BigInformationFont</font>
+						<font>MessageTitleFont</font>
 						<textcolor>MainColor</textcolor>
 						<align>right</align>
 						<label>$VAR[PlayerDurationLabel]</label>

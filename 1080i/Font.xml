@@ -82,6 +82,12 @@
 			<size>16</size>
 		</font>
 		
+		<font>
+			<name>RSSFont</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>24</size>
+		</font>
+        
 		<!-- Generic Menu Fonts -->
 		<font>
 			<name>MenuTitleFont</name>
@@ -111,6 +117,51 @@
 			<size>20</size>
 		</font>
 		
+		<!-- Specific View Fonts -->
+		<font>
+			<name>RevolveViewFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
+			<size>58</size>
+		</font>
+
+		<font>
+			<name>BigViewFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
+			<size>40</size>
+		</font>
+		
+		<font>
+			<name>MediumViewFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
+			<size>30</size>
+		</font>
+        
+		<font>
+			<name>ThumbnailViewFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
+            <linespacing>0.8</linespacing>
+			<size>20</size>
+		</font>
+        
+		<font>
+			<name>DetailViewFont</name>
+			<filename>OpenSans-Regular.ttf</filename>
+            <style>bold uppercase</style>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>DescriptionViewFont</name>
+			<filename>OpenSans-Regular.ttf</filename>
+            <style>bold</style>
+			<size>30</size>
+			<linespacing>0.9</linespacing>
+		</font>
+		
 		<!-- Side Menu Fonts -->
 		<font>
 			<name>SideMenuLabelFont</name>
@@ -126,51 +177,7 @@
 			<size>16</size>
 		</font>
 		
-		<!-- Specific View Fonts -->
-		<font>
-			<name>RevolveViewFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>58</size>
-		</font>
-
-		<font>
-			<name>MediumViewFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>40</size>
-		</font>
-		
-		<font>
-			<name>SmallViewFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>30</size>
-		</font>
-        
-		<font>
-			<name>TinyViewFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-            <linespacing>0.8</linespacing>
-			<size>20</size>
-		</font>
-        
-		<font>
-			<name>DetailViewFont</name>
-			<filename>OpenSans-Regular.ttf</filename>
-            <style>bold uppercase</style>
-			<size>30</size>
-		</font>
-
 		<!-- Icon Fonts -->
-		<font>
-			<name>DefaultIconFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>256</size>
-		</font>
-        
 		<font>
 			<name>SmallIconFont</name>
 			<filename>OpenSans-ExtraBold.ttf</filename>
@@ -215,50 +222,6 @@
 			<size>24</size>
 		</font>
 		
-		<!-- General Information Fonts -->
-		<font>
-			<name>BigInformationFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>40</size>
-		</font>
-		
-		<font>
-			<name>DefaultInformationFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>30</size>
-		</font>
-		
-		<font>
-			<name>SmallInformationFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>24</size>
-		</font>
-
-		<font>
-			<name>TinyInformationFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>16</size>
-		</font>
-
-		<!-- Button Fonts -->
-		<font>
-			<name>DefaultButtonFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>30</size>
-		</font>
-		
-		<font>
-			<name>BookmarkButtonFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-            <style>bold uppercase</style>
-			<size>20</size>
-		</font>
-		
 		<!-- Dialog Fonts -->
 		<font>
 			<name>DialogTitleFont</name>
@@ -274,12 +237,57 @@
 			<size>30</size>
 		</font>
 		
-		<!-- Special Fonts -->
 		<font>
 			<name>DialogIconFont</name>
 			<filename>OpenSans-ExtraBold.ttf</filename>
             <style>bold uppercase</style>
+			<size>256</size>
+		</font>
+
+		<font>
+			<name>DialogDescriptionFont</name>
+			<filename>OpenSans-Regular.ttf</filename>
+            <style>bold</style>
+			<size>30</size>
+			<linespacing>0.9</linespacing>
+		</font>
+
+		<font>
+			<name>DialogHelpFont</name>
+			<filename>OpenSans-Regular.ttf</filename>
+            <style>bold</style>
+			<size>24</size>
+			<linespacing>0.9</linespacing>
+		</font>
+        
+		<!-- Message Fonts -->
+		<font>
+			<name>MessageTitleFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
 			<size>40</size>
+		</font>
+		
+		<font>
+			<name>MessageTextFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
+			<size>30</size>
+		</font>
+		
+		<!-- Special Fonts -->
+		<font>
+			<name>NormalButtonFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
+			<size>30</size>
+		</font>
+		
+		<font>
+			<name>BookmarkButtonFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+            <style>bold uppercase</style>
+			<size>20</size>
 		</font>
 		
 		<font>
@@ -289,29 +297,6 @@
 			<size>20</size>
 		</font>
 		
-		<!-- Text Fonts -->
-		<font>
-			<name>RSSFont</name>
-			<filename>OpenSans-Regular.ttf</filename>
-			<size>24</size>
-		</font>
-		
-		<font>
-			<name>DescriptionFont</name>
-			<filename>OpenSans-Regular.ttf</filename>
-            <style>bold</style>
-			<size>30</size>
-			<linespacing>0.9</linespacing>
-		</font>
-		
-		<font>
-			<name>AnnotationFont</name>
-			<filename>OpenSans-Regular.ttf</filename>
-            <style>bold</style>
-			<size>24</size>
-			<linespacing>0.9</linespacing>
-		</font>
-
 		<!-- System Required Font -->
 		<font>
 			<name>font13</name>

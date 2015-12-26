@@ -23,20 +23,9 @@
 				<onleft>9000</onleft>
 				<onright>98</onright>
 
-				<itemlayout height="40">
-					<include name="NormalItemsForButtonList" />
-				</itemlayout>
-					
-				<focusedlayout height="40">
-					<control type="group">
-						<visible>Control.HasFocus(99)</visible>
-						<include name="FocusedItemsForButtonList" />
-					</control>
-					<control type="group">
-						<visible>!Control.HasFocus(99)</visible>
-						<include name="SelectedItemsForButtonList" />
-					</control>
-				</focusedlayout>
+				<include name="ItemsForButtonListInSkinSettings">
+                    <param name="listid" value="99" />
+                </include>
 
 				<content>
 					<item id="1">
@@ -660,173 +649,173 @@
 
 					<control type="textbox">
 						<visible>Control.HasFocus(99) | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$INFO[Container(99).ListItem.Label2]</label>
 					</control>
 
 					<control type="textbox">
 						<visible>Control.HasFocus(101)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31161]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(102)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31162]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(103)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31163]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(104)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31164]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(105)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31165]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(106)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31166]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(107)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31218]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(301)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31201]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(302)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31202]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(303)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31203]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(304)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31785]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(305)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31787]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(701)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31190]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(801)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31184]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(802)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31188]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(803)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31206]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(804)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31194]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(805)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31186]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(806)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31191]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(807)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31207]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(808)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31209]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(809)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31213]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(810)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31214]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(811)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31215]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(812)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31216]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(814)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31219]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(815)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31231]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31192]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(902)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31193]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(904)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31212]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(910)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31196]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(120) | Control.HasFocus(320) | Control.HasFocus(720) | Control.HasFocus(820) | Control.HasFocus(920)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31897]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(930)</visible>
-						<font>AnnotationFont</font>
+						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31195]</label>
 					</control>
 				</control>

@@ -24,17 +24,17 @@
 				<onright>111</onright>
 
 				<itemlayout height="40">
-					<include>NormalItemsForNormalList</include>
+					<include>NormalItemsForNormalListInDialog</include>
 				</itemlayout>
 					
 				<focusedlayout height="40">
 					<control type="group">
 						<visible>Control.HasFocus(110)</visible>
-						<include>FocusedItemsForNormalList</include>
+						<include>FocusedItemsForNormalListInDialog</include>
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(110)</visible>
-						<include>SelectedItemsForNormalList</include>
+						<include>SelectedItemsForNormalListInDialog</include>
 					</control>
 				</focusedlayout>
 			</control>
@@ -77,17 +77,17 @@
 				<onright>121</onright>
 				
 				<itemlayout height="40">
-					<include>NormalItemsForNormalList</include>
+					<include>NormalItemsForNormalListInDialog</include>
 				</itemlayout>
 					
 				<focusedlayout height="40">
 					<control type="group">
 						<visible>Control.HasFocus(120)</visible>
-						<include>FocusedItemsForNormalList</include>
+						<include>FocusedItemsForNormalListInDialog</include>
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(120)</visible>
-						<include>SelectedItemsForNormalList</include>
+						<include>SelectedItemsForNormalListInDialog</include>
 					</control>
 				</focusedlayout>
 			</control>

@@ -27,7 +27,7 @@
 				
                 <include name="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
-                    <param name="font" value="BigInformationFont" />
+                    <param name="font" value="MessageTitleFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
                     <param name="outlinesize" value="2" />
@@ -48,7 +48,7 @@
 					
                 <include name="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
-                    <param name="font" value="DefaultInformationFont" />
+                    <param name="font" value="MessageTextFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
                     <param name="outlinesize" value="2" />
@@ -67,7 +67,7 @@
 					
                 <include name="OutlineLabel">
                     <param name="width" value="WidthForAdditionalContentForOSD" />
-                    <param name="font" value="DefaultInformationFont" />
+                    <param name="font" value="MessageTextFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
                     <param name="outlinesize" value="2" />
@@ -94,7 +94,7 @@
                         
                     <include name="OutlineLabel">
                         <param name="width" value="200" />
-                        <param name="font" value="DefaultInformationFont" />
+                        <param name="font" value="MessageTextFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
                         <param name="outlinesize" value="2" />
@@ -108,7 +108,7 @@
 
                     <include name="OutlineLabel">
                         <param name="width" value="200" />
-                        <param name="font" value="DefaultInformationFont" />
+                        <param name="font" value="MessageTextFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
                         <param name="outlinesize" value="2" />
@@ -283,7 +283,7 @@
 					
                     <include name="OutlineLabel">
                         <param name="width" value="1480" />
-                        <param name="font" value="DefaultInformationFont" />
+                        <param name="font" value="MessageTextFont" />
                         <param name="textcolor" value="BackgroundColor" />
                         <param name="outlinecolor" value="MainColor" />
                         <param name="outlinesize" value="2" />
@@ -362,7 +362,7 @@
 					
                 <include name="OutlineLabel">
                     <param name="width" value="1530" />
-                    <param name="font" value="DefaultInformationFont" />
+                    <param name="font" value="MessageTextFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
                     <param name="outlinesize" value="2" />

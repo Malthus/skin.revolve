@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="NormalItemsForNormalList">
+<!--
+	<include name="NormalItemsForNormalListInDialog">
 		<control type="image">
 			<width>1240</width>
 			<height>40</height>
@@ -11,19 +12,21 @@
 			<posx>20</posx>
 			<width>1200</width>
 			<height>40</height>
+            <font>DialogTextFont</font>
 			<textcolor>MainColor</textcolor>
 			<info>ListItem.Label</info>
 		</control>
 		<control type="label">
 			<posx>20</posx>
 			<width>1200</width>
+            <font>DialogTextFont</font>
 			<textcolor>MainColor</textcolor>
 			<align>right</align>
 			<info>ListItem.Label2</info>
 		</control>
 	</include>
 	
-	<include name="FocusedItemsForNormalList">
+	<include name="FocusedItemsForNormalListInDialog">
 		<control type="image">
 			<width>1240</width>
 			<height>40</height>
@@ -33,19 +36,21 @@
 		<control type="label">
 			<posx>20</posx>
 			<width>1200</width>
+            <font>DialogTextFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<info>ListItem.Label</info>
 		</control>
 		<control type="label">
 			<posx>20</posx>
 			<width>1200</width>
+            <font>DialogTextFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<align>right</align>
 			<info>ListItem.Label2</info>
 		</control>
 	</include>
 	
-	<include name="SelectedItemsForNormalList">
+	<include name="SelectedItemsForNormalListInDialog">
 		<control type="image">
 			<width>1240</width>
 			<height>40</height>
@@ -55,29 +60,31 @@
 		<control type="label">
 			<posx>20</posx>
 			<width>1200</width>
+            <font>DialogTextFont</font>
 			<textcolor>MainColor</textcolor>
 			<info>ListItem.Label</info>
 		</control>
 		<control type="label">
 			<posx>20</posx>
 			<width>1200</width>
+            <font>DialogTextFont</font>
 			<textcolor>MainColor</textcolor>
 			<align>right</align>
 			<info>ListItem.Label2</info>
 		</control>
 	</include>
 	
-	<include name="ItemsForNormalList">
+	<include name="ItemsForNormalListInDialog">
 		<itemlayout height="40">
-			<include>NormalItemsForNormalList</include>
+			<include>NormalItemsForNormalListInDialog</include>
 		</itemlayout>
 					
 		<focusedlayout height="40">
-			<include>FocusedItemsForNormalList</include>
+			<include>FocusedItemsForNormalListInDialog</include>
 		</focusedlayout>
 	</include>
 
-	<include name="NormalItemsForButtonList">
+	<include name="NormalItemsForButtonListInSkinSettings">
 		<control type="image">
 			<width>480</width>
 			<height>40</height>
@@ -88,13 +95,13 @@
 			<posx>20</posx>
 			<width>440</width>
 			<height>40</height>
-			<font>DefaultButtonFont</font>
+			<font>NormalButtonFont</font>
 			<textcolor>MainColor</textcolor>
 			<info>ListItem.Label</info>
 		</control>
 	</include>
 	
-	<include name="FocusedItemsForButtonList">
+	<include name="FocusedItemsForButtonListInSkinSettings">
 		<control type="image">
 			<width>480</width>
 			<height>40</height>
@@ -104,13 +111,13 @@
 		<control type="label">
 			<posx>20</posx>
 			<width>440</width>
-			<font>DefaultButtonFont</font>
+			<font>NormalButtonFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<info>ListItem.Label</info>
 		</control>
 	</include>
 	
-	<include name="SelectedItemsForButtonList">
+	<include name="SelectedItemsForButtonListInSkinSettings">
 		<control type="image">
 			<width>480</width>
 			<height>40</height>
@@ -120,22 +127,22 @@
 		<control type="label">
 			<posx>20</posx>
 			<width>440</width>
-			<font>DefaultButtonFont</font>
+			<font>NormalButtonFont</font>
 			<textcolor>BackgroundColor</textcolor>
 			<info>ListItem.Label</info>
 		</control>
 	</include>
 	
-	<include name="ItemsForButtonList">
+	<include name="ItemsForButtonListInSkinSettings">
 		<itemlayout height="40">
-			<include>NormalItemsForButtonList</include>
+			<include>NormalItemsForButtonListInSkinSettings</include>
 		</itemlayout>
 					
 		<focusedlayout height="40">
-			<include>FocusedItemsForButtonList</include>
+			<include>FocusedItemsForButtonListInSkinSettings</include>
 		</focusedlayout>
 	</include>
-
+-->
 	<include name="NormalItemsForLargeList">
 		<control type="image">
 			<width>1240</width>
@@ -347,7 +354,7 @@
 				<posy>0</posy>
 				<width>1060</width>
 				<height>30</height>
-				<font>DefaultButtonFont</font>
+				<font>NormalButtonFont</font>
 				<textcolor>MainColor</textcolor>
 				<info>ListItem.Label</info>
 			</control>
@@ -368,7 +375,7 @@
 				<posy>10</posy>
 				<width>1060</width>
 				<height>40</height>
-				<font>DefaultButtonFont</font>
+				<font>NormalButtonFont</font>
 				<textcolor>MainColor</textcolor>
 				<info>ListItem.Label</info>
 			</control>
@@ -390,7 +397,7 @@
 				<posy>0</posy>
 				<width>1060</width>
 				<height>30</height>
-				<font>DefaultButtonFont</font>
+				<font>NormalButtonFont</font>
 				<textcolor>BackgroundColor</textcolor>
 				<info>ListItem.Label</info>
 			</control>
@@ -411,7 +418,7 @@
 				<posy>10</posy>
 				<width>1060</width>
 				<height>40</height>
-				<font>DefaultButtonFont</font>
+				<font>NormalButtonFont</font>
 				<textcolor>BackgroundColor</textcolor>
 				<info>ListItem.Label</info>
 			</control>
@@ -433,7 +440,7 @@
 				<posy>0</posy>
 				<width>1060</width>
 				<height>30</height>
-				<font>DefaultButtonFont</font>
+				<font>NormalButtonFont</font>
 				<textcolor>MainColor</textcolor>
 				<info>ListItem.Label</info>
 			</control>
@@ -454,7 +461,7 @@
 				<posy>10</posy>
 				<width>1060</width>
 				<height>40</height>
-				<font>DefaultButtonFont</font>
+				<font>NormalButtonFont</font>
 				<textcolor>MainColor</textcolor>
 				<info>ListItem.Label</info>
 			</control>
