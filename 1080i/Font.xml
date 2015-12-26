@@ -178,14 +178,6 @@
             <style>bold uppercase</style>
 		</font>
 		
-		<!-- Icon Fonts -->
-		<font>
-			<name>SmallIconFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-			<size>72</size>
-            <style>bold uppercase</style>
-		</font>
-        
 		<!-- Media Flag Fonts -->
 		<font>
 			<name>LargeMediaFlagFont</name>
@@ -239,13 +231,6 @@
 		</font>
 		
 		<font>
-			<name>DialogIconFont</name>
-			<filename>OpenSans-ExtraBold.ttf</filename>
-			<size>256</size>
-            <style>bold uppercase</style>
-		</font>
-
-		<font>
 			<name>DialogDescriptionFont</name>
 			<filename>OpenSans-Regular.ttf</filename>
 			<size>30</size>
@@ -253,6 +238,20 @@
 			<linespacing>0.9</linespacing>
 		</font>
 
+		<font>
+			<name>DialogDefaultIconFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+			<size>256</size>
+            <style>bold uppercase</style>
+		</font>
+
+		<font>
+			<name>DialogSmallIconFont</name>
+			<filename>OpenSans-ExtraBold.ttf</filename>
+			<size>72</size>
+            <style>bold uppercase</style>
+		</font>
+        
 		<font>
 			<name>DialogHelpFont</name>
 			<filename>OpenSans-Regular.ttf</filename>
