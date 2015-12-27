@@ -408,101 +408,108 @@
     </include>
     
 	<include name="ItemsForNormalListInDialog">
-		<itemlayout height="40">
-			<include>NormalItemsForNormalListInDialog</include>
-		</itemlayout>
-					
-		<focusedlayout height="40">
-			<include>FocusedItemsForNormalListInDialog</include>
-		</focusedlayout>
-	</include>
-
-	<include name="NormalItemsForNormalListInDialog">
-		<control type="image">
-			<width>1240</width>
-			<height>40</height>
-			<aspectratio>stretch</aspectratio>
-			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>1200</width>
-			<height>40</height>
-            <font>DialogTextFont</font>
-			<textcolor>MainColor</textcolor>
-			<info>ListItem.Label</info>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>1200</width>
-            <font>DialogTextFont</font>
-			<textcolor>MainColor</textcolor>
-			<align>right</align>
-			<info>ListItem.Label2</info>
-		</control>
-	</include>
-	
-	<include name="FocusedItemsForNormalListInDialog">
-		<control type="image">
-			<width>1240</width>
-			<height>40</height>
-			<aspectratio>stretch</aspectratio>
-			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>1200</width>
-            <font>DialogTextFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<info>ListItem.Label</info>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>1200</width>
-            <font>DialogTextFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<align>right</align>
-			<info>ListItem.Label2</info>
-		</control>
-	</include>
-	
-	<include name="SelectedItemsForNormalListInDialog">
-		<control type="image">
-			<width>1240</width>
-			<height>40</height>
-			<aspectratio>stretch</aspectratio>
-			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>1200</width>
-            <font>DialogTextFont</font>
-			<textcolor>MainColor</textcolor>
-			<info>ListItem.Label</info>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>1200</width>
-            <font>DialogTextFont</font>
-			<textcolor>MainColor</textcolor>
-			<align>right</align>
-			<info>ListItem.Label2</info>
-		</control>
-	</include>
-	
-	<include name="ItemsForInfoListInDialog">
+        <param name="listid" default="0" />
+    
         <definition>
             <itemlayout height="40">
-                <include>NormalItemsForInfoListInDialog</include>
+                <include>NormalItemsForNormalListInDialog</include>
             </itemlayout>
-					
+
             <focusedlayout height="40">
-                <include>NormalItemsForInfoListInDialog</include>
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid])</visible>
+                    <include>FocusedItemsForNormalListInDialog</include>
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[listid])</visible>
+                    <include>SelectedItemsForNormalListInDialog</include>
+                </control>
             </focusedlayout>
         </definition>
 	</include>
 
-	<include name="SelectableItemsForInfoListInDialog">
+	<include name="NormalItemsForNormalListInDialog">
+        <definition>
+            <control type="image">
+                <width>1240</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>MainColor</textcolor>
+                <scroll>false</scroll>
+                <info>ListItem.Label</info>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <font>DialogTextFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>right</align>
+                <scroll>false</scroll>
+                <info>ListItem.Label2</info>
+            </control>
+        </definition>
+	</include>
+	
+	<include name="FocusedItemsForNormalListInDialog">
+        <definition>
+            <control type="image">
+                <width>1240</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <font>DialogTextFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <info>ListItem.Label</info>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <font>DialogTextFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <align>right</align>
+                <info>ListItem.Label2</info>
+            </control>
+        </definition>
+	</include>
+	
+	<include name="SelectedItemsForNormalListInDialog">
+        <definition>
+            <control type="image">
+                <width>1240</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <font>DialogTextFont</font>
+                <textcolor>MainColor</textcolor>
+                <info>ListItem.Label</info>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <font>DialogTextFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>right</align>
+                <info>ListItem.Label2</info>
+            </control>
+        </definition>
+	</include>
+	
+	<include name="ItemsForInfoListInDialog">
         <param name="listid" default="0" />
     
         <definition>

@@ -23,20 +23,9 @@
 				<onleft>9010</onleft>
 				<onright>111</onright>
 
-				<itemlayout height="40">
-					<include>NormalItemsForNormalListInDialog</include>
-				</itemlayout>
-					
-				<focusedlayout height="40">
-					<control type="group">
-						<visible>Control.HasFocus(110)</visible>
-						<include>FocusedItemsForNormalListInDialog</include>
-					</control>
-					<control type="group">
-						<visible>!Control.HasFocus(110)</visible>
-						<include>SelectedItemsForNormalListInDialog</include>
-					</control>
-				</focusedlayout>
+                <include name="ItemsForNormalListInDialog">
+                    <param name="listid" value="110" />
+                </include>
 			</control>
 
 			<control type="scrollbar" id="111">
