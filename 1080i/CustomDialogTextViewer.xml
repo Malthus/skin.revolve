@@ -2,7 +2,7 @@
 <window type="dialog" id="1187">
 	<defaultcontrol>21</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-    <onload>RunScript(special://skin/scripts/default.py,FillPropertyFromTextFile,$INFO[Window.Property(DialogTextFile)],DialogText,1187)</onload>
+    <onload>RunScript(script.revolve.helper,FillPropertyFromTextFile,$INFO[Window.Property(DialogTextFile)],DialogText,1187)</onload>
 
 	<controls>
 		<control type="group">

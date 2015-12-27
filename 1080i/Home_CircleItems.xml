@@ -22,16 +22,6 @@
 				</itemlayout>
 				
 				<focusedlayout width="800" height="662">
-<!--
-                    <control type="button">
-                        <description>Invisible Circle Items Loading Button</description>
-                        <texturenofocus>-</texturenofocus>
-                        <texturefocus>-</texturefocus>
-                        <onfocus condition="Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/default.py,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onfocus>
-                        <onfocus condition="Container(300).HasFocus(6) + !IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(special://skin/scripts/default.py,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onfocus>
-                        <onfocus condition="Container(300).HasFocus(16) + !IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(special://skin/scripts/default.py,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onfocus>
-                    </control>
--->
                     <control type="group">
                         <description>Movies In Circle List</description>
                         <visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>

@@ -42,7 +42,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu01Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu01Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]01Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="202">
@@ -60,7 +60,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu01Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]01Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="203">
@@ -70,7 +70,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu02Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu02Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]02Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="204">
@@ -88,7 +88,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu02Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]02Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="205">
@@ -98,7 +98,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu03Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu03Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]03Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="206">
@@ -116,7 +116,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu03Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]03Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="207">
@@ -126,7 +126,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu04Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu04Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]04Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="208">
@@ -144,7 +144,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu04Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]04Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="209">
@@ -154,7 +154,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu05Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu05Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]05Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="210">
@@ -172,7 +172,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu05Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]05Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="211">
@@ -182,7 +182,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu06Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu06Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]06Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="212">
@@ -200,7 +200,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu06Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]06Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="213">
@@ -210,7 +210,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu07Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu07Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]07Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="214">
@@ -228,7 +228,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu07Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]07Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
                 
                 <control type="radiobutton" id="215">
@@ -238,7 +238,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu08Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu08Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]08Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="216">
@@ -256,7 +256,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu08Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]08Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
                 
                 <control type="radiobutton" id="217">
@@ -266,7 +266,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu09Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu09Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]09Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="218">
@@ -284,7 +284,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu09Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]09Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
                 
                 <control type="radiobutton" id="219">
@@ -294,7 +294,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu10Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu10Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]10Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="220">
@@ -312,7 +312,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu10Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]10Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="221">
@@ -322,7 +322,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu11Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu11Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]11Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="222">
@@ -340,7 +340,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu11Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]11Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="223">
@@ -350,7 +350,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu12Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu12Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]12Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="224">
@@ -368,7 +368,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu12Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]12Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="225">
@@ -378,7 +378,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu13Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu13Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]13Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="226">
@@ -396,7 +396,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu13Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]13Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="227">
@@ -406,7 +406,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu14Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu14Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]14Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="228">
@@ -424,7 +424,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu14Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]14Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="229">
@@ -434,7 +434,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu15Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu15Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]15Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="230">
@@ -452,7 +452,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu15Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]15Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="231">
@@ -462,7 +462,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu16Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu16Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]16Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="232">
@@ -480,7 +480,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu16Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]16Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="radiobutton" id="233">
@@ -490,7 +490,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu17Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu17Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]17Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="234">
@@ -508,7 +508,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu17Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]17Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
                 
                 <control type="radiobutton" id="235">
@@ -518,7 +518,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu18Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu18Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]18Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="236">
@@ -536,7 +536,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu18Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]18Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
                 
                 <control type="radiobutton" id="237">
@@ -546,7 +546,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu19Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu19Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]19Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="238">
@@ -564,7 +564,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu19Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]19Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
                 
                 <control type="radiobutton" id="239">
@@ -574,7 +574,7 @@
                     <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu20Option.Name)]</label>
                     <selected>Substring(Window.Property(CustomSubmenu20Option.Active),T,left)</selected>
                     <onclick>Skin.ToggleSetting($INFO[Window.Property(TargetOption)]20Option.Active)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
 
                 <control type="button" id="240">
@@ -592,7 +592,7 @@
                     <onclick>SetProperty(CustomAction,$INFO[Window.Property(CustomSubmenu20Option.Action)],1195)</onclick>
                     <onclick>SetProperty(TargetOption,$INFO[Window.Property(TargetOption)]20Option,1195)</onclick>
                     <onclick>ActivateWindow(1195)</onclick>
-                    <onclick>RunScript(special://skin/scripts/default.py,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
                 </control>
             </control>
 

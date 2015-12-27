@@ -27,12 +27,9 @@
             <description>Script and Plugin Initialisation</description>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
-            <onfocus condition="!IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(special://skin/scripts/default.py,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onfocus>
-            <onfocus condition="!IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(special://skin/scripts/default.py,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onfocus>
-            <onfocus condition="!IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(special://skin/scripts/default.py,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onfocus>
-<!--            
-            <onfocus condition="System.HasAddon(service.skin.widgets) + !Window(home).Property(SkinWidgets_Running)">RunScript(service.skin.widgets)</onfocus>
--->            
+            <onfocus condition="!IsEmpty(Skin.String(CircleMovieOption.Source))">RunScript(script.revolve.helper,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleMovieOption.Source)],CircleMovie%02dOption,0)</onfocus>
+            <onfocus condition="!IsEmpty(Skin.String(CircleEpisodeOption.Source))">RunScript(script.revolve.helper,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleEpisodeOption.Source)],CircleEpisode%02dOption,0)</onfocus>
+            <onfocus condition="!IsEmpty(Skin.String(CircleAlbumOption.Source))">RunScript(script.revolve.helper,PopulateStaticItemsFromHomeProperties,$INFO[Skin.String(CircleAlbumOption.Source)],CircleAlbum%02dOption,0)</onfocus>
 			<onfocus>SetFocus(300)</onfocus>
 		</control>
 
