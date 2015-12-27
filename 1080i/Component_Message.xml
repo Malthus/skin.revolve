@@ -22,7 +22,7 @@
                     <param name="posy" value="45" />
                     <param name="size" value="20" />
                     <param name="radius" value="55" />
-                    <param name="time" value="7000" />
+                    <param name="time" value="10000" />
                 </include>
             </control>
             
@@ -102,7 +102,7 @@
                     <posy>20</posy>
                     <width>1240</width>
                     <height>40</height>
-                    <font>DialogTitleFont</font>
+                    <font>MessageTitleFont</font>
                     <textcolor>SecondaryColor</textcolor>
                     <align>left</align>
                     <label>$PARAM[headerlabel]</label>

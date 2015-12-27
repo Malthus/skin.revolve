@@ -693,7 +693,7 @@
                         <param name="posy" value="CenterYForSmallIconFrameForDialog" />
                         <param name="size" value="20" />
                         <param name="radius" value="60" />
-                        <param name="time" value="9500" />
+                        <param name="time" value="10000" />
                     </include>
                 </control>
                 
@@ -728,8 +728,8 @@
                         <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
                         <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
                         <param name="size" value="20" />
-                        <param name="radius" value="150" />
-                        <param name="time" value="9500" />
+                        <param name="radius" value="145" />
+                        <param name="time" value="10000" />
                     </include>
                 </control>
                 
@@ -739,8 +739,9 @@
                         <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
                         <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
                         <param name="size" value="30" />
-                        <param name="radius" value="180" />
+                        <param name="radius" value="175" />
                         <param name="time" value="12000" />
+                        <param name="direction" value="false" />
                     </include>
 
                     <include name="OrbitCircle">
@@ -748,8 +749,7 @@
                         <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
                         <param name="size" value="15" />
                         <param name="radius" value="230" />
-                        <param name="time" value="6000" />
-                        <param name="direction" value="false" />
+                        <param name="time" value="6500" />
                     </include>
                 </control>
             </control>
