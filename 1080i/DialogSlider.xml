@@ -6,7 +6,7 @@
 	<controls>
 		<control type="group">
             <posx>0</posx>
-            <posy>760</posy>
+            <posy>360</posy>
             
             <include name="IconForMessage">
                 <param name="icontexture" value="icons/icon-settings.png" />
@@ -18,7 +18,7 @@
 
                 <include name="OutlineLabel">
                     <param name="width" value="WidthForContentForMessage" />
-                    <param name="font" value="DialogTextFont" />
+                    <param name="font" value="MessageTitleFont" />
                     <param name="textcolor" value="BackgroundColor" />
                     <param name="outlinecolor" value="MainColor" />
                     <param name="outlinesize" value="2" />

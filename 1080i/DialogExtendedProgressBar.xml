@@ -6,7 +6,7 @@
 	<controls>
 		<control type="group">
             <posx>0</posx>
-            <posy>120</posy>
+            <posy>200</posy>
 
             <control type="group">
                 <posx>PosXForIconForMessage</posx>
@@ -44,7 +44,7 @@
                     <param name="posy" value="20" />
                     <param name="width" value="WidthForContentForMessage" />
                     <param name="height" value="40" />
-                    <param name="font" value="MessageTitleFont" />
+                    <param name="font" value="MessageTextFont" />
                     <param name="outlinecolor" value="MainColor" />
                     <param name="outlinesize" value="2" />
                     <param name="label" value="$INFO[Control.GetLabel(31)]" />
@@ -54,7 +54,7 @@
                     <posy>20</posy>
                     <width>WidthForContentForMessage</width>
                     <height>40</height>
-                    <font>MessageTitleFont</font>
+                    <font>MessageTextFont</font>
                     <textcolor>BackgroundColor</textcolor>
                     <label>-</label>
                 </control>
