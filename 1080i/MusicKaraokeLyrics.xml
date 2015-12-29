@@ -17,54 +17,19 @@
 		<control type="group">
             <description>Next Song Name Label</description>
 			<visible>MusicPlayer.Offset(1).Exists + !IntegerGreaterThan(Player.TimeRemaining,20)</visible>
-			<posx>560</posx>
-			<posy>0</posy>
 
-			<control type="label">
-				<posx>-2</posx>
-				<posy>18</posy>
-				<width>1240</width>
-				<font>SmallMessageFont</font>
-				<textcolor>BackgroundColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
-			</control>
-			<control type="label">
-				<posx>2</posx>
-				<posy>18</posy>
-				<width>1240</width>
-				<font>SmallMessageFont</font>
-				<textcolor>BackgroundColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
-			</control>
-			<control type="label">
-				<posx>-2</posx>
-				<posy>22</posy>
-				<width>1240</width>
-				<font>SmallMessageFont</font>
-				<textcolor>BackgroundColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
-			</control>
-			<control type="label">
-				<posx>2</posx>
-				<posy>22</posy>
-				<width>1240</width>
-				<font>SmallMessageFont</font>
-				<textcolor>BackgroundColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
-			</control>
-			<control type="label">
-				<posy>20</posy>
-				<posx>0</posx>
-				<width>1240</width>
-				<font>SmallMessageFont</font>
-				<textcolor>MainColor</textcolor>
-				<align>left</align>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]</label>
-			</control>
+            <include name="OutlineLabel">
+                <param name="posx" value="340" />
+                <param name="posy" value="20" />
+                <param name="width" value="1240" />
+                <param name="height" value="40" />
+                <param name="font" value="MessageTitleFont" />
+                <param name="textcolor" value="MainColor" />
+                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="outlinesize" value="2" />
+                <param name="align" value="left" />
+                <param name="label" value="$LOCALIZE[209]: $INFO[MusicPlayer.Offset(1).Title]" />
+            </include>
 		</control>
 	</controls>
 </window>
