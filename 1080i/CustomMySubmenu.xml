@@ -6,8 +6,8 @@
     <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
     <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
-    <onload>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(SourceInfo)]%02dOption,MySubmenu%02dOption,1103)</onload>
-    <onunload>RunScript(script.revolve.helper,ClearProperties,MySubmenu%02dOption,1103)</onunload>
+    <onload>RunScript(script.revolve.service,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(SourceInfo)]%02dOption,MySubmenu%02dOption,1103)</onload>
+    <onunload>RunScript(script.revolve.service,ClearProperties,MySubmenu%02dOption,1103)</onunload>
 
 	<controls>
 		<include name="GlobalBackground" />

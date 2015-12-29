@@ -2,16 +2,18 @@
 <addon id="skin.revolve" version="3.0.0~beta5" name="Revolve" provider-name="ransomed, mKo, relyter, Malthus">
 	<requires>
 		<import addon="xbmc.gui" version="5.9.0"/>
-        <import addon="script.cu.lrclyrics" version="2.0.12" optional="true"/>
-        <import addon="script.rss.editor" version="2.0.4" optional="true"/>
-        <import addon="script.tv.show.next.aired" version="6.0.12" optional="true"/>
-        <import addon="service.library.data.provider" version="0.0.6" optional="true"/>
-        <import addon="service.scrobbler.lastfm" version="0.0.4" optional="true"/>
-        <import addon="service.skin.widgets" version="0.0.29" optional="true"/>
+        <import addon="script.revolve.helper" version="1.0.0~beta1" />
+        <import addon="script.cu.lrclyrics" version="2.0.12" optional="true" />
+        <import addon="script.grab.fanart" version="0.14.1" optional="true" />
+        <import addon="script.rss.editor" version="2.0.4" optional="true" />
+        <import addon="script.tv.show.next.aired" version="6.0.12" optional="true" />
+        <import addon="service.library.data.provider" version="0.0.6" optional="true" />
+        <import addon="service.scrobbler.lastfm" version="0.0.4" optional="true" />
+        <import addon="service.skin.widgets" version="0.0.29" optional="true" />
 	</requires>
 
 	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
 	</extension>
 	
 	<extension point="xbmc.addon.metadata">

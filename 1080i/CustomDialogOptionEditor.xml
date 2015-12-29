@@ -384,7 +384,7 @@
 					<label>$LOCALIZE[31806]</label>
 					<onclick>SetProperty(CustomMenuTitle,$INFO[Window.Property(CustomMenuTitle)],1192)</onclick>
 					<onclick>SetProperty(TargetOption,$INFO[Window.Property(CustomSourceInfo)],1192)</onclick>
-                    <onclick>RunScript(script.revolve.helper,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(CustomSourceInfo)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+                    <onclick>RunScript(script.revolve.service,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(CustomSourceInfo)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
 					<onclick>ActivateWindow(1192)</onclick>
 				</control>
 				<control type="button" id="23">

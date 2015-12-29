@@ -6,8 +6,8 @@
     <onload condition="!IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyItems.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyItems.MenuTitle)])</onload>
     <onload condition="IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyItems.SourceInfo)])</onload>
-    <onload>RunScript(script.revolve.helper,PopulateStaticItemsFromHomeProperties,$INFO[Window.Property(SourceInfo)],MyItems%02dOption,1101)</onload>
-    <onunload>RunScript(script.revolve.helper,ClearProperties,MyItems%02dOption,1101)</onunload>
+    <onload>RunScript(script.revolve.service,PopulateStaticItemsFromHomeProperties,$INFO[Window.Property(SourceInfo)],MyItems%02dOption,1101)</onload>
+    <onunload>RunScript(script.revolve.service,ClearProperties,MyItems%02dOption,1101)</onunload>
 
 	<controls>
 		<include name="FullscreenDimensions" />
