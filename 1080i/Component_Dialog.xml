@@ -684,6 +684,7 @@
         <param name="iconthumbnail" default="-" />
         <param name="icontexture" default="-" />
         <param name="iconlabel" default="-" />
+        <param name="iconoverlayvisible" default="false" />
         
         <definition>
             <include name="DialogWindow">
@@ -842,6 +843,13 @@
 					<texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
                     <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
+                
+                <control type="group">
+                    <visible>$PARAM[iconoverlayvisible]</visible>
+                    <posx>35</posx>
+                    <posy>35</posy>
+                    <include name="DefaultOverlayMediaFlag" />
+                </control>
 			</control>
         </definition>
 	</include>
