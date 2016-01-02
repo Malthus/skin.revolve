@@ -148,7 +148,7 @@
         <definition>
             <control type="group" id="303">
                 <visible>Control.IsVisible($PARAM[listid])</visible>
-                <animation effect="fade" start="0" end="100" delay ="195" time="5" reversible="false" condition="Control.IsVisible(301) | Control.IsVisible(302)">Conditional</animation>
+                <animation effect="fade" start="0" end="100" delay ="195" time="5" reversible="false" condition="Control.IsVisible(301) | Control.IsVisible(302) | Container($PARAM[listid]).OnNext | Container($PARAM[listid]).OnPrevious">Conditional</animation>
 
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="21" condition="true">Conditional</animation>
@@ -222,7 +222,7 @@
                 <animation type="Hidden" reversible="false">
                     <effect type="rotate" center="960,3600" start="0" end="5" time="200" />
                 </animation>
-                
+
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="21" condition="true">Conditional</animation>
                     <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-4).Label)</visible>
