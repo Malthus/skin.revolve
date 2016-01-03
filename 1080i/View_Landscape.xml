@@ -152,25 +152,25 @@
 
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="21" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-3).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-3).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-3" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="14" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-2).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-2).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-2" />
                     </include>
                 </control>
     
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="7" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-1).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-1).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-1" />
                     </include>
                 </control>
             
@@ -181,38 +181,35 @@
                         <width>330</width>
                         <height>646</height>
                 
-                        <control type="group">
-                            <visible>$PARAM[shadowvisible]</visible>
-                            <include name="ShadowForElementForLandscapeView" />
-                        </control>
+                        <include name="ShadowForElementForLandscapeView" />
                         
                         <include name="MainElementForLandscapeView">
-                            <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(0).Icon]" />
+                            <param name="listid" value="$PARAM[listid]" />
                         </include>
                     </control>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-7" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(1).Label)</visible>
                     <include name="OtherElementForLandscapeView">
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(1).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="1" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-14" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(2).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(2).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="2" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-21" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(3).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(3).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="3" />
                     </include>
                 </control>
             </control>
@@ -225,25 +222,25 @@
 
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="21" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-4).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-4).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-4" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="14" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-3).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-3).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-3" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="7" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-2).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-2).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-2" />
                     </include>
                 </control>
             
@@ -260,12 +257,12 @@
 
                         <control type="group">
                             <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
-                            <visible>$PARAM[shadowvisible]</visible>
                             <include name="ShadowForElementForLandscapeView" />
                         </control>
                         
                         <include name="ImageForOtherElementForLandscapeView">
-                            <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-1).Icon]" />
+                            <param name="listid" value="$PARAM[listid]" />
+                            <param name="listindex" value="-1" />
                         </include>
                     </control>
                 </control>
@@ -286,29 +283,28 @@
 
                         <control type="group">
                             <animation effect="fade" start="0" end="100" time="200" reversible="false">Hidden</animation>
-                            <visible>$PARAM[shadowvisible]</visible>
                             <include name="ShadowForElementForLandscapeView" />
                         </control>
                         
                         <include name="MainElementForLandscapeView">
-                            <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(0).Icon]" />
+                            <param name="listid" value="$PARAM[listid]" />
                         </include>
                     </control>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-14" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(1).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(1).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="1" />
                     </include>
                 </control>
     
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-21" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(2).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(2).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="2" />
                     </include>
                 </control>
             </control>
@@ -321,17 +317,17 @@
                     
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="21" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-2).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-2).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-2" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="14" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-1).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(-1).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="-1" />
                     </include>
                 </control>
             
@@ -351,12 +347,11 @@
 
                         <control type="group">
                             <animation effect="fade" start="0" end="100" time="200" reversible="false">Hidden</animation>
-                            <visible>$PARAM[shadowvisible]</visible>
                             <include name="ShadowForElementForLandscapeView" />
                         </control>
                         
                         <include name="MainElementForLandscapeView">
-                            <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(0).Icon]" />
+                            <param name="listid" value="$PARAM[listid]" />
                         </include>
                     </control>
                 </control>
@@ -374,37 +369,37 @@
 
                         <control type="group">
                             <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
-                            <visible>$PARAM[shadowvisible]</visible>
                             <include name="ShadowForElementForLandscapeView" />
                         </control>
                         
                         <include name="ImageForOtherElementForLandscapeView">
-                            <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(1).Icon]" />
+                            <param name="listid" value="$PARAM[listid]" />
+                            <param name="listindex" value="1" />
                         </include>
                     </control>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-7" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(2).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(2).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="2" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-14" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(3).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(3).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="3" />
                     </include>
                 </control>
             
                 <control type="group">
                     <animation effect="rotate" center="960,3600" end="-21" condition="true">Conditional</animation>
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(4).Label)</visible>
                     <include name="OtherElementForLandscapeView">	
-                        <param name="texture" value="$INFO[Container($PARAM[listid]).ListItem(4).Icon]" />
+                        <param name="listid" value="$PARAM[listid]" />
+                        <param name="listindex" value="4" />
                     </include>
                 </control>
             </control>
@@ -412,7 +407,7 @@
 	</include>
 	
 	<include name="MainElementForLandscapeView">
-        <param name="texture" default="-" />
+        <param name="listid" default="53" />
         
         <definition>
             <control type="group">
@@ -432,7 +427,7 @@
                     <posy>26</posy>
                     <width>278</width>
                     <height>412</height>
-                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$PARAM[texture]</texture>
+                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container($PARAM[listid]).ListItem(0).Icon]</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
             </control>
@@ -455,7 +450,7 @@
                     <posy>26</posy>
                     <width>278</width>
                     <height>278</height>
-                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$PARAM[texture]</texture>
+                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container($PARAM[listid]).ListItem(0).Icon]</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
             </control>
@@ -463,10 +458,12 @@
 	</include>
 	
 	<include name="OtherElementForLandscapeView">	
-        <param name="texture" default="-" />
+        <param name="listid" default="53" />
+        <param name="listindex" default="0" />
     
         <definition>
             <control type="group">
+                <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap($PARAM[listindex]).Label)</visible>
                 <animation type="Conditional" condition="true">
                     <effect type="zoom" center="960,724" end="80" />
                     <effect type="rotate" center="auto" end="0" />
@@ -476,14 +473,16 @@
                 <width>330</width>
                 <height>646</height>
                 <include name="ImageForOtherElementForLandscapeView">
-                    <param name="texture" value="$PARAM[texture]" />
+                    <param name="listid" value="$PARAM[listid]" />
+                    <param name="listindex" value="$PARAM[listindex]" />
                 </include>                
 			</control>            
         </definition>
 	</include>
     
 	<include name="ImageForOtherElementForLandscapeView">	
-        <param name="texture" default="-" />
+        <param name="listid" default="53" />
+        <param name="listindex" default="0" />
     
         <definition>
             <control type="group">
@@ -503,7 +502,7 @@
                     <posy>26</posy>
                     <width>278</width>
                     <height>412</height>
-                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$PARAM[texture]</texture>
+                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container($PARAM[listid]).ListItem($PARAM[listindex]).Icon]</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
             </control>
@@ -526,7 +525,7 @@
                     <posy>26</posy>
                     <width>278</width>
                     <height>278</height>
-                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$PARAM[texture]</texture>
+                    <texture diffuse="elements/poster-mask.png" fallback="white.png" background="true">$INFO[Container($PARAM[listid]).ListItem($PARAM[listindex]).Icon]</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
             </control>
@@ -536,29 +535,32 @@
 	<include name="ShadowForElementForLandscapeView">
         <definition>
             <control type="group">
-                <include name="VisibilityForVerticalIcon" />
-                
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>330</width>
-                    <height>464</height>
-                    <texture colordiffuse="MainColor">elements/poster-shadow.png</texture>
-                    <aspectratio>stretch</aspectratio>
+                <visible>$PARAM[shadowvisible]</visible>
+                <control type="group">
+                    <include name="VisibilityForVerticalIcon" />
+                    
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>330</width>
+                        <height>464</height>
+                        <texture colordiffuse="MainColor">elements/poster-shadow.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
                 </control>
-            </control>
-            
-            <control type="group">
-                <include name="VisibilityForSquareIcon" />
-                <posy>134</posy>
                 
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>330</width>
-                    <height>330</height>
-                    <texture colordiffuse="MainColor">elements/poster-shadow.png</texture>
-                    <aspectratio>stretch</aspectratio>
+                <control type="group">
+                    <include name="VisibilityForSquareIcon" />
+                    <posy>134</posy>
+                    
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>330</width>
+                        <height>330</height>
+                        <texture colordiffuse="MainColor">elements/poster-shadow.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                    </control>
                 </control>
             </control>
         </definition>
