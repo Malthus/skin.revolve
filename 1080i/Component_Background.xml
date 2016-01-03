@@ -22,21 +22,28 @@
                     <visible>Skin.HasSetting(Background.ImageActive)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
+                    <fadetime>500</fadetime>
                     <texture background="true">$VAR[ContentBackground]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+<!--
+                <control type="multiimage">
+                    <visible>Skin.HasSetting(Background.ImageActive)</visible>
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
                     <timeperimage>8000</timeperimage>
                     <randomize>true</randomize>
                     <fadetime>500</fadetime>
+                    <imagepath background="true">$VAR[ContentMultiImageBackground]</imagepath>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
-
+-->
                 <control type="largeimage">
                     <visible>Skin.HasSetting(Background.ImageActive) + Skin.HasSetting(Background.ImageFaded)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
-                    <texture colordiffuse="FadeDiffuseColor">white.png</texture>
-                    <timeperimage>8000</timeperimage>
-                    <randomize>true</randomize>
                     <fadetime>500</fadetime>
+                    <texture colordiffuse="FadeDiffuseColor">white.png</texture>
                 </control>
 		</control>
         </definition>
@@ -93,16 +100,6 @@
             <animation effect="fade" start="0" end="100" time="500">Visible</animation>
             <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
             <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
-        </definition>
-    </include>
-    
-    <include name="EmptyBackground">
-        <definition>
-            <control type="image">
-                <include name="FullscreenDimensions" />
-                <texture background="true">black.jpg</texture>
-                <fadetime>500</fadetime>
-            </control>
         </definition>
     </include>
 </includes>
