@@ -895,6 +895,27 @@
 					<param name="label" value="script-cu-lrclyrics-main.xml" />
 				</include>
 			</control>
+			
+			<control type="group">
+				<visible>Window.IsVisible(script-globalsearch-main.xml)</visible>	
+				<include name="DialogNameForDebug">
+					<param name="label" value="script-globalsearch-main.xml" />
+				</include>
+			</control>
+			
+			<control type="group">
+				<visible>Window.IsVisible(script-globalsearch-infodialog.xml)</visible>	
+				<include name="DialogNameForDebug">
+					<param name="label" value="script-globalsearch-infodialog.xml" />
+				</include>
+			</control>
+			
+			<control type="group">
+				<visible>Window.IsVisible(script-globalsearch-contextmenu.xml)</visible>	
+				<include name="DialogNameForDebug">
+					<param name="label" value="script-globalsearch-contextmenu.xml" />
+				</include>
+			</control>
 		</control>
 
 		<control type="image">
