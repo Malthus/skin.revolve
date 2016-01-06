@@ -213,6 +213,7 @@
     <include name="LabelForDialog">
         <param name="id" default="0" />
         <param name="posy" default="80" />
+        <param name="textcolor" default="SecondaryColor" />
         <param name="label" default="-" />
     
         <definition>
@@ -222,7 +223,7 @@
                 <width>1240</width>
                 <height>40</height>
                 <font>DialogTextFont</font>
-                <textcolor>SecondaryColor</textcolor>
+                <textcolor>$PARAM[textcolor]</textcolor>
                 <align>left</align>
 				<label>$PARAM[label]</label>
 			</control>
@@ -637,6 +638,144 @@
 			</control>
         </definition>
 	</include>
+    
+    <include name="ThumbnailElementForListForDialog">
+        <param name="listid" default="0" />
+        <param name="texture" default="$INFO[ListItem.Icon]" />
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+    
+        <definition>
+            <itemlayout height="210" width="310">
+                <width>310</width>
+                <height>210</height>
+
+                <control type="group">
+                    <control type="image">
+                        <posx>5</posx>
+                        <posy>5</posy>
+                        <width>300</width>
+                        <height>200</height>
+                        <texture diffuse="elements/poster-mask.png">$PARAM[texture]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="150" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="TextColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="scroll" value="false" />
+                        <param name="label" value="$PARAM[label]" />
+                    </include>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="170" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="TextColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="scroll" value="false" />
+                        <param name="label" value="$PARAM[label2]" />
+                    </include>
+                </control>
+            </itemlayout>
+
+            <focusedlayout height="210" width="310">
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid])</visible>
+                    
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>310</width>
+                        <height>210</height>
+                        <texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>5</posx>
+                        <posy>5</posy>
+                        <width>300</width>
+                        <height>200</height>
+                        <texture diffuse="elements/poster-mask.png">$PARAM[texture]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="150" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="scroll" value="true" />
+                        <param name="label" value="$PARAM[label]" />
+                    </include>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="170" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="scroll" value="true" />
+                        <param name="label" value="$PARAM[label2]" />
+                    </include>
+                </control>
+                
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[listid])</visible>
+                    
+                    <control type="image">
+                        <posx>5</posx>
+                        <posy>5</posy>
+                        <width>300</width>
+                        <height>200</height>
+                        <texture diffuse="elements/poster-mask.png">$PARAM[texture]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="150" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="scroll" value="false" />
+                        <param name="label" value="$PARAM[label]" />
+                    </include>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="10" />
+                        <param name="posy" value="170" />
+                        <param name="width" value="290" />
+                        <param name="height" value="20" />
+                        <param name="font" value="BookmarkButtonFont" />
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="MainColor" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="scroll" value="false" />
+                        <param name="label" value="$PARAM[label2]" />
+                    </include>
+                </control>
+            </focusedlayout>
+        </definition>
+    </include>
     
     <constant name="PosYForTwoLinesDialog">450</constant>
     <constant name="HeightForTwoLinesDialog">180</constant>
