@@ -368,6 +368,16 @@
 						<onclick>Skin.ToggleSetting(SideMenu.Visible)</onclick>
 					</control>
 					
+					<control type="radiobutton" id="816">
+						<description>Show Global Search in Side Menu Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31600]</label>
+						<selected>Skin.HasSetting(SideMenu.GlobalSearch)</selected>
+						<onclick>Skin.ToggleSetting(SideMenu.GlobalSearch)</onclick>
+					</control>
+					
 					<control type="radiobutton" id="802">
 						<description>Show Unfocused Scroll Bar In View Option</description>
 						<width>1100</width>
@@ -797,6 +807,11 @@
 						<visible>Control.HasFocus(815)</visible>
 						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31231]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(816)</visible>
+						<font>DialogHelpFont</font>
+						<label>$LOCALIZE[31601]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(901)</visible>

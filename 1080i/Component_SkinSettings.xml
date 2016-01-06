@@ -14,6 +14,7 @@
             <include>DebugSettingsForSkinSettings</include>
             
             <onfocus>Skin.SetBool(RevolveConfiguration)</onfocus>
+            <onfocus>Skin.SetString(Revolve.Configuration,3.0.2)</onfocus>
         </definition>
 	</include>
 	
@@ -102,6 +103,7 @@
             <onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
             <onfocus>Skin.SetBool(SideMenu.Grouped)</onfocus>
             <onfocus>Skin.SetBool(SideMenu.Visible)</onfocus>
+            <onfocus>Skin.SetBool(SideMenu.GlobalSearch)</onfocus>
             <onfocus>Skin.SetBool(ViewScrollbar.Visible)</onfocus>
             <onfocus>Skin.SetBool(BackButton.Visible)</onfocus>
             <onfocus>Skin.SetBool(Overlay.BackgroundVisible)</onfocus>

@@ -145,15 +145,18 @@
 	</include>
 
 	<include name="NavigationGroupLabelForSideMenu">
-		<description>Navigation Options Label For Side Menu</description>
-		<control type="label" id="991">
-            <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
-            <height>20</height>
-			<align>left</align>
-			<font>SideMenuGroupFont</font>
-			<textcolor>SelectColor</textcolor>
-			<label>  [UPPERCASE]$LOCALIZE[31106][/UPPERCASE]</label>
-		</control>
+        <param name="visible" default="Skin.HasSetting(SideMenu.Grouped)" />
+    
+        <definition>
+            <control type="label" id="991">
+                <visible>$PARAM[visible]</visible>
+                <height>20</height>
+                <align>left</align>
+                <font>SideMenuGroupFont</font>
+                <textcolor>SelectColor</textcolor>
+                <label>  [UPPERCASE]$LOCALIZE[31106][/UPPERCASE]</label>
+            </control>
+        </definition>
 	</include>
 
 	<include name="PlaylistLibraryGroupLabelForSideMenu">
@@ -620,7 +623,6 @@
 	</include>
 
 	<include name="PVRSearchButtonForSideMenu">
-		<description>Search Button For Side Menu</description>
         <control type="button" id="36">
 			<align>left</align>
             <label>$LOCALIZE[137]</label>
@@ -628,9 +630,17 @@
 			<onclick condition="!IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiosearch)</onclick>
         </control>
 	</include>
-	
+
+	<include name="GlobalSearchButtonForSideMenu">
+        <control type="button" id="91">
+            <visible>Skin.HasSetting(SideMenu.GlobalSearch) + System.HasAddon(script.globalsearch)</visible>
+			<align>left</align>
+            <label>$LOCALIZE[31482]</label>
+			<onclick>RunScript(script.globalsearch)</onclick>
+        </control>
+	</include>
+    
     <include name="SettingsHelpButtonForSideMenu">
-        <description>Help For Settings Button For Side Menu</description>
 		<control type="radiobutton" id="92">
 			<align>left</align>
 			<label>$LOCALIZE[10043]</label>
@@ -640,7 +650,6 @@
 	</include>
     
     <include name="NameForThumbnailsButtonForSideMenu">
-        <description>Name in Thumbnails And Panels Button For Side Menu</description>
 		<control type="radiobutton" id="97">
             <visible>Control.IsVisible(55) | Control.IsVisible(56)</visible>
 			<align>left</align>
@@ -651,7 +660,6 @@
 	</include>
     
     <include name="DescriptionForLandscapeButtonForSideMenu">
-		<description>Description in Landscape Button For Side Menu</description>
 		<control type="radiobutton" id="98">
             <visible>Control.IsVisible(53)</visible>
 			<align>left</align>
@@ -662,7 +670,6 @@
 	</include>
     
 	<include name="MusicLibraryButtonForSideMenu">
-		<description>Music Library Button For Side Menu</description>
 		<control type="button" id="99">
 			<align>left</align>
 			<label>$LOCALIZE[29800]</label>
