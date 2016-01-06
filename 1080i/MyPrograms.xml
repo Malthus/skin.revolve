@@ -27,6 +27,11 @@
 				<include name="SortOrderButtonForSideMenu" />
                 <include name="NameForThumbnailsButtonForSideMenu" />
                 <include name="DescriptionForLandscapeButtonForSideMenu" />
+                
+                <include name="NavigationGroupLabelForSideMenu">
+                    <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
+                </include>
+				<include name="GlobalSearchButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu" />

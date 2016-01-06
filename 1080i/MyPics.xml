@@ -33,6 +33,11 @@
 				<include name="SlideshowButtonForSideMenu" />
 				<include name="RecursiveSlideshowButtonForSideMenu" />
 				<include name="RandomiseButtonForSideMenu" />
+                
+                <include name="NavigationGroupLabelForSideMenu">
+                    <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
+                </include>
+				<include name="GlobalSearchButtonForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu" />
