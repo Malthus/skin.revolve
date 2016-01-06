@@ -22,7 +22,7 @@
 			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
-                <include name="ButtonListForSideMenu" />
+                <include name="BeginOfButtonListForSideMenu" />
 
                 <include name="ViewGroupLabelForSideMenu" />
 				<include name="ViewTypeButtonForSideMenu" />
@@ -43,6 +43,8 @@
 				<include name="PartyModeButtonForSideMenu" />
 				<include name="UnlockSharesButtonForSideMenu" />
 				<include name="LibraryUpdateButtonForSideMenu" />
+                
+                <include name="EndOfButtonListForSideMenu" />
 			</control>
             
             <include name="PlayerControlsForSideMenu" />

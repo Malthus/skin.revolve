@@ -93,7 +93,7 @@
 			<include name="SideMenu" />
 
 			<control type="grouplist" id="9001">
-                <include name="ButtonListForSideMenu">
+                <include name="BeginOfButtonListForSideMenu">
                     <param name="onright" value="3" />
                 </include>
 
@@ -106,6 +106,8 @@
                 </control>
 				<include name="SettingsLevelButtonForSideMenu" />
                 <include name="SettingsHelpButtonForSideMenu" />
+                
+                <include name="EndOfButtonListForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu">

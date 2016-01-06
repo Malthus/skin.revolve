@@ -220,7 +220,7 @@
 			<include name="SideMenu"/>
 
 			<control type="grouplist" id="9001">
-                <include name="ButtonListForSideMenu">
+                <include name="BeginOfButtonListForSideMenu">
                     <param name="onright" value="53" />
                 </include>
 
@@ -236,6 +236,8 @@
                 
                 <include name="SettingsGroupLabelForSideMenu" />
 				<include name="WeatherSettingsButtonForSideMenu" />
+                
+                <include name="EndOfButtonListForSideMenu" />
 			</control>
 
             <include name="PlayerControlsForSideMenu">
