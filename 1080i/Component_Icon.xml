@@ -425,10 +425,13 @@
 	</include>
 	
 	<include name="FadeMaskForDefaultCircleThumbnailIcon">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        
         <definition>
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
                 <width>270</width>
                 <height>270</height>
                 <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
@@ -761,10 +764,13 @@
 	</include>
 
 	<include name="FadeMaskForDefaultBannerIcon">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+    
         <definition>
             <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
                 <height>146</height>
                 <width>764</width>
                 <texture colordiffuse="SelectColor">elements/banner-mask.png</texture>
