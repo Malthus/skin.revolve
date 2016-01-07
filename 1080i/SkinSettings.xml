@@ -230,6 +230,17 @@
 						<onclick>Skin.ToggleSetting(CircleNextAired.Enable)</onclick>
 					</control>
                     
+					<control type="radiobutton" id="306">
+						<description>Circle Next Aired Not Invisible Option</description>
+                        <enable>System.HasAddon(script.tv.show.next.aired) +  + Skin.HasSetting(CircleNextAired.Enable)</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31602]</label>
+                        <selected>Skin.HasSetting(CircleNextAired.NotInvisible)</selected>
+						<onclick>Skin.ToggleSetting(CircleNextAired.NotInvisible)</onclick>
+					</control>
+                    
 					<control type="button" id="301">
 						<description>Circle Movies Source Option</description>
 						<width>1100</width>
@@ -237,6 +248,17 @@
 						<label>$LOCALIZE[31198]: $INFO[Skin.String(CircleMovieOption.Name)]</label>
 						<onclick>SetProperty(TargetCircleOption,CircleMovieOption,1194)</onclick>
 						<onclick>ActivateWindow(1194)</onclick>
+					</control>
+
+					<control type="radiobutton" id="307">
+						<description>Circle Movies Not Invisible Option</description>
+                        <enable>!IsEmpty(Skin.String(CircleMovieOption.Source))</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31604]</label>
+                        <selected>Skin.HasSetting(CircleMovieOption.NotInvisible)</selected>
+						<onclick>Skin.ToggleSetting(CircleMovieOption.NotInvisible)</onclick>
 					</control>
 
 					<control type="button" id="302">
@@ -248,6 +270,17 @@
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
 
+					<control type="radiobutton" id="308">
+						<description>Circle Episodes Not Invisible Option</description>
+                        <enable>!IsEmpty(Skin.String(CircleEpisodeOption.Source))</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31606]</label>
+                        <selected>Skin.HasSetting(CircleEpisodeOption.NotInvisible)</selected>
+						<onclick>Skin.ToggleSetting(CircleEpisodeOption.NotInvisible)</onclick>
+					</control>
+
 					<control type="button" id="303">
 						<description>Circle Albums Source Option</description>
 						<width>1100</width>
@@ -257,6 +290,17 @@
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
                     
+					<control type="radiobutton" id="309">
+						<description>Circle Albums Not Invisible Option</description>
+                        <enable>!IsEmpty(Skin.String(CircleAlbumOption.Source))</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31608]</label>
+                        <selected>Skin.HasSetting(CircleAlbumOption.NotInvisible)</selected>
+						<onclick>Skin.ToggleSetting(CircleAlbumOption.NotInvisible)</onclick>
+					</control>
+
 					<control type="radiobutton" id="304">
 						<description>Circle Exit Menu Option</description>
 						<width>1100</width>
@@ -732,6 +776,26 @@
 						<visible>Control.HasFocus(305)</visible>
 						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31787]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(306)</visible>
+						<font>DialogHelpFont</font>
+						<label>$LOCALIZE[31603]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(307)</visible>
+						<font>DialogHelpFont</font>
+						<label>$LOCALIZE[31605]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(308)</visible>
+						<font>DialogHelpFont</font>
+						<label>$LOCALIZE[31607]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(309)</visible>
+						<font>DialogHelpFont</font>
+						<label>$LOCALIZE[31609]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(701)</visible>

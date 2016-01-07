@@ -82,12 +82,16 @@
 	<include name="CircleItemsSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.Reset(CircleNextAired.Enable)</onfocus>
+            <onfocus>Skin.Reset(CircleNextAired.NotInvisible)</onfocus>
             <onfocus>Skin.SetString(CircleMovieOption.Name,$LOCALIZE[31721] ($LOCALIZE[31711])</onfocus>
             <onfocus>Skin.SetString(CircleMovieOption.Source,LatestMovie.%d)</onfocus>
+            <onfocus>Skin.Reset(CircleMovieOption.NotInvisible)</onfocus>
             <onfocus>Skin.SetString(CircleEpisodeOption.Name,$LOCALIZE[31722] ($LOCALIZE[31711])</onfocus>
             <onfocus>Skin.SetString(CircleEpisodeOption.Source,LatestEpisode.%d)</onfocus>
+            <onfocus>Skin.Reset(CircleEpisodeOption.NotInvisible)</onfocus>
             <onfocus>Skin.SetString(CircleAlbumOption.Name,$LOCALIZE[31725] ($LOCALIZE[31711])</onfocus>
             <onfocus>Skin.SetString(CircleAlbumOption.Source,LatestAlbum.%d)</onfocus>
+            <onfocus>Skin.Reset(CircleAlbumOption.NotInvisible)</onfocus>
             <onfocus>Skin.Reset(CircleExitMenu.Enable)</onfocus>
         </definition>
 	</include>
