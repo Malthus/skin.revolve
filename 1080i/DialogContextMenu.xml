@@ -41,6 +41,13 @@
 					<width>512</width>
                     <scroll>false</scroll>
 				</control>
+                
+				<control type="button" id="994">
+					<width>512</width>
+                    <scroll>false</scroll>
+					<label>$LOCALIZE[31915]</label>
+					<onclick>Dialog.Close(contextmenu)</onclick>
+				</control>
 			</control>
             
             <control type="scrollbar" id="995">
