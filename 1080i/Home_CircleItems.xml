@@ -3,7 +3,7 @@
 	<include name="HomeCircleItems">
 		<control type="group">
             <control type="fixedlist" id="600">
-                <visible allowhiddenfocus="true">Control.HasFocus(600) | [Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source)) + Skin.HasSetting(CircleMovieOption.NotInvisible] | [Container(300).HasFocus(6) + !IsEmpty(Skin.String(CircleEpisodeOption.Source)) + Skin.HasSetting(CircleEpisodeOption.NotInvisible] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable) + Skin.HasSetting(CircleNextAired.NotInvisible] | [Container(300).HasFocus(16) + !IsEmpty(Skin.String(CircleAlbumOption.Source)) + Skin.HasSetting(CircleAlbumOption.NotInvisible]</visible>
+                <visible allowhiddenfocus="true">Control.HasFocus(600) | [Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source)) + Skin.HasSetting(CircleMovieOption.NotInvisible)] | [Container(300).HasFocus(6) + !IsEmpty(Skin.String(CircleEpisodeOption.Source)) + Skin.HasSetting(CircleEpisodeOption.NotInvisible)] | [Container(300).HasFocus(16) + !IsEmpty(Skin.String(CircleAlbumOption.Source)) + Skin.HasSetting(CircleAlbumOption.NotInvisible)] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable) + Skin.HasSetting(CircleNextAired.NotInvisible)]</visible>
                 <description>Items In Circle List</description>
                 <animation effect="fade" start="0" end="100" time="500">Visible</animation>
                 <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
