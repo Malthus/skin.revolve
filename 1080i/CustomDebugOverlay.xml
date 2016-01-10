@@ -9,9 +9,9 @@
 			<visible>Skin.HasSetting(Debug.InfoVisible)</visible>
 			<posx>20</posx>
 			<posy>20</posy>
-			<width>780</width>
-			<height>320</height>
-			<itemgap>12</itemgap>
+			<width>1880</width>
+			<height>1040</height>
+			<itemgap>10</itemgap>
 			
 			<!-- Content labels -->
 			
@@ -165,6 +165,7 @@
 			<!-- Background labels -->
 			
 			<control type="group">
+                <visible>Skin.HasSetting(Debug.BackgroundInfoVisible)</visible>
 				<include name="BackgroundForDebug">
                     <param name="label" value="$VAR[ContentBackground]" />
                 </include>

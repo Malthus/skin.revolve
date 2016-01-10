@@ -609,6 +609,17 @@
 						<onclick>Skin.ToggleSetting(Debug.InfoVisible)</onclick>
 					</control>
 
+					<control type="radiobutton" id="905">
+						<description>Debug Background Info Setting</description>
+                        <enable>Skin.HasSetting(Debug.InfoVisible)</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31157]</label>
+						<selected>Skin.HasSetting(Debug.BackgroundInfoVisible)</selected>
+						<onclick>Skin.ToggleSetting(Debug.BackgroundInfoVisible)</onclick>
+					</control>
+
 					<control type="radiobutton" id="904">
 						<description>Debug List Border Setting</description>
 						<width>1100</width>
@@ -907,6 +918,11 @@
 						<visible>Control.HasFocus(904)</visible>
 						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31212]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(905)</visible>
+						<font>DialogHelpFont</font>
+						<label>$LOCALIZE[31158]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(910)</visible>
