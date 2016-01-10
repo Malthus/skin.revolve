@@ -116,6 +116,17 @@
 						<onclick>Skin.ToggleSetting(Background.ImageFaded)</onclick>
 					</control>
 
+					<control type="radiobutton" id="108">
+						<description>Fanart For Files Background Image Option</description>
+						<enable>Skin.HasSetting(Background.ImageActive)</enable>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>- $LOCALIZE[31610]</label>
+						<selected>Skin.HasSetting(Background.ImageFanartForFiles)</selected>
+						<onclick>Skin.ToggleSetting(Background.ImageFanartForFiles)</onclick>
+					</control>
+
 					<control type="radiobutton" id="103">
 						<description>Background Visualiser Option</description>
 						<width>1100</width>
@@ -751,6 +762,11 @@
 						<visible>Control.HasFocus(107)</visible>
 						<font>DialogHelpFont</font>
 						<label>$LOCALIZE[31218]</label>
+					</control>
+					<control type="textbox">
+						<visible>Control.HasFocus(108)</visible>
+						<font>DialogHelpFont</font>
+						<label>$LOCALIZE[31611]</label>
 					</control>
 					<control type="textbox">
 						<visible>Control.HasFocus(301)</visible>

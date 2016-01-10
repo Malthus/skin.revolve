@@ -23,6 +23,15 @@
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
                     <fadetime>500</fadetime>
+                    <texture background="true">special://skin/backgrounds/default.jpg</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+
+                <control type="largeimage">
+                    <visible>Skin.HasSetting(Background.ImageActive)</visible>
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
+                    <fadetime>500</fadetime>
                     <texture background="true">$VAR[ContentBackground]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>

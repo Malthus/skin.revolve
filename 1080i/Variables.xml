@@ -184,6 +184,7 @@
 		<value condition="!IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
         
 		<value condition="Container.Content(addons)">special://skin/backgrounds/addons.jpg</value>
+        <value condition="Container.Content(files) + Skin.HasSetting(Background.ImageFanartForFiles)">$INFO[Container.FolderPath,,fanart.jpg]</value>
 		<value>special://skin/backgrounds/default.jpg</value>
 	</variable>
 	

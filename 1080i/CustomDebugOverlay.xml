@@ -162,6 +162,14 @@
                 </include>
 			</control>
 			
+			<!-- Background labels -->
+			
+			<control type="group">
+				<include name="BackgroundForDebug">
+                    <param name="label" value="$VAR[ContentBackground]" />
+                </include>
+			</control>
+			
 			<!-- Window labels -->
 
 			<control type="group">
