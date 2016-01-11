@@ -264,6 +264,14 @@
 						<property name="Command">ActivateWindow(videos,videodb://musicvideos/,return)</property>
 						<onclick>Noop</onclick>
 					</item>
+					<item id="206">
+						<description>Open Videos / Path Option</description>
+                        <visible>Container(30).HasFocus(2)</visible>
+						<label>$LOCALIZE[31612]</label>
+						<property name="Command">ActivateWindow(videos$INFO[Window.Property(ParameterPath),$COMMA,])</property>
+						<property name="Parameter">P</property>
+						<onclick>Noop</onclick>
+					</item>
 					<item id="207">
 						<description>Open Videos / Playlists Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
@@ -335,7 +343,16 @@
 						<property name="Command">ActivateWindow(music,musicdb://,return)</property>
 						<onclick>Noop</onclick>
 					</item>
+					<item id="306">
+						<description>Open Music / Path Option</description>
+                        <visible>Container(30).HasFocus(3)</visible>
+						<label>$LOCALIZE[31616]</label>
+						<property name="Command">ActivateWindow(music$INFO[Window.Property(ParameterPath),$COMMA,])</property>
+						<property name="Parameter">P</property>
+						<onclick>Noop</onclick>
+					</item>
 					<item id="307">
+						<description>Open Music Playlist Option</description>
                         <visible>Container(30).HasFocus(3)</visible>
 						<label>$LOCALIZE[31842]</label>
 						<property name="Command">ActivateWindow(music,special://musicplaylists/,return)</property>
@@ -390,6 +407,14 @@
                         <property name="Command">ActivateWindow(pictures)</property>
                         <onclick>Noop</onclick>
                     </item>
+                    <item id="406">
+						<description>Open Pictures / Path Option</description>
+                        <visible>Container(30).HasFocus(4)</visible>
+						<label>$LOCALIZE[31617]</label>
+						<property name="Command">ActivateWindow(pictures$INFO[Window.Property(ParameterPath),$COMMA,])</property>
+						<property name="Parameter">P</property>
+						<onclick>Noop</onclick>
+					</item>
 					<item id="411">
                         <visible>Container(30).HasFocus(4)</visible>
 						<label>$LOCALIZE[31850]</label>
@@ -430,6 +455,14 @@
                         <visible>Container(30).HasFocus(5)</visible>
 						<label>$LOCALIZE[31855]</label>
 						<property name="Command">ActivateWindow(programs,addons://sources/executable/)</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="506">
+						<description>Open Programs / Path Option</description>
+                        <visible>Container(30).HasFocus(5)</visible>
+						<label>$LOCALIZE[31618]</label>
+						<property name="Command">ActivateWindow(programs$INFO[Window.Property(ParameterPath),$COMMA,])</property>
+						<property name="Parameter">P</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="551">
@@ -768,8 +801,8 @@
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="440" />
-                    <param name="height" value="240" />
+                    <param name="posy" value="400" />
+                    <param name="height" value="280" />
                 </include>
 				<onright>31</onright>
                 
@@ -827,6 +860,16 @@
                     <height>40</height>
                     <texture>-</texture>
 				</control>
+				<control type="button" id="16">
+                    <description>Paste Path Button</description>
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),P) + !IsEmpty(Skin.String(Revolve.PathClipboard))</visible>
+					<label>$LOCALIZE[31613]</label>
+                    <onclick>SetProperty(ParameterPath,$INFO[Skin.String(Revolve.PathClipboard)])</onclick>
+				</control>
+                <include name="SpacerForButtonListForDialog">
+                    <param name="id" value="17" />
+                    <param name="buttonid" value="16" />
+                </include>
 				<control type="radiobutton" id="26">
                     <description>Help Radiobutton</description>
                     <posy>40</posy>
@@ -892,6 +935,11 @@
                         <visible>Control.HasFocus(15)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31781]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(16)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31614]</label>
                     </control>
 
                     <control type="textbox">

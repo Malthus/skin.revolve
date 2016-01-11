@@ -42,7 +42,16 @@
                     <scroll>false</scroll>
 				</control>
                 
+				<control type="button" id="993">
+                    <description>Copy to Clipboard Button</description>
+                    <visible>!IsEmpty(Container.FolderPath)</visible>
+					<width>512</width>
+                    <scroll>false</scroll>
+					<label>$LOCALIZE[31615]</label>
+					<onclick>Skin.SetString(Revolve.PathClipboard,$INFO[Container.FolderPath])</onclick>
+				</control>
 				<control type="button" id="994">
+                    <description>Close Button</description>
 					<width>512</width>
                     <scroll>false</scroll>
 					<label>$LOCALIZE[31915]</label>
