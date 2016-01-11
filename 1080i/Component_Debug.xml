@@ -19,6 +19,17 @@
         </definition>
 	</include>
 
+	<include name="InformationForDebug">
+        <param name="label" default="-" />
+    
+        <definition>
+            <include name="ItemForDebug">
+                <param name="textcolor" value="Orange" />
+                <param name="label" value="$PARAM[label]" />
+            </include>
+        </definition>
+	</include>
+    
 	<include name="ContentTypeForDebug">
         <param name="label" default="-" />
     
@@ -30,17 +41,6 @@
         </definition>
 	</include>
 
-	<include name="BackgroundForDebug">
-        <param name="label" default="-" />
-    
-        <definition>
-            <include name="ItemForDebug">
-                <param name="textcolor" value="Black" />
-                <param name="label" value="$PARAM[label]" />
-            </include>
-        </definition>
-	</include>
-    
 	<include name="WindowNameForDebug">
         <param name="label" default="-" />
     

@@ -13,6 +13,24 @@
 			<height>1040</height>
 			<itemgap>10</itemgap>
 			
+			<!-- Background labels -->
+			
+			<control type="group">
+                <visible>StringCompare(Skin.String(Debug.AdditionalInfo),B)</visible>
+				<include name="InformationForDebug">
+                    <param name="label" value="$VAR[ContentBackground]" />
+                </include>
+			</control>
+			
+			<!-- Folderpath labels -->
+			
+			<control type="group">
+                <visible>StringCompare(Skin.String(Debug.AdditionalInfo),P) + !IsEmpty(Container.FolderPath)</visible>
+				<include name="InformationForDebug">
+                    <param name="label" value="$INFO[Container.FolderPath]" />
+                </include>
+			</control>
+			
 			<!-- Content labels -->
 			
 			<control type="group">
@@ -159,15 +177,6 @@
 				<visible>!IsEmpty(Container.ListItem.ChannelNumber)</visible>
 				<include name="ContentTypeForDebug">
                     <param name="label" value="Radio/TV Items" />
-                </include>
-			</control>
-			
-			<!-- Background labels -->
-			
-			<control type="group">
-                <visible>Skin.HasSetting(Debug.BackgroundInfoVisible)</visible>
-				<include name="BackgroundForDebug">
-                    <param name="label" value="$VAR[ContentBackground]" />
                 </include>
 			</control>
 			

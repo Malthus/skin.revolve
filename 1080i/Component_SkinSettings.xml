@@ -128,7 +128,7 @@
         <definition>
             <onfocus>Skin.Reset(Debug.GridVisible)</onfocus>
             <onfocus>Skin.Reset(Debug.InfoVisible)</onfocus>
-            <onfocus>Skin.Reset(Debug.BackgroundInfoVisible)</onfocus>
+            <onfocus>Skin.SetString(Debug.AdditionalInfo,N)</onfocus>
             <onfocus>Skin.Reset(Debug.ListBorderVisible)</onfocus>
         </definition>
 	</include>

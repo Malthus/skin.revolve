@@ -728,6 +728,12 @@
         <value>$LOCALIZE[31952]</value>
     </variable>
 
+    <variable name="AdditionalDebugInfoLabel">
+        <value condition="StringCompare(Skin.String(Debug.AdditionalInfo),B)">$LOCALIZE[19190]</value>
+        <value condition="StringCompare(Skin.String(Debug.AdditionalInfo),P)">$LOCALIZE[573]</value>
+        <value>$LOCALIZE[16018]</value>
+    </variable>
+
     <variable name="MenuNameLabel">
         <value>$INFO[Container(450).ListItem.Label]</value>
     </variable>

@@ -419,7 +419,7 @@
 						<description>Busy Animation Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31788]: $VAR[BusyAnimationNameLabel]</label>
+						<label>$LOCALIZE[31788]$LOCALIZE[31972] $VAR[BusyAnimationNameLabel]</label>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31788],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,BusyAnimation.Type,1188)</onclick>
@@ -459,7 +459,7 @@
                         <description>Type of Thumbnails Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31799]: $VAR[ThumbnailsTypeLabel]</label>
+						<label>$LOCALIZE[31799]$LOCALIZE[31972] $VAR[ThumbnailsTypeLabel]</label>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31799],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31220],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,Thumbnails.Type,1188)</onclick>
@@ -541,15 +541,23 @@
 						<onclick>Skin.ToggleSetting(Debug.InfoVisible)</onclick>
 					</control>
 
-					<control type="radiobutton" id="905">
-						<description>Debug Background Info Setting</description>
+					<control type="button" id="905">
+						<description>Debug Additional Info Setting</description>
                         <enable>Skin.HasSetting(Debug.InfoVisible)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
-						<label>- $LOCALIZE[31157]</label>
-						<selected>Skin.HasSetting(Debug.BackgroundInfoVisible)</selected>
-						<onclick>Skin.ToggleSetting(Debug.BackgroundInfoVisible)</onclick>
+						<label>- $LOCALIZE[31157]$LOCALIZE[31972] $VAR[AdditionalDebugInfoLabel]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31157],1188)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31159],1188)</onclick>
+						<onclick>SetProperty(DialogTarget,Debug.AdditionalInfo,1188)</onclick>
+						<onclick>SetProperty(List01Option.Name,$LOCALIZE[16018],1188)</onclick>
+						<onclick>SetProperty(List01Option.Action,N,1188)</onclick>
+						<onclick>SetProperty(List02Option.Name,$LOCALIZE[19190],1188)</onclick>
+						<onclick>SetProperty(List02Option.Action,B,1188)</onclick>
+						<onclick>SetProperty(List03Option.Name,$LOCALIZE[573],1188)</onclick>
+						<onclick>SetProperty(List03Option.Action,P,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
 					</control>
 
 					<control type="radiobutton" id="904">
