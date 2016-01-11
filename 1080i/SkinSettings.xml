@@ -175,7 +175,7 @@
                     
 					<control type="radiobutton" id="306">
 						<description>Circle Next Aired Not Invisible Option</description>
-                        <enable>System.HasAddon(script.tv.show.next.aired) +  + Skin.HasSetting(CircleNextAired.Enable)</enable>
+                        <enable>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
