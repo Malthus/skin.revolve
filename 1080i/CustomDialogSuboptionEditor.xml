@@ -3,12 +3,13 @@
 	<allowoverlay>yes</allowoverlay>
 	<defaultcontrol>30</defaultcontrol>
     <onload condition="!StringCompare(Window.Property(CustomOptionType),M) + !StringCompare(Window.Property(CustomOptionType),S) + !StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onload>
+    <onload>SetProperty(CustomOptionActive,True)</onload>
 
 	<controls>
 		<control type="group">
-			<posy>PosYForThirteenLinesDialog</posy>
+			<posy>PosYForFourteenLinesDialog</posy>
             <include name="WindowForDialog">
-                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="height" value="HeightForFourteenLinesDialog" />
                 <param name="headerlabel" value="$LOCALIZE[31800]" />
                 <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
@@ -312,7 +313,7 @@
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
                     <param name="posy" value="320" />
-                    <param name="height" value="280" />
+                    <param name="height" value="320" />
                 </include>
 				<onright>34</onright>
 
@@ -356,10 +357,19 @@
                     <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
 					<onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
 				</control>
+				<control type="radiobutton" id="27">
+                    <description>Active Radiobutton</description>
+                    <posy>40</posy>
+					<label>$LOCALIZE[31405]</label>
+                    <selected>Substring(Window.Property(CustomOptionActive),T,left)</selected>
+					<onclick condition="!Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,True)</onclick>
+					<onclick condition="Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,False)</onclick>
+				</control>
 				<control type="button" id="20">
                     <description>Ok Button</description>
-                    <posy>40</posy>
 					<label>$LOCALIZE[186]</label>
+                    <onclick condition="!Substring(Window.Property(CustomOptionActive),T,left)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
+                    <onclick condition="Substring(Window.Property(CustomOptionActive),T,left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomOptionName)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
@@ -422,6 +432,11 @@
                         <visible>Control.HasFocus(26)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31765]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(27)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31619]</label>
                     </control>
 
                     <control type="textbox">
