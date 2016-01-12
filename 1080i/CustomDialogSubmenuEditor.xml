@@ -128,6 +128,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu01Option.Name)]</label>
                         <property name="Index">$NUMBER[1]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu01Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu01Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu01Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu01Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu01Option.Subtitle)],1195)</onclick>
@@ -145,6 +146,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu02Option.Name)]</label>
                         <property name="Index">$NUMBER[2]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu02Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu02Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu02Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu02Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu02Option.Subtitle)],1195)</onclick>
@@ -162,6 +164,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu03Option.Name)]</label>
                         <property name="Index">$NUMBER[3]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu03Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu03Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu03Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu03Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu03Option.Subtitle)],1195)</onclick>
@@ -179,6 +182,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu04Option.Name)]</label>
                         <property name="Index">$NUMBER[4]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu04Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu04Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu04Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu04Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu04Option.Subtitle)],1195)</onclick>
@@ -196,6 +200,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu05Option.Name)]</label>
                         <property name="Index">$NUMBER[5]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu05Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu05Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu05Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu05Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu05Option.Subtitle)],1195)</onclick>
@@ -213,6 +218,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu06Option.Name)]</label>
                         <property name="Index">$NUMBER[6]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu06Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu06Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu06Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu06Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu06Option.Subtitle)],1195)</onclick>
@@ -230,6 +236,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu07Option.Name)]</label>
                         <property name="Index">$NUMBER[7]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu07Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu07Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu07Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu07Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu07Option.Subtitle)],1195)</onclick>
@@ -247,6 +254,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu08Option.Name)]</label>
                         <property name="Index">$NUMBER[8]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu08Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu08Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu08Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu08Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu08Option.Subtitle)],1195)</onclick>
@@ -264,6 +272,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu09Option.Name)]</label>
                         <property name="Index">$NUMBER[9]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu09Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu09Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu09Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu09Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu09Option.Subtitle)],1195)</onclick>
@@ -281,6 +290,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu10Option.Name)]</label>
                         <property name="Index">$NUMBER[10]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu10Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu10Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu10Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu10Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu10Option.Subtitle)],1195)</onclick>
@@ -298,6 +308,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu11Option.Name)]</label>
                         <property name="Index">$NUMBER[11]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu11Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu11Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu11Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu11Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu11Option.Subtitle)],1195)</onclick>
@@ -315,6 +326,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu12Option.Name)]</label>
                         <property name="Index">$NUMBER[12]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu12Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu12Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu12Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu12Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu12Option.Subtitle)],1195)</onclick>
@@ -332,6 +344,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu13Option.Name)]</label>
                         <property name="Index">$NUMBER[13]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu13Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu13Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu13Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu13Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu13Option.Subtitle)],1195)</onclick>
@@ -349,6 +362,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu14Option.Name)]</label>
                         <property name="Index">$NUMBER[14]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu14Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu14Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu14Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu14Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu14Option.Subtitle)],1195)</onclick>
@@ -366,6 +380,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu15Option.Name)]</label>
                         <property name="Index">$NUMBER[15]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu15Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu15Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu15Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu15Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu15Option.Subtitle)],1195)</onclick>
@@ -383,6 +398,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu16Option.Name)]</label>
                         <property name="Index">$NUMBER[16]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu16Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu16Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu16Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu16Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu16Option.Subtitle)],1195)</onclick>
@@ -400,6 +416,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu17Option.Name)]</label>
                         <property name="Index">$NUMBER[17]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu17Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu17Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu17Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu17Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu17Option.Subtitle)],1195)</onclick>
@@ -417,6 +434,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu18Option.Name)]</label>
                         <property name="Index">$NUMBER[18]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu18Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu18Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu18Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu18Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu18Option.Subtitle)],1195)</onclick>
@@ -434,6 +452,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu19Option.Name)]</label>
                         <property name="Index">$NUMBER[19]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu19Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu19Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu19Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu19Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu19Option.Subtitle)],1195)</onclick>
@@ -451,6 +470,7 @@
                         <label>$LOCALIZE[31140]: $INFO[Window.Property(CustomSubmenu20Option.Name)]</label>
                         <property name="Index">$NUMBER[20]</property>
                         <property name="Active">$INFO[Window.Property(CustomSubmenu20Option.Active)]</property>
+                        <onclick>SetProperty(CustomOptionActive,$INFO[Window.Property(CustomSubmenu20Option.Active)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionType,$INFO[Window.Property(CustomSubmenu20Option.Type)],1195)</onclick>
                         <onclick>SetProperty(CustomOptionName,$INFO[Window.Property(CustomSubmenu20Option.Name)],1195)</onclick>
                         <onclick>SetProperty(CustomSubtitle,$INFO[Window.Property(CustomSubmenu20Option.Subtitle)],1195)</onclick>
