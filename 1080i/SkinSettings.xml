@@ -653,7 +653,7 @@
 			</control>
 			
             <control type="group">
-                <visible>Skin.HasSetting(Settings.HelpVisible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(200).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
+                <visible>Skin.HasSetting(Settings.HelpVisible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | Control.IsVisible(200) | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
                 <include name="WindowAnimationForSettings" />
 
                 <control type="image">
