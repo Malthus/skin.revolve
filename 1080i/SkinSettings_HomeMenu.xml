@@ -806,7 +806,19 @@
 				<align>left</align>
 				<label>- $LOCALIZE[31204]</label>
 				<selected>Skin.HasSetting(MusicOption.Immutable)</selected>
-				<onclick>Skin.ToggleSetting(MusicOption.Immutable)</onclick>
+<!--				<onclick>Skin.ToggleSetting(MusicOption.Immutable)</onclick> -->
+				<onclick>SetProperty(CustomOptionType,$INFO[Skin.String(BooksOption.Type)],1196)</onclick>
+				<onclick>SetProperty(CustomOptionName,$LOCALIZE[31004],1196)</onclick>
+				<onclick>SetProperty(CustomSubtitle,$LOCALIZE[31027],1196)</onclick>
+				<onclick>SetProperty(CustomBackgroundImage,special://skin/backgrounds/books.jpg,1196)</onclick>
+				<onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String(BooksOption.MenuTitle)],1196)</onclick>
+				<onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(BooksOption.SourceInfo)],1196)</onclick>
+				<onclick>SetProperty(CustomWindow,$INFO[Skin.String(BooksOption.Window)],1196)</onclick>
+				<onclick>SetProperty(CustomAction,$INFO[Skin.String(BooksOption.Action)],1196)</onclick>
+				<onclick>SetProperty(TargetOption,BooksOption,1196)</onclick>
+				<onclick>ClearProperty(CustomizableOption,1196)</onclick>
+				<onclick>SetProperty(Dialog.ImmutableVisible,True,1196)</onclick>
+				<onclick>ActivateWindow(1196)</onclick>
 			</control>
                     
 			<control type="radiobutton" id="275">

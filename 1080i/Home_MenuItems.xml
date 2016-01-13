@@ -9,7 +9,8 @@
 			<label2>$INFO[System.DVDLabel]</label2>
 			<property name="Label3">$LOCALIZE[31020]</property>
 			<property name="Circle">circle/disc.png</property>
-			<icon>special://skin/backgrounds/disc.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(PlayDiscOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/disc.jpg</property>
 			<onclick>PlayDVD</onclick>
 		</item>
 
@@ -19,7 +20,8 @@
 			<label>$LOCALIZE[1036]</label>
 			<property name="Label3">$LOCALIZE[31026]</property>
 			<property name="Circle">circle/favourites.png</property>
-			<icon>special://skin/backgrounds/favourites.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(FavouritesOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/favourites.jpg</property>
 			<onclick>ActivateWindow(favourites)</onclick>
 		</item>
 
@@ -28,7 +30,7 @@
 			<visible>Skin.HasSetting(Custom01Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom01Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom01Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom01Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom01Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom01Option.MenuTitle)],$INFO[Skin.String(Custom01Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom01Option.SourceInfo)],$INFO[Skin.String(Custom01Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom01Option.Action)]</onclick>
@@ -39,7 +41,7 @@
 			<visible>Skin.HasSetting(Custom02Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom02Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom02Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom02Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom02Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom02Option.MenuTitle)],$INFO[Skin.String(Custom02Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom02Option.SourceInfo)],$INFO[Skin.String(Custom02Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom02Option.Action)]</onclick>
@@ -50,7 +52,7 @@
 			<visible>Skin.HasSetting(Custom03Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom03Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom03Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom03Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom03Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom03Option.MenuTitle)],$INFO[Skin.String(Custom03Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom03Option.SourceInfo)],$INFO[Skin.String(Custom03Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom03Option.Action)]</onclick>
@@ -61,7 +63,7 @@
 			<visible>Skin.HasSetting(Custom04Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom04Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom04Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom04Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom04Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom04Option.MenuTitle)],$INFO[Skin.String(Custom04Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom04Option.SourceInfo)],$INFO[Skin.String(Custom04Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom04Option.Action)]</onclick>
@@ -72,7 +74,7 @@
 			<visible>Skin.HasSetting(Custom05Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom05Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom05Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom05Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom05Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom05Option.MenuTitle)],$INFO[Skin.String(Custom05Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom05Option.SourceInfo)],$INFO[Skin.String(Custom05Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom05Option.Action)]</onclick>
@@ -83,7 +85,7 @@
 			<visible>Skin.HasSetting(Custom06Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom06Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom06Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom06Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom06Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom06Option.MenuTitle)],$INFO[Skin.String(Custom06Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom06Option.SourceInfo)],$INFO[Skin.String(Custom06Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom06Option.Action)]</onclick>
@@ -94,7 +96,7 @@
 			<visible>Skin.HasSetting(Custom07Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom07Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom07Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom07Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom07Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom07Option.MenuTitle)],$INFO[Skin.String(Custom07Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom07Option.SourceInfo)],$INFO[Skin.String(Custom07Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom07Option.Action)]</onclick>
@@ -105,7 +107,7 @@
 			<visible>Skin.HasSetting(Custom08Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom08Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom08Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom08Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom08Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom08Option.MenuTitle)],$INFO[Skin.String(Custom08Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom08Option.SourceInfo)],$INFO[Skin.String(Custom08Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom08Option.Action)]</onclick>
@@ -116,7 +118,7 @@
 			<visible>Skin.HasSetting(Custom09Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom09Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom09Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom09Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom09Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom09Option.MenuTitle)],$INFO[Skin.String(Custom09Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom09Option.SourceInfo)],$INFO[Skin.String(Custom09Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom09Option.Action)]</onclick>
@@ -127,7 +129,7 @@
 			<visible>Skin.HasSetting(Custom10Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom10Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom10Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom10Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom10Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom10Option.MenuTitle)],$INFO[Skin.String(Custom10Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom10Option.SourceInfo)],$INFO[Skin.String(Custom10Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom10Option.Action)]</onclick>
@@ -138,7 +140,7 @@
 			<visible>Skin.HasSetting(Custom11Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom11Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom11Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom11Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom11Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom11Option.MenuTitle)],$INFO[Skin.String(Custom11Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom11Option.SourceInfo)],$INFO[Skin.String(Custom11Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom11Option.Action)]</onclick>
@@ -149,7 +151,7 @@
 			<visible>Skin.HasSetting(Custom12Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom12Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom12Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom12Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom12Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom12Option.MenuTitle)],$INFO[Skin.String(Custom12Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom12Option.SourceInfo)],$INFO[Skin.String(Custom12Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom12Option.Action)]</onclick>
@@ -160,7 +162,7 @@
 			<visible>Skin.HasSetting(Custom13Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom13Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom13Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom13Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom13Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom13Option.MenuTitle)],$INFO[Skin.String(Custom13Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom13Option.SourceInfo)],$INFO[Skin.String(Custom13Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom13Option.Action)]</onclick>
@@ -171,7 +173,7 @@
 			<visible>Skin.HasSetting(Custom14Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom14Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom14Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom14Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom14Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom14Option.MenuTitle)],$INFO[Skin.String(Custom14Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom14Option.SourceInfo)],$INFO[Skin.String(Custom14Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom14Option.Action)]</onclick>
@@ -182,7 +184,7 @@
 			<visible>Skin.HasSetting(Custom15Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom15Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom15Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom15Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom15Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom15Option.MenuTitle)],$INFO[Skin.String(Custom15Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom15Option.SourceInfo)],$INFO[Skin.String(Custom15Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom15Option.Action)]</onclick>
@@ -193,7 +195,7 @@
 			<visible>Skin.HasSetting(Custom16Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom16Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom16Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom16Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom16Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom16Option.MenuTitle)],$INFO[Skin.String(Custom16Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom16Option.SourceInfo)],$INFO[Skin.String(Custom16Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom16Option.Action)]</onclick>
@@ -204,7 +206,7 @@
 			<visible>Skin.HasSetting(Custom17Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom17Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom17Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom17Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom17Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom17Option.MenuTitle)],$INFO[Skin.String(Custom17Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom17Option.SourceInfo)],$INFO[Skin.String(Custom17Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom17Option.Action)]</onclick>
@@ -215,7 +217,7 @@
 			<visible>Skin.HasSetting(Custom18Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom18Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom18Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom18Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom18Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom18Option.MenuTitle)],$INFO[Skin.String(Custom18Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom18Option.SourceInfo)],$INFO[Skin.String(Custom18Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom18Option.Action)]</onclick>
@@ -226,7 +228,7 @@
 			<visible>Skin.HasSetting(Custom19Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom19Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom19Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom19Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom19Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom19Option.MenuTitle)],$INFO[Skin.String(Custom19Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom19Option.SourceInfo)],$INFO[Skin.String(Custom19Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom19Option.Action)]</onclick>
@@ -237,7 +239,7 @@
 			<visible>Skin.HasSetting(Custom20Option.Active)</visible>
 			<label>$INFO[Skin.String(Custom20Option.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(Custom20Option.Subtitle)]</property>
-			<icon>$INFO[Skin.String(Custom20Option.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(Custom20Option.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(Custom20Option.MenuTitle)],$INFO[Skin.String(Custom20Option.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(Custom20Option.SourceInfo)],$INFO[Skin.String(Custom20Option.Window)])</onclick>
 			<onclick>$INFO[Skin.String(Custom20Option.Action)]</onclick>
@@ -250,7 +252,8 @@
             <label2>$INFO[Pvr.BackendChannels] $LOCALIZE[19019] | $INFO[Pvr.BackendRecordings] $LOCALIZE[19163]</label2>
 			<property name="Label3">$LOCALIZE[31021]</property>
 			<property name="Circle">circle/tvshows.png</property>
-			<icon>special://skin/backgrounds/tv.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(TVOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/tv.jpg</property>
 			<thumb>$INFO[Skin.String(TVOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindowAndFocus(tvchannels)</onclick>
 		</item>
@@ -262,7 +265,8 @@
             <label2>$INFO[Pvr.BackendChannels] $LOCALIZE[19019] | $INFO[Pvr.BackendRecordings] $LOCALIZE[19163]</label2>
 			<property name="Label3">$LOCALIZE[33057]</property>
 			<property name="Circle">circle/radio.png</property>
-			<icon>special://skin/backgrounds/radio.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(RadioOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/radio.jpg</property>
 			<thumb>$INFO[Skin.String(RadioOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindowAndFocus(radiochannels)</onclick>
 		</item>
@@ -274,8 +278,8 @@
             <label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31902] | $INFO[Window(Home).Property(MusicVideos.Count)] $LOCALIZE[20389]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
 			<property name="Circle">circle/videos.png</property>
-			<icon>special://skin/backgrounds/videos.jpg</icon>
-			<thumb>$INFO[Skin.String(VideosOption.BackgroundFolder)]</thumb>
+			<property name="BackgroundImage">$INFO[Skin.String(VideosOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/videos.jpg</property>
 			<onclick condition="Skin.HasSetting(VideosOption.Immutable)">ActivateWindow(videos,root)</onclick>
 			<onclick condition="!Skin.HasSetting(VideosOption.Immutable)">ActivateWindow(videos)</onclick>
 		</item>
@@ -287,7 +291,8 @@
 			<label2>$INFO[Window(Home).Property(Movies.Count)] $LOCALIZE[20342] | $INFO[Window(Home).Property(Movies.UnWatched)] $LOCALIZE[16101]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
 			<property name="Circle">circle/movies.png</property>
-			<icon>special://skin/backgrounds/movies.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(MoviesOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/movies.jpg</property>
 			<thumb>$INFO[Skin.String(MoviesOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
 		</item>
@@ -299,7 +304,8 @@
 			<label2>$INFO[Window(Home).Property(TVShows.Count)] $LOCALIZE[31902] | $INFO[Window(Home).Property(Episodes.Count)] $LOCALIZE[20360] | $INFO[Window(Home).Property(Episodes.UnWatched)] $LOCALIZE[16101]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
 			<property name="Circle">circle/tvshows.png</property>
-			<icon>special://skin/backgrounds/tvshows.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(TVShowsOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/tvshows.jpg</property>
 			<thumb>$INFO[Skin.String(TVShowsOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
 		</item>
@@ -310,7 +316,8 @@
 			<label>$LOCALIZE[20389]</label>
 			<label2>$INFO[Window(Home).Property(MusicVideos.Count)] $LOCALIZE[20389] | $INFO[Window(Home).Property(MusicVideos.UnWatched)] $LOCALIZE[16101]</label2>
 			<property name="Label3">$LOCALIZE[33056]</property>
-			<icon>special://skin/backgrounds/musicvideos.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(MusicVideosOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/musicvideos.jpg</property>
 			<thumb>$INFO[Skin.String(MusicVideosOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
 		</item>
@@ -320,7 +327,7 @@
 			<visible>Skin.HasSetting(CustomVideosOption.Active)</visible>
 			<label>$INFO[Skin.String(CustomVideosOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomVideosOption.Subtitle)]</property>
-			<icon>$INFO[Skin.String(CustomVideosOption.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(CustomVideosOption.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomVideosOption.MenuTitle)],$INFO[Skin.String(CustomVideosOption.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(CustomVideosOption.SourceInfo)],$INFO[Skin.String(CustomVideosOption.Window)])</onclick>
 			<onclick>$INFO[Skin.String(CustomVideosOption.Action)]</onclick>
@@ -333,8 +340,8 @@
 			<label2>$INFO[Window(Home).Property(Music.ArtistsCount)] $LOCALIZE[133] | $INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
 			<property name="Label3">$LOCALIZE[33057]</property>
 			<property name="Circle">circle/music.png</property>
-			<icon>special://skin/backgrounds/music.jpg</icon>
-			<thumb>$INFO[Skin.String(MusicOption.BackgroundFolder)]</thumb>
+			<property name="BackgroundImage">$INFO[Skin.String(MusicOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/music.jpg</property>
 			<onclick condition="Skin.HasSetting(MusicOption.Immutable)">ActivateWindow(music,root)</onclick>
 			<onclick condition="!Skin.HasSetting(MusicOption.Immutable)">ActivateWindow(music)</onclick>
 		</item>
@@ -346,7 +353,8 @@
 			<label2>$INFO[Window(Home).Property(Music.ArtistsCount)] $LOCALIZE[133] | $INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
 			<property name="Label3">$LOCALIZE[33057]</property>
 			<property name="Circle">circle/albums.png</property>
-			<icon>special://skin/backgrounds/albums.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(AlbumsOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/albums.jpg</property>
 			<thumb>$INFO[Skin.String(AlbumsOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
 		</item>
@@ -356,7 +364,7 @@
 			<visible>Skin.HasSetting(CustomMusicOption.Active)</visible>
 			<label>$INFO[Skin.String(CustomMusicOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomMusicOption.Subtitle)]</property>
-			<icon>$INFO[Skin.String(CustomMusicOption.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(CustomMusicOption.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomMusicOption.MenuTitle)],$INFO[Skin.String(CustomMusicOption.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(CustomMusicOption.SourceInfo)],$INFO[Skin.String(CustomMusicOption.Window)])</onclick>
 			<onclick>$INFO[Skin.String(CustomMusicOption.Action)]</onclick>
@@ -368,7 +376,8 @@
 			<label>$LOCALIZE[31004]</label>
 			<property name="Label3">$LOCALIZE[31027]</property>
 			<property name="Circle">circle/books.png</property>
-			<icon>special://skin/backgrounds/books.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(BooksOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/books.jpg</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(BooksOption.MenuTitle)],$INFO[Skin.String(BooksOption.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(BooksOption.SourceInfo)],$INFO[Skin.String(BooksOption.Window)])</onclick>
 			<onclick>$INFO[Skin.String(BooksOption.Action)]</onclick>
@@ -380,7 +389,8 @@
 			<label>$LOCALIZE[1]</label>
 			<property name="Label3">$LOCALIZE[33058]</property>
 			<property name="Circle">circle/pictures.png</property>
-			<icon>special://skin/backgrounds/pictures.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(PicturesOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/pictures.jpg</property>
 			<thumb>$INFO[Skin.String(PicturesOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(pictures)</onclick>
 		</item>
@@ -390,7 +400,7 @@
 			<visible>Skin.HasSetting(CustomPicturesOption.Active)</visible>
 			<label>$INFO[Skin.String(CustomPicturesOption.Name)]</label>
 			<property name="Label3">$INFO[Skin.String(CustomPicturesOption.Subtitle)]</property>
-			<icon>$INFO[Skin.String(CustomPicturesOption.BackgroundImage)]</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(CustomPicturesOption.BackgroundImage)]</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(CustomPicturesOption.MenuTitle)],$INFO[Skin.String(CustomPicturesOption.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(CustomPicturesOption.SourceInfo)],$INFO[Skin.String(CustomPicturesOption.Window)])</onclick>
 			<onclick>$INFO[Skin.String(CustomPicturesOption.Action)]</onclick>
@@ -402,7 +412,8 @@
 			<label>$LOCALIZE[15016]</label>
 			<property name="Label3">$LOCALIZE[31020]</property>
 			<property name="Circle">circle/games.png</property>
-			<icon>special://skin/backgrounds/games.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(GamesOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/games.jpg</property>
 			<onclick>SetProperty(MenuTitle,$INFO[Skin.String(GamesOption.MenuTitle)],$INFO[Skin.String(GamesOption.Window)])</onclick>
 			<onclick>SetProperty(SourceInfo,$INFO[Skin.String(GamesOption.SourceInfo)],$INFO[Skin.String(GamesOption.Window)])</onclick>
 			<onclick>$INFO[Skin.String(GamesOption.Action)]</onclick>
@@ -414,7 +425,8 @@
 			<label>$LOCALIZE[0]</label>
 			<property name="Label3">$LOCALIZE[33055]</property>
 			<property name="Circle">circle/programs.png</property>
-			<icon>special://skin/backgrounds/programs.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(ProgramsOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/programs.jpg</property>
 			<thumb>$INFO[Skin.String(ProgramsOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(programs,addons)</onclick>
 		</item>
@@ -426,7 +438,8 @@
             <label2>$INFO[Weather.Location,$LOCALIZE[31479]: ,]$INFO[Weather.Temperature, | ,]$INFO[Weather.Conditions, | ,]</label2>
 			<property name="Label3">$LOCALIZE[31022]</property>
 			<property name="Circle">circle/weather.png</property>
-			<icon>special://skin/backgrounds/weather.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(WeatherOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/weather.jpg</property>
 			<thumb>$INFO[Skin.String(WeatherOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(weather)</onclick>
 		</item>
@@ -438,7 +451,8 @@
             <label2>$LOCALIZE[31927]</label2>
 			<property name="Label3">$LOCALIZE[31029]</property>
 			<property name="Circle">circle/weather.png</property>
-			<icon>special://skin/backgrounds/weather.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(WeatherOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/weather.jpg</property>
 			<thumb>$INFO[Skin.String(WeatherOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(weathersettings)</onclick>
 		</item>
@@ -449,7 +463,8 @@
 			<label>$LOCALIZE[744]</label>
             <label2>$INFO[System.FreeSpace] / $INFO[System.TotalSpace]</label2>
 			<property name="Label3">$LOCALIZE[31023]</property>
-			<icon>special://skin/backgrounds/files.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(FileManagerOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/files.jpg</property>
 			<onclick>ActivateWindow(filemanager)</onclick>
 		</item>
 
@@ -459,7 +474,8 @@
 			<label>$LOCALIZE[24001]</label>
 			<property name="Label3">$LOCALIZE[31023]</property>
 			<property name="Circle">circle/addons.png</property>
-			<icon>special://skin/backgrounds/addons.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(AddonsOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/addons.jpg</property>
 			<thumb>$INFO[Skin.String(AddonsOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(addonbrowser)</onclick>
 		</item>
@@ -470,7 +486,8 @@
 			<label>$LOCALIZE[5]</label>
 			<property name="Label3">$LOCALIZE[31023]</property>
 			<property name="Circle">circle/settings.png</property>
-			<icon>special://skin/backgrounds/settings.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(SettingsOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/settings.jpg</property>
 			<thumb>$INFO[Skin.String(SettingsOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(settings)</onclick>
 		</item>
@@ -481,7 +498,8 @@
 			<label>$LOCALIZE[13012]</label>
 			<property name="Label3">$LOCALIZE[31025]</property>
 			<property name="Circle">circle/exit.png</property>
-			<icon>special://skin/backgrounds/exit.jpg</icon>
+			<property name="BackgroundImage">$INFO[Skin.String(ExitOption.BackgroundImage)]</property>
+			<property name="FallbackImage">special://skin/backgrounds/exit.jpg</property>
 			<thumb>$INFO[Skin.String(ExitOption.BackgroundFolder)]</thumb>
 			<onclick>ActivateWindow(1150)</onclick>				
 		</item>

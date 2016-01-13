@@ -176,7 +176,8 @@
 		<value condition="Window.IsVisible(skinsettings)">special://skin/backgrounds/skinsettings.jpg</value>
 		<value condition="Window.IsVisible(systeminfo)">special://skin/backgrounds/systeminfo.jpg</value>
 
-		<value condition="Window.IsVisible(home) + !IsEmpty(Container(300).ListItem.Icon)">$INFO[Container(300).ListItem.Icon]</value>
+		<value condition="Window.IsVisible(home) + !IsEmpty(Container(300).ListItem.Property(BackgroundImage))">$INFO[Container(300).ListItem.Property(BackgroundImage)]</value>
+		<value condition="Window.IsVisible(home) + !IsEmpty(Container(300).ListItem.Property(FallbackImage))">$INFO[Container(300).ListItem.Property(FallbackImage)]</value>
 		<value condition="Window.IsVisible(home)">special://skin/backgrounds/default.jpg</value>
 
 		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
