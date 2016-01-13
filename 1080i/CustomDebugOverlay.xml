@@ -871,6 +871,13 @@
 			</control>
 			
 			<control type="group">
+				<visible>Window.IsVisible(CustomDialogHomeOptionEditor.xml)</visible>	
+				<include name="DialogNameForDebug">
+					<param name="label" value="CustomDialogHomeOptionEditor.xml" />
+				</include>
+			</control>
+			
+			<control type="group">
 				<visible>Window.IsVisible(CustomDialogCircleEditor.xml)</visible>	
 				<include name="DialogNameForDebug">
 					<param name="label" value="CustomDialogCircleEditor.xml" />
