@@ -160,68 +160,115 @@
     
         <definition>
             <itemlayout height="40">
-                <include name="NormalItemsForButtonListInSkinSettings" />
+                <include name="ItemForButtonListInSkinSettings">
+                    <param name="textcolor" value="MainColor" />
+                    <param name="backgroundcolor" value="BackgroundColor" />
+                </include>
             </itemlayout>
                 
             <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include name="FocusedItemsForButtonListInSkinSettings" />
+                    <include name="ItemForButtonListInSkinSettings">
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="backgroundcolor" value="MainColor" />
+                    </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include name="SelectedItemsForButtonListInSkinSettings" />
+                    <include name="ItemForButtonListInSkinSettings">
+                        <param name="textcolor" value="BackgroundColor" />
+                        <param name="backgroundcolor" value="SelectColor" />
+                    </include>
                 </control>
             </focusedlayout>
         </definition>
 	</include>
 
-	<include name="NormalItemsForButtonListInSkinSettings">
-		<control type="image">
-			<width>480</width>
-			<height>40</height>
-			<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>440</width>
-			<height>40</height>
-			<font>NormalButtonFont</font>
-			<textcolor>MainColor</textcolor>
-			<info>ListItem.Label</info>
-		</control>
+	<include name="ItemForButtonListInSkinSettings">
+        <param name="textcolor" default="MainColor" />
+        <param name="backgroundcolor" default="BackgroundColor" />
+        <param name="backgroundcoverage" default="false" />
+    
+        <definition>
+            <control type="image">
+                <visible>$PARAM[backgroundcoverage]</visible>
+                <width>480</width>
+                <height>40</height>
+                <texture colordiffuse="$PARAM[backgroundcolor]" border="20">controls/rectangle-fill.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <width>480</width>
+                <height>40</height>
+                <texture colordiffuse="$PARAM[backgroundcolor]" border="20">controls/rectangle-fill.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>440</width>
+                <height>40</height>
+                <font>NormalButtonFont</font>
+                <textcolor>$PARAM[textcolor]</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </definition>
 	</include>
-	
-	<include name="FocusedItemsForButtonListInSkinSettings">
-		<control type="image">
-			<width>480</width>
-			<height>40</height>
-			<aspectratio>stretch</aspectratio>
-			<texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>440</width>
-			<font>NormalButtonFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<info>ListItem.Label</info>
-		</control>
-	</include>
-	
-	<include name="SelectedItemsForButtonListInSkinSettings">
-		<control type="image">
-			<width>480</width>
-			<height>40</height>
-			<aspectratio>stretch</aspectratio>
-			<texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<width>440</width>
-			<font>NormalButtonFont</font>
-			<textcolor>BackgroundColor</textcolor>
-			<info>ListItem.Label</info>
-		</control>
+    
+	<include name="ItemForHomeOptionListInSkinSettings">
+        <param name="width" default="1100" />
+        <param name="textwidth" default="1060" />
+        <param name="radioposx" default="1040" />
+        <param name="textcolor" default="MainColor" />
+        <param name="radiobuttoncolor" default="SecondaryColor" />
+        <param name="backgroundcolor" default="BackgroundColor" />
+        <param name="backgroundcoverage" default="false" />
+
+        <definition>
+            <control type="image">
+                <visible>$PARAM[backgroundcoverage]</visible>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>$PARAM[width]</width>
+                <height>40</height>
+                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>$PARAM[width]</width>
+                <height>40</height>
+                <texture colordiffuse="$PARAM[backgroundcolor]" border="20">controls/rectangle-fill.png</texture>
+            </control>
+
+            <control type="label">
+                <posx>20</posx>
+                <posy>0</posy>
+                <width>$PARAM[textwidth]</width>
+                <height>40</height>
+                <font>NormalButtonFont</font>
+                <textcolor>$PARAM[textcolor]</textcolor>
+                <align>left</align>
+                <aligny>center</aligny>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+                    
+            <control type="image">
+                <visible>Substring(ListItem.Property(Active),T,left)</visible>
+                <posx>$PARAM[radioposx]</posx>
+                <posy>0</posy>
+                <width>40</width>
+                <height>40</height>
+                <texture colordiffuse="$PARAM[radiobuttoncolor]" border="20">controls/circle-dot.png</texture>
+            </control>
+            <control type="image">
+                <visible>!Substring(ListItem.Property(Active),T,left)</visible>
+                <posx>$PARAM[radioposx]</posx>
+                <posy>0</posy>
+                <width>40</width>
+                <height>40</height>
+                <texture colordiffuse="$PARAM[radiobuttoncolor]" border="20">controls/circle-clear.png</texture>
+            </control>
+        </definition>
 	</include>
 </includes>

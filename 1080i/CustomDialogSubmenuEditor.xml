@@ -37,89 +37,44 @@
                 <onright>31</onright>
 
                 <itemlayout height="40">
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1240</width>
-                        <height>40</height>
-                        <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
-                    </control>
-
-                    <control type="label">
-                        <posx>20</posx>
-                        <posy>0</posy>
-                        <width>1200</width>
-                        <height>40</height>
-                        <font>NormalButtonFont</font>
-                        <textcolor>MainColor</textcolor>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                    
-                    <control type="image">
-                        <visible>Substring(ListItem.Property(Active),T,left)</visible>
-                        <posx>1180</posx>
-                        <posy>0</posy>
-                        <width>40</width>
-                        <height>40</height>
-                        <texture colordiffuse="SecondaryColor" border="20">controls/circle-dot.png</texture>
-                    </control>
-                    <control type="image">
-                        <visible>!Substring(ListItem.Property(Active),T,left)</visible>
-                        <posx>1180</posx>
-                        <posy>0</posy>
-                        <width>40</width>
-                        <height>40</height>
-                        <texture colordiffuse="SecondaryColor" border="20">controls/circle-clear.png</texture>
-                    </control>
+                    <include name="ItemForHomeOptionListInSkinSettings">
+                        <param name="width" value="1240" />
+                        <param name="textwidth" value="1200" />
+                        <param name="radioposx" value="1180" />
+                        <param name="textcolor" value="MainColor" />
+                        <param name="radiobuttoncolor" value="SecondaryColor" />
+                        <param name="backgroundcolor" value="BackgroundColor" />
+                        <param name="backgroundcoverage" value="false" />
+                    </include>
                 </itemlayout>
                 
                 <focusedlayout height="40">
-                    <control type="image">
+                    <control type="group">
                         <visible>Control.HasFocus(30)</visible>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1240</width>
-                        <height>40</height>
-                        <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
-                    </control>
-                    <control type="image">
-                        <visible>!Control.HasFocus(30)</visible>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1240</width>
-                        <height>40</height>
-                        <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
-                    </control>
 
-                    <control type="label">
-                        <posx>20</posx>
-                        <posy>0</posy>
-                        <width>1200</width>
-                        <height>40</height>
-                        <font>NormalButtonFont</font>
-                        <textcolor>BackgroundColor</textcolor>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <include name="ItemForHomeOptionListInSkinSettings">
+                            <param name="width" value="1240" />
+                            <param name="textwidth" value="1200" />
+                            <param name="radioposx" value="1180" />
+                            <param name="textcolor" value="BackgroundColor" />
+                            <param name="radiobuttoncolor" value="BackgroundColor" />
+                            <param name="backgroundcolor" value="MainColor" />
+                            <param name="backgroundcoverage" value="false" />
+                        </include>
                     </control>
                     
-                    <control type="image">
-                        <visible>Substring(ListItem.Property(Active),T,left)</visible>
-                        <posx>1180</posx>
-                        <posy>0</posy>
-                        <width>40</width>
-                        <height>40</height>
-                        <texture colordiffuse="BackgroundColor" border="20">controls/circle-dot.png</texture>
-                    </control>
-                    <control type="image">
-                        <visible>!Substring(ListItem.Property(Active),T,left)</visible>
-                        <posx>1180</posx>
-                        <posy>0</posy>
-                        <width>40</width>
-                        <height>40</height>
-                        <texture colordiffuse="BackgroundColor" border="20">controls/circle-clear.png</texture>
+                    <control type="group">
+                        <visible>!Control.HasFocus(30)</visible>
+
+                        <include name="ItemForHomeOptionListInSkinSettings">
+                            <param name="width" value="1240" />
+                            <param name="textwidth" value="1200" />
+                            <param name="radioposx" value="1180" />
+                            <param name="textcolor" value="BackgroundColor" />
+                            <param name="radiobuttoncolor" value="BackgroundColor" />
+                            <param name="backgroundcolor" value="SelectColor" />
+                            <param name="backgroundcoverage" value="true" />
+                        </include>
                     </control>
                 </focusedlayout>
                 
