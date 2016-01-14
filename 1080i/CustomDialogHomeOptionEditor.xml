@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1196">
 	<allowoverlay>yes</allowoverlay>
-	<defaultcontrol>31</defaultcontrol>
+	<defaultcontrol always="true">31</defaultcontrol>
 
 	<controls>
 		<control type="group">
@@ -38,8 +38,8 @@
                     <align>left</align>
                     <label>$LOCALIZE[31405]</label>
                     <selected>Substring(Window.Property(CustomOptionActive),T,left)</selected>
-                    <onclick condition="!Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,True)</onclick>
-                    <onclick condition="Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,False)</onclick>
+                    <onclick condition="!Substring(Window.Property(CustomOptionActive),T,Left)">SetProperty(CustomOptionActive,True)</onclick>
+                    <onclick condition="Substring(Window.Property(CustomOptionActive),T,Left)">SetProperty(CustomOptionActive,False)</onclick>
                 </control>
 
                 <control type="button" id="32">
@@ -69,9 +69,9 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31204]</label>
-                    <selected>Substring(Window.Property(CustomOptionImmutable),T,left)</selected>
-                    <onclick condition="!Substring(Window.Property(CustomOptionImmutable),T,left)">SetProperty(CustomOptionImmutable,True)</onclick>
-                    <onclick condition="Substring(Window.Property(CustomOptionImmutable),T,left)">SetProperty(CustomOptionImmutable,False)</onclick>
+                    <selected>Substring(Window.Property(CustomOptionImmutable),True,Left)</selected>
+                    <onclick condition="!Substring(Window.Property(CustomOptionImmutable),T,Left)">SetProperty(CustomOptionImmutable,True)</onclick>
+                    <onclick condition="Substring(Window.Property(CustomOptionImmutable),T,Left)">SetProperty(CustomOptionImmutable,False)</onclick>
                 </control>
             </control>
 
@@ -91,11 +91,11 @@
                     <description>Ok Button</description>
                     <posy>40</posy>
 					<label>$LOCALIZE[186]</label>
-                    <onclick condition="!Substring(Window.Property(CustomOptionActive),T,left)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
-                    <onclick condition="Substring(Window.Property(CustomOptionActive),T,left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
+                    <onclick condition="!Substring(Window.Property(CustomOptionActive),T,Left)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
+                    <onclick condition="Substring(Window.Property(CustomOptionActive),T,Left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
 					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
-                    <onclick condition="!Substring(Window.Property(CustomOptionImmutable),T,left)">Skin.Reset($INFO[Window.Property(TargetOption)].Immutable)</onclick>
-                    <onclick condition="Substring(Window.Property(CustomOptionImmutable),T,left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Immutable)</onclick>
+                    <onclick condition="!Substring(Window.Property(CustomOptionImmutable),T,Left)">Skin.Reset($INFO[Window.Property(TargetOption)].Immutable)</onclick>
+                    <onclick condition="Substring(Window.Property(CustomOptionImmutable),T,Left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Immutable)</onclick>
 					<onclick>Close</onclick>
 				</control>
 				<control type="button" id="21">

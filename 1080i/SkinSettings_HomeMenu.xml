@@ -384,8 +384,8 @@
     <include name="StandardElementForHomeMenuSkinSettings">
         <param name="id" default="0" />
         <param name="label" default="-" />
-        <param name="variable" defailt="Option" />
-        <param name="immutable" defailt="False" />
+        <param name="variable" default="Option" />
+        <param name="immutable" default="False" />
     
         <definition>
             <item id="$PARAM[id]">
@@ -394,9 +394,12 @@
                 <align>left</align>
                 <label>$PARAM[label]</label>
                 <property name="Active">$INFO[Skin.HasSetting($PARAM[variable].Active)]</property>
-                <onclick>SetProperty(CustomOptionActive,$INFO[Skin.HasSetting($PARAM[variable].Active)],1196)</onclick>
+                <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1196)</onclick>
+                <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1196)</onclick>
                 <onclick>SetProperty(CustomOptionName,$LOCALIZE[132],1196)</onclick>
                 <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1196)</onclick>
+                <onclick condition="!Skin.HasSetting($PARAM[variable].Immutable)">ClearProperty(CustomOptionImmutable,1196)</onclick>
+                <onclick condition="Skin.HasSetting($PARAM[variable].Immutable)">SetProperty(CustomOptionImmutable,True,1196)</onclick>
                 <onclick>SetProperty(TargetOption,$PARAM[variable],1196)</onclick>
                 <onclick>SetProperty(Dialog.ImmutableVisible,$PARAM[immutable],1196)</onclick>
                 <onclick>ActivateWindow(1196)</onclick>
@@ -407,7 +410,7 @@
     <include name="CustomizableElementForHomeMenuSkinSettings">
         <param name="id" default="0" />
         <param name="label" default="-" />
-        <param name="variable" defailt="Option" />
+        <param name="variable" default="Option" />
     
         <definition>
             <item id="$PARAM[id]">
@@ -416,7 +419,8 @@
                 <align>left</align>
                 <label>$PARAM[label]</label>
                 <property name="Active">$INFO[Skin.HasSetting($PARAM[variable].Active)]</property>
-                <onclick>SetProperty(CustomOptionActive,$INFO[Skin.HasSetting($PARAM[variable].Active)],1190)</onclick>
+                <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
+                <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
                 <onclick>SetProperty(CustomOptionType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
                 <onclick>SetProperty(CustomOptionName,$LOCALIZE[15016],1190)</onclick>
                 <onclick>SetProperty(CustomSubtitle,$LOCALIZE[31020],1190)</onclick>
@@ -434,18 +438,19 @@
 
     <include name="CustomElementForHomeMenuSkinSettings">
         <param name="id" default="0" />
-        <param name="variable" defailt="Option" />
-        <param name="lastitem" defailt="Option" />
+        <param name="variable" default="Option" />
+        <param name="lastitem" default="Option" />
     
         <definition>
             <item id="$PARAM[id]">
-                <visible>Skin.HasSetting($PARAM[lastitem].Active) | !IsEmpty(Skin.String($PARAM[lastitem].Name)) | Skin.HasSetting(Custom10Option.Active) | !IsEmpty(Skin.String(Custom10Option.Name))</visible>
+                <visible>Skin.HasSetting($PARAM[lastitem].Active) | !IsEmpty(Skin.String($PARAM[lastitem].Name)) | Skin.HasSetting($PARAM[id].Active) | !IsEmpty(Skin.String($PARAM[id].Name))</visible>
                 <width>1100</width>
                 <radioposx>1040</radioposx>
                 <align>left</align>
                 <label>$LOCALIZE[31140]: $INFO[Skin.String($PARAM[variable].Name)]</label>
                 <property name="Active">$INFO[Skin.HasSetting($PARAM[variable].Active)]</property>
-                <onclick>SetProperty(CustomOptionActive,$INFO[Skin.HasSetting($PARAM[variable].Active)],1190)</onclick>
+                <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
+                <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
                 <onclick>SetProperty(CustomOptionType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
                 <onclick>SetProperty(CustomOptionName,$INFO[Skin.String($PARAM[variable].Name)],1190)</onclick>
                 <onclick>SetProperty(CustomSubtitle,$INFO[Skin.String($PARAM[variable].Subtitle)],1190)</onclick>
@@ -463,7 +468,7 @@
     
     <include name="VisibleCustomElementForHomeMenuSkinSettings">
         <param name="id" default="0" />
-        <param name="variable" defailt="Option" />
+        <param name="variable" default="Option" />
     
         <definition>
             <item id="$PARAM[id]">
@@ -472,7 +477,8 @@
                 <align>left</align>
                 <label>$LOCALIZE[31140]: $INFO[Skin.String($PARAM[variable].Name)]</label>
                 <property name="Active">$INFO[Skin.HasSetting($PARAM[variable].Active)]</property>
-                <onclick>SetProperty(CustomOptionActive,$INFO[Skin.HasSetting($PARAM[variable].Active)],1190)</onclick>
+                <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
+                <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
                 <onclick>SetProperty(CustomOptionType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
                 <onclick>SetProperty(CustomOptionName,$INFO[Skin.String($PARAM[variable].Name)],1190)</onclick>
                 <onclick>SetProperty(CustomSubtitle,$INFO[Skin.String($PARAM[variable].Subtitle)],1190)</onclick>

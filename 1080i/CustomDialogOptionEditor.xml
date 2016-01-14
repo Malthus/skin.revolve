@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1190">
 	<allowoverlay>yes</allowoverlay>
-	<defaultcontrol>27</defaultcontrol>
+	<defaultcontrol always="true">27</defaultcontrol>
     <onload condition="!StringCompare(Window.Property(CustomOptionType),M) + !StringCompare(Window.Property(CustomOptionType),S) + !StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onload>
 
 	<controls>
