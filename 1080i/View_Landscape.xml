@@ -186,6 +186,12 @@
                         <include name="MainElementForLandscapeView">
                             <param name="listid" value="$PARAM[listid]" />
                         </include>
+
+                        <control type="group">
+                            <posx>65</posx>
+                            <posy>226</posy>
+                            <include name="DefaultOverlayMediaFlag" />
+                        </control>
                     </control>
                 </control>
             
