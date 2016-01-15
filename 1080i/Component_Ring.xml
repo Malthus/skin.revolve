@@ -413,7 +413,7 @@
                     <param name="width" value="1900" />
                     <param name="height" value="30" />
                     <param name="font" value="HomeMenuDetailFont" />
-                    <param name="textcolor" value="BackgroundColor" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
                     <param name="outlinecolor" value="MainColor" />
                     <param name="outlinesize" value="2" />
                     <param name="align" value="center" />
