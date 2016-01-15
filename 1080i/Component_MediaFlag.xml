@@ -12,6 +12,17 @@
         </definition>
 	</include>
 
+	<include name="SmallOverlayMediaFlag">
+        <definition>
+            <control type="image">
+                <width>90</width>
+                <height>90</height>
+                <texture colordiffuse="FadeDiffuseColor" background="true">$VAR[ContentOverlay]</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+        </definition>
+	</include>
+	
 	<include name="DefaultOverlayMediaFlag">
         <definition>
             <control type="image">

@@ -791,6 +791,16 @@
         </definition>
 	</include>
 	
+	<include name="OverlayForDefaultBannerIcon">
+        <definition>
+            <control type="group">
+                <posx>20</posx>
+                <posy>28</posy>
+                <include name="SmallOverlayMediaFlag" />
+            </control>
+        </definition>
+	</include>
+    
 	<include name="SquarePosterIcon">
 		<control type="image">
 			<width>528</width>
