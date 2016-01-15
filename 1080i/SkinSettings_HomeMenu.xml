@@ -62,9 +62,9 @@
                         <visible>!Control.HasFocus(200)</visible>
 
                         <include name="ItemForHomeOptionListInSkinSettings">
-                            <param name="textcolor" value="BackgroundColor" />
-                            <param name="radiobuttoncolor" value="BackgroundColor" />
-                            <param name="backgroundcolor" value="MainColor" />
+                            <param name="radiobuttoncolor" value="SecondaryColor" />
+                            <param name="backgroundcolor" value="BackgroundColor" />
+                            <param name="backgroundcoverage" value="false" />
                             <param name="backgroundcoverage" value="false" />
                         </include>
                     </control>
@@ -89,8 +89,8 @@
                 <height>40</height>
                 <align>left</align>
                 <label>$LOCALIZE[10041]</label>
-                <onup>200</onup>
-                <ondown>200</ondown>
+                <onup>Control.SetFocus(200,14)</onup>
+                <ondown>Control.SetFocus(200,0)</ondown>
                 <onleft>99</onleft>
                 <onright>299</onright>
                 <onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
@@ -494,4 +494,3 @@
         </definition>
     </include>
 </includes>
-    
