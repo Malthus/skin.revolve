@@ -419,7 +419,7 @@
 						<description>Busy Animation Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31788]$LOCALIZE[31972] $VAR[BusyAnimationNameLabel]</label>
+						<label>$LOCALIZE[31788]: $VAR[BusyAnimationNameLabel]</label>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31788],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,BusyAnimation.Type,1188)</onclick>
@@ -459,7 +459,7 @@
                         <description>Type of Thumbnails Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31799]$LOCALIZE[31972] $VAR[ThumbnailsTypeLabel]</label>
+						<label>$LOCALIZE[31799]: $VAR[ThumbnailsTypeLabel]</label>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31799],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31220],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,Thumbnails.Type,1188)</onclick>
@@ -547,7 +547,7 @@
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
-						<label>- $LOCALIZE[31157]$LOCALIZE[31972] $VAR[AdditionalDebugInfoLabel]</label>
+						<label>- $LOCALIZE[31157]: $VAR[AdditionalDebugInfoLabel]</label>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31157],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31159],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,Debug.AdditionalInfo,1188)</onclick>

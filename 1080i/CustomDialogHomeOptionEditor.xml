@@ -28,7 +28,7 @@
                     <width>1240</width>
                     <font>DialogTextFont</font>
                     <align>left</align>
-                    <label>$LOCALIZE[480]$LOCALIZE[31972]</label>
+                    <label>$LOCALIZE[480]:</label>
                 </control>
                 
                 <control type="radiobutton" id="31">
@@ -47,7 +47,7 @@
                     <width>1240</width>
                     <font>DialogTextFont</font>
                     <align>left</align>
-                    <label>$LOCALIZE[31802]$LOCALIZE[31972] $INFO[Window.Property(CustomBackgroundImage)]</label>
+                    <label>$LOCALIZE[31802]: $INFO[Window.Property(CustomBackgroundImage)]</label>
                     <onclick>Skin.SetImage(Dialog.Input)</onclick>
                     <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
@@ -59,7 +59,7 @@
                     <width>1240</width>
                     <font>DialogTextFont</font>
                     <align>left</align>
-                    <label>$LOCALIZE[31973]$LOCALIZE[31972]</label>
+                    <label>$LOCALIZE[31973]:</label>
                 </control>
 
                 <control type="radiobutton" id="35">
