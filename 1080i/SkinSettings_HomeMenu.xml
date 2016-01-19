@@ -28,7 +28,7 @@
                 <posx>0</posx>
                 <posy>60</posy>
                 <width>1100</width>
-                <height>600</height>
+                <height>580</height>
                 <orientation>vertical</orientation>
                 <pagecontrol>299</pagecontrol>
                 <itemgap>0</itemgap>
@@ -75,8 +75,10 @@
                     
             <control type="scrollbar" id="299">
                 <posx>1140</posx>
-                <posy>80</posy>
-                <height>600</height>
+                <posy>60</posy>
+                <height>580</height>
+                <orientation>vertical</orientation>
+                <showonepage>false</showonepage>
                 <onleft>200</onleft>
                 <onright>Noop</onright>
             </control>
@@ -84,7 +86,7 @@
             <control type="button" id="249">
                 <description>Rearrange Custom Options Button</description>
                 <posx>0</posx>
-                <posy>680</posy>
+                <posy>660</posy>
                 <width>1100</width>
                 <height>40</height>
                 <align>left</align>
@@ -102,7 +104,7 @@
             <control type="button" id="250">
                 <description>Reset Page Setting Button</description>
                 <posx>0</posx>
-                <posy>720</posy>
+                <posy>700</posy>
                 <width>1100</width>
                 <height>40</height>
                 <align>left</align>

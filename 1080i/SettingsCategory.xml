@@ -16,13 +16,14 @@
                     <posx>700</posx>
                     <posy>100</posy>
                     <width>1100</width>
-                    <height>800</height>
+                    <height>740</height>
+                    <pagecontrol>15</pagecontrol>
                     <orientation>vertical</orientation>
                     <itemgap>0</itemgap>
                     <onup>5</onup>
                     <ondown>5</ondown>
                     <onleft>3</onleft>
-                    <onright>Noop</onright>
+                    <onright>15</onright>
                 </control>
                 
                 <control type="button" id="7">
@@ -54,6 +55,16 @@
                 <control type="label" id="14">
                     <textcolor>BackgroundColor</textcolor>
                     <label>-</label>
+                </control>
+                
+                <control type="scrollbar" id="15">
+                    <posx>1840</posx>
+                    <posy>100</posy>
+                    <height>740</height>
+                    <orientation>vertical</orientation>
+                    <showonepage>false</showonepage>
+                    <onleft>5</onleft>
+                    <onright>Noop</onright>
                 </control>
                 
                 <control type="group">
