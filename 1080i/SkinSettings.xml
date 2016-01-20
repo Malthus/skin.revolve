@@ -545,7 +545,6 @@
 						<description>Debug Additional Info Setting</description>
                         <enable>Skin.HasSetting(Debug.InfoVisible)</enable>
 						<width>1100</width>
-						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31157]: $VAR[AdditionalDebugInfoLabel]</label>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31157],1188)</onclick>
