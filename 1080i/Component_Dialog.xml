@@ -230,6 +230,29 @@
         </definition>
     </include>
 
+	<include name="ScrollbarForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="80" />
+        <param name="height" default="120" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+    
+        <definition>
+            <control id="$PARAM[id]" type="scrollbar">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                </include>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+            </control>
+        </definition>
+    </include>
+
     <include name="TextboxForDialog">
         <param name="posy" default="80" />
         <param name="height" default="120" />
@@ -272,6 +295,8 @@
         <param name="posy" default="80" />
         <param name="id" default="0" />
         <param name="height" default="220" />
+        <param name="pagecontrol" default="-" />
+        <param name="scrolltime" default="200" />
         <param name="onup" default="Noop" />
         <param name="ondown" default="Noop" />
         <param name="onleft" default="9000" />
@@ -286,6 +311,8 @@
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
+                <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
+                <scrolltime>$PARAM[scrolltime]</scrolltime>
                 <onup>$PARAM[onup]</onup>
                 <ondown>$PARAM[ondown]</ondown>
                 <onleft>$PARAM[onleft]</onleft>
