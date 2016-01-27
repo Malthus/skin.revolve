@@ -19,21 +19,12 @@
                         <param name="posy" value="773" />
                         <param name="size" value="30" />
                         <param name="radius" value="800" />
-                        <param name="time" value="20000" />
+                        <param name="time" value="30000" />
                     </include>
                 </control>
 
                 <control type="group">
                     <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
-                    <include name="OrbitCircle">
-                        <param name="posx" value="0" />
-                        <param name="posy" value="773" />
-                        <param name="size" value="40" />
-                        <param name="radius" value="1760" />
-                        <param name="time" value="34000" />
-                        <param name="direction" value="false" />
-                    </include>
-
                     <include name="OrbitCircle">
                         <param name="posx" value="0" />
                         <param name="posy" value="773" />
@@ -56,6 +47,24 @@
                         <param name="size" value="25" />
                         <param name="radius" value="1120" />
                         <param name="time" value="18000" />
+                    </include>
+
+                    <include name="OrbitCircle">
+                        <param name="posx" value="0" />
+                        <param name="posy" value="773" />
+                        <param name="size" value="40" />
+                        <param name="radius" value="1200" />
+                        <param name="time" value="46000" />
+                        <param name="direction" />
+                    </include>
+
+                    <include name="OrbitCircle">
+                        <param name="posx" value="0" />
+                        <param name="posy" value="773" />
+                        <param name="size" value="50" />
+                        <param name="radius" value="1720" />
+                        <param name="time" value="47000" />
+                        <param name="direction" value="false" />
                     </include>
                 </control>
             </control>
@@ -147,7 +156,7 @@
                         <param name="posy" value="200" />
                         <param name="size" value="50" />
                         <param name="radius" value="1000" />
-                        <param name="time" value="20000" />
+                        <param name="time" value="30000" />
                     </include>
                 </control>
 
@@ -158,7 +167,8 @@
                         <param name="posy" value="200" />
                         <param name="size" value="35" />
                         <param name="radius" value="1400" />
-                        <param name="time" value="14000" />
+                        <param name="time" value="42000" />
+                        <param name="direction" value="false" />
                     </include>
 
                     <include name="OrbitCircle">
@@ -166,7 +176,7 @@
                         <param name="posy" value="200" />
                         <param name="size" value="20" />
                         <param name="radius" value="1470" />
-                        <param name="time" value="11000" />
+                        <param name="time" value="29000" />
                         <param name="direction" value="false" />
                     </include>
 
@@ -175,7 +185,7 @@
                         <param name="posy" value="200" />
                         <param name="size" value="15" />
                         <param name="radius" value="1500" />
-                        <param name="time" value="17000" />
+                        <param name="time" value="27000" />
                     </include>
 
                     <include name="OrbitCircle">
@@ -183,16 +193,25 @@
                         <param name="posy" value="200" />
                         <param name="size" value="25" />
                         <param name="radius" value="1620" />
-                        <param name="time" value="12000" />
+                        <param name="time" value="26000" />
                         <param name="direction" value="false" />
                     </include>
 
                     <include name="OrbitCircle">
                         <param name="posx" value="2000" />
                         <param name="posy" value="200" />
+                        <param name="size" value="25" />
+                        <param name="radius" value="1650" />
+                        <param name="time" value="38000" />
+                        <param name="direction" />
+                    </include>
+
+                    <include name="OrbitCircle">
+                        <param name="posx" value="2000" />
+                        <param name="posy" value="200" />
                         <param name="size" value="20" />
-                        <param name="radius" value="1800" />
-                        <param name="time" value="16000" />
+                        <param name="radius" value="1700" />
+                        <param name="time" value="36000" />
                         <param name="direction" value="false" />
                     </include>
                 </control>
@@ -335,6 +354,15 @@
                         <param name="size" value="25" />
                         <param name="radius" value="3100" />
                         <param name="time" value="42100" />
+                    </include>
+
+                    <include name="OrbitCircle">
+                        <param name="posx" value="960" />
+                        <param name="posy" value="3600" />
+                        <param name="size" value="50" />
+                        <param name="radius" value="3280" />
+                        <param name="time" value="67000" />
+                        <param name="direction" />
                     </include>
                 </control>
             </control>
