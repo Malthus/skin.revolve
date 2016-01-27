@@ -88,7 +88,7 @@
 						<onclick>Noop</onclick>
 					</item>
 					<item id="5">
-						<description>Program Related Category Option</description>
+						<description>Game and Program Related Category Option</description>
 						<label>$LOCALIZE[31815]</label>
 						<onclick>Noop</onclick>
 					</item>
@@ -97,14 +97,9 @@
 						<label>$LOCALIZE[31816]</label>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="7">
+					<item id="8">
 						<description>Miscellaneous Category Option</description>
 						<label>$LOCALIZE[31817]</label>
-						<onclick>Noop</onclick>
-					</item>
-					<item id="8">
-						<description>XBMC Category Option</description>
-						<label>$LOCALIZE[31818]</label>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="9">
@@ -465,6 +460,14 @@
 						<property name="Parameter">P</property>
 						<onclick>Noop</onclick>
 					</item>
+					<item id="510">
+						<description>Open Programs / Rom Collection Browser</description>
+                        <visible>Container(30).HasFocus(5) + System.HasAddon(script.games.rom.collection.browser)</visible>
+						<label>$LOCALIZE[31232] $INFO[System.AddonTitle(script.games.rom.collection.browser)]</label>
+						<property name="Command">RunScript(script.games.rom.collection.browser)</property>
+						<onclick>Noop</onclick>
+					</item>
+                    
 					<item id="551">
 						<description>Run External Program Option</description>
                         <visible>Container(30).HasFocus(5)</visible>
@@ -516,42 +519,42 @@
 						<property name="Command">ActivateWindow(settings)</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="701">
+					<item id="802">
 						<description>Run Global Search Plug-in Option</description>
-                        <visible>Container(30).HasFocus(7) + System.HasAddon(script.globalsearch)</visible>
+                        <visible>Container(30).HasFocus(8) + System.HasAddon(script.globalsearch)</visible>
 						<label>$LOCALIZE[31232] $INFO[System.AddonTitle(script.globalsearch)]</label>
 						<property name="Command">RunScript(script.globalsearch)</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="801">
+					<item id="871">
 						<description>Activate Screen Saver Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31863]</label>
 						<property name="Command">ActivateScreensaver</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="802">
+					<item id="872">
 						<description>Take Screenshot Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31864]</label>
 						<property name="Command">TakeScreenshot</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="803">
+					<item id="873">
 						<description>Mute Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31865]</label>
 						<property name="Command">Mute</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="804">
+					<item id="874">
 						<description>Eject Tray Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31866]</label>
 						<property name="Command">EjectTray()</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="860">
+					<item id="880">
 						<description>Execute Shell Command Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31868]</label>
@@ -559,7 +562,7 @@
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="861">
+					<item id="881">
 						<description>Execute Shell Command And Wait Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31869]</label>
@@ -567,7 +570,7 @@
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="862">
+					<item id="882">
 						<description>Wake Device On LAN Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31867]</label>
@@ -575,70 +578,70 @@
 						<property name="Parameter">S</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="870">
+					<item id="883">
 						<description>Refresh RSS Feeds Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31870]</label>
 						<property name="Command">RefreshRSS</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="871">
+					<item id="884">
 						<description>Reload Current Skin Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31871]</label>
 						<property name="Command">ReloadSkin()</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="880">
+					<item id="890">
 						<description>Log Off User Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31873]</label>
 						<property name="Command">System.LogOff</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="881">
+					<item id="891">
 						<description>Minimize XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31872]</label>
 						<property name="Command">Minimize</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="882">
+					<item id="892">
 						<description>Restart XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31876]</label>
 						<property name="Command">RestartApp</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="883">
+					<item id="893">
 						<description>Quit XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31877]</label>
 						<property name="Command">Quit</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="890">
+					<item id="894">
 						<description>Suspend Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31874]</label>
 						<property name="Command">Suspend</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="891">
+					<item id="895">
 						<description>Hibernate Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31875]</label>
 						<property name="Command">Hibernate</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="892">
+					<item id="896">
 						<description>Reboot Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31878]</label>
 						<property name="Command">Reboot</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="893">
+					<item id="897">
 						<description>Shut Down Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31879]</label>
