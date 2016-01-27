@@ -326,6 +326,7 @@
                     <label>$LOCALIZE[744]</label>
                     <label2>$INFO[System.FreeSpace] / $INFO[System.TotalSpace]</label2>
                     <property name="Label3">$LOCALIZE[31023]</property>
+                    <property name="Circle">circle/files.png</property>
                     <property name="BackgroundImage">$INFO[Skin.String(FileManagerOption.BackgroundImage)]</property>
                     <property name="FallbackImage">special://skin/backgrounds/files.jpg</property>
                     <onclick>ActivateWindow(filemanager)</onclick>
