@@ -55,7 +55,6 @@
                         <param name="size" value="40" />
                         <param name="radius" value="1200" />
                         <param name="time" value="46000" />
-                        <param name="direction" />
                     </include>
 
                     <include name="OrbitCircle">
@@ -203,7 +202,6 @@
                         <param name="size" value="25" />
                         <param name="radius" value="1650" />
                         <param name="time" value="38000" />
-                        <param name="direction" />
                     </include>
 
                     <include name="OrbitCircle">
@@ -315,6 +313,7 @@
 
                 <control type="group">
                     <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+
                     <include name="OrbitCircle">
                         <param name="posx" value="960" />
                         <param name="posy" value="3600" />
@@ -362,7 +361,6 @@
                         <param name="size" value="50" />
                         <param name="radius" value="3280" />
                         <param name="time" value="67000" />
-                        <param name="direction" />
                     </include>
                 </control>
             </control>
