@@ -9,6 +9,15 @@
         </definition>
 	</include>
 
+	<include name="EmptyBackground">
+        <definition>
+            <control type="largeimage">
+                <include name="FullscreenDimensions" />
+                <texture>black.png</texture>
+            </control>
+        </definition>
+	</include>
+    
     <include name="DefaultBackground">
         <definition>
             <control type="largeimage">
