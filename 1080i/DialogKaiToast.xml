@@ -18,33 +18,9 @@
                 <control type="image" id="400">
                     <width>90</width>
                     <height>90</height>
-                    <texture diffuse="elements/circle-mask.png">DefaultFile.png</texture>
+                    <texture diffuse="elements/circle-mask.png">-</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
-
-                <control type="image" id="403">
-                    <visible>false</visible>
-                    <width>90</width>
-                    <height>90</height>
-                    <texture diffuse="elements/circle-mask.png">DefaultIconInfo.png</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>
-
-                <control type="image" id="404">
-                    <visible>false</visible>
-                    <width>90</width>
-                    <height>90</height>
-                    <texture diffuse="elements/circle-mask.png">DefaultIconWarning.png</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>
-
-                <control type="image" id="405">
-                    <visible>false</visible>
-                    <width>90</width>
-                    <height>90</height>
-                    <texture diffuse="elements/circle-mask.png">DefaultIconError.png</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>                
             </control>
 
             <control type="group">
