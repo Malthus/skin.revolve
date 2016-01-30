@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="50" type="dialog">
+<window id="1160" type="dialog">
 	<zorder>2</zorder>
     <visible>!Window.IsVisible(startup)</visible>
 	
@@ -731,13 +731,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(MusicOverlay.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="MusicOverlay.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(MusicVisualisation.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="MusicVisualisation.xml" />
@@ -815,13 +808,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(VideoOverlay.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="VideoOverlay.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(VisualisationPresetList.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="VisualisationPresetList.xml" />
@@ -895,6 +881,20 @@
 				<visible>Window.IsVisible(CustomDialogYesNo.xml)</visible>	
 				<include name="DialogNameForDebug">
 					<param name="label" value="CustomDialogYesNo.xml" />
+				</include>
+			</control>
+            
+			<control type="group">
+				<visible>Window.IsVisible(CustomMusicOverlay.xml)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="CustomMusicOverlay.xml" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(CustomVideoOverlay.xml)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="CustomVideoOverlay.xml" />
 				</include>
 			</control>
             

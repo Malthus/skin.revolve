@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1120">
 	<defaultcontrol>-</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
     <onload>AlarmClock(StartupClock,ReplaceWindow($INFO[System.StartupWindow]),00:04,silent)</onload>
 
     <animation type="WindowOpen">

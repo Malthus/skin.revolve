@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="114">
-	<defaultcontrol always="true">403</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
+	<defaultcontrol always="true">403</defaultcontrol>
     <onunload>SetProperty(DialogCloseButton,False,114)</onunload>
 
 	<controls>

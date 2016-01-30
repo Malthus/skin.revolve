@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1187">
 	<defaultcontrol>21</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
     <onload>RunScript(script.revolve.service,FillPropertyFromTextFile,$INFO[Window.Property(DialogTextFile)],DialogText,1187)</onload>
     <onunload>ClearProperty(DialogText,1187)</onunload>
 
