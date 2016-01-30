@@ -232,13 +232,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(MyMusicSongs.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyMusicSongs.xml" />
-                </include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(MyPics.xml)</visible>
 				<include name="WindowNameForDebug">
 					<param name="label" value="MyPics.xml" />
