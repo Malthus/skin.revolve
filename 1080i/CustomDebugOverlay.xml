@@ -472,20 +472,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogKaraokeSongSelector.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogKaraokeSongSelector.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogKaraokeSongSelectorLarge.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogKaraokeSongSelectorLarge.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(DialogKeyboard.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="DialogKeyboard.xml" />
@@ -685,13 +671,6 @@
 				<visible>Window.IsVisible(LockSettings.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="LockSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(MusicKaraokeLyrics.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="MusicKaraokeLyrics.xml" />
 				</include>
 			</control>
 
