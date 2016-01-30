@@ -508,17 +508,46 @@
 				</control>
 			</control>
 
-            <control type="group">
+            <control type="label" id="313">
+                <description>HZCODE Label</description>
+				<posx>40</posx>
+				<posy>320</posy>
+				<width>480</width>
+				<height>40</height>
+				<font>DialogTextFont</font>
+				<textcolor>TextColor</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>-</label>
+            </control>
+            <control type="label" id="314">
+                <description>HZLIST Label</description>
+				<posx>40</posx>
+				<posy>360</posy>
+				<width>480</width>
+				<height>40</height>
+				<font>DialogTextFont</font>
+				<textcolor>TextColor</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>-</label>
+            </control>
+            
+			<control type="grouplist" id="9000">
+                <include name="MarkupForButtonListForDialog">
+                    <param name="posy" value="440" />
+                    <param name="height" value="80" />
+                </include>
+                <onleft>306</onleft>
+                <onright>151</onright>
+
                 <control type="button" id="309">
                     <description>Keyboard Layout Button</description> 
-                    <posx>40</posx>
-                    <posy>320</posy>
                     <label>$LOCALIZE[20177]</label> 
-                    <onup>309</onup> 
-                    <ondown>309</ondown> 
-                    <onleft>306</onleft>
-                    <onright>151</onright>
                 </control>                    
+                <include name="CloseButtonForDialog">
+                    <param name="id" value="29" />
+                </include>
 			</control>
 		</control>
 	</controls>
