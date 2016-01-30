@@ -465,13 +465,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogFileStacking.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogFileStacking.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(DialogFullScreenInfo.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="DialogFullScreenInfo.xml" />
