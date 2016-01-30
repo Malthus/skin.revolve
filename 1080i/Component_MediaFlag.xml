@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="StarRatingMediaFlag">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+
         <definition>
             <control type="image">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
                 <width>180</width>
                 <height>40</height>
                 <aspectratio>keep</aspectratio>

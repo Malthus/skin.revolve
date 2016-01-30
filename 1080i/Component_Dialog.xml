@@ -111,6 +111,18 @@
         </definition>
     </include>
 
+    <include name="SetUserRatingButtonForDialog">
+        <param name="id" default="7" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id ="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[38023]</label>
+            </control>
+        </definition>
+    </include>
+    
     <include name="SettingsButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />

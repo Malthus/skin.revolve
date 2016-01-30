@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="135">
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">14</defaultcontrol>
 
 	<controls>
 		<control type="group">
@@ -72,45 +72,6 @@
 				<include>HorizontalDialogListOfContentMediaFlag</include>
 			</control>
 
-			<control type="group" id="9001">
-                <description>Song Rating Controls</description>
-				<posx>40</posx>
-				<posy>320</posy>
-
-				<control type="group">
-					<posx>160</posx>
-					<include>StarRatingMediaFlag</include>
-				</control>
-				
-				<control type="button" id="14">
-                    <description>Decrease Rating Button</description>
-					<posx>400</posx>
-					<width>40</width>
-					<height>40</height>
-					<texturenofocus border="20" colordiffuse="MainColor">controls/circle-opentriangledown.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="MainColor">controls/circle-triangledown.png</texturefocus>
-					<onleft>Noop</onleft>
-					<onright>15</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<onclick>DecreaseRating</onclick>
-				</control>
-
-				<control type="button" id="15">
-                    <description>Increase Rating Button</description>
-					<posx>440</posx>
-					<width>40</width>
-					<height>40</height>
-					<texturenofocus border="20" colordiffuse="MainColor">controls/circle-opentriangleup.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="MainColor">controls/circle-triangleup.png</texturefocus>
-					<onleft>14</onleft>
-					<onright>21</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<onclick>IncreaseRating</onclick>
-				</control>
-			</control>
-
             <include name="TextboxForDialog">
                 <param name="textboxid" value="4" />
                 <param name="scrollbarid" value="24" />
@@ -120,13 +81,18 @@
                 <param name="onleft" value="9000" />
             </include>
 
+            <include name="StarRatingMediaFlag">
+                <param name="posx" value="190" />
+                <param name="posy" value="310" />
+            </include>
+
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="400" />
-                    <param name="height" value="200" />
+                    <param name="posy" value="440" />
+                    <param name="height" value="160" />
                 </include>
-                <onup>9001</onup>
-                <ondown>9001</ondown>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
 				<onright>24</onright>
 
 				<control type="button" id ="12">
@@ -137,15 +103,10 @@
                     <description>Get Thumbnail Button</description>
 					<label>$LOCALIZE[13405]</label>
 				</control>
-				<control type="button" id ="10">
-                    <description>Ok Button</description>
-                    <posy>40</posy>
-					<label>$LOCALIZE[186]</label>
-				</control>
-				<control type="button" id ="11">
-                    <description>Cancel Button</description>
-					<label>$LOCALIZE[222]</label>
-				</control>
+                <include name="SetUserRatingButtonForDialog" />
+                <include name="CloseButtonForDialog">
+                    <param name="id" value="14" />
+                </include>
 			</control>
 		</control>
 	</controls>

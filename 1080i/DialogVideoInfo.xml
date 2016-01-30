@@ -60,6 +60,12 @@
 						<label2>$INFO[ListItem.RatingAndVotes]</label2>
 						<onclick>Noop</onclick>
 					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.UserRating)</visible>
+						<label>$LOCALIZE[33067]</label>
+						<label2>$INFO[ListItem.UserRating]</label2>
+						<onclick>Noop</onclick>
+					</item>
 				</content>
 			</control>
 			
@@ -141,7 +147,7 @@
 					<label>$LOCALIZE[206]</label>
 				</control>
 				<control type="button" id="6">
-                    <description>Refresh Button</description>
+                    <description>Refresh/Reset Button</description>
 					<label>$LOCALIZE[184]</label>
 				</control>
 				<control type="button" id="8">
@@ -164,9 +170,9 @@
                     <description>Movies By Director Button</description>
 					<label>$LOCALIZE[31409]</label>
 				</control>
+                <include name="SetUserRatingButtonForDialog" />
                 <include name="CloseButtonForDialog">
                     <param name="id" value="21" />
-                    <param name="posy" value="40" />
                 </include>
 			</control>
 		</control>
