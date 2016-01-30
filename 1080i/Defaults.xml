@@ -84,6 +84,8 @@
 		<textureradioofffocus colordiffuse="BackgroundColor">controls/circle-clear.png</textureradioofffocus>
 		<textureradioonnofocus colordiffuse="SecondaryColor">controls/circle-dot.png</textureradioonnofocus>
 		<textureradiooffnofocus colordiffuse="SecondaryColor">controls/circle-clear.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="TextColor">controls/circle-dot.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="TextColor">controls/circle-clear.png</textureradiooffdisabled>
 		<align>center</align>
 		<aligny>center</aligny>
 		<label>-</label>
@@ -100,6 +102,8 @@
 		<texturedown border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturedown>
 		<textureupfocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</textureupfocus>
 		<texturedownfocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturedownfocus>
+		<textureupdisabled border="20" colordiffuse="TextColor">controls/circle-triangleup.png</textureupdisabled>
+		<texturedowndisabled border="20" colordiffuse="TextColor">controls/circle-triangledown.png</texturedowndisabled>
 		<font>NormalButtonFont</font>
 		<textcolor>MainColor</textcolor>
 		<focusedcolor>BackgroundColor</focusedcolor>
@@ -127,6 +131,8 @@
 		<texturedown colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturedown>
 		<textureupfocus colordiffuse="BackgroundColor">controls/circle-triangleup.png</textureupfocus>
 		<texturedownfocus colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturedownfocus>
+		<textureupdisabled colordiffuse="TextColor">controls/circle-triangleup.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="TextColor">controls/circle-triangledown.png</texturedowndisabled>
 		<align>left</align>
 		<aligny>center</aligny>
 		<reverse>yes</reverse>
