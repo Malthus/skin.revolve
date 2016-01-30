@@ -808,13 +808,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(VisualisationPresetList.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="VisualisationPresetList.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(CustomDialogTextViewer.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="CustomDialogTextViewer.xml" />
