@@ -535,13 +535,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogPeripheralManager.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPeripheralManager.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(DialogPeripheralSettings.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="DialogPeripheralSettings.xml" />
