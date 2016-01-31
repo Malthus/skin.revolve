@@ -584,6 +584,13 @@
 			</control>
 
 			<control type="group">
+				<visible>Window.IsVisible(DialogPVRRadioRDSInfo.xml)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogPVRRadioRDSInfo.xml" />
+				</include>
+			</control>
+
+			<control type="group">
 				<visible>Window.IsVisible(DialogPVRTimerSettings.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="DialogPVRTimerSettings.xml" />
