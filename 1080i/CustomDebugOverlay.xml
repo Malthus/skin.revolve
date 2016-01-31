@@ -563,13 +563,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogPVRGuideInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRGuideInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(DialogPVRGuideOSD.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="DialogPVRGuideOSD.xml" />
@@ -584,9 +577,9 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogPVRRecordingInfo.xml)</visible>
+				<visible>Window.IsVisible(DialogPVRInfo.xml)</visible>
 				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRRecordingInfo.xml" />
+					<param name="label" value="DialogPVRInfo.xml" />
 				</include>
 			</control>
 

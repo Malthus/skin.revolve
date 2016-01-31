@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="602">
+<window>
 	<defaultcontrol always="true">7</defaultcontrol>
 
 	<controls>
@@ -22,6 +22,24 @@
 				<include>ItemsForLabelList</include>
 				
 				<content>
+                    <item>
+                        <visible>!IsEmpty(ListItem.EpisodeName)</visible>
+                        <label>$LOCALIZE[21442]:</label>
+                        <label2>$INFO[ListItem.EpisodeName]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!IsEmpty(ListItem.Season)</visible>
+                        <label>$LOCALIZE[20373]:</label>
+                        <label2>$INFO[ListItem.Season]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!IsEmpty(ListItem.Episode)</visible>
+                        <label>$LOCALIZE[20359]:</label>
+                        <label2>$INFO[ListItem.Episode]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
 					<item>
 						<visible>!IsEmpty(ListItem.OriginalTitle) + !stringcompare(ListItem.OriginalTitle,Listitem.Title)</visible>
 						<label>$LOCALIZE[20376]</label>
@@ -88,7 +106,7 @@
 			</control>
             
             <include name="TextboxForDialog">
-                <param name="textboxid" value="4" />
+                <param name="textboxid" value="41" />
                 <param name="scrollbarid" value="61" />
                 <param name="posy" value="320" />
                 <param name="height" value="280" />
@@ -100,21 +118,38 @@
             
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="480" />
-                    <param name="height" value="120" />
+                    <param name="posy" value="440" />
+                    <param name="height" value="160" />
                 </include>
 				<onright>61</onright>
 
+                <control type="image" id="3">
+                    <visible>Window.IsActive(pvrrecordinginfo)</visible>
+                    <height>80</height>
+                    <texture>-</texture>
+                </control>
+				<control type="button" id="4">
+                    <description>Find Similar Button</description>
+                    <visible>Window.IsActive(pvrguideinfo)</visible>
+					<label>$LOCALIZE[19003]</label>
+				</control>
 				<control type="button" id="5">
-                    <description>Play Button</description>
+                    <description>Switch to Channel Button</description>
+                    <visible>Window.IsActive(pvrguideinfo)</visible>
 					<label>$LOCALIZE[19165]</label>
+				</control>
+				<control type="button" id="8">
+                    <description>Play Recording Button</description>
+                    <visible>Window.IsActive(pvrrecordinginfo)</visible>
+					<label>$LOCALIZE[19687]</label>
 				</control>
 				<control type="button" id="6">
                     <description>Record Button</description>
+                    <visible>Window.IsActive(pvrguideinfo)</visible>
 					<label>-</label>
 				</control>
 				<control type="button" id="7">
-                    <description>Close Button</description>
+                    <description>Ok/Close Button</description>
 					<label>$LOCALIZE[31915]</label>
 				</control>
 			</control>
