@@ -367,16 +367,6 @@
         </definition>
 	</include>
 	
-	<include name="FilesButtonForSideMenu">
-        <definition>
-            <control type="button" id="5">
-                <align>left</align>
-                <label>$LOCALIZE[744]</label>
-                <onclick>SetFocus(50)</onclick>
-            </control>
-        </definition>
-	</include>
-	
 	<include name="GroupByButtonForSideMenu">
         <definition>
             <control type="radiobutton" id="5">
