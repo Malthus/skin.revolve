@@ -71,23 +71,25 @@
     </include>
 
 	<include name="SideMenu">
+        <param name="topmenuoverride" default="false" />
+    
         <definition>
             <posx>20</posx>
             <posy>100</posy>
 
             <animation effect="slide" start="0,0" end="-800,0" time="500" reversible="false">WindowClose</animation>
 
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenuoverride]">
                 <effect type="slide" start="0,0" end="-615,0" time="200" />
             </animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57)">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenuoverride]">
                 <effect type="slide" start="0,0" end="-520,0" time="200" />
             </animation>
 		
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenuoverride]]">
                 <effect type="rotate" start="0" end="90" center="0,0" time="200" />
             </animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)]">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenuoverride]]">
                 <effect type="rotate" start="0" end="90" center="0,45" time="200" />
             </animation>
 
@@ -252,6 +254,21 @@
                 <font>SideMenuGroupFont</font>
                 <textcolor>SelectColor</textcolor>
                 <label>  [UPPERCASE]$LOCALIZE[31109][/UPPERCASE]</label>
+            </control>
+        </definition>
+	</include>
+
+	<include name="ActionGroupLabelForSideMenu">
+        <param name="visible" default="Skin.HasSetting(SideMenu.Grouped)" />
+    
+        <definition>
+            <control type="label" id="995">
+                <visible>$PARAM[visible]</visible>
+                <height>20</height>
+                <align>left</align>
+                <font>SideMenuGroupFont</font>
+                <textcolor>SelectColor</textcolor>
+                <label>  [UPPERCASE]$LOCALIZE[31972][/UPPERCASE]</label>
             </control>
         </definition>
 	</include>
@@ -572,6 +589,15 @@
         </definition>
 	</include>
 	
+	<include name="EventLogClearButtonForSideMenu">
+        <definition>
+            <control type="button" id="20">
+                <align>left</align>
+                <label>$LOCALIZE[192]</label>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="SaveButtonForSideMenu">
         <definition>
             <control type="button" id="21">
@@ -605,6 +631,15 @@
         </definition>
 	</include>
 	
+	<include name="EventLogLevelButtonForSideMenu">
+        <definition>
+            <control type="button" id="21">
+                <align>left</align>
+                <label>-</label>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="ClearButtonForSideMenu">
         <definition>
             <control type="button" id="22">
@@ -638,6 +673,15 @@
         </definition>
 	</include>
 	
+	<include name="EventLogLevelRadioButtonForSideMenu">
+        <definition>
+            <control type="radiobutton" id="22">
+                <align>left</align>
+                <label>-</label>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="PlayButtonForSideMenu">
         <definition>
             <control type="button" id="23">
