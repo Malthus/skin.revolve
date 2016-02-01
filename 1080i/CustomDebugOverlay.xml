@@ -182,222 +182,303 @@
 			
 			<!-- Window labels -->
 
-			<control type="group">
-				<visible>Window.IsVisible(AddonBrowser.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="AddonBrowser.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="addonbrowser" />
+                <param name="label" value="addonbrowser (AddonBrowser.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(FileManager.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="FileManager.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="appearancesettings" />
+                <param name="label" value="appearancesettings (SettingsCategory.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(Home.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="Home.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="eventlog" />
+                <param name="label" value="eventlog (EventLog.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(LoginScreen.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="LoginScreen.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="filemanager" />
+                <param name="label" value="filemanager (FileManager.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyMusicNav.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyMusicNav.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="fullscreenvideo" />
+                <param name="label" value="fullscreenvideo (VideoFullScreen.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyMusicPlaylist.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="home" />
+                <param name="label" value="home (Home.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyMusicPlaylistEditor.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="loginscreen" />
+                <param name="label" value="loginscreen (LoginScreen.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPics.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPics.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="musiclibrary" />
+                <param name="label" value="musiclibrary (MyMusicNav.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPrograms.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPrograms.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="musicplaylist" />
+                <param name="label" value="musicplaylist (MyMusicPlaylist.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPVR.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPVR.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="musicplaylisteditor" />
+                <param name="label" value="musicplaylisteditor (MyMusicPlaylistEditor.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPVRChannels.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPVRChannels.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="musicsettings" />
+                <param name="label" value="musicsettings (SettingsCategory.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPVRRecordings.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="pictures" />
+                <param name="label" value="pictures (MyPics.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPVRGuide.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="picturessettings" />
+                <param name="label" value="picturessettings (SettingsCategory.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPVRTimers.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPVRTimers.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="profiles" />
+                <param name="label" value="profiles (SettingsProfile.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(MyPVRSearch.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyPVRSearch.xml" />
-                </include>
-			</control>
+            <include name="WindowNameForDebug">
+                <param name="window" value="programs" />
+                <param name="label" value="programs (MyPrograms.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="programssettings" />
+                <param name="label" value="programssettings (SettingsCategory.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="pvrsettings" />
+                <param name="label" value="pvrsettings (SettingsCategory.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="radiochannels" />
+                <param name="label" value="radiochannels (MyPVRChannels.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="radioguide" />
+                <param name="label" value="radioguide (MyPVRGuide.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="radiorecordings" />
+                <param name="label" value="radiorecordings (MyPVRRecordings.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="radiosearch" />
+                <param name="label" value="radiosearch (MyPVRSearch.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="radiotimers" />
+                <param name="label" value="radiotimers (MyPVRTimers.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="screencalibration" />
+                <param name="label" value="screencalibration (SettingsScreenCalibration.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="servicesettings" />
+                <param name="label" value="servicesettings (SettingsCategory.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="settings" />
+                <param name="label" value="settings (Settings.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="skinsettings" />
+                <param name="label" value="(skinsettings) SkinSettings.xml" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="systemsettings" />
+                <param name="label" value="systemsettings (SettingsCategory.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="tvchannels" />
+                <param name="label" value="tvchannels (MyPVRChannels.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="tvguide" />
+                <param name="label" value="tvguide (MyPVRGuide.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="tvrecordings" />
+                <param name="label" value="tvrecordings (MyPVRRecordings.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="tvsearch" />
+                <param name="label" value="tvsearch (MyPVRSearch.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="tvtimers" />
+                <param name="label" value="tvtimers (MyPVRTimers.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="videolibrary" />
+                <param name="label" value="videolibrary (MyVideoNav.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="videoplaylist" />
+                <param name="label" value="(videoplaylist) MyVideoPlaylist.xml" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="videos" />
+                <param name="label" value="videos (MyVideoNav.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="videossettings" />
+                <param name="label" value="videossettings (SettingsCategory.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="weather" />
+                <param name="label" value="weather (MyWeather.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="weathersettings" />
+                <param name="label" value="weathersettings (SettingsCategory.xml)" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="CustomMyStaticItems.xml" />
+                <param name="label" value="CustomMyStaticItems.xml" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="CustomMyDynamicItems.xml" />
+                <param name="label" value="CustomMyDynamicItems.xml" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="CustomMySubmenu.xml" />
+                <param name="label" value="CustomMySubmenu.xml" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="CustomTitleScreen.xml" />
+                <param name="label" value="CustomTitleScreen.xml" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="CustomPromoScreen.xml" />
+                <param name="label" value="CustomPromoScreen.xml" />
+            </include>
+
+            <include name="WindowNameForDebug">
+                <param name="window" value="CustomExitMenu.xml" />
+                <param name="label" value="CustomExitMenu.xml" />
+            </include>
 			
-			<control type="group">
-				<visible>Window.IsVisible(MyVideoNav.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyVideoNav.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(MyVideoPlaylist.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyVideoPlaylist.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(MyWeather.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="MyWeather.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(Settings.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="Settings.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SettingsCategory.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="SettingsCategory.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SettingsProfile.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="SettingsProfile.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SkinSettings.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="SkinSettings.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="VideoFullScreen.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(CustomMyStaticItems.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="CustomMyStaticItems.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(CustomMyDynamicItems.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="CustomMyDynamicItems.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(CustomMySubmenu.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="CustomMySubmenu.xml" />
-                </include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(CustomTitleScreen.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="CustomTitleScreen.xml" />
-                </include>
-			</control>
-            
-			<control type="group">
-				<visible>Window.IsVisible(CustomPromoScreen.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="CustomPromoScreen.xml" />
-                </include>
-			</control>
-            
-			<control type="group">
-				<visible>Window.IsVisible(CustomExitMenu.xml)</visible>
-				<include name="WindowNameForDebug">
-					<param name="label" value="CustomExitMenu.xml" />
-                </include>
-			</control>
             
 			<!-- Dialog labels -->
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogAccessPoints.xml)</visible>
+				<visible>Window.IsVisible(accesspoints)</visible>
 				<include name="DialogNameForDebug">
-					<param name="label" value="DialogAccessPoints.xml" />
+					<param name="label" value="DialogAccessPoints.xml (accesspoints)" />
 				</include>
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogAddonInfo.xml)</visible>
+				<visible>Window.IsVisible(addoninformation)</visible>
 				<include name="DialogNameForDebug">
-					<param name="label" value="DialogAddonInfo.xml" />
+					<param name="label" value="DialogAddonInfo.xml (addoninformation)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(dialogpvrradiordsinfo)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogPVRRadioRDSInfo.xml (dialogpvrradiordsinfo)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(filestackingdialog)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogSelect.xml (filestackingdialog)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(gamepadinput)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogSelect.xml (gamepadinput)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(peripherals)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogSelect.xml (peripherals)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(playercontrols)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="PlayerControls.xml (playercontrols)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(pvrguideinfo)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogPVRInfo.xml (pvrguideinfo)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(pvrrecordinginfo)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogPVRInfo.xml (pvrrecordinginfo)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(selectdialog)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogSelect.xml (selectdialog)" />
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Window.IsVisible(visualisationpresetlist)</visible>
+				<include name="DialogNameForDebug">
+					<param name="label" value="DialogSelect.xml (visualisationpresetlist)" />
 				</include>
 			</control>
 
@@ -577,20 +658,6 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(DialogPVRInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPVRRadioRDSInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRRadioRDSInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(DialogPVRTimerSettings.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="DialogPVRTimerSettings.xml" />
@@ -601,13 +668,6 @@
 				<visible>Window.IsVisible(DialogSeekbar.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="DialogSeekbar.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogSelect.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSelect.xml" />
 				</include>
 			</control>
 
@@ -689,23 +749,9 @@
 			</control>
 
 			<control type="group">
-				<visible>Window.IsVisible(PlayerControls.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="PlayerControls.xml" />
-				</include>
-			</control>
-
-			<control type="group">
 				<visible>Window.IsVisible(ProfileSettings.xml)</visible>
 				<include name="DialogNameForDebug">
 					<param name="label" value="ProfileSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SettingsScreenCalibration.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="SettingsScreenCalibration.xml" />
 				</include>
 			</control>
 
