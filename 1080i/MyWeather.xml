@@ -216,10 +216,10 @@
 				</control>
 			</control>
 -->
-            <control type="group" id="9000">
-			<include name="SideMenu"/>
+        <control type="group" id="9000">
+            <include name="SideMenu" />
 
-			<control type="grouplist" id="9001">
+            <control type="grouplist" id="9001">
                 <include name="BeginOfButtonListForSideMenu">
                     <param name="onright" value="53" />
                 </include>
@@ -231,14 +231,14 @@
                     <textcolor>MainColor</textcolor>
                     <label>$LOCALIZE[31153]</label>
                 </control>
-				<include name="WeatherLocationSpinnerForSideMenu" />
-				<include name="WeatherRefreshButtonForSideMenu" />
+                <include name="WeatherLocationSpinnerForSideMenu" />
+                <include name="WeatherRefreshButtonForSideMenu" />
                 
                 <include name="SettingsGroupLabelForSideMenu" />
-				<include name="WeatherSettingsButtonForSideMenu" />
+                <include name="WeatherSettingsButtonForSideMenu" />
                 
                 <include name="EndOfButtonListForSideMenu" />
-			</control>
+            </control>
 
             <include name="PlayerControlsForSideMenu">
                 <param name="onright" value="53" />
