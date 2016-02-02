@@ -856,6 +856,7 @@
     <constant name="HeightForKeyboardDialog">540</constant>
     
 	<include name="WindowForDialog">
+        <param name="visible" default="true" />
         <param name="height" default="220" />
         <param name="headerid" default="0" />
         <param name="headerlabel" default="-" />
@@ -868,168 +869,172 @@
         <param name="iconoverlayvisible" default="false" />
         
         <definition>
-            <include name="DialogWindow">
-                <param name="height" value="$PARAM[height]" />
-            </include>
-            
             <control type="group">
-                <visible>$PARAM[iconsmallvisible]</visible>
-                
-                <control type="group">
-                    <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),0)</visible>
-                    <include name="OrbitCircle">
-                        <param name="posx" value="CenterXForSmallIconFrameForDialog" />
-                        <param name="posy" value="CenterYForSmallIconFrameForDialog" />
-                        <param name="size" value="20" />
-                        <param name="radius" value="60" />
-                        <param name="time" value="10000" />
-                    </include>
-                </control>
-                
-                <control type="group">
-                    <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
-                    <include name="OrbitCircle">
-                        <param name="posx" value="CenterXForSmallIconFrameForDialog" />
-                        <param name="posy" value="CenterYForSmallIconFrameForDialog" />
-                        <param name="size" value="40" />
-                        <param name="radius" value="115" />
-                        <param name="time" value="12000" />
-                        <param name="direction" value="false" />
-                    </include>
+                <visible>$PARAM[visible]</visible>
 
-                    <include name="OrbitCircle">
-                        <param name="posx" value="CenterXForSmallIconFrameForDialog" />
-                        <param name="posy" value="CenterYForSmallIconFrameForDialog" />
-                        <param name="size" value="10" />
-                        <param name="radius" value="160" />
-                        <param name="time" value="4500" />
-                        <param name="direction" value="false" />
-                    </include>
-                </control>
-            </control>
-                
-            <control type="group">
-                <visible>$PARAM[icondefaultvisible]</visible>
+                <include name="DialogWindow">
+                    <param name="height" value="$PARAM[height]" />
+                </include>
                 
                 <control type="group">
-                    <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),0)</visible>
-                    <include name="OrbitCircle">
-                        <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
-                        <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
-                        <param name="size" value="20" />
-                        <param name="radius" value="145" />
-                        <param name="time" value="10000" />
-                    </include>
+                    <visible>$PARAM[iconsmallvisible]</visible>
+                    
+                    <control type="group">
+                        <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),0)</visible>
+                        <include name="OrbitCircle">
+                            <param name="posx" value="CenterXForSmallIconFrameForDialog" />
+                            <param name="posy" value="CenterYForSmallIconFrameForDialog" />
+                            <param name="size" value="20" />
+                            <param name="radius" value="60" />
+                            <param name="time" value="10000" />
+                        </include>
+                    </control>
+                    
+                    <control type="group">
+                        <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                        <include name="OrbitCircle">
+                            <param name="posx" value="CenterXForSmallIconFrameForDialog" />
+                            <param name="posy" value="CenterYForSmallIconFrameForDialog" />
+                            <param name="size" value="40" />
+                            <param name="radius" value="115" />
+                            <param name="time" value="12000" />
+                            <param name="direction" value="false" />
+                        </include>
+
+                        <include name="OrbitCircle">
+                            <param name="posx" value="CenterXForSmallIconFrameForDialog" />
+                            <param name="posy" value="CenterYForSmallIconFrameForDialog" />
+                            <param name="size" value="10" />
+                            <param name="radius" value="160" />
+                            <param name="time" value="4500" />
+                            <param name="direction" value="false" />
+                        </include>
+                    </control>
+                </control>
+                    
+                <control type="group">
+                    <visible>$PARAM[icondefaultvisible]</visible>
+                    
+                    <control type="group">
+                        <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),0)</visible>
+                        <include name="OrbitCircle">
+                            <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
+                            <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
+                            <param name="size" value="20" />
+                            <param name="radius" value="145" />
+                            <param name="time" value="10000" />
+                        </include>
+                    </control>
+                    
+                    <control type="group">
+                        <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
+                        <include name="OrbitCircle">
+                            <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
+                            <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
+                            <param name="size" value="30" />
+                            <param name="radius" value="175" />
+                            <param name="time" value="12000" />
+                            <param name="direction" value="false" />
+                        </include>
+
+                        <include name="OrbitCircle">
+                            <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
+                            <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
+                            <param name="size" value="15" />
+                            <param name="radius" value="230" />
+                            <param name="time" value="6500" />
+                        </include>
+                    </control>
+                </control>
+
+                <control type="label" id="$PARAM[headerid]">
+                    <posx>560</posx>
+                    <posy>20</posy>
+                    <width>1240</width>
+                    <height>40</height>
+                    <font>DialogTitleFont</font>
+                    <textcolor>SecondaryColor</textcolor>
+                    <align>left</align>
+                    <label>$PARAM[headerlabel]</label>
                 </control>
                 
                 <control type="group">
-                    <visible>IntegerGreaterThan(Skin.String(Background.AnimationLevel),3)</visible>
-                    <include name="OrbitCircle">
-                        <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
-                        <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
-                        <param name="size" value="30" />
-                        <param name="radius" value="175" />
-                        <param name="time" value="12000" />
-                        <param name="direction" value="false" />
-                    </include>
-
-                    <include name="OrbitCircle">
-                        <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
-                        <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
-                        <param name="size" value="15" />
-                        <param name="radius" value="230" />
-                        <param name="time" value="6500" />
-                    </include>
+                    <visible>$PARAM[iconsmallvisible]</visible>
+                    <posx>PosXForSmallIconFrameForDialog</posx>
+                    <posy>PosYForSmallIconFrameForDialog</posy>
+                    <include name="BackgroundForSmallCircleThumbnailIcon" />
+                    
+                    <control type="label">
+                        <posx>15</posx>
+                        <posy>15</posy>
+                        <width>60</width>
+                        <height>60</height>
+                        <font>DialogSmallIconFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>center</align>
+                        <label>$PARAM[iconlabel]</label>
+                    </control>
+                
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>86</width>
+                        <height>86</height>
+                        <texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>86</width>
+                        <height>86</height>
+                        <texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
                 </control>
-            </control>
 
-            <control type="label" id="$PARAM[headerid]">
-                <posx>560</posx>
-                <posy>20</posy>
-                <width>1240</width>
-                <height>40</height>
-                <font>DialogTitleFont</font>
-                <textcolor>SecondaryColor</textcolor>
-                <align>left</align>
-                <label>$PARAM[headerlabel]</label>
-            </control>
-            
-            <control type="group">
-                <visible>$PARAM[iconsmallvisible]</visible>
-                <posx>PosXForSmallIconFrameForDialog</posx>
-                <posy>PosYForSmallIconFrameForDialog</posy>
-                <include name="BackgroundForSmallCircleThumbnailIcon" />
-				
-                <control type="label">
-                    <posx>15</posx>
-                    <posy>15</posy>
-                    <width>60</width>
-                    <height>60</height>
-                    <font>DialogSmallIconFont</font>
-                    <textcolor>BackgroundColor</textcolor>
-                    <align>center</align>
-                    <label>$PARAM[iconlabel]</label>
-                </control>
-            
-                <control type="image">
-                    <posx>2</posx>
-                    <posy>2</posy>
-					<width>86</width>
-					<height>86</height>
-					<texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-                
-				<control type="image">
-                    <posx>2</posx>
-                    <posy>2</posy>
-					<width>86</width>
-					<height>86</height>
-					<texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
-
-            <control type="group">
-                <visible>$PARAM[icondefaultvisible]</visible>
-                <posx>PosXForDefaultIconFrameForDialog</posx>
-                <posy>PosYForDefaultIconFrameForDialog</posy>
-                <include name="BackgroundForDefaultCircleThumbnailIcon" />
-				
-                <control type="label">
-                    <posx>35</posx>
-                    <posy>35</posy>
-                    <width>200</width>
-                    <height>200</height>
-                    <font>DialogDefaultIconFont</font>
-                    <textcolor>BackgroundColor</textcolor>
-                    <align>center</align>
-                    <label>$PARAM[iconlabel]</label>
-                </control>
-                
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>4</posy>
-					<width>262</width>
-					<height>262</height>
-					<texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
-					<aspectratio>scale</aspectratio>
-				</control>
-                
-				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
-					<width>262</width>
-					<height>262</height>
-					<texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
-                    <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				</control>
-                
                 <control type="group">
-                    <visible>$PARAM[iconoverlayvisible]</visible>
-                    <posx>35</posx>
-                    <posy>35</posy>
-                    <include name="DefaultOverlayMediaFlag" />
+                    <visible>$PARAM[icondefaultvisible]</visible>
+                    <posx>PosXForDefaultIconFrameForDialog</posx>
+                    <posy>PosYForDefaultIconFrameForDialog</posy>
+                    <include name="BackgroundForDefaultCircleThumbnailIcon" />
+                    
+                    <control type="label">
+                        <posx>35</posx>
+                        <posy>35</posy>
+                        <width>200</width>
+                        <height>200</height>
+                        <font>DialogDefaultIconFont</font>
+                        <textcolor>BackgroundColor</textcolor>
+                        <align>center</align>
+                        <label>$PARAM[iconlabel]</label>
+                    </control>
+                    
+                    <control type="image">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <width>262</width>
+                        <height>262</height>
+                        <texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    
+                    <control type="image">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <width>262</width>
+                        <height>262</height>
+                        <texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
+                        <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                    </control>
+                    
+                    <control type="group">
+                        <visible>$PARAM[iconoverlayvisible]</visible>
+                        <posx>35</posx>
+                        <posy>35</posy>
+                        <include name="DefaultOverlayMediaFlag" />
+                    </control>
                 </control>
 			</control>
         </definition>
