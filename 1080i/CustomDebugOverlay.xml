@@ -23,7 +23,7 @@
 			</control>
 			
 			<!-- Folderpath labels -->
-			
+
 			<control type="group">
                 <visible>StringCompare(Skin.String(Debug.AdditionalInfo),P) + !IsEmpty(Container.FolderPath)</visible>
 				<include name="InformationForDebug">
@@ -33,153 +33,111 @@
 			
 			<!-- Content labels -->
 			
-			<control type="group">
-				<visible>Container.Content(tvshows)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="TV Shows" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(seasons)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Seasons" />  
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(episodes)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Episodes" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(movies)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Movies" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(musicvideos)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Musicvideos" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(albums)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Albums" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(songs)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Songs" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(artists)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Artists" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(actors)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Actors" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(directors)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Directors" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(studios)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Studios" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(genres)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Genres" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(years)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Years" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(playlists)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Playlists" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(sets)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Sets" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(tags)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Tags" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(files)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Files" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(addons)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Addons" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(plugins)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Plugins" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>Container.Content(livetv)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Live TV Items" />
-                </include>
-			</control>
-			
-			<control type="group">
-				<visible>!IsEmpty(Container.ListItem.ChannelNumber)</visible>
-				<include name="ContentTypeForDebug">
-                    <param name="label" value="Radio/TV Items" />
-                </include>
-			</control>
-			
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(tvshows)" />
+                <param name="label" value="TV Shows" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(seasons)" />
+                <param name="label" value="Seasons" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(episodes)" />
+                <param name="label" value="Episodes" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(movies)" />
+                <param name="label" value="Movies" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(musicvideos)" />
+                <param name="label" value="Music Videos" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(albums)" />
+                <param name="label" value="Albums" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(songs)" />
+                <param name="label" value="Songs" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(artists)" />
+                <param name="label" value="Artists" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(actors)" />
+                <param name="label" value="Actors" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(directors)" />
+                <param name="label" value="Directors" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(studios)" />
+                <param name="label" value="Studios" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(genres)" />
+                <param name="label" value="Genres" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(years)" />
+                <param name="label" value="Years" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(playlists)" />
+                <param name="label" value="Playlists" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(sets)" />
+                <param name="label" value="Sets" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(tags)" />
+                <param name="label" value="Tags" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(files)" />
+                <param name="label" value="Files" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(addons)" />
+                <param name="label" value="Addons" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(plugins)" />
+                <param name="label" value="Plugins" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(livetv)" />
+                <param name="label" value="Live TV Items" />
+            </include>
+
+			<include name="ContentTypeForDebug">
+                <param name="visible" value="!IsEmpty(Container.ListItem.ChannelNumber)" />
+                <param name="label" value="Radio/TV Items" />
+            </include>
+
 			<!-- Window labels -->
 
             <include name="WindowNameForDebug">
@@ -436,7 +394,7 @@
 
 			<include name="DialogNameForDebug">
                 <param name="dialog" value="dialogpvrradiordsinfo" />
-				<param name="label" value="DialogPVRRadioRDSInfo.xml (dialogpvrradiordsinfo)" />
+				<param name="label" value="dialogpvrradiordsinfo (DialogPVRRadioRDSInfo.xml)" />
 			</include>
 			
             <include name="DialogNameForDebug">
