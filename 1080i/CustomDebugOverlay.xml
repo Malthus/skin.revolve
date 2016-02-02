@@ -402,535 +402,389 @@
                 <param name="label" value="CustomExitMenu.xml" />
             </include>
 			
-            
 			<!-- Dialog labels -->
 
-			<control type="group">
-				<visible>Window.IsVisible(accesspoints)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogAccessPoints.xml (accesspoints)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(addoninformation)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogAddonInfo.xml (addoninformation)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(dialogpvrradiordsinfo)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRRadioRDSInfo.xml (dialogpvrradiordsinfo)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(filestackingdialog)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSelect.xml (filestackingdialog)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(gamepadinput)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSelect.xml (gamepadinput)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(peripherals)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSelect.xml (peripherals)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(playercontrols)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="PlayerControls.xml (playercontrols)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(pvrguideinfo)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRInfo.xml (pvrguideinfo)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(pvrrecordinginfo)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRInfo.xml (pvrrecordinginfo)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(selectdialog)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSelect.xml (selectdialog)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(visualisationpresetlist)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSelect.xml (visualisationpresetlist)" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogAddonSettings.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogAddonSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogAlbumInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogAlbumInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogBusy.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogBusy.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogButtonMenu.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogButtonMenu.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogContentSettings.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogContentSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogContextMenu.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogContextMenu.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogExtendedProgressBar.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogFavourites.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogFavourites.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogFullScreenInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogFullScreenInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogKaiToast.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogKaiToast.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogKeyboard.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogKeyboard.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogMediaFilter.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogMediaFilter.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogMediaSource.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogMediaSource.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogMuteBug.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogMuteBug.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogNetworkSetup.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogNetworkSetup.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogNumeric.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogNumeric.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogOk.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogOk.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPeripheralSettings.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPeripheralSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPictureInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPictureInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogProgress.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogProgress.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRChannelManager.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRChannelsOSD.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRGroupManager.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPVRGuideOSD.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRGuideOSD.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRGuideSearch.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogPVRTimerSettings.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogPVRTimerSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogSeekbar.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSeekbar.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogSlider.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSlider.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogSongInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSongInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogSubtitles.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogSubtitles.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogTextViewer.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogTextViewer.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogVideoInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogVolumeBar.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogVolumeBar.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(DialogYesNo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="DialogYesNo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(FileBrowser.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="FileBrowser.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(LockSettings.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="LockSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(MusicOSD.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="MusicOSD.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(MusicVisualisation.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="MusicVisualisation.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(ProfileSettings.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="ProfileSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SettingsSystemInfo.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="SettingsSystemInfo.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SlideShow.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="SlideShow.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SmartPlaylistEditor.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="SmartPlaylistEditor.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(SmartPlaylistRule.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="SmartPlaylistRule.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(VideoOSD.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="VideoOSD.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(VideoOSDBookmarks.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="VideoOSDBookmarks.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(VideoOSDSettings.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="VideoOSDSettings.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogTextViewer.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogTextViewer.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogActionEditor.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogActionEditor.xml" />
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogOptionEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogOptionEditor.xml" />
-				</include>
-			</control>
+			<include name="DialogNameForDebug">
+			    <param name="dialog" value="accesspoints" />
+				<param name="label" value="DialogAccessPoints.xml (accesspoints)" />
+			</include>
 			
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogItemsEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogItemsEditor.xml" />
-				</include>
-			</control>
+			<include name="DialogNameForDebug">
+                <param name="dialog" value="addoninformation" />
+				<param name="label" value="DialogAddonInfo.xml (addoninformation)" />
+			</include>
 			
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogSubmenuEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogSubmenuEditor.xml" />
-				</include>
-			</control>
-			
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogSuboptionEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogSuboptionEditor.xml" />
-				</include>
-			</control>
-			
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogHomeOptionEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogHomeOptionEditor.xml" />
-				</include>
-			</control>
-			
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogCircleEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogCircleEditor.xml" />
-				</include>
-			</control>
-            
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogSelect.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogSelect.xml" />
-				</include>
-			</control>
-            
-			<control type="group">
-				<visible>Window.IsVisible(CustomDialogYesNo.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomDialogYesNo.xml" />
-				</include>
-			</control>
-            
-			<control type="group">
-				<visible>Window.IsVisible(CustomMusicOverlay.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomMusicOverlay.xml" />
-				</include>
-			</control>
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="addonsettings" />
+                <param name="label" value="addonsettings (DialogAddonSettings.xml)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="busydialog" />
+                <param name="label" value="busydialog (DialogBusy.xml)" />
+            </include>
 
-			<control type="group">
-				<visible>Window.IsVisible(CustomVideoOverlay.xml)</visible>
-				<include name="DialogNameForDebug">
-					<param name="label" value="CustomVideoOverlay.xml" />
-				</include>
-			</control>
-            
-			<!-- Add-on Dialog Labels -->
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="contentsettings" />
+                <param name="label" value="contentsettings (DialogContentSettings.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="contextmenu" />
+                <param name="label" value="contextmenu (DialogContextMenu.xml)" />
+            </include>
+
+			<include name="DialogNameForDebug">
+                <param name="dialog" value="dialogpvrradiordsinfo" />
+				<param name="label" value="DialogPVRRadioRDSInfo.xml (dialogpvrradiordsinfo)" />
+			</include>
 			
-			<control type="group">
-				<visible>Window.IsVisible(script-RSS_Editor-rssEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="script-RSS_Editor-rssEditor.xml" />
-				</include>
-			</control>
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="extendedprogressdialog" />
+                <param name="label" value="extendedprogressdialog (DialogExtendedProgressBar.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="favourites" />
+                <param name="label" value="favourites (DialogFavourites.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="filebrowser" />
+                <param name="label" value="filebrowser (FileBrowser.xml)" />
+            </include>
+
+			<include name="DialogNameForDebug">
+			    <param name="dialog" value="filestackingdialog" />
+				<param name="label" value="DialogSelect.xml (filestackingdialog)" />
+			</include>
 			
-			<control type="group">
-				<visible>Window.IsVisible(script-RSS_Editor-setEditor.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="script-RSS_Editor-setEditor.xml" />
-				</include>
-			</control>
-			
-			<control type="group">
-				<visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="script-cu-lrclyrics-main.xml" />
-				</include>
-			</control>
-			
-			<control type="group">
-				<visible>Window.IsVisible(script-globalsearch-main.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="script-globalsearch-main.xml" />
-				</include>
-			</control>
-			
-			<control type="group">
-				<visible>Window.IsVisible(script-globalsearch-infodialog.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="script-globalsearch-infodialog.xml" />
-				</include>
-			</control>
-			
-			<control type="group">
-				<visible>Window.IsVisible(script-globalsearch-contextmenu.xml)</visible>	
-				<include name="DialogNameForDebug">
-					<param name="label" value="script-globalsearch-contextmenu.xml" />
-				</include>
-			</control>
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="fullscreeninfo" />
+                <param name="label" value="fullscreeninfo (DialogFullScreenInfo.xml)" />
+            </include>
+
+			<include name="DialogNameForDebug">
+			    <param name="dialog" value="gamepadinput" />
+				<param name="label" value="DialogSelect.xml (gamepadinput)" />
+			</include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="infodialog" />
+                <param name="label" value="infodialog (DialogKaiToast.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="locksettings" />
+                <param name="label" value="locksettings (LockSettings.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="mediafilter" />
+                <param name="label" value="mediafilter (DialogMediaFilter.xml)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="mediasource" />
+                <param name="label" value="mediasource (DialogMediaSource.xml)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="movieinformation" />
+                <param name="label" value="movieinformation (DialogVideoInfo.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="musicinformation" />
+                <param name="label" value="musicinformation (DialogAlbumInfo.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="musicosd" />
+                <param name="label" value="musicosd (MusicOSD.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="mutebug" />
+                <param name="label" value="mutebug (DialogMuteBug.xml)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="networksetup" />
+                <param name="label" value="networksetup (DialogNetworkSetup.xml)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="numericinput" />
+                <param name="label" value="numericinput (DialogNumeric.xml)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="okdialog" />
+                <param name="label" value="okdialog (DialogOk.xml)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="osdaudiosettings" />
+                <param name="label" value="osdaudiosettings (VideoOSDSettings.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="osdvideosettings" />
+                <param name="label" value="osdvideosettings (VideoOSDSettings.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="peripherals" />
+                <param name="label" value="DialogSelect.xml (peripherals)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="peripheralsettings" />
+                <param name="label" value="peripheralsettings (DialogPeripheralSettings.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pictureinfo" />
+                <param name="label" value="pictureinfo (DialogPictureInfo.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="playercontrols" />
+                <param name="label" value="PlayerControls.xml (playercontrols)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="profilesettings" />
+                <param name="label" value="profilesettings (ProfileSettings.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="progressdialog" />
+                <param name="label" value="progressdialog (DialogProgress.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrchannelmanager" />
+                <param name="label" value="pvrchannelmanager (DialogPVRChannelManager.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrgroupmanager" />
+                <param name="label" value="pvrgroupmanager (DialogPVRGroupManager.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrguideinfo" />
+                <param name="label" value="DialogPVRInfo.xml (pvrguideinfo)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrguidesearch" />
+                <param name="label" value="pvrguidesearch (DialogPVRGuideSearch.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrosdchannels" />
+                <param name="label" value="pvrosdchannels (DialogPVRChannelsOSD.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrosdguide" />
+                <param name="label" value="pvrosdguide (DialogPVRGuideOSD.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrrecordinginfo" />
+                <param name="label" value="DialogPVRInfo.xml (pvrrecordinginfo)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="pvrtimersetting" />
+                <param name="label" value="pvrtimersetting (DialogPVRTimerSettings.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="seekbar" />
+                <param name="label" value="seekbar (DialogSeekbar.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="selectdialog" />
+                <param name="label" value="DialogSelect.xml (selectdialog)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="shutdownmenu" />
+                <param name="label" value="shutdownmenu (DialogButtonMenu.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="sliderdialog" />
+                <param name="label" value="sliderdialog (DialogSlider.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="slideshow" />
+                <param name="label" value="slideshow (SlideShow.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="smartplaylisteditor" />
+                <param name="label" value="smartplaylisteditor (SmartPlaylistEditor.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="smartplaylistrule" />
+                <param name="label" value="smartplaylistrule (SmartPlaylistRule.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="songinformation" />
+                <param name="label" value="songinformation (DialogSongInfo.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="subtitlesearch" />
+                <param name="label" value="subtitlesearch (DialogSubtitles.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="systeminfo" />
+                <param name="label" value="systeminfo (SettingsSystemInfo.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="textviewer" />
+                <param name="label" value="textviewer (DialogTextViewer.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="videobookmarks" />
+                <param name="label" value="videobookmarks (VideoOSDBookmarks.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="videoosd" />
+                <param name="label" value="videoosd (VideoOSD.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="virtualkeyboard" />
+                <param name="label" value="virtualkeyboard (DialogKeyboard.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="visualisation" />
+                <param name="label" value="visualisation (MusicVisualisation.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="visualisationpresetlist" />
+                <param name="label" value="DialogSelect.xml (visualisationpresetlist)" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="volumebar" />
+                <param name="label" value="volumebar (DialogVolumeBar.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="yesnodialog" />
+                <param name="label" value="yesnodialog (DialogYesNo.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogTextViewer.xml" />
+                <param name="label" value="CustomDialogTextViewer.xml" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogActionEditor.xml" />
+                <param name="label" value="CustomDialogActionEditor.xml" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogOptionEditor.xml" />	
+                <param name="label" value="CustomDialogOptionEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogItemsEditor.xml" />	
+                <param name="label" value="CustomDialogItemsEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogSubmenuEditor.xml" />	
+                <param name="label" value="CustomDialogSubmenuEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogSuboptionEditor.xml" />	
+                <param name="label" value="CustomDialogSuboptionEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogHomeOptionEditor.xml" />	
+                <param name="label" value="CustomDialogHomeOptionEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogCircleEditor.xml" />	
+                <param name="label" value="CustomDialogCircleEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogSelect.xml" />	
+                <param name="label" value="CustomDialogSelect.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomDialogYesNo.xml" />	
+                <param name="label" value="CustomDialogYesNo.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomMusicOverlay.xml" />
+                <param name="label" value="CustomMusicOverlay.xml" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="CustomVideoOverlay.xml" />
+                <param name="label" value="CustomVideoOverlay.xml" />
+            </include>
+        
+            <!-- Add-on Dialog Labels -->
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="script-RSS_Editor-rssEditor.xml" />	
+                <param name="label" value="script-RSS_Editor-rssEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="script-RSS_Editor-setEditor.xml" />	
+                <param name="label" value="script-RSS_Editor-setEditor.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="script-cu-lrclyrics-main.xml" />	
+                <param name="label" value="script-cu-lrclyrics-main.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="script-globalsearch-main.xml" />	
+                <param name="label" value="script-globalsearch-main.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="script-globalsearch-infodialog.xml" />	
+                <param name="label" value="script-globalsearch-infodialog.xml" />
+            </include>
+        
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="script-globalsearch-contextmenu.xml" />	
+                <param name="label" value="script-globalsearch-contextmenu.xml" />
+            </include>
 		</control>
 
 		<control type="image">

@@ -3,7 +3,7 @@
 	<include name="ItemForDebug">
         <param name="textcolor" default="White" />
         <param name="label" default="-" />
-    
+
         <definition>
             <height>20</height>
             <include name="OutlineLabel">
@@ -31,13 +31,17 @@
 	</include>
     
 	<include name="ContentTypeForDebug">
+        <param name="visible" default="false" />
         <param name="label" default="-" />
     
         <definition>
-            <include name="ItemForDebug">
-                <param name="textcolor" value="Red" />
-                <param name="label" value="$PARAM[label]" />
-            </include>
+			<control type="group">
+				<visible>$PARAM[visible]</visible>
+                <include name="ItemForDebug">
+                    <param name="textcolor" value="Red" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+            </control>
         </definition>
 	</include>
 
@@ -57,13 +61,17 @@
 	</include>
 
 	<include name="DialogNameForDebug">
+        <param name="dialog" default="-" />
         <param name="label" default="-" />
     
         <definition>
-            <include name="ItemForDebug">
-                <param name="textcolor" value="Green" />
-                <param name="label" value="$PARAM[label]" />
-            </include>
+			<control type="group">
+				<visible>Window.IsVisible($PARAM[dialog])</visible>
+                <include name="ItemForDebug">
+                    <param name="textcolor" value="Green" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+            </control>
         </definition>
 	</include>
 </includes>
