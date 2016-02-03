@@ -106,14 +106,12 @@
                     <include name="HorizontalThumbnailIcon" />
                     <include name="OverlayForSquareThumbnailIcon" />
                 </control>
-            
-                <control type="group">
-                    <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                    <posx>40</posx>
-                    <posy>615</posy>
-                    <include name="HorizontalViewListOfContentMediaFlag" />
-                </control>
             </control>
+            
+            <include name="HorizontalViewListOfContentMediaFlag">
+                <param name="posx" value="40" />
+                <param name="posy" value="615" />
+            </include>
             
             <control type="textbox">
                 <posx>40</posx>
@@ -231,12 +229,10 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
 
-            <control type="group">
-                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                <posx>1100</posx>
-                <posy>40</posy>
-                <include name="HorizontalViewListOfContentMediaFlag" />
-            </control>
+            <include name="HorizontalViewListOfContentMediaFlag">
+                <param name="posx" value="1100" />
+                <param name="posy" value="40" />
+            </include>
 
             <control type="textbox">
                 <description>Description of List Item</description>
