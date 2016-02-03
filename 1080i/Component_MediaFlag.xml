@@ -377,16 +377,18 @@
         <param name="posy" default="0" />
         <param name="mediaflagcolor" default="BackgroundColor" />
         <param name="outlinecolor" default="$VAR[ContentMainColor]" />
+        <param name="align" default="left" />
     
         <definition>
             <control type="grouplist">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
-                <width>auto</width>
+                <width>720</width>
                 <height>50</height>
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
+                <align>$PARAM[align]</align>
 
                 <control type="group">
                     <include>WatchedPropertyVisibilityForContentMediaFlag</include>

@@ -380,13 +380,12 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
 
-            <control type="group">
-                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                <posx>560</posx>
-                <posy>1020</posy>
-                <include name="HorizontalViewListOfContentMediaFlag" />
-            </control>
-                    
+            <include name="HorizontalViewListOfContentMediaFlag">
+                <param name="posx" value="600" />
+                <param name="posy" value="1020" />
+                <param name="align" value="center" />
+            </include>
+
             <control type="image">
                 <posy>780</posy>
                 <width>1920</width>
