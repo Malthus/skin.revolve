@@ -378,6 +378,11 @@
             </include>
         
             <include name="DialogNameForDebug">
+                <param name="dialog" value="audiodspmanager" />
+                <param name="label" value="audiodspmanager (DialogAudioDSPManager.xml)" />
+            </include>
+
+            <include name="DialogNameForDebug">
                 <param name="dialog" value="busydialog" />
                 <param name="label" value="busydialog (DialogBusy.xml)" />
             </include>
@@ -481,7 +486,12 @@
                 <param name="dialog" value="okdialog" />
                 <param name="label" value="okdialog (DialogOk.xml)" />
             </include>
-        
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="osdaudiodspsettings" />
+                <param name="label" value="osdaudiodspsettings (DialogAudioDSPSettings.xml)" />
+            </include>
+
             <include name="DialogNameForDebug">
                 <param name="dialog" value="osdaudiosettings" />
                 <param name="label" value="osdaudiosettings (VideoOSDSettings.xml)" />
