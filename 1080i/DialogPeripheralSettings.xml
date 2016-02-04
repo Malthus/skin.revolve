@@ -13,18 +13,29 @@
 
 			<control type="grouplist" id="5">
                 <description>Control Area</description>
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>520</height>
-				<itemgap>0</itemgap>
+                <include name="MarkupForListForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="25" />
+                </include>
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<onleft>9000</onleft>
-				<onright>Noop</onright>
+				<onright>25</onright>
 			</control>
 
             <include name="DefaultControlsForDialog" />
+            
+			<control type="scrollbar" id="25">
+				<include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
+				<onup>25</onup>
+				<ondown>25</ondown>
+				<onleft>5</onleft>
+				<onright>Noop</onright>
+			</control>
             
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
