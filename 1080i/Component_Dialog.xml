@@ -61,6 +61,19 @@
         </definition>
     </include>
     
+    <include name="ClearButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+        <param name="label" default="$LOCALIZE[192]" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$PARAM[label]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="CloseButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -110,7 +123,22 @@
             </control>
         </definition>
     </include>
+    
+    <include name="SetHelpButtonForDialog">
+        <param name="id" default="26" />
+        <param name="posy" default="0" />
 
+        <definition>
+            <control type="radiobutton" id="$PARAM[id]">
+                <description>Help Radiobutton</description>
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[10043]</label>
+                <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
+                <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
+            </control>
+        </definition>
+    </include>
+    
     <include name="SetUserRatingButtonForDialog">
         <param name="id" default="7" />
         <param name="posy" default="0" />
@@ -622,7 +650,168 @@
             </control>
         </definition>
 	</include>
+    
+	<include name="HalfListFrameForDialog">
+        <param name="posx" default="560" />
+        <param name="posy" default="80" />
+        <param name="height" default="-" />
+        <param name="bordercolor" default="MainColor" />
+    
+        <definition>
+			<control type="image">
+				<posx>$PARAM[posx]</posx>
+				<posy>$PARAM[posy]</posy>
+				<width>600</width>
+				<height>$PARAM[height]</height>
+				<fadetime>100</fadetime>
+				<texture colordiffuse="$PARAM[bordercolor]" border="20" >controls/rectangle-clear.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+        </definition>
+	</include>    
 	
+	<include name="ItemsForHalfListInDialog">
+        <param name="listid" default="0" />
+        <param name="texture" default="$INFO[ListItem.Icon]" />
+    
+        <definition>
+            <itemlayout height="100">
+                <include name="NormalItemsForHalfListInDialog">
+                    <param name="texture" value="$PARAM[texture]" />
+                </include>
+            </itemlayout>
+                
+            <focusedlayout height="100">
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid])</visible>
+                    <include name="FocusedItemsForHalfListInDialog">
+                        <param name="texture" value="$PARAM[texture]" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[listid])</visible>
+                    <include name="SelectedItemsForHalfListInDialog">
+                        <param name="texture" value="$PARAM[texture]" />
+                    </include>
+                </control>
+            </focusedlayout>
+        </definition>
+	</include>
+
+	<include name="NormalItemsForHalfListInDialog">
+        <param name="texture" default="$INFO[ListItem.Icon]" />
+        
+        <definition>
+            <control type="group">
+                <posx>20</posx>
+                <posy>5</posy>
+                <include name="SmallCircleThumbnailIcon">
+                    <param name="icontexture" value="$PARAM[texture]" />
+                </include>
+            </control>
+            <control type="label">
+                <posx>130</posx>
+                <posy>10</posy>
+                <width>438</width>
+                <height>40</height>
+                <font>SmallListItemFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label">
+                <posx>130</posx>
+                <posy>50</posy>
+                <width>438</width>
+                <height>40</height>
+                <font>DetailListItemFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label2]</label>
+            </control>
+        </definition>
+	</include>
+	
+	<include name="FocusedItemsForHalfListInDialog">
+        <param name="texture" default="$INFO[ListItem.Icon]" />
+    
+        <definition>
+            <control type="image">
+                <width>592</width>
+                <height>100</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="group">
+                <posx>20</posx>
+                <posy>5</posy>
+                <include name="SmallCircleThumbnailIcon">
+                    <param name="icontexture" value="$PARAM[texture]" />
+                </include>
+            </control>
+            <control type="label">
+                <posx>130</posx>
+                <posy>10</posy>
+                <width>438</width>
+                <height>40</height>
+                <font>SmallListItemFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label">
+                <posx>130</posx>
+                <posy>50</posy>
+                <width>438</width>
+                <height>40</height>
+                <font>DetailListItemFont</font>
+                <textcolor>BackgroundColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label2]</label>
+            </control>
+        </definition>
+	</include>
+    
+	<include name="SelectedItemsForHalfListInDialog">
+        <param name="texture" default="$INFO[ListItem.Icon]" />
+
+        <definition>
+            <control type="image">
+                <width>592</width>
+                <height>100</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="group">
+                <posx>20</posx>
+                <posy>5</posy>
+                <include name="SmallCircleThumbnailIcon">
+                    <param name="icontexture" value="$PARAM[texture]" />
+                </include>
+            </control>
+            <control type="label">
+                <posx>130</posx>
+                <posy>10</posy>
+                <width>438</width>
+                <height>40</height>
+                <font>SmallListItemFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label">
+                <posx>130</posx>
+                <posy>50</posy>
+                <width>438</width>
+                <height>40</height>
+                <font>DetailListItemFont</font>
+                <textcolor>MainColor</textcolor>
+                <align>left</align>
+                <label>$INFO[ListItem.Label2]</label>
+            </control>
+        </definition>
+	</include>    
+
 	<include name="TitledFullListFrameForDialog">
         <definition>
 			<control type="image">

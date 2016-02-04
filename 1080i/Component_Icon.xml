@@ -70,6 +70,8 @@
 	</include>
     
 	<include name="SmallCircleThumbnailIcon">
+        <param name="icontexture" default="$VAR[ContentThumbnail]" />
+    
         <definition>
             <include name="BackgroundForSmallCircleThumbnailIcon" />
 		
@@ -78,7 +80,7 @@
                 <posy>3</posy>
                 <width>84</width>
                 <height>84</height>
-                <texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <texture diffuse="elements/circle-mask.png" background="true">$PARAM[icontexture]</texture>
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>
