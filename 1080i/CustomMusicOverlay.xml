@@ -4,7 +4,7 @@
 
 	<controls>
         <control type="group">
-			<visible>!Window.IsActive(visualisation) + !Window.IsActive(karaoke)</visible>
+			<visible>!Window.IsActive(visualisation)</visible>
 
             <control type="group">
                 <description>Music Overlay With Artwork Group</description>
