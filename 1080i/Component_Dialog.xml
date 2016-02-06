@@ -234,11 +234,12 @@
     </include>
     
 	<include name="MarkupForScrollbarForDialog">
+        <param name="posx" default="1840" />
         <param name="posy" default="0" />
         <param name="height" default="0" />
     
         <definition>
-            <posx>1840</posx>
+            <posx>$PARAM[posx]</posx>
             <posy>$PARAM[posy]</posy>
             <width>20</width>
             <height>$PARAM[height]</height>
@@ -272,6 +273,7 @@
 
 	<include name="ScrollbarForDialog">
         <param name="id" default="0" />
+        <param name="posx" default="1840" />
         <param name="posy" default="80" />
         <param name="height" default="120" />
         <param name="onup" default="Noop" />
@@ -282,6 +284,7 @@
         <definition>
             <control id="$PARAM[id]" type="scrollbar">
 				<include name="MarkupForScrollbarForDialog">
+                    <param name="posx" value="$PARAM[posx]" />
                     <param name="posy" value="$PARAM[posy]" />
                     <param name="height" value="$PARAM[height]" />
                 </include>
