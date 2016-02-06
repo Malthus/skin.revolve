@@ -50,6 +50,12 @@
         </definition>
 	</include>
 	
+	<include name="UserRatingVisibilityForContentMediaFlag">
+        <definition>
+            <visible>!IsEmpty(ListItem.UserRating)</visible>
+        </definition>
+	</include>
+    
 	<include name="WatchedPropertyVisibilityForContentMediaFlag">
         <definition>
             <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -159,6 +165,39 @@
                 <height>60</height>
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
+
+                <control type="group">
+                    <include>WatchedPropertyVisibilityForContentMediaFlag</include>
+                    <width>60</width>
+				
+                    <control type="image">
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/property-watched.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
+                
+                <control type="group">
+                    <include>UserRatingVisibilityForContentMediaFlag</include>
+                    <width>60</width>
+                    
+                    <control type="image">
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/rating-star.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <width>60</width>
+                        <height>60</height>
+                        <font>SmallMediaFlagFont</font>
+                        <textcolor>MainColor</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.UserRating]</label>
+                    </control>
+                </control>
 
                 <control type="image">
                     <description>Video Codec Icon</description>
@@ -409,6 +448,36 @@
                         <texture>icons/property-watched.png</texture>
                         <colordiffuse>$PARAM[mediaflagcolor]</colordiffuse>
                         <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
+                
+                <control type="group">
+                    <include>UserRatingVisibilityForContentMediaFlag</include>
+                    <width>50</width>
+                    
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>46</width>
+                        <height>46</height>
+                        <texture>icons/property-background.png</texture>
+                        <colordiffuse>$PARAM[outlinecolor]</colordiffuse>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>50</width>
+                        <height>50</height>
+                        <texture colordiffuse="$PARAM[mediaflagcolor]">icons/rating-star.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <width>50</width>
+                        <height>50</height>
+                        <font>SmallMediaFlagFont</font>
+                        <textcolor>$PARAM[mediaflagcolor]</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.UserRating]</label>
                     </control>
                 </control>
                 
@@ -825,6 +894,36 @@
                 <height>60</height>
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
+
+                <control type="group">
+                    <include>!IsEmpty(VideoPlayer.UserRating)</include>
+                    <width>60</width>
+                    
+                    <control type="image">
+                        <posx>2</posx>
+                        <posy>2</posy>
+                        <width>56</width>
+                        <height>56</height>
+                        <texture>icons/property-background.png</texture>
+                        <colordiffuse>BackgroundColor</colordiffuse>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>60</width>
+                        <height>60</height>
+                        <texture colordiffuse="MainColor">icons/rating-star.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <width>60</width>
+                        <height>60</height>
+                        <font>SmallMediaFlagFont</font>
+                        <textcolor>MainColor</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[VideoPlayer.UserRating]</label>
+                    </control>
+                </control>
 
                 <control type="group">
                     <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
