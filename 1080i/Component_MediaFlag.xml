@@ -967,7 +967,7 @@
                 <orientation>horizontal</orientation>
 
                 <control type="group">
-                    <include>!IsEmpty(VideoPlayer.UserRating)</include>
+                    <visible>!IsEmpty(VideoPlayer.UserRating)</visible>
                     <width>60</width>
                     
                     <control type="image">
