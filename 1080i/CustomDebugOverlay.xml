@@ -13,7 +13,7 @@
 			<height>1040</height>
 			<itemgap>10</itemgap>
 			
-			<!-- Background labels -->
+			<!-- Background Labels -->
 			
 			<control type="group">
                 <visible>StringCompare(Skin.String(Debug.AdditionalInfo),B)</visible>
@@ -22,7 +22,7 @@
                 </include>
 			</control>
 			
-			<!-- Folderpath labels -->
+			<!-- Folderpath Labels -->
 
 			<control type="group">
                 <visible>StringCompare(Skin.String(Debug.AdditionalInfo),P) + !IsEmpty(Container.FolderPath)</visible>
@@ -30,8 +30,8 @@
                     <param name="label" value="$INFO[Container.FolderPath]" />
                 </include>
 			</control>
-			
-			<!-- Content labels -->
+
+			<!-- Content Labels -->
 			
 			<include name="ContentTypeForDebug">
                 <param name="visible" value="Container.Content(tvshows)" />
@@ -138,7 +138,7 @@
                 <param name="label" value="Radio/TV Items" />
             </include>
 
-			<!-- Window labels -->
+			<!-- Window Labels -->
 
             <include name="WindowNameForDebug">
                 <param name="window" value="addonbrowser" />
@@ -360,7 +360,7 @@
                 <param name="label" value="CustomExitMenu.xml" />
             </include>
 			
-			<!-- Dialog labels -->
+			<!-- Dialog Labels -->
 
 			<include name="DialogNameForDebug">
 			    <param name="dialog" value="accesspoints" />
@@ -723,6 +723,21 @@
             </include>
         
             <!-- Add-on Dialog Labels -->
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="DialogParametricEQ.xml" />	
+                <param name="label" value="DialogParametricEQ.xml" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="DialogSpeakerDistance.xml" />	
+                <param name="label" value="DialogSpeakerDistance.xml" />
+            </include>
+
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="DialogSpeakerGain.xml" />	
+                <param name="label" value="DialogSpeakerGain.xml" />
+            </include>
 
             <include name="DialogNameForDebug">
                 <param name="dialog" value="script-RSS_Editor-rssEditor.xml" />	
