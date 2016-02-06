@@ -314,11 +314,12 @@
 					<visible>!Control.HasFocus(52)</visible>
 
                     <include name="HorizontalViewListOfContentMediaFlag">
-                        <param name="posx" value="780" />
-                        <param name="posy" value="490" />
+                        <param name="posx" value="800" />
+                        <param name="posy" value="484" />
                         <param name="mediaflagcolor" value="$VAR[ContentTextColor]" />
                         <param name="outlinecolor" value="BackgroundColor" />
                     </include>
+
                     <include name="NameForMainElementForCircleListView">
                         <param name="textcolor" value="$VAR[ContentTextColor]" />
                     </include>
@@ -330,11 +331,12 @@
 					<visible>Control.HasFocus(52)</visible>
 
                     <include name="HorizontalViewListOfContentMediaFlag">
-                        <param name="posx" value="780" />
-                        <param name="posy" value="490" />
+                        <param name="posx" value="800" />
+                        <param name="posy" value="484" />
                         <param name="mediaflagcolor" value="$VAR[ContentMainColor]" />
                         <param name="outlinecolor" value="BackgroundColor" />
                     </include>
+
                     <include name="NameForMainElementForCircleListView">
                         <param name="textcolor" value="$VAR[ContentMainColor]" />
                     </include>
