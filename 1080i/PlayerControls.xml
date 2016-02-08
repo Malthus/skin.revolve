@@ -65,15 +65,17 @@
             <param name="onright" value="9001" />
         </include>
 
-		<control type="button" id="408">
+		<control type="group">
             <visible>Substring(Window.Property(DialogCloseButton),T,left)</visible>
-			<posx>920</posx>
-			<posy>500</posy>
-            <include>CloseButtonForPlayer</include>
-            <onup>403</onup>
-			<ondown>404</ondown>
-			<onleft>401</onleft>
-			<onright>406</onright>
+            <include name="CloseButtonForPlayer">
+                <param name="id" value="408" />
+                <param name="posx" value="920" />
+                <param name="posy" value="500" />
+                <param name="onup" value="403" />
+                <param name="ondown" value="404" />
+                <param name="onleft" value="401" />
+                <param name="onright" value="406" />
+            </include>
 		</control>
 
 		<control type="group">
