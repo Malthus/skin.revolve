@@ -3,7 +3,8 @@
 	<include name="BannersView">
 		<control type="group">
 			<visible>Control.IsVisible(59)</visible>
-			<include name="BackgroundAnimationForBottomRing" />
+            <animation effect="slide" end="0,70" time="200" condition="Container(59).Row(5)">conditional</animation>				
+            <include name="BackgroundAnimationForBottomRing" />
 		</control>
 
 		<control type="panel" id="59">
@@ -52,7 +53,12 @@
         
 		<control type="group">
 			<visible>Control.IsVisible(59)</visible>
-			<include name="BottomRing" />
+            
+            <control type="group">
+				<animation effect="slide" end="0,70" time="200" condition="Container(59).Row(5)">conditional</animation>				
+                <include name="BottomRing" />
+            </control>
+            
             <include name="LabelsForBottomRing" />
 		</control>
         
