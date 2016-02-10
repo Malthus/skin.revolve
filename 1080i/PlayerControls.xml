@@ -2,10 +2,6 @@
 <window type="dialog" id="114">
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
 	<defaultcontrol>410</defaultcontrol>
-<!--
-	<defaultcontrol condition="!VideoPlayer.Content(LiveTV)">403</defaultcontrol>
-	<defaultcontrol condition="VideoPlayer.Content(LiveTV)">423</defaultcontrol>
--->
     <onunload>SetProperty(DialogCloseButton,False,114)</onunload>
 
 	<controls>
