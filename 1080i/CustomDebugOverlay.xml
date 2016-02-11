@@ -18,7 +18,7 @@
 			<control type="group">
                 <visible>StringCompare(Skin.String(Debug.AdditionalInfo),B)</visible>
 				<include name="InformationForDebug">
-                    <param name="label" value="$VAR[ContentBackground]" />
+                    <param name="label" value="$VAR[ContentSingleImageBackground]$VAR[ContentMultiImageBackground, | ,]" />
                 </include>
 			</control>
 			

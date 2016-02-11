@@ -138,7 +138,7 @@
 		<value condition="StringCompare(ListItem.Overlay,OverlayHasTrainer.png)">elements/circle-mask.png</value>
 	</variable>
 	
-	<variable name="ContentBackground">
+	<variable name="ContentSingleImageBackground">
 		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Art(fanart))">$INFO[Container(450).ListItem.Art(fanart)]</value>
 		<value condition="Window.IsVisible(favourites) + !IsEmpty(Container(450).ListItem.Property(Fanart_Image))">$INFO[Container(450).ListItem.Property(Fanart_Image)]</value>
 		<value condition="Window.IsVisible(favourites)">special://skin/backgrounds/favourites.jpg</value>
@@ -189,6 +189,11 @@
 		<value>special://skin/backgrounds/default.jpg</value>
 	</variable>
 	
+	<variable name="ContentMultiImageBackground">
+		<value condition="Window.IsVisible(weather) + System.HasAddon(resource.images.weatherfanart.multi)">resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+        <value></value>
+	</variable>
+    
 	<variable name="ContentRating">
 		<value>$INFO[ListItem.Rating]</value>
 	</variable>
