@@ -1,123 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="FrameForFileManager">
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-        <param name="bordercolor" default="MainColor" />
-        <param name="outlinecolor" default="BackgroundColor" />
-        <param name="outlinesize" default="2" />
-    
-        <definition>
-			<control type="group">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-                
-                <control type="image">
-                    <posx>-$PARAM[outlinesize]</posx>
-                    <posy>-$PARAM[outlinesize]</posy>
-                    <width>880</width>
-                    <height>840</height>
-                    <texture colordiffuse="$PARAM[outlinecolor]" border="20" >controls/rectangle-clear.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <posx>$PARAM[outlinesize]</posx>
-                    <posy>-$PARAM[outlinesize]</posy>
-                    <width>880</width>
-                    <height>840</height>
-                    <texture colordiffuse="$PARAM[outlinecolor]" border="20" >controls/rectangle-clear.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <posx>$PARAM[outlinesize]</posx>
-                    <posy>-$PARAM[outlinesize]</posy>
-                    <width>880</width>
-                    <height>840</height>
-                    <texture colordiffuse="$PARAM[outlinecolor]" border="20" >controls/rectangle-clear.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <posx>$PARAM[outlinesize]</posx>
-                    <posy>$PARAM[outlinesize]</posy>
-                    <width>880</width>
-                    <height>840</height>
-                    <texture colordiffuse="$PARAM[outlinecolor]" border="20" >controls/rectangle-clear.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="image">
-                    <width>880</width>
-                    <height>840</height>
-                    <texture colordiffuse="$PARAM[bordercolor]" border="20" >controls/rectangle-clear.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-			</control>
-        </definition>
-	</include>    
-    
 	<include name="LabelsForFileManager">
-        <param name="titleid" default="0" />
-        <param name="infoid" default="0" />
-        <param name="titlelabel" default="-" />
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-        <param name="textcolor" default="MainColor" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="lefttitleid" default="0" />
+        <param name="righttitleid" default="0" />
+        <param name="leftinfoid" default="0" />
+        <param name="rightinfoid" default="0" />
+        <param name="lefttitlelabel" default="-" />
+        <param name="righttitlelabel" default="-" />
+        <param name="textcolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="MainColor" />
     
         <definition>
-			<control type="group">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
+            <control type="group">
+                <animation effect="slide" start="0,240" end="0,0" time="500">WindowOpen</animation>
+                <animation effect="slide" start="0,0" end="0,240" time="500">WindowClose</animation>
+
+                <include name="BottomRing" />
                 
                 <include name="BackgroundForOutlineLabel">
-                    <param name="posx" value="20" />
-                    <param name="posy" value="0" />
-                    <param name="width" value="840" />
-                    <param name="height" value="40" />
-                    <param name="font" value="DialogTextFont" />
+                    <param name="posx" value="940" />
+                    <param name="posy" value="971" />
+                    <param name="width" value="930" />
+                    <param name="height" value="30" />
+                    <param name="font" value="MediumViewFont" />
                     <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                     <param name="outlinesize" value="2" />
-                    <param name="align" value="left" />
-                    <param name="aligny" value="center" />
-                    <param name="label" value="$INFO[Control.GetLabel($PARAM[titleid])]" />
+                    <param name="align" value="right" />
+                    <param name="scroll" value="true" />
+                    <param name="label" value="$INFO[Control.GetLabel($PARAM[lefttitleid])]" />
                 </include>
-                
-				<control type="label" id="$PARAM[titleid]">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>840</width>
-					<height>40</height>
+				<control type="label" id="$PARAM[lefttitleid]">
+					<posx>940</posx>
+					<posy>971</posy>
+					<width>930</width>
+					<height>30</height>
 					<textcolor>$PARAM[textcolor]</textcolor>
-					<font>DialogTextFont</font>
-					<align>left</align>
-					<aligny>center</aligny>
-                    <label>$PARAM[titlelabel]</label>
+					<font>MediumViewFont</font>
+					<align>right</align>
+					<scroll>true</scroll>
+                    <label>$PARAM[lefttitlelabel]</label>
 				</control>
 				
                 <include name="BackgroundForOutlineLabel">
-                    <param name="posx" value="20" />
-                    <param name="posy" value="840" />
-                    <param name="width" value="840" />
+                    <param name="posx" value="940" />
+                    <param name="posy" value="930" />
+                    <param name="width" value="930" />
                     <param name="height" value="30" />
-                    <param name="font" value="DetailListItemFont" />
+                    <param name="font" value="HomeMenuDetailFont" />
+                    <param name="outlinecolor" value="$PARAM[outlinecolor]" />
+                    <param name="outlinesize" value="2" />
+                    <param name="align" value="right" />
+                    <param name="scroll" value="true" />
+                    <param name="label" value="$INFO[Control.GetLabel($PARAM[leftinfoid])]" />
+                </include>
+				<control type="label" id="$PARAM[leftinfoid]">
+					<posx>940</posx>
+					<posy>930</posy>
+					<width>930</width>
+					<height>30</height>
+					<textcolor>$PARAM[textcolor]</textcolor>
+                    <font>HomeMenuDetailFont</font>
+					<align>right</align>
+					<scroll>true</scroll>
+					<label>-</label>
+				</control>
+                
+                <include name="BackgroundForOutlineLabel">
+                    <param name="posx" value="980" />
+                    <param name="posy" value="971" />
+                    <param name="width" value="930" />
+                    <param name="height" value="30" />
+                    <param name="font" value="MediumViewFont" />
                     <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                     <param name="outlinesize" value="2" />
                     <param name="align" value="left" />
-                    <param name="aligny" value="center" />
-                    <param name="label" value="$INFO[Control.GetLabel($PARAM[infoid])]" />
+                    <param name="scroll" value="true" />
+                    <param name="label" value="$INFO[Control.GetLabel($PARAM[righttitleid])]" />
                 </include>
-                
-				<control type="label" id="$PARAM[infoid]">
-					<posx>20</posx>
-					<posy>840</posy>
-					<width>840</width>
+				<control type="label" id="$PARAM[righttitleid]">
+					<posx>980</posx>
+					<posy>971</posy>
+					<width>930</width>
 					<height>30</height>
 					<textcolor>$PARAM[textcolor]</textcolor>
-                    <font>DetailListItemFont</font>
+					<font>MediumViewFont</font>
 					<align>left</align>
-					<aligny>center</aligny>
+					<scroll>true</scroll>
+                    <label>$PARAM[righttitlelabel]</label>
+				</control>
+				
+                <include name="BackgroundForOutlineLabel">
+                    <param name="posx" value="980" />
+                    <param name="posy" value="930" />
+                    <param name="width" value="930" />
+                    <param name="height" value="30" />
+                    <param name="font" value="HomeMenuDetailFont" />
+                    <param name="outlinecolor" value="$PARAM[outlinecolor]" />
+                    <param name="outlinesize" value="2" />
+                    <param name="align" value="left" />
+                    <param name="scroll" value="true" />
+                    <param name="label" value="$INFO[Control.GetLabel($PARAM[rightinfoid])]" />
+                </include>
+				<control type="label" id="$PARAM[rightinfoid]">
+					<posx>980</posx>
+					<posy>930</posy>
+					<width>930</width>
+					<height>30</height>
+					<textcolor>$PARAM[textcolor]</textcolor>
+                    <font>HomeMenuDetailFont</font>
+					<align>left</align>
+					<scroll>true</scroll>
 					<label>-</label>
 				</control>
-			</control>
+            </control>
         </definition>
 	</include>    
     
@@ -134,7 +129,7 @@
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>856</width>
-                <height>800</height>
+                <height>898</height>
                 <pagecontrol>$PARAM[scrollid]</pagecontrol>
                 <onup>$PARAM[listid]</onup>
                 <ondown>$PARAM[listid]</ondown>
@@ -160,7 +155,7 @@
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>20</width>
-                <height>760</height>
+                <height>800</height>
                 <ondown>$PARAM[id]</ondown>
                 <onup>$PARAM[id]</onup>
                 <onleft>$PARAM[onleft]</onleft>
@@ -210,6 +205,7 @@
             <include name="ListItemForFileManager">
                 <param name="textcolor" value="BackgroundColor" />
                 <param name="backgroundcolor" value="MainColor" />
+                <param name="scroll" value="true" />
             </include>
         </definition>
 	</include>
@@ -232,6 +228,7 @@
 	<include name="ListItemForFileManager">
         <param name="textcolor" default="MainColor" />
         <param name="backgroundcolor" default="BackgroundColor" />
+        <param name="scroll" default="false" />
     
         <definition>
             <control type="group">
@@ -248,6 +245,7 @@
                 <param name="textcolor" value="$PARAM[textcolor]" />
                 <param name="outlinecolor" value="$PARAM[backgroundcolor]" />
                 <param name="outlinesize" value="2" />
+                <param name="scroll" value="$PARAM[scroll]" />
                 <param name="label" value="$INFO[ListItem.Label]" />
             </include>
             <include name="OutlineLabel">
@@ -259,6 +257,7 @@
                 <param name="textcolor" value="$PARAM[textcolor]" />
                 <param name="outlinecolor" value="$PARAM[backgroundcolor]" />
                 <param name="outlinesize" value="2" />
+                <param name="scroll" value="$PARAM[scroll]" />
                 <param name="label" value="$INFO[ListItem.Label2]" />
             </include>
         </definition>
