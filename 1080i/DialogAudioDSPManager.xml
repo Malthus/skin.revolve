@@ -157,7 +157,7 @@
 					<onleft>9000</onleft>
 					<onright>20</onright>
 
-                    <include name="LargeItemsForHalfListInDialog">
+                    <include name="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="21" />
                         <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
                     </include>
@@ -206,7 +206,7 @@
 					<onleft>21</onleft>
 					<onright>Noop</onright>
 
-                    <include name="LargeItemsForHalfListInDialog">
+                    <include name="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="20" />
                         <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
                     </include>

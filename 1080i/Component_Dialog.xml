@@ -754,13 +754,13 @@
         </definition>
 	</include>
     
-	<include name="LargeItemsForHalfListInDialog">
+	<include name="ThumbnailItemsForHalfListInDialog">
         <param name="listid" default="0" />
         <param name="texture" default="$INFO[ListItem.Icon]" />
     
         <definition>
             <itemlayout height="100">
-                <include name="NormalLargeItemsForHalfListInDialog">
+                <include name="NormalThumbnailItemsForHalfListInDialog">
                     <param name="texture" value="$PARAM[texture]" />
                 </include>
             </itemlayout>
@@ -768,13 +768,13 @@
             <focusedlayout height="100">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include name="FocusedLargeItemsForHalfListInDialog">
+                    <include name="FocusedThumbnailItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include name="SelectedLargeItemsForHalfListInDialog">
+                    <include name="SelectedThumbnailItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
@@ -782,7 +782,7 @@
         </definition>
 	</include>
 
-	<include name="NormalLargeItemsForHalfListInDialog">
+	<include name="NormalThumbnailItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
         
         <definition>
@@ -816,7 +816,7 @@
         </definition>
 	</include>
 	
-	<include name="FocusedLargeItemsForHalfListInDialog">
+	<include name="FocusedThumbnailItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
     
         <definition>
@@ -856,7 +856,7 @@
         </definition>
 	</include>
     
-	<include name="SelectedLargeItemsForHalfListInDialog">
+	<include name="SelectedThumbnailItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
 
         <definition>
