@@ -658,7 +658,7 @@
         <param name="posx" default="560" />
         <param name="posy" default="80" />
         <param name="height" default="-" />
-        <param name="bordercolor" default="MainColor" />
+        <param name="bordercolor" default="TextColor" />
     
         <definition>
 			<control type="image">
@@ -673,27 +673,27 @@
         </definition>
 	</include>    
 	
-	<include name="ItemsForHalfListInDialog">
+	<include name="DefaultItemsForHalfListInDialog">
         <param name="listid" default="0" />
         <param name="texture" default="$INFO[ListItem.Icon]" />
     
         <definition>
-            <itemlayout height="100">
-                <include name="NormalItemsForHalfListInDialog">
+            <itemlayout height="40">
+                <include name="NormalDefaultItemsForHalfListInDialog">
                     <param name="texture" value="$PARAM[texture]" />
                 </include>
             </itemlayout>
                 
-            <focusedlayout height="100">
+            <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include name="FocusedItemsForHalfListInDialog">
+                    <include name="FocusedDefaultItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include name="SelectedItemsForHalfListInDialog">
+                    <include name="SelectedDefaultItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
@@ -701,7 +701,88 @@
         </definition>
 	</include>
 
-	<include name="NormalItemsForHalfListInDialog">
+	<include name="NormalDefaultItemsForHalfListInDialog">
+        <definition>
+            <control type="image">
+                <width>588</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>548</width>
+                <height>40</height>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </definition>
+	</include>
+
+	<include name="FocusedDefaultItemsForHalfListInDialog">
+        <definition>
+            <control type="image">
+                <width>588</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>548</width>
+                <height>40</height>
+                <textcolor>BackgroundColor</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </definition>
+	</include>
+
+	<include name="SelectedDefaultItemsForHalfListInDialog">
+        <definition>
+            <control type="image">
+                <width>588</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>548</width>
+                <height>40</height>
+                <textcolor>BackgroundColor</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </definition>
+	</include>
+    
+	<include name="LargeItemsForHalfListInDialog">
+        <param name="listid" default="0" />
+        <param name="texture" default="$INFO[ListItem.Icon]" />
+    
+        <definition>
+            <itemlayout height="100">
+                <include name="NormalLargeItemsForHalfListInDialog">
+                    <param name="texture" value="$PARAM[texture]" />
+                </include>
+            </itemlayout>
+                
+            <focusedlayout height="100">
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid])</visible>
+                    <include name="FocusedLargeItemsForHalfListInDialog">
+                        <param name="texture" value="$PARAM[texture]" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[listid])</visible>
+                    <include name="SelectedLargeItemsForHalfListInDialog">
+                        <param name="texture" value="$PARAM[texture]" />
+                    </include>
+                </control>
+            </focusedlayout>
+        </definition>
+	</include>
+
+	<include name="NormalLargeItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
         
         <definition>
@@ -735,12 +816,12 @@
         </definition>
 	</include>
 	
-	<include name="FocusedItemsForHalfListInDialog">
+	<include name="FocusedLargeItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
     
         <definition>
             <control type="image">
-                <width>592</width>
+                <width>588</width>
                 <height>100</height>
                 <aspectratio>stretch</aspectratio>
                 <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
@@ -775,12 +856,12 @@
         </definition>
 	</include>
     
-	<include name="SelectedItemsForHalfListInDialog">
+	<include name="SelectedLargeItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
 
         <definition>
             <control type="image">
-                <width>592</width>
+                <width>588</width>
                 <height>100</height>
                 <aspectratio>stretch</aspectratio>
                 <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>

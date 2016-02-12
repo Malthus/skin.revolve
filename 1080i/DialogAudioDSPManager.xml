@@ -146,7 +146,7 @@
 
 				<control type="list" id="21">
                     <description>Active DSP List Control</description>
-					<posx>564</posx>
+					<posx>566</posx>
 					<posy>120</posy>
 					<width>592</width>
 					<height>740</height>
@@ -157,7 +157,7 @@
 					<onleft>9000</onleft>
 					<onright>20</onright>
 
-                    <include name="ItemsForHalfListInDialog">
+                    <include name="LargeItemsForHalfListInDialog">
                         <param name="listid" value="21" />
                         <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
                     </include>
@@ -195,7 +195,7 @@
 
                 <control type="list" id="20">
                     <description>Available DSP List Control</description>
-					<posx>1184</posx>
+					<posx>1186</posx>
 					<posy>120</posy>
 					<width>592</width>
 					<height>740</height>
@@ -206,7 +206,7 @@
 					<onleft>21</onleft>
 					<onright>Noop</onright>
 
-                    <include name="ItemsForHalfListInDialog">
+                    <include name="LargeItemsForHalfListInDialog">
                         <param name="listid" value="20" />
                         <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
                     </include>
