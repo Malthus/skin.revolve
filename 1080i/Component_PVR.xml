@@ -136,7 +136,20 @@
                         <textcolor>MainColor</textcolor>
                         <font>MediumViewFont</font>
                         <align>left</align>
+                        <scroll>false</scroll>
                         <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label" id="1">
+                        <visible>!IsEmpty(ListItem.Label)</visible>
+                        <posx>8</posx>
+                        <posy>40</posy>
+                        <width>44</width>
+                        <height>30</height>
+                        <textcolor>MainColor</textcolor>
+                        <font>DetailViewFont</font>
+                        <align>left</align>
+                        <scroll>false</scroll>
+                        <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
                     </control>
                 </itemlayout>
                     
@@ -155,9 +168,11 @@
                         <textcolor>BackgroundColor</textcolor>
                         <font>MediumViewFont</font>
                         <align>left</align>
+                        <scroll>true</scroll>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label" id="1">
+                        <visible>!IsEmpty(ListItem.Label)</visible>
                         <posx>8</posx>
                         <posy>40</posy>
                         <width>44</width>
@@ -165,6 +180,7 @@
                         <textcolor>BackgroundColor</textcolor>
                         <font>DetailViewFont</font>
                         <align>left</align>
+                        <scroll>true</scroll>
                         <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
                     </control>
                 </focusedlayout>
