@@ -443,6 +443,7 @@
 
         <definition>
             <control type="image">
+                <visible>Player.CanRecord</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
@@ -452,7 +453,6 @@
             </control>
 
             <control type="button" id="$PARAM[id]">
-                <visible>Player.CanRecord</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
