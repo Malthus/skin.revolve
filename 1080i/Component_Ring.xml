@@ -376,12 +376,6 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
 
-            <include name="HorizontalViewListOfContentMediaFlag">
-                <param name="posx" value="500" />
-                <param name="posy" value="1020" />
-                <param name="align" value="center" />
-            </include>
-
             <control type="image">
                 <posy>780</posy>
                 <width>1920</width>
@@ -393,6 +387,7 @@
 
 	<include name="LabelsForBottomRing">
         <definition>
+        
             <control type="group">
                 <include name="VisibilityOfListIconInView" />
                 <include name="ContentLabelForBottomRing" />
@@ -402,6 +397,8 @@
                 <include name="VisibilityOfSortLetterInView" />
                 <include name="SortLetterForBottomRing" />
             </control>
+            
+            <include name="ContentMediaFlagForBottomRing" />
         </definition>
 	</include>
 
@@ -465,6 +462,21 @@
                     <param name="align" value="center" />
                     <param name="scroll" value="true" />
                     <param name="label" value="$PARAM[label]" />
+                </include>
+            </control>
+        </definition>
+	</include>
+    
+	<include name="ContentMediaFlagForBottomRing">
+        <definition>
+            <control type="group">
+                <animation effect="slide" start="0,240" end="0,0" time="500">WindowOpen</animation>
+                <animation effect="slide" start="0,0" end="0,240" time="500">WindowClose</animation>
+
+                <include name="HorizontalViewListOfContentMediaFlag">
+                    <param name="posx" value="500" />
+                    <param name="posy" value="1020" />
+                    <param name="align" value="center" />
                 </include>
             </control>
         </definition>
