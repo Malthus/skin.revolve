@@ -2,6 +2,212 @@
 <includes>
     <constant name="PosYForPlayerInformationForOverlay">1030</constant>
 
+    <include name="Overlay">
+        <definition>
+            <control type="group">
+                <visible>Player.HasVideo</visible>
+                <include name="VideoOverlay" />
+            </control>
+
+            <control type="group">
+                <visible>Player.HasAudio</visible>
+                <include name="MusicOverlay" />
+            </control>
+        </definition>
+    </include>
+
+    <include name="VideoOverlay">
+        <definition>
+            <control type="group">
+                <description>Video Overlay With Artwork Group</description>
+                <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
+
+                <control type="group">
+                    <visible>Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>!Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+
+                <include name="PlayerMediaIconForOverlay" />
+            </control>
+        
+            <control type="group">
+                <description>Video Overlay Without Artwork Group</description>
+                <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
+
+                <control type="group">
+                    <visible>Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>!Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineVideoPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="MusicOverlay">
+        <definition>
+            <control type="group">
+                <description>Music Overlay With Artwork Group</description>
+                <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
+
+                <control type="group">
+                    <visible>Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>!Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <control type="group">
+                        <posx>1320</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerInformationForOverlay">
+                            <param name="width" value="1300" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1330</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+
+                <include name="PlayerMediaIconForOverlay" />
+            </control>
+
+            <control type="group">
+                <description>Music Overlay Without Artwork Group</description>
+                <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
+
+                <control type="group">
+                    <visible>Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <include name="BackgroundForOverlay" />
+
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="NormalMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>!Skin.HasSetting(Overlay.BackgroundVisible)</visible>
+                
+                    <control type="group">
+                        <posx>1520</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerInformationForOverlay">
+                            <param name="width" value="1500" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <posx>1530</posx>
+                        <posy>PosYForPlayerInformationForOverlay</posy>
+                        <include name="OutlineMusicPlayerTimeForOverlay">
+                            <param name="width" value="400" />
+                        </include>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+    
     <include name="BackgroundForOverlay">
         <definition>
             <control type="image">
