@@ -111,6 +111,8 @@
             <include name="HorizontalViewListOfContentMediaFlag">
                 <param name="posx" value="40" />
                 <param name="posy" value="615" />
+                <param name="mediaflagcolor" value="BackgroundColor" />
+                <param name="outlinecolor" value="MainColor" />
             </include>
             
             <control type="textbox">
@@ -232,6 +234,8 @@
             <include name="HorizontalViewListOfContentMediaFlag">
                 <param name="posx" value="1100" />
                 <param name="posy" value="40" />
+                <param name="mediaflagcolor" value="BackgroundColor" />
+                <param name="outlinecolor" value="MainColor" />
             </include>
 
             <control type="textbox">
@@ -476,6 +480,8 @@
                 <include name="HorizontalViewListOfContentMediaFlag">
                     <param name="posx" value="500" />
                     <param name="posy" value="1020" />
+                    <param name="mediaflagcolor" value="$VAR[ContentBackgroundColor]" />
+                    <param name="outlinecolor" value="MainColor" />
                     <param name="align" value="center" />
                 </include>
             </control>

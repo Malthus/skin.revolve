@@ -194,82 +194,6 @@
 		<value condition="Window.IsVisible(weather) + System.HasAddon(resource.images.weatherfanart.multi)">resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
         <value></value>
 	</variable>
-    
-	<variable name="ContentRating">
-		<value>$INFO[ListItem.Rating]</value>
-	</variable>
-
-	<variable name="ContentVideoCodec">
-		<value>$INFO[ListItem.VideoCodec,icons/video-,.png]</value>
-	</variable>
-
-	<variable name="ContentVideoAspectRatio">
-		<value>$INFO[ListItem.VideoAspect,icons/aspectratio-,.png]</value>
-	</variable>
-
-	<variable name="ContentVideoResolution">
-		<value>$INFO[ListItem.VideoResolution,icons/resolution-,.png]</value>
-	</variable>
-
-	<variable name="ContentAudioCodec">
-		<value condition="!IsEmpty(ListItem.AudioCodec)">$INFO[ListItem.AudioCodec,icons/audio-,.png]</value>
-		<value condition="SubString(ListItem.FileExtension,ape)">icons/audio-ape.png</value>
-		<value condition="SubString(ListItem.FileExtension,flac)">icons/audio-flac.png</value>
-		<value condition="SubString(ListItem.FileExtension,mp3)">icons/audio-mp3.png</value>
-		<value condition="SubString(ListItem.FileExtension,ogg)">icons/audio-ogg.png</value>
-		<value condition="SubString(ListItem.FileExtension,wav)">icons/audio-wav.png</value>
-		<value condition="SubString(ListItem.FileExtension,wma)">icons/audio-wma.png</value>
-	</variable>
-
-	<variable name="ContentAudioChannels">
-		<value condition="StringCompare(ListItem.AudioChannels,1)">1.0</value>
-		<value condition="StringCompare(ListItem.AudioChannels,2)">2.0</value>
-		<value condition="StringCompare(ListItem.AudioChannels,3)">2.1</value>
-		<value condition="StringCompare(ListItem.AudioChannels,4)">4.0</value>
-		<value condition="StringCompare(ListItem.AudioChannels,5)">4.1</value>
-		<value condition="StringCompare(ListItem.AudioChannels,6)">5.1</value>
-		<value condition="StringCompare(ListItem.AudioChannels,7)">6.1</value>
-		<value condition="StringCompare(ListItem.AudioChannels,8)">7.1</value>
-		<value condition="StringCompare(ListItem.AudioChannels,10)">9.1</value>
-		<value condition="!IsEmpty(ListItem.AudioChannels)">$INFO[VideoPlayer.AudioChannels]</value>
-        <value>?</value>
-	</variable>
-
-	<variable name="ContentPictureCodec">
-		<value condition="SubString(ListItem.FileExtension,jpg) | SubString(ListItem.FileExtension,jpeg)">JPEG</value>
-		<value condition="SubString(ListItem.FileExtension,png)">PNG</value>
-		<value condition="SubString(ListItem.FileExtension,gif)">GIF</value>
-	</variable>
-
-	<variable name="ContentPictureResolution">
-		<value>$INFO[ListItem.PictureResolution]</value>
-	</variable>
-
-	<variable name="ContentPictureISO">
-		<value>$INFO[ListItem.PictureISO]</value>
-	</variable>
-	
-	<variable name="ContentPictureAperture">
-		<value>$INFO[ListItem.PictureAperture,$LOCALIZE[31916],]</value>
-	</variable>
-	
-	<variable name="ContentMedium">
-		<value condition="SubString(ListItem.FileName,bluray) | SubString(ListItem.FileName,blu-ray) | SubString(ListItem.FileName,brrip) | SubString(ListItem.FileName,bd25) | SubString(ListItem.FileName,bd50)">icons/medium-bluray.png</value>
-		<value condition="SubString(ListItem.FileName,hddvd)">icons/medium-hddvd.png</value>
-		<value condition="SubString(ListItem.FileName,dvd)">icons/medium-dvd.png</value>
-		<value condition="SubString(ListItem.FileName,hdtv) | SubString(ListItem.FileName,pdtv) | SubString(ListItem.FileName,dsr)">icons/medium-tv.png</value>
-		<value condition="SubString(ListItem.FileName,vhs)">icons/medium-vhs.png</value>
-	</variable>
-	
-	<variable name="ContentMpaaRating">
-		<value condition="SubString(ListItem.Mpaa,rated r)">icons/mpaarating-restricted.png</value>
-		<value condition="SubString(ListItem.Mpaa,rated nc)">icons/mpaarating-nc13.png</value>
-		<value condition="SubString(ListItem.Mpaa,rated pg-13)">icons/mpaarating-pg13.png</value>
-		<value condition="SubString(ListItem.Mpaa,rated pg)">icons/mpaarating-pg.png</value>
-		<value condition="SubString(ListItem.Mpaa,rated g)">icons/mpaarating-general.png</value>
-		<value condition="SubString(ListItem.Mpaa,not rated) | SubString(ListItem.Mpaa,rated nr)">icons/mpaarating-notrated.png</value>
-		<value>icons/mpaarating-unknown.png</value>
-	</variable>
 
 	<variable name="ContentStarRating">
 		<value condition="StringCompare(ListItem.StarRating,rating5.png)">icons/rating-5.png</value>
@@ -1103,96 +1027,10 @@
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ]</value>
 	</variable>
     
-    <variable name="PlayerVideoCodecLabel">
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.VideoCodec] $LOCALIZE[21445]$INFO[VideoPlayer.VideoResolution, | $LOCALIZE[169]: ,]$INFO[VideoPlayer.VideoAspect, | $LOCALIZE[21374]: ,]$INFO[Player.CacheLevel, | ,% $LOCALIZE[439]]</value>
-	</variable>
-    
-    <variable name="PlayerAudioCodecLabel">
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.AudioCodec] $LOCALIZE[21446]$INFO[VideoPlayer.AudioChannels, | , $LOCALIZE[19019]]</value>
-        <value condition="Player.HasAudio">$INFO[MusicPlayer.Codec] $LOCALIZE[21446]$INFO[MusicPlayer.BitRate, | , $LOCALIZE[31911]]$INFO[MusicPlayer.Channels, | , $LOCALIZE[19019]]</value>
-    </variable>
-
     <variable name="PlayerVisualisationLabel">
         <value condition="Visualisation.Locked">$INFO[Visualisation.Name] | $INFO[Visualisation.Preset] | $LOCALIZE[20166]</value>
         <value>$INFO[Visualisation.Name] | $INFO[Visualisation.Preset]</value>
     </variable>
-
-	<variable name="PlayerVideoCodec">
-		<value>$INFO[VideoPlayer.VideoCodec,icons/video-,.png]</value>
-	</variable>
-
-	<variable name="PlayerVideoAspectRatio">
-		<value>$INFO[VideoPlayer.VideoAspect,icons/aspectratio-,.png]</value>
-	</variable>
-
-	<variable name="PlayerVideoResolution">
-		<value>$INFO[VideoPlayer.VideoResolution,icons/resolution-,.png]</value>
-	</variable>
-
-	<variable name="PlayerAudioCodec">
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.AudioCodec,icons/audio-,.png]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Codec,icons/audio-,.png]</value>
-	</variable>
-	
-	<variable name="PlayerAudioChannels">
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,1)">1.0</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,1)">,1.0</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,2)">2.0</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,2)">2.0</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,3)">2.1</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,3)">2.1</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,4)">4.0</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,4)">4.0</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,5)">4.1</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,5)">4.1</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,6)">5.1</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,6)">5.1</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,7)">6.1</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,7)">6.1</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,8)">7.1</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,8)">7.1</value>
-		<value condition="Player.HasVideo + StringCompare(VideoPlayer.AudioChannels,10)">9.1</value>
-		<value condition="Player.HasAudio + StringCompare(MusicPlayer.Channels,10)">9.1</value>
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.AudioChannels]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Channels]</value>
-        <value>?</value>
-	</variable>
-	
-	<variable name="PlayerPictureCodec">
-		<value condition="SubString(Slideshow.Filename,.jpg,right) | SubString(Slideshow.Filename,.jpeg,right)">JPEG</value>
-		<value condition="SubString(Slideshow.Filename,.png,right)">PNG</value>
-		<value condition="SubString(Slideshow.Filename,.gif,right)">GIF</value>
-	</variable>
-
-	<variable name="PlayerPictureResolution">
-		<value>$INFO[Slideshow.Resolution]</value>
-	</variable>
-
-	<variable name="PlayerPictureAperture">
-		<value>f/$INFO[Slideshow.Aperture]</value>
-	</variable>
-
-	<variable name="PlayerMedium">
-		<value condition="SubString(Player.FileName,bluray) | SubString(Player.FileName,blu-ray) | SubString(ListItem.FileName,brrip) | SubString(ListItem.FileName,bd25) | SubString(ListItem.FileName,bd50)">icons/medium-bluray.png</value>
-		<value condition="SubString(Player.FileName,hddvd)">icons/medium-hddvd.png</value>
-		<value condition="SubString(Player.FileName,dvd)">icons/medium-dvd.png</value>
-		<value condition="SubString(Player.FileName,hdtv) | SubString(ListItem.FileName,pdtv) | SubString(ListItem.FileName,dsr)">icons/medium-tv.png</value>
-		<value condition="SubString(Player.FileName,vhs)">icons/medium-vhs.png</value>
-	</variable>
-
-	<variable name="PlayerBitRate">
-		<value>$INFO[MusicPlayer.BitRate]</value>
-	</variable>
-	
-	<variable name="PlayerMpaaRating">
-		<value condition="SubString(VideoPlayer.Mpaa,rated r)">icons/mpaarating-restricted.png</value>
-		<value condition="SubString(VideoPlayer.Mpaa,rated nc)">icons/mpaarating-nc13.png</value>
-		<value condition="SubString(VideoPlayer.Mpaa,rated pg-13)">icons/mpaarating-pg13.png</value>
-		<value condition="SubString(VideoPlayer.Mpaa,rated pg)">icons/mpaarating-pg.png</value>
-		<value condition="SubString(VideoPlayer.Mpaa,rated g)">icons/mpaarating-general.png</value>
-		<value condition="SubString(VideoPlayer.Mpaa,not rated)">icons/mpaarating-notrated.png</value>
-		<value>$INFO[VideoPlayer.Mpaa,icons/mpaarating-,.png]</value>
-	</variable>
 
 	<variable name="PlayerStarRating">
 		<value condition="StringCompare(Player.StarRating,rating5.png)">icons/rating-5.png</value>
