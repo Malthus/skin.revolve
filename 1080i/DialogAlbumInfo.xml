@@ -80,7 +80,7 @@
                         </item>
                     </content>
                 </control>
-                
+
                 <control type="scrollbar" id="30">
                     <include name="MarkupForScrollbarForDialog">
                         <param name="posy" value="80" />
@@ -166,9 +166,16 @@
                 </control>
 			</control>
 
+			<control type="group">
+                <description>Video Details Icons</description>
+				<posx>560</posx>
+				<posy>290</posy>
+				<include>HorizontalDialogListOfContentMediaFlag</include>
+			</control>
+            
             <include name="TextboxForDialog">
-                <param name="posy" value="320" />
-                <param name="height" value="360" />
+                <param name="posy" value="360" />
+                <param name="height" value="320" />
                 <param name="textboxid" value="4" />
                 <param name="scrollbarid" value="24" />
                 <param name="onleft" value="9000" />
