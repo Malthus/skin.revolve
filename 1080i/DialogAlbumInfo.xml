@@ -5,6 +5,7 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
+            <include name="AnimationForWindowForDialog" />
             
             <control type="group">
 				<visible>Container.Content(Artists)</visible>

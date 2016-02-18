@@ -5,6 +5,7 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
+            <include name="AnimationForWindowForDialog" />
 			<include name="WindowForDialog">
                 <param name="height" value="HeightForThirteenLinesDialog" />
                 <param name="headerlabel" value ="$LOCALIZE[29900]" />

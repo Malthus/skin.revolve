@@ -1128,6 +1128,13 @@
     <constant name="PosYForKeyboardDialog">270</constant>
     <constant name="HeightForKeyboardDialog">540</constant>
     
+	<include name="AnimationForWindowForDialog">
+        <definition>
+            <animation effect="fade" delay="0" start="0" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+        </definition>
+    </include>
+
 	<include name="WindowForDialog">
         <param name="visible" default="true" />
         <param name="height" default="220" />
