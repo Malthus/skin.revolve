@@ -5,11 +5,11 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForThirteenLinesDialog</posy>
-            <include name="AnimationForWindowForDialog" />
 			<include name="WindowForDialog">
                 <param name="height" value="HeightForThirteenLinesDialog" />
                 <param name="headerlabel" value ="$LOCALIZE[29900]" />
                 <param name="icontexture" value ="icons/icon-television.png" />
+                <param name="animate" value="true" />
             </include>
 
 			<control type="list" id="49">

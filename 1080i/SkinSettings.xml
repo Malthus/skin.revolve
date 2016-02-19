@@ -492,6 +492,16 @@
 						<onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
 					</control>
                     
+					<control type="radiobutton" id="817">
+                        <description>Show Separate Dialog Key Area Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31238]</label>
+						<selected>Skin.HasSetting(Settings.ButtonAreaSeparate)</selected>
+						<onclick>Skin.ToggleSetting(Settings.ButtonAreaSeparate)</onclick>
+					</control>
+                    
 					<control type="label" id="821">
 						<description>Spacer</description>
 						<width>1100</width>
@@ -846,6 +856,11 @@
                         <visible>Control.HasFocus(816)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31601]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(817)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31239]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(901)</visible>

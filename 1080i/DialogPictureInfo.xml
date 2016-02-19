@@ -5,11 +5,11 @@
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
-            <include name="AnimationForWindowForDialog" />
             <include name="WindowForDialog">
                 <param name="height" value="HeightForFifteenLinesDialog" />
                 <param name="headerlabel" value="$LOCALIZE[13406]" />
                 <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+                <param name="animate" value="true" />
             </include>
 
 			<control type="list" id="5">
