@@ -168,8 +168,8 @@
         <definition>
             <itemlayout height="40">
                 <include name="ItemForButtonListInSkinSettings">
-                    <param name="textcolor" value="MainColor" />
-                    <param name="backgroundcolor" value="BackgroundColor" />
+                    <param name="textcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
             </itemlayout>
                 
@@ -177,15 +177,15 @@
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
                     <include name="ItemForButtonListInSkinSettings">
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="backgroundcolor" value="MainColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="backgroundcolor" value="$VAR[MainColor]" />
                     </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
                     <include name="ItemForButtonListInSkinSettings">
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="backgroundcolor" value="SelectColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="backgroundcolor" value="$VAR[SelectColor]" />
                     </include>
                 </control>
             </focusedlayout>
@@ -193,8 +193,8 @@
 	</include>
 
 	<include name="ItemForButtonListInSkinSettings">
-        <param name="textcolor" default="MainColor" />
-        <param name="backgroundcolor" default="BackgroundColor" />
+        <param name="textcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="backgroundcoverage" default="false" />
     
         <definition>
@@ -226,9 +226,9 @@
         <param name="width" default="1100" />
         <param name="textwidth" default="1060" />
         <param name="radioposx" default="1040" />
-        <param name="textcolor" default="MainColor" />
-        <param name="radiobuttoncolor" default="SecondaryColor" />
-        <param name="backgroundcolor" default="BackgroundColor" />
+        <param name="textcolor" default="$VAR[MainColor]" />
+        <param name="radiobuttoncolor" default="$VAR[SecondaryColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="backgroundcoverage" default="false" />
 
         <definition>
@@ -238,7 +238,7 @@
                 <posy>0</posy>
                 <width>$PARAM[width]</width>
                 <height>40</height>
-                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image">
                 <posx>0</posx>
