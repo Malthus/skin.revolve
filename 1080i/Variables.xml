@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="MainColor">
+		<value>MainColor</value>
+	</variable>
+
+	<variable name="SelectColor">
+		<value>SelectColor</value>
+	</variable>
+
+	<variable name="SecondaryColor">
+		<value>SecondaryColor</value>
+	</variable>
+	
+	<variable name="BackgroundColor">
+		<value>BackgroundColor</value>
+	</variable>
+	
+	<variable name="HighlightColor">
+		<value>HighlightColor</value>
+	</variable>
+	
+	<variable name="TextColor">
+		<value>TextColor</value>
+	</variable>
+	
 	<variable name="ContentNameLabel">
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
@@ -207,7 +231,6 @@
 
 	<variable name="ContentDescription">
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,$LOCALIZE[20334]: ,[CR]]$INFO[ListItem.PictureDatetime,$LOCALIZE[552]: ,[CR]]$INFO[ListItem.Size,$LOCALIZE[21802]: ,[CR]]$INFO[ListItem.PictureResolution,$LOCALIZE[169]: ,[CR][CR]]$INFO[ListItem.PictureISO,$LOCALIZE[21837]: ,[CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: $LOCALIZE[31916],[CR]]$INFO[ListItem.PictureExpMode,$LOCALIZE[21832]: ,[CR]]$INFO[ListItem.PictureExposure,$LOCALIZE[21829]: ,[CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: ,[CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: ,[CR]]$INFO[ListItem.PictureFocusDist,$LOCALIZE[21828]: ,[CR]]$INFO[ListItem.PictureMeteringMode,$LOCALIZE[21836]: ,[CR]]$INFO[ListItem.PictureCamMake,[CR]$LOCALIZE[21822]: ,[CR]]$INFO[ListItem.PictureCamModel,$LOCALIZE[21823]: ,[CR]]$INFO[ListItem.PictureCCDWidth,$LOCALIZE[21839]: ,]</value>
-
 		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="!IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="!IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
@@ -230,100 +253,27 @@
 	<variable name="ContentOnOriginLabel">
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
-	
-	<variable name="ContentWrapMinusFiveLabel">
-		<value>$INFO[ListItem(-5).Label]</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusFiveColor">
-		<value condition="ListItem(-5).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusFourLabel">
-		<value>$INFO[ListItem(-4).Label]</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusFourColor">
-		<value condition="ListItem(-4).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusThreeLabel">
-		<value>$INFO[ListItem(-3).Label]</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusThreeColor">
-		<value condition="ListItem(-3).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
+
 	<variable name="ContentWrapMinusThreeThumbnail">
 		<value condition="!IsEmpty(ListItem(-3).Art(thumb))">$INFO[ListItem(-3).Art(thumb)]</value>
 		<value>$INFO[ListItem(-3).Icon]</value>
 	</variable>
 
-	<variable name="ContentWrapMinusTwoLabel">
-		<value>$INFO[ListItem(-2).Label]</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusTwoColor">
-		<value condition="ListItem(-2).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
 	<variable name="ContentWrapMinusTwoThumbnail">
 		<value condition="!IsEmpty(ListItem(-2).Art(thumb))">$INFO[ListItem(-2).Art(thumb)]</value>
 		<value>$INFO[ListItem(-2).Icon]</value>
 	</variable>
 
-	<variable name="ContentWrapMinusOneLabel">
-		<value>$INFO[ListItem(-1).Label]</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusOneColor">
-		<value condition="ListItem(-1).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="ContentWrapMinusOneMainColor">
-		<value condition="ListItem(-1).IsPlaying">HighlightColor</value>
-		<value>MainColor</value>
-	</variable>
-	
 	<variable name="ContentWrapMinusOneThumbnail">
 		<value condition="!IsEmpty(ListItem(-1).Art(thumb))">$INFO[ListItem(-1).Art(thumb)]</value>
 		<value>$INFO[ListItem(-1).Icon]</value>
 	</variable>
 
-	<variable name="ContentWrapPlusOneLabel">
-		<value>$INFO[ListItem(1).Label]</value>
-	</variable>
-	
-	<variable name="ContentWrapPlusOneColor">
-		<value condition="ListItem(1).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="ContentWrapPlusOneMainColor">
-		<value condition="ListItem(1).IsPlaying">HighlightColor</value>
-		<value>MainColor</value>
-	</variable>
-	
 	<variable name="ContentWrapPlusOneThumbnail">
 		<value condition="!IsEmpty(ListItem(1).Art(thumb))">$INFO[ListItem(1).Art(thumb)]</value>
 		<value>$INFO[ListItem(1).Icon]</value>
 	</variable>
 
-	<variable name="ContentWrapPlusTwoLabel">
-		<value>$INFO[ListItem(2).Label]</value>
-	</variable>
-
-	<variable name="ContentWrapPlusTwoColor">
-		<value condition="ListItem(2).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
 	<variable name="ContentWrapPlusTwoThumbnail">
 		<value condition="!IsEmpty(ListItem(2).Art(thumb))">$INFO[ListItem(2).Art(thumb)]</value>
 		<value>$INFO[ListItem(2).Icon]</value>
