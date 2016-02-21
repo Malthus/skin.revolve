@@ -5,7 +5,7 @@
             <control type="image">
                 <width>88</width>
                 <height>88</height>
-                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -28,10 +28,10 @@
                 <width>80</width>
                 <height>80</height>
                 <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-                <texturefocus colordiffuse="HighlightColor">controls/pause.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/pause.png</texturenofocus>
-                <alttexturefocus colordiffuse="HighlightColor">controls/play.png</alttexturefocus>
-                <alttexturenofocus colordiffuse="BackgroundColor">controls/play.png</alttexturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/pause.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/pause.png</texturenofocus>
+                <alttexturefocus colordiffuse="$VAR[HighlightColor]">controls/play.png</alttexturefocus>
+                <alttexturenofocus colordiffuse="$VAR[BackgroundColor]">controls/play.png</alttexturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31922]</label>
                 <altlabel>$LOCALIZE[208]</altlabel>
@@ -48,7 +48,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -70,8 +70,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/rewind.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/rewind.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/rewind.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/rewind.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31921]</label>
                 <onup>$PARAM[onup]</onup>
@@ -87,7 +87,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -109,8 +109,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/fastforward.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/fastforward.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/fastforward.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/fastforward.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31923]</label>
                 <onup>$PARAM[onup]</onup>
@@ -126,7 +126,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -147,8 +147,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/previous.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/previous.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/previous.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/previous.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[210]</label>
                 <onup>$PARAM[onup]</onup>
@@ -175,8 +175,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/next.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/next.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/next.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/next.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[209]</label>
                 <onup>$PARAM[onup]</onup>
@@ -220,42 +220,42 @@
                     <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus($PARAM[id])</visible>
                     <width>80</width>
                     <height>80</height>
-                    <texture colordiffuse="BackgroundColor">controls/repeat.png</texture>
+                    <texture colordiffuse="$VAR[BackgroundColor]">controls/repeat.png</texture>
                 </control>
 
                 <control type="image">
                     <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus($PARAM[id])</visible>
                     <width>80</width>
                     <height>80</height>
-                    <texture colordiffuse="HighlightColor">controls/repeat.png</texture>
+                    <texture colordiffuse="$VAR[HighlightColor]">controls/repeat.png</texture>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeatOne + !Control.HasFocus($PARAM[id])</visible>
                     <width>80</width>
                     <height>80</height>
-                    <texture colordiffuse="BackgroundColor">controls/repeatone.png</texture>
+                    <texture colordiffuse="$VAR[BackgroundColor]">controls/repeatone.png</texture>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeatOne + Control.HasFocus($PARAM[id])</visible>
                     <width>80</width>
                     <height>80</height>
-                    <texture colordiffuse="HighlightColor">controls/repeatone.png</texture>
+                    <texture colordiffuse="$VAR[HighlightColor]">controls/repeatone.png</texture>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeat + !Control.HasFocus($PARAM[id])</visible>
                     <width>80</width>
                     <height>80</height>
-                    <texture colordiffuse="BackgroundColor">controls/repeatall.png</texture>
+                    <texture colordiffuse="$VAR[BackgroundColor]">controls/repeatall.png</texture>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeat + Control.HasFocus($PARAM[id])</visible>
                     <width>80</width>
                     <height>80</height>
-                    <texture colordiffuse="HighlightColor">controls/repeatall.png</texture>
+                    <texture colordiffuse="$VAR[HighlightColor]">controls/repeatall.png</texture>
                 </control>
             </control>
         </definition>
@@ -277,10 +277,10 @@
                 <width>80</width>
                 <height>80</height>
                 <usealttexture>Playlist.IsRandom</usealttexture>
-                <texturefocus colordiffuse="HighlightColor">controls/randomoff.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/randomoff.png</texturenofocus>
-                <alttexturefocus colordiffuse="HighlightColor">controls/randomon.png</alttexturefocus>
-                <alttexturenofocus colordiffuse="BackgroundColor">controls/randomon.png</alttexturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/randomoff.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/randomoff.png</texturenofocus>
+                <alttexturefocus colordiffuse="$VAR[HighlightColor]">controls/randomon.png</alttexturefocus>
+                <alttexturenofocus colordiffuse="$VAR[BackgroundColor]">controls/randomon.png</alttexturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[590]$INFO[Playlist.Random,: ]</label>
                 <onup>$PARAM[onup]</onup>
@@ -307,8 +307,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/stop.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/stop.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/stop.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/stop.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31920]</label>
                 <onup>$PARAM[onup]</onup>
@@ -335,8 +335,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/channeldown.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/channeldown.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/channeldown.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/channeldown.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31978]</label>
                 <onup>$PARAM[onup]</onup>
@@ -363,8 +363,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/channelup.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/channelup.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/channelup.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/channelup.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31979]</label>
                 <onup>$PARAM[onup]</onup>
@@ -391,8 +391,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/close.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/close.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/close.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/close.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31915]</label>
                 <onup>$PARAM[onup]</onup>
@@ -419,8 +419,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/more.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/more.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/more.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/more.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31970]</label>
                 <onup>$PARAM[onup]</onup>
@@ -457,8 +457,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/record.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/record.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/record.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/record.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[36428]</label>
                 <onup>$PARAM[onup]</onup>
@@ -474,7 +474,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -495,8 +495,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/hate.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/hate.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/hate.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/hate.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[33080]</label>
                 <onup>$PARAM[onup]</onup>
@@ -523,8 +523,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/love.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/love.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/love.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/love.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[33079]</label>
                 <onup>$PARAM[onup]</onup>
@@ -551,8 +551,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/playlist.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/playlist.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/playlist.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/playlist.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[559]</label>
                 <onup>$PARAM[onup]</onup>
@@ -581,8 +581,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/lyrics.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/lyrics.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/lyrics.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/lyrics.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[24013]</label>
                 <onup>$PARAM[onup]</onup>
@@ -599,7 +599,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -621,8 +621,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/rds.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/rds.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/rds.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/rds.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[29900]</label>
                 <onup>$PARAM[onup]</onup>
@@ -638,7 +638,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -659,8 +659,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/audio.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/audio.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/audio.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/audio.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[13396]</label>
                 <onup>$PARAM[onup]</onup>
@@ -687,8 +687,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/video.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/video.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/video.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/video.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[13395]</label>
                 <onup>$PARAM[onup]</onup>
@@ -715,8 +715,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/subtitles.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/subtitles.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/subtitles.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/subtitles.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[287]</label>
                 <onup>$PARAM[onup]</onup>
@@ -744,8 +744,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/bookmarks.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/bookmarks.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/bookmarks.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/bookmarks.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[298]</label>
                 <onup>$PARAM[onup]</onup>
@@ -773,8 +773,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/disc.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/disc.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/disc.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/disc.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31924]</label>
                 <onup>$PARAM[onup]</onup>
@@ -790,7 +790,7 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texture colordiffuse="SelectColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
@@ -811,8 +811,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/visualisation.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/visualisation.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/visualisation.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/visualisation.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[12006]</label>
                 <onup>$PARAM[onup]</onup>
@@ -838,8 +838,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/presets.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/presets.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/presets.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/presets.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31925]</label>
                 <onup>$PARAM[onup]</onup>
@@ -866,8 +866,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="HighlightColor">controls/addon.png</texturefocus>
-                <texturenofocus colordiffuse="BackgroundColor">controls/addon.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/addon.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/addon.png</texturenofocus>
                 <font>-</font>
                 <label>$LOCALIZE[31926]</label>
                 <onup>$PARAM[onup]</onup>
@@ -903,7 +903,7 @@
                 <control type="image">
                     <width>270</width>
                     <height>270</height>
-                    <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                    <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
 
@@ -1104,7 +1104,7 @@
                     <width>$PARAM[width]</width>
                     <height>100</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+                    <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
                 </control>
 
                 <control type="group">
@@ -1229,8 +1229,8 @@
                 <param name="width" value="520" />
                 <param name="height" value="20" />
                 <param name="font" value="MessageTextFont" />
-                <param name="textcolor" value="BackgroundColor" />
-                <param name="outlinecolor" value="MainColor" />
+                <param name="textcolor" value="$VAR[BackgroundColor]" />
+                <param name="outlinecolor" value="$VAR[MainColor]" />
                 <param name="outlinesize" value="2" />
                 <param name="align" value="center" />
                 <param name="label" value="$INFO[System.CurrentControl]" />
