@@ -64,7 +64,7 @@
 				<width>1100</width>
 				<height>230</height>
 				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+				<texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
 			</control>
 			
 			<control type="image">
@@ -74,7 +74,7 @@
 				<width>1100</width>
 				<height>450</height>
 				<aspectratio>stretch</aspectratio>
-				<texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+				<texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
 			</control>
 
 			<control type="grouplist">
