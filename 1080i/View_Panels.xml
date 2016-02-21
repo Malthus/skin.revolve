@@ -78,7 +78,7 @@
                         </animation>
 
                         <include name="BackgroundForNameInThumbnailOrPanelForView">
-                            <param name="outlinecolor" value="MainColor" />
+                            <param name="outlinecolor" value="$VAR[MainColor]" />
                         </include>
                     </control>
                     
@@ -126,7 +126,7 @@
                         </animation>
 
                         <include name="BackgroundForNameInThumbnailOrPanelForView">
-                            <param name="outlinecolor" value="MainColor" />
+                            <param name="outlinecolor" value="$VAR[MainColor]" />
                             <param name="posy" value="345" />
                         </include>
                     </control>
@@ -174,9 +174,9 @@
 			<width>WidthForHorizontalScrollbarForView</width>
 			<height>HeightForHorizontalScrollbarForView</height>
 			<orientation>horizontal</orientation>
-			<texturesliderbackground border="14,0,14,0" colordiffuse="BackgroundColor">controls/verticalbar-thick.png</texturesliderbackground>
-			<texturesliderbar border="14,0,14,0" colordiffuse="SelectColor">controls/verticalbar-thin.png</texturesliderbar>
-			<texturesliderbarfocus border="14,0,14,0" colordiffuse="MainColor">controls/verticalbar-thin.png</texturesliderbarfocus>
+			<texturesliderbackground border="14,0,14,0" colordiffuse="$VAR[BackgroundColor]">controls/verticalbar-thick.png</texturesliderbackground>
+			<texturesliderbar border="14,0,14,0" colordiffuse="$VAR[SelectColor]">controls/verticalbar-thin.png</texturesliderbar>
+			<texturesliderbarfocus border="14,0,14,0" colordiffuse="$VAR[MainColor]">controls/verticalbar-thin.png</texturesliderbarfocus>
 			<onup>56</onup>
 			<ondown>56</ondown>
 			<onleft>66</onleft>

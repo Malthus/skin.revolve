@@ -318,7 +318,7 @@
                         <param name="posy" value="484" />
                         <param name="width" value="1040" />
                         <param name="mediaflagcolor" value="$VAR[ContentTextColor]" />
-                        <param name="outlinecolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                     </include>
 
                     <include name="NameForMainElementForCircleListView">
@@ -336,7 +336,7 @@
                         <param name="posy" value="484" />
                         <param name="width" value="1040" />
                         <param name="mediaflagcolor" value="$VAR[ContentMainColor]" />
-                        <param name="outlinecolor" value="BackgroundColor" />
+                        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                     </include>
 
                     <include name="NameForMainElementForCircleListView">
@@ -392,7 +392,7 @@
 	</include>
 
 	<include name="InformationForMainElementForCircleListView">
-        <param name="textcolor" default="MainColor" />
+        <param name="textcolor" default="$VAR[MainColor]" />
         
         <definition>
             <include name="OutlineLabel">

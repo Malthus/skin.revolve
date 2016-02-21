@@ -427,7 +427,7 @@
                     <param name="height" value="40" />
                     <param name="font" value="BigViewFont" />
                     <param name="textcolor" value="$VAR[ContentTextColor]" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                     <param name="outlinesize" value="2" />
                     <param name="align" value="right" />
                     <param name="scroll" value="true" />
@@ -440,7 +440,7 @@
                     <param name="height" value="30" />
                     <param name="font" value="DetailViewFont" />
                     <param name="textcolor" value="$VAR[ContentTextColor]" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                     <param name="outlinesize" value="2" />
                     <param name="align" value="right" />
                     <param name="scroll" value="true" />
@@ -457,7 +457,7 @@
                     <param name="height" value="40" />
                     <param name="font" value="BigViewFont" />
                     <param name="textcolor" value="$VAR[ContentMainColor]" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                     <param name="outlinesize" value="2" />
                     <param name="align" value="right" />
                     <param name="scroll" value="true" />
@@ -470,7 +470,7 @@
                     <param name="height" value="30" />
                     <param name="font" value="DetailViewFont" />
                     <param name="textcolor" value="$VAR[ContentMainColor]" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                     <param name="outlinesize" value="2" />
                     <param name="align" value="right" />
                     <param name="scroll" value="true" />
@@ -481,7 +481,7 @@
 	</include>
 
 	<include name="MainElementForRotateListView">
-        <param name="textcolor" default="MainColor" />
+        <param name="textcolor" default="$VAR[MainColor]" />
         <param name="label" default="-" />
     
         <definition>
@@ -492,7 +492,7 @@
                 <param name="height" value="40" />
                 <param name="font" value="BigViewFont" />
                 <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 <param name="outlinesize" value="2" />
                 <param name="align" value="right" />
                 <param name="scroll" value="true" />
@@ -502,7 +502,7 @@
 	</include>
 
 	<include name="OtherElementForRotateListView">
-        <param name="textcolor" default="TextColor" />
+        <param name="textcolor" default="$VAR[TextColor]" />
         <param name="label" default="-" />
     
         <definition>
@@ -513,7 +513,7 @@
                 <param name="height" value="40" />
                 <param name="font" value="BigViewFont" />
                 <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="outlinecolor" value="BackgroundColor" />
+                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 <param name="outlinesize" value="2" />
                 <param name="align" value="right" />
                 <param name="scroll" value="false" />
