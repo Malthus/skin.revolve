@@ -11,8 +11,7 @@
                 <width>180</width>
                 <height>40</height>
                 <aspectratio>keep</aspectratio>
-                <texture>$VAR[ContentStarRating]</texture>
-                <colordiffuse>MainColor</colordiffuse>
+                <texture colordiffuse="$VAR[MainColor]">$VAR[ContentStarRating]</texture>
             </control>
         </definition>
 	</include>
@@ -22,7 +21,7 @@
             <control type="image">
                 <width>90</width>
                 <height>90</height>
-                <texture colordiffuse="FadeDiffuseColor" background="true">$VAR[ContentOverlay]</texture>
+                <texture colordiffuse="$VAR[FademaskColor]" background="true">$VAR[ContentOverlay]</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -33,7 +32,7 @@
             <control type="image">
                 <width>200</width>
                 <height>200</height>
-                <texture colordiffuse="FadeDiffuseColor" background="true">$VAR[ContentOverlay]</texture>
+                <texture colordiffuse="$VAR[FademaskColor]" background="true">$VAR[ContentOverlay]</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -44,7 +43,7 @@
             <control type="image">
                 <width>200</width>
                 <height>200</height>
-                <texture colordiffuse="SelectColor" background="true">$VAR[ContentUnderlay]</texture>
+                <texture colordiffuse="$VAR[SelectColor]" background="true">$VAR[ContentUnderlay]</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -53,7 +52,7 @@
     <include name="WatchedPropertyMediaFlag">
         <param name="visible" default="StringCompare(ListItem.Overlay,OverlayWatched.png)" />
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
         <definition>
             <control type="group">
@@ -82,7 +81,7 @@
     
     <include name="UserRatingMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.UserRating" />
         
         <definition>
@@ -120,7 +119,7 @@
     
     <include name="VideoCodecMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.VideoCodec" />
         
         <definition>
@@ -150,7 +149,7 @@
 
     <include name="VideoResolutionMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.VideoResolution" />
         
         <definition>
@@ -180,7 +179,7 @@
 
     <include name="VideoAspectRatioMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.VideoAspect" />
         
         <definition>
@@ -211,7 +210,7 @@
     <include name="VideoStereoscopicPropertyMediaFlag">
         <param name="visible" default="ListItem.IsStereoscopic" />
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
         <definition>
             <control type="group">
@@ -240,7 +239,7 @@
     
     <include name="AudioCodecMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.AudioCodec" />
         <param name="filelabel" default="ListItem.FileExtension" />
         
@@ -334,7 +333,7 @@
     
     <include name="AudioChannelsMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.AudioChannels" />
         
         <definition>
@@ -463,7 +462,7 @@
     
     <include name="AudioBitrateMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="MusicPlayer.BitRate" />
         
         <definition>
@@ -476,13 +475,13 @@
                     <posy>2</posy>
                     <width>176</width>
                     <height>56</height>
-                    <texture colordiffuse="BackgroundColor">icons/bitrate-background.png</texture>
+                    <texture colordiffuse="$PARAM[outlinecolor]">icons/bitrate-background.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
                     <width>180</width>
                     <height>60</height>
-                    <texture colordiffuse="MainColor">icons/bitrate-logo.png</texture>
+                    <texture colordiffuse="$PARAM[mediaflagcolor]">icons/bitrate-logo.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="label">
@@ -490,7 +489,7 @@
                     <width>180</width>
                     <height>50</height>
                     <font>MediumMediaFlagFont</font>
-                    <textcolor>BackgroundColor</textcolor>
+                    <textcolor>$PARAM[mediaflagcolor]</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[$PARAM[infolabel],, $LOCALIZE[31911]]</label>
@@ -501,7 +500,7 @@
     
     <include name="PictureCodecMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="filelabel" default="ListItem.FileExtension" />
         
         <definition>
@@ -549,7 +548,7 @@
 			
     <include name="PictureSizeMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.PictureResolution" />
         
         <definition>
@@ -589,7 +588,7 @@
 			
     <include name="PictureISOMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.PictureISO" />
             
         <definition>
@@ -628,7 +627,7 @@
 			
     <include name="PictureApertureMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.PictureAperture" />
             
         <definition>
@@ -667,7 +666,7 @@
 
     <include name="MediumMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="filelabel" default="ListItem.FileName" />
             
         <definition>
@@ -726,7 +725,7 @@
     <include name="CompressedPropertyMediaFlag">
         <param name="visible" default="StringCompare(ListItem.Overlay,OverlayRAR.png) | StringCompare(ListItem.Overlay,OverlayZIP.png)" />
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
         <definition>
             <control type="group">
@@ -756,7 +755,7 @@
     <include name="EpgPropertyMediaFlag">
         <param name="visible" default="ListItem.HasEpg" />
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
         <definition>
             <control type="group">
@@ -786,7 +785,7 @@
     <include name="TextPropertyMediaFlag">
         <param name="visible" default="VideoPlayer.Content(LiveTV) + Pvr.HasTxt" />
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
         <definition>
             <control type="group">
@@ -798,13 +797,13 @@
                     <posy>2</posy>
                     <width>56</width>
                     <height>56</height>
-                    <texture colordiffuse="BackgroundColor">icons/property-background.png</texture>
+                    <texture colordiffuse="$PARAM[outlinecolor]">icons/property-background.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
                     <width>60</width>
                     <height>60</height>
-                    <texture colordiffuse="MainColor">icons/property-txt.png</texture>
+                    <texture colordiffuse="$PARAM[mediaflagcolor]">icons/property-txt.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
             </control>
@@ -814,7 +813,7 @@
     <include name="LockedPropertyMediaFlag">
         <param name="visible" default="ListItem.IsEncrypted | StringCompare(ListItem.Overlay,OverlayLocked.png)" />
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
         <definition>
             <control type="group">
@@ -844,7 +843,7 @@
     <include name="TrainerPropertyMediaFlag">
         <param name="visible" default="StringCompare(ListItem.Overlay,OverlayTrainer.png) | StringCompare(ListItem.Overlay,OverlayHasTrainer.png)" />
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
         <definition>
             <control type="group">
@@ -873,7 +872,7 @@
     
     <include name="MpaaRatingMediaFlag">
         <param name="mediaflagcolor" default="$VAR[ContentMainColor]" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="infolabel" default="ListItem.Mpaa" />
         
         <definition>
@@ -965,81 +964,81 @@
                 <orientation>horizontal</orientation>
 
                 <include name="WatchedPropertyMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="UserRatingMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
 
                 <include name="VideoCodecMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="VideoResolutionMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="VideoAspectRatioMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="VideoStereoscopicPropertyMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
 
                 <include name="AudioCodecMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="AudioChannelsMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
 
                 <include name="PictureCodecMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="PictureSizeMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="PictureISOMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="PictureApertureMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                     
                 <include name="MediumMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="CompressedPropertyMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="EpgPropertyMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="LockedPropertyMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
                 <include name="TrainerPropertyMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
 
                 <include name="MpaaRatingMediaFlag">
-                    <param name="mediaflagcolor" value="MainColor" />
-                    <param name="outlinecolor" value="BackgroundColor" />
+                    <param name="mediaflagcolor" value="$VAR[MainColor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 </include>
             </control>
         </definition>
@@ -1049,7 +1048,7 @@
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="920" />
-        <param name="mediaflagcolor" default="BackgroundColor" />
+        <param name="mediaflagcolor" default="$VAR[BackgroundColor]" />
         <param name="outlinecolor" default="$VAR[ContentMainColor]" />
         <param name="align" default="left" />
     
