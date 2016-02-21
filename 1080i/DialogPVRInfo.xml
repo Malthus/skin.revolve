@@ -107,11 +107,16 @@
 				<onup>61</onup>
 			</control>
             
+            <include name="HorizontalDialogListOfContentMediaFlag">
+                <param name="posx" value="560" />
+                <param name="posy" value="290" />
+            </include>
+
             <include name="TextboxForDialog">
                 <param name="textboxid" value="41" />
                 <param name="scrollbarid" value="61" />
-                <param name="posy" value="320" />
-                <param name="height" value="360" />
+                <param name="posy" value="360" />
+                <param name="height" value="320" />
                 <param name="label" value="$INFO[ListItem.Plot]" />
                 <param name="onup" value="60" />
                 <param name="ondown" value="60" />

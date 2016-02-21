@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2001">
 	<defaultcontrol always="true">9000</defaultcontrol>
-
+    
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
@@ -79,6 +79,12 @@
                             <label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
                             <onclick>Noop</onclick>
                         </item>
+                        <item>
+                            <visible>StringCompare($INFO[Control.GetLabel(4)],$LOCALIZE[414])</visible>
+                            <label>Status</label>
+                            <label2>We wachtren op een refresh</label2>
+                            <onclick>Noop</onclick>
+                        </item>
                     </content>
                 </control>
 
@@ -130,6 +136,12 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item>
+                            <visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+                            <label>$LOCALIZE[21899]</label>
+                            <label2>$INFO[ListItem.Property(Album_Label)]</label2>
+                            <onclick>Noop</onclick>
+                        </item>
+                        <item>
                             <visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
                             <label>$LOCALIZE[176]</label>
                             <label2>$INFO[ListItem.Property(Album_Style)]</label2>
@@ -168,12 +180,10 @@
                 </control>
 			</control>
 
-			<control type="group">
-                <description>Video Details Icons</description>
-				<posx>560</posx>
-				<posy>290</posy>
-				<include>HorizontalDialogListOfContentMediaFlag</include>
-			</control>
+            <include name="HorizontalDialogListOfContentMediaFlag">
+                <param name="posx" value="560" />
+                <param name="posy" value="290" />
+            </include>
             
             <include name="TextboxForDialog">
                 <param name="posy" value="360" />
@@ -186,8 +196,8 @@
 			<control type="list" id="50">
                 <description>Track Listing</description>
                 <include name="MarkupForListForDialog">
-                    <param name="posy" value="320" />
-                    <param name="height" value="360" />
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
                     <param name="pagecontrol" value="25" />
                 </include>
 				<onup>50</onup>
@@ -215,8 +225,8 @@
                 <description>Track Listing Scrollbar</description>
 				<visible>Control.IsVisible(50)</visible>
 				<include name="MarkupForScrollbarForDialog">
-                    <param name="posy" value="320" />
-                    <param name="height" value="360" />
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
                 </include>
 				<onup>25</onup>
 				<ondown>25</ondown>
@@ -226,8 +236,8 @@
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="400" />
-                    <param name="height" value="280" />
+                    <param name="posy" value="480" />
+                    <param name="height" value="200" />
                 </include>
 				<onright condition="Control.IsVisible(50)">50</onright>
 				<onright condition="!Control.IsVisible(50)">24</onright>
@@ -242,7 +252,6 @@
 				</control>
 				<control type="button" id="10">
                     <description>Get Thumbnail Button</description>
-                    <posy>40</posy>
 					<label>$LOCALIZE[13405]</label>
 				</control>
 				<control type="button" id="12">
@@ -251,7 +260,6 @@
 				</control>
                 <include name="CloseButtonForDialog">
                     <param name="id" value="21" />
-                    <param name="posy" value="40" />
                 </include>
 			</control>
 		</control>

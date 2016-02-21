@@ -66,12 +66,10 @@
 				<onright>Noop</onright>
 			</control>
 
-			<control type="group">
-                <description>Song Details Icons</description>
-				<posx>560</posx>
-				<posy>290</posy>
-				<include>HorizontalDialogListOfContentMediaFlag</include>
-			</control>
+            <include name="HorizontalDialogListOfContentMediaFlag">
+                <param name="posx" value="560" />
+                <param name="posy" value="290" />
+            </include>
 
             <include name="TextboxForDialog">
                 <param name="textboxid" value="4" />
