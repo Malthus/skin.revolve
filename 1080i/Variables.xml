@@ -15,19 +15,23 @@
 	<variable name="BackgroundColor">
 		<value>BackgroundColor</value>
 	</variable>
+
+	<variable name="FademaskColor">
+		<value>FadeDiffuseColor</value>
+	</variable>
+
+	<variable name="ShadowmaskColor">
+		<value>55000000</value>
+	</variable>
+
+	<variable name="TextColor">
+		<value>TextColor</value>
+	</variable>
 	
 	<variable name="HighlightColor">
 		<value>HighlightColor</value>
 	</variable>
 	
-	<variable name="TextColor">
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="ShadowmaskColor">
-		<value>55000000</value>
-	</variable>
-
 	<variable name="ContentNameLabel">
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
