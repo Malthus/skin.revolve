@@ -634,6 +634,36 @@
 		<value>TextColor</value>
 	</variable>
     
+    <variable name="MenuNameLabel">
+        <value>$INFO[Container(450).ListItem.Label]</value>
+    </variable>
+
+	<variable name="MenuCategoryLabel">
+		<value condition="!IsEmpty(Container(450).ListItem.Property(Label3))">$INFO[Container(450).ListItem.Property(Label3)]</value>
+		<value condition="Container.Content(tvshows)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Rating,, | ]$INFO[Container(450).ListItem.MPAA]</value>
+		<value condition="Container.Content(seasons)">$INFO[Container(450).ListItem.TVShowTitle]</value>
+		<value condition="Container.Content(episodes)">$INFO[Container(450).ListItem.Premiered,, | ]$INFO[Container(450).ListItem.Duration]</value>
+		<value condition="Container.Content(movies)">$INFO[Container(450).ListItem.Director]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Album)">$INFO[Container(450).ListItem.Artist]$INFO[Container(450).ListItem.Album, | ,]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Artist)">$INFO[Container(450).ListItem.Artist]</value>
+	</variable>
+	
+	<variable name="MenuDetailLabel">
+		<value condition="!IsEmpty(Container(450).ListItem.Label2)">$INFO[Container(450).ListItem.Label2]</value>
+		<value condition="Container.Content(episodes)">$INFO[Container(450).ListItem.Season,$LOCALIZE[20373] ,]</value>
+		<value condition="Container.Content(movies)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration,, $LOCALIZE[12391]]$INFO[Container(450).ListItem.Genre, | ,]$INFO[Container(450).ListItem.MPAA, | ,]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Property(Artist_Born))">$INFO[Container(450).ListItem.Property(Artist_Born)]$INFO[Container(450).ListItem.Property(Artist_Died), - ,]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Property(Artist_Formed))">$INFO[Container(450).ListItem.Property(Artist_Formed)]$INFO[Container(450).ListItem.Property(Artist_Disbanded), - ,]</value>
+		<value condition="!IsEmpty(Container(450).ListItem.Duration)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration]$INFO[Container(450).ListItem.Genre, | ,]</value>
+		<value>$INFO[Container(450).ListItem.Year]</value>
+	</variable>
+    
+	<variable name="MenuThumbnail">
+		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[Container(450).ListItem.Art(thumb)]</value>
+		<value condition="!IsEmpty(ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
+		<value>$INFO[Container(450).ListItem.Icon]</value>
+	</variable>
+
     <variable name="BusyAnimationThumbnail">
         <value condition="StringCompare(Skin.String(BusyAnimation.Type),C)">icons/busy-circles.png</value>
         <value condition="StringCompare(Skin.String(BusyAnimation.Type),S)">icons/busy-spiral.png</value>
@@ -667,326 +697,6 @@
         <value>$LOCALIZE[16018]</value>
     </variable>
 
-    <variable name="MenuNameLabel">
-        <value>$INFO[Container(450).ListItem.Label]</value>
-    </variable>
-
-	<variable name="MenuCategoryLabel">
-		<value condition="!IsEmpty(Container(450).ListItem.Property(Label3))">$INFO[Container(450).ListItem.Property(Label3)]</value>
-		<value condition="Container.Content(tvshows)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Rating,, | ]$INFO[Container(450).ListItem.MPAA]</value>
-		<value condition="Container.Content(seasons)">$INFO[Container(450).ListItem.TVShowTitle]</value>
-		<value condition="Container.Content(episodes)">$INFO[Container(450).ListItem.Premiered,, | ]$INFO[Container(450).ListItem.Duration]</value>
-		<value condition="Container.Content(movies)">$INFO[Container(450).ListItem.Director]</value>
-		<value condition="!IsEmpty(Container(450).ListItem.Album)">$INFO[Container(450).ListItem.Artist]$INFO[Container(450).ListItem.Album, | ,]</value>
-		<value condition="!IsEmpty(Container(450).ListItem.Artist)">$INFO[Container(450).ListItem.Artist]</value>
-	</variable>
-	
-	<variable name="MenuDetailLabel">
-		<value condition="!IsEmpty(Container(450).ListItem.Label2)">$INFO[Container(450).ListItem.Label2]</value>
-		<value condition="Container.Content(episodes)">$INFO[Container(450).ListItem.Season,$LOCALIZE[20373] ,]</value>
-		<value condition="Container.Content(movies)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration,, $LOCALIZE[12391]]$INFO[Container(450).ListItem.Genre, | ,]$INFO[Container(450).ListItem.MPAA, | ,]</value>
-		<value condition="!IsEmpty(Container(450).ListItem.Property(Artist_Born))">$INFO[Container(450).ListItem.Property(Artist_Born)]$INFO[Container(450).ListItem.Property(Artist_Died), - ,]</value>
-		<value condition="!IsEmpty(Container(450).ListItem.Property(Artist_Formed))">$INFO[Container(450).ListItem.Property(Artist_Formed)]$INFO[Container(450).ListItem.Property(Artist_Disbanded), - ,]</value>
-		<value condition="!IsEmpty(Container(450).ListItem.Duration)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration]$INFO[Container(450).ListItem.Genre, | ,]</value>
-		<value>$INFO[Container(450).ListItem.Year]</value>
-	</variable>
-    
-	<variable name="MenuThumbnail">
-		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[Container(450).ListItem.Art(thumb)]</value>
-		<value condition="!IsEmpty(ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
-		<value>$INFO[Container(450).ListItem.Icon]</value>
-	</variable>
-    
-	<variable name="MenuMinusFifteenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-15).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusFifteenColor">
-		<value condition="Container(450).ListItemNoWrap(-15).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusFourteenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-14).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusFourteenColor">
-		<value condition="Container(450).ListItemNoWrap(-14).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusThirteenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-13).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusThirteenColor">
-		<value condition="Container(450).ListItemNoWrap(-13).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusTwelveLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-12).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusTwelveColor">
-		<value condition="Container(450).ListItemNoWrap(-12).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusElevenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-11).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusElevenColor">
-		<value condition="Container(450).ListItemNoWrap(-11).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusTenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-10).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusTenColor">
-		<value condition="Container(450).ListItemNoWrap(-10).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusNineLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-9).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusNineColor">
-		<value condition="Container(450).ListItemNoWrap(-9).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusEightLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-8).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusEightColor">
-		<value condition="Container(450).ListItemNoWrap(-8).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusSevenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-7).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusSevenColor">
-		<value condition="Container(450).ListItemNoWrap(-7).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusSixLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-6).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusSixColor">
-		<value condition="Container(450).ListItemNoWrap(-6).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusFiveLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-5).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusFiveColor">
-		<value condition="Container(450).ListItemNoWrap(-5).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusFourLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-4).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusFourColor">
-		<value condition="Container(450).ListItemNoWrap(-4).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusThreeLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-3).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusThreeColor">
-		<value condition="Container(450).ListItemNoWrap(-3).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusTwoLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-2).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusTwoColor">
-		<value condition="Container(450).ListItemNoWrap(-2).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusTwoThumbnail">
-		<value condition="!IsEmpty(Container(450).ListItemNoWrap(-2).Art(thumb))">$INFO[Container(450).ListItemNoWrap(-2).Art(thumb)]</value>
-		<value>$INFO[Container(450).ListItemNoWrap(-2).Icon]</value>
-	</variable>
-
-	<variable name="MenuMinusOneLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(-1).Label]</value>
-	</variable>
-	
-	<variable name="MenuMinusOneColor">
-		<value condition="Container(450).ListItemNoWrap(-1).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuMinusOneThumbnail">
-		<value condition="!IsEmpty(Container(450).ListItemNoWrap(-1).Art(thumb))">$INFO[Container(450).ListItemNoWrap(-1).Art(thumb)]</value>
-		<value>$INFO[Container(450).ListItemNoWrap(-1).Icon]</value>
-	</variable>
-
-	<variable name="MenuPlusOneLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(1).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusOneColor">
-		<value condition="Container(450).ListItemNoWrap(1).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusOneThumbnail">
-		<value condition="!IsEmpty(Container(450).ListItemNoWrap(1).Art(thumb))">$INFO[Container(450).ListItemNoWrap(1).Art(thumb)]</value>
-		<value>$INFO[Container(450).ListItemNoWrap(1).Icon]</value>
-	</variable>
-
-	<variable name="MenuPlusTwoLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(2).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusTwoColor">
-		<value condition="Container(450).ListItemNoWrap(2).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusTwoThumbnail">
-		<value condition="!IsEmpty(Container(450).ListItemNoWrap(2).Art(thumb))">$INFO[Container(450).ListItemNoWrap(2).Art(thumb)]</value>
-		<value>$INFO[Container(450).ListItemNoWrap(2).Icon]</value>
-	</variable>
-
-	<variable name="MenuPlusThreeLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(3).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusThreeColor">
-		<value condition="Container(450).ListItemNoWrap(3).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusFourLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(4).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusFourColor">
-		<value condition="Container(450).ListItemNoWrap(4).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusFiveLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(5).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusFiveColor">
-		<value condition="Container(450).ListItemNoWrap(5).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusSixLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(6).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusSixColor">
-		<value condition="Container(450).ListItemNoWrap(6).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusSevenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(7).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusSevenColor">
-		<value condition="Container(450).ListItemNoWrap(7).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusEightLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(8).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusEightColor">
-		<value condition="Container(450).ListItemNoWrap(8).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusNineLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(9).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusNineColor">
-		<value condition="Container(450).ListItemNoWrap(9).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusTenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(10).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusTenColor">
-		<value condition="Container(450).ListItemNoWrap(10).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusElevenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(11).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusElevenColor">
-		<value condition="Container(450).ListItemNoWrap(11).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusTwelveLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(12).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusTwelveColor">
-		<value condition="Container(450).ListItemNoWrap(12).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusThirteenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(13).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusThirteenColor">
-		<value condition="Container(450).ListItemNoWrap(13).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusFourteenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(14).Label]</value>
-	</variable>
-	
-	<variable name="MenuPlusFourteenColor">
-		<value condition="Container(450).ListItemNoWrap(14).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="MenuPlusFifteenLabel">
-		<value>$INFO[Container(450).ListItemNoWrap(15).Label]</value>
-	</variable>
-
-	<variable name="MenuPlusFifteenColor">
-		<value condition="Container(450).ListItemNoWrap(15).IsPlaying">HighlightColor</value>
-		<value>TextColor</value>
-	</variable>
-    
 	<variable name="PlayerNameLabel">
 		<value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.Filename]</value>        
 		<value condition="Player.HasVideo">$INFO[VideoPlayer.Title]</value>

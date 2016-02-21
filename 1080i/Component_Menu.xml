@@ -179,7 +179,7 @@
                             <effect type="zoom" center="620,700" start="10" end="6" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusSevenLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-7).Label]" />
                         </include>
                     </control>	
                         
@@ -189,7 +189,7 @@
                         <animation effect="rotate" center="-240,750" end="58" condition="true" reversible="false">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="10" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusSixLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-6).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -203,7 +203,7 @@
                             <effect type="zoom" center="620,700" start="6" end="10" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusSixLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-6).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -217,7 +217,7 @@
                             <effect type="zoom" center="620,700" start="19" end="10" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusSixLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-6).Label]" />
                         </include>
                     </control>	
                         
@@ -227,7 +227,7 @@
                         <animation effect="rotate" center="-240,750" end="50" condition="true" reversible="false">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="19" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusFiveLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-5).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -241,7 +241,7 @@
                             <effect type="zoom" center="620,700" start="10" end="19" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusFiveLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-5).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -255,7 +255,7 @@
                             <effect type="zoom" center="620,700" start="28" end="19" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusFiveLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-5).Label]" />
                         </include>
                     </control>	
                         
@@ -265,7 +265,7 @@
                         <animation effect="rotate" center="-240,750" end="40" condition="true" reversible="false">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="28" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusFourLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-4).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -279,7 +279,7 @@
                             <effect type="zoom" center="620,700" start="19" end="28" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusFourLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-4).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -293,7 +293,7 @@
                             <effect type="zoom" center="620,700" start="40" end="28" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusFourLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-4).Label]" />
                         </include>
                     </control>	
                         
@@ -303,7 +303,7 @@
                         <animation effect="rotate" center="-240,750" end="30" condition="true" reversible="false">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="40" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusThreeLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-3).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -317,7 +317,7 @@
                             <effect type="zoom" center="620,700" start="28" end="40" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusThreeLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-3).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -331,7 +331,7 @@
                             <effect type="zoom" center="620,700" start="55" end="40" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusThreeLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-3).Label]" />
                         </include>
                     </control>	
                         
@@ -341,7 +341,7 @@
                         <animation effect="rotate" center="-240,750" end="20" condition="true">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="55" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusTwoLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-2).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -357,7 +357,7 @@
                         <animation effect="rotate" center="-240,750" end="30" reversible="false">Visible</animation>
                         <animation effect="rotate" center="-240,750" start="30" end="20" time="200" reversible="false">Hidden</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusTwoLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-2).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -371,7 +371,7 @@
                             <effect type="zoom" center="620,700" start="75" end="55" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusTwoLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-2).Label]" />
                         </include>
                     </control>	
                         
@@ -381,7 +381,7 @@
                         <animation effect="rotate" center="-240,750" end="10" condition="true" reversible="false">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="75" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-1).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -395,7 +395,7 @@
                             <effect type="zoom" center="620,700" start="55" end="75" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-1).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -411,7 +411,7 @@
                             <effect type="zoom" center="620,700" start="100" end="75" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-1).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -427,10 +427,10 @@
                             <effect type="zoom" center="620,700" start="100" end="75" time="200" />
                         </animation>
                         <include name="MainElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuMinusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(-1).Label]" />
                         </include>
                     </control>	
-                        
+
                     <control type="group">
                         <visible>!Container(450).OnPrevious + !Container(450).OnNext</visible>
                         <animation effect="fade" start="0" end="100" time="0" delay="200" reversible="false">Visible</animation>
@@ -509,7 +509,7 @@
                         <animation effect="rotate" center="-240,750" end="-10" condition="true">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="75" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(1).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -525,7 +525,7 @@
                             <effect type="zoom" center="620,700" start="100" end="75" time="200" />
                         </animation>
                         <include name="MainElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(1).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -541,7 +541,7 @@
                             <effect type="zoom" center="620,700" start="100" end="75" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(1).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -555,7 +555,7 @@
                             <effect type="zoom" center="620,700" start="55" end="75" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusOneLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(1).Label]" />
                         </include>
                     </control>	
                         
@@ -565,7 +565,7 @@
                         <animation effect="rotate" center="-240,750" end="-20" condition="true">Conditional</animation>
                         <animation effect="zoom" center="620,700" end="55" condition="true" reversible="false">Conditional</animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusTwoLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(2).Label]" />
                         </include>
                     </control>
                     <control type="group">
@@ -579,7 +579,7 @@
                             <effect type="zoom" center="620,700" start="75" end="55" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusTwoLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(2).Label]" />
                         </include>
                     </control>	
                     <control type="group">
@@ -593,7 +593,7 @@
                             <effect type="zoom" center="620,700" start="40" end="55" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusTwoLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(2).Label]" />
                         </include>
                     </control>	
                     
@@ -608,7 +608,7 @@
                             <effect type="zoom" center="620,700" start="55" end="40" time="200" />
                         </animation>
                         <include name="OtherElementForRevolveMenu">
-                            <param name="label" value="$VAR[MenuPlusThreeLabel]" />
+                            <param name="label" value="$INFO[Container(450).ListItemNoWrap(3).Label]" />
                         </include>
                     </control>	
                 </control>	
@@ -777,63 +777,63 @@
                 <control type="group">
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="152" />
-                        <param name="label" value="$VAR[MenuMinusFifteenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-15).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="142" />
-                        <param name="label" value="$VAR[MenuMinusFourteenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-14).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="132" />
-                        <param name="label" value="$VAR[MenuMinusThirteenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-13).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="122" />
-                        <param name="label" value="$VAR[MenuMinusTwelveLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-12).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="112" />
-                        <param name="label" value="$VAR[MenuMinusElevenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-11).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="102" />
-                        <param name="label" value="$VAR[MenuMinusTenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-10).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="92" />
-                        <param name="label" value="$VAR[MenuMinusNineLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-9).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="82" />
-                        <param name="label" value="$VAR[MenuMinusEightLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-8).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="72" />
-                        <param name="label" value="$VAR[MenuMinusSevenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-7).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="62" />
-                        <param name="label" value="$VAR[MenuMinusSixLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-6).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="52" />
-                        <param name="label" value="$VAR[MenuMinusFiveLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-5).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="42" />
-                        <param name="label" value="$VAR[MenuMinusFourLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-4).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="32" />
-                        <param name="label" value="$VAR[MenuMinusThreeLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-3).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="22" />
-                        <param name="label" value="$VAR[MenuMinusTwoLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-2).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="12" />
-                        <param name="label" value="$VAR[MenuMinusOneLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(-1).Label]" />
                     </include>
 
                     <control type="group">
@@ -877,63 +877,63 @@
 
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-12" />
-                        <param name="label" value="$VAR[MenuPlusOneLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(1).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-22" />
-                        <param name="label" value="$VAR[MenuPlusTwoLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(2).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-32" />
-                        <param name="label" value="$VAR[MenuPlusThreeLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(3).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-42" />
-                        <param name="label" value="$VAR[MenuPlusFourLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(4).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-52" />
-                        <param name="label" value="$VAR[MenuPlusFiveLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(5).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-62" />
-                        <param name="label" value="$VAR[MenuPlusSixLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(6).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-72" />
-                        <param name="label" value="$VAR[MenuPlusSevenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(7).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-82" />
-                        <param name="label" value="$VAR[MenuPlusEightLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(8).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-92" />
-                        <param name="label" value="$VAR[MenuPlusNineLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(9).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-102" />
-                        <param name="label" value="$VAR[MenuPlusTenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(10).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-112" />
-                        <param name="label" value="$VAR[MenuPlusElevenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(11).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-122" />
-                        <param name="label" value="$VAR[MenuPlusTwelveLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(12).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-132" />
-                        <param name="label" value="$VAR[MenuPlusThirteenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(13).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-142" />
-                        <param name="label" value="$VAR[MenuPlusFourteenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(14).Label]" />
                     </include>
                     <include name="OtherElementForCircleMenu">
                         <param name="angle" value="-152" />
-                        <param name="label" value="$VAR[MenuPlusFifteenLabel]" />
+                        <param name="label" value="$INFO[Container(450).ListItemNoWrap(15).Label]" />
                     </include>
                 </control>
             </control>		
