@@ -7,6 +7,7 @@
             <onfocus>Skin.ResetSettings</onfocus>
             
             <include>BackgroundSettingsForSkinSettings</include>
+            <include>ColoursSettingsForSkinSettings</include>
             <include>HomeMenuItemsSettingsForSkinSettings</include>
             <include>CircleItemsSettingsForSkinSettings</include>
             <include>AddonSettingsForSkinSettings</include>
@@ -21,7 +22,7 @@
 	<include name="BackgroundSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.SetBool(Background.ImageActive)</onfocus>
-            <onfocus>Skin.SetBool(Background.ImageFaded)</onfocus>
+            <onfocus>Skin.Reset(Background.ImageFaded)</onfocus>
             <onfocus>Skin.SetBool(Background.ImageFanartForFiles)</onfocus>
             <onfocus>Skin.SetBool(Background.VisualiserActive)</onfocus>
             <onfocus>Skin.Reset(Background.VisualiserFaded)</onfocus>
@@ -31,12 +32,18 @@
         </definition>
 	</include>
 	
+	<include name="ColoursSettingsForSkinSettings">
+        <definition>
+            <onfocus>Skin.Reset(Settings.ButtonAreaSeparate)</onfocus>
+        </definition>
+	</include>
+
 	<include name="HomeMenuItemsSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.SetBool(PlayDiscOption.Active)</onfocus>
-            <onfocus>Skin.SetBool(PlayDiscOption.BackgroundImage)</onfocus>
+            <onfocus>Skin.Reset(PlayDiscOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(FavouritesOption.Active)</onfocus>
-            <onfocus>Skin.SetBool(FavouritesOption.BackgroundImage)</onfocus>
+            <onfocus>Skin.Reset(FavouritesOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(Custom01Option.Active)</onfocus>
             <onfocus>Skin.Reset(Custom02Option.Active)</onfocus>
             <onfocus>Skin.Reset(Custom03Option.Active)</onfocus>
@@ -57,12 +64,12 @@
             <onfocus>Skin.Reset(Custom18Option.Active)</onfocus>
             <onfocus>Skin.Reset(Custom19Option.Active)</onfocus>
             <onfocus>Skin.Reset(Custom20Option.Active)</onfocus>
-            <onfocus>Skin.Reset(TVOption.Active)</onfocus>
+            <onfocus>Skin.SetBool(TVOption.Active)</onfocus>
             <onfocus>Skin.Reset(TVOption.BackgroundImage)</onfocus>
-            <onfocus>Skin.Reset(RadioOption.Active)</onfocus>
+            <onfocus>Skin.SetBool(RadioOption.Active)</onfocus>
             <onfocus>Skin.Reset(RadioOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(VideosOption.Active)</onfocus>
-            <onfocus>Skin.SetBool(VideosOption.BackgroundImage)</onfocus>
+            <onfocus>Skin.Reset(VideosOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(VideosOption.Immutable)</onfocus>
             <onfocus>Skin.Reset(MoviesOption.Active)</onfocus>
             <onfocus>Skin.Reset(MoviesOption.BackgroundImage)</onfocus>
@@ -73,7 +80,7 @@
             <onfocus>Skin.Reset(CustomVideosOption.Active)</onfocus>
             <onfocus>Skin.Reset(CustomVideosOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(MusicOption.Active)</onfocus>
-            <onfocus>Skin.SetBool(MusicOption.BackgroundImage)</onfocus>
+            <onfocus>Skin.Reset(MusicOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(MusicOption.Immutable)</onfocus>
             <onfocus>Skin.Reset(AlbumsOption.Active)</onfocus>
             <onfocus>Skin.Reset(AlbumsOption.BackgroundImage)</onfocus>
@@ -82,23 +89,23 @@
             <onfocus>Skin.Reset(BooksOption.Active)</onfocus>
             <onfocus>Skin.Reset(BooksOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(PicturesOption.Active)</onfocus>
-            <onfocus>Skin.SetBool(PicturesOption.BackgroundImage)</onfocus>
+            <onfocus>Skin.Reset(PicturesOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(CustomPicturesOption.Active)</onfocus>
             <onfocus>Skin.Reset(CustomPicturesOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(GamesOption.Active)</onfocus>
             <onfocus>Skin.Reset(GamesOption.BackgroundImage)</onfocus>
-            <onfocus>Skin.Reset(ProgramsOption.Active)</onfocus>
+            <onfocus>Skin.SetBool(ProgramsOption.Active)</onfocus>
             <onfocus>Skin.Reset(ProgramsOption.BackgroundImage)</onfocus>
-            <onfocus>Skin.Reset(WeatherOption.Active)</onfocus>
+            <onfocus>Skin.SetBool(WeatherOption.Active)</onfocus>
             <onfocus>Skin.Reset(WeatherOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(FileManagerOption.Active)</onfocus>
             <onfocus>Skin.Reset(FileManagerOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(AddonsOption.Active)</onfocus>
             <onfocus>Skin.Reset(AddonsOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(SettingsOption.Active)</onfocus>
-            <onfocus>Skin.SetBool(SettingsOption.BackgroundImage)</onfocus>
+            <onfocus>Skin.Reset(SettingsOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(ExitOption.Active)</onfocus>
-            <onfocus>Skin.SetBool(ExitOption.BackgroundImage)</onfocus>
+            <onfocus>Skin.Reset(ExitOption.BackgroundImage)</onfocus>
         </definition>
 	</include>
 
@@ -143,7 +150,6 @@
             <onfocus>Skin.Reset(Thumbnails.NameVisible)</onfocus>
             <onfocus>Skin.SetBool(Landscape.DescriptionVisible)</onfocus>
             <onfocus>Skin.SetBool(Settings.HelpVisible)</onfocus>
-            <onfocus>Skin.Reset(Settings.ButtonAreaSeparate)</onfocus>
         </definition>
 	</include>
     

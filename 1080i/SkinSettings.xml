@@ -271,8 +271,49 @@
 						<onclick>ActivateWindow(1189)</onclick>
 					</control>
 				</control>
-                
-				<control type="grouplist" id="700">
+
+				<control type="grouplist" id="400">
+					<description>Control Area For Colours Options</description>
+					<visible>Container(99).Hasfocus(4)</visible>
+					<width>1100</width>
+					<height>760</height>
+					<itemgap>0</itemgap>
+					<onup>700</onup>
+					<ondown>700</ondown>
+					<onleft>99</onleft>
+					<onright>Noop</onright>
+					<orientation>vertical</orientation>
+
+					<control type="radiobutton" id="410">
+                        <description>Show Separate Dialog Key Area Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31238]</label>
+						<selected>Skin.HasSetting(Settings.ButtonAreaSeparate)</selected>
+						<onclick>Skin.ToggleSetting(Settings.ButtonAreaSeparate)</onclick>
+					</control>
+                    
+					<control type="label" id="421">
+						<description>Spacer</description>
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+                    
+					<control type="button" id="420">
+						<description>Reset Page Setting Button</description>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[10041]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+						<onclick>SetProperty(DialogAction,SetFocus(54),1189)</onclick>
+						<onclick>ActivateWindow(1189)</onclick>
+					</control>
+				</control>
+
+                <control type="grouplist" id="700">
 					<description>Control Area For Default Add-ons Options</description>
 					<visible>Container(99).Hasfocus(7)</visible>
 					<width>1100</width>
@@ -334,6 +375,65 @@
 						<onclick>Skin.ToggleSetting(TitleScreen.Visible)</onclick>
 					</control>
 					
+					<control type="label" id="822">
+						<description>Spacer</description>
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+
+					<control type="radiobutton" id="812">
+                        <description>Show Name in Thumbnails and Panels Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31155]</label>
+						<selected>Skin.HasSetting(Thumbnails.NameVisible)</selected>
+						<onclick>Skin.ToggleSetting(Thumbnails.NameVisible)</onclick>
+					</control>
+                    
+					<control type="button" id="815">
+                        <description>Type of Thumbnails Option</description>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31799]: $VAR[ThumbnailsTypeLabel]</label>
+						<onclick>SetProperty(DialogTitle,$LOCALIZE[31799],1188)</onclick>
+						<onclick>SetProperty(DialogMessage,$LOCALIZE[31220],1188)</onclick>
+						<onclick>SetProperty(DialogTarget,Thumbnails.Type,1188)</onclick>
+						<onclick>SetProperty(List01Option.Name,$LOCALIZE[31952],1188)</onclick>
+						<onclick>SetProperty(List01Option.Action,C,1188)</onclick>
+						<onclick>SetProperty(List02Option.Name,$LOCALIZE[31954],1188)</onclick>
+						<onclick>SetProperty(List02Option.Action,S,1188)</onclick>
+						<onclick>ActivateWindow(1188)</onclick>
+					</control>
+					
+					<control type="radiobutton" id="808">
+                        <description>Show Description in Landscape Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31150]</label>
+						<selected>Skin.HasSetting(Landscape.DescriptionVisible)</selected>
+						<onclick>Skin.ToggleSetting(Landscape.DescriptionVisible)</onclick>
+					</control>
+                    
+					<control type="radiobutton" id="802">
+						<description>Show Unfocused Scroll Bar In View Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31143]</label>
+						<selected>Skin.HasSetting(ViewScrollbar.Visible)</selected>
+						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
+					</control>
+
+					<control type="label" id="823">
+						<description>Spacer</description>
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+
 					<control type="radiobutton" id="810">
 						<description>Group Items In Side Menu Option</description>
 						<width>1100</width>
@@ -363,17 +463,14 @@
 						<selected>Skin.HasSetting(SideMenu.GlobalSearch)</selected>
 						<onclick>Skin.ToggleSetting(SideMenu.GlobalSearch)</onclick>
 					</control>
-					
-					<control type="radiobutton" id="802">
-						<description>Show Unfocused Scroll Bar In View Option</description>
+
+					<control type="label" id="824">
+						<description>Spacer</description>
 						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31143]</label>
-						<selected>Skin.HasSetting(ViewScrollbar.Visible)</selected>
-						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
+                        <height>20</height>
+						<label>-</label>
 					</control>
-					
+
 					<control type="radiobutton" id="809">
 						<description>Show Back Button Option</description>
 						<width>1100</width>
@@ -447,41 +544,13 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
-					<control type="radiobutton" id="812">
-                        <description>Show Name in Thumbnails and Panels Option</description>
+					<control type="label" id="825">
+						<description>Spacer</description>
 						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31155]</label>
-						<selected>Skin.HasSetting(Thumbnails.NameVisible)</selected>
-						<onclick>Skin.ToggleSetting(Thumbnails.NameVisible)</onclick>
+                        <height>20</height>
+						<label>-</label>
 					</control>
-                    
-					<control type="button" id="815">
-                        <description>Type of Thumbnails Option</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31799]: $VAR[ThumbnailsTypeLabel]</label>
-						<onclick>SetProperty(DialogTitle,$LOCALIZE[31799],1188)</onclick>
-						<onclick>SetProperty(DialogMessage,$LOCALIZE[31220],1188)</onclick>
-						<onclick>SetProperty(DialogTarget,Thumbnails.Type,1188)</onclick>
-						<onclick>SetProperty(List01Option.Name,$LOCALIZE[31952],1188)</onclick>
-						<onclick>SetProperty(List01Option.Action,C,1188)</onclick>
-						<onclick>SetProperty(List02Option.Name,$LOCALIZE[31954],1188)</onclick>
-						<onclick>SetProperty(List02Option.Action,S,1188)</onclick>
-						<onclick>ActivateWindow(1188)</onclick>
-					</control>
-					
-					<control type="radiobutton" id="808">
-                        <description>Show Description in Landscape Option</description>
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31150]</label>
-						<selected>Skin.HasSetting(Landscape.DescriptionVisible)</selected>
-						<onclick>Skin.ToggleSetting(Landscape.DescriptionVisible)</onclick>
-					</control>
-                    
+
 					<control type="radiobutton" id="814">
                         <description>Show Settings Help Option</description>
 						<width>1100</width>
@@ -490,16 +559,6 @@
 						<label>$LOCALIZE[31156]</label>
 						<selected>Skin.HasSetting(Settings.HelpVisible)</selected>
 						<onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
-					</control>
-                    
-					<control type="radiobutton" id="817">
-                        <description>Show Separate Dialog Key Area Option</description>
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31238]</label>
-						<selected>Skin.HasSetting(Settings.ButtonAreaSeparate)</selected>
-						<onclick>Skin.ToggleSetting(Settings.ButtonAreaSeparate)</onclick>
 					</control>
                     
 					<control type="label" id="821">
@@ -680,7 +739,7 @@
             
                 <control type="group">
                     <description>Settings Description Textbox</description>
-                    <visible>Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus</visible>
+                    <visible>Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(400).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus</visible>
                     <posx>720</posx>
                     <posy>880</posy>
                     <width>880</width>
@@ -778,6 +837,11 @@
                         <label>$LOCALIZE[31609]</label>
                     </control>
                     <control type="textbox">
+                        <visible>Control.HasFocus(410)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31239]</label>
+                    </control>
+                    <control type="textbox">
                         <visible>Control.HasFocus(701)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31190]</label>
@@ -858,11 +922,6 @@
                         <label>$LOCALIZE[31601]</label>
                     </control>
                     <control type="textbox">
-                        <visible>Control.HasFocus(817)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31239]</label>
-                    </control>
-                    <control type="textbox">
                         <visible>Control.HasFocus(901)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31192]</label>
@@ -888,7 +947,7 @@
                         <label>$LOCALIZE[31196]</label>
                     </control>
                     <control type="textbox">
-                        <visible>Control.HasFocus(120) | Control.HasFocus(320) | Control.HasFocus(720) | Control.HasFocus(820) | Control.HasFocus(920)</visible>
+                        <visible>Control.HasFocus(120) | Control.HasFocus(320) | Control.HasFocus(420) | Control.HasFocus(720) | Control.HasFocus(820) | Control.HasFocus(920)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31897]</label>
                     </control>
@@ -905,9 +964,9 @@
 
                 <control type="list" id="99">
                     <posx>40</posx>
-                    <posy>600</posy>
+                    <posy>560</posy>
                     <width>480</width>
-                    <height>300</height>
+                    <height>400</height>
                     <orientation>vertical</orientation>
                     <pagecontrol>-</pagecontrol>
                     <scrolltime>0</scrolltime>
@@ -925,6 +984,13 @@
                             <description>Background Visuals Option</description>
                             <label>$LOCALIZE[31122]</label>
                             <label2>$LOCALIZE[31221]</label2>
+                            <onclick>Noop</onclick>
+                        </item>
+
+                        <item id="4">
+                            <description>Colours Option</description>
+                            <label>$LOCALIZE[14078]</label>
+                            <label2>$LOCALIZE[31224]</label2>
                             <onclick>Noop</onclick>
                         </item>
 
