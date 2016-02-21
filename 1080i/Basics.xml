@@ -6,7 +6,7 @@
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallMessageFont" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="outlinesize" default="1" />
         <param name="scroll" default="true" />
         <param name="scrollspeed" default="50" />
@@ -97,8 +97,8 @@
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallMessageFont" />
-        <param name="textcolor" default="MainColor" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="textcolor" default="$VAR[MainColor]" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="outlinesize" default="1" />
         <param name="scroll" default="true" />
         <param name="scrollspeed" default="50" />
@@ -153,7 +153,7 @@
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallMessageFont" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="outlinesize" default="1" />
         <param name="pagecontrol" default="-" />
         <param name="autoscroll" default="true" />
@@ -227,8 +227,8 @@
         <param name="width" default="1240" />
         <param name="height" default="40" />
         <param name="font" default="SmallMessageFont" />
-        <param name="textcolor" default="MainColor" />
-        <param name="outlinecolor" default="BackgroundColor" />
+        <param name="textcolor" default="$VAR[MainColor]" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="outlinesize" default="1" />
         <param name="pagecontrol" default="-" />
         <param name="autoscroll" default="true" />
@@ -302,7 +302,7 @@
                     <height>$PARAM[height]</height>
                     <fadetime>100</fadetime>
                     <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="BackgroundColor">white.png</texture>
+                    <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
                 </control>
             </control>
         </definition>
@@ -329,8 +329,8 @@
                     <posy>0</posy>
                     <width>40</width>
                     <height>40</height>
-                    <texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangledown.png</texturenofocus>
-                    <texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangledown.png</texturefocus>
+                    <texturenofocus border="20" colordiffuse="$VAR[SecondaryColor]">controls/circle-triangledown.png</texturenofocus>
+                    <texturefocus border="20" colordiffuse="$VAR[BackgroundColor]">controls/circle-triangledown.png</texturefocus>
                     <onup>$PARAM[onup]</onup>
                     <ondown>$PARAM[ondown]</ondown>
                     <onleft>$PARAM[onleft]</onleft>
@@ -343,8 +343,8 @@
                     <posy>0</posy>
                     <width>40</width>
                     <height>40</height>
-                    <texturenofocus border="20" colordiffuse="SecondaryColor">controls/circle-triangleup.png</texturenofocus>
-                    <texturefocus border="20" colordiffuse="BackgroundColor">controls/circle-triangleup.png</texturefocus>
+                    <texturenofocus border="20" colordiffuse="$VAR[SecondaryColor]">controls/circle-triangleup.png</texturenofocus>
+                    <texturefocus border="20" colordiffuse="$VAR[BackgroundColor]">controls/circle-triangleup.png</texturefocus>
                     <onup>$PARAM[onup]</onup>
                     <ondown>$PARAM[ondown]</ondown>
                     <onleft>$PARAM[downbuttonid]</onleft>
@@ -359,7 +359,7 @@
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="size" default="60" />
-        <param name="color" default="MainColor" />
+        <param name="color" default="$VAR[MainColor]" />
         <param name="radius" default="280" />
         <param name="time" default="10000" />
         <param name="delay" default="0" />
