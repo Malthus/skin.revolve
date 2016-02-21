@@ -243,9 +243,9 @@
             <posy>$PARAM[posy]</posy>
             <width>20</width>
             <height>$PARAM[height]</height>
-            <texturesliderbackground border="0,14,0,14" colordiffuse="MainColor">controls/horizontalbar-thick.png</texturesliderbackground>
-            <texturesliderbar border="0,14,0,14" colordiffuse="FadeDiffuseColor">controls/horizontalbar-thin.png</texturesliderbar>
-            <texturesliderbarfocus border="0,14,0,14" colordiffuse="BackgroundColor">controls/horizontalbar-thin.png</texturesliderbarfocus>
+            <texturesliderbackground border="0,14,0,14" colordiffuse="$VAR[MainColor]">controls/horizontalbar-thick.png</texturesliderbackground>
+            <texturesliderbar border="0,14,0,14" colordiffuse="$VAR[FademaskColor]">controls/horizontalbar-thin.png</texturesliderbar>
+            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[BackgroundColor]">controls/horizontalbar-thin.png</texturesliderbarfocus>
             <orientation>vertical</orientation>
             <showonepage>false</showonepage>
         </definition>
@@ -254,7 +254,7 @@
     <include name="LabelForDialog">
         <param name="id" default="0" />
         <param name="posy" default="80" />
-        <param name="textcolor" default="SecondaryColor" />
+        <param name="textcolor" default="$VAR[SecondaryColor]" />
         <param name="label" default="-" />
     
         <definition>
@@ -314,7 +314,7 @@
                 <width>1240</width>
                 <height>$PARAM[height]</height>
                 <font>DialogDescriptionFont</font>
-                <textcolor>SecondaryColor</textcolor>
+                <textcolor>$VAR[SecondaryColor]</textcolor>
                 <align>left</align>
                 <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
                 <label>$PARAM[label] </label>
@@ -409,7 +409,7 @@
 
             <control type="label" id="$PARAM[labelid]">
 				<width>1240</width>
-                <textcolor>SelectColor</textcolor>
+                <textcolor>$VAR[SelectColor]</textcolor>
                 <label>-</label>
             </control>
         </definition>
@@ -446,14 +446,14 @@
                 <width>480</width>
                 <height>$PARAM[height]</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
                 
             <control type="image">
                 <width>480</width>
                 <height>$PARAM[height]</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="MainColor" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
             </control>
             
             <control type="image">
@@ -461,7 +461,7 @@
                 <posy>20</posy>
                 <width>35</width>
                 <height>35</height>
-                <texture colordiffuse="MainColor">elements/circle-mask.png</texture>
+                <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
             </control>
 
             <control type="label">
@@ -471,7 +471,7 @@
                 <width>35</width>
                 <height>35</height>
                 <font>DialogTextFont</font>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <align>center</align>
                 <label>$LOCALIZE[31904]</label>
             </control>
@@ -505,14 +505,14 @@
                 <width>1240</width>
                 <height>40</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>1200</width>
                 <height>40</height>
                 <font>DialogTextFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <scroll>false</scroll>
                 <info>ListItem.Label</info>
             </control>
@@ -520,7 +520,7 @@
                 <posx>20</posx>
                 <width>1200</width>
                 <font>DialogTextFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <align>right</align>
                 <scroll>false</scroll>
                 <info>ListItem.Label2</info>
@@ -534,20 +534,20 @@
                 <width>1240</width>
                 <height>40</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>1200</width>
                 <font>DialogTextFont</font>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <info>ListItem.Label</info>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>1200</width>
                 <font>DialogTextFont</font>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <align>right</align>
                 <info>ListItem.Label2</info>
             </control>
@@ -560,20 +560,20 @@
                 <width>1240</width>
                 <height>40</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>1200</width>
                 <font>DialogTextFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <info>ListItem.Label</info>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>1200</width>
                 <font>DialogTextFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <align>right</align>
                 <info>ListItem.Label2</info>
             </control>
@@ -608,7 +608,7 @@
                 <width>300</width>
                 <height>40</height>
                 <font>DialogTextFont</font>
-                <textcolor>TextColor</textcolor>
+                <textcolor>$VAR[TextColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -617,7 +617,7 @@
                 <width>900</width>
                 <height>40</height>
                 <font>DialogTextFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <align>left</align>
                 <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
             </control>
@@ -631,14 +631,14 @@
                 <width>940</width>
                 <height>40</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="label">
                 <posx>0</posx>
                 <width>300</width>
                 <height>40</height>
                 <font>DialogTextFont</font>
-                <textcolor>TextColor</textcolor>
+                <textcolor>$VAR[TextColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -647,7 +647,7 @@
                 <width>900</width>
                 <height>40</height>
                 <font>DialogTextFont</font>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <align>left</align>
                 <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
             </control>
@@ -658,7 +658,7 @@
         <param name="posx" default="560" />
         <param name="posy" default="80" />
         <param name="height" default="-" />
-        <param name="bordercolor" default="TextColor" />
+        <param name="bordercolor" default="$VAR[TextColor]" />
     
         <definition>
 			<control type="image">
@@ -707,13 +707,13 @@
                 <width>588</width>
                 <height>40</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>548</width>
                 <height>40</height>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </definition>
@@ -725,13 +725,13 @@
                 <width>588</width>
                 <height>40</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>548</width>
                 <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </definition>
@@ -743,13 +743,13 @@
                 <width>588</width>
                 <height>40</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="label">
                 <posx>20</posx>
                 <width>548</width>
                 <height>40</height>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </definition>
@@ -800,7 +800,7 @@
                 <width>438</width>
                 <height>40</height>
                 <font>SmallListItemFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -810,7 +810,7 @@
                 <width>438</width>
                 <height>40</height>
                 <font>DetailListItemFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label2]</label>
             </control>
@@ -825,7 +825,7 @@
                 <width>588</width>
                 <height>100</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="MainColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="group">
                 <posx>20</posx>
@@ -840,7 +840,7 @@
                 <width>438</width>
                 <height>40</height>
                 <font>SmallListItemFont</font>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -850,7 +850,7 @@
                 <width>438</width>
                 <height>40</height>
                 <font>DetailListItemFont</font>
-                <textcolor>BackgroundColor</textcolor>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label2]</label>
             </control>
@@ -865,7 +865,7 @@
                 <width>588</width>
                 <height>100</height>
                 <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="SelectColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="group">
                 <posx>20</posx>
@@ -880,7 +880,7 @@
                 <width>438</width>
                 <height>40</height>
                 <font>SmallListItemFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -890,7 +890,7 @@
                 <width>438</width>
                 <height>40</height>
                 <font>DetailListItemFont</font>
-                <textcolor>MainColor</textcolor>
+                <textcolor>$VAR[MainColor]</textcolor>
                 <align>left</align>
                 <label>$INFO[ListItem.Label2]</label>
             </control>
@@ -905,7 +905,7 @@
 				<width>600</width>
 				<height>800</height>
 				<fadetime>100</fadetime>
-				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-background.png</texture>
+				<texture colordiffuse="$VAR[MainColor]" border="30" fallback="white.png">elements/poster-background.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
@@ -914,7 +914,7 @@
 				<width>592</width>
 				<height>704</height>
 				<fadetime>100</fadetime>
-				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<texture colordiffuse="$VAR[BackgroundColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
         </definition>
@@ -928,7 +928,7 @@
 				<width>600</width>
 				<height>390</height>
 				<fadetime>100</fadetime>
-				<texture colordiffuse="MainColor" border="30" fallback="white.png">elements/poster-background.png</texture>
+				<texture colordiffuse="$VAR[MainColor]" border="30" fallback="white.png">elements/poster-background.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
@@ -937,7 +937,7 @@
 				<width>602</width>
 				<height>40</height>
 				<fadetime>100</fadetime>
-				<texture colordiffuse="MainColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<texture colordiffuse="$VAR[MainColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
@@ -946,7 +946,7 @@
 				<width>592</width>
 				<height>324</height>
 				<fadetime>100</fadetime>
-				<texture colordiffuse="BackgroundColor" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+				<texture colordiffuse="$VAR[BackgroundColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
         </definition>
@@ -978,8 +978,8 @@
                         <param name="width" value="290" />
                         <param name="height" value="20" />
                         <param name="font" value="BookmarkButtonFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="TextColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[TextColor]" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="scroll" value="false" />
@@ -991,8 +991,8 @@
                         <param name="width" value="290" />
                         <param name="height" value="20" />
                         <param name="font" value="BookmarkButtonFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="TextColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[TextColor]" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="scroll" value="false" />
@@ -1010,7 +1010,7 @@
                         <posy>0</posy>
                         <width>310</width>
                         <height>210</height>
-                        <texture colordiffuse="MainColor">elements/poster-mask.png</texture>
+                        <texture colordiffuse="$VAR[MainColor]">elements/poster-mask.png</texture>
                     </control>
                     <control type="image">
                         <posx>5</posx>
@@ -1026,8 +1026,8 @@
                         <param name="width" value="290" />
                         <param name="height" value="20" />
                         <param name="font" value="BookmarkButtonFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[MainColor]" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="scroll" value="true" />
@@ -1039,8 +1039,8 @@
                         <param name="width" value="290" />
                         <param name="height" value="20" />
                         <param name="font" value="BookmarkButtonFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[MainColor]" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="scroll" value="true" />
@@ -1065,8 +1065,8 @@
                         <param name="width" value="290" />
                         <param name="height" value="20" />
                         <param name="font" value="BookmarkButtonFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[MainColor]" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="scroll" value="false" />
@@ -1078,8 +1078,8 @@
                         <param name="width" value="290" />
                         <param name="height" value="20" />
                         <param name="font" value="BookmarkButtonFont" />
-                        <param name="textcolor" value="BackgroundColor" />
-                        <param name="outlinecolor" value="MainColor" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[MainColor]" />
                         <param name="outlinesize" value="2" />
                         <param name="align" value="center" />
                         <param name="scroll" value="false" />
@@ -1252,7 +1252,7 @@
                     <width>1240</width>
                     <height>40</height>
                     <font>DialogTitleFont</font>
-                    <textcolor>SecondaryColor</textcolor>
+                    <textcolor>$VAR[SecondaryColor]</textcolor>
                     <align>left</align>
                     <label>$PARAM[headerlabel]</label>
                 </control>
@@ -1269,7 +1269,7 @@
                         <width>60</width>
                         <height>60</height>
                         <font>DialogSmallIconFont</font>
-                        <textcolor>BackgroundColor</textcolor>
+                        <textcolor>$VAR[BackgroundColor]</textcolor>
                         <align>center</align>
                         <label>$PARAM[iconlabel]</label>
                     </control>
@@ -1279,7 +1279,7 @@
                         <posy>2</posy>
                         <width>86</width>
                         <height>86</height>
-                        <texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
+                        <texture colordiffuse="$VAR[BackgroundColor]">$PARAM[icontexture]</texture>
                         <aspectratio>scale</aspectratio>
                     </control>
                     
@@ -1305,7 +1305,7 @@
                         <width>200</width>
                         <height>200</height>
                         <font>DialogDefaultIconFont</font>
-                        <textcolor>BackgroundColor</textcolor>
+                        <textcolor>$VAR[BackgroundColor]</textcolor>
                         <align>center</align>
                         <label>$PARAM[iconlabel]</label>
                     </control>
@@ -1315,7 +1315,7 @@
                         <posy>4</posy>
                         <width>262</width>
                         <height>262</height>
-                        <texture colordiffuse="BackgroundColor">$PARAM[icontexture]</texture>
+                        <texture colordiffuse="$VAR[BackgroundColor]">$PARAM[icontexture]</texture>
                         <aspectratio>scale</aspectratio>
                     </control>
                     
