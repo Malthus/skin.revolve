@@ -732,7 +732,7 @@
                     <width>1100</width>
                     <height>111</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                    <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
                 </control>
                 
                 <include name="AnnotationsForHomeMenuSkinSettings" />
