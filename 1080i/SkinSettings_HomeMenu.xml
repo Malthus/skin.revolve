@@ -9,7 +9,7 @@
                 <posy>0</posy>
                 <width>1100</width>
                 <height>40</height>
-                <texture colordiffuse="BackgroundColor" border="20">controls/rectangle-fill.png</texture>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
             
             <control type="label">
@@ -19,7 +19,7 @@
                 <width>1100</width>
                 <height>40</height>
                 <font>NormalButtonFont</font>
-                <textcolor>TextColor</textcolor>
+                <textcolor>$VAR[TextColor]</textcolor>
                 <align>left</align>
                 <label>$LOCALIZE[31121]</label>
             </control>
@@ -39,9 +39,9 @@
 
                 <itemlayout height="40">
                     <include name="ItemForHomeOptionListInSkinSettings">
-                        <param name="textcolor" value="MainColor" />
-                        <param name="radiobuttoncolor" value="SecondaryColor" />
-                        <param name="backgroundcolor" value="BackgroundColor" />
+                        <param name="textcolor" value="$VAR[MainColor]" />
+                        <param name="radiobuttoncolor" value="$VAR[SecondaryColor]" />
+                        <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                         <param name="backgroundcoverage" value="false" />
                     </include>
                 </itemlayout>
@@ -51,9 +51,9 @@
                         <visible>Control.HasFocus(200)</visible>
 
                         <include name="ItemForHomeOptionListInSkinSettings">
-                            <param name="textcolor" value="BackgroundColor" />
-                            <param name="radiobuttoncolor" value="BackgroundColor" />
-                            <param name="backgroundcolor" value="MainColor" />
+                            <param name="textcolor" value="$VAR[BackgroundColor]" />
+                            <param name="radiobuttoncolor" value="$VAR[BackgroundColor]" />
+                            <param name="backgroundcolor" value="$VAR[MainColor]" />
                             <param name="backgroundcoverage" value="false" />
                         </include>
                     </control>
@@ -62,8 +62,8 @@
                         <visible>!Control.HasFocus(200)</visible>
 
                         <include name="ItemForHomeOptionListInSkinSettings">
-                            <param name="radiobuttoncolor" value="SecondaryColor" />
-                            <param name="backgroundcolor" value="BackgroundColor" />
+                            <param name="radiobuttoncolor" value="$VAR[SecondaryColor]" />
+                            <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                             <param name="backgroundcoverage" value="false" />
                             <param name="backgroundcoverage" value="false" />
                         </include>
