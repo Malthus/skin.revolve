@@ -75,7 +75,7 @@
 					<width>1140</width>
 					<height>80</height>
 					<align>left</align>
-					<textcolor>BackgroundColor</textcolor>
+					<textcolor>$VAR[BackgroundColor]</textcolor>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 					<label>$INFO[ListItem.Property(Addon.Broken)]</label>
 				</control>
