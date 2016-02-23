@@ -749,18 +749,38 @@
 
             <control type="group">
                 <include name="VisibilityForNoBanner" />
-                <include name="OutlineLabel">
-                    <param name="posx" value="22" />
-                    <param name="posy" value="110" />
-                    <param name="width" value="720" />
-                    <param name="height" value="30" />
-                    <param name="font" value="MediumViewFont" />
-                    <param name="textcolor" value="$VAR[ContentBackgroundColor]" />
-                    <param name="outlinecolor" value="$VAR[ContentMainColor]" />
-                    <param name="outlinesize" value="2" />
-                    <param name="align" value="center" />
-                    <param name="label" value="$VAR[ContentNameLabel]" />
-                </include>
+                
+                <control type="group">
+                    <visible>ListItem.IsPlaying</visible>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="22" />
+                        <param name="posy" value="110" />
+                        <param name="width" value="720" />
+                        <param name="height" value="30" />
+                        <param name="font" value="MediumViewFont" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[HighlightColor]" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$VAR[ContentNameLabel]" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>!ListItem.IsPlaying</visible>
+                    <include name="OutlineLabel">
+                        <param name="posx" value="22" />
+                        <param name="posy" value="110" />
+                        <param name="width" value="720" />
+                        <param name="height" value="30" />
+                        <param name="font" value="MediumViewFont" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[MainColor]" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="label" value="$VAR[ContentNameLabel]" />
+                    </include>
+                </control>
             </control>
         </definition>
 	</include>
