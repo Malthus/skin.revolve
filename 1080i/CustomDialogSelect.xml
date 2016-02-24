@@ -238,14 +238,12 @@
 
 				<control type="button" id="20">
                     <description>Ok Button</description>
-                    <visible>false</visible>
 					<label>$LOCALIZE[186]</label>
 					<onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Container(40).ListItem.Property(Action)])</onclick>
 					<onclick>Close</onclick>
 				</control>
 				<control type="button" id="21">
                     <description>Cancel Button</description>
-                    <posy>40</posy>
 					<label>$LOCALIZE[222]</label>
 					<onclick>Close</onclick>
 				</control>
