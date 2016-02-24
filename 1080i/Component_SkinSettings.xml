@@ -128,10 +128,14 @@
 
 	<include name="AddonSettingsForSkinSettings">
         <definition>
-            <onfocus>Skin.SetString(AddonLyrics,script.cu.lrclyrics)</onfocus>
+            <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(Music.LyricsAddon,script.cu.lrclyrics)</onfocus>
+            <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(AddonLyrics,script.cu.lrclyrics)</onfocus>
+            <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(Music.LyricsAddon)</onfocus>
+            <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(AddonLyrics)</onfocus>
+            <onfocus>Skin.Reset(Weather.BackgroundImageResource)</onfocus>
         </definition>
 	</include>
-	
+
 	<include name="MiscellaneousSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>

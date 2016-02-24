@@ -329,9 +329,19 @@
 						<description>Lyrics Button</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31126]:</label>
+						<label>$LOCALIZE[31126]</label>
 						<label2>$INFO[Skin.String(AddonLyrics)]</label2>
-						<onclick>Skin.SetAddon(AddonLyrics,xbmc.python.lyrics)</onclick>
+						<onclick>Skin.SetAddon(Music.LyricsAddon,xbmc.python.lyrics)</onclick>
+						<onclick>Skin.SetString(AddonLyrics,$INFO[Skin.String(Music.LyricsAddon)])</onclick>
+					</control>
+
+					<control type="button" id="702">
+						<description>Weather Fanart Button</description>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31240]</label>
+						<label2>$INFO[Skin.String(Weather.BackgroundImageResource)]</label2>
+						<onclick>Skin.SetAddon(Weather.BackgroundImageResource,kodi.resource.images)</onclick>
 					</control>
                     
 					<control type="label" id="721">
@@ -845,6 +855,11 @@
                         <visible>Control.HasFocus(701)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31190]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(702)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31241]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(801)</visible>
