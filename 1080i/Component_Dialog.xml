@@ -1128,7 +1128,105 @@
     
     <constant name="PosYForKeyboardDialog">270</constant>
     <constant name="HeightForKeyboardDialog">540</constant>
+
+	<include name="SmallIconForWindowForDialog">
+        <param name="visible" default="true" />
+        <param name="iconthumbnail" default="-" />
+        <param name="icontexture" default="-" />
+        <param name="iconlabel" default="-" />
     
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <posx>PosXForSmallIconFrameForDialog</posx>
+                <posy>PosYForSmallIconFrameForDialog</posy>
+                <include name="BackgroundForSmallCircleThumbnailIcon" />
+                
+                <control type="label">
+                    <posx>15</posx>
+                    <posy>15</posy>
+                    <width>60</width>
+                    <height>60</height>
+                    <font>DialogSmallIconFont</font>
+                    <textcolor>$VAR[BackgroundColor]</textcolor>
+                    <align>center</align>
+                    <label>$PARAM[iconlabel]</label>
+                </control>
+            
+                <control type="image">
+                    <posx>2</posx>
+                    <posy>2</posy>
+                    <width>86</width>
+                    <height>86</height>
+                    <texture colordiffuse="$VAR[BackgroundColor]">$PARAM[icontexture]</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                
+                <control type="image">
+                    <posx>2</posx>
+                    <posy>2</posy>
+                    <width>86</width>
+                    <height>86</height>
+                    <texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+	<include name="DefaultIconForWindowForDialog">
+        <param name="visible" default="true" />
+        <param name="iconthumbnail" default="-" />
+        <param name="icontexture" default="-" />
+        <param name="iconlabel" default="-" />
+        <param name="iconoverlayvisible" default="false" />
+    
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <posx>PosXForDefaultIconFrameForDialog</posx>
+                <posy>PosYForDefaultIconFrameForDialog</posy>
+                <include name="BackgroundForDefaultCircleThumbnailIcon" />
+
+                <control type="label">
+                    <posx>35</posx>
+                    <posy>35</posy>
+                    <width>200</width>
+                    <height>200</height>
+                    <font>DialogDefaultIconFont</font>
+                    <textcolor>$VAR[BackgroundColor]</textcolor>
+                    <align>center</align>
+                    <label>$PARAM[iconlabel]</label>
+                </control>
+                
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>4</posy>
+                    <width>262</width>
+                    <height>262</height>
+                    <texture colordiffuse="$VAR[BackgroundColor]">$PARAM[icontexture]</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>4</posy>
+                    <width>262</width>
+                    <height>262</height>
+                    <texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
+                    <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+                </control>
+                
+                <control type="group">
+                    <visible>$PARAM[iconoverlayvisible]</visible>
+                    <posx>35</posx>
+                    <posy>35</posy>
+                    <include name="DefaultOverlayMediaFlag" />
+                </control>
+            </control>
+        </definition>
+    </include>
+
 	<include name="WindowForDialog">
         <param name="visible" default="true" />
         <param name="height" default="220" />
@@ -1257,84 +1355,20 @@
                     <label>$PARAM[headerlabel]</label>
                 </control>
                 
-                <control type="group">
-                    <visible>$PARAM[iconsmallvisible]</visible>
-                    <posx>PosXForSmallIconFrameForDialog</posx>
-                    <posy>PosYForSmallIconFrameForDialog</posy>
-                    <include name="BackgroundForSmallCircleThumbnailIcon" />
-                    
-                    <control type="label">
-                        <posx>15</posx>
-                        <posy>15</posy>
-                        <width>60</width>
-                        <height>60</height>
-                        <font>DialogSmallIconFont</font>
-                        <textcolor>$VAR[BackgroundColor]</textcolor>
-                        <align>center</align>
-                        <label>$PARAM[iconlabel]</label>
-                    </control>
-                
-                    <control type="image">
-                        <posx>2</posx>
-                        <posy>2</posy>
-                        <width>86</width>
-                        <height>86</height>
-                        <texture colordiffuse="$VAR[BackgroundColor]">$PARAM[icontexture]</texture>
-                        <aspectratio>scale</aspectratio>
-                    </control>
-                    
-                    <control type="image">
-                        <posx>2</posx>
-                        <posy>2</posy>
-                        <width>86</width>
-                        <height>86</height>
-                        <texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
-                        <aspectratio>keep</aspectratio>
-                    </control>
-                </control>
+                <include name="SmallIconForWindowForDialog">
+                    <param name="visible" value="$PARAM[iconsmallvisible]" />
+                    <param name="iconthumbnail" value="$PARAM[iconthumbnail]" />
+                    <param name="icontexture" value="$PARAM[icontexture]" />
+                    <param name="iconlabel" value="$PARAM[iconlabel]" />
+                </include>
 
-                <control type="group">
-                    <visible>$PARAM[icondefaultvisible]</visible>
-                    <posx>PosXForDefaultIconFrameForDialog</posx>
-                    <posy>PosYForDefaultIconFrameForDialog</posy>
-                    <include name="BackgroundForDefaultCircleThumbnailIcon" />
-                    
-                    <control type="label">
-                        <posx>35</posx>
-                        <posy>35</posy>
-                        <width>200</width>
-                        <height>200</height>
-                        <font>DialogDefaultIconFont</font>
-                        <textcolor>$VAR[BackgroundColor]</textcolor>
-                        <align>center</align>
-                        <label>$PARAM[iconlabel]</label>
-                    </control>
-                    
-                    <control type="image">
-                        <posx>4</posx>
-                        <posy>4</posy>
-                        <width>262</width>
-                        <height>262</height>
-                        <texture colordiffuse="$VAR[BackgroundColor]">$PARAM[icontexture]</texture>
-                        <aspectratio>scale</aspectratio>
-                    </control>
-                    
-                    <control type="image">
-                        <posx>4</posx>
-                        <posy>4</posy>
-                        <width>262</width>
-                        <height>262</height>
-                        <texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
-                        <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-                    </control>
-                    
-                    <control type="group">
-                        <visible>$PARAM[iconoverlayvisible]</visible>
-                        <posx>35</posx>
-                        <posy>35</posy>
-                        <include name="DefaultOverlayMediaFlag" />
-                    </control>
-                </control>
+                <include name="DefaultIconForWindowForDialog">
+                    <param name="visible" value="$PARAM[icondefaultvisible]" />
+                    <param name="iconthumbnail" value="$PARAM[iconthumbnail]" />
+                    <param name="icontexture" value="$PARAM[icontexture]" />
+                    <param name="iconlabel" value="$PARAM[iconlabel]" />
+                    <param name="iconoverlayvisible" value="$PARAM[iconoverlayvisible]" />
+                </include>
 			</control>
         </definition>
 	</include>
