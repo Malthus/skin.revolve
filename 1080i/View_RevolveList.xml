@@ -44,31 +44,61 @@
                     <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
                     <animation effect="fade" end="0" reversible="false">Hidden</animation>
                     
-                    <include name="OutlineLabel">
-                        <param name="posx" value="860" />
-                        <param name="posy" value="650" />
-                        <param name="width" value="1000" />
-                        <param name="height" value="100" />
-                        <param name="font" value="DetailViewFont" />
-                        <param name="textcolor" value="$VAR[MainColor]" />
-                        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                        <param name="outlinesize" value="2" />
-                        <param name="align" value="left" />
-                        <param name="label" value="$VAR[ContentCategoryLabel]" />
-                    </include>
-                    
-                    <include name="OutlineLabel">
-                        <param name="posx" value="860" />
-                        <param name="posy" value="750" />
-                        <param name="width" value="1000" />
-                        <param name="height" value="100" />
-                        <param name="font" value="DetailViewFont" />
-                        <param name="textcolor" value="$VAR[MainColor]" />
-                        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                        <param name="outlinesize" value="2" />
-                        <param name="align" value="left" />
-                        <param name="label" value="$VAR[ContentDetailLabel]" />
-                    </include>
+                    <control type="group">
+                        <visible>ListItem.IsPlaying</visible>
+                        <include name="OutlineLabel">
+                            <param name="posx" value="860" />
+                            <param name="posy" value="650" />
+                            <param name="width" value="1000" />
+                            <param name="height" value="100" />
+                            <param name="font" value="DetailViewFont" />
+                            <param name="textcolor" value="$VAR[HighlightColor]" />
+                            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                            <param name="outlinesize" value="2" />
+                            <param name="align" value="left" />
+                            <param name="label" value="$VAR[ContentCategoryLabel]" />
+                        </include>
+                        <include name="OutlineLabel">
+                            <param name="posx" value="860" />
+                            <param name="posy" value="750" />
+                            <param name="width" value="1000" />
+                            <param name="height" value="100" />
+                            <param name="font" value="DetailViewFont" />
+                            <param name="textcolor" value="$VAR[HighlightColor]" />
+                            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                            <param name="outlinesize" value="2" />
+                            <param name="align" value="left" />
+                            <param name="label" value="$VAR[ContentDetailLabel]" />
+                        </include>
+                    </control>
+
+                    <control type="group">
+                        <visible>!ListItem.IsPlaying</visible>
+                        <include name="OutlineLabel">
+                            <param name="posx" value="860" />
+                            <param name="posy" value="650" />
+                            <param name="width" value="1000" />
+                            <param name="height" value="100" />
+                            <param name="font" value="DetailViewFont" />
+                            <param name="textcolor" value="$VAR[MainColor]" />
+                            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                            <param name="outlinesize" value="2" />
+                            <param name="align" value="left" />
+                            <param name="label" value="$VAR[ContentCategoryLabel]" />
+                        </include>
+                        <include name="OutlineLabel">
+                            <param name="posx" value="860" />
+                            <param name="posy" value="750" />
+                            <param name="width" value="1000" />
+                            <param name="height" value="100" />
+                            <param name="font" value="DetailViewFont" />
+                            <param name="textcolor" value="$VAR[MainColor]" />
+                            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                            <param name="outlinesize" value="2" />
+                            <param name="align" value="left" />
+                            <param name="label" value="$VAR[ContentDetailLabel]" />
+                        </include>
+                    </control>
                 </control>
 
                 <control type="group">
