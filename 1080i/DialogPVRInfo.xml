@@ -7,11 +7,21 @@
 			<posy>PosYForFifteenLinesDialog</posy>
 			<include name="WindowForDialog">
                 <param name="height" value="HeightForFifteenLinesDialog" />
-                <param name="headerlabel" value ="$INFO[ListItem.Label]" />
-                <param name="icontexture" value ="icons/icon-television.png" />
+                <param name="headerlabel" value="$INFO[ListItem.Label]" />
+                <param name="icontexture" value="-" />
                 <param name="animate" value="true" />
             </include>
 
+			<include name="DefaultIconForWindowForDialog">
+                <param name="visible" value="!Window.IsVisible(pvrrecordinginfo)" />
+                <param name="icontexture" value="icons/icon-television.png" />
+            </include>
+            
+			<include name="DefaultIconForWindowForDialog">
+                <param name="visible" value="Window.IsVisible(pvrrecordinginfo)" />
+                <param name="icontexture" value="icons/icon-clapperboard.png" />
+            </include>
+            
 			<control type="list" id="49">
 				<posx>560</posx>
 				<posy>80</posy>
