@@ -518,15 +518,15 @@
             <control type="group">
                 <visible>$PARAM[highlightvisible]</visible>
                 <include name="BasicElementForRotateListView">
-                    <param name="textcolor" default="$VAR[HighlightColor]" />
-                    <param name="label" default="$PARAM[labe]" />
+                    <param name="textcolor" value="$VAR[HighlightColor]" />
+                    <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
             <control type="group">
                 <visible>!$PARAM[highlightvisible]</visible>
                 <include name="BasicElementForRotateListView">
-                    <param name="textcolor" default="$VAR[MainColor]" />
-                    <param name="label" default="$PARAM[labe]" />
+                    <param name="textcolor" value="$VAR[MainColor]" />
+                    <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
         </definition>
@@ -540,15 +540,15 @@
             <control type="group">
                 <visible>$PARAM[highlightvisible]</visible>
                 <include name="BasicElementForRotateListView">
-                    <param name="textcolor" default="$VAR[HighlightColor]" />
-                    <param name="label" default="$PARAM[labe]" />
+                    <param name="textcolor" value="$VAR[HighlightColor]" />
+                    <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
             <control type="group">
                 <visible>!$PARAM[highlightvisible]</visible>
                 <include name="BasicElementForRotateListView">
-                    <param name="textcolor" default="$VAR[TextColor]" />
-                    <param name="label" default="$PARAM[labe]" />
+                    <param name="textcolor" value="$VAR[TextColor]" />
+                    <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
         </definition>
