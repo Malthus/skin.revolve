@@ -1244,6 +1244,21 @@
             </control>
         </definition>
     </include>
+    
+    <include name="MarkupForButtonAreaForWindowForDialog">
+        <param name="height" default="220" />
+        <param name="color" default="$VAR[BackgroundColor]" />
+        
+        <definition>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>540</width>
+            <height>$PARAM[height]</height>
+            <fadetime>100</fadetime>
+            <aspectratio>stretch</aspectratio>
+            <texture colordiffuse="$PARAM[color]">white.png</texture>
+        </definition>
+    </include>
 
 	<include name="WindowForDialog">
         <param name="visible" default="true" />
@@ -1268,27 +1283,39 @@
                 </include>
 
                 <control type="image">
-                    <visible>$PARAM[animate]</visible>
+                    <visible>$PARAM[animate] + Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
                     <animation effect="fade" delay="0" start="99" end="100" time="200">WindowOpen</animation>
                     <animation effect="fade" start="100" end="99" time="200">WindowClose</animation>
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>540</width>
-                    <height>$PARAM[height]</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="$VAR[DialogButtonAreaBackgroundColor]">white.png</texture>
+                    <include name="MarkupForButtonAreaForWindowForDialog">
+                        <param name="height" value="$PARAM[height]" />
+                        <param name="color" value="$VAR[SelectColor]" />
+                    </include>
                 </control>
                 
                 <control type="image">
-                    <visible>!$PARAM[animate]</visible>
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>540</width>
-                    <height>$PARAM[height]</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="$VAR[DialogButtonAreaBackgroundColor]">white.png</texture>
+                    <visible>$PARAM[animate] + !Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
+                    <animation effect="fade" delay="0" start="99" end="100" time="200">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="99" time="200">WindowClose</animation>
+                    <include name="MarkupForButtonAreaForWindowForDialog">
+                        <param name="height" value="$PARAM[height]" />
+                        <param name="color" value="$VAR[BackgroundColor]" />
+                    </include>
+                </control>
+                
+                <control type="image">
+                    <visible>!$PARAM[animate] + Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
+                    <include name="MarkupForButtonAreaForWindowForDialog">
+                        <param name="height" value="$PARAM[height]" />
+                        <param name="color" value="$VAR[SelectColor]" />
+                    </include>
+                </control>
+                
+                <control type="image">
+                    <visible>!$PARAM[animate] + !Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
+                    <include name="MarkupForButtonAreaForWindowForDialog">
+                        <param name="height" value="$PARAM[height]" />
+                        <param name="color" value="$VAR[BackgroundColor]" />
+                    </include>
                 </control>
                 
                 <control type="group">

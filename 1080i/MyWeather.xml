@@ -110,7 +110,7 @@
         </include>
         
         <include name="ContentLabelForBottomRing">
-            <param name="textcolor" value="$VAR[BackgroundColor]" />
+            <param name="highlightvisible" value="false" />
             <param name="namelabel" value="$INFO[Container(53).ListItem.Label]" />
             <param name="informationlabel" value="$INFO[Container(53).ListItem.Property(Weather)]" />
         </include>

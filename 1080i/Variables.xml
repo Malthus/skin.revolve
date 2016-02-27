@@ -99,16 +99,6 @@
         <value>$INFO[ListItem.Label2]</value>
 	</variable>
 
-	<variable name="ContentMainColor">
-		<value condition="ListItem.IsPlaying">HighlightColor</value>
-		<value>MainColor</value>
-	</variable>
-	
-	<variable name="ContentBackgroundColor">
-		<value condition="ListItem.IsPlaying">HighlightColor</value>
-		<value>BackgroundColor</value>
-	</variable>
-	
 	<variable name="ContentThumbnail">
 		<value condition="!IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="SubString(ListItem.FileExtension,jpg) | SubString(ListItem.FileExtension,jpeg)">$INFO[ListItem.FileNameAndPath]</value>
@@ -247,17 +237,6 @@
 		<value condition="!IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
 		<value condition="!IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Broken),[B],[/B][CR][CR]]$INFO[ListItem.Property(Addon.Description)]$INFO[ListItem.Property(Addon.Disclaimer),[CR][CR],]</value>
 		<value condition="Skin.HasSetting(NoInformationLabel.Visible)">$LOCALIZE[31300]</value>
-	</variable>
-	
-	<variable name="ContentMediaFlagInViewColor">
-		<value condition="Control.IsVisible(51) | [Control.IsVisible(52) + Control.HasFocus(52)]">MainColor</value>
-		<value condition="Control.IsVisible(52) + !Control.HasFocus(52)">TextColor</value>
-		<value>BackgroundColor</value>
-	</variable>
-	
-	<variable name="ContentMediaBackgroundInViewColor">
-		<value condition="Control.IsVisible(51) | Control.IsVisible(52)">BackgroundColor</value>
-		<value>MainColor</value>
 	</variable>
 	
 	<variable name="ContentWrapMinusThreeThumbnail">
@@ -422,9 +401,4 @@
 		<value condition="Player.Paused">0x</value>
 		<value>1x</value>
 	</variable>
-
-    <variable name="DialogButtonAreaBackgroundColor">
-        <value condition="Skin.HasSetting(Settings.ButtonAreaSeparate)">SelectColor</value>
-        <value>BackgroundColor</value>
-    </variable>
 </includes>
