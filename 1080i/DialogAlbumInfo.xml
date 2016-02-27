@@ -17,7 +17,7 @@
                 </include>
                 
                 <control type="list" id="20">
-                    <include name="MarkupForListForDialog">
+                    <include name="MarkupForInfoListForDialog">
                         <param name="height" value="200" />
                         <param name="pagecontrol" value="30" />
                     </include>
@@ -79,12 +79,6 @@
                             <label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
                             <onclick>Noop</onclick>
                         </item>
-                        <item>
-                            <visible>StringCompare($INFO[Control.GetLabel(4)],$LOCALIZE[414])</visible>
-                            <label>Status</label>
-                            <label2>We wachtren op een refresh</label2>
-                            <onclick>Noop</onclick>
-                        </item>
                     </content>
                 </control>
 
@@ -109,7 +103,7 @@
                 </include>
                 
                 <control type="list" id="22">
-                    <include name="MarkupForListForDialog">
+                    <include name="MarkupForInfoListForDialog">
                         <param name="height" value="200" />
                         <param name="pagecontrol" value="23" />
                     </include>
@@ -184,7 +178,7 @@
                 <param name="posx" value="560" />
                 <param name="posy" value="290" />
             </include>
-            
+
             <include name="TextboxForDialog">
                 <param name="posy" value="360" />
                 <param name="height" value="320" />

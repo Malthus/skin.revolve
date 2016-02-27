@@ -14,10 +14,14 @@
             </include>
 
 			<control type="list" id="20">
+                <include name="MarkupForInfoListForDialog">
+                    <param name="height" value="160" />
+                    <param name="pagecontrol" value="21" />
+                </include>
 				<posx>560</posx>
 				<posy>80</posy>
 				<width>1240</width>
-				<height>160</height>
+				<height>200</height>
 				<itemgap>0</itemgap>
 				
 				<include>ItemsForInfoListInDialog</include>
@@ -46,10 +50,19 @@
                 </content>
             </control>
 
+            <control type="scrollbar" id="21">
+                <include name="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="200" />
+                </include>
+                <onleft>9000</onleft>
+                <onright>Noop</onright>
+            </control>
+            
 			<control type="group">
 				<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
 				<posx>560</posx>
-				<posy>240</posy>
+				<posy>280</posy>
 
 				<control type="image">
 					<posx>0</posx>
@@ -82,8 +95,8 @@
 			</control>
             
             <include name="TextboxForDialog">
-                    <param name="posy" value="320" />
-                    <param name="height" value="360" />
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
                     <param name="textboxid" value="400" />
                     <param name="scrollbarid" value="410" />
                     <param name="label" value="$VAR[ContentDescription]" />

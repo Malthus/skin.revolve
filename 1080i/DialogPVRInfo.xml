@@ -23,12 +23,10 @@
             </include>
             
 			<control type="list" id="49">
-				<posx>560</posx>
-				<posy>80</posy>
-				<width>1240</width>
-				<height>200</height>
-				<itemgap>0</itemgap>
-                <pagecontrol>60</pagecontrol>
+                <include name="MarkupForInfoListForDialog">
+                    <param name="height" value="200" />
+                    <param name="pagecontrol" value="60" />
+                </include>
 				
 				<include>ItemsForInfoListInDialog</include>
 				
