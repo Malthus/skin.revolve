@@ -1,37 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<variable name="MainColor">
-		<value>MainColor</value>
-	</variable>
-
-	<variable name="SelectColor">
-		<value>SelectColor</value>
-	</variable>
-
-	<variable name="SecondaryColor">
-		<value>SecondaryColor</value>
-	</variable>
-	
-	<variable name="BackgroundColor">
-		<value>BackgroundColor</value>
-	</variable>
-
-	<variable name="FademaskColor">
-		<value>FadeDiffuseColor</value>
-	</variable>
-
-	<variable name="ShadowmaskColor">
-		<value>55000000</value>
-	</variable>
-
-	<variable name="TextColor">
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="HighlightColor">
-		<value>HighlightColor</value>
-	</variable>
-	
 	<variable name="ContentNameLabel">
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
@@ -400,5 +368,37 @@
 		<value condition="Player.Forwarding32x | Player.Rewinding32x">32x</value>
 		<value condition="Player.Paused">0x</value>
 		<value>1x</value>
+	</variable>
+
+	<variable name="MainColor">
+		<value>MainColor</value>
+	</variable>
+
+	<variable name="SelectColor">
+		<value>SelectColor</value>
+	</variable>
+
+	<variable name="SecondaryColor">
+		<value>SecondaryColor</value>
+	</variable>
+	
+	<variable name="BackgroundColor">
+		<value>BackgroundColor</value>
+	</variable>
+
+	<variable name="FademaskColor">
+		<value>FadeDiffuseColor</value>
+	</variable>
+
+	<variable name="ShadowmaskColor">
+		<value>55000000</value>
+	</variable>
+
+	<variable name="TextColor">
+		<value>TextColor</value>
+	</variable>
+	
+	<variable name="HighlightColor">
+		<value>HighlightColor</value>
 	</variable>
 </includes>
