@@ -3,6 +3,9 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2003,6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
+    <onload condition="System.HasAlarm(DialogAutoScrollTimer)">CancelAlarm(DialogAutoScrollTimer,silent)</onload>
+    <onload condition="Skin.HasSetting(Settings.DialogInfoAutoScroll) + IntegerGreaterThan(Container(22).NumItems,7) + !System.HasAlarm(DialogRefreshTimer)">AlarmClock(DialogAutoScrollTimer,Control.Move(22,1),00:01,silent,loop)</onload>
+    <onunload condition="System.HasAlarm(DialogAutoScrollTimer)">CancelAlarm(DialogAutoScrollTimer,silent)</onunload>
 
 	<controls>
 		<control type="group">

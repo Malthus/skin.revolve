@@ -4,29 +4,33 @@
     <onload condition="Container.Content(artists) + Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2001,6),00:01,silent)</onload>
     <onload condition="Container.Content(albums) + Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2001,6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
+    <onload condition="System.HasAlarm(DialogAutoScrollTimer)">CancelAlarm(DialogAutoScrollTimer,silent)</onload>
+    <onload condition="Container.Content(artists) + Skin.HasSetting(Settings.DialogInfoAutoScroll) + IntegerGreaterThan(Container(20).NumItems,6) + !System.HasAlarm(DialogRefreshTimer)">AlarmClock(DialogAutoScrollTimer,Control.Move(20,1),00:01,silent,loop)</onload>
+    <onload condition="Container.Content(albums) + Skin.HasSetting(Settings.DialogInfoAutoScroll) + IntegerGreaterThan(Container(22).NumItems,5) + !System.HasAlarm(DialogRefreshTimer)">AlarmClock(DialogAutoScrollTimer,Control.Move(22,1),00:01,silent,loop)</onload>
+    <onunload condition="System.HasAlarm(DialogAutoScrollTimer)">CancelAlarm(DialogAutoScrollTimer,silent)</onunload>
 
 	<controls>
 		<control type="group">
 			<posy>PosYForFifteenLinesDialog</posy>
-            
+
             <control type="group">
 				<visible>Container.Content(artists)</visible>
-                
+
                 <include name="WindowForDialog">
                     <param name="height" value="HeightForFifteenLinesDialog" />
                     <param name="headerlabel" value="$VAR[ContentNameLabel]" />
                     <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
                     <param name="animate" value="true" />
                 </include>
-                
+
                 <control type="list" id="20">
                     <include name="MarkupForInfoListForDialog">
                         <param name="height" value="240" />
                         <param name="pagecontrol" value="30" />
                     </include>
-                    
+
                     <include name="ItemsForInfoListInDialog" />
-                    
+
                     <content>
                         <item>
                             <visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
@@ -94,7 +98,7 @@
                     <onright>Noop</onright>
                 </control>
 			</control>
-            
+
             <control type="group">
 				<visible>Container.Content(albums)</visible>
 
@@ -104,15 +108,15 @@
                     <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
                     <param name="animate" value="true" />
                 </include>
-                
+
                 <control type="list" id="22">
                     <include name="MarkupForInfoListForDialog">
                         <param name="height" value="200" />
                         <param name="pagecontrol" value="23" />
                     </include>
-                    
+
                     <include name="ItemsForInfoListInDialog" />
-                    
+
                     <content>
                         <item>
                             <visible>!IsEmpty(ListItem.Artist)</visible>
