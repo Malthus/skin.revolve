@@ -561,6 +561,16 @@
 						<label>-</label>
 					</control>
 
+					<control type="radiobutton" id="817">
+						<description>Info Dialog Auto Refresh Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31242]</label>
+						<selected>Skin.HasSetting(Settings.DialogInfoAutoRefresh)</selected>
+						<onclick>Skin.ToggleSetting(Settings.DialogInfoAutoRefresh)</onclick>
+					</control>
+
 					<control type="radiobutton" id="814">
                         <description>Show Settings Help Option</description>
 						<width>1100</width>
@@ -935,6 +945,11 @@
                         <visible>Control.HasFocus(816)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31601]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(817)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31242]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(901)</visible>

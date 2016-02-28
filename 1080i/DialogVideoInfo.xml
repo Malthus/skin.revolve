@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
+<window id="2003">
 	<defaultcontrol always="true">9000</defaultcontrol>
+    <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2003,6),00:01,silent)</onload>
+    <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
 
 	<controls>
 		<control type="group">

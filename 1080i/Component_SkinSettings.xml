@@ -29,6 +29,8 @@
             <onfocus>Skin.SetBool(Background.VideoActive)</onfocus>
             <onfocus>Skin.Reset(Background.VideoFaded)</onfocus>
             <onfocus>Skin.SetString(Background.AnimationLevel,2)</onfocus>
+
+            <onfocus>Skin.Reset(Weather.BackgroundImageResource)</onfocus>
         </definition>
 	</include>
 	
@@ -132,7 +134,6 @@
             <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(AddonLyrics,script.cu.lrclyrics)</onfocus>
             <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(Music.LyricsAddon)</onfocus>
             <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(AddonLyrics)</onfocus>
-            <onfocus>Skin.Reset(Weather.BackgroundImageResource)</onfocus>
         </definition>
 	</include>
 
@@ -153,6 +154,7 @@
             <onfocus>Skin.SetString(Thumbnails.Type,C)</onfocus>
             <onfocus>Skin.Reset(Thumbnails.NameVisible)</onfocus>
             <onfocus>Skin.SetBool(Landscape.DescriptionVisible)</onfocus>
+            <onfocus>Skin.Reset(Settings.DialogInfoAutoRefresh)</onfocus>
             <onfocus>Skin.SetBool(Settings.HelpVisible)</onfocus>
         </definition>
 	</include>
