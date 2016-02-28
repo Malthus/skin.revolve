@@ -340,8 +340,8 @@
         <definition>
             <control type="group">
                 <description>Settings Description Textbox</description>
-                <visible>Control.IsVisible(200)</visible>
-                        
+                <visible>ControlGroup(200).HasFocus</visible>
+
                 <posx>720</posx>
                 <posy>880</posy>
                 <width>880</width>
