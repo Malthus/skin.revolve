@@ -184,7 +184,7 @@
 		<value condition="Window.IsVisible(1150) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(1150)">special://skin/backgrounds/exit.jpg</value>
         
-		<value condition="Window.IsVisible(weather) + !Substring(Skin.String(Weather.BackgroundImageResource),multi)">resource://$INFO[Skin.String(Weather.BackgroundImageResource)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+		<value condition="Window.IsVisible(weather) + !Substring(Skin.String(Background.WeatherImageResource),multi)">resource://$INFO[Skin.String(Background.WeatherImageResource)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
 		<value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>
 		<value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
 		<value condition="Window.IsVisible(eventlog)">special://skin/backgrounds/eventlog.jpg</value>
@@ -215,7 +215,7 @@
 	</variable>
 	
 	<variable name="ContentMultiImageBackground">
-		<value condition="Window.IsVisible(weather) + Substring(Skin.String(Weather.BackgroundImageResource),multi)">resource://$INFO[Skin.String(Weather.BackgroundImageResource)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+		<value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.WeatherImageResource),multi)">resource://$INFO[Skin.String(Background.WeatherImageResource)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
         <value>-</value>
 	</variable>
 

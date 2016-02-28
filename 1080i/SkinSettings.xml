@@ -47,6 +47,16 @@
 						<onclick>Skin.ToggleSetting(Background.ImageFaded)</onclick>
 					</control>
 
+					<control type="button" id="109">
+						<description>Weather Fanart Button</description>
+						<enable>Skin.HasSetting(Background.ImageActive)</enable>
+						<width>1100</width>
+						<align>left</align>
+						<label>- $LOCALIZE[31240]</label>
+						<label2>$INFO[Skin.String(Background.WeatherImageResource)]</label2>
+						<onclick>Skin.SetAddon(Background.WeatherImageResource,kodi.resource.images)</onclick>
+					</control>
+                    
 					<control type="radiobutton" id="108">
 						<description>Fanart For Files Background Image Option</description>
 						<enable>Skin.HasSetting(Background.ImageActive)</enable>
@@ -335,15 +345,6 @@
 						<onclick>Skin.SetString(AddonLyrics,$INFO[Skin.String(Music.LyricsAddon)])</onclick>
 					</control>
 
-					<control type="button" id="702">
-						<description>Weather Fanart Button</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31240]</label>
-						<label2>$INFO[Skin.String(Weather.BackgroundImageResource)]</label2>
-						<onclick>Skin.SetAddon(Weather.BackgroundImageResource,kodi.resource.images)</onclick>
-					</control>
-                    
 					<control type="label" id="721">
 						<description>Spacer</description>
 						<width>1100</width>
@@ -368,11 +369,12 @@
 					<visible>Container(99).Hasfocus(8)</visible>
 					<width>1100</width>
 					<height>760</height>
+                    <pagecontrol>899</pagecontrol>
 					<itemgap>0</itemgap>
 					<onup>800</onup>
 					<ondown>800</ondown>
 					<onleft>99</onleft>
-					<onright>Noop</onright>
+					<onright>899</onright>
 					<orientation>vertical</orientation>
 
 					<control type="radiobutton" id="803">
@@ -600,6 +602,17 @@
 					</control>
 				</control>
 
+                <control type="scrollbar" id="899">
+					<visible>Control.IsVisible(800)</visible>
+                    <posx>1140</posx>
+                    <posy>0</posy>
+                    <height>760</height>
+                    <orientation>vertical</orientation>
+                    <showonepage>false</showonepage>
+                    <onleft>800</onleft>
+                    <onright>Noop</onright>
+                </control>
+
 				<control type="grouplist" id="900">
 					<description>Control Area for Debug Settings</description>
 					<visible>Container(99).Hasfocus(9)</visible>
@@ -812,6 +825,11 @@
                         <label>$LOCALIZE[31611]</label>
                     </control>
                     <control type="textbox">
+                        <visible>Control.HasFocus(109)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31241]</label>
+                    </control>
+                    <control type="textbox">
                         <visible>Control.HasFocus(301)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31201]</label>
@@ -865,11 +883,6 @@
                         <visible>Control.HasFocus(701)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31190]</label>
-                    </control>
-                    <control type="textbox">
-                        <visible>Control.HasFocus(702)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31241]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(801)</visible>

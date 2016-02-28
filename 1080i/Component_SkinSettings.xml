@@ -23,14 +23,14 @@
         <definition>
             <onfocus>Skin.SetBool(Background.ImageActive)</onfocus>
             <onfocus>Skin.Reset(Background.ImageFaded)</onfocus>
+            <onfocus>Skin.Reset(Background.WeatherImageResource)</onfocus>
             <onfocus>Skin.SetBool(Background.ImageFanartForFiles)</onfocus>
             <onfocus>Skin.SetBool(Background.VisualiserActive)</onfocus>
             <onfocus>Skin.Reset(Background.VisualiserFaded)</onfocus>
             <onfocus>Skin.SetBool(Background.VideoActive)</onfocus>
             <onfocus>Skin.Reset(Background.VideoFaded)</onfocus>
-            <onfocus>Skin.SetString(Background.AnimationLevel,2)</onfocus>
 
-            <onfocus>Skin.Reset(Weather.BackgroundImageResource)</onfocus>
+            <onfocus>Skin.SetString(Background.AnimationLevel,2)</onfocus>
         </definition>
 	</include>
 	
@@ -228,7 +228,7 @@
             </control>
         </definition>
 	</include>
-    
+
 	<include name="ItemForHomeOptionListInSkinSettings">
         <param name="width" default="1100" />
         <param name="textwidth" default="1060" />
