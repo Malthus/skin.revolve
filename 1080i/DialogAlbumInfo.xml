@@ -7,7 +7,7 @@
 			<posy>PosYForFifteenLinesDialog</posy>
             
             <control type="group">
-				<visible>Container.Content(Artists)</visible>
+				<visible>Container.Content(artists)</visible>
                 
                 <include name="WindowForDialog">
                     <param name="height" value="HeightForFifteenLinesDialog" />
@@ -18,7 +18,7 @@
                 
                 <control type="list" id="20">
                     <include name="MarkupForInfoListForDialog">
-                        <param name="height" value="200" />
+                        <param name="height" value="240" />
                         <param name="pagecontrol" value="30" />
                     </include>
                     
@@ -93,7 +93,7 @@
 			</control>
             
             <control type="group">
-				<visible>Container.Content(Albums)</visible>
+				<visible>Container.Content(albums)</visible>
 
                 <include name="WindowForDialog">
                     <param name="height" value="HeightForFifteenLinesDialog" />
@@ -172,12 +172,12 @@
                     <onleft>9000</onleft>
                     <onright>Noop</onright>
                 </control>
-			</control>
 
-            <include name="HorizontalDialogListOfContentMediaFlag">
-                <param name="posx" value="560" />
-                <param name="posy" value="290" />
-            </include>
+                <include name="HorizontalDialogListOfContentMediaFlag">
+                    <param name="posx" value="560" />
+                    <param name="posy" value="290" />
+                </include>
+			</control>
 
             <include name="TextboxForDialog">
                 <param name="posy" value="360" />
