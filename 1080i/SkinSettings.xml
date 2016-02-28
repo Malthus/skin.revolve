@@ -121,7 +121,8 @@
                         <description>Background Animation Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31798]: $VAR[BackgroundAnimationLevelLabel]</label>
+						<label>$LOCALIZE[31798]</label>
+						<label2>$VAR[BackgroundAnimationLevelLabel]</label2>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31798],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31217],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,Background.AnimationLevel,1188)</onclick>
@@ -197,7 +198,8 @@
 						<description>Circle Movies Source Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31198]: $INFO[Skin.String(CircleMovieOption.Name)]</label>
+						<label>$LOCALIZE[31198]</label>
+						<label2>$INFO[Skin.String(CircleMovieOption.Name)]</label2>
 						<onclick>SetProperty(TargetCircleOption,CircleMovieOption,1194)</onclick>
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
@@ -217,7 +219,8 @@
 						<description>Circle Episodes Source Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31199]: $INFO[Skin.String(CircleEpisodeOption.Name)]</label>
+						<label>$LOCALIZE[31199]</label>
+						<label2>$INFO[Skin.String(CircleEpisodeOption.Name)]</label2>
 						<onclick>SetProperty(TargetCircleOption,CircleEpisodeOption,1194)</onclick>
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
@@ -237,7 +240,8 @@
 						<description>Circle Albums Source Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31200]: $INFO[Skin.String(CircleAlbumOption.Name)]</label>
+						<label>$LOCALIZE[31200]</label>
+						<label2>$INFO[Skin.String(CircleAlbumOption.Name)]</label2>
 						<onclick>SetProperty(TargetCircleOption,CircleAlbumOption,1194)</onclick>
 						<onclick>ActivateWindow(1194)</onclick>
 					</control>
@@ -408,7 +412,8 @@
                         <description>Type of Thumbnails Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31799]: $VAR[ThumbnailsTypeLabel]</label>
+						<label>$LOCALIZE[31799]</label>
+						<label2>$VAR[ThumbnailsTypeLabel]</label2>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31799],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31220],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,Thumbnails.Type,1188)</onclick>
@@ -527,7 +532,8 @@
 						<description>Busy Animation Option</description>
 						<width>1100</width>
 						<align>left</align>
-						<label>$LOCALIZE[31788]: $VAR[BusyAnimationNameLabel]</label>
+						<label>$LOCALIZE[31788]</label>
+						<label2>$VAR[BusyAnimationNameLabel]</label2>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31788],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,BusyAnimation.Type,1188)</onclick>
@@ -650,7 +656,8 @@
                         <enable>Skin.HasSetting(Debug.InfoVisible)</enable>
 						<width>1100</width>
 						<align>left</align>
-						<label>- $LOCALIZE[31157]: $VAR[AdditionalDebugInfoLabel]</label>
+						<label>- $LOCALIZE[31157]</label>
+						<label2>$VAR[AdditionalDebugInfoLabel]</label2>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31157],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31159],1188)</onclick>
 						<onclick>SetProperty(DialogTarget,Debug.AdditionalInfo,1188)</onclick>
