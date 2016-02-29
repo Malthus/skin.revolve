@@ -4,10 +4,6 @@
     <onload condition="Container.Content(artists) + Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2001,6),00:01,silent)</onload>
     <onload condition="Container.Content(albums) + Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2001,6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
-    <onload condition="System.HasAlarm(DialogAutoScrollTimer)">CancelAlarm(DialogAutoScrollTimer,silent)</onload>
-    <onload condition="Container.Content(artists) + Skin.HasSetting(Settings.DialogInfoAutoScroll) + IntegerGreaterThan(Container(20).NumItems,6) + !System.HasAlarm(DialogRefreshTimer)">AlarmClock(DialogAutoScrollTimer,Control.Move(20,1),00:01,silent,loop)</onload>
-    <onload condition="Container.Content(albums) + Skin.HasSetting(Settings.DialogInfoAutoScroll) + IntegerGreaterThan(Container(22).NumItems,5) + !System.HasAlarm(DialogRefreshTimer)">AlarmClock(DialogAutoScrollTimer,Control.Move(22,1),00:01,silent,loop)</onload>
-    <onunload condition="System.HasAlarm(DialogAutoScrollTimer)">CancelAlarm(DialogAutoScrollTimer,silent)</onunload>
 
 	<controls>
 		<control type="group">
