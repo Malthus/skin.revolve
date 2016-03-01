@@ -247,9 +247,10 @@
 			<itemgap>0</itemgap>
 			<pagecontrol>$PARAM[pagecontrol]</pagecontrol>
             <scrolltime>200</scrolltime>
+            <autoscroll delay="3000" time="1000" repeat="3000">Skin.HasSetting(Settings.DialogInfoAutoScroll)</autoscroll>
         </definition>
     </include>
-    
+
 	<include name="MarkupForScrollbarForDialog">
         <param name="posx" default="1840" />
         <param name="posy" default="0" />
@@ -1118,7 +1119,10 @@
 
     <constant name="PosYForSixLinesDialog">370</constant>
     <constant name="HeightForSixLinesDialog">340</constant>
-    
+
+    <constant name="PosYForEightLinesDialog">330</constant>
+    <constant name="HeightForEightLinesDialog">420</constant>
+
     <constant name="PosYForTenLinesDialog">290</constant>
     <constant name="HeightForTenLinesDialog">500</constant>
 
