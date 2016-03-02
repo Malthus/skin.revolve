@@ -862,49 +862,47 @@
 						<onclick>ActivateWindow(1187)</onclick>
 					</control>
 				</control>
+                
+                <control type="group">
+                    <visible>Container(99).Hasfocus(4)</visible>
+
+                    <include name="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="40" />
+                        <param name="color" value="$VAR[MainColor]" />
+                        <param name="buttonid" value="403" />
+                    </include>
+
+                    <include name="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="80" />
+                        <param name="color" value="$VAR[HighlightColor]" />
+                        <param name="buttonid" value="404" />
+                    </include>
+
+                    <include name="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="180" />
+                        <param name="color" value="$VAR[BackgroundColor]" />
+                        <param name="buttonid" value="405" />
+                    </include>
+
+                    <include name="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="220" />
+                        <param name="color" value="$VAR[SecondaryColor]" />
+                        <param name="buttonid" value="406" />
+                    </include>
+
+                    <include name="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="260" />
+                        <param name="color" value="$VAR[TextColor]" />
+                        <param name="buttonid" value="407" />
+                    </include>
+                </control>
 			</control>
-			
-            <control type="group">
-                <visible>Container(99).Hasfocus(4)</visible>
-                <posx>700</posx>
-                <posy>60</posy>
 
-                <include name="ColorLabel">
-                    <param name="posx" value="1040" />
-                    <param name="posy" value="80" />
-                    <param name="color" value="$VAR[MainColor]" />
-                    <param name="buttonid" value="403" />
-                </include>
-
-                <include name="ColorLabel">
-                    <param name="posx" value="1040" />
-                    <param name="posy" value="120" />
-                    <param name="color" value="$VAR[HighlightColor]" />
-                    <param name="buttonid" value="404" />
-                </include>
-
-                <include name="ColorLabel">
-                    <param name="posx" value="1040" />
-                    <param name="posy" value="220" />
-                    <param name="color" value="$VAR[BackgroundColor]" />
-                    <param name="buttonid" value="405" />
-                </include>
-
-                <include name="ColorLabel">
-                    <param name="posx" value="1040" />
-                    <param name="posy" value="260" />
-                    <param name="color" value="$VAR[SecondaryColor]" />
-                    <param name="buttonid" value="406" />
-                </include>
-
-                <include name="ColorLabel">
-                    <param name="posx" value="1040" />
-                    <param name="posy" value="300" />
-                    <param name="color" value="$VAR[TextColor]" />
-                    <param name="buttonid" value="407" />
-                </include>
-			</control>
-            
             <control type="group">
                 <visible>Skin.HasSetting(Settings.HelpVisible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | Control.IsVisible(200) | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
                 <include name="WindowAnimationForSettings" />
@@ -1023,6 +1021,41 @@
                         <visible>Control.HasFocus(309)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31609]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(401)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31622]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(402)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31623]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(403)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31624]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(404)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31625]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(405)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31626]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(406)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31627]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(407)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31628]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(410)</visible>
