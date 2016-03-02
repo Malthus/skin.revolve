@@ -355,6 +355,42 @@
         </definition>
 	</include>
 
+	<include name="ColorLabel">
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="color" default="-" />
+        <param name="buttonid" default="0" />
+        <param name="visible" default="true" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>30</width>
+                    <height>30</height>
+                    <texture>elements/circle-mask.png</texture>
+                    <colordiffuse>$PARAM[color]</colordiffuse>
+                </control>
+                <control type="image">
+                    <width>40</width>
+                    <visible>!Control.HasFocus($PARAM[buttonid])</visible>
+                    <height>40</height>
+                    <texture colordiffuse="$VAR[SecondaryColor]" border="20">controls/circle-clear.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[buttonid])</visible>
+                    <width>40</width>
+                    <height>40</height>
+                    <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/circle-clear.png</texture>
+                </control>
+            </control>
+        </definition>
+	</include>
+    
 	<include name="ColorMixer">
         <param name="id" default="0" />
         <param name="posx" default="0" />
@@ -377,14 +413,14 @@
                 <control type="image">
                     <visible>Control.HasFocus($PARAM[id])</visible>
                     <width>$PARAM[width]</width>
-                    <height>50</height>
+                    <height>40</height>
                     <aspectratio>stretch</aspectratio>
                     <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
                 </control>
 
                 <control type="list" id="$PARAM[id]">
                     <posx>40</posx>
-                    <posy>5</posy>
+                    <posy>0</posy>
                     <width>$PARAM[width]</width>
                     <height>40</height>
                     <orientation>horizontal</orientation>
@@ -595,31 +631,12 @@
                     </content>
                 </control>
 
-                <control type="group">
-                    <posx>$PARAM[colorposx]</posx>
-                    <posy>5</posy>
-
-                    <control type="image">
-                        <visible>!Control.HasFocus($PARAM[id])</visible>
-                        <width>40</width>
-                        <height>40</height>
-                        <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
-                    </control>
-                    <control type="image">
-                        <visible>Control.HasFocus($PARAM[id])</visible>
-                        <width>40</width>
-                        <height>40</height>
-                        <texture colordiffuse="$VAR[BackgroundColor]">elements/circle-mask.png</texture>
-                    </control>
-                    <control type="image">
-                        <posx>3</posx>
-                        <posy>3</posy>
-                        <width>34</width>
-                        <height>34</height>
-                        <texture>elements/circle-mask.png</texture>
-                        <colordiffuse>$INFO[Container($PARAM[id]).ListItem.Label]</colordiffuse>
-                    </control>
-                </control>
+                <include name="ColorLabel">
+                    <param name="posx" value="$PARAM[colorposx]" />
+                    <param name="posy" value="0" />
+                    <param name="color" value="$INFO[Container($PARAM[id]).ListItem.Label]" />
+                    <param name="buttonid" value="$PARAM[id]" />
+                </include>
             </control>
         </definition>
 	</include>

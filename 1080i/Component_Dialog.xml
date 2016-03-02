@@ -1286,7 +1286,7 @@
                 </include>
 
                 <control type="image">
-                    <visible>$PARAM[animate] + Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
+                    <visible>$PARAM[animate] + Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
                     <animation effect="fade" delay="0" start="99" end="100" time="200">WindowOpen</animation>
                     <animation effect="fade" start="100" end="99" time="200">WindowClose</animation>
                     <include name="MarkupForButtonAreaForWindowForDialog">
@@ -1296,7 +1296,7 @@
                 </control>
                 
                 <control type="image">
-                    <visible>$PARAM[animate] + !Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
+                    <visible>$PARAM[animate] + !Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
                     <animation effect="fade" delay="0" start="99" end="100" time="200">WindowOpen</animation>
                     <animation effect="fade" start="100" end="99" time="200">WindowClose</animation>
                     <include name="MarkupForButtonAreaForWindowForDialog">
@@ -1306,7 +1306,7 @@
                 </control>
                 
                 <control type="image">
-                    <visible>!$PARAM[animate] + Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
+                    <visible>!$PARAM[animate] + Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
                     <include name="MarkupForButtonAreaForWindowForDialog">
                         <param name="height" value="$PARAM[height]" />
                         <param name="color" value="$VAR[SelectColor]" />
@@ -1314,7 +1314,7 @@
                 </control>
                 
                 <control type="image">
-                    <visible>!$PARAM[animate] + !Skin.HasSetting(Settings.ButtonAreaSeparate)</visible>
+                    <visible>!$PARAM[animate] + !Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
                     <include name="MarkupForButtonAreaForWindowForDialog">
                         <param name="height" value="$PARAM[height]" />
                         <param name="color" value="$VAR[BackgroundColor]" />

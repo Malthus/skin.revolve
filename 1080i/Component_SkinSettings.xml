@@ -7,7 +7,7 @@
             <onfocus>Skin.ResetSettings</onfocus>
             
             <include>BackgroundSettingsForSkinSettings</include>
-            <include>ColoursSettingsForSkinSettings</include>
+            <include>ColorsSettingsForSkinSettings</include>
             <include>HomeMenuItemsSettingsForSkinSettings</include>
             <include>CircleItemsSettingsForSkinSettings</include>
             <include>AddonSettingsForSkinSettings</include>
@@ -34,9 +34,19 @@
         </definition>
 	</include>
 	
-	<include name="ColoursSettingsForSkinSettings">
+	<include name="ColorsSettingsForSkinSettings">
         <definition>
-            <onfocus>Skin.Reset(Settings.ButtonAreaSeparate)</onfocus>
+            <onfocus>Skin.Reset(Colors.PrimaryColorTheme)</onfocus>
+            <onfocus>Skin.Reset(Colors.BackgroundColorTheme)</onfocus>
+
+            <onfocus>Skin.Reset(Colors.MainColorCustomValue)</onfocus>
+            <onfocus>Skin.Reset(Colors.SelectColorCustomValue)</onfocus>
+            <onfocus>Skin.Reset(Colors.HighlightColorCustomValue)</onfocus>
+            <onfocus>Skin.Reset(Colors.SecondaryColorCustomValue)</onfocus>
+            <onfocus>Skin.Reset(Colors.TextColorCustomValue)</onfocus>
+            <onfocus>Skin.Reset(Colors.BackgroundColorCustomValue)</onfocus>
+
+            <onfocus>Skin.Reset(Colors.ButtonAreaSeparate)</onfocus>
         </definition>
 	</include>
 
@@ -168,7 +178,31 @@
             <onfocus>Skin.Reset(Debug.ListBorderVisible)</onfocus>
         </definition>
 	</include>
+
+	<include name="ColorButtonForSkinSettings">
+        <param name="id" default="0" />
+        <param name="label" default="-" />
+        <param name="enable" default="false" />
+        <param name="colorsetting" default="-" />
+        <param name="relatedcolorsetting" default="-" />
+        <param name="relatedcolorprefix" default="$NUMBER[80]" />
     
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <enable>$PARAM[enable]</enable>
+                <width>1100</width>
+                <height>40</height>
+                <align>left</align>
+                <label>$PARAM[label]</label>
+                <onclick>SetProperty(DialogTitle,$PARAM[label],1186)</onclick>
+                <onclick>SetProperty(DialogRelatedColorPrefix,$PARAM[relatedcolorprefix],1186)</onclick>
+                <onclick>SetProperty(DialogTarget,$PARAM[colorsetting],1186)</onclick>
+                <onclick>SetProperty(DialogRelatedTarget,$PARAM[relatedcolorsetting],1186)</onclick>
+                <onclick>ActivateWindow(1186)</onclick>
+            </control>
+        </definition>
+	</include>
+
 	<include name="ItemsForButtonListInSkinSettings">
         <param name="listid" default="0" />
     

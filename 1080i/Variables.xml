@@ -371,34 +371,91 @@
 	</variable>
 
 	<variable name="MainColor">
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),y)">MainColor</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),R)">FF7D0000</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),B)">FF00007D</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),G)">FF007D00</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),P)">FF6D0060</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)">$INFO[Skin.String(Colors.MainColorCustomValue)]</value>
 		<value>MainColor</value>
 	</variable>
 
 	<variable name="SelectColor">
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),Y)">SelectColor</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),R)">80A00000</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),B)">8000007D</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),G)">80007D00</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),P)">806D0060</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)">$INFO[Skin.String(Colors.SelectColorCustomValue)]</value>
 		<value>SelectColor</value>
 	</variable>
 
+	<variable name="HighlightColor">
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),Y)">HighlightColor</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),R)">FFFF7D00</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),B)">FF00FF7D</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),G)">FF007DFF</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),P)">FFFF00FF</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)">$INFO[Skin.String(Colors.HighlightColorCustomValue)]</value>
+		<value>HighlightColor</value>
+	</variable>
+    
 	<variable name="SecondaryColor">
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),Y)">SecondaryColor</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">FF000000</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">FF000000</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">FFA0A0A0</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.SecondaryColorCustomValue)]</value>
 		<value>SecondaryColor</value>
 	</variable>
 	
 	<variable name="BackgroundColor">
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),Y)">BackgroundColor</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">FFFFFFFF</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">FF505050</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">FF000000</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.BackgroundColorCustomValue)]</value>
 		<value>BackgroundColor</value>
 	</variable>
 
 	<variable name="FademaskColor">
-		<value>FadeDiffuseColor</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),Y)">FademaskColor</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">A0FFFFFF</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">A0505050</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">A0000000</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.FademaskColorCustomValue)]</value>
+		<value>FademaskColor</value>
 	</variable>
 
+	<variable name="TextColor">
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),Y)">TextColor</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">FF555555</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">FF909090</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">FF606060</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.TextColorCustomValue)]</value>
+		<value>TextColor</value>
+	</variable>
+	
 	<variable name="ShadowmaskColor">
 		<value>55000000</value>
 	</variable>
 
-	<variable name="TextColor">
-		<value>TextColor</value>
-	</variable>
-	
-	<variable name="HighlightColor">
-		<value>HighlightColor</value>
-	</variable>
+    <variable name="PrimaryColorThemeLabel">
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),Y)">$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),R)">$LOCALIZE[31981]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),B)">$LOCALIZE[31983]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),G)">$LOCALIZE[31982]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),P)">$LOCALIZE[31984]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)">$LOCALIZE[31244]</value>
+        <value>$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
+    </variable>
+    
+    <variable name="BackgroundColorThemeLabel">
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),Y)">$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">$LOCALIZE[31986]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">$LOCALIZE[31987]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">$LOCALIZE[31988]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$LOCALIZE[31244]</value>
+        <value>$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
+    </variable>
 </includes>

@@ -4,16 +4,31 @@
 
 	<controls>
 		<control type="group">
-			<posy>PosYForEightLinesDialog</posy>
+			<posy>PosYForFourLinesDialog</posy>
             <include name="WindowForDialog">
-                <param name="height" value="HeightForEightLinesDialog" />
+                <param name="height" value="HeightForFourLinesDialog" />
                 <param name="headerlabel" value="$LOCALIZE[31483]" />
-                <param name="icontexture" value="icons/icon-pencil.png" />
+                <param name="iconsmallvisible" value="true" />
+                <param name="icondefaultvisible" value="false" />
             </include>
 
+            <control type="group">
+                <posx>PosXForSmallIconFrameForDialog</posx>
+                <posy>PosYForSmallIconFrameForDialog</posy>
+            
+                <control type="image">
+                    <posx>3</posx>
+                    <posy>3</posy>
+                    <width>84</width>
+                    <height>84</height>
+                    <texture>elements/circle-mask.png</texture>
+                    <colordiffuse>$INFO[Control.GetLabel(9)]</colordiffuse>
+                </control>
+            </control>
+            
             <control type="label">
                 <posx>560</posx>
-                <posy>100</posy>
+                <posy>80</posy>
                 <width>240</width>
                 <height>40</height>
                 <textcolor>TextColor</textcolor>
@@ -23,7 +38,7 @@
             <include name="ColorMixer">
                 <param name="id" value="6" />
                 <param name="posx" value="760" />
-                <param name="posy" value="100" />
+                <param name="posy" value="80" />
                 <param name="labelprefix" value="" />
                 <param name="labelsuffix" value="0000" />
                 <param name="onup" value="21" />
@@ -32,7 +47,7 @@
 
             <control type="label">
                 <posx>560</posx>
-                <posy>160</posy>
+                <posy>120</posy>
                 <width>240</width>
                 <height>40</height>
                 <textcolor>TextColor</textcolor>
@@ -42,7 +57,7 @@
             <include name="ColorMixer">
                 <param name="id" value="7" />
                 <param name="posx" value="760" />
-                <param name="posy" value="160" />
+                <param name="posy" value="120" />
                 <param name="labelprefix" value="00" />
                 <param name="labelsuffix" value="00" />
                 <param name="onup" value="6" />
@@ -51,8 +66,8 @@
 
             <control type="label">
                 <posx>560</posx>
-                <posy>220</posy>
-                <width>240</width>
+                <posy>160</posy>
+                <width>160</width>
                 <height>40</height>
                 <textcolor>TextColor</textcolor>
                 <label>$LOCALIZE[31983]</label>
@@ -61,7 +76,7 @@
             <include name="ColorMixer">
                 <param name="id" value="8" />
                 <param name="posx" value="760" />
-                <param name="posy" value="220" />
+                <param name="posy" value="160" />
                 <param name="labelprefix" value="0000" />
                 <param name="labelsuffix" value="" />
                 <param name="onup" value="7" />
@@ -70,7 +85,7 @@
 
             <control type="label">
                 <posx>560</posx>
-                <posy>320</posy>
+                <posy>200</posy>
                 <width>1240</width>
                 <height>40</height>
                 <textcolor>TextColor</textcolor>
@@ -79,36 +94,32 @@
 
             <control type="label" id="9">
                 <posx>800</posx>
-                <posy>320</posy>
+                <posy>200</posy>
                 <width>320</width>
                 <height>40</height>
                 <textcolor>TextColor</textcolor>
                 <label>FF$INFO[Container(6).ListItem.Property(Color)]$INFO[Container(7).ListItem.Property(Color)]$INFO[Container(8).ListItem.Property(Color)]</label>
             </control>
 
-            <control type="group">
-                <posx>1680</posx>
-                <posy>280</posy>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>120</width>
-                    <height>120</height>
-                    <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
-                </control>
-                <control type="image">
-                    <posx>5</posx>
-                    <posy>5</posy>
-                    <width>110</width>
-                    <height>110</height>
-                    <texture>elements/circle-mask.png</texture>
-                    <colordiffuse>$INFO[Control.GetLabel(9)]</colordiffuse>
-                </control>
+            <control type="label" id="10">
+                <visible>false</visible>
+                <posx>1000</posx>
+                <posy>200</posy>
+                <width>240</width>
+                <height>40</height>
+                <textcolor>TextColor</textcolor>
+                <label>$INFO[Window.Property(DialogRelatedColorPrefix)]$INFO[Container(6).ListItem.Property(Color)]$INFO[Container(7).ListItem.Property(Color)]$INFO[Container(8).ListItem.Property(Color)]</label>
             </control>
 
+            <include name="ColorLabel">
+                <param name="posx" value="1720" />
+                <param name="posy" value="200" />
+                <param name="color" value="$INFO[Control.GetLabel(9)]" />
+            </include>
+            
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="320" />
+                    <param name="posy" value="160" />
                     <param name="height" value="80" />
                 </include>
                 <onup>8</onup>
@@ -117,7 +128,8 @@
 				<control type="button" id="20">
 					<description>Ok Button</description>
 					<label>$LOCALIZE[186]</label>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)],$INFO[Control.GetLabel(9)])</onclick>
+					<onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Control.GetLabel(9)])</onclick>
+					<onclick condition="!IsEmpty(Window.Property(DialogRelatedTarget))">Skin.SetString($INFO[Window.Property(DialogRelatedTarget)],$INFO[Control.GetLabel(10)])</onclick>
 					<onclick>Close</onclick>
 				</control>
 				<control type="button" id="21">
