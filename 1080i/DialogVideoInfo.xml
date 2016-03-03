@@ -78,6 +78,12 @@
 						<onclick>Noop</onclick>
 					</item>
 					<item>
+						<visible>!IsEmpty(ListItem.Premiered)</visible>
+						<label>$LOCALIZE[20416]</label>
+						<label2>$INFO[ListItem.Premiered]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 						<label>$LOCALIZE[180]</label>
 						<label2>$INFO[ListItem.Duration] $LOCALIZE[31901]</label2>
@@ -97,7 +103,7 @@
                     </item>
                     <item>
                         <visible>!IsEmpty(ListItem.Writer)</visible>
-                        <label>$LOCALIZE[20417]:</label>
+                        <label>$LOCALIZE[20417]</label>
                         <label2>$INFO[ListItem.Writer]</label2>
                         <onclick>Noop</onclick>
                     </item>
@@ -105,12 +111,6 @@
                         <visible>!IsEmpty(ListItem.Director)</visible>
                         <label>$LOCALIZE[20339]</label>
                         <label2>$INFO[ListItem.Director]</label2>
-                        <onclick>Noop</onclick>
-                    </item>
-                    <item>
-                        <visible>!IsEmpty(ListItem.Premiered)</visible>
-                        <label>$LOCALIZE[31322]</label>
-                        <label2>$INFO[ListItem.Premiered]</label2>
                         <onclick>Noop</onclick>
                     </item>
 					<item>
