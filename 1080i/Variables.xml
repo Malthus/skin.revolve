@@ -376,7 +376,7 @@
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),B)">FF00007D</value>
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),G)">FF007D00</value>
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),P)">FF6D0060</value>
-        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)">$INFO[Skin.String(Colors.MainColorCustomValue)]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X) + !IsEmpty(Skin.String(Colors.MainColorCustomValue))">$INFO[Skin.String(Colors.MainColorCustomValue)]</value>
 		<value>MainColor</value>
 	</variable>
 
@@ -386,7 +386,7 @@
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),B)">8000007D</value>
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),G)">80007D00</value>
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),P)">806D0060</value>
-        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)">$INFO[Skin.String(Colors.SelectColorCustomValue)]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X) + !IsEmpty(Skin.String(Colors.SelectColorCustomValue))">$INFO[Skin.String(Colors.SelectColorCustomValue)]</value>
 		<value>SelectColor</value>
 	</variable>
 
@@ -396,7 +396,7 @@
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),B)">FF00FF7D</value>
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),G)">FF007DFF</value>
         <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),P)">FFFF00FF</value>
-        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)">$INFO[Skin.String(Colors.HighlightColorCustomValue)]</value>
+        <value condition="StringCompare(Skin.String(Colors.PrimaryColorTheme),X) + !IsEmpty(Skin.String(Colors.HighlightColorCustomValue))">$INFO[Skin.String(Colors.HighlightColorCustomValue)]</value>
 		<value>HighlightColor</value>
 	</variable>
     
@@ -405,7 +405,7 @@
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">FF000000</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">FF000000</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">FFA0A0A0</value>
-        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.SecondaryColorCustomValue)]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X) + !IsEmpty(Skin.String(Colors.SecondaryColorCustomValue))">$INFO[Skin.String(Colors.SecondaryColorCustomValue)]</value>
 		<value>SecondaryColor</value>
 	</variable>
 	
@@ -414,7 +414,7 @@
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">FFFFFFFF</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">FF505050</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">FF000000</value>
-        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.BackgroundColorCustomValue)]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X) + !IsEmpty(Skin.String(Colors.BackgroundColorCustomValue))">$INFO[Skin.String(Colors.BackgroundColorCustomValue)]</value>
 		<value>BackgroundColor</value>
 	</variable>
 
@@ -423,7 +423,7 @@
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">A0FFFFFF</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">A0505050</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">A0000000</value>
-        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.FademaskColorCustomValue)]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X) + !IsEmpty(Skin.String(Colors.FademaskColorCustomValue))">$INFO[Skin.String(Colors.FademaskColorCustomValue)]</value>
 		<value>FademaskColor</value>
 	</variable>
 
@@ -432,7 +432,7 @@
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),W)">FF555555</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),G)">FF909090</value>
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),B)">FF606060</value>
-        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$INFO[Skin.String(Colors.TextColorCustomValue)]</value>
+        <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X) + !IsEmpty(Skin.String(Colors.TextColorCustomValue))">$INFO[Skin.String(Colors.TextColorCustomValue)]</value>
 		<value>TextColor</value>
 	</variable>
 	
