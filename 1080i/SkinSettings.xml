@@ -322,21 +322,20 @@
 						<onclick>ActivateWindow(1188)</onclick>
 					</control>
 
-                    <include name="ColorButtonForSkinSettings">
+                    <include name="ColorSettingButtonForSkinSettings">
                         <param name="id" value="403" />
                         <param name="label" value="- $LOCALIZE[31485]" />
                         <param name="enable" value="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)" />
+                        <param name="relatedcolorprefix" value="$NUMBER[80]" />           
                         <param name="colorsetting" value="Colors.MainColorCustomValue" />
                         <param name="relatedcolorsetting" value="Colors.SelectColorCustomValue" />
-                        <param name="relatedcolorprefix" value="$NUMBER[80]" />           
                     </include>
 
-                    <include name="ColorButtonForSkinSettings">
+                    <include name="ColorSettingButtonForSkinSettings">
                         <param name="id" value="404" />
                         <param name="label" value="- $LOCALIZE[31486]" />
                         <param name="enable" value="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)" />
                         <param name="colorsetting" value="Colors.HighlightColorCustomValue" />
-                        <param name="relatedcolorprefix" value="$NUMBER[80]" />           
                     </include>
 
 					<control type="label" id="421">
@@ -368,29 +367,27 @@
 						<onclick>ActivateWindow(1188)</onclick>
 					</control>
                     
-                    <include name="ColorButtonForSkinSettings">
+                    <include name="ColorSettingButtonForSkinSettings">
                         <param name="id" value="405" />
                         <param name="label" value="- $LOCALIZE[31487]" />
                         <param name="enable" value="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)" />
+                        <param name="relatedcolorprefix" value="A0" />
                         <param name="colorsetting" value="Colors.BackgroundColorCustomValue" />
                         <param name="relatedcolorsetting" value="Colors.FademaskColorCustomValue" />
-                        <param name="relatedcolorprefix" value="A0" />
                     </include>
 
-                    <include name="ColorButtonForSkinSettings">
+                    <include name="ColorSettingButtonForSkinSettings">
                         <param name="id" value="406" />
                         <param name="label" value="- $LOCALIZE[31488]" />
                         <param name="enable" value="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)" />
                         <param name="colorsetting" value="Colors.SecondaryColorCustomValue" />
-                        <param name="relatedcolorprefix" value="$NUMBER[80]" />           
                     </include>
 
-                    <include name="ColorButtonForSkinSettings">
+                    <include name="ColorSettingButtonForSkinSettings">
                         <param name="id" value="407" />
                         <param name="label" value="- $LOCALIZE[31489]" />
                         <param name="enable" value="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)" />
                         <param name="colorsetting" value="Colors.TextColorCustomValue" />
-                        <param name="relatedcolorprefix" value="$NUMBER[80]" />           
                     </include>
 
 					<control type="label" id="422">
