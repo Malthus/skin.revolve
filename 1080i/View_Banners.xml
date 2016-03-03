@@ -3,7 +3,7 @@
 	<include name="BannersView">
 		<control type="group">
 			<visible>Control.IsVisible(59)</visible>
-            <animation effect="slide" end="0,70" time="200" condition="Container(59).Row(5)">conditional</animation>				
+            <animation effect="slide" end="0,70" time="200" condition="Container(59).Row(5)">conditional</animation>	
             <include name="BackgroundAnimationForBottomRing" />
 		</control>
 
