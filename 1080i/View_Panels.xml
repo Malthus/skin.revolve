@@ -59,14 +59,7 @@
 			<focusedlayout width="280" height="280" condition="!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons)">
 				<control type="group">
                     <include name="AnimationForPanelsView" />
-<!--
-					<animation type="Focus">
-						<effect type="zoom" start="100" end="140" time="200" />
-						<effect type="slide" end="-38,-38" time="200" />
-					</animation>
-                    <animation effect="slide" start="0,0" end="52,0" time="200" condition="Container(56).Column(0) + IntegerGreaterThan(Container(56).NumItems,18)">conditional</animation>	
-                    <animation effect="slide" start="0,0" end="-52,0" time="200" condition="Container(56).Column(6)">conditional</animation>	
--->			
+
 					<posx>5</posx>
 					<posy>5</posy>
 					<include name="ShadowForDefaultSquareThumbnailIcon" />
@@ -78,19 +71,12 @@
 
                     <control type="group">
                         <include name="AnimationForPanelsView" />
-<!--
-                        <animation type="Focus">
-                            <effect type="zoom" start="100" end="140" time="200" />
-                            <effect type="slide" end="-38,-38" time="200" />
-                        </animation>
-                        <animation effect="slide" start="0,0" end="52,0" time="200" condition="Container(56).Column(0) + IntegerGreaterThan(Container(56).NumItems,18)">conditional</animation>	
-                        <animation effect="slide" start="0,0" end="-52,0" time="200" condition="Container(56).Column(6)">conditional</animation>	
--->
+
                         <include name="BackgroundForNameInThumbnailOrPanelForView">
                             <param name="outlinecolor" value="$VAR[MainColor]" />
                         </include>
                     </control>
-                    
+
                     <control type="group">
                         <animation type="Focus">
                             <effect type="zoom" start="100" end="140" time="200" />
@@ -105,14 +91,7 @@
                     
                     <control type="group">
                         <include name="AnimationForPanelsView" />
-<!--
-                        <animation type="Focus">
-                            <effect type="zoom" start="100" end="140" time="200" />
-                            <effect type="slide" end="-38,-38" time="200" />
-                        </animation>
-                        <animation effect="slide" start="0,0" end="52,0" time="200" condition="Container(56).Column(0) + IntegerGreaterThan(Container(56).NumItems,18)">conditional</animation>	
-                        <animation effect="slide" start="0,0" end="-52,0" time="200" condition="Container(56).Column(6)">conditional</animation>	
--->
+
                         <include name="TextForNameInThumbnailOrPanelForView" />
                     </control>
 				</control>
@@ -123,12 +102,7 @@
                     <include name="AnimationForPanelsView">
                         <param name="panelslimit" value="12" />
                     </include>
-<!--
-                    <animation type="Focus">
-						<effect type="zoom" start="100" end="140" time="200" />
-						<effect type="slide" end="-38,-38" time="200" />
-					</animation>
--->				
+
 					<posx>5</posx>
 					<posy>5</posy>
 					<include name="ShadowForDefaultVerticalThumbnailIcon" />
@@ -142,12 +116,7 @@
                         <include name="AnimationForPanelsView">
                             <param name="panelslimit" value="12" />
                         </include>
-<!--
-                        <animation type="Focus">
-                            <effect type="zoom" start="100" end="140" time="200" />
-                            <effect type="slide" end="-38,-38" time="200" />
-                        </animation>
--->
+
                         <include name="BackgroundForNameInThumbnailOrPanelForView">
                             <param name="outlinecolor" value="$VAR[MainColor]" />
                             <param name="posy" value="345" />
@@ -172,12 +141,7 @@
                         <include name="AnimationForPanelsView">
                             <param name="panelslimit" value="12" />
                         </include>
-<!--
-                        <animation type="Focus">
-                            <effect type="zoom" start="100" end="140" time="200" />
-                            <effect type="slide" end="-38,-38" time="200" />
-                        </animation>
--->
+
                         <include name="TextForNameInThumbnailOrPanelForView">
                             <param name="posy" value="345" />
                         </include>
@@ -212,7 +176,7 @@
 			<onright>66</onright>
 		</control>
 	</include>
-    
+
     <include name="AnimationForPanelsView">
         <param name="panelslimit" default="18" />
     
