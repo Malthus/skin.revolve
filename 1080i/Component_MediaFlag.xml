@@ -267,7 +267,7 @@
             </control>
             
             <control type="group">
-                <visible>IsEmpty($PARAM[infolabel]) + [SubString($PARAM[filelabel],ape) | SubString($PARAM[filelabel],flac) | SubString($PARAM[filelabel],mp3) | SubString($PARAM[filelabel],wav) | SubString($PARAM[filelabel],wma)]</visible>
+                <visible>IsEmpty($PARAM[infolabel]) + !Container.Content(addons) + [SubString($PARAM[filelabel],ape) | SubString($PARAM[filelabel],flac) | SubString($PARAM[filelabel],mp3) | SubString($PARAM[filelabel],wav) | SubString($PARAM[filelabel],wma)]</visible>
                 <width>160</width>
 
                 <control type="image">
@@ -330,7 +330,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="AudioChannelsMediaFlag">
         <param name="mediaflagcolor" default="$VAR[MainColor]" />
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
