@@ -224,8 +224,10 @@
             
                 <control type="image">
                     <visible>Control.HasFocus($PARAM[id])</visible>
-                    <width>100</width>
-                    <height>80</height>
+                    <posx>-5</posx>
+                    <posy>-5</posy>
+                    <width>110</width>
+                    <height>90</height>
                     <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
                 </control>
 
@@ -245,6 +247,15 @@
                     <onclick>Skin.SetString($INFO[$PARAM[target]],FF$PARAM[color])</onclick>
 					<onclick condition="!IsEmpty($PARAM[relatedtarget])">Skin.SetString($INFO[$PARAM[relatedtarget]],$PARAM[relatedcolorprefix]$PARAM[color])</onclick>
 					<onclick>Close</onclick>
+                </control>
+
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[id])</visible>
+                    <posx>-1</posx>
+                    <posy>-1</posy>
+                    <width>102</width>
+                    <height>82</height>
+                    <texture colordiffuse="FF$PARAM[color]" border="20">controls/rectangle-fill.png</texture>
                 </control>
             </control>
         </definition>
