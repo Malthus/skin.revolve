@@ -31,10 +31,16 @@
 				<include>ItemsForInfoListInDialog</include>
 				
 				<content>
+					<item>
+						<visible>!IsEmpty(ListItem.OriginalTitle) + !StringCompare(ListItem.OriginalTitle,Listitem.Title)</visible>
+						<label>$LOCALIZE[20376]</label>
+						<label2>$INFO[ListItem.OriginalTitle]</label2>
+						<onclick>Noop</onclick>
+					</item>
                     <item>
-                        <visible>!IsEmpty(ListItem.EpisodeName)</visible>
+                        <visible>!IsEmpty(ListItem.TVShowTitle)</visible>
                         <label>$LOCALIZE[21442]</label>
-                        <label2>$INFO[ListItem.EpisodeName]</label2>
+                        <label2>$INFO[ListItem.TVShowTitle]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
@@ -44,45 +50,21 @@
                         <onclick>Noop</onclick>
                     </item>
                     <item>
+                        <visible>!IsEmpty(ListItem.EpisodeName)</visible>
+                        <label>$LOCALIZE[21442]</label>
+                        <label2>$INFO[ListItem.EpisodeName]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
                         <visible>!IsEmpty(ListItem.Episode)</visible>
                         <label>$LOCALIZE[20359]</label>
                         <label2>$INFO[ListItem.Episode]</label2>
                         <onclick>Noop</onclick>
                     </item>
 					<item>
-						<visible>!IsEmpty(ListItem.OriginalTitle) + !stringcompare(ListItem.OriginalTitle,Listitem.Title)</visible>
-						<label>$LOCALIZE[20376]</label>
-						<label2>$INFO[ListItem.OriginalTitle]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
 						<visible>!IsEmpty(ListItem.ChannelName)</visible>
 						<label>$LOCALIZE[19148]</label>
 						<label2>$INFO[ListItem.ChannelName]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!IsEmpty(ListItem.Studio)</visible>
-						<label>$LOCALIZE[572]</label>
-						<label2>$INFO[ListItem.Studio]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-						<label>$LOCALIZE[515]</label>
-						<label2>$INFO[ListItem.Genre]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!IsEmpty(ListItem.Year)</visible>
-						<label>$LOCALIZE[562]</label>
-						<label2>$INFO[ListItem.Year]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!IsEmpty(ListItem.MPAA)</visible>
-						<label>$LOCALIZE[20074]</label>
-						<label2>$INFO[ListItem.MPAA]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
@@ -96,9 +78,51 @@
 						<onclick>Noop</onclick>
 					</item>
 					<item>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+						<label>$LOCALIZE[562]</label>
+						<label2>$INFO[ListItem.Year]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.Premiered) + !Window.IsActive(pvrguideinfo)</visible>
+						<label>$LOCALIZE[20416]</label>
+						<label2>$INFO[ListItem.Premiered]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 						<label>$LOCALIZE[180]</label>
 						<label2>$INFO[ListItem.Duration]</label2>
+						<onclick>Noop</onclick>
+					</item>
+					<item>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<label>$LOCALIZE[515]</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+						<onclick>Noop</onclick>
+					</item>
+                    <item>
+                        <visible>!IsEmpty(ListItem.Studio)</visible>
+                        <label>$LOCALIZE[572]</label>
+                        <label2>$INFO[ListItem.Studio]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!IsEmpty(ListItem.Writer)</visible>
+                        <label>$LOCALIZE[20417]</label>
+                        <label2>$INFO[ListItem.Writer]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!IsEmpty(ListItem.Director)</visible>
+                        <label>$LOCALIZE[20339]</label>
+                        <label2>$INFO[ListItem.Director]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+					<item>
+						<visible>!IsEmpty(ListItem.MPAA)</visible>
+						<label>$LOCALIZE[20074]</label>
+						<label2>$INFO[ListItem.MPAA]</label2>
 						<onclick>Noop</onclick>
 					</item>
 				</content>

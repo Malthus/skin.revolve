@@ -60,6 +60,12 @@
                         <onclick>Noop</onclick>
                     </item>
                     <item>
+                        <visible>!IsEmpty(ListItem.EpisodeName)</visible>
+                        <label>$LOCALIZE[21442]</label>
+                        <label2>$INFO[ListItem.EpisodeName]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
                         <visible>!IsEmpty(ListItem.Artist)</visible>
                         <label>$LOCALIZE[557]</label>
                         <label2>$INFO[ListItem.Artist]</label2>
@@ -111,6 +117,12 @@
                         <visible>!IsEmpty(ListItem.Director)</visible>
                         <label>$LOCALIZE[20339]</label>
                         <label2>$INFO[ListItem.Director]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!IsEmpty(ListItem.Country)</visible>
+                        <label>$LOCALIZE[574]</label>
+                        <label2>$INFO[ListItem.Country]</label2>
                         <onclick>Noop</onclick>
                     </item>
 					<item>
