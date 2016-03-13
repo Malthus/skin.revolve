@@ -455,6 +455,42 @@
 						<label>-</label>
 					</control>
                     
+					<control type="radiobutton" id="702">
+						<description>Auto Completion Activation Radiobutton</description>
+                        <visible>System.HasAddon(plugin.program.autocompletion)</visible>
+						<width>1100</width>
+						<align>left</align>
+						<label>$INFO[System.AddonTitle(plugin.program.autocompletion)]$INFO[System.AddonVersion(plugin.program.autocompletion), ,]</label>
+						<selected>Skin.HasSetting(Keyboard.AutoCompleteActive)</selected>
+						<onclick>Skin.ToggleSetting(Keyboard.AutoCompleteActive)</onclick>
+					</control>
+
+					<control type="button" id="703">
+						<description>Auto Completion Settings Button</description>
+                        <visible>System.HasAddon(plugin.program.autocompletion)</visible>
+						<width>1100</width>
+						<align>left</align>
+						<label>- $LOCALIZE[5]</label>
+						<onclick>Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+					</control>
+
+					<control type="button" id="704">
+						<description>Auto Completion Not Available Button</description>
+                        <visible>!System.HasAddon(plugin.program.autocompletion)</visible>
+                        <enable>false</enable>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31253]</label>
+                        <label2>$LOCALIZE[416]</label2>
+					</control>
+
+					<control type="label" id="722">
+						<description>Spacer</description>
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+                    
 					<control type="button" id="720">
 						<description>Reset Page Setting Button</description>
 						<width>1100</width>
@@ -617,6 +653,16 @@
 						<onclick>Skin.ToggleSetting(PlayerArtwork.Visible)</onclick>
 					</control>
 					
+					<control type="radiobutton" id="818">
+						<description>Seek Bar Background Option</description>
+						<width>1100</width>
+						<radioposx>1040</radioposx>
+						<align>left</align>
+						<label>$LOCALIZE[31251]</label>
+						<selected>Skin.HasSetting(Player.SeekBarTransparent)</selected>
+						<onclick>Skin.ToggleSetting(Player.SeekBarTransparent)</onclick>
+					</control>
+
 					<control type="radiobutton" id="804">
 						<description>Show Media Icons Option</description>
 						<width>1100</width>
@@ -1065,6 +1111,21 @@
                         <label>$LOCALIZE[31190]</label>
                     </control>
                     <control type="textbox">
+                        <visible>Control.HasFocus(702)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31254]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(703)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31255]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(704)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31256]</label>
+                    </control>
+                    <control type="textbox">
                         <visible>Control.HasFocus(801)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31184]</label>
@@ -1143,6 +1204,11 @@
                         <visible>Control.HasFocus(817)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31242]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(818)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31252]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(901)</visible>

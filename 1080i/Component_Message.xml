@@ -82,6 +82,7 @@
 	<include name="WindowForMessage">
         <param name="headerid" default="0" />
         <param name="headerlabel" default="-" />
+        <param name="backgroundvisible" default="true" />
     
         <definition>
             <control type="group">
@@ -93,9 +94,12 @@
                     <texture>elements/circle-shadow.png</texture>
                 </control>
 
-                <include name="DialogWindow">
-                    <param name="height" value="100" />
-                </include>
+                <control type="group">
+                    <visible>$PARAM[backgroundvisible]</visible>
+                    <include name="DialogWindow">
+                        <param name="height" value="100" />
+                    </include>
+                </control>
 
                 <control type="label" id="$PARAM[headerid]">
                     <posx>560</posx>
