@@ -439,7 +439,7 @@
 					<orientation>vertical</orientation>
 
 					<control type="button" id="701">
-						<description>Lyrics Button</description>
+						<description>Lyrics Selection Button</description>
 						<width>1100</width>
 						<align>left</align>
 						<label>$LOCALIZE[31126]</label>
@@ -448,6 +448,15 @@
 						<onclick>Skin.SetString(AddonLyrics,$INFO[Skin.String(Music.LyricsAddon)])</onclick>
 					</control>
 
+					<control type="button" id="702">
+						<description>Lyrics Settings Button</description>
+                        <visible>!IsEmpty(Skin.String(Music.LyricsAddon))</visible>
+						<width>1100</width>
+						<align>left</align>
+						<label>- $LOCALIZE[5]</label>
+						<onclick>Addon.OpenSettings($INFO[Skin.String(Music.LyricsAddon)])</onclick>
+					</control>
+                    
 					<control type="label" id="721">
 						<description>Spacer</description>
 						<width>1100</width>
@@ -455,7 +464,7 @@
 						<label>-</label>
 					</control>
                     
-					<control type="radiobutton" id="702">
+					<control type="radiobutton" id="703">
 						<description>Auto Completion Activation Radiobutton</description>
                         <visible>System.HasAddon(plugin.program.autocompletion)</visible>
 						<width>1100</width>
@@ -465,7 +474,7 @@
 						<onclick>Skin.ToggleSetting(Keyboard.AutoCompleteActive)</onclick>
 					</control>
 
-					<control type="button" id="703">
+					<control type="button" id="704">
 						<description>Auto Completion Settings Button</description>
                         <visible>System.HasAddon(plugin.program.autocompletion)</visible>
 						<width>1100</width>
@@ -474,7 +483,7 @@
 						<onclick>Addon.OpenSettings(plugin.program.autocompletion)</onclick>
 					</control>
 
-					<control type="button" id="704">
+					<control type="button" id="705">
 						<description>Auto Completion Not Available Button</description>
                         <visible>!System.HasAddon(plugin.program.autocompletion)</visible>
                         <enable>false</enable>
@@ -1113,15 +1122,20 @@
                     <control type="textbox">
                         <visible>Control.HasFocus(702)</visible>
                         <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31254]</label>
+                        <label>$LOCALIZE[31257]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(703)</visible>
                         <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31255]</label>
+                        <label>$LOCALIZE[31254]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(704)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31255]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(705)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31256]</label>
                     </control>
