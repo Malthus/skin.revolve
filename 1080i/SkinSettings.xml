@@ -426,6 +426,8 @@
 					</control>
 				</control>
                 
+                <include name="OptionsForExitMenuSkinSettings" />
+
                 <control type="grouplist" id="700">
 					<description>Control Area For Default Add-ons Options</description>
 					<visible>Container(99).Hasfocus(7)</visible>
@@ -871,50 +873,7 @@
 						<onclick>ActivateWindow(1189)</onclick>
 					</control>
 				</control>
-                
-				<control type="grouplist" id="1000">
-					<description>Control Area for Skin Information</description>
-					<visible>Container(99).Hasfocus(10)</visible>
-					<width>1100</width>
-					<height>760</height>
-					<itemgap>0</itemgap>
-					<onup>1000</onup>
-					<ondown>1000</ondown>
-					<onleft>99</onleft>
-					<onright>Noop</onright>
-					<orientation>vertical</orientation>
 
-					<control type="button" id="1003">
-						<description>Changelog Button</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31147]</label>
-						<onclick>SetProperty(DialogTitle,$LOCALIZE[31147],1187)</onclick>
-						<onclick>SetProperty(DialogTextFile,special://skin/changelog.txt,1187)</onclick>
-						<onclick>ActivateWindow(1187)</onclick>
-					</control>
-
-					<control type="button" id="1004">
-						<description>Credits Button</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31148]</label>
-						<onclick>SetProperty(DialogTitle,$LOCALIZE[31148],1187)</onclick>
-						<onclick>SetProperty(DialogTextFile,special://skin/credits.txt,1187)</onclick>
-						<onclick>ActivateWindow(1187)</onclick>
-					</control>
-
-					<control type="button" id="1005">
-						<description>License Button</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31930]</label>
-						<onclick>SetProperty(DialogTitle,$LOCALIZE[31930],1187)</onclick>
-						<onclick>SetProperty(DialogTextFile,special://skin/LICENSE.txt,1187)</onclick>
-						<onclick>ActivateWindow(1187)</onclick>
-					</control>
-				</control>
-                
                 <control type="group">
                     <visible>Container(99).Hasfocus(4)</visible>
 
@@ -956,7 +915,7 @@
 			</control>
 
             <control type="group">
-                <visible>Skin.HasSetting(Settings.HelpVisible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | Control.IsVisible(200) | ControlGroup(300).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
+                <visible>Skin.HasSetting(Settings.HelpVisible) + [Control.HasFocus(99) | ControlGroup(100).HasFocus | Control.IsVisible(200) | ControlGroup(300).HasFocus | ControlGroup(400).HasFocus | Control.IsVisible(500) | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus]</visible>
                 <include name="WindowAnimationForSettings" />
 
                 <control type="image">
@@ -969,6 +928,7 @@
                 </control>
                 
                 <include name="AnnotationsForHomeMenuSkinSettings" />
+                <include name="AnnotationsForExitMenuSkinSettings" />
             
                 <control type="group">
                     <description>Settings Description Textbox</description>
@@ -1311,6 +1271,13 @@
                             <onclick>Noop</onclick>
                         </item>
 
+                        <item id="5">
+                            <description>Exit Menu Items Option</description>
+                            <label>$LOCALIZE[31412]</label>
+                            <label2>$LOCALIZE[31413]</label2>
+                            <onclick>Noop</onclick>
+                        </item>
+
                         <item id="7">
                             <description>Default Add-ons Option</description>
                             <label>$LOCALIZE[31125]</label>
@@ -1329,13 +1296,6 @@
                             <description>Debug Option</description>
                             <label>$LOCALIZE[31133]</label>
                             <label2>$LOCALIZE[31229]</label2>
-                            <onclick>Noop</onclick>
-                        </item>
-
-                        <item id="10">
-                            <description>Skin Information Option</description>
-                            <label>$LOCALIZE[31146]</label>
-                            <label2>$LOCALIZE[31230]</label2>
                             <onclick>Noop</onclick>
                         </item>
                     </content>
