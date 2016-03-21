@@ -9,10 +9,10 @@
             <include name="HomeMenuItemsSettingsForSkinSettings" />
             <include name="CircleItemsSettingsForSkinSettings" />
             <include name="ExitMenuItemsDefaultValues" />
-            <include name="AddonSettingsForSkinSettings" />
+            <include name="MediaSettingsDefaultValues" />
             <include name="MiscellaneousSettingsForSkinSettings" />
-            <include name="DebugSettingsForSkinSettings" />
-            
+            <include name="DebugSettingsDefaultValues" />
+
             <onfocus>Skin.SetString(Revolve.Configuration,3.0.2)</onfocus>
 <!--            <onfocus>Skin.SetString(Revolve.Configuration,4.1.1)</onfocus> -->
         </definition>
@@ -21,6 +21,8 @@
 	<include name="MigratedValues">
         <definition>
             <include name="ExitMenuItemsDefaultValues" />
+            <include name="MediaSettingsMigratedValues" />
+            <include name="DebugSettingsDefaultValues" />
             
 <!--            <onfocus>Skin.SetString(Revolve.Configuration,4.1.1)</onfocus> -->
         </definition>
@@ -161,13 +163,28 @@
         </definition>
 	</include>
 
-	<include name="AddonSettingsForSkinSettings">
+	<include name="MediaSettingsDefaultValues">
         <definition>
-            <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(Music.LyricsAddon,script.cu.lrclyrics)</onfocus>
-            <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(AddonLyrics,script.cu.lrclyrics)</onfocus>
-            <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(Music.LyricsAddon)</onfocus>
-            <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(AddonLyrics)</onfocus>
-            <onfocus>Skin.SetBool(Keyboard.AutoCompleteActive)</onfocus>
+            <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,script.cu.lrclyrics)</onfocus>
+            <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(Media.MusicLyricsAddon.Script)</onfocus>
+            <onfocus>Skin.Reset(Media.ArtistSlideshowVisualization.Active)</onfocus>
+            <onfocus>Skin.SetBool(Media.PlayerArtwork.Visible)</onfocus>
+            <onfocus>Skin.SetBool(Media.PlayerSeekBar.Visible)</onfocus>
+            <onfocus>Skin.Reset(Media.OverlayBackground.Visible)</onfocus>
+        </definition>
+	</include>
+
+	<include name="MediaSettingsMigratedValues">
+        <definition>
+            <onfocus condition="!IsEmpty(AddonLyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(AddonLyrics)])</onfocus>
+            <onfocus condition="!IsEmpty(Music.LyricsAddon)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(Music.LyricsAddon)])</onfocus>
+            <onfocus>Skin.Reset(Media.ArtistSlideshowVisualization.Active)</onfocus>
+            <onfocus condition="Skin.HasSetting(PlayerArtwork.Visible)">Skin.SetBool(Media.PlayerArtwork.Visible)</onfocus>
+            <onfocus condition="!Skin.HasSetting(PlayerArtwork.Visible)">Skin.Reset(Media.PlayerArtwork.Visible)</onfocus>
+            <onfocus condition="Skin.HasSetting(Player.SeekBarTransparent)">Skin.Reset(Media.PlayerSeekBar.Visible)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Player.SeekBarTransparent)">Skin.SetBool(Media.PlayerSeekBar.Visible)</onfocus>
+            <onfocus condition="Skin.HasSetting(Overlay.BackgroundVisible)">Skin.SetBool(Media.OverlayBackground.Visible)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Overlay.BackgroundVisible)">Skin.Reset(Media.OverlayBackground.Visible)</onfocus>
         </definition>
 	</include>
 
@@ -179,10 +196,7 @@
             <onfocus>Skin.SetBool(SideMenu.GlobalSearch)</onfocus>
             <onfocus>Skin.SetBool(ViewScrollbar.Visible)</onfocus>
             <onfocus>Skin.SetBool(BackButton.Visible)</onfocus>
-            <onfocus>Skin.SetBool(Overlay.BackgroundVisible)</onfocus>
             <onfocus>Skin.SetBool(RSSFeed.BackgroundVisible)</onfocus>
-            <onfocus>Skin.SetBool(PlayerArtwork.Visible)</onfocus>
-            <onfocus>Skin.Reset(Player.SeekBarTransparent)</onfocus>
             <onfocus>Skin.SetBool(MediaIcons.Visible)</onfocus>
             <onfocus>Skin.SetString(BusyAnimation.Type,A)</onfocus>
             <onfocus>Skin.SetBool(NoInformationLabel.Visible)</onfocus>
@@ -191,16 +205,17 @@
             <onfocus>Skin.SetBool(Landscape.DescriptionVisible)</onfocus>
             <onfocus>Skin.Reset(Settings.DialogInfoAutoRefresh)</onfocus>
             <onfocus>Skin.Reset(Settings.DialogInfoAutoScroll)</onfocus>
+            <onfocus>Skin.SetBool(Keyboard.AutoCompleteActive)</onfocus>
             <onfocus>Skin.SetBool(Settings.HelpVisible)</onfocus>
         </definition>
 	</include>
     
-	<include name="DebugSettingsForSkinSettings">
+	<include name="DebugSettingsDefaultValues">
         <definition>
-            <onfocus>Skin.Reset(Debug.GridVisible)</onfocus>
-            <onfocus>Skin.Reset(Debug.InfoVisible)</onfocus>
-            <onfocus>Skin.SetString(Debug.AdditionalInfo,N)</onfocus>
-            <onfocus>Skin.Reset(Debug.ListBorderVisible)</onfocus>
+            <onfocus>Skin.Reset(Debug.Grid.Visible)</onfocus>
+            <onfocus>Skin.Reset(Debug.Info.Visible)</onfocus>
+            <onfocus>Skin.SetString(Debug.Info.AdditionalType,N)</onfocus>
+            <onfocus>Skin.Reset(Debug.ListBorder.Visible)</onfocus>
         </definition>
 	</include>
 </includes>

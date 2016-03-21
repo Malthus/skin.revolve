@@ -161,7 +161,7 @@
 	<include name="MediaThumbnailIconForOSD">
         <definition>
 			<control type="group">
-                <visible>Skin.HasSetting(PlayerArtwork.Visible)</visible>
+                <visible>Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" tween="quadratic" easing="out" start="1590,0" end="0,0" time="500" />
 				</animation>
@@ -179,7 +179,7 @@
 			</control>
             
 			<control type="group">
-                <visible>!Skin.HasSetting(PlayerArtwork.Visible)</visible>
+                <visible>!Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
 				<animation type="WindowOpen">
 					<effect type="slide" tween="quadratic" easing="out" start="1900,0" end="0,0" time="500" />
 				</animation>

@@ -425,95 +425,11 @@
 						<onclick>ActivateWindow(1189)</onclick>
 					</control>
 				</control>
-                
+
                 <include name="OptionsForExitMenuSkinSettings" />
 
-                <control type="grouplist" id="700">
-					<description>Control Area For Default Add-ons Options</description>
-					<visible>Container(99).Hasfocus(7)</visible>
-					<width>1100</width>
-					<height>760</height>
-					<itemgap>0</itemgap>
-					<onup>700</onup>
-					<ondown>700</ondown>
-					<onleft>99</onleft>
-					<onright>Noop</onright>
-					<orientation>vertical</orientation>
+                <include name="OptionsForMediaSkinSettings" />
 
-					<control type="button" id="701">
-						<description>Lyrics Selection Button</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31126]</label>
-						<label2>$INFO[Skin.String(AddonLyrics)]</label2>
-						<onclick>Skin.SetAddon(Music.LyricsAddon,xbmc.python.lyrics)</onclick>
-						<onclick>Skin.SetString(AddonLyrics,$INFO[Skin.String(Music.LyricsAddon)])</onclick>
-					</control>
-
-					<control type="button" id="702">
-						<description>Lyrics Settings Button</description>
-                        <visible>!IsEmpty(Skin.String(Music.LyricsAddon))</visible>
-						<width>1100</width>
-						<align>left</align>
-						<label>- $LOCALIZE[5]</label>
-						<onclick>Addon.OpenSettings($INFO[Skin.String(Music.LyricsAddon)])</onclick>
-					</control>
-                    
-					<control type="label" id="721">
-						<description>Spacer</description>
-						<width>1100</width>
-                        <height>20</height>
-						<label>-</label>
-					</control>
-                    
-					<control type="radiobutton" id="703">
-						<description>Auto Completion Activation Radiobutton</description>
-                        <visible>System.HasAddon(plugin.program.autocompletion)</visible>
-						<width>1100</width>
-						<align>left</align>
-						<label>$INFO[System.AddonTitle(plugin.program.autocompletion)]$INFO[System.AddonVersion(plugin.program.autocompletion), ,]</label>
-						<selected>Skin.HasSetting(Keyboard.AutoCompleteActive)</selected>
-						<onclick>Skin.ToggleSetting(Keyboard.AutoCompleteActive)</onclick>
-					</control>
-
-					<control type="button" id="704">
-						<description>Auto Completion Settings Button</description>
-                        <visible>System.HasAddon(plugin.program.autocompletion)</visible>
-						<width>1100</width>
-						<align>left</align>
-						<label>- $LOCALIZE[5]</label>
-						<onclick>Addon.OpenSettings(plugin.program.autocompletion)</onclick>
-					</control>
-
-					<control type="button" id="705">
-						<description>Auto Completion Not Available Button</description>
-                        <visible>!System.HasAddon(plugin.program.autocompletion)</visible>
-                        <enable>false</enable>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[31253]</label>
-                        <label2>$LOCALIZE[416]</label2>
-					</control>
-
-					<control type="label" id="722">
-						<description>Spacer</description>
-						<width>1100</width>
-                        <height>20</height>
-						<label>-</label>
-					</control>
-                    
-					<control type="button" id="720">
-						<description>Reset Page Setting Button</description>
-						<width>1100</width>
-						<align>left</align>
-						<label>$LOCALIZE[10041]</label>
-						<onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
-						<onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
-						<onclick>SetProperty(DialogAction,SetFocus(57),1189)</onclick>
-						<onclick>ActivateWindow(1189)</onclick>
-					</control>
-				</control>
-				
 				<control type="grouplist" id="800">
 					<description>Control Area For Miscellaneous Settings</description>
 					<visible>Container(99).Hasfocus(8)</visible>
@@ -537,7 +453,7 @@
 						<onclick>Skin.ToggleSetting(TitleScreen.Visible)</onclick>
 					</control>
 					
-					<control type="label" id="822">
+					<control type="label" id="852">
 						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
@@ -590,7 +506,7 @@
 						<onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
 					</control>
 
-					<control type="label" id="823">
+					<control type="label" id="853">
 						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
@@ -627,7 +543,7 @@
 						<onclick>Skin.ToggleSetting(SideMenu.GlobalSearch)</onclick>
 					</control>
 
-					<control type="label" id="824">
+					<control type="label" id="854">
 						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
@@ -644,36 +560,6 @@
 						<onclick>Skin.ToggleSetting(BackButton.Visible)</onclick>
 					</control>
 					
-					<control type="radiobutton" id="811">
-						<description>Show Background For Overlay Option</description>
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31154]</label>
-						<selected>Skin.HasSetting(Overlay.BackgroundVisible)</selected>
-						<onclick>Skin.ToggleSetting(Overlay.BackgroundVisible)</onclick>
-					</control>
-					
-					<control type="radiobutton" id="806">
-						<description>Show OSD / Overlay Player Icon Option</description>
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31145]</label>
-						<selected>Skin.HasSetting(PlayerArtwork.Visible)</selected>
-						<onclick>Skin.ToggleSetting(PlayerArtwork.Visible)</onclick>
-					</control>
-					
-					<control type="radiobutton" id="818">
-						<description>Seek Bar Background Option</description>
-						<width>1100</width>
-						<radioposx>1040</radioposx>
-						<align>left</align>
-						<label>$LOCALIZE[31251]</label>
-						<selected>Skin.HasSetting(Player.SeekBarTransparent)</selected>
-						<onclick>Skin.ToggleSetting(Player.SeekBarTransparent)</onclick>
-					</control>
-
 					<control type="radiobutton" id="804">
 						<description>Show Media Icons Option</description>
 						<width>1100</width>
@@ -718,7 +604,43 @@
 						<onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
 					</control>
                     
-					<control type="label" id="825">
+					<control type="label" id="856">
+						<description>Spacer</description>
+						<width>1100</width>
+                        <height>20</height>
+						<label>-</label>
+					</control>
+
+					<control type="radiobutton" id="823">
+						<description>Auto Completion Activation Radiobutton</description>
+                        <visible>System.HasAddon(plugin.program.autocompletion)</visible>
+						<width>1100</width>
+						<align>left</align>
+						<label>$INFO[System.AddonTitle(plugin.program.autocompletion),$LOCALIZE[21480] ,]$INFO[System.AddonVersion(plugin.program.autocompletion), ,]</label>
+						<selected>Skin.HasSetting(Keyboard.AutoCompleteActive)</selected>
+						<onclick>Skin.ToggleSetting(Keyboard.AutoCompleteActive)</onclick>
+					</control>
+
+					<control type="button" id="824">
+						<description>Auto Completion Settings Button</description>
+                        <visible>System.HasAddon(plugin.program.autocompletion)</visible>
+						<width>1100</width>
+						<align>left</align>
+						<label>- $LOCALIZE[5]</label>
+						<onclick>Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+					</control>
+
+					<control type="button" id="825">
+						<description>Auto Completion Not Available Button</description>
+                        <visible>!System.HasAddon(plugin.program.autocompletion)</visible>
+                        <enable>false</enable>
+						<width>1100</width>
+						<align>left</align>
+						<label>$LOCALIZE[31253]</label>
+                        <label2>$LOCALIZE[416]</label2>
+					</control>
+
+					<control type="label" id="855">
 						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
@@ -745,14 +667,14 @@
 						<onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
 					</control>
                     
-					<control type="label" id="821">
+					<control type="label" id="851">
 						<description>Spacer</description>
 						<width>1100</width>
                         <height>20</height>
 						<label>-</label>
 					</control>
                     
-					<control type="button" id="820">
+					<control type="button" id="850">
 						<description>Reset Page Setting Button</description>
 						<width>1100</width>
 						<align>left</align>
@@ -929,6 +851,7 @@
                 
                 <include name="AnnotationsForHomeMenuSkinSettings" />
                 <include name="AnnotationsForExitMenuSkinSettings" />
+                <include name="AnnotationsForMediaSkinSettings" />
             
                 <control type="group">
                     <description>Settings Description Textbox</description>
@@ -1075,31 +998,6 @@
                         <label>$LOCALIZE[31239]</label>
                     </control>
                     <control type="textbox">
-                        <visible>Control.HasFocus(701)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31190]</label>
-                    </control>
-                    <control type="textbox">
-                        <visible>Control.HasFocus(702)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31257]</label>
-                    </control>
-                    <control type="textbox">
-                        <visible>Control.HasFocus(703)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31254]</label>
-                    </control>
-                    <control type="textbox">
-                        <visible>Control.HasFocus(704)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31255]</label>
-                    </control>
-                    <control type="textbox">
-                        <visible>Control.HasFocus(705)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31256]</label>
-                    </control>
-                    <control type="textbox">
                         <visible>Control.HasFocus(801)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31184]</label>
@@ -1125,11 +1023,6 @@
                         <label>$LOCALIZE[31186]</label>
                     </control>
                     <control type="textbox">
-                        <visible>Control.HasFocus(806)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31191]</label>
-                    </control>
-                    <control type="textbox">
                         <visible>Control.HasFocus(807)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31207]</label>
@@ -1148,11 +1041,6 @@
                         <visible>Control.HasFocus(810)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31214]</label>
-                    </control>
-                    <control type="textbox">
-                        <visible>Control.HasFocus(811)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31215]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(812)</visible>
@@ -1180,9 +1068,19 @@
                         <label>$LOCALIZE[31242]</label>
                     </control>
                     <control type="textbox">
-                        <visible>Control.HasFocus(818)</visible>
+                        <visible>Control.HasFocus(823)</visible>
                         <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31252]</label>
+                        <label>$LOCALIZE[31254]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(824)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31255]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(825)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31256]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(901)</visible>
@@ -1210,7 +1108,7 @@
                         <label>$LOCALIZE[31196]</label>
                     </control>
                     <control type="textbox">
-                        <visible>Control.HasFocus(120) | Control.HasFocus(320) | Control.HasFocus(420) | Control.HasFocus(720) | Control.HasFocus(820) | Control.HasFocus(920)</visible>
+                        <visible>Control.HasFocus(120) | Control.HasFocus(320) | Control.HasFocus(420) | Control.HasFocus(850) | Control.HasFocus(920)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31897]</label>
                     </control>
@@ -1279,9 +1177,9 @@
                         </item>
 
                         <item id="7">
-                            <description>Default Add-ons Option</description>
-                            <label>$LOCALIZE[31125]</label>
-                            <label2>$LOCALIZE[31227]</label2>
+                            <description>Media Option</description>
+                            <label>$LOCALIZE[31259]</label>
+                            <label2>$LOCALIZE[31260]</label2>
                             <onclick>Noop</onclick>
                         </item>
 

@@ -576,7 +576,7 @@
 
         <definition>
             <control type="button" id="$PARAM[id]">
-                <enable>!IsEmpty(Skin.String(AddonLyrics))</enable>
+                <enable>!IsEmpty(Skin.String(Media.MusicLyricsAddon.Script))</enable>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
@@ -590,7 +590,7 @@
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
                 <onclick>Close</onclick>
-                <onclick>RunScript($INFO[Skin.String(AddonLyrics)])</onclick>
+                <onclick>RunScript($INFO[Skin.String(Media.MusicLyricsAddon.Script)])</onclick>
             </control>
             
             <control type="image">

@@ -12,7 +12,7 @@
 				<control type="group">
 					<posy>PosYForPauseWindowForMessage</posy>
                     <include name="WindowForMessage">
-                        <param name="backgroundvisible" value="!Skin.HasSetting(Player.SeekBarTransparent)" />
+                        <param name="backgroundvisible" value="Skin.HasSetting(Media.PlayerSeekBar.Visible)" />
                     </include>
 
 					<control type="group">
@@ -86,7 +86,7 @@
 					</control>
 
 					<control type="group">
-                        <visible>!Skin.HasSetting(Player.SeekBarTransparent)</visible>
+                        <visible>Skin.HasSetting(Media.PlayerSeekBar.Visible)</visible>
                         <control type="label">
                             <posx>560</posx>
                             <posy>30</posy>
@@ -109,7 +109,7 @@
 					</control>
                     
 					<control type="group">
-                        <visible>Skin.HasSetting(Player.SeekBarTransparent)</visible>
+                        <visible>!Skin.HasSetting(Media.PlayerSeekBar.Visible)</visible>
                         <include name="OutlineLabel">
                             <param name="posx" value="560" />
                             <param name="posy" value="30" />
