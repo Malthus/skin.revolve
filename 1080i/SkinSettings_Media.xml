@@ -184,6 +184,16 @@
                     <label>$LOCALIZE[31215]</label>
                 </control>
                 <control type="textbox">
+                    <visible>Control.HasFocus(706)</visible>
+                    <font>DialogHelpFont</font>
+                    <label>$LOCALIZE[31490]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(707)</visible>
+                    <font>DialogHelpFont</font>
+                    <label>$LOCALIZE[31491]</label>
+                </control>
+                <control type="textbox">
                     <visible>Control.HasFocus(750)</visible>
                     <font>DialogHelpFont</font>
                     <label>$LOCALIZE[31897]</label>
