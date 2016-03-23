@@ -715,8 +715,8 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31134]</label>
-						<selected>Skin.HasSetting(Debug.GridVisible)</selected>
-						<onclick>Skin.ToggleSetting(Debug.GridVisible)</onclick>
+						<selected>Skin.HasSetting(Debug.Grid.Visible)</selected>
+						<onclick>Skin.ToggleSetting(Debug.Grid.Visible)</onclick>
 					</control>
 
 					<control type="radiobutton" id="902">
@@ -725,20 +725,20 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31135]</label>
-						<selected>Skin.HasSetting(Debug.InfoVisible)</selected>
-						<onclick>Skin.ToggleSetting(Debug.InfoVisible)</onclick>
+						<selected>Skin.HasSetting(Debug.Info.Visible)</selected>
+						<onclick>Skin.ToggleSetting(Debug.Info.Visible)</onclick>
 					</control>
 
 					<control type="button" id="905">
 						<description>Debug Additional Info Setting</description>
-                        <enable>Skin.HasSetting(Debug.InfoVisible)</enable>
+                        <enable>Skin.HasSetting(Debug.Info.Visible)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31157]</label>
 						<label2>$VAR[AdditionalDebugInfoLabel]</label2>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31157],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31159],1188)</onclick>
-						<onclick>SetProperty(DialogTarget,Debug.AdditionalInfo,1188)</onclick>
+						<onclick>SetProperty(DialogTarget,Debug.Info.AdditionalType,1188)</onclick>
 						<onclick>SetProperty(List01Option.Name,$LOCALIZE[16018],1188)</onclick>
 						<onclick>SetProperty(List01Option.Action,N,1188)</onclick>
 						<onclick>SetProperty(List02Option.Name,$LOCALIZE[19190],1188)</onclick>
@@ -754,8 +754,8 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31789]</label>
-						<selected>Skin.HasSetting(Debug.ListBorderVisible)</selected>
-						<onclick>Skin.ToggleSetting(Debug.ListBorderVisible)</onclick>
+						<selected>Skin.HasSetting(Debug.ListBorder.Visible)</selected>
+						<onclick>Skin.ToggleSetting(Debug.ListBorder.Visible)</onclick>
 					</control>
                     
 					<control type="label" id="903">

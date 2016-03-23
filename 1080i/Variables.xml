@@ -296,8 +296,8 @@
     </variable>
 
     <variable name="AdditionalDebugInfoLabel">
-        <value condition="StringCompare(Skin.String(Debug.AdditionalInfo),B)">$LOCALIZE[19190]</value>
-        <value condition="StringCompare(Skin.String(Debug.AdditionalInfo),P)">$LOCALIZE[573]</value>
+        <value condition="StringCompare(Skin.String(Debug.Info.AdditionalType),B)">$LOCALIZE[19190]</value>
+        <value condition="StringCompare(Skin.String(Debug.Info.AdditionalType),P)">$LOCALIZE[573]</value>
         <value>$LOCALIZE[16018]</value>
     </variable>
 
