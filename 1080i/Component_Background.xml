@@ -36,14 +36,6 @@
                 <control type="largeimage">
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
-                    <fadetime>500</fadetime>
-                    <texture background="true">special://skin/backgrounds/default.jpg</texture>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
-                </control>
-
-                <control type="largeimage">
-                    <include name="FadeAnimationForBackground" />
-                    <include name="FullscreenDimensions" />
                     <fadetime>1000</fadetime>
                     <texture background="true">$VAR[ContentSingleImageBackground]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
