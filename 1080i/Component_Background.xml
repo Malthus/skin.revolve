@@ -34,6 +34,15 @@
                 <visible>Skin.HasSetting(Background.ImageActive) + [!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(Background.VisualiserActive)] | [Player.HasVideo + !Skin.HasSetting(Background.VideoActive)]]</visible>
 
                 <control type="largeimage">
+                    <visible>Container.Content(files) + Skin.HasSetting(Background.ImageFanartForFiles) + !SubString(Container.FolderPath,library,Left)</visible>
+                    <include name="FadeAnimationForBackground" />
+                    <include name="FullscreenDimensions" />
+                    <fadetime>1000</fadetime>
+                    <texture background="true">special://skin/backgrounds/default.jpg</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                </control>
+
+                <control type="largeimage">
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
                     <fadetime>1000</fadetime>
