@@ -592,59 +592,66 @@
 						<onclick>Noop</onclick>
 					</item>
 					<item id="890">
+						<description>Shut Down Option</description>
+                        <visible>Container(30).HasFocus(8)</visible>
+						<label>$LOCALIZE[31629]</label>
+						<property name="Command">ShutDown</property>
+						<onclick>Noop</onclick>
+					</item>
+					<item id="891">
 						<description>Log Off User Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31873]</label>
 						<property name="Command">System.LogOff</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="891">
+					<item id="892">
 						<description>Minimize XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31872]</label>
 						<property name="Command">Minimize</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="892">
+					<item id="893">
 						<description>Restart XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31876]</label>
 						<property name="Command">RestartApp</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="893">
+					<item id="894">
 						<description>Quit XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31877]</label>
 						<property name="Command">Quit</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="894">
+					<item id="895">
 						<description>Suspend Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31874]</label>
 						<property name="Command">Suspend</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="895">
+					<item id="896">
 						<description>Hibernate Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31875]</label>
 						<property name="Command">Hibernate</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="896">
+					<item id="897">
 						<description>Reboot Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31878]</label>
 						<property name="Command">Reboot</property>
 						<onclick>Noop</onclick>
 					</item>
-					<item id="897">
-						<description>Shut Down Option</description>
+					<item id="898">
+						<description>Power Down Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
 						<label>$LOCALIZE[31879]</label>
-						<property name="Command">ShutDown</property>
+						<property name="Command">Powerdown</property>
 						<onclick>Noop</onclick>
 					</item>
 					<item id="901">
