@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="115">
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<defaultcontrol always="true">401</defaultcontrol>
 	
 	<controls>
 		<control type="group">
@@ -74,7 +75,7 @@
 							<midtexture colordiffuse="$VAR[SelectColor]" border="6">controls/horizontalbar-thin.png</midtexture>
 							<info>Player.ProgressCache</info>
 						</control>
-						<control type="progress" id="401">
+						<control type="progress">
                             <description>Player Seek Bar</description>
 							<posx>780</posx>
 							<posy>28</posy>
@@ -83,11 +84,21 @@
 							<midtexture colordiffuse="$VAR[MainColor]" border="6">controls/horizontalbar-thin.png</midtexture>
 							<info>Player.Progress</info>
 						</control>
+						<control type="slider" id="401">
+                            <description>Player Seek Slider</description>
+							<posx>780</posx>
+							<posy>40</posy>
+							<width>800</width>
+							<height>24</height>
+                            <texturesliderbar>-</texturesliderbar>
+                            <textureslidernib>-</textureslidernib>
+                            <textureslidernibfocus>-</textureslidernibfocus>
+						</control>
 					</control>
 
 					<control type="group">
                         <visible>Skin.HasSetting(Media.PlayerSeekBar.Visible)</visible>
-                        <control type="label">
+                        <control type="label" id="402">
                             <posx>560</posx>
                             <posy>30</posy>
                             <width>200</width>
