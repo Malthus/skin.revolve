@@ -57,12 +57,13 @@
             <control type="group">
                 <include name="ButtonLeftRingForSettings" />
 
-                <control type="list" id="99">
+                <control type="grouplist" id="99">
                     <posx>40</posx>
                     <posy>560</posy>
                     <width>480</width>
                     <height>400</height>
                     <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
                     <pagecontrol>-</pagecontrol>
                     <scrolltime>0</scrolltime>
                     <onup>99</onup>
@@ -70,32 +71,29 @@
                     <onleft>9000</onleft>
                     <onright>98</onright>
 
-                    <include name="ItemsForButtonListInSkinSettings">
-                        <param name="listid" value="99" />
-                    </include>
+                    <control type="button" id="1">
+                        <description>Changelog Option</description>
+                        <align>left</align>
+                        <label>$LOCALIZE[31147]</label>
+                        <onfocus>SetProperty(RevolveWindowTitle,$LOCALIZE[31147],1151)</onfocus>
+                        <onfocus>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/changelog.txt,RevolveWindowText,1151)</onfocus>
+                    </control>
 
-                    <content>
-                        <item id="1">
-                            <description>Changelog Option</description>
-                            <label>$LOCALIZE[31147]</label>
-                            <onclick>SetProperty(RevolveWindowTitle,$LOCALIZE[31147],1151)</onclick>
-                            <onclick>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/changelog.txt,RevolveWindowText,1151)</onclick>
-                        </item>
+                    <control type="button" id="2">
+                        <description>Credits Option</description>
+                        <align>left</align>
+                        <label>$LOCALIZE[31148]</label>
+                        <onfocus>SetProperty(RevolveWindowTitle,$LOCALIZE[31148],1151)</onfocus>
+                        <onfocus>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/credits.txt,RevolveWindowText,1151)</onfocus>
+                    </control>
 
-                        <item id="2">
-                            <description>Credits Option</description>
-                            <label>$LOCALIZE[31148]</label>
-                            <onclick>SetProperty(RevolveWindowTitle,$LOCALIZE[31148],1151)</onclick>
-                            <onclick>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/credits.txt,RevolveWindowText,1151)</onclick>
-                        </item>
-
-                        <item id="3">
-                            <description>License Option</description>
-                            <label>$LOCALIZE[31930]</label>
-                            <onclick>SetProperty(RevolveWindowTitle,$LOCALIZE[31930],1151)</onclick>
-                            <onclick>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/LICENSE.txt,RevolveWindowText,1151)</onclick>
-                        </item>
-                    </content>
+                    <control type="button" id="3">
+                        <description>License Option</description>
+                        <align>left</align>
+                        <label>$LOCALIZE[31930]</label>
+                        <onfocus>SetProperty(RevolveWindowTitle,$LOCALIZE[31930],1151)</onfocus>
+                        <onfocus>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/LICENSE.txt,RevolveWindowText,1151)</onfocus>
+                    </control>
                 </control>
 			</control>
 		</control>
