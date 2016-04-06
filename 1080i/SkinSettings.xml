@@ -32,40 +32,40 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31131]</label>
-						<selected>Skin.HasSetting(Background.ImageActive)</selected>
-						<onclick>Skin.ToggleSetting(Background.ImageActive)</onclick>
+						<selected>Skin.HasSetting(Background.Image.Active)</selected>
+						<onclick>Skin.ToggleSetting(Background.Image.Active)</onclick>
 					</control>
 
 					<control type="radiobutton" id="102">
 						<description>Faded Background Image Option</description>
-						<enable>Skin.HasSetting(Background.ImageActive)</enable>
+						<enable>Skin.HasSetting(Background.Image.Active)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31128]</label>
-						<selected>Skin.HasSetting(Background.ImageFaded)</selected>
-						<onclick>Skin.ToggleSetting(Background.ImageFaded)</onclick>
+						<selected>Skin.HasSetting(Background.Image.Faded)</selected>
+						<onclick>Skin.ToggleSetting(Background.Image.Faded)</onclick>
 					</control>
 
 					<control type="button" id="109">
 						<description>Weather Fanart Button</description>
-						<enable>Skin.HasSetting(Background.ImageActive)</enable>
+						<enable>Skin.HasSetting(Background.Image.Active)</enable>
 						<width>1100</width>
 						<align>left</align>
 						<label>- $LOCALIZE[31240]</label>
-						<label2>$INFO[Skin.String(Background.WeatherImageResource)]</label2>
-						<onclick>Skin.SetAddon(Background.WeatherImageResource,kodi.resource.images)</onclick>
+						<label2>$INFO[Skin.String(Background.Image.WeatherResource.Path)]</label2>
+						<onclick>Skin.SetAddon(Background.Image.WeatherResource.Path,kodi.resource.images)</onclick>
 					</control>
                     
 					<control type="radiobutton" id="108">
 						<description>Fanart For Files Background Image Option</description>
-						<enable>Skin.HasSetting(Background.ImageActive)</enable>
+						<enable>Skin.HasSetting(Background.Image.Active)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31610]</label>
-						<selected>Skin.HasSetting(Background.ImageFanartForFiles)</selected>
-						<onclick>Skin.ToggleSetting(Background.ImageFanartForFiles)</onclick>
+						<selected>Skin.HasSetting(Background.Image.FanartForFiles)</selected>
+						<onclick>Skin.ToggleSetting(Background.Image.FanartForFiles)</onclick>
 					</control>
 
 					<control type="radiobutton" id="103">
@@ -74,19 +74,19 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31123]</label>
-						<selected>Skin.HasSetting(Background.VisualiserActive)</selected>
-						<onclick>Skin.ToggleSetting(Background.VisualiserActive)</onclick>
+						<selected>Skin.HasSetting(Background.Visualiser.Active)</selected>
+						<onclick>Skin.ToggleSetting(Background.Visualiser.Active)</onclick>
 					</control>
 
 					<control type="radiobutton" id="104">
 						<description>Faded Background Visualiser Option</description>
-						<enable>Skin.HasSetting(Background.VisualiserActive)</enable>
+						<enable>Skin.HasSetting(Background.Visualiser.Active)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31129]</label>
-						<selected>Skin.HasSetting(Background.VisualiserFaded)</selected>
-						<onclick>Skin.ToggleSetting(Background.VisualiserFaded)</onclick>
+						<selected>Skin.HasSetting(Background.Visualiser.Faded)</selected>
+						<onclick>Skin.ToggleSetting(Background.Visualiser.Faded)</onclick>
 					</control>
 
 					<control type="radiobutton" id="105">
@@ -95,19 +95,19 @@
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$LOCALIZE[31124]</label>
-						<selected>Skin.HasSetting(Background.VideoActive)</selected>
-						<onclick>Skin.ToggleSetting(Background.VideoActive)</onclick>
+						<selected>Skin.HasSetting(Background.Video.Active)</selected>
+						<onclick>Skin.ToggleSetting(Background.Video.Active)</onclick>
 					</control>
 
 					<control type="radiobutton" id="106">
 						<description>Faded Background Video Option</description>
-						<enable>Skin.HasSetting(Background.VideoActive)</enable>
+						<enable>Skin.HasSetting(Background.Video.Active)</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>- $LOCALIZE[31130]</label>
-						<selected>Skin.HasSetting(Background.VideoFaded)</selected>
-						<onclick>Skin.ToggleSetting(Background.VideoFaded)</onclick>
+						<selected>Skin.HasSetting(Background.Video.Faded)</selected>
+						<onclick>Skin.ToggleSetting(Background.Video.Faded)</onclick>
 					</control>
                     
 					<control type="label" id="122">
@@ -125,7 +125,7 @@
 						<label2>$VAR[BackgroundAnimationLevelLabel]</label2>
 						<onclick>SetProperty(DialogTitle,$LOCALIZE[31798],1188)</onclick>
 						<onclick>SetProperty(DialogMessage,$LOCALIZE[31217],1188)</onclick>
-						<onclick>SetProperty(DialogTarget,Background.AnimationLevel,1188)</onclick>
+						<onclick>SetProperty(DialogTarget,Background.Animation.Level,1188)</onclick>
 						<onclick>SetProperty(List01Option.Name,$LOCALIZE[231],1188)</onclick>
 						<onclick>SetProperty(List01Option.Action,0,1188)</onclick>
 						<onclick>SetProperty(List02Option.Name,$LOCALIZE[21388],1188)</onclick>

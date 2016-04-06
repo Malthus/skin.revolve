@@ -4,7 +4,7 @@
         <definition>
             <onfocus>Skin.ResetSettings</onfocus>
             
-            <include name="BackgroundSettingsForSkinSettings" />
+            <include name="BackgroundSettingsDefaultValues" />
             <include name="ColorsSettingsForSkinSettings" />
             <include name="HomeMenuItemsSettingsForSkinSettings" />
             <include name="CircleItemsSettingsForSkinSettings" />
@@ -21,6 +21,7 @@
 	<include name="MigratedValues">
         <definition>
             <include name="ExitMenuItemsDefaultValues" />
+            <include name="BackgroundSettingsMigratedValues" />
             <include name="MediaSettingsMigratedValues" />
             <include name="DebugSettingsDefaultValues" />
             
@@ -28,18 +29,42 @@
         </definition>
 	</include>
 	
-	<include name="BackgroundSettingsForSkinSettings">
+	<include name="BackgroundSettingsDefaultValues">
         <definition>
-            <onfocus>Skin.SetBool(Background.ImageActive)</onfocus>
-            <onfocus>Skin.Reset(Background.ImageFaded)</onfocus>
-            <onfocus>Skin.Reset(Background.WeatherImageResource)</onfocus>
-            <onfocus>Skin.SetBool(Background.ImageFanartForFiles)</onfocus>
-            <onfocus>Skin.SetBool(Background.VisualiserActive)</onfocus>
-            <onfocus>Skin.Reset(Background.VisualiserFaded)</onfocus>
-            <onfocus>Skin.SetBool(Background.VideoActive)</onfocus>
-            <onfocus>Skin.Reset(Background.VideoFaded)</onfocus>
+            <onfocus>Skin.SetBool(Background.Image.Active)</onfocus>
+            <onfocus>Skin.Reset(Background.Image.Faded)</onfocus>
+            <onfocus>Skin.Reset(Background.Image.WeatherResource.Path)</onfocus>
+            <onfocus>Skin.SetBool(Background.Image.FanartForFiles)</onfocus>
+            <onfocus>Skin.SetBool(Background.Visualiser.Active)</onfocus>
+            <onfocus>Skin.Reset(Background.Visualiser.Faded)</onfocus>
+            <onfocus>Skin.SetBool(Background.Video.Active)</onfocus>
+            <onfocus>Skin.Reset(Background.Video.Faded)</onfocus>
 
-            <onfocus>Skin.SetString(Background.AnimationLevel,2)</onfocus>
+            <onfocus>Skin.SetString(Background.Animation.Level,2)</onfocus>
+        </definition>
+	</include>
+
+	<include name="BackgroundSettingsMigratedValues">
+        <definition>
+            <onfocus condition="Skin.HasSetting(Background.ImageActive)">Skin.SetBool(Background.Image.Active)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Background.ImageActive)">Skin.Reset(Background.Image.Active)</onfocus>
+            <onfocus condition="Skin.HasSetting(Background.ImageFaded)">Skin.SetBool(Background.Image.Faded)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Background.ImageFaded)">Skin.Reset(Background.Image.Faded)</onfocus>
+            <onfocus condition="Skin.HasSetting(Background.ImageFanartForFiles)">Skin.SetBool(Background.Image.FanartForFiles)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Background.ImageFanartForFiles)">Skin.Reset(Background.Image.FanartForFiles)</onfocus>
+            <onfocus>Skin.SetString(Background.Image.WeatherResource.Path,$INFO[Skin.String(Background.WeatherImageResource)])</onfocus>
+
+            <onfocus condition="Skin.HasSetting(Background.VisualiserActive)">Skin.SetBool(Background.Visualiser.Active)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Background.VisualiserActive)">Skin.Reset(Background.Visualiser.Active)</onfocus>
+            <onfocus condition="Skin.HasSetting(Background.VisualiserFaded)">Skin.SetBool(Background.Visualiser.Faded)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Background.VisualiserFaded)">Skin.Reset(Background.Visualiser.Faded)</onfocus>
+
+            <onfocus condition="Skin.HasSetting(Background.VideoActive)">Skin.SetBool(Background.Video.Active)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Background.VideoActive)">Skin.Reset(Background.Video.Active)</onfocus>
+            <onfocus condition="Skin.HasSetting(Background.VideoFaded)">Skin.SetBool(Background.Video.Faded)</onfocus>
+            <onfocus condition="!Skin.HasSetting(Background.VideoFaded)">Skin.Reset(Background.Video.Faded)</onfocus>
+
+            <onfocus>Skin.SetString(Background.Animation.Level,$INFO[Skin.String(Background.AnimationLevel)])</onfocus>
         </definition>
 	</include>
 	

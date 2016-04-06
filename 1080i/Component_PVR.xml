@@ -401,7 +401,7 @@
 	<include name="PreviewForPVR">
         <definition>
             <control type="group">
-                <visible>Player.HasVideo + !Skin.HasSetting(Background.VideoActive)</visible>
+                <visible>Player.HasVideo + !Skin.HasSetting(Background.Video.Active)</visible>
                 <posx>120</posx>
                 <posy>260</posy>
 

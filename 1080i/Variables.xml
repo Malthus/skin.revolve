@@ -152,7 +152,7 @@
 		<value condition="Window.IsVisible(1150) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(1150)">special://skin/backgrounds/exit.jpg</value>
         
-		<value condition="Window.IsVisible(weather) + !Substring(Skin.String(Background.WeatherImageResource),multi)">resource://$INFO[Skin.String(Background.WeatherImageResource)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+		<value condition="Window.IsVisible(weather) + !Substring(Skin.String(Background.WeatherImageResource.Path),multi)">resource://$INFO[Skin.String(Background.WeatherImageResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
 		<value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>
 		<value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
 		<value condition="Window.IsVisible(eventlog)">special://skin/backgrounds/eventlog.jpg</value>
@@ -179,12 +179,12 @@
 		<value condition="!IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
         
 		<value condition="Container.Content(addons) | Window.IsVisible(addonbrowser)">special://skin/backgrounds/addons.jpg</value>
-        <value condition="Container.Content(files) + Skin.HasSetting(Background.ImageFanartForFiles) + !SubString(Container.FolderPath,library,Left)">$INFO[Container.FolderPath,,fanart.jpg]</value>
+        <value condition="Container.Content(files) + Skin.HasSetting(Background.Image.FanartForFiles) + !SubString(Container.FolderPath,library,Left)">$INFO[Container.FolderPath,,fanart.jpg]</value>
 		<value>special://skin/backgrounds/default.jpg</value>
 	</variable>
 	
 	<variable name="ContentMultiImageBackground">
-		<value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.WeatherImageResource),multi)">resource://$INFO[Skin.String(Background.WeatherImageResource)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+		<value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
         <value>-</value>
 	</variable>
 
@@ -283,10 +283,10 @@
     </variable>
 
     <variable name="BackgroundAnimationLevelLabel">
-        <value condition="StringCompare(Skin.String(Background.AnimationLevel),1)">$LOCALIZE[21388]</value>
-        <value condition="StringCompare(Skin.String(Background.AnimationLevel),2)">$LOCALIZE[21375]</value>
-        <value condition="StringCompare(Skin.String(Background.AnimationLevel),3)">$LOCALIZE[503]</value>
-        <value condition="StringCompare(Skin.String(Background.AnimationLevel),4)">$LOCALIZE[31929]</value>
+        <value condition="StringCompare(Skin.String(Background.Animation.Level),1)">$LOCALIZE[21388]</value>
+        <value condition="StringCompare(Skin.String(Background.Animation.Level),2)">$LOCALIZE[21375]</value>
+        <value condition="StringCompare(Skin.String(Background.Animation.Level),3)">$LOCALIZE[503]</value>
+        <value condition="StringCompare(Skin.String(Background.Animation.Level),4)">$LOCALIZE[31929]</value>
         <value>$LOCALIZE[231]</value>
     </variable>
 
