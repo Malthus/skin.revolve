@@ -37,7 +37,7 @@
                     <visible>Container.Content(files) + Skin.HasSetting(Background.ImageFanartForFiles) + !SubString(Container.FolderPath,library,Left)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
-                    <fadetime>1000</fadetime>
+                    <fadetime>500</fadetime>
                     <texture background="true">special://skin/backgrounds/default.jpg</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
@@ -45,7 +45,7 @@
                 <control type="largeimage">
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
-                    <fadetime>1000</fadetime>
+                    <fadetime>500</fadetime>
                     <texture background="true">$VAR[ContentSingleImageBackground]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
@@ -85,10 +85,8 @@
                     <visible>Skin.HasSetting(Background.VisualiserFaded)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
+                    <fadetime>500</fadetime>
                     <texture colordiffuse="$VAR[FademaskColor]" background="true">white.png</texture>
-                    <timeperimage>8000</timeperimage>
-                    <randomize>true</randomize>
-                    <fadetime>1000</fadetime>
                 </control>
             </control>
         </definition>
@@ -107,10 +105,8 @@
                     <visible>Skin.HasSetting(Background.VideoFaded)</visible>
                     <include name="FadeAnimationForBackground" />
                     <include name="FullscreenDimensions" />
+                    <fadetime>500</fadetime>
                     <texture colordiffuse="$VAR[FademaskColor]" background="true">white.png</texture>
-                    <timeperimage>8000</timeperimage>
-                    <randomize>true</randomize>
-                    <fadetime>1000</fadetime>
                 </control>
             </control>
         </definition>
