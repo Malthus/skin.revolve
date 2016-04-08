@@ -615,6 +615,7 @@
 						<description>Auto Completion Activation Radiobutton</description>
                         <visible>System.HasAddon(plugin.program.autocompletion)</visible>
 						<width>1100</width>
+						<radioposx>1040</radioposx>
 						<align>left</align>
 						<label>$INFO[System.AddonTitle(plugin.program.autocompletion),$LOCALIZE[21480] ,]$INFO[System.AddonVersion(plugin.program.autocompletion), ,]</label>
 						<selected>Skin.HasSetting(Keyboard.AutoCompleteActive)</selected>
