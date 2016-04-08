@@ -459,4 +459,9 @@
         <value condition="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)">$LOCALIZE[31244]</value>
         <value>$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
     </variable>
+    
+    <variable name="AutoCompletionAddon">
+        <value condition="!System.HasHiddenInput + System.HasAddon(plugin.program.autocompletion) + Skin.HasSetting(Keyboard.AutoCompleteActive)">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=8</value>
+        <value>-</value>
+    </variable>
 </includes>
