@@ -76,7 +76,7 @@
 
 				<control type="label">
 					<description>Spacer</description>
-					<width>60</width>
+					<width>30</width>
 				</control>
 
 				<control type="group">
@@ -113,7 +113,7 @@
 				
 				<control type="label">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
-					<width>60</width>
+					<width>30</width>
 				</control>
 				
 				<control type="group">
@@ -287,7 +287,7 @@
 				<control type="label">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
 					<description>Spacer</description>
-					<width>60</width>
+					<width>30</width>
 				</control>
 				
 				<control type="group">
