@@ -152,7 +152,8 @@
 		<value condition="Window.IsVisible(1150) + !IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
 		<value condition="Window.IsVisible(1150)">special://skin/backgrounds/exit.jpg</value>
         
-		<value condition="Window.IsVisible(weather) + !Substring(Skin.String(Background.WeatherImageResource.Path),multi)">resource://$INFO[Skin.String(Background.WeatherImageResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+		<value condition="Window.IsVisible(weather) + !IsEmpty(Skin.String(Background.Image.WeatherResource.Path)) + !Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+		<value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">white.png</value>
 		<value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>
 		<value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
 		<value condition="Window.IsVisible(eventlog)">special://skin/backgrounds/eventlog.jpg</value>
