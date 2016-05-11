@@ -414,6 +414,19 @@
 						<label>-</label>
 					</control>
                     
+					<control type="button" id="419">
+						<description>Panic Button</description>
+						<width>1100</width>
+                        <textcolor>Red</textcolor>
+                        <focusedcolor>White</focusedcolor>
+                        <texturenofocus colordiffuse="White" border="20">controls/rectangle-fill.png</texturenofocus>
+                        <texturefocus colordiffuse="Orange" border="20">controls/rectangle-fill.png</texturefocus>
+						<align>left</align>
+						<label>$LOCALIZE[31993]</label>
+                        <onclick>Skin.Reset(Colors.PrimaryColorTheme)</onclick>
+                        <onclick>Skin.Reset(Colors.BackgroundColorTheme)</onclick>
+					</control>
+
 					<control type="button" id="420">
 						<description>Reset Page Setting Button</description>
 						<width>1100</width>
@@ -997,6 +1010,11 @@
                         <visible>Control.HasFocus(410)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31239]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(419)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31630]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(801)</visible>
