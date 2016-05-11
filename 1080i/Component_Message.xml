@@ -10,7 +10,8 @@
 	<include name="BackgroundAnimationForMessage">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
-        
+        <param name="color" default="$VAR[MainColor]" />
+
         <definition>
             <control type="group">
                 <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),1)</visible>
@@ -20,6 +21,7 @@
                 <include name="OrbitCircle">
                     <param name="posx" value="45" />
                     <param name="posy" value="45" />
+                    <param name="color" value="$PARAM[color]" />
                     <param name="size" value="20" />
                     <param name="radius" value="55" />
                     <param name="time" value="10000" />
@@ -34,6 +36,7 @@
                 <include name="OrbitCircle">
                     <param name="posx" value="45" />
                     <param name="posy" value="45" />
+                    <param name="color" value="$PARAM[color]" />
                     <param name="size" value="10" />
                     <param name="radius" value="80" />
                     <param name="time" value="4000" />
@@ -43,6 +46,7 @@
                 <include name="OrbitCircle">
                     <param name="posx" value="45" />
                     <param name="posy" value="45" />
+                    <param name="color" value="$PARAM[color]" />
                     <param name="size" value="15" />
                     <param name="radius" value="95" />
                     <param name="time" value="6000" />
