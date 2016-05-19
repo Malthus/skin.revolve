@@ -784,6 +784,16 @@
         </definition>
 	</include>
 
+	<include name="FavouritesEditButtonForSideMenu">
+        <definition>
+            <control type="button" id="91">
+                <align>left</align>
+                <label>$LOCALIZE[31420]</label>
+                <onclick>ActivateWindow(favourites)</onclick>
+            </control>
+        </definition>
+	</include>
+
 	<include name="PVRBackendInfoButtonForSideMenu">
         <definition>
             <control type="button" id="90">

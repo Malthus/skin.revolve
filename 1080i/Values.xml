@@ -6,7 +6,7 @@
             
             <include name="BackgroundSettingsDefaultValues" />
             <include name="ColorsSettingsForSkinSettings" />
-            <include name="HomeMenuItemsSettingsForSkinSettings" />
+            <include name="HomeMenuItemsSettingsDefaultValues" />
             <include name="CircleItemsSettingsForSkinSettings" />
             <include name="ExitMenuItemsDefaultValues" />
             <include name="MediaSettingsDefaultValues" />
@@ -21,7 +21,9 @@
 	<include name="MigratedValues">
         <definition>
             <include name="ExitMenuItemsDefaultValues" />
+
             <include name="BackgroundSettingsMigratedValues" />
+            <include name="HomeMenuItemsSettingsMigratedValues" />
             <include name="MediaSettingsMigratedValues" />
             <include name="DebugSettingsDefaultValues" />
             
@@ -84,11 +86,12 @@
         </definition>
 	</include>
 
-	<include name="HomeMenuItemsSettingsForSkinSettings">
+	<include name="HomeMenuItemsSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(PlayDiscOption.Active)</onfocus>
             <onfocus>Skin.Reset(PlayDiscOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(FavouritesOption.Active)</onfocus>
+            <onfocus>Skin.Reset(FavouritesOption.CustomWindow)</onfocus>
             <onfocus>Skin.Reset(FavouritesOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(Custom01Option.Active)</onfocus>
             <onfocus>Skin.Reset(Custom02Option.Active)</onfocus>
@@ -116,7 +119,7 @@
             <onfocus>Skin.Reset(RadioOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(VideosOption.Active)</onfocus>
             <onfocus>Skin.Reset(VideosOption.BackgroundImage)</onfocus>
-            <onfocus>Skin.Reset(VideosOption.Immutable)</onfocus>
+            <onfocus>Skin.Reset(VideosOption.ImmutablePath)</onfocus>
             <onfocus>Skin.Reset(MoviesOption.Active)</onfocus>
             <onfocus>Skin.Reset(MoviesOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(TVShowsOption.Active)</onfocus>
@@ -127,7 +130,7 @@
             <onfocus>Skin.Reset(CustomVideosOption.BackgroundImage)</onfocus>
             <onfocus>Skin.SetBool(MusicOption.Active)</onfocus>
             <onfocus>Skin.Reset(MusicOption.BackgroundImage)</onfocus>
-            <onfocus>Skin.Reset(MusicOption.Immutable)</onfocus>
+            <onfocus>Skin.Reset(MusicOption.ImmutablePath)</onfocus>
             <onfocus>Skin.Reset(AlbumsOption.Active)</onfocus>
             <onfocus>Skin.Reset(AlbumsOption.BackgroundImage)</onfocus>
             <onfocus>Skin.Reset(CustomMusicOption.Active)</onfocus>
@@ -155,6 +158,15 @@
         </definition>
 	</include>
 
+	<include name="HomeMenuItemsSettingsMigratedValues">
+        <definition>
+            <onfocus condition="Skin.HasSetting(VideosOption.ImmutablePath)">Skin.Reset(VideosOption.ImmutablePath)</onfocus>
+            <onfocus condition="!Skin.HasSetting(VideosOption.ImmutablePath)">Skin.SetBool(VideosOption.ImmutablePath)</onfocus>
+            <onfocus condition="Skin.HasSetting(MusicOption.ImmutablePath)">Skin.Reset(MusicOption.ImmutablePath)</onfocus>
+            <onfocus condition="!Skin.HasSetting(MusicOption.ImmutablePath)">Skin.SetBool(MusicOption.ImmutablePath)</onfocus>
+        </definition>
+	</include>
+    
 	<include name="CircleItemsSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.Reset(CircleNextAired.Enable)</onfocus>
