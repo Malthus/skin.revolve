@@ -21,15 +21,18 @@
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
+                <onup>21</onup>
+                <ondown>25</ondown>
 				<onleft>9000</onleft>
 
                 <control type="label" id="30">
                     <width>1240</width>
                     <font>DialogTextFont</font>
+                    <textcolor>$VAR[TextColor]</textcolor>
                     <align>left</align>
                     <label>$LOCALIZE[480]:</label>
                 </control>
-                
+
                 <control type="radiobutton" id="31">
                     <description>Home Option Activation Radiobutton</description>
                     <width>1240</width>
@@ -57,6 +60,7 @@
                     <posy>40</posy>
                     <width>1240</width>
                     <font>DialogTextFont</font>
+                    <textcolor>$VAR[TextColor]</textcolor>
                     <align>left</align>
                     <label>$LOCALIZE[31973]:</label>
                 </control>
@@ -88,9 +92,11 @@
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="160" />
-                    <param name="height" value="160" />
+                    <param name="posy" value="180" />
+                    <param name="height" value="140" />
                 </include>
+                <onup>35</onup>
+                <ondown>31</ondown>
 				<onright>5</onright>
 
 				<control type="button" id="25">
@@ -100,7 +106,7 @@
 				</control>
 				<control type="button" id="20">
                     <description>Ok Button</description>
-                    <posy>40</posy>
+                    <posy>20</posy>
 					<label>$LOCALIZE[186]</label>
                     <onclick condition="!Substring(Window.Property(CustomOptionActive),T,Left)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
                     <onclick condition="Substring(Window.Property(CustomOptionActive),T,Left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
