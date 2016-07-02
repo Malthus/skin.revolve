@@ -9,7 +9,7 @@
     <constant name="PosYForDefaultIconFrameForDialog">20</constant>
     <constant name="CenterXForDefaultIconFrameForDialog">280</constant>
     <constant name="CenterYForDefaultIconFrameForDialog">155</constant>
-    
+
     <include name="HelpButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -466,8 +466,9 @@
                 <aspectratio>stretch</aspectratio>
                 <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
             </control>
-                
+
             <control type="image">
+                <visible>!Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
                 <width>480</width>
                 <height>$PARAM[height]</height>
                 <aspectratio>stretch</aspectratio>
