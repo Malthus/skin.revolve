@@ -18,7 +18,7 @@
                     <param name="height" value="520" />
                     <param name="pagecontrol" value="22" />
                 </include>
-				<onup>9000</onup>
+				<onup>11</onup>
 				<ondown>9</ondown>
 				<onleft>9</onleft>
 				<onright>22</onright>
@@ -47,14 +47,13 @@
             
 			<control type="grouplist" id="9">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="320" />
+                    <param name="posy" value="340" />
                     <param name="height" value="120" />
                 </include>
                 <pagecontrol>15</pagecontrol>
-				<onleft>Noop</onleft>
-				<onright>2</onright>
 				<onup>2</onup>
-				<ondown>9000</ondown>
+				<ondown>12</ondown>
+				<onright>2</onright>
 			</control>
 
 			<control type="button" id="13">
@@ -78,7 +77,7 @@
                 <description>More Options Label</description>
                 <visible>Control.IsVisible(15)</visible>
                 <posx>520</posx>
-                <posy>440</posy>
+                <posy>460</posy>
                 <width>480</width>
                 <height>20</height>
                 <font>SideMenuGroupFont</font>
