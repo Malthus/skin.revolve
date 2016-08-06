@@ -221,7 +221,7 @@
                 </include>
 
                 <control type="group">
-                    <visible>IsEmpty(Skin.String(Revolve.Configuration))</visible>
+                    <visible>!Skin.HasSetting(RevolveConfiguration) + IsEmpty(Skin.String(Revolve.Configuration))</visible>
 
                     <include name="TextboxForDialog">
                         <param name="posy" value="80" />
@@ -234,7 +234,7 @@
                 </control>
                 
                 <control type="group">
-                    <visible>!IsEmpty(Skin.String(Revolve.Configuration))</visible>
+                    <visible>Skin.HasSetting(RevolveConfiguration) | StringCompare(Skin.String(Revolve.Configuration),3.0.2)</visible>
 
                     <include name="TextboxForDialog">
                         <param name="posy" value="80" />
