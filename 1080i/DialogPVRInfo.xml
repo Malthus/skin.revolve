@@ -162,6 +162,11 @@
                 </include>
 				<onright>61</onright>
 
+                <control type="image" id="2">
+                    <visible>!Window.IsActive(pvrguideinfo) + !Window.IsActive(pvrrecordinginfo)</visible>
+                    <height>120</height>
+                    <texture>-</texture>
+                </control>
                 <control type="image" id="3">
                     <visible>Window.IsActive(pvrrecordinginfo)</visible>
                     <height>80</height>
