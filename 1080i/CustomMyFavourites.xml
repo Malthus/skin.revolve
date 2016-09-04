@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1104">
 	<defaultcontrol always="yes">450</defaultcontrol>
+    <menucontrol>9001</menucontrol>
     <onload>RunScript(script.revolve.service,PopulateStaticItemsFromHomeProperties,favourite.%d,MyFavourites%02dOption,1104)</onload>
     <onunload>RunScript(script.revolve.service,ClearProperties,MyFavourites%02dOption,1104)</onunload>
 
