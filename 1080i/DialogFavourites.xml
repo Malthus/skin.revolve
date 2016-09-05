@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="134" type="dialog">
 	<defaultcontrol always="true">400</defaultcontrol>
+    <menucontrol>9000</menucontrol>
 
 	<controls>
-            
         <control type="group">
             <description>Favourites Dialog</description>
-<!--            <visible>Skin.HasSetting(FavouritesOption.CustomWindow) + System.HasAddon(script.favourites)</visible> -->
-        
 			<posy>PosYForFifteenLinesDialog</posy>
             <include name="WindowForDialog">
                 <param name="height" value="HeightForFifteenLinesDialog" />
@@ -117,72 +115,5 @@
                 </include>
 			</control>
 		</control>
-<!--
-        <control type="group">
-            <description>Fake Full Screen Favourites Window</description>
-            <visible>!Skin.HasSetting(FavouritesOption.CustomWindow) | !System.HasAddon(script.favourites)</visible>
-            
-            <include name="FullscreenDimensions" />
-            <include name="GlobalBackground" />
-
-            <control type="fixedlist" id="450">
-                <visible allowhiddenfocus="true">[!Skin.HasSetting(FavouritesOption.CustomWindow) | !System.HasAddon(script.favourites)] + Skin.HasSetting(Debug.ListBorder.Visible)</visible>
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1920</width>
-                <height>1080</height>
-                <focusposition>4</focusposition>
-                <scrolltime>200</scrolltime>
-                <onup>450</onup>
-                <ondown>450</ondown>
-                <onleft>9000</onleft>
-                <onright>Noop</onright>
-
-                <include name="InvisibleVerticalListItemsForMenu" />
-            </control>
-
-            <control type="group">
-                <visible>Skin.HasSetting(FavouritesMenu.Default)</visible>
-                <include name="RevolveMenu">
-                    <param name="texture" value="circle/favourites.png" />
-                    <param name="label" value="$LOCALIZE[1036]" />
-                </include>
-            </control>
-
-            <control type="group">
-                <visible>!Skin.HasSetting(FavouritesMenu.Default)</visible>
-                <include name="CircleMenu">
-                    <param name="label" value="$LOCALIZE[1036]" />
-                </include>
-            </control>
-            
-            <control type="group" id="9000">
-                <include name="SideMenu" />
-
-                <control type="grouplist" id="9001">
-                    <include name="BeginOfButtonListForSideMenu">
-                        <param name="onright" value="450" />
-                    </include>
-
-                    <include name="ViewGroupLabelForSideMenu" />
-                    <include name="FavouritesMenuTypeButtonForSideMenu" />
-
-                    <include name="NavigationGroupLabelForSideMenu">
-                        <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
-                    </include>
-                    <include name="GlobalSearchButtonForSideMenu" />
-                    
-                    <include name="EndOfButtonListForSideMenu" />
-                </control>
-
-                <include name="PlayerControlsForSideMenu">
-                    <param name="onright" value="450" />
-                </include>
-            </control>
-            
-            <include name="Overlay" />
-            <include name="BackButton" />
-		</control>
--->
 	</controls>
 </window>

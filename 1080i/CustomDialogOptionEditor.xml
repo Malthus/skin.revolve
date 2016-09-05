@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1190">
 	<defaultcontrol always="true">27</defaultcontrol>
+    <menucontrol>9000</menucontrol>
     <onload condition="!StringCompare(Window.Property(CustomOptionType),M) + !StringCompare(Window.Property(CustomOptionType),S) + !StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onload>
 
 	<controls>
