@@ -141,7 +141,10 @@
 		<value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>
 
 		<value condition="Window.IsVisible(1103) + !IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
-		<value condition="Window.IsVisible(1103)">special://skin/backgrounds/favourites.jpg</value>
+		<value condition="Window.IsVisible(1103)">special://skin/backgrounds/default.jpg</value>
+
+		<value condition="Window.IsVisible(1104) + !IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
+		<value condition="Window.IsVisible(1104)">special://skin/backgrounds/favourites.jpg</value>
 
 		<value condition="Window.IsVisible(1120)">black.png</value>
 		<value condition="Window.IsVisible(1121)">black.png</value>
