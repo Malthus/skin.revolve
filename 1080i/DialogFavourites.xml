@@ -2,6 +2,7 @@
 <window id="134" type="dialog">
 	<defaultcontrol always="true">400</defaultcontrol>
     <menucontrol>9000</menucontrol>
+    <onunload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onunload>
 
 	<controls>
         <control type="group">
