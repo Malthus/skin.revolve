@@ -703,7 +703,7 @@
                 <include name="LabelForDialog">
                     <param name="posy" value="480" />
                     <param name="textcolor" value="$VAR[TextColor]" />
-                    <param name="label" value="$LOCALIZE[31914]:" />
+                    <param name="label" value="$LOCALIZE[31914]: $INFO[ListItem.Property(InitialPath)]" />
                 </include>
                 
                 <control type="label">
@@ -854,7 +854,7 @@
                     <description>Choose Playlist Button</description>
                     <visible>StringCompare(Container(40).ListItem.Property(Parameter),L)</visible>
 					<label>$LOCALIZE[31881]</label>
-                    <onclick>Skin.SetFile(Dialog.Input)</onclick>
+                    <onclick>Skin.SetFile(Dialog.Input,,$INFO[Container(40).ListItem.Property(InitialPath)])</onclick>
                     <onclick>SetProperty(ParameterPlaylist,$INFO[Skin.String(Dialog.Input)])</onclick>
                     <onclick>Skin.Reset(Dialog.Input)</onclick>
 				</control>
