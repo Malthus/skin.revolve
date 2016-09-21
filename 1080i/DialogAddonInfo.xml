@@ -30,17 +30,17 @@
 				<content>
 					<item>
 						<label>$LOCALIZE[564]</label>
-						<label2>$INFO[ListItem.Property(Addon.Type)]</label2>
+						<label2>$INFO[ListItem.AddonType]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[31415]</label>
-						<label2>$INFO[ListItem.Property(Addon.Creator)]</label2>
+						<label2>$INFO[ListItem.AddonCreator]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[19114]</label>
-						<label2>$INFO[ListItem.Property(Addon.Version)]</label2>
+						<label2>$INFO[ListItem.AddonVersion]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
@@ -61,7 +61,7 @@
             </control>
             
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+				<visible>!IsEmpty(ListItem.AddonBroken)</visible>
 				<posx>560</posx>
 				<posy>280</posy>
 
@@ -91,7 +91,7 @@
 					<align>left</align>
 					<textcolor>$VAR[BackgroundColor]</textcolor>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-					<label>$INFO[ListItem.Property(Addon.Broken)]</label>
+					<label>$INFO[ListItem.AddonBroken]</label>
 				</control>
 			</control>
             
