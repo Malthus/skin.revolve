@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="SmallBusyAnimationForProgressBar">
+        <param name="visible" default="true" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         
         <definition>
             <control type="group">
+                <visible>$PARAM[visible]</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 
@@ -23,11 +25,13 @@
     </include>
     
     <include name="DefaultBusyAnimationForProgressBar">
+        <param name="visible" default="true" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         
         <definition>
             <control type="group">
+                <visible>$PARAM[visible]</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 
@@ -65,6 +69,7 @@
 
     <include name="ProgressBar">
         <param name="id" default="0" />
+        <param name="visible" default="true" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -73,6 +78,7 @@
         
         <definition>
             <control type="group">
+                <visible>$PARAM[visible]</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 
