@@ -24,7 +24,7 @@
 	</variable>
 
 	<variable name="ContentDetailLabel">
-		<value condition="StringCompare(ListItem.Label,..)">$INFO[Container.NumItems,, $LOCALIZE[31900]]</value>
+		<value condition="ListItem.IsParentFolder">$INFO[Container.NumItems,, $LOCALIZE[31900]]</value>
 		<value condition="!IsEmpty(ListItem.ChannelNumber) + !IsEmpty(ListItem.Title) + ![Window.IsVisible(radiotimers) | Window.IsVisible(tvtimers)]">$INFO[ListItem.Title]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(UnWatchedEpisodes)] / $INFO[ListItem.Property(TotalEpisodes)]</value>
@@ -45,7 +45,7 @@
 	</variable>
 
 	<variable name="ContentInformationLabel">
-		<value condition="StringCompare(ListItem.Label,..)">$INFO[Container.NumItems,, $LOCALIZE[31900]]</value>
+		<value condition="ListItem.IsParentFolder">$INFO[Container.NumItems,, $LOCALIZE[31900]]</value>
 		<value condition="!IsEmpty(ListItem.ChannelNumber) + !Window.IsVisible(radiotimers) + !Window.IsVisible(tvtimers)">$INFO[ListItem.ChannelGroup,, | ]$INFO[ListItem.ChannelNumber]$INFO[ListItem.Title, | ,]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
 		<value condition="!IsEmpty(ListItem.ChannelNumber) + [Window.IsVisible(radiotimers) | Window.IsVisible(tvtimers)]">$INFO[ListItem.ChannelNumber]$INFO[ListItem.ChannelName, | ,]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
 		<value condition="!IsEmpty(ListItem.PictureDatetime)">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.PictureDatetime]$INFO[ListItem.Size, | ,]</value>
