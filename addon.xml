@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.revolve" version="4.2.0" name="Revolve" provider-name="ransomed, mKo, relyter, Malthus">
+<addon id="skin.revolve" version="5.0.0~beta1" name="Revolve" provider-name="ransomed, mKo, relyter, Malthus">
 	<requires>
-		<import addon="xbmc.gui" version="5.10.0"/>
-        <import addon="script.revolve.service" version="1.1.1" />
+		<import addon="xbmc.gui" version="5.12.0"/>
+        <import addon="script.revolve.service" version="1.1.2" />
         <import addon="script.cu.lrclyrics" version="2.0.12" optional="true" />
         <import addon="script.favourites" version="6.0.3" optional="true" />
         <import addon="script.globalsearch" version="5.0.0" optional="true" />
@@ -37,4 +37,18 @@
         <email></email>
         <source>https://github.com/Malthus/skin.revolve/</source>
 	</extension>
+    
+    <assets>
+        <icon>resources/icon.png</icon>
+        <fanart>resources/fanart.jpg</fanart>
+        <screenshot>resources/screenshot1.jpg</screenshot>
+        <screenshot>resources/screenshot2.jpg</screenshot>
+        <screenshot>resources/screenshot3.jpg</screenshot>
+        <screenshot>resources/screenshot4.jpg</screenshot>
+        <screenshot>resources/screenshot5.jpg</screenshot>
+        <screenshot>resources/screenshot6.jpg</screenshot>
+        <screenshot>resources/screenshot7.jpg</screenshot>
+        <screenshot>resources/screenshot8.jpg</screenshot>
+        <screenshot>resources/screenshot9.jpg</screenshot>
+    </assets>    
 </addon>
