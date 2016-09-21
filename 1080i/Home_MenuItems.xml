@@ -129,7 +129,7 @@
 
                 <item id="15">
                     <description>TV Option</description>
-                    <visible>System.GetBool(pvrmanager.enabled) + Skin.HasSetting(TVOption.Active)</visible>
+                    <visible>PVR.HasTVChannels + Skin.HasSetting(TVOption.Active)</visible>
                     <label>$LOCALIZE[19020]</label>
                     <label2>$INFO[Pvr.BackendChannels] $LOCALIZE[19019] | $INFO[Pvr.BackendRecordings] $LOCALIZE[19163]</label2>
                     <property name="Label3">$LOCALIZE[31021]</property>
@@ -142,7 +142,7 @@
 
                 <item id="18">
                     <description>Radio Option</description>
-                    <visible>System.GetBool(pvrmanager.enabled) + Skin.HasSetting(RadioOption.Active)</visible>
+                    <visible>PVR.HasRadioChannels + Skin.HasSetting(RadioOption.Active)</visible>
                     <label>$LOCALIZE[19021]</label>
                     <label2>$INFO[Pvr.BackendChannels] $LOCALIZE[19019] | $INFO[Pvr.BackendRecordings] $LOCALIZE[19163]</label2>
                     <property name="Label3">$LOCALIZE[33057]</property>
