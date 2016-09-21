@@ -16,9 +16,9 @@
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Season, | $LOCALIZE[20373] ,]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(images)">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.PictureLongDatetime]</value>
 		<value condition="Container.Content(files) + !IsEmpty(Artist)">$INFO[ListItem.Artist]$INFO[ListItem.Album, | ,]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator),, | ]$INFO[ListItem.Property(Addon.Type)]</value>
-		<value condition="!IsEmpty(ListItem.PictureDatetime)">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.PictureLongDatetime]</value>
 		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date]</value>
 		<value condition="Window.IsVisible(radiotimers) | Window.IsVisible(tvtimers)">$INFO[ListItem.ChannelNumber]$INFO[ListItem.ChannelName, | ,]</value>
 	</variable>
@@ -34,11 +34,11 @@
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed)]$INFO[ListItem.Property(Artist_Disbanded), - ,]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,]</value>
+		<value condition="Container.Content(images)">$INFO[ListItem.Size]</value>
 		<value condition="Container.Content(files) + Substring(ListItem.Duration,:)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(files) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
 		<value condition="Container.Content(files) + !IsEmpty(Year)">$INFO[ListItem.Year]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version)]$INFO[ListItem.Property(Addon.Status), | ,]</value>
-		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.Size]</value>
 		<value condition="Window.IsVisible(radiorecordings) | Window.IsVisible(tvrecordings)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
 		<value condition="Window.IsVisible(radiotimers) | Window.IsVisible(tvtimers)">$INFO[Pvr.BackendTimers,, $LOCALIZE[19040]]$INFO[Pvr.BackendDiskSpace, | ,]</value>
 		<value condition="IsEmpty(ListItem.ChannelNumber)">$INFO[ListItem.Label2]</value>
@@ -57,11 +57,11 @@
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed)]$INFO[ListItem.Property(Artist_Disbanded), - ,]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Duration, | ,]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,]</value>
+		<value condition="Container.Content(images)">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date]$INFO[ListItem.Size, | ,]</value>
 		<value condition="Container.Content(files) + Substring(ListItem.Duration,:)">$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(files) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
 		<value condition="Container.Content(files) + !IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator),, | ]$INFO[ListItem.Property(Addon.Type)]$INFO[ListItem.Property(Addon.Version), | ,]$INFO[ListItem.Property(Addon.Status), | ,]</value>
-		<value condition="Window.IsVisible(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date]$INFO[ListItem.Size, | ,]</value>
 		<value condition="Window.IsVisible(radiorecordings) | Window.IsVisible(tvrecordings)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
 		<value condition="Window.IsVisible(radiotimers) | Window.IsVisible(tvtimers)">$INFO[Pvr.BackendTimers,, $LOCALIZE[19040]]$INFO[Pvr.BackendDiskSpace, | ,]</value>
         <value>$INFO[ListItem.Label2]</value>

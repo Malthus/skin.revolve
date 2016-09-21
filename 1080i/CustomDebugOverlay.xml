@@ -114,6 +114,11 @@
             </include>
 
 			<include name="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(images)" />
+                <param name="label" value="Images" />
+            </include>
+
+			<include name="ContentTypeForDebug">
                 <param name="visible" value="Container.Content(files)" />
                 <param name="label" value="Files" />
             </include>
