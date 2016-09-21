@@ -393,11 +393,11 @@
         </definition>
 	</include>
 	
-	<include name="AutoUpdatesButtonForSideMenu">
+	<include name="AddonSettingsButtonForSideMenu">
         <definition>
             <control type="button" id="5">
                 <align>left</align>
-                <label>$LOCALIZE[24063]</label>
+                <label>$LOCALIZE[10004]</label>
             </control>
         </definition>
 	</include>
@@ -412,15 +412,6 @@
         </definition>
 	</include>
 
-	<include name="NotificationsButtonForSideMenu">
-        <definition>
-            <control type="radiobutton" id="6">
-                <align>left</align>
-                <label>$LOCALIZE[25000]</label>
-            </control>
-        </definition>
-	</include>
-	
 	<include name="EditorOpenButtonForSideMenu">
         <definition>
             <control type="button" id="6">
