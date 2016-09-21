@@ -433,11 +433,6 @@
 			</include>
         
             <include name="DialogNameForDebug">
-                <param name="dialog" value="infodialog" />
-                <param name="label" value="infodialog (DialogKaiToast.xml)" />
-            </include>
-
-            <include name="DialogNameForDebug">
                 <param name="dialog" value="locksettings" />
                 <param name="label" value="locksettings (LockSettings.xml)" />
             </include>
@@ -477,6 +472,11 @@
                 <param name="label" value="networksetup (DialogNetworkSetup.xml)" />
             </include>
         
+            <include name="DialogNameForDebug">
+                <param name="dialog" value="notification" />
+                <param name="label" value="notification (DialogNotification.xml)" />
+            </include>
+
             <include name="DialogNameForDebug">
                 <param name="dialog" value="numericinput" />
                 <param name="label" value="numericinput (DialogNumeric.xml)" />
