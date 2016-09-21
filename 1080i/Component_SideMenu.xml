@@ -613,7 +613,7 @@
                 <visible>String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$LOCALIZE[587]</label>
-                <onclick>SendClick(videolibrary,19)</onclick>
+                <onclick>SendClick(videos,19)</onclick>
                 <onclick>SetFocus(22)</onclick>
             </control>
         </definition>
@@ -625,7 +625,7 @@
                 <visible>String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$LOCALIZE[587]</label>
-                <onclick>SendClick(musiclibrary,19)</onclick>
+                <onclick>SendClick(music,19)</onclick>
                 <onclick>SetFocus(22)</onclick>
             </control>
         </definition>
@@ -655,7 +655,7 @@
                 <visible>!String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$INFO[Window.Property(filter)]</label>
-                <onclick>SendClick(videolibrary,19)</onclick>
+                <onclick>SendClick(videos,19)</onclick>
                 <onclick>SetFocus(21)</onclick>
             </control>
         </definition>
@@ -667,7 +667,7 @@
                 <visible>!String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$LOCALIZE[587] - $INFO[Window.Property(filter)]</label>
-                <onclick>SendClick(musiclibrary,19)</onclick>
+                <onclick>SendClick(music,19)</onclick>
                 <onclick>SetFocus(21)</onclick>
             </control>
         </definition>
@@ -847,7 +847,7 @@
             <control type="button" id="99">
                 <align>left</align>
                 <label>$LOCALIZE[29800]</label>
-                <onclick>ReplaceWindow(musiclibrary)</onclick>
+                <onclick>ReplaceWindow(music)</onclick>
                 <onclick>SetFocus(50)</onclick>
                 <enable>Library.HasContent(Music)</enable>
             </control>

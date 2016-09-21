@@ -4,7 +4,7 @@
 
     <controls>
         <control type="group">
-            <visible>Player.ShowCodec + ![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+            <visible>Player.ShowCodec + ![Window.IsVisible(addonsettings) | Window.IsVisible(VisualisationPresetList)]</visible>
 
             <control type="group">
                 <posx>40</posx>

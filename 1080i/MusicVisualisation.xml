@@ -19,7 +19,7 @@
         </control>        
         
         <control type="group">
-            <visible>!Window.IsVisible(VisualisationSettings) + !Window.IsVisible(VisualisationPresetList)</visible>
+            <visible>!Window.IsVisible(addonsettings) + !Window.IsVisible(VisualisationPresetList)</visible>
 
             <control type="group">
                 <visible>Player.ShowInfo</visible>
