@@ -156,11 +156,6 @@
             </include>
 
             <include content="WindowNameForDebug">
-                <param name="window" value="appearancesettings" />
-                <param name="label" value="appearancesettings (SettingsCategory.xml)" />
-            </include>
-
-            <include content="WindowNameForDebug">
                 <param name="window" value="eventlog" />
                 <param name="label" value="eventlog (EventLog.xml)" />
             </include>
@@ -181,8 +176,18 @@
             </include>
 
             <include content="WindowNameForDebug">
+                <param name="window" value="interfacesettings" />
+                <param name="label" value="interfacesettings (SettingsCategory.xml)" />
+            </include>
+
+            <include content="WindowNameForDebug">
                 <param name="window" value="loginscreen" />
                 <param name="label" value="loginscreen (LoginScreen.xml)" />
+            </include>
+
+            <include content="WindowNameForDebug">
+                <param name="window" value="mediasettings" />
+                <param name="label" value="mediasettings (SettingsCategory.xml)" />
             </include>
 
             <include content="WindowNameForDebug">
@@ -201,18 +206,13 @@
             </include>
 
             <include content="WindowNameForDebug">
-                <param name="window" value="musicsettings" />
-                <param name="label" value="musicsettings (SettingsCategory.xml)" />
-            </include>
-
-            <include content="WindowNameForDebug">
                 <param name="window" value="pictures" />
                 <param name="label" value="pictures (MyPics.xml)" />
             </include>
 
             <include content="WindowNameForDebug">
-                <param name="window" value="picturessettings" />
-                <param name="label" value="picturessettings (SettingsCategory.xml)" />
+                <param name="window" value="playersettings" />
+                <param name="label" value="playersettings (SettingsCategory.xml)" />
             </include>
 
             <include content="WindowNameForDebug">
@@ -321,18 +321,8 @@
             </include>
 
             <include content="WindowNameForDebug">
-                <param name="window" value="videossettings" />
-                <param name="label" value="videossettings (SettingsCategory.xml)" />
-            </include>
-
-            <include content="WindowNameForDebug">
                 <param name="window" value="weather" />
                 <param name="label" value="weather (MyWeather.xml)" />
-            </include>
-
-            <include content="WindowNameForDebug">
-                <param name="window" value="weathersettings" />
-                <param name="label" value="weathersettings (SettingsCategory.xml)" />
             </include>
 
             <include content="WindowNameForDebug">
