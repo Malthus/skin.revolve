@@ -132,7 +132,7 @@
 
                     <include content="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="21" />
-                        <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
+                        <param name="texture" value="$INFO[ListItem.Icon]" />
                     </include>
                 </control>
                 
@@ -180,7 +180,7 @@
 
                     <include content="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="20" />
-                        <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
+                        <param name="texture" value="$INFO[ListItem.Icon]" />
                     </include>
                 </control>
                 
