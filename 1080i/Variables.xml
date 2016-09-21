@@ -208,7 +208,7 @@
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
-        <value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonBroken,[B],[/B][CR][CR]]$INFO[ListItem.AddonDescription]$INFO[ListItem.AddonDisclaimer,[CR][CR],]</value>
+        <value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonBroken,[B],[/B][CR][CR]]$INFO[ListItem.AddonDescription]$INFO[ListItem.AddonNews,[CR][CR],]$INFO[ListItem.AddonDisclaimer,[CR][CR],]</value>
         <value condition="Skin.HasSetting(NoInformationLabel.Visible)">$LOCALIZE[31300]</value>
     </variable>
     
