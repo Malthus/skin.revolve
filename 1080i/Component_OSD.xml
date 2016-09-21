@@ -5,27 +5,27 @@
     <constant name="WidthForContentForOSD">1350</constant>
     <constant name="WidthForAdditionalContentForOSD">200</constant>
 
-  	<include name="DefaultAnimationForOSD">
+      <include name="DefaultAnimationForOSD">
         <definition>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="500" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="500" />
-			</animation>
+            <animation type="WindowOpen">
+                <effect type="fade" start="0" end="100" time="500" />
+            </animation>
+            <animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="500" />
+            </animation>
         </definition>
     </include>
 
-	<include name="MediaNameLabelForOSD">
+    <include name="MediaNameLabelForOSD">
         <param name="label" default="$VAR[PlayerNameLabel]" />
     
         <definition>
             <control type="group">
-                <include name="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForOSD" />
                 <posx>PosXForContentForOSD</posx>
                 <posy>975</posy>
-				
-                <include name="OutlineLabel">
+                
+                <include content="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
                     <param name="font" value="MessageTitleFont" />
                     <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -35,18 +35,18 @@
                 </include>
             </control>
         </definition>
-	</include>
-	
-	<include name="MediaInformationLabelForOSD">
+    </include>
+    
+    <include name="MediaInformationLabelForOSD">
         <param name="label" default="$VAR[PlayerInformationLabel]" />
     
         <definition>
             <control type="group">
-                <include name="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForOSD" />
                 <posx>PosXForContentForOSD</posx>
                 <posy>934</posy>
-					
-                <include name="OutlineLabel">
+                    
+                <include content="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
                     <param name="font" value="MessageTextFont" />
                     <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -56,16 +56,16 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="MediaPlaylistPositionLabelForOSD">
+    <include name="MediaPlaylistPositionLabelForOSD">
         <definition>
             <control type="group">
-                <include name="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForOSD" />
                 <posx>PosXForAdditionalContentForOSD</posx>
                 <posy>934</posy>
-					
-                <include name="OutlineLabel">
+                    
+                <include content="OutlineLabel">
                     <param name="width" value="WidthForAdditionalContentForOSD" />
                     <param name="font" value="MessageTextFont" />
                     <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -76,9 +76,9 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="MediaSeekBarForOSD">
+    <include name="MediaSeekBarForOSD">
         <param name="playertimelabel" default="$VAR[PlayerTimeLabel]" />
         <param name="playerdurationlabel" default="$VAR[PlayerDurationLabel]" />
         <param name="playercache" default="Player.ProgressCache" />
@@ -86,13 +86,13 @@
     
         <definition>
             <control type="group">
-                <include name="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForOSD" />
 
                 <control type="group">
                     <posx>PosXForContentForOSD</posx>
                     <posy>1015</posy>
                         
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="width" value="200" />
                         <param name="font" value="MessageTextFont" />
                         <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -106,7 +106,7 @@
                     <posx>PosXForAdditionalContentForOSD</posx>
                     <posy>1015</posy>
 
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="width" value="200" />
                         <param name="font" value="MessageTextFont" />
                         <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -156,53 +156,53 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="MediaThumbnailIconForOSD">
+    <include name="MediaThumbnailIconForOSD">
         <definition>
-			<control type="group">
+            <control type="group">
                 <visible>Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
-				<animation type="WindowOpen">
-					<effect type="slide" tween="quadratic" easing="out" start="1590,0" end="0,0" time="500" />
-				</animation>
-				<animation type="WindowClose">
-					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1590,0" time="500" />
-				</animation>
+                <animation type="WindowOpen">
+                    <effect type="slide" tween="quadratic" easing="out" start="1590,0" end="0,0" time="500" />
+                </animation>
+                <animation type="WindowClose">
+                    <effect type="slide" tween="quadratic" easing="out" start="0,0" end="1590,0" time="500" />
+                </animation>
 
-                <include name="BackgroundAnimationForMediaThumbnailIconForOSD" />
+                <include content="BackgroundAnimationForMediaThumbnailIconForOSD" />
                 
-				<control type="group">
-					<posx>40</posx>
-					<posy>806</posy>
-					<include name="DefaultCirclePlayerMediaIcon" />
-				</control>
-			</control>
+                <control type="group">
+                    <posx>40</posx>
+                    <posy>806</posy>
+                    <include content="DefaultCirclePlayerMediaIcon" />
+                </control>
+            </control>
             
-			<control type="group">
+            <control type="group">
                 <visible>!Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
-				<animation type="WindowOpen">
-					<effect type="slide" tween="quadratic" easing="out" start="1900,0" end="0,0" time="500" />
-				</animation>
-				<animation type="WindowClose">
-					<effect type="slide" tween="quadratic" easing="out" start="0,0" end="1900,0" time="500" />
-				</animation>
+                <animation type="WindowOpen">
+                    <effect type="slide" tween="quadratic" easing="out" start="1900,0" end="0,0" time="500" />
+                </animation>
+                <animation type="WindowClose">
+                    <effect type="slide" tween="quadratic" easing="out" start="0,0" end="1900,0" time="500" />
+                </animation>
 
-                <include name="BackgroundAnimationForMediaThumbnailIconForOSD" />
+                <include content="BackgroundAnimationForMediaThumbnailIconForOSD" />
                 
-				<control type="group">
-					<posx>40</posx>
-					<posy>806</posy>
-					<include name="DefaultCirclePlayerMediaIcon" />
-				</control>
-			</control>
+                <control type="group">
+                    <posx>40</posx>
+                    <posy>806</posy>
+                    <include content="DefaultCirclePlayerMediaIcon" />
+                </control>
+            </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="BackgroundAnimationForMediaThumbnailIconForOSD">
+    <include name="BackgroundAnimationForMediaThumbnailIconForOSD">
         <definition>
             <control type="group">
                 <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),1)</visible>
-                <include name="OrbitCircle">
+                <include content="OrbitCircle">
                     <param name="posx" value="175" />
                     <param name="posy" value="941" />
                     <param name="size" value="25" />
@@ -213,7 +213,7 @@
             
             <control type="group">
                 <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),3)</visible>
-                <include name="OrbitCircle">
+                <include content="OrbitCircle">
                     <param name="posx" value="175" />
                     <param name="posy" value="941" />
                     <param name="size" value="15" />
@@ -221,7 +221,7 @@
                     <param name="time" value="18000" />
                 </include>
                 
-                <include name="OrbitCircle">
+                <include content="OrbitCircle">
                     <param name="posx" value="175" />
                     <param name="posy" value="941" />
                     <param name="size" value="5" />
@@ -230,7 +230,7 @@
                     <param name="direction" value="false" />
                 </include>
                 
-                <include name="OrbitCircle">
+                <include content="OrbitCircle">
                     <param name="posx" value="175" />
                     <param name="posy" value="941" />
                     <param name="size" value="10" />
@@ -238,7 +238,7 @@
                     <param name="time" value="12500" />
                 </include>
 
-                <include name="OrbitCircle">
+                <include content="OrbitCircle">
                     <param name="posx" value="175" />
                     <param name="posy" value="941" />
                     <param name="size" value="10" />
@@ -248,13 +248,13 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="MediaBackgroundMusicLabelForOSD">
+    <include name="MediaBackgroundMusicLabelForOSD">
         <definition>
             <control type="group">
                 <visible>Player.Playing</visible>
-                <include name="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForOSD" />
 
                 <control type="group">
                     <posx>PosXForContentForOSD</posx>
@@ -280,8 +280,8 @@
                 <control type="group">
                     <posx>390</posx>
                     <posy>1015</posy>
-					
-                    <include name="OutlineLabel">
+                    
+                    <include content="OutlineLabel">
                         <param name="width" value="1480" />
                         <param name="font" value="MessageTextFont" />
                         <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -292,12 +292,12 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="MediaStarRatingIconForOSD">
+    <include name="MediaStarRatingIconForOSD">
         <definition>
             <control type="group">
-                <include name="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForOSD" />
                 <posx>1704</posx>
                 <posy>975</posy>
 
@@ -351,16 +351,16 @@
                 </control>
             </control>
         </definition>
-	</include>
-	
-	<include name="MediaVisualisationLabelForOSD">
+    </include>
+    
+    <include name="MediaVisualisationLabelForOSD">
         <definition>
             <control type="group">
-                <include name="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForOSD" />
                 <posx>PosXForContentForOSD</posx>
                 <posy>824</posy>
-					
-                <include name="OutlineLabel">
+                    
+                <include content="OutlineLabel">
                     <param name="width" value="1530" />
                     <param name="font" value="MessageTextFont" />
                     <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -370,5 +370,5 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

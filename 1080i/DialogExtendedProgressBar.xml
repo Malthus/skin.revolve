@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="151">
-	<controls>
-		<control type="group">
+    <controls>
+        <control type="group">
             <posx>0</posx>
             <posy>200</posy>
 
             <control type="group">
                 <posx>PosXForIconForMessage</posx>
-				<posy>PosYForIconForMessage</posy>
+                <posy>PosYForIconForMessage</posy>
                 
-                <include name="BackgroundAnimationForMessage" />
-                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
-                <include name="SmallBusyAnimationForProgressBar" />
-			</control>
+                <include content="BackgroundAnimationForMessage" />
+                <include content="BorderedBackgroundForSmallCircleThumbnailIcon" />
+                <include content="SmallBusyAnimationForProgressBar" />
+            </control>
 
             <control type="group">
                 <posx>PosXForContentForMessage</posx>
                 <posy>PosYForContentForMessage</posy>
                 
-                <include name="BackgroundForOutlineLabel">
+                <include content="BackgroundForOutlineLabel">
                     <param name="posy" value="-20" />
                     <param name="width" value="WidthForContentForMessage" />
                     <param name="height" value="40" />
@@ -37,7 +37,7 @@
                     <label>-</label>
                 </control>
                 
-                <include name="BackgroundForOutlineLabel">
+                <include content="BackgroundForOutlineLabel">
                     <param name="posy" value="20" />
                     <param name="width" value="WidthForContentForMessage" />
                     <param name="height" value="40" />
@@ -65,7 +65,7 @@
                     <aspectratio>stretch</aspectratio>
                 </control>
                 
-                <include name="ProgressBar">
+                <include content="ProgressBar">
                     <param name="id" value="32" />
                     <param name="posx" value="0" />
                     <param name="posy" value="60" />
@@ -73,7 +73,7 @@
                     <param name="progressbarcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
-			</control>
-		</control>
-	</controls>
+            </control>
+        </control>
+    </controls>
 </window>

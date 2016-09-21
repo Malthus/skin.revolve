@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="SmallBusyAnimationForProgressBar">
+    <include name="SmallBusyAnimationForProgressBar">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         
@@ -20,9 +20,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="DefaultBusyAnimationForProgressBar">
+    <include name="DefaultBusyAnimationForProgressBar">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         
@@ -42,9 +42,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="BackgroundForProgressBar">
+    <include name="BackgroundForProgressBar">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -61,9 +61,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ProgressBar">
+    <include name="ProgressBar">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -95,10 +95,10 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
     <constant name="PosYForSingleLineDialogForProgressBar">440</constant>
-	<include name="SingleLineDialogForProgressBar">
+    <include name="SingleLineDialogForProgressBar">
         <definition>
             <control type="group">
                 <control type="image">
@@ -109,20 +109,20 @@
                     <texture>elements/circle-shadow.png</texture>
                 </control>
             
-                <include name="DialogWindow">
+                <include content="DialogWindow">
                     <param name="height" value="200" />
                 </include>
 
                 <control type="group">
                     <posx>140</posx>
                     <posy>-35</posy>
-                    <include name="BackgroundForDefaultCircleThumbnailIcon" />
+                    <include content="BackgroundForDefaultCircleThumbnailIcon" />
                 </control>
-		
-                <include name="DefaultBusyAnimationForProgressBar">
+        
+                <include content="DefaultBusyAnimationForProgressBar">
                     <param name="posy" value="-20" />
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

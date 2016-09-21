@@ -2,7 +2,7 @@
 <includes>
     <constant name="PosXForBigClock">1900</constant>
     <constant name="PosYForBigClock">10</constant>
-	<include name="BigClock">
+    <include name="BigClock">
         <param name="posx" default="PosXForBigClock" />
         <param name="posy" default="PosYForBigClock" />
     
@@ -15,41 +15,41 @@
                     <visible>!SubString(System.Time(xx),M)</visible> 
                     <posx>0</posx>
                     <posy>0</posy>
-                    <include name="TimeForBigClock" />
+                    <include content="TimeForBigClock" />
                 </control>
 
                 <control type="group">
                     <visible>SubString(System.Time(xx),M)</visible> 
                     <posx>-70</posx>
                     <posy>0</posy>
-                    <include name="TimeForBigClock" />
+                    <include content="TimeForBigClock" />
                 </control>
                     
                 <control type="group">
                     <visible>SubString(System.Time(xx),M)</visible> 
                     <posx>-60</posx>
                     <posy>0</posy>
-                    <include name="AmPmForBigClock" />
+                    <include content="AmPmForBigClock" />
                 </control>
 
                 <control type="group">
                     <posx>0</posx>
                     <posy>120</posy>
-                    <include name="DateForBigClock" />
+                    <include content="DateForBigClock" />
                 </control>
             </control>
         </definition>
-	</include>
-	
+    </include>
+    
     <constant name="PosXForDefaultClock">1900</constant>
     <constant name="PosYForDefaultClock">20</constant>
-	<include name="DefaultClock">
+    <include name="DefaultClock">
         <param name="posx" default="PosXForDefaultClock" />
         <param name="posy" default="PosYForDefaultClock" />
 
         <definition>
             <control type="group">
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="$PARAM[posx]" />
                     <param name="posy" value="$PARAM[posy]" />
                     <param name="width" value="200" />
@@ -63,12 +63,12 @@
                 </include>
             </control>
         </definition>
-	</include>
-	
-	<include name="TimeForBigClock">
+    </include>
+    
+    <include name="TimeForBigClock">
         <definition>
             <control type="group">
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="width" value="600" />
                     <param name="height" value="100" />
                     <param name="font" value="HugeClockTimeFont" />
@@ -80,12 +80,12 @@
                 </include>
             </control>
         </definition>
-	</include>
-	
-	<include name="DateForBigClock">
+    </include>
+    
+    <include name="DateForBigClock">
         <definition>
             <control type="group">
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="width" value="600" />
                     <param name="height" value="40" />
                     <param name="font" value="HugeClockDateFont" />
@@ -99,7 +99,7 @@
 
             <control type="group">
                 <posy>40</posy>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="width" value="600" />
                     <param name="height" value="40" />
                     <param name="font" value="HugeClockDateFont" />
@@ -111,9 +111,9 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="AmPmForBigClock">
+    <include name="AmPmForBigClock">
         <definition>
             <control type="group">
                 <visible>SubString(System.Time(xx),M)</visible> 
@@ -121,7 +121,7 @@
                 <control type="group">
                     <visible>SubString(System.Time(xx),A)</visible> 
                     <posy>0</posy>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="width" value="70" />
                         <param name="height" value="50" />
                         <param name="font" value="HugeClockAMPMFont" />
@@ -136,7 +136,7 @@
                 <control type="group">
                     <visible>SubString(System.Time(xx),P)</visible> 
                     <posy>0</posy>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="width" value="70" />
                         <param name="height" value="50" />
                         <param name="font" value="HugeClockAMPMFont" />
@@ -150,7 +150,7 @@
                 
                 <control type="group">
                     <posy>58</posy>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="width" value="70" />
                         <param name="height" value="50" />
                         <param name="font" value="HugeClockAMPMFont" />
@@ -163,5 +163,5 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

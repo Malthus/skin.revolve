@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2001">
-	<defaultcontrol always="true">9000</defaultcontrol>
+    <defaultcontrol always="true">9000</defaultcontrol>
     <menucontrol>9000</menucontrol>
     <onload condition="Container.Content(artists) + Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2001,6),00:01,silent)</onload>
     <onload condition="Container.Content(albums) + Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2001,6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForFifteenLinesDialog</posy>
+    <controls>
+        <control type="group">
+            <posy>PosYForFifteenLinesDialog</posy>
 
             <control type="group">
-				<visible>Container.Content(artists)</visible>
+                <visible>Container.Content(artists)</visible>
 
-                <include name="WindowForDialog">
+                <include content="WindowForDialog">
                     <param name="height" value="HeightForFifteenLinesDialog" />
                     <param name="headerlabel" value="$VAR[ContentNameLabel]" />
                     <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
@@ -21,12 +21,12 @@
                 </include>
 
                 <control type="list" id="20">
-                    <include name="MarkupForInfoListForDialog">
+                    <include content="MarkupForInfoListForDialog">
                         <param name="height" value="240" />
                         <param name="pagecontrol" value="30" />
                     </include>
 
-                    <include name="ItemsForInfoListInDialog" />
+                    <include content="ItemsForInfoListInDialog" />
 
                     <content>
                         <item>
@@ -87,19 +87,19 @@
                 </control>
 
                 <control type="scrollbar" id="30">
-                    <include name="MarkupForScrollbarForDialog">
+                    <include content="MarkupForScrollbarForDialog">
                         <param name="posy" value="80" />
                         <param name="height" value="200" />
                     </include>
                     <onleft>9000</onleft>
                     <onright>Noop</onright>
                 </control>
-			</control>
+            </control>
 
             <control type="group">
-				<visible>Container.Content(albums)</visible>
+                <visible>Container.Content(albums)</visible>
 
-                <include name="WindowForDialog">
+                <include content="WindowForDialog">
                     <param name="height" value="HeightForFifteenLinesDialog" />
                     <param name="headerlabel" value="$INFO[ListItem.Album]" />
                     <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
@@ -107,12 +107,12 @@
                 </include>
 
                 <control type="list" id="22">
-                    <include name="MarkupForInfoListForDialog">
+                    <include content="MarkupForInfoListForDialog">
                         <param name="height" value="200" />
                         <param name="pagecontrol" value="23" />
                     </include>
 
-                    <include name="ItemsForInfoListInDialog" />
+                    <include content="ItemsForInfoListInDialog" />
 
                     <content>
                         <item>
@@ -169,7 +169,7 @@
                 <control type="scrollbar" id="23">
                     <description>Album Information Scrollbar</description>
                     <visible>Control.IsVisible(22)</visible>
-                    <include name="MarkupForScrollbarForDialog">
+                    <include content="MarkupForScrollbarForDialog">
                         <param name="posy" value="80" />
                         <param name="height" value="200" />
                     </include>
@@ -177,13 +177,13 @@
                     <onright>Noop</onright>
                 </control>
 
-                <include name="HorizontalDialogListOfContentMediaFlag">
+                <include content="HorizontalDialogListOfContentMediaFlag">
                     <param name="posx" value="560" />
                     <param name="posy" value="290" />
                 </include>
-			</control>
+            </control>
 
-            <include name="TextboxForDialog">
+            <include content="TextboxForDialog">
                 <param name="posy" value="360" />
                 <param name="height" value="320" />
                 <param name="textboxid" value="4" />
@@ -191,75 +191,75 @@
                 <param name="onleft" value="9000" />
             </include>
 
-			<control type="list" id="50">
+            <control type="list" id="50">
                 <description>Track Listing</description>
-                <include name="MarkupForListForDialog">
+                <include content="MarkupForListForDialog">
                     <param name="posy" value="360" />
                     <param name="height" value="320" />
                     <param name="pagecontrol" value="25" />
                 </include>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<onleft>9000</onleft>
-				<onright>25</onright>
+                <onup>50</onup>
+                <ondown>50</ondown>
+                <onleft>9000</onleft>
+                <onright>25</onright>
                 
-				<itemlayout height="40">
-					<include>NormalItemsForNormalListInDialog</include>
-				</itemlayout>
-					
-				<focusedlayout height="40">
-					<control type="group">
-						<visible>Control.HasFocus(50)</visible>
-						<include>FocusedItemsForNormalListInDialog</include>
-					</control>
-					<control type="group">
-						<visible>!Control.HasFocus(50)</visible>
-						<include>NormalItemsForNormalListInDialog</include>
-					</control>
-				</focusedlayout>
-			</control>
+                <itemlayout height="40">
+                    <include>NormalItemsForNormalListInDialog</include>
+                </itemlayout>
+                    
+                <focusedlayout height="40">
+                    <control type="group">
+                        <visible>Control.HasFocus(50)</visible>
+                        <include>FocusedItemsForNormalListInDialog</include>
+                    </control>
+                    <control type="group">
+                        <visible>!Control.HasFocus(50)</visible>
+                        <include>NormalItemsForNormalListInDialog</include>
+                    </control>
+                </focusedlayout>
+            </control>
 
-			<control type="scrollbar" id="25">
+            <control type="scrollbar" id="25">
                 <description>Track Listing Scrollbar</description>
-				<visible>Control.IsVisible(50)</visible>
-				<include name="MarkupForScrollbarForDialog">
+                <visible>Control.IsVisible(50)</visible>
+                <include content="MarkupForScrollbarForDialog">
                     <param name="posy" value="360" />
                     <param name="height" value="320" />
                 </include>
-				<onup>25</onup>
-				<ondown>25</ondown>
-				<onleft>50</onleft>
-				<onright>Noop</onright>
-			</control>
+                <onup>25</onup>
+                <ondown>25</ondown>
+                <onleft>50</onleft>
+                <onright>Noop</onright>
+            </control>
 
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="480" />
                     <param name="height" value="200" />
                 </include>
-				<onright condition="Control.IsVisible(50)">50</onright>
-				<onright condition="!Control.IsVisible(50)">24</onright>
+                <onright condition="Control.IsVisible(50)">50</onright>
+                <onright condition="!Control.IsVisible(50)">24</onright>
 
-				<control type="button" id="5">
+                <control type="button" id="5">
                     <description>Review/Track Listing Button</description>
-					<label>$LOCALIZE[206]</label>
-				</control>
-				<control type="button" id="6">
+                    <label>$LOCALIZE[206]</label>
+                </control>
+                <control type="button" id="6">
                     <description>Refresh Button</description>
-					<label>$LOCALIZE[184]</label>
-				</control>
-				<control type="button" id="10">
+                    <label>$LOCALIZE[184]</label>
+                </control>
+                <control type="button" id="10">
                     <description>Get Thumbnail Button</description>
-					<label>$LOCALIZE[13405]</label>
-				</control>
-				<control type="button" id="12">
+                    <label>$LOCALIZE[13405]</label>
+                </control>
+                <control type="button" id="12">
                     <description>Get Fanart Button</description>
-					<label>$LOCALIZE[20413]</label>
-				</control>
-                <include name="CloseButtonForDialog">
+                    <label>$LOCALIZE[20413]</label>
+                </control>
+                <include content="CloseButtonForDialog">
                     <param name="id" value="21" />
                 </include>
-			</control>
-		</control>
-	</controls>
+            </control>
+        </control>
+    </controls>
 </window>

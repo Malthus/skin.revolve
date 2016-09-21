@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="103">
-	<defaultcontrol always="true">300</defaultcontrol>
+    <defaultcontrol always="true">300</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<visible>!Window.IsVisible(numericinput)</visible>
-			<posy>PosYForKeyboardDialog</posy>
-			<include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <visible>!Window.IsVisible(numericinput)</visible>
+            <posy>PosYForKeyboardDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForKeyboardDialog" />
                 <param name="headerid" value ="311" />
                 <param name="icontexture" value ="icons/icon-keyboard.png" />
             </include>
 
-			<control type="group">
-				<posx>560</posx>
-				<posy>0</posy>
-			
+            <control type="group">
+                <posx>560</posx>
+                <posy>0</posy>
+            
                 <control type="group">
                     <visible>!System.HasHiddenInput + System.HasAddon(plugin.program.autocompletion) + Skin.HasSetting(Keyboard.AutoCompleteActive)</visible>
                     <animation type="Conditional" reversible="false" condition="!String.IsEmpty(Container(5000).ListItem.Label)">
                         <effect type="fade" end="100" time="200" />
                         <effect type="slide" start="0,260" end="0,0" time="200" tween="cubic" easing="out" />
-                    </animation>	
+                    </animation>    
                     <animation type="Conditional" reversible="false" condition="String.IsEmpty(Container(5000).ListItem.Label)">
                         <effect type="fade" start="100" end="0" time="200" />
                         <effect type="slide" start="0,0" end="0,260" time="200" tween="cubic" easing="out" />
@@ -84,32 +84,32 @@
                         </focusedlayout>
                         
                         <content>$VAR[AutoCompletionAddon]</content>
-                    </control>		
+                    </control>        
                 </control>
                 
-				<control type="image">
-					<posx>0</posx>
-					<posy>80</posy>
-					<width>1225</width>
-					<height>68</height>
-					<texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>80</posy>
+                    <width>1225</width>
+                    <height>68</height>
+                    <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
 
-				<control type="edit" id="312">
+                <control type="edit" id="312">
                     <description>Edit Text</description>
-					<posx>4</posx>
-					<posy>84</posy>
-					<width>1217</width>
+                    <posx>4</posx>
+                    <posy>84</posy>
+                    <width>1217</width>
                     <height>60</height>
-					<align>center</align>
+                    <align>center</align>
                     <onup>5000</onup>
                     <ondown>102</ondown>
-				</control>
+                </control>
 
                 <control type="group">
-					<posx>0</posx>
-					<posy>160</posy>
+                    <posx>0</posx>
+                    <posy>160</posy>
 
                     <control type="grouplist"> 
                         <itemgap>0</itemgap> 
@@ -575,36 +575,36 @@
                             <ondown>5000</ondown>
                         </control>
                     </control>
-				</control>
-			</control>
+                </control>
+            </control>
 
             <control type="label" id="313">
                 <description>HZCODE Label</description>
-				<posx>40</posx>
-				<posy>320</posy>
-				<width>480</width>
-				<height>40</height>
-				<font>DialogTextFont</font>
-				<textcolor>$VAR[TextColor]</textcolor>
+                <posx>40</posx>
+                <posy>320</posy>
+                <width>480</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>$VAR[TextColor]</textcolor>
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>-</label>
             </control>
             <control type="label" id="314">
                 <description>HZLIST Label</description>
-				<posx>40</posx>
-				<posy>360</posy>
-				<width>480</width>
-				<height>40</height>
-				<font>DialogTextFont</font>
-				<textcolor>$VAR[TextColor]</textcolor>
+                <posx>40</posx>
+                <posy>360</posy>
+                <width>480</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>$VAR[TextColor]</textcolor>
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>-</label>
             </control>
             
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="440" />
                     <param name="height" value="80" />
                 </include>
@@ -615,10 +615,10 @@
                     <description>Keyboard Layout Button</description> 
                     <label>$LOCALIZE[20177]</label> 
                 </control>                    
-                <include name="CloseButtonForDialog">
+                <include content="CloseButtonForDialog">
                     <param name="id" value="29" />
                 </include>
-			</control>
-		</control>
-	</controls>
+            </control>
+        </control>
+    </controls>
 </window>

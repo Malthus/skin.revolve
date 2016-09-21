@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="150">
-	<defaultcontrol>5</defaultcontrol>
+    <defaultcontrol>5</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForThirteenLinesDialog</posy>
-			<include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForThirteenLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForThirteenLinesDialog" />
                 <param name="headerid" value="2" />
                 <param name="icontexture" value="icons/icon-connector.png" />
             </include>
 
-			<control type="grouplist" id="5">
+            <control type="grouplist" id="5">
                 <description>Control Area</description>
-                <include name="MarkupForListForDialog">
+                <include content="MarkupForListForDialog">
                     <param name="posy" value="80" />
                     <param name="height" value="520" />
                     <param name="pagecontrol" value="25" />
                 </include>
-				<onup>29</onup>
-				<ondown>50</ondown>
-				<onleft>9000</onleft>
-				<onright>25</onright>
-			</control>
+                <onup>29</onup>
+                <ondown>50</ondown>
+                <onleft>9000</onleft>
+                <onright>25</onright>
+            </control>
 
-            <include name="DefaultControlsForDialog" />
+            <include content="DefaultControlsForDialog" />
             
-			<control type="scrollbar" id="25">
-				<include name="MarkupForScrollbarForDialog">
+            <control type="scrollbar" id="25">
+                <include content="MarkupForScrollbarForDialog">
                     <param name="posy" value="80" />
                     <param name="height" value="520" />
                 </include>
-				<onleft>5</onleft>
-			</control>
+                <onleft>5</onleft>
+            </control>
             
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="460" />
                     <param name="height" value="140" />
                 </include>
-				<onup>5</onup>
-				<ondown>5</ondown>
+                <onup>5</onup>
+                <ondown>5</ondown>
                 <onright>5</onright>
                 
-                <include name="DefaultsButtonForDialog">
+                <include content="DefaultsButtonForDialog">
                     <param name="id" value="50" />
                 </include>
-                <include name="OkButtonForDialog">
+                <include content="OkButtonForDialog">
                     <param name="posy" value="20" />
                 </include>
-                <include name="CancelButtonForDialog" />
-			</control>
-		</control>
-	</controls>
+                <include content="CancelButtonForDialog" />
+            </control>
+        </control>
+    </controls>
 </window>

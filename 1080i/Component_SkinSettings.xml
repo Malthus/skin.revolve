@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include file="SkinSettings_HomeMenu.xml" />
-	<include file="SkinSettings_ExitMenu.xml" />
-	<include file="SkinSettings_Media.xml" />
+    <include file="SkinSettings_HomeMenu.xml" />
+    <include file="SkinSettings_ExitMenu.xml" />
+    <include file="SkinSettings_Media.xml" />
 
-	<include name="ColorSettingButtonForSkinSettings">
+    <include name="ColorSettingButtonForSkinSettings">
         <param name="id" default="0" />
         <param name="label" default="-" />
         <param name="enable" default="false" />
@@ -25,9 +25,9 @@
                 <onclick>ActivateWindow(1185)</onclick>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ColorPickerButtonForSkinSettings">
+    <include name="ColorPickerButtonForSkinSettings">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -70,8 +70,8 @@
                     <onleft>$PARAM[onleft]</onleft>
                     <onright>$PARAM[onright]</onright>
                     <onclick>Skin.SetString($INFO[$PARAM[target]],FF$PARAM[color])</onclick>
-					<onclick condition="!String.IsEmpty($PARAM[relatedtarget])">Skin.SetString($INFO[$PARAM[relatedtarget]],$PARAM[relatedcolorprefix]$PARAM[color])</onclick>
-					<onclick>Close</onclick>
+                    <onclick condition="!String.IsEmpty($PARAM[relatedtarget])">Skin.SetString($INFO[$PARAM[relatedtarget]],$PARAM[relatedcolorprefix]$PARAM[color])</onclick>
+                    <onclick>Close</onclick>
                 </control>
 
                 <control type="image">
@@ -84,14 +84,14 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ItemsForButtonListInSkinSettings">
+    <include name="ItemsForButtonListInSkinSettings">
         <param name="listid" default="0" />
     
         <definition>
             <itemlayout height="40">
-                <include name="ItemForButtonListInSkinSettings">
+                <include content="ItemForButtonListInSkinSettings">
                     <param name="textcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
@@ -100,23 +100,23 @@
             <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include name="ItemForButtonListInSkinSettings">
+                    <include content="ItemForButtonListInSkinSettings">
                         <param name="textcolor" value="$VAR[BackgroundColor]" />
                         <param name="backgroundcolor" value="$VAR[MainColor]" />
                     </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include name="ItemForButtonListInSkinSettings">
+                    <include content="ItemForButtonListInSkinSettings">
                         <param name="textcolor" value="$VAR[BackgroundColor]" />
                         <param name="backgroundcolor" value="$VAR[SelectColor]" />
                     </include>
                 </control>
             </focusedlayout>
         </definition>
-	</include>
+    </include>
 
-	<include name="ItemForButtonListInSkinSettings">
+    <include name="ItemForButtonListInSkinSettings">
         <param name="textcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="backgroundcoverage" default="false" />
@@ -144,9 +144,9 @@
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ItemForHomeOptionListInSkinSettings">
+    <include name="ItemForHomeOptionListInSkinSettings">
         <param name="width" default="1100" />
         <param name="textwidth" default="1060" />
         <param name="radioposx" default="1040" />
@@ -201,21 +201,21 @@
                 <texture colordiffuse="$PARAM[radiobuttoncolor]" border="20">controls/circle-clear.png</texture>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="BusyDialogForSkinSettings">
+    <include name="BusyDialogForSkinSettings">
         <definition>
 
             <control type="group">
                 <visible>!StringCompare(Skin.String(Revolve.Configuration),4.1.1)</visible>
                 <posy>PosYForProgressDialog</posy>
 
-                <include name="WindowForDialog">
+                <include content="WindowForDialog">
                     <param name="height" value="HeightForProgressDialog" />
                     <param name="headerlabel" value="$LOCALIZE[20186]" />
                 </include>
 
-                <include name="DefaultBusyAnimationForProgressBar">
+                <include content="DefaultBusyAnimationForProgressBar">
                     <param name="posx" value="145" />
                     <param name="posy" value="20" />
                 </include>
@@ -223,7 +223,7 @@
                 <control type="group">
                     <visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
 
-                    <include name="TextboxForDialog">
+                    <include content="TextboxForDialog">
                         <param name="posy" value="80" />
                         <param name="height" value="120" />
                         <param name="textboxid" value="9" />
@@ -236,7 +236,7 @@
                 <control type="group">
                     <visible>Skin.HasSetting(RevolveConfiguration) | StringCompare(Skin.String(Revolve.Configuration),3.0.2)</visible>
 
-                    <include name="TextboxForDialog">
+                    <include content="TextboxForDialog">
                         <param name="posy" value="80" />
                         <param name="height" value="120" />
                         <param name="textboxid" value="9" />
@@ -247,5 +247,5 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

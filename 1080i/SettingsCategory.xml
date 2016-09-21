@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="12">
-	<defaultcontrol always="true">3</defaultcontrol>
+    <defaultcontrol always="true">3</defaultcontrol>
     <menucontrol>9001</menucontrol>
 
-	<controls>
-		<include name="GlobalBackground" />
-		
-	    <control type="group">
-			<include name="BackgroundAnimationForSettings" />
+    <controls>
+        <include content="GlobalBackground" />
+        
+        <control type="group">
+            <include content="BackgroundAnimationForSettings" />
 
-			<control type="group">
-                <include name="WindowAnimationForSettings" />
+            <control type="group">
+                <include content="WindowAnimationForSettings" />
 
                 <control type="grouplist" id="5">
                     <posx>700</posx>
@@ -87,10 +87,10 @@
                         <label>-</label>
                     </control>
                 </control>
-			</control>
+            </control>
             
-			<control type="group">
-                <include name="ButtonLeftRingForSettings" />
+            <control type="group">
+                <include content="ButtonLeftRingForSettings" />
 
                 <control type="grouplist" id="3">
                     <posx>40</posx>
@@ -104,36 +104,36 @@
                     <onleft>9000</onleft>
                     <onright>5</onright>
                 </control>
-			</control>
-		</control>
-		
-		<control type="group" id="9000">
-			<include name="SideMenu" />
+            </control>
+        </control>
+        
+        <control type="group" id="9000">
+            <include content="SideMenu" />
 
-			<control type="grouplist" id="9001">
-                <include name="BeginOfButtonListForSideMenu">
+            <control type="grouplist" id="9001">
+                <include content="BeginOfButtonListForSideMenu">
                     <param name="onright" value="3" />
                 </include>
 
-                <include name="ViewGroupLabelForSideMenu" />
+                <include content="ViewGroupLabelForSideMenu" />
                 <control type="label" id="998">
                     <width>482</width>
                     <height>30</height>
                     <textcolor>$VAR[MainColor]</textcolor>
                     <label>$LOCALIZE[31139]</label>
                 </control>
-				<include name="SettingsLevelButtonForSideMenu" />
-                <include name="SettingsHelpButtonForSideMenu" />
+                <include content="SettingsLevelButtonForSideMenu" />
+                <include content="SettingsHelpButtonForSideMenu" />
                 
-                <include name="EndOfButtonListForSideMenu" />
-			</control>
+                <include content="EndOfButtonListForSideMenu" />
+            </control>
 
-            <include name="PlayerControlsForSideMenu">
+            <include content="PlayerControlsForSideMenu">
                 <param name="onright" value="3" />
             </include>
-		</control>
+        </control>
         
-		<include name="Overlay" />
-        <include name="BackButton" />
-	</controls>
+        <include content="Overlay" />
+        <include content="BackButton" />
+    </controls>
 </window>

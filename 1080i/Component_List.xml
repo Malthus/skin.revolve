@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="NormalItemsForLargeThumbnailList">
+    <include name="NormalItemsForLargeThumbnailList">
         <definition>
             <control type="image">
                 <width>1240</width>
@@ -11,7 +11,7 @@
             <control type="group">
                 <posx>20</posx>
                 <posy>5</posy>
-                <include>SmallCircleThumbnailIcon</include>
+                <include content="SmallCircleThumbnailIcon" />
             </control>
             <control type="label">
                 <posx>160</posx>
@@ -30,9 +30,9 @@
                 <info>ListItem.Label2</info>
             </control>
         </definition>
-	</include>
-	
-	<include name="FocusedItemsForLargeThumbnailList">
+    </include>
+    
+    <include name="FocusedItemsForLargeThumbnailList">
         <definition>
             <control type="image">
                 <width>1240</width>
@@ -43,7 +43,7 @@
             <control type="group">
                 <posx>20</posx>
                 <posy>5</posy>
-                <include>SmallCircleThumbnailIcon</include>
+                <include content="SmallCircleThumbnailIcon" />
             </control>
             <control type="label">
                 <posx>160</posx>
@@ -64,9 +64,9 @@
                 <info>ListItem.Label2</info>
             </control>
         </definition>
-	</include>
-	
-	<include name="SelectedItemsForLargeThumbnailList">
+    </include>
+    
+    <include name="SelectedItemsForLargeThumbnailList">
         <definition>
             <control type="image">
                 <width>1240</width>
@@ -77,7 +77,7 @@
             <control type="group">
                 <posx>20</posx>
                 <posy>5</posy>
-                <include>SmallCircleThumbnailIcon</include>
+                <include content="SmallCircleThumbnailIcon" />
             </control>
             <control type="label">
                 <posx>160</posx>
@@ -98,17 +98,17 @@
                 <info>ListItem.Label2</info>
             </control>
         </definition>
-	</include>
-	
-	<include name="ItemsForLargeThumbnailList">
+    </include>
+    
+    <include name="ItemsForLargeThumbnailList">
         <definition>
             <itemlayout height="100">
-                <include>NormalItemsForLargeThumbnailList</include>
+                <include content="NormalItemsForLargeThumbnailList" />
             </itemlayout>
                         
             <focusedlayout height="100">
-                <include>FocusedItemsForLargeThumbnailList</include>
+                <include content="FocusedItemsForLargeThumbnailList" />
             </focusedlayout>
         </definition>
-	</include>
+    </include>
 </includes>

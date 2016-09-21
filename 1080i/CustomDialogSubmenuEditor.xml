@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1192">
-	<defaultcontrol>30</defaultcontrol>
+    <defaultcontrol>30</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForThirteenLinesDialog</posy>
-            <include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForThirteenLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForThirteenLinesDialog" />
                 <param name="headerlabel" value="$LOCALIZE[31894]" />
                 <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
 
-            <include name="LabelForDialog">
+            <include content="LabelForDialog">
                 <param name="posy" value="80" />
                 <param name="textcolor" value="$VAR[TextColor]" />
                 <param name="label" value="$LOCALIZE[31895]: $INFO[Window.Property(CustomMenuTitle)]" />
             </include>
 
-            <include name="LabelForDialog">
+            <include content="LabelForDialog">
                 <param name="posy" value="120" />
                 <param name="textcolor" value="$VAR[TextColor]" />
                 <param name="label" value="$LOCALIZE[31896]: $INFO[Window.Property(TargetOption)]" />
@@ -39,7 +39,7 @@
                 <onright>31</onright>
 
                 <itemlayout height="40">
-                    <include name="ItemForHomeOptionListInSkinSettings">
+                    <include content="ItemForHomeOptionListInSkinSettings">
                         <param name="width" value="1240" />
                         <param name="textwidth" value="1200" />
                         <param name="radioposx" value="1180" />
@@ -54,7 +54,7 @@
                     <control type="group">
                         <visible>Control.HasFocus(30)</visible>
 
-                        <include name="ItemForHomeOptionListInSkinSettings">
+                        <include content="ItemForHomeOptionListInSkinSettings">
                             <param name="width" value="1240" />
                             <param name="textwidth" value="1200" />
                             <param name="radioposx" value="1180" />
@@ -68,7 +68,7 @@
                     <control type="group">
                         <visible>!Control.HasFocus(30)</visible>
 
-                        <include name="ItemForHomeOptionListInSkinSettings">
+                        <include content="ItemForHomeOptionListInSkinSettings">
                             <param name="width" value="1240" />
                             <param name="textwidth" value="1200" />
                             <param name="radioposx" value="1180" />
@@ -443,50 +443,50 @@
                 </content>
             </control>
 
-			<control type="scrollbar" id="31">
-				<visible>Control.IsVisible(30)</visible>
-				<include name="MarkupForScrollbarForDialog">
+            <control type="scrollbar" id="31">
+                <visible>Control.IsVisible(30)</visible>
+                <include content="MarkupForScrollbarForDialog">
                     <param name="posy" value="200" />
                     <param name="height" value="400" />
                 </include>
-				<onleft>30</onleft>
-			</control>
+                <onleft>30</onleft>
+            </control>
 
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="400" />
                     <param name="height" value="200" />
                 </include>
                 <onup>30</onup>
                 <ondown>30</ondown>
-				<onright>30</onright>
+                <onright>30</onright>
 
-				<control type="button" id="22">
+                <control type="button" id="22">
                     <description>Move Up Button</description>
-					<label>$LOCALIZE[13332]</label>
-					<onclick>RunScript(script.revolve.service,SwapMenuOptions,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,$INFO[Container(30).ListItem.Property(Index)],$INFO[Container(30).ListItem(-1).Property(Index)],1192)</onclick>
+                    <label>$LOCALIZE[13332]</label>
+                    <onclick>RunScript(script.revolve.service,SwapMenuOptions,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,$INFO[Container(30).ListItem.Property(Index)],$INFO[Container(30).ListItem(-1).Property(Index)],1192)</onclick>
                     <onclick>Control.Move(30,-1)</onclick>
-				</control>
-				<control type="button" id="23">
+                </control>
+                <control type="button" id="23">
                     <description>Move Down Button</description>
-					<label>$LOCALIZE[13333]</label>
-					<onclick>RunScript(script.revolve.service,SwapMenuOptions,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,$INFO[Container(30).ListItem.Property(Index)],$INFO[Container(30).ListItem(1).Property(Index)],1192)</onclick>
+                    <label>$LOCALIZE[13333]</label>
+                    <onclick>RunScript(script.revolve.service,SwapMenuOptions,$INFO[Window.Property(TargetOption)]%02dOption,CustomSubmenu%02dOption,$INFO[Container(30).ListItem.Property(Index)],$INFO[Container(30).ListItem(1).Property(Index)],1192)</onclick>
                     <onclick>Control.Move(30,1)</onclick>
-				</control>
-				<control type="radiobutton" id="26">
+                </control>
+                <control type="radiobutton" id="26">
                     <description>Help Radiobutton</description>
                     <posy>20</posy>
-					<label>$LOCALIZE[10043]</label>
+                    <label>$LOCALIZE[10043]</label>
                     <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
-					<onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
-				</control>
-				<control type="button" id="21">
+                    <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
+                </control>
+                <control type="button" id="21">
                     <description>Close Button</description>
                     <posy>20</posy>
-					<label>$LOCALIZE[31915]</label>
-					<onclick>Close</onclick>
-				</control>
-			</control>
+                    <label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+                </control>
+            </control>
             
             <control type="group">
                 <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
@@ -528,6 +528,6 @@
                     </control>
                 </control>
             </control>
-		</control>
-	</controls>
+        </control>
+    </controls>
 </window>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="145">
-	<defaultcontrol always="true">11</defaultcontrol>
+    <defaultcontrol always="true">11</defaultcontrol>
 
-	<controls>
-		<control type="group">
+    <controls>
+        <control type="group">
             <posx>0</posx>
             <posy>360</posy>
             
-            <include name="IconForMessage">
+            <include content="IconForMessage">
                 <param name="icontexture" value="icons/icon-settings.png" />
             </include>
 
@@ -15,7 +15,7 @@
                 <posx>PosXForContentForMessage</posx>
                 <posy>PosYForContentForMessage</posy>
 
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="width" value="WidthForContentForMessage" />
                     <param name="font" value="MessageTitleFont" />
                     <param name="textcolor" value="$VAR[BackgroundColor]" />
@@ -66,7 +66,7 @@
                     <onleft>11</onleft>
                     <onright>11</onright>
                 </control>
-			</control>
-		</control>
-	</controls>
+            </control>
+        </control>
+    </controls>
 </window>

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="154">
-	<defaultcontrol always="true">9000</defaultcontrol>
+    <defaultcontrol always="true">9000</defaultcontrol>
     <menucontrol>9001</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForFullWindowDialog</posy>
-            <include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForFullWindowDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForFullWindowDialog" />
                 <param name="headerid" value="2" />
                 <param name="headerlabel" value="$LOCALIZE[15020]" />
                 <param name="icontexture" value="icons/icon-speaker.png" />
             </include>
 
-			<control type="list" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="list" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="420" />
                     <param name="height" value="200" />
                 </include>
-				<onup>20</onup>
-				<ondown>26</ondown>
-				<onright>21</onright>
+                <onup>20</onup>
+                <ondown>26</ondown>
+                <onright>21</onright>
                 
                 <itemlayout height="40">
                     <control type="image">
@@ -124,15 +124,15 @@
                     </item>
                 </content>
             </control>
-			
-			<control type="group">
-                <include name="HalfListFrameForDialog">
+            
+            <control type="group">
+                <include content="HalfListFrameForDialog">
                     <param name="posx" value="560" />
                     <param name="posy" value="100" />
                     <param name="height" value="780" />
                 </include>
             
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="600" />
                     <param name="posy" value="80" />
                     <param name="width" value="520" />
@@ -145,26 +145,26 @@
                     <param name="label" value="$LOCALIZE[15051] ($INFO[Container(21).NumItems])" />
                 </include>
 
-				<control type="list" id="21">
+                <control type="list" id="21">
                     <description>Active DSP List Control</description>
-					<posx>566</posx>
-					<posy>120</posy>
-					<width>592</width>
-					<height>740</height>
+                    <posx>566</posx>
+                    <posy>120</posy>
+                    <width>592</width>
+                    <height>740</height>
                     <scrolltime>200</scrolltime>
                     <pagecontrol>61</pagecontrol>
-					<onup>25</onup>
-					<ondown>20</ondown>
-					<onleft>9001</onleft>
-					<onright>20</onright>
+                    <onup>25</onup>
+                    <ondown>20</ondown>
+                    <onleft>9001</onleft>
+                    <onright>20</onright>
 
-                    <include name="ThumbnailItemsForHalfListInDialog">
+                    <include content="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="21" />
                         <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
                     </include>
-				</control>
+                </control>
                 
-                <include name="ScrollbarForDialog">
+                <include content="ScrollbarForDialog">
                     <param name="id" value="61" />
                     <param name="posx" value="1148" />
                     <param name="posy" value="120" />
@@ -174,14 +174,14 @@
                 </include>
             </control>
 
-			<control type="group">
-                <include name="HalfListFrameForDialog">
+            <control type="group">
+                <include content="HalfListFrameForDialog">
                     <param name="posx" value="1180" />
                     <param name="posy" value="100" />
                     <param name="height" value="780" />
                 </include>
             
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="1220" />
                     <param name="posy" value="80" />
                     <param name="width" value="520" />
@@ -196,23 +196,23 @@
 
                 <control type="list" id="20">
                     <description>Available DSP List Control</description>
-					<posx>1186</posx>
-					<posy>120</posy>
-					<width>592</width>
-					<height>740</height>
+                    <posx>1186</posx>
+                    <posy>120</posy>
+                    <width>592</width>
+                    <height>740</height>
                     <pagecontrol>60</pagecontrol>
                     <scrolltime>200</scrolltime>
-					<onup>21</onup>
-					<ondown>9000</ondown>
-					<onleft>21</onleft>
+                    <onup>21</onup>
+                    <ondown>9000</ondown>
+                    <onleft>21</onleft>
 
-                    <include name="ThumbnailItemsForHalfListInDialog">
+                    <include content="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="20" />
                         <param name="texture" value="$INFO[ListItem.Property(Icon)]" />
                     </include>
                 </control>
                 
-                <include name="ScrollbarForDialog">
+                <include content="ScrollbarForDialog">
                     <param name="id" value="60" />
                     <param name="posx" value="1768" />
                     <param name="posy" value="120" />
@@ -221,38 +221,38 @@
                     <param name="onright" value="Noop" />
                 </include>
             </control>
-			
-			<control type="grouplist" id="9001">
-                <include name="MarkupForButtonListForDialog">
+            
+            <control type="grouplist" id="9001">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="660" />
                     <param name="height" value="220" />
                 </include>
-				<onup>9000</onup>
-				<ondown>21</ondown>
-				<onright>21</onright>
+                <onup>9000</onup>
+                <ondown>21</ondown>
+                <onright>21</onright>
 
-                <include name="SetHelpButtonForDialog" />
-				<control type="radiobutton" id="22">
+                <include content="SetHelpButtonForDialog" />
+                <control type="radiobutton" id="22">
                     <description>Auto Save Radiobutton</description>
                     <posy>20</posy>
-					<label>$LOCALIZE[31977]</label>
-				</control>
-                <include name="ApplyButtonForDialog">
+                    <label>$LOCALIZE[31977]</label>
+                </control>
+                <include content="ApplyButtonForDialog">
                     <param name="id" value="23" />
                 </include>
-                <include name="ClearButtonForDialog">
+                <include content="ClearButtonForDialog">
                     <param name="id" value="24" />
                 </include>
-                <include name="CloseButtonForDialog">
+                <include content="CloseButtonForDialog">
                     <param name="id" value="25" />
                 </include>
-			</control>
+            </control>
             
             <control type="group">
                 <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
                 <posx>40</posx>
                 <posy>20</posy>
-                <include name="HelpFrameForDialog" />
+                <include content="HelpFrameForDialog" />
             
                 <control type="group">
                     <posx>20</posx>
@@ -287,6 +287,6 @@
                     </control>
                 </control>
             </control>
-		</control>
-	</controls>
+        </control>
+    </controls>
 </window>

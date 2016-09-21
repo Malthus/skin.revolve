@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="InvisibleLabel">
+    <include name="InvisibleLabel">
         <param name="id" default="0" />
 
         <definition>
@@ -12,7 +12,7 @@
         </definition>
     </include>
 
-	<include name="BackgroundForOutlineLabel">
+    <include name="BackgroundForOutlineLabel">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -100,9 +100,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OutlineLabel">
+    <include name="OutlineLabel">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -122,7 +122,7 @@
         <param name="label" default="-" />
         
         <definition>
-            <include name="BackgroundForOutlineLabel">
+            <include content="BackgroundForOutlineLabel">
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />
@@ -157,9 +157,9 @@
                 <label>$PARAM[label]</label>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="BackgroundForOutlineTextbox">
+    <include name="BackgroundForOutlineTextbox">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -230,9 +230,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OutlineTextbox">
+    <include name="OutlineTextbox">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -251,7 +251,7 @@
         <param name="label" default="-" />
         
         <definition>
-            <include name="BackgroundForOutlineTextbox">
+            <include content="BackgroundForOutlineTextbox">
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />
@@ -281,9 +281,9 @@
                 <label>$PARAM[label]</label>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="DialogWindow">
+    <include name="DialogWindow">
         <param name="height" default="220" />
     
         <definition>
@@ -318,9 +318,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="UpDownButton">
+    <include name="UpDownButton">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="downbuttonid" default="-" />
@@ -365,9 +365,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ColorLabel">
+    <include name="ColorLabel">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="color" default="-" />
@@ -401,9 +401,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="ColorMixer">
+    <include name="ColorMixer">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -643,7 +643,7 @@
                     </content>
                 </control>
 
-                <include name="ColorLabel">
+                <include content="ColorLabel">
                     <param name="posx" value="$PARAM[colorposx]" />
                     <param name="posy" value="0" />
                     <param name="color" value="$INFO[Container($PARAM[id]).ListItem.Label]" />
@@ -651,9 +651,9 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OrbitCircle">
+    <include name="OrbitCircle">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="size" default="60" />
@@ -691,5 +691,5 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="DefaultSettingsForSkinSettings">
+    <include name="DefaultSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.ResetSettings</onfocus>
             
-            <include name="BackgroundSettingsDefaultValues" />
-            <include name="ColorsSettingsForSkinSettings" />
-            <include name="HomeMenuItemsSettingsDefaultValues" />
-            <include name="CircleItemsSettingsForSkinSettings" />
-            <include name="ExitMenuItemsDefaultValues" />
-            <include name="MediaSettingsDefaultValues" />
-            <include name="MiscellaneousSettingsForSkinSettings" />
-            <include name="DebugSettingsDefaultValues" />
+            <include content="BackgroundSettingsDefaultValues" />
+            <include content="ColorsSettingsForSkinSettings" />
+            <include content="HomeMenuItemsSettingsDefaultValues" />
+            <include content="CircleItemsSettingsForSkinSettings" />
+            <include content="ExitMenuItemsDefaultValues" />
+            <include content="MediaSettingsDefaultValues" />
+            <include content="MiscellaneousSettingsForSkinSettings" />
+            <include content="DebugSettingsDefaultValues" />
 
             <onfocus>Skin.SetString(Revolve.Configuration,4.1.1)</onfocus>
         </definition>
-	</include>
-	
-	<include name="MigratedValues">
+    </include>
+    
+    <include name="MigratedValues">
         <definition>
-            <include name="ExitMenuItemsDefaultValues" />
+            <include content="ExitMenuItemsDefaultValues" />
 
-            <include name="BackgroundSettingsMigratedValues" />
-            <include name="HomeMenuItemsSettingsMigratedValues" />
-            <include name="MediaSettingsMigratedValues" />
-            <include name="DebugSettingsDefaultValues" />
+            <include content="BackgroundSettingsMigratedValues" />
+            <include content="HomeMenuItemsSettingsMigratedValues" />
+            <include content="MediaSettingsMigratedValues" />
+            <include content="DebugSettingsDefaultValues" />
             
             <onfocus>Skin.SetString(Revolve.Configuration,4.1.1)</onfocus>
         </definition>
-	</include>
-	
-	<include name="BackgroundSettingsDefaultValues">
+    </include>
+    
+    <include name="BackgroundSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(Background.Image.Active)</onfocus>
             <onfocus>Skin.Reset(Background.Image.Faded)</onfocus>
@@ -43,9 +43,9 @@
 
             <onfocus>Skin.SetString(Background.Animation.Level,2)</onfocus>
         </definition>
-	</include>
+    </include>
 
-	<include name="BackgroundSettingsMigratedValues">
+    <include name="BackgroundSettingsMigratedValues">
         <definition>
             <onfocus condition="Skin.HasSetting(Background.ImageActive)">Skin.SetBool(Background.Image.Active)</onfocus>
             <onfocus condition="!Skin.HasSetting(Background.ImageActive)">Skin.Reset(Background.Image.Active)</onfocus>
@@ -67,9 +67,9 @@
 
             <onfocus>Skin.SetString(Background.Animation.Level,$INFO[Skin.String(Background.AnimationLevel)])</onfocus>
         </definition>
-	</include>
-	
-	<include name="ColorsSettingsForSkinSettings">
+    </include>
+    
+    <include name="ColorsSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.Reset(Colors.PrimaryColorTheme)</onfocus>
             <onfocus>Skin.Reset(Colors.BackgroundColorTheme)</onfocus>
@@ -83,9 +83,9 @@
 
             <onfocus>Skin.Reset(Colors.ButtonAreaSeparate)</onfocus>
         </definition>
-	</include>
+    </include>
 
-	<include name="HomeMenuItemsSettingsDefaultValues">
+    <include name="HomeMenuItemsSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(PlayDiscOption.Active)</onfocus>
             <onfocus>Skin.Reset(PlayDiscOption.BackgroundImage)</onfocus>
@@ -155,18 +155,18 @@
             <onfocus>Skin.SetBool(ExitOption.Active)</onfocus>
             <onfocus>Skin.Reset(ExitOption.BackgroundImage)</onfocus>
         </definition>
-	</include>
+    </include>
 
-	<include name="HomeMenuItemsSettingsMigratedValues">
+    <include name="HomeMenuItemsSettingsMigratedValues">
         <definition>
             <onfocus condition="Skin.HasSetting(VideosOption.ImmutablePath)">Skin.Reset(VideosOption.ImmutablePath)</onfocus>
             <onfocus condition="!Skin.HasSetting(VideosOption.ImmutablePath)">Skin.SetBool(VideosOption.ImmutablePath)</onfocus>
             <onfocus condition="Skin.HasSetting(MusicOption.ImmutablePath)">Skin.Reset(MusicOption.ImmutablePath)</onfocus>
             <onfocus condition="!Skin.HasSetting(MusicOption.ImmutablePath)">Skin.SetBool(MusicOption.ImmutablePath)</onfocus>
         </definition>
-	</include>
+    </include>
     
-	<include name="CircleItemsSettingsForSkinSettings">
+    <include name="CircleItemsSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.Reset(CircleNextAired.Enable)</onfocus>
             <onfocus>Skin.Reset(CircleNextAired.NotInvisible)</onfocus>
@@ -181,9 +181,9 @@
             <onfocus>Skin.Reset(CircleAlbumOption.NotInvisible)</onfocus>
             <onfocus>Skin.Reset(CircleExitMenu.Enable)</onfocus>
         </definition>
-	</include>
+    </include>
 
-	<include name="ExitMenuItemsDefaultValues">
+    <include name="ExitMenuItemsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(ExitMenu.ShutdownOption.Active)</onfocus>
             <onfocus>Skin.SetBool(ExitMenu.ExitOption.Active)</onfocus>
@@ -197,9 +197,9 @@
             <onfocus>Skin.SetBool(ExitMenu.MasterModeOption.Active)</onfocus>
             <onfocus>Skin.Reset(ExitMenu.SettingsOption.Active)</onfocus>
         </definition>
-	</include>
+    </include>
 
-	<include name="MediaSettingsDefaultValues">
+    <include name="MediaSettingsDefaultValues">
         <definition>
             <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,script.cu.lrclyrics)</onfocus>
             <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(Media.MusicLyricsAddon.Script)</onfocus>
@@ -208,9 +208,9 @@
             <onfocus>Skin.SetBool(Media.PlayerSeekBar.Visible)</onfocus>
             <onfocus>Skin.Reset(Media.OverlayBackground.Visible)</onfocus>
         </definition>
-	</include>
+    </include>
 
-	<include name="MediaSettingsMigratedValues">
+    <include name="MediaSettingsMigratedValues">
         <definition>
             <onfocus condition="!String.IsEmpty(AddonLyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(AddonLyrics)])</onfocus>
             <onfocus condition="!String.IsEmpty(Music.LyricsAddon)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(Music.LyricsAddon)])</onfocus>
@@ -222,9 +222,9 @@
             <onfocus condition="Skin.HasSetting(Overlay.BackgroundVisible)">Skin.SetBool(Media.OverlayBackground.Visible)</onfocus>
             <onfocus condition="!Skin.HasSetting(Overlay.BackgroundVisible)">Skin.Reset(Media.OverlayBackground.Visible)</onfocus>
         </definition>
-	</include>
+    </include>
 
-	<include name="MiscellaneousSettingsForSkinSettings">
+    <include name="MiscellaneousSettingsForSkinSettings">
         <definition>
             <onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
             <onfocus>Skin.SetBool(SideMenu.Grouped)</onfocus>
@@ -244,14 +244,14 @@
             <onfocus>Skin.SetBool(Keyboard.AutoCompleteActive)</onfocus>
             <onfocus>Skin.SetBool(Settings.HelpVisible)</onfocus>
         </definition>
-	</include>
+    </include>
     
-	<include name="DebugSettingsDefaultValues">
+    <include name="DebugSettingsDefaultValues">
         <definition>
             <onfocus>Skin.Reset(Debug.Grid.Visible)</onfocus>
             <onfocus>Skin.Reset(Debug.Info.Visible)</onfocus>
             <onfocus>Skin.SetString(Debug.Info.AdditionalType,N)</onfocus>
             <onfocus>Skin.Reset(Debug.ListBorder.Visible)</onfocus>
         </definition>
-	</include>
+    </include>
 </includes>

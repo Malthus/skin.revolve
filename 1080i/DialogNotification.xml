@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="107">
-	<controls>
-		<control type="group">
+    <controls>
+        <control type="group">
             <posx>0</posx>
             <posy>80</posy>
 
             <control type="group">
                 <posx>PosXForIconForMessage</posx>
-				<posy>PosYForIconForMessage</posy>
+                <posy>PosYForIconForMessage</posy>
 
-                <include name="BackgroundAnimationForMessage" />
-                <include name="BorderedBackgroundForSmallCircleThumbnailIcon" />
+                <include content="BackgroundAnimationForMessage" />
+                <include content="BorderedBackgroundForSmallCircleThumbnailIcon" />
 
                 <control type="image" id="400">
                     <width>90</width>
@@ -27,7 +27,7 @@
                 <control type="group">
                     <description>Message Header Label</description>
                     
-                    <include name="BackgroundForOutlineLabel">
+                    <include content="BackgroundForOutlineLabel">
                         <param name="width" value="WidthForContentForMessage" />
                         <param name="height" value="40" />
                         <param name="font" value="MessageTitleFont" />
@@ -49,7 +49,7 @@
                     <description>Message Content Label</description>
                     <posy>40</posy>
                     
-                    <include name="BackgroundForOutlineLabel">
+                    <include content="BackgroundForOutlineLabel">
                         <param name="width" value="WidthForContentForMessage" />
                         <param name="height" value="40" />
                         <param name="font" value="MessageTextFont" />
@@ -66,7 +66,7 @@
                         <label>-</label>
                     </control>
                 </control>
-			</control>
-		</control>
-	</controls>
+            </control>
+        </control>
+    </controls>
 </window>

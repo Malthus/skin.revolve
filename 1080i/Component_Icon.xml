@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="VisibilityForSquareIcon">
+    <include name="VisibilityForSquareIcon">
         <definition>
             <visible>!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons)</visible>
         </definition>
-	</include>
-	
-	<include name="VisibilityForVerticalIcon">
+    </include>
+    
+    <include name="VisibilityForVerticalIcon">
         <definition>
             <visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)</visible>
         </definition>
-	</include>
+    </include>
 
-	<include name="VisibilityForHorizontalIcon">
+    <include name="VisibilityForHorizontalIcon">
         <definition>
             <visible>false</visible>
         </definition>
-	</include>
+    </include>
     
     <include name="VisibilityForBanner">
         <definition>
             <visible>!String.IsEmpty(ListItem.Art(banner))</visible>
         </definition>
     </include>
-	
+    
     <include name="VisibilityForNoBanner">
         <definition>
             <visible>String.IsEmpty(ListItem.Art(banner))</visible>
         </definition>
     </include>
-	
+    
     <include name="VisibilityForThumbnail">
         <definition>
             <visible>!String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Icon)</visible>
         </definition>
     </include>
-	
+    
     <include name="VisibilityForNoThumbnail">
         <definition>
             <visible>String.IsEmpty(ListItem.Art(thumb)) + String.IsEmpty(ListItem.Icon)</visible>
         </definition>
     </include>
-	
-	<include name="TinyCircleThumbnailIcon">
+    
+    <include name="TinyCircleThumbnailIcon">
         <definition>
-            <include name="BackgroundForTinyCircleThumbnailIcon" />
+            <include content="BackgroundForTinyCircleThumbnailIcon" />
 
             <control type="image">
                 <posx>3</posx>
@@ -55,9 +55,9 @@
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="BackgroundForTinyCircleThumbnailIcon">
+    </include>
+    
+    <include name="BackgroundForTinyCircleThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -67,14 +67,14 @@
                 <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="SmallCircleThumbnailIcon">
+    <include name="SmallCircleThumbnailIcon">
         <param name="icontexture" default="$VAR[ContentThumbnail]" />
     
         <definition>
-            <include name="BackgroundForSmallCircleThumbnailIcon" />
-		
+            <include content="BackgroundForSmallCircleThumbnailIcon" />
+        
             <control type="image">
                 <posx>3</posx>
                 <posy>3</posy>
@@ -84,13 +84,13 @@
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
     
     <include name="SmallCircleMuteBugIcon">
         <definition>
-            <include name="ShadowForSmallCircleThumbnailIcon" />
-            <include name="BackgroundForSmallCircleThumbnailIcon" />
-			
+            <include content="ShadowForSmallCircleThumbnailIcon" />
+            <include content="BackgroundForSmallCircleThumbnailIcon" />
+            
             <control type="image" id="901">
                 <description>Mute Image</description>
                 <posx>5</posx>
@@ -100,16 +100,16 @@
                 <texture>icons/volume-mute.png</texture>
             </control>
         </definition>
-	</include>
+    </include>
 
     <include name="SmallCirclePlayerStateIcon">
         <definition>
-            <include name="ShadowForSmallCircleThumbnailIcon" />
-            <include name="BackgroundForSmallCircleThumbnailIcon" />
+            <include content="ShadowForSmallCircleThumbnailIcon" />
+            <include content="BackgroundForSmallCircleThumbnailIcon" />
 
             <control type="group">
                 <visible>Player.Paused</visible>
-					
+                    
                 <control type="image">
                     <description>Player Direction Icon</description>
                     <posx>20</posx>
@@ -123,7 +123,7 @@
 
             <control type="group">
                 <visible>[Player.Forwarding | Player.Rewinding]</visible>
-					
+                    
                 <control type="image">
                     <posx>25</posx>
                     <posy>15</posy>
@@ -132,7 +132,7 @@
                     <texture colordiffuse="$VAR[BackgroundColor]">$VAR[PlayerDirectionIcon]</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
-					
+                    
                 <control type="label">
                     <posx>0</posx>
                     <posy>55</posy>
@@ -147,7 +147,7 @@
         </definition>
     </include>
 
-	<include name="BackgroundForSmallCircleThumbnailIcon">
+    <include name="BackgroundForSmallCircleThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -157,9 +157,9 @@
                 <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
             </control>
         </definition>
-	</include>
-	
-	<include name="BorderedBackgroundForSmallCircleThumbnailIcon">
+    </include>
+    
+    <include name="BorderedBackgroundForSmallCircleThumbnailIcon">
         <param name="backgroundcolor" default="$VAR[MainColor]" />
         <param name="bordercolor" default="$VAR[BackgroundColor]" />
     
@@ -183,9 +183,9 @@
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="ShadowForSmallCircleThumbnailIcon">
+    </include>
+    
+    <include name="ShadowForSmallCircleThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>-20</posx>
@@ -195,11 +195,11 @@
                 <texture background="true">elements/circle-shadow.png</texture>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="DefaultCircleThumbnailIcon">
+    <include name="DefaultCircleThumbnailIcon">
         <definition>
-            <include name="BackgroundForDefaultCircleThumbnailIcon" />
+            <include content="BackgroundForDefaultCircleThumbnailIcon" />
 
             <control type="image">
                 <posx>4</posx>
@@ -210,11 +210,11 @@
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="DefaultCircleSortLetterIcon">
+    </include>
+    
+    <include name="DefaultCircleSortLetterIcon">
         <definition>
-            <include name="BackgroundForDefaultCircleThumbnailIcon" />
+            <include content="BackgroundForDefaultCircleThumbnailIcon" />
 
             <control type="label">
                 <posx>0</posx>
@@ -227,11 +227,11 @@
                 <label>$VAR[ContentSortLetterLabel]</label>
             </control>
         </definition>
-	</include>
-	
-	<include name="DefaultCircleQuestionThumbnailIcon">
+    </include>
+    
+    <include name="DefaultCircleQuestionThumbnailIcon">
         <definition>
-            <include name="BackgroundForDefaultCircleThumbnailIcon" />
+            <include content="BackgroundForDefaultCircleThumbnailIcon" />
 
             <control type="label">
                 <include>VisibilityForNoThumbnail</include>
@@ -254,11 +254,11 @@
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="DefaultCircleSettingsThumbnailIcon">
+    </include>
+    
+    <include name="DefaultCircleSettingsThumbnailIcon">
         <definition>
-            <include name="BackgroundForDefaultCircleThumbnailIcon" />
+            <include content="BackgroundForDefaultCircleThumbnailIcon" />
 
             <control type="image">
                 <posx>4</posx>
@@ -278,13 +278,13 @@
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="DefaultCirclePlayerMediaIcon">
+    </include>
+    
+    <include name="DefaultCirclePlayerMediaIcon">
         <definition>
             <control type="group">
-                <include name="ShadowForDefaultCircleThumbnailIcon" />
-                <include name="BackgroundForDefaultCircleThumbnailIcon" />
+                <include content="ShadowForDefaultCircleThumbnailIcon" />
+                <include content="BackgroundForDefaultCircleThumbnailIcon" />
         
                 <control type="image">
                     <posx>4</posx>
@@ -298,11 +298,11 @@
         
             <control type="group">
                 <visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + Window.IsVisible(mutebug)</visible>
-                <include name="FadeMaskForDefaultCircleThumbnailIcon" />
+                <include content="FadeMaskForDefaultCircleThumbnailIcon" />
             
                 <control type="group">
                     <visible>Player.Paused</visible>
-					
+                    
                     <control type="image">
                         <posx>35</posx>
                         <posy>92</posy>
@@ -315,7 +315,7 @@
 
                 <control type="group">
                     <visible>[Player.Forwarding | Player.Rewinding]</visible>
-					
+                    
                     <control type="image">
                         <posx>32</posx>
                         <posy>82</posy>
@@ -324,7 +324,7 @@
                         <texture colordiffuse="$VAR[BackgroundColor]">$VAR[PlayerDirectionIcon]</texture>
                         <aspectratio>keep</aspectratio>
                     </control>
-					
+                    
                     <control type="label">
                         <posx>35</posx>
                         <posy>170</posy>
@@ -349,11 +349,11 @@
         
             <control type="group">
                 <visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + !Window.IsVisible(mutebug)</visible>
-                <include name="FadeMaskForDefaultCircleThumbnailIcon" />
+                <include content="FadeMaskForDefaultCircleThumbnailIcon" />
             
                 <control type="group">
                     <visible>Player.Paused</visible>
-					
+                    
                     <control type="image">
                         <posx>75</posx>
                         <posy>75</posy>
@@ -366,7 +366,7 @@
 
                 <control type="group">
                     <visible>[Player.Forwarding | Player.Rewinding]</visible>
-					
+                    
                     <control type="image">
                         <posx>75</posx>
                         <posy>55</posy>
@@ -375,7 +375,7 @@
                         <texture colordiffuse="$VAR[BackgroundColor]">$VAR[PlayerDirectionIcon]</texture>
                         <aspectratio>keep</aspectratio>
                     </control>
-					
+                    
                     <control type="label">
                         <posx>75</posx>
                         <posy>195</posy>
@@ -391,7 +391,7 @@
         
             <control type="group">
                 <visible>![Player.Forwarding | Player.Rewinding | Player.Paused] + Window.IsVisible(mutebug)</visible>
-                <include name="FadeMaskForDefaultCircleThumbnailIcon" />
+                <include content="FadeMaskForDefaultCircleThumbnailIcon" />
             
                 <control type="image" id="901">
                     <description>Mute Image</description>
@@ -403,9 +403,9 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="BackgroundForDefaultCircleThumbnailIcon">
+    <include name="BackgroundForDefaultCircleThumbnailIcon">
         <param name="backgroundcolor" default="$VAR[MainColor]" />
     
         <definition>
@@ -417,9 +417,9 @@
                 <texture colordiffuse="$PARAM[backgroundcolor]">elements/circle-mask.png</texture>
             </control>
         </definition>
-	</include>
-	
-	<include name="ShadowForDefaultCircleThumbnailIcon">
+    </include>
+    
+    <include name="ShadowForDefaultCircleThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>-30</posx>
@@ -429,9 +429,9 @@
                 <texture background="true">elements/circle-shadow.png</texture>
             </control>
         </definition>
-	</include>
-	
-	<include name="FadeMaskForDefaultCircleThumbnailIcon">
+    </include>
+    
+    <include name="FadeMaskForDefaultCircleThumbnailIcon">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         
@@ -444,22 +444,22 @@
                 <texture colordiffuse="$VAR[SelectColor]">elements/circle-mask.png</texture>
             </control>
         </definition>
-	</include>
-	
-	<include name="OverlayForDefaultCircleThumbnailIcon">
+    </include>
+    
+    <include name="OverlayForDefaultCircleThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>35</posx>
                 <posy>35</posy>
-                <include name="DefaultOverlayMediaFlag" />
+                <include content="DefaultOverlayMediaFlag" />
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="HugeCircleThumbnailIcon">
+    <include name="HugeCircleThumbnailIcon">
         <definition>
-            <include name="BackgroundForHugeCircleThumbnailIcon" />
-		
+            <include content="BackgroundForHugeCircleThumbnailIcon" />
+        
             <control type="image">
                 <posx>6</posx>
                 <posy>6</posy>
@@ -469,11 +469,11 @@
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="HugeCircleSortLetterIcon">
+    <include name="HugeCircleSortLetterIcon">
         <definition>
-            <include name="BackgroundForHugeCircleThumbnailIcon" />
+            <include content="BackgroundForHugeCircleThumbnailIcon" />
 
             <control type="label">
                 <posx>125</posx>
@@ -487,9 +487,9 @@
                 <label>$VAR[ContentSortLetterLabel]</label>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="BackgroundForHugeCircleThumbnailIcon">
+    <include name="BackgroundForHugeCircleThumbnailIcon">
         <definition>
             <control type="image">
                 <width>610</width>
@@ -497,9 +497,9 @@
                 <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ShadowForHugeCircleThumbnailIcon">
+    <include name="ShadowForHugeCircleThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>-70</posx>
@@ -509,19 +509,19 @@
                 <texture background="true">elements/circle-shadow.png</texture>
             </control>
         </definition>
-	</include>
-	
-	<include name="OverlayForHugeCircleThumbnailIcon">
+    </include>
+    
+    <include name="OverlayForHugeCircleThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>205</posx>
                 <posy>370</posy>
-                <include name="DefaultOverlayMediaFlag" />
+                <include content="DefaultOverlayMediaFlag" />
             </control>
         </definition>
-	</include>
-	
-	<include name="DefaultSquareThumbnailIcon">
+    </include>
+    
+    <include name="DefaultSquareThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx> 
@@ -540,9 +540,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="ShadowForDefaultSquareThumbnailIcon">
+    </include>
+    
+    <include name="ShadowForDefaultSquareThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>-30</posx>
@@ -553,9 +553,9 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OverlayForDefaultSquareThumbnailIcon">
+    <include name="OverlayForDefaultSquareThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>35</posx>
@@ -563,9 +563,9 @@
                 <include>DefaultOverlayMediaFlag</include>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="SquareThumbnailIcon">
+    <include name="SquareThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx> 
@@ -584,19 +584,19 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OverlayForSquareThumbnailIcon">
+    <include name="OverlayForSquareThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>81</posx>
                 <posy>122</posy>
-                <include name="DefaultOverlayMediaFlag" />
+                <include content="DefaultOverlayMediaFlag" />
             </control>
         </definition>
-	</include>
-	
-	<include name="DefaultVerticalThumbnailIcon">
+    </include>
+    
+    <include name="DefaultVerticalThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -615,9 +615,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ShadowForDefaultVerticalThumbnailIcon">
+    <include name="ShadowForDefaultVerticalThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>-30</posx>
@@ -628,9 +628,9 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OverlayForDefaultVerticalThumbnailIcon">
+    <include name="OverlayForDefaultVerticalThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>35</posx>
@@ -638,9 +638,9 @@
                 <include>DefaultOverlayMediaFlag</include>
             </control>
         </definition>
-	</include>
-	
-	<include name="VerticalThumbnailIcon">
+    </include>
+    
+    <include name="VerticalThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -659,9 +659,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OverlayForVerticalThumbnailIcon">
+    <include name="OverlayForVerticalThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>56</posx>
@@ -669,9 +669,9 @@
                 <include>DefaultOverlayMediaFlag</include>
             </control>
         </definition>
-	</include>
-	
-	<include name="HorizontalThumbnailIcon">
+    </include>
+    
+    <include name="HorizontalThumbnailIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -690,9 +690,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OverlayForHorizontalThumbnailIcon">
+    <include name="OverlayForHorizontalThumbnailIcon">
         <definition>
             <control type="group">
                 <posx>131</posx>
@@ -700,9 +700,9 @@
                 <include>DefaultOverlayMediaFlag</include>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="SmallBannerIcon">
+    <include name="SmallBannerIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -720,9 +720,9 @@
                 <aspectratio scalediffuse="false">stretch</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="FadeMaskForSmallBannerIcon">
+    <include name="FadeMaskForSmallBannerIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -732,9 +732,9 @@
                 <texture colordiffuse="$VAR[SelectColor]">elements/banner-mask.png</texture>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="DefaultBannerIcon">
+    <include name="DefaultBannerIcon">
         <definition>
             <control type="image">
                 <posx>0</posx>
@@ -753,8 +753,8 @@
             </control>
 
             <control type="group">
-                <include name="VisibilityForNoBanner" />
-                <include name="OutlineLabel">
+                <include content="VisibilityForNoBanner" />
+                <include content="OutlineLabel">
                     <param name="posx" value="22" />
                     <param name="posy" value="110" />
                     <param name="width" value="720" />
@@ -768,9 +768,9 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="FadeMaskForDefaultBannerIcon">
+    <include name="FadeMaskForDefaultBannerIcon">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
     
@@ -783,9 +783,9 @@
                 <texture colordiffuse="$VAR[SelectColor]">elements/banner-mask.png</texture>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ShadowForDefaultBannerIcon">
+    <include name="ShadowForDefaultBannerIcon">
         <definition>
             <control type="image">
                 <posx>-30</posx>
@@ -796,19 +796,19 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="OverlayForDefaultBannerIcon">
+    </include>
+    
+    <include name="OverlayForDefaultBannerIcon">
         <definition>
             <control type="group">
                 <posx>20</posx>
                 <posy>28</posy>
-                <include name="SmallOverlayMediaFlag" />
+                <include content="SmallOverlayMediaFlag" />
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="SquarePosterIcon">
+    <include name="SquarePosterIcon">
         <definition>
             <control type="image">
                 <width>528</width>
@@ -825,9 +825,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ShadowForSquarePosterIcon">
+    <include name="ShadowForSquarePosterIcon">
         <definition>
             <control type="image">
                 <posx>-30</posx>
@@ -838,9 +838,9 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="OverlayForSquarePosterIcon">
+    </include>
+    
+    <include name="OverlayForSquarePosterIcon">
         <definition>
             <control type="group">
                 <posx>164</posx>
@@ -848,9 +848,9 @@
                 <include>DefaultOverlayMediaFlag</include>
             </control>
         </definition>
-	</include>
-	
-	<include name="VerticalPosterIcon">
+    </include>
+    
+    <include name="VerticalPosterIcon">
         <definition>
             <control type="image">
                 <width>528</width>
@@ -868,9 +868,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ShadowForVerticalPosterIcon">
+    <include name="ShadowForVerticalPosterIcon">
         <definition>
             <control type="image">
                 <posx>-30</posx>
@@ -881,9 +881,9 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="OverlayForVerticalPosterIcon">
+    </include>
+    
+    <include name="OverlayForVerticalPosterIcon">
         <definition>
             <control type="group">
                 <posx>164</posx>
@@ -891,9 +891,9 @@
                 <include>DefaultOverlayMediaFlag</include>
             </control>
         </definition>
-	</include>
-	
-	<include name="SmallHorizontalPosterIcon">
+    </include>
+    
+    <include name="SmallHorizontalPosterIcon">
         <definition>
             <control type="image">
                 <width>528</width>
@@ -910,9 +910,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="HorizontalPosterIcon">
+    <include name="HorizontalPosterIcon">
         <definition>
             <control type="image">
                 <width>772</width>
@@ -929,9 +929,9 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="ShadowForHorizontalPosterIcon">
+    <include name="ShadowForHorizontalPosterIcon">
         <definition>
             <control type="group">
                 <posx>-30</posx>
@@ -942,9 +942,9 @@
                 <aspectratio>stretch</aspectratio>
             </control>
         </definition>
-	</include>
-	
-	<include name="OverlayForHorizontalPosterIcon">
+    </include>
+    
+    <include name="OverlayForHorizontalPosterIcon">
         <definition>
             <control type="group">
                 <posx>286</posx>
@@ -952,5 +952,5 @@
                 <include>DefaultOverlayMediaFlag</include>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

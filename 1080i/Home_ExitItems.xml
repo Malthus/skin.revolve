@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="HomeExitItems">
+    <include name="HomeExitItems">
         <definition>
             <control type="group">
                 <posx>-100</posx>
@@ -96,9 +96,9 @@
                         </control>
                     </focusedlayout>
                     
-                    <include name="OptionsForExitMenu" />
+                    <include content="OptionsForExitMenu" />
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

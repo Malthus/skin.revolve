@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1188">
-	<defaultcontrol always="true">40</defaultcontrol>
+    <defaultcontrol always="true">40</defaultcontrol>
     <menucontrol>9000</menucontrol>
     <onunload>RunScript(script.revolve.service,ClearProperties,List%02dOption,1188)</onunload>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForTenLinesDialog</posy>
-			<include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForTenLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="headerlabel" value="$INFO[Window.Property(DialogTitle)]" />
                 <param name="height" value="HeightForTenLinesDialog" />
                 <param name="headerlabel" value="$LOCALIZE[13406]" />
@@ -15,19 +15,19 @@
                 <param name="iconthumbnail" value="-" />
             </include>
 
-			<include name="DefaultIconForWindowForDialog">
+            <include content="DefaultIconForWindowForDialog">
                 <param name="visible" value="!String.IsEmpty(Container(40).ListItem.Icon)" />
                 <param name="iconlabel" value="-" />
                 <param name="iconthumbnail" value="$INFO[Container(40).ListItem.Icon]" />
             </include>
             
-            <include name="LabelForDialog">
+            <include content="LabelForDialog">
                 <param name="posy" value="80" />
                 <param name="textcolor" value="$VAR[TextColor]" />
                 <param name="label" value="$INFO[Window.Property(DialogMessage)]" />
             </include>
 
-			<control type="group">
+            <control type="group">
                 <control type="list" id="40">
                     <posx>560</posx>
                     <posy>120</posy>
@@ -45,7 +45,7 @@
                     <itemlayout height="40">
                         <include>NormalItemsForNormalListInDialog</include>
                     </itemlayout>
-				
+                
                     <focusedlayout height="40">
                         <control type="group">
                             <visible>Control.HasFocus(40)</visible>
@@ -222,36 +222,36 @@
                 </control>
                 
                 <control id="41" type="scrollbar">
-                    <include name="MarkupForScrollbarForDialog">
+                    <include content="MarkupForScrollbarForDialog">
                         <param name="posy" value="240" />
                         <param name="height" value="360" />
                     </include>
                     <onleft>40</onleft>
                     <onright>Noop</onright>
                 </control>
-			</control>
+            </control>
                 
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="400" />
                     <param name="height" value="80" />
                 </include>
-				<onup>40</onup>
-				<ondown>40</ondown>
-				<onright>40</onright>
+                <onup>40</onup>
+                <ondown>40</ondown>
+                <onright>40</onright>
 
-				<control type="button" id="20">
+                <control type="button" id="20">
                     <description>Ok Button</description>
-					<label>$LOCALIZE[186]</label>
-					<onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Container(40).ListItem.Property(Action)])</onclick>
-					<onclick>Close</onclick>
-				</control>
-				<control type="button" id="21">
+                    <label>$LOCALIZE[186]</label>
+                    <onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Container(40).ListItem.Property(Action)])</onclick>
+                    <onclick>Close</onclick>
+                </control>
+                <control type="button" id="21">
                     <description>Cancel Button</description>
-					<label>$LOCALIZE[222]</label>
-					<onclick>Close</onclick>
-				</control>
-			</control>
-		</control>
-	</controls>
+                    <label>$LOCALIZE[222]</label>
+                    <onclick>Close</onclick>
+                </control>
+            </control>
+        </control>
+    </controls>
 </window>

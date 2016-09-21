@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1103">
-	<defaultcontrol always="yes">450</defaultcontrol>
+    <defaultcontrol always="yes">450</defaultcontrol>
     <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyLists.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
     <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
@@ -8,23 +8,23 @@
     <onload>RunScript(script.revolve.service,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(SourceInfo)]%02dOption,MySubmenu%02dOption,1103)</onload>
     <onunload>RunScript(script.revolve.service,ClearProperties,MySubmenu%02dOption,1103)</onunload>
 
-	<controls>
-		<include name="GlobalBackground" />
+    <controls>
+        <include content="GlobalBackground" />
 
-		<control type="fixedlist" id="450">
-			<visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<focusposition>4</focusposition>
-			<defaultcontrol>1</defaultcontrol>
-			<onup>450</onup>
-			<ondown>450</ondown>
-			<onleft>9000</onleft>
-			<onright>Noop</onright>
+        <control type="fixedlist" id="450">
+            <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1920</width>
+            <height>1080</height>
+            <focusposition>4</focusposition>
+            <defaultcontrol>1</defaultcontrol>
+            <onup>450</onup>
+            <ondown>450</ondown>
+            <onleft>9000</onleft>
+            <onright>Noop</onright>
 
-            <include name="InvisibleVerticalListItemsForMenu" />
+            <include content="InvisibleVerticalListItemsForMenu" />
             
             <content>
                 <item id="1">
@@ -212,19 +212,19 @@
                     <label>-</label>
                     <property name="Label3">-</property>
                     <property name="BackgroundImage">-</property>
-					<onclick>Noop</onclick>
+                    <onclick>Noop</onclick>
                 </item>
             </content>
-		</control>
+        </control>
 
         <control type="group">
-            <include name="RevolveMenu">
+            <include content="RevolveMenu">
                 <param name="texture" value="circle/submenu.png" />
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
-		</control>
+        </control>
         
-		<include name="Overlay" />
-        <include name="BackButton" />
-	</controls>
+        <include content="Overlay" />
+        <include content="BackButton" />
+    </controls>
 </window>

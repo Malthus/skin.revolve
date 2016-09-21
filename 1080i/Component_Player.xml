@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="FrameForPlayer">
+    <include name="FrameForPlayer">
         <definition>
             <control type="image">
                 <width>88</width>
@@ -9,7 +9,7 @@
                 <aspectratio>keep</aspectratio>
             </control>
         </definition>
-	</include>
+    </include>
     
     <include name="PlayPauseButtonForPlayer">
         <param name="id" default="0" />
@@ -1035,9 +1035,9 @@
         </definition>
     </include>
 
-	<constant name="PosXForSideMenuCircleControlsForPlayer">120</constant>
-	<constant name="PosYForSideMenuCircleControlsForPlayer">490</constant>
-	<include name="CircleControlsForPlayer">
+    <constant name="PosXForSideMenuCircleControlsForPlayer">120</constant>
+    <constant name="PosYForSideMenuCircleControlsForPlayer">490</constant>
+    <include name="CircleControlsForPlayer">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="onup" default="9001" />
@@ -1066,7 +1066,7 @@
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
 
-                    <include name="PlayPauseButtonForPlayer">
+                    <include content="PlayPauseButtonForPlayer">
                         <param name="id" value="9403" />
                         <param name="posx" value="95" />
                         <param name="posy" value="0" />
@@ -1076,7 +1076,7 @@
                         <param name="onright" value="9405" />
                     </include>
 
-                    <include name="RewindButtonForPlayer">
+                    <include content="RewindButtonForPlayer">
                         <param name="id" value="9402" />
                         <param name="posx" value="28" />
                         <param name="posy" value="28" />
@@ -1086,7 +1086,7 @@
                         <param name="onright" value="9403" />
                     </include>
 
-                    <include name="FastForwardButtonForPlayer">
+                    <include content="FastForwardButtonForPlayer">
                         <param name="id" value="9405" />
                         <param name="posx" value="162" />
                         <param name="posy" value="28" />
@@ -1096,7 +1096,7 @@
                         <param name="onright" value="9406" />
                     </include>
 
-                    <include name="PreviousButtonForPlayer">
+                    <include content="PreviousButtonForPlayer">
                         <param name="id" value="9401" />
                         <param name="posx" value="0" />
                         <param name="posy" value="95" />
@@ -1106,7 +1106,7 @@
                         <param name="onright" value="9406" />
                     </include>
 
-                    <include name="NextButtonForPlayer">
+                    <include content="NextButtonForPlayer">
                         <param name="id" value="9406" />
                         <param name="posx" value="190" />
                         <param name="posy" value="95" />
@@ -1116,7 +1116,7 @@
                         <param name="onright" value="$PARAM[onright]" />
                     </include>
 
-                    <include name="RepeatButtonForPlayer">
+                    <include content="RepeatButtonForPlayer">
                         <param name="id" value="9407" />
                         <param name="posx" value="28" />
                         <param name="posy" value="162" />
@@ -1126,7 +1126,7 @@
                         <param name="onright" value="9404" />
                     </include>
 
-                    <include name="RandomButtonForPlayer">
+                    <include content="RandomButtonForPlayer">
                         <param name="id" value="9400" />
                         <param name="posx" value="162" />
                         <param name="posy" value="162" />
@@ -1136,7 +1136,7 @@
                         <param name="onright" value="9406" />
                     </include>
 
-                    <include name="StopButtonForPlayer">
+                    <include content="StopButtonForPlayer">
                         <param name="id" value="9404" />
                         <param name="posx" value="95" />
                         <param name="posy" value="190" />
@@ -1150,7 +1150,7 @@
                 <control type="group">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
                     
-                    <include name="PlayPauseButtonForPlayer">
+                    <include content="PlayPauseButtonForPlayer">
                         <param name="id" value="9423" />
                         <param name="posx" value="95" />
                         <param name="posy" value="0" />
@@ -1160,7 +1160,7 @@
                         <param name="onright" value="9425" />
                     </include>
 
-                    <include name="RewindButtonForPlayer">
+                    <include content="RewindButtonForPlayer">
                         <param name="id" value="9422" />
                         <param name="posx" value="28" />
                         <param name="posy" value="28" />
@@ -1170,7 +1170,7 @@
                         <param name="onright" value="9423" />
                     </include>
 
-                    <include name="FastForwardButtonForPlayer">
+                    <include content="FastForwardButtonForPlayer">
                         <param name="id" value="9425" />
                         <param name="posx" value="162" />
                         <param name="posy" value="28" />
@@ -1180,7 +1180,7 @@
                         <param name="onright" value="9426" />
                     </include>
 
-                    <include name="ChannelUpButtonForPlayer">
+                    <include content="ChannelUpButtonForPlayer">
                         <param name="id" value="9421" />
                         <param name="posx" value="0" />
                         <param name="posy" value="95" />
@@ -1190,7 +1190,7 @@
                         <param name="onright" value="9426" />
                     </include>
 
-                    <include name="ChannelDownButtonForPlayer">
+                    <include content="ChannelDownButtonForPlayer">
                         <param name="id" value="9426" />
                         <param name="posx" value="190" />
                         <param name="posy" value="95" />
@@ -1200,7 +1200,7 @@
                         <param name="onright" value="$PARAM[onright]" />
                     </include>
 
-                    <include name="RecordButtonForPlayer">
+                    <include content="RecordButtonForPlayer">
                         <param name="id" value="9427" />
                         <param name="posx" value="28" />
                         <param name="posy" value="162" />
@@ -1210,7 +1210,7 @@
                         <param name="onright" value="9424" />
                     </include>
 
-                    <include name="RadioRDSButtonForPlayer">
+                    <include content="RadioRDSButtonForPlayer">
                         <param name="id" value="9420" />
                         <param name="posx" value="162" />
                         <param name="posy" value="162" />
@@ -1220,7 +1220,7 @@
                         <param name="onright" value="9426" />
                     </include>
 
-                    <include name="StopButtonForPlayer">
+                    <include content="StopButtonForPlayer">
                         <param name="id" value="9424" />
                         <param name="posx" value="95" />
                         <param name="posy" value="190" />
@@ -1232,11 +1232,11 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<constant name="PosXForSideMenuButtonControlsForPlayer">20</constant>
-	<constant name="PosYForSideMenuButtonControlsForPlayer">660</constant>
-	<include name="ButtonControlsForPlayer">
+    <constant name="PosXForSideMenuButtonControlsForPlayer">20</constant>
+    <constant name="PosYForSideMenuButtonControlsForPlayer">660</constant>
+    <include name="ButtonControlsForPlayer">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="480" />
@@ -1266,7 +1266,7 @@
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
                     
-                    <include name="PreviousButtonForPlayer">
+                    <include content="PreviousButtonForPlayer">
                         <param name="id" value="9411" />
                         <param name="posx" value="20" />
                         <param name="posy" value="10" />
@@ -1276,7 +1276,7 @@
                         <param name="onright" value="9412" />
                     </include>
 
-                    <include name="PlayPauseButtonForPlayer">
+                    <include content="PlayPauseButtonForPlayer">
                         <param name="id" value="9412" />
                         <param name="posx" value="110" />
                         <param name="posy" value="10" />
@@ -1286,7 +1286,7 @@
                         <param name="onright" value="9413" />
                     </include>
                     
-                    <include name="StopButtonForPlayer">
+                    <include content="StopButtonForPlayer">
                         <param name="id" value="9413" />
                         <param name="posx" value="200" />
                         <param name="posy" value="10" />
@@ -1296,7 +1296,7 @@
                         <param name="onright" value="9414" />
                     </include>
 
-                    <include name="NextButtonForPlayer">
+                    <include content="NextButtonForPlayer">
                         <param name="id" value="9414" />
                         <param name="posx" value="290" />
                         <param name="posy" value="10" />
@@ -1306,7 +1306,7 @@
                         <param name="onright" value="9415" />
                     </include>
 
-                    <include name="MoreButtonForPlayer">
+                    <include content="MoreButtonForPlayer">
                         <param name="id" value="9415" />
                         <param name="posx" value="380" />
                         <param name="posy" value="10" />
@@ -1320,7 +1320,7 @@
                 <control type="group">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
                     
-                    <include name="ChannelUpButtonForPlayer">
+                    <include content="ChannelUpButtonForPlayer">
                         <param name="id" value="9431" />
                         <param name="posx" value="20" />
                         <param name="posy" value="10" />
@@ -1330,7 +1330,7 @@
                         <param name="onright" value="9432" />
                     </include>
 
-                    <include name="ChannelDownButtonForPlayer">
+                    <include content="ChannelDownButtonForPlayer">
                         <param name="id" value="9432" />
                         <param name="posx" value="110" />
                         <param name="posy" value="10" />
@@ -1340,7 +1340,7 @@
                         <param name="onright" value="9433" />
                     </include>
 
-                    <include name="PlayPauseButtonForPlayer">
+                    <include content="PlayPauseButtonForPlayer">
                         <param name="id" value="9433" />
                         <param name="posx" value="200" />
                         <param name="posy" value="10" />
@@ -1350,7 +1350,7 @@
                         <param name="onright" value="9434" />
                     </include>
                     
-                    <include name="RecordButtonForPlayer">
+                    <include content="RecordButtonForPlayer">
                         <param name="id" value="9434" />
                         <param name="posx" value="290" />
                         <param name="posy" value="10" />
@@ -1360,7 +1360,7 @@
                         <param name="onright" value="9435" />
                     </include>
                     
-                    <include name="MoreButtonForPlayer">
+                    <include content="MoreButtonForPlayer">
                         <param name="id" value="9435" />
                         <param name="posx" value="380" />
                         <param name="posy" value="10" />
@@ -1372,14 +1372,14 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="DescriptionForControlsForPlayer">
+    <include name="DescriptionForControlsForPlayer">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         
         <definition>
-            <include name="OutlineLabel">
+            <include content="OutlineLabel">
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="520" />
@@ -1392,5 +1392,5 @@
                 <param name="label" value="$INFO[System.CurrentControl]" />
             </include>
         </definition>
-	</include>
+    </include>
 </includes>

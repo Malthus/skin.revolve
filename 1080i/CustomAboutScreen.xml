@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1151">
-	<defaultcontrol always="true">99</defaultcontrol>
+    <defaultcontrol always="true">99</defaultcontrol>
     <onload>SetProperty(RevolveWindowTitle,$LOCALIZE[31147],1151)</onload>
     <onload>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/changelog.txt,RevolveWindowText,1151)</onload>
     <onunload>ClearProperty(RevolveWindowText,1151)</onunload>
 
-	<controls>
-		<include name="GlobalBackground" />
+    <controls>
+        <include content="GlobalBackground" />
 
-	    <control type="group">
-			<include name="BackgroundAnimationForSettings" />
+        <control type="group">
+            <include content="BackgroundAnimationForSettings" />
 
-			<control type="group">
-                <include name="WindowAnimationForSettings" />
-				<posx>700</posx>
-				<posy>100</posy>
+            <control type="group">
+                <include content="WindowAnimationForSettings" />
+                <posx>700</posx>
+                <posy>100</posy>
 
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="0" />
                     <param name="posy" value="0" />
                     <param name="width" value="1100" />
@@ -29,7 +29,7 @@
                     <param name="label" value="$INFO[Window.Property(RevolveWindowTitle)]" />
                 </include>
 
-                <include name="OutlineTextbox">
+                <include content="OutlineTextbox">
                     <param name="posx" value="0" />
                     <param name="posy" value="80" />
                     <param name="width" value="1100" />
@@ -52,10 +52,10 @@
                     <onleft>99</onleft>
                     <onright>Noop</onright>
                 </control>
-			</control>
+            </control>
 
             <control type="group">
-                <include name="ButtonLeftRingForSettings" />
+                <include content="ButtonLeftRingForSettings" />
 
                 <control type="grouplist" id="99">
                     <posx>40</posx>
@@ -95,29 +95,29 @@
                         <onfocus>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/LICENSE.txt,RevolveWindowText,1151)</onfocus>
                     </control>
                 </control>
-			</control>
-		</control>
+            </control>
+        </control>
 
-		<control type="group" id="9000">
-			<include name="SideMenu" />
+        <control type="group" id="9000">
+            <include content="SideMenu" />
 
-			<control type="grouplist" id="9001">
-                <include name="BeginOfButtonListForSideMenu">
+            <control type="grouplist" id="9001">
+                <include content="BeginOfButtonListForSideMenu">
                     <param name="onright" value="99" />
                 </include>
 
-                <include name="ViewGroupLabelForSideMenu" />
-                <include name="SettingsHelpButtonForSideMenu" />
+                <include content="ViewGroupLabelForSideMenu" />
+                <include content="SettingsHelpButtonForSideMenu" />
                 
-                <include name="EndOfButtonListForSideMenu" />
-			</control>
+                <include content="EndOfButtonListForSideMenu" />
+            </control>
 
-            <include name="PlayerControlsForSideMenu">
+            <include content="PlayerControlsForSideMenu">
                 <param name="onright" value="99" />
             </include>
-		</control>
+        </control>
         
-		<include name="Overlay" />
-        <include name="BackButton" />
-	</controls>
+        <include content="Overlay" />
+        <include content="BackButton" />
+    </controls>
 </window>

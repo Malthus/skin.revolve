@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="6">
-	<defaultcontrol always="true">52</defaultcontrol>
+    <defaultcontrol always="true">52</defaultcontrol>
     <menucontrol>9001</menucontrol>
-	<views>52,55,51,53,54,56,57,58,59</views>
+    <views>52,55,51,53,54,56,57,58,59</views>
 
-	<controls>
-		<include name="FullscreenDimensions" />
-		<include name="GlobalBackground" />
+    <controls>
+        <include content="FullscreenDimensions" />
+        <include content="GlobalBackground" />
 
-		<include name="CircleListView" />
-		<include name="DropListView" />
-     	<include name="LandscapeView" />
-		<include name="ThumbnailsView" />
-		<include name="RevolveListView" />
-		<include name="PanelsView" />
-		<include name="GalleryView" />
-		<include name="RotateListView" />
-		<include name="BannersView" />
+        <include content="CircleListView" />
+        <include content="DropListView" />
+         <include content="LandscapeView" />
+        <include content="ThumbnailsView" />
+        <include content="RevolveListView" />
+        <include content="PanelsView" />
+        <include content="GalleryView" />
+        <include content="RotateListView" />
+        <include content="BannersView" />
 
-		<control type="group" id="9000">
-			<include name="SideMenu" />
+        <control type="group" id="9000">
+            <include content="SideMenu" />
 
-			<control type="grouplist" id="9001">
-                <include name="BeginOfButtonListForSideMenu" />
+            <control type="grouplist" id="9001">
+                <include content="BeginOfButtonListForSideMenu" />
 
-                <include name="ViewGroupLabelForSideMenu" />
-				<include name="ViewTypeButtonForSideMenu" />
-				<include name="SortCriteriumButtonForSideMenu" />
-				<include name="SortOrderButtonForSideMenu" />
-                <include name="WatchedFilterButtonForSideMenu" />
-                <include name="NameForThumbnailsButtonForSideMenu" />
-                <include name="DescriptionForLandscapeButtonForSideMenu" />
-				<include name="LibrarySearchButtonForSideMenu" />
-				<include name="VideoFilterActivateButtonForSideMenu" />
-				<include name="VideoFilterShowButtonForSideMenu" />
+                <include content="ViewGroupLabelForSideMenu" />
+                <include content="ViewTypeButtonForSideMenu" />
+                <include content="SortCriteriumButtonForSideMenu" />
+                <include content="SortOrderButtonForSideMenu" />
+                <include content="WatchedFilterButtonForSideMenu" />
+                <include content="NameForThumbnailsButtonForSideMenu" />
+                <include content="DescriptionForLandscapeButtonForSideMenu" />
+                <include content="LibrarySearchButtonForSideMenu" />
+                <include content="VideoFilterActivateButtonForSideMenu" />
+                <include content="VideoFilterShowButtonForSideMenu" />
 
-                <include name="NavigationGroupLabelForSideMenu" />
-				<include name="VideoPlaylistButtonForSideMenu" />
-				<include name="GlobalSearchButtonForSideMenu" />
+                <include content="NavigationGroupLabelForSideMenu" />
+                <include content="VideoPlaylistButtonForSideMenu" />
+                <include content="GlobalSearchButtonForSideMenu" />
 
-                <include name="PlaylistLibraryGroupLabelForSideMenu" />
-				<include name="PartyModeButtonForSideMenu" />
-				<include name="UnlockSharesButtonForSideMenu" />
-				<include name="LibraryUpdateButtonForSideMenu" />
+                <include content="PlaylistLibraryGroupLabelForSideMenu" />
+                <include content="PartyModeButtonForSideMenu" />
+                <include content="UnlockSharesButtonForSideMenu" />
+                <include content="LibraryUpdateButtonForSideMenu" />
                 
-                <include name="EndOfButtonListForSideMenu" />
-			</control>
+                <include content="EndOfButtonListForSideMenu" />
+            </control>
             
-            <include name="PlayerControlsForSideMenu" />
-		</control>
+            <include content="PlayerControlsForSideMenu" />
+        </control>
         
-		<include name="Overlay" />
-        <include name="BackButton" />
-	</controls>
+        <include content="Overlay" />
+        <include content="BackButton" />
+    </controls>
 </window>

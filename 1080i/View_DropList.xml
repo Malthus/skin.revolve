@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="DropListView">
+    <include name="DropListView">
         <definition>
             <control type="fixedlist" id="51">
                 <viewtype label="31931">list</viewtype>
@@ -18,85 +18,85 @@
                 <pagecontrol>61</pagecontrol>
                 <scrolltime>200</scrolltime>
                 
-                <include name="NormalListItemForDropListView" />
-                <include name="FocusedListItemForDropListView" />
+                <include content="NormalListItemForDropListView" />
+                <include content="FocusedListItemForDropListView" />
             </control>
             
             <control type="group">
                 <visible>Control.IsVisible(51)</visible>
 
                 <control type="group">
-                    <include name="VisibilityForVerticalIcon" />
+                    <include content="VisibilityForVerticalIcon" />
                     <posx>120</posx>
                     <posy>150</posy>
-                    <include name="ShadowForVerticalPosterIcon" />
-                    <include name="VerticalPosterIcon" />
-                    <include name="OverlayForVerticalPosterIcon" />
+                    <include content="ShadowForVerticalPosterIcon" />
+                    <include content="VerticalPosterIcon" />
+                    <include content="OverlayForVerticalPosterIcon" />
                 </control>
 
                 <control type="group">
-                    <include name="VisibilityForSquareIcon" />
+                    <include content="VisibilityForSquareIcon" />
                     <posx>120</posx>
                     <posy>150</posy>
-                    <include name="ShadowForSquarePosterIcon" />
-                    <include name="SquarePosterIcon" />
-                    <include name="OverlayForSquarePosterIcon" />
+                    <include content="ShadowForSquarePosterIcon" />
+                    <include content="SquarePosterIcon" />
+                    <include content="OverlayForSquarePosterIcon" />
                 </control>
 
                 <control type="group">
-                    <include name="VisibilityForBanner" />
+                    <include content="VisibilityForBanner" />
 
                     <control type="group">
                         <posx>1080</posx>
                         <posy>200</posy>
-                        <include name="DefaultBannerIcon" />
+                        <include content="DefaultBannerIcon" />
                     </control>
                     
                     <control type="group">
                         <visible>ListItem.IsPlaying</visible>
-                        <include name="ContentInformationForDropListView">
+                        <include content="ContentInformationForDropListView">
                             <param name="textcolor" value="$VAR[HighlightColor]" />
                         </include>
                     </control>
                     <control type="group">
                         <visible>!ListItem.IsPlaying</visible>
-                        <include name="ContentInformationForDropListView" />
+                        <include content="ContentInformationForDropListView" />
                     </control>
                 </control>
 
                 <control type="group">
-                    <include name="VisibilityForNoBanner" />
+                    <include content="VisibilityForNoBanner" />
 
                     <control type="group">
                         <visible>ListItem.IsPlaying</visible>
-                        <include name="ContentCategoryForDropListView">
+                        <include content="ContentCategoryForDropListView">
                             <param name="textcolor" value="$VAR[HighlightColor]" />
                         </include>
-                        <include name="ContentNameForDropListView">
+                        <include content="ContentNameForDropListView">
                             <param name="textcolor" value="$VAR[HighlightColor]" />
                         </include>
-                        <include name="ContentDetailForDropListView">
+                        <include content="ContentDetailForDropListView">
                             <param name="textcolor" value="$VAR[HighlightColor]" />
                         </include>
                     </control>
 
                     <control type="group">
                         <visible>!ListItem.IsPlaying</visible>
-                        <include name="ContentCategoryForDropListView" />
-                        <include name="ContentNameForDropListView" />
-                        <include name="ContentDetailForDropListView" />
+                        <include content="ContentCategoryForDropListView" />
+                        <include content="ContentNameForDropListView" />
+                        <include content="ContentDetailForDropListView" />
                     </control>
                 </control>
 
-                <include name="ContentMediaFlagsForDropListView" />
-                <include name="ContentDescriptionForDropListView" />
+                <include content="ContentMediaFlagsForDropListView" />
+                <include content="ContentDescriptionForDropListView" />
                 
                 <control type="group">
-                    <include name="VisibilityOfSortLetterInView" />
+                    <include content="VisibilityOfSortLetterInView" />
                     <posx>770</posx>
                     <posy>149</posy>
-                    <include name="ShadowForDefaultCircleThumbnailIcon" />
-                    <include name="DefaultCircleSortLetterIcon" />
+                    <include content="ShadowForDefaultCircleThumbnailIcon" />
+                    <include content="DefaultCircleSortLetterIcon" />
                 </control>
             </control>
 
@@ -114,9 +114,9 @@
                 <onright>Noop</onright>
             </control>
         </definition>
-	</include>
-	
-	<include name="NormalListItemForDropListView">
+    </include>
+    
+    <include name="NormalListItemForDropListView">
         <definition>
             <itemlayout width="1080" height="250">
                 <control type="group">
@@ -126,16 +126,16 @@
                     <posy>-10</posy>
                     <width>310</width>
                     <height>310</height>
-                    <include name="ShadowForDefaultCircleThumbnailIcon" />
-                    <include name="DefaultCircleThumbnailIcon" />
-                    <include name="FadeMaskForDefaultCircleThumbnailIcon" />
-                    <include name="OverlayForDefaultCircleThumbnailIcon" />
+                    <include content="ShadowForDefaultCircleThumbnailIcon" />
+                    <include content="DefaultCircleThumbnailIcon" />
+                    <include content="FadeMaskForDefaultCircleThumbnailIcon" />
+                    <include content="OverlayForDefaultCircleThumbnailIcon" />
                 </control>
             </itemlayout>
         </definition>
-	</include>
-	
-	<include name="FocusedListItemForDropListView">
+    </include>
+    
+    <include name="FocusedListItemForDropListView">
         <definition>
             <focusedlayout width="1080" height="310">
                 <control type="group">
@@ -156,34 +156,34 @@
                         <control type="group">
                             <animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">focus</animation>
                             <animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">unfocus</animation>
-                            <include name="ShadowForDefaultCircleThumbnailIcon" />
+                            <include content="ShadowForDefaultCircleThumbnailIcon" />
                         </control>
 
-                        <include name="ShadowForDefaultCircleThumbnailIcon" />
-                        <include name="DefaultCircleThumbnailIcon" />
+                        <include content="ShadowForDefaultCircleThumbnailIcon" />
+                        <include content="DefaultCircleThumbnailIcon" />
 
                         <control type="group">
                             <animation effect="fade" center="auto" start="75" end="0" time="200" reversible="false">focus</animation>
                             <animation effect="fade" center="auto" start="0" end="75" time="200" reversible="false">unfocus</animation>
-                            <include name="FadeMaskForDefaultCircleThumbnailIcon" />
+                            <include content="FadeMaskForDefaultCircleThumbnailIcon" />
                         </control>
 
                         <control type="group">
                             <animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">focus</animation>
                             <animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">unfocus</animation>
-                            <include name="OverlayForDefaultCircleThumbnailIcon" />
+                            <include content="OverlayForDefaultCircleThumbnailIcon" />
                         </control>
                     </control>
                 </control>
             </focusedlayout>
         </definition>
-	</include>
-	
-	<include name="ContentCategoryForDropListView">
+    </include>
+    
+    <include name="ContentCategoryForDropListView">
         <param name="textcolor" default="$VAR[MainColor]" />
     
         <definition>
-            <include name="OutlineLabel">
+            <include content="OutlineLabel">
                 <param name="posx" value="1080" />
                 <param name="posy" value="235" />
                 <param name="width" value="760" />
@@ -197,13 +197,13 @@
                 <param name="label" value="$VAR[ContentCategoryLabel]" />
             </include>
         </definition>
-	</include>
-	
-	<include name="ContentDetailForDropListView">
+    </include>
+    
+    <include name="ContentDetailForDropListView">
         <param name="textcolor" default="$VAR[MainColor]" />
 
         <definition>
-            <include name="OutlineLabel">
+            <include content="OutlineLabel">
                 <param name="posx" value="1080" />
                 <param name="posy" value="312" />
                 <param name="width" value="760" />
@@ -217,13 +217,13 @@
                 <param name="label" value="$VAR[ContentDetailLabel]" />
             </include>
         </definition>
-	</include>
-	
-	<include name="ContentInformationForDropListView">
+    </include>
+    
+    <include name="ContentInformationForDropListView">
         <param name="textcolor" default="$VAR[MainColor]" />
     
         <definition>
-            <include name="OutlineLabel">
+            <include content="OutlineLabel">
                 <param name="posx" value="1080" />
                 <param name="posy" value="160" />
                 <param name="width" value="760" />
@@ -237,13 +237,13 @@
                 <param name="label" value="$VAR[ContentInformationLabel]" />
             </include>
         </definition>
-	</include>
-	
-	<include name="ContentNameForDropListView">
+    </include>
+    
+    <include name="ContentNameForDropListView">
         <param name="textcolor" default="$VAR[MainColor]" />
 
         <definition>
-            <include name="OutlineLabel">
+            <include content="OutlineLabel">
                 <param name="posx" value="1080" />
                 <param name="posy" value="260" />
                 <param name="width" value="760" />
@@ -258,22 +258,22 @@
                 <param name="label" value="$VAR[ContentNameLabel]" />
             </include>
         </definition>
-	</include>
+    </include>
 
-	<include name="ContentMediaFlagsForDropListView">
+    <include name="ContentMediaFlagsForDropListView">
         <definition>
-            <include name="HorizontalViewListOfContentMediaFlag">
+            <include content="HorizontalViewListOfContentMediaFlag">
                 <param name="posx" value="1080" />
                 <param name="posy" value="360" />
                 <param name="mediaflagcolor" value="$VAR[TextColor]" />
                 <param name="outlinecolor" value="$VAR[BackgroundColor]" />
             </include>
         </definition>
-	</include>
-	
-	<include name="ContentDescriptionForDropListView">
+    </include>
+    
+    <include name="ContentDescriptionForDropListView">
         <definition>
-            <include name="OutlineTextbox">
+            <include content="OutlineTextbox">
                 <param name="posx" value="1080" />
                 <param name="posy" value="420" />
                 <param name="width" value="760" />
@@ -286,5 +286,5 @@
                 <param name="label" value="$VAR[ContentDescription]" />
             </include>
         </definition>
-	</include>
+    </include>
 </includes>

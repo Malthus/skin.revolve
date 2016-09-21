@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="100">
-	<defaultcontrol always="true">10</defaultcontrol>
+    <defaultcontrol always="true">10</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForThreeLinesDialog</posy>
-			<include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForThreeLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForThreeLinesDialog" />
                 <param name="headerid" value="1" />
                 <param name="headerlabel" value="-" />
@@ -15,14 +15,14 @@
                 <param name="iconlabel" value="$LOCALIZE[31904]" />
             </include>
 
-            <include name="TextboxForDialog">
-				<param name="textboxid" value="9" />
-				<param name="scrollbarid" value="12" />
-				<param name="label" value="-" />
-			</include>
+            <include content="TextboxForDialog">
+                <param name="textboxid" value="9" />
+                <param name="scrollbarid" value="12" />
+                <param name="label" value="-" />
+            </include>
             
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="120" />
                     <param name="height" value="80" />
                 </include>
@@ -36,6 +36,6 @@
                     <label>$LOCALIZE[106]</label>
                 </control>
             </control>
-		</control>
-	</controls>
+        </control>
+    </controls>
 </window>

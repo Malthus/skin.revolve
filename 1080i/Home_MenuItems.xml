@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="HomeMenuItems">
+    <include name="HomeMenuItems">
         <definition>
             <content>
                 <item id="13">
@@ -27,102 +27,102 @@
                     <onclick condition="!Skin.HasSetting(FavouritesOption.CustomWindow) | !System.HasAddon(script.favourites)">ActivateWindow(favourites)</onclick>
                 </item>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="22" />
                     <param name="variable" value="Custom01Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="23" />
                     <param name="variable" value="Custom02Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="24" />
                     <param name="variable" value="Custom03Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="25" />
                     <param name="variable" value="Custom04Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="26" />
                     <param name="variable" value="Custom05Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="27" />
                     <param name="variable" value="Custom06Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="28" />
                     <param name="variable" value="Custom07Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="29" />
                     <param name="variable" value="Custom08Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="30" />
                     <param name="variable" value="Custom09Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="31" />
                     <param name="variable" value="Custom10Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="32" />
                     <param name="variable" value="Custom11Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="33" />
                     <param name="variable" value="Custom12Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="34" />
                     <param name="variable" value="Custom13Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="35" />
                     <param name="variable" value="Custom14Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="36" />
                     <param name="variable" value="Custom15Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="37" />
                     <param name="variable" value="Custom16Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="38" />
                     <param name="variable" value="Custom17Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="39" />
                     <param name="variable" value="Custom18Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="40" />
                     <param name="variable" value="Custom19Option" />
                 </include>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="41" />
                     <param name="variable" value="Custom20Option" />
                 </include>
@@ -204,7 +204,7 @@
                     <onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
                 </item>
                             
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="42" />
                     <param name="variable" value="CustomVideosOption" />
                 </include>
@@ -235,7 +235,7 @@
                     <onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
                 </item>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="43" />
                     <param name="variable" value="CustomMusicOption" />
                 </include>
@@ -265,7 +265,7 @@
                     <onclick>ActivateWindow(pictures)</onclick>
                 </item>
 
-                <include name="CustomOptionForHomeMenuItems">
+                <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="44" />
                     <param name="variable" value="CustomPicturesOption" />
                 </include>
@@ -366,11 +366,11 @@
                     <property name="BackgroundImage">$INFO[Skin.String(ExitOption.BackgroundImage)]</property>
                     <property name="FallbackImage">special://skin/backgrounds/exit.jpg</property>
                     <thumb>$INFO[Skin.String(ExitOption.BackgroundFolder)]</thumb>
-                    <onclick>ActivateWindow(1150)</onclick>				
+                    <onclick>ActivateWindow(1150)</onclick>                
                 </item>
             </content>
         </definition>
-	</include>
+    </include>
 
     <include name="CustomOptionForHomeMenuItems">
         <param name="id" default="0" />
@@ -387,5 +387,5 @@
                 <onclick>$INFO[Skin.String($PARAM[variable].Action)]</onclick>
             </item>
         </definition>
-	</include>
+    </include>
 </includes>

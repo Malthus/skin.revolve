@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="EPGTimelineViewForPVR">
+    <include name="EPGTimelineViewForPVR">
         <definition>
             <control type="group">
                 <visible>Control.IsVisible(10)</visible>
-                <include name="BackgroundAnimationForBottomRing" />
+                <include content="BackgroundAnimationForBottomRing" />
             </control>
         
             <control type="epggrid" id="10">
@@ -48,7 +48,7 @@
                 </rulerlayout>
                     
                 <channellayout height="80" width="480">
-                    <control type="image">					
+                    <control type="image">                    
                         <posx>20</posx>
                         <posy>0</posy>
                         <width>480</width>
@@ -87,7 +87,7 @@
                     <control type="group">
                         <posx>405</posx>
                         <posy>5</posy>
-                        <include name="TinyCircleThumbnailIcon" />
+                        <include content="TinyCircleThumbnailIcon" />
                     </control>
                 </channellayout>
                     
@@ -122,7 +122,7 @@
                     <control type="group">
                         <posx>405</posx>
                         <posy>5</posy>
-                        <include name="TinyCircleThumbnailIcon" />
+                        <include content="TinyCircleThumbnailIcon" />
                     </control>
                 </focusedchannellayout>
                     
@@ -194,16 +194,16 @@
                 <visible>Control.IsVisible(10)</visible>
                 <control type="group">
                     <control type="group">
-                        <include name="BottomRing" />
+                        <include content="BottomRing" />
                     </control>
 
-                    <include name="LabelsForBottomRing" />
+                    <include content="LabelsForBottomRing" />
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="EPGGuideNowViewForPVR">
+    <include name="EPGGuideNowViewForPVR">
         <definition>
             <control type="fixedlist" id="11">
                 <viewtype label="19030">list</viewtype>
@@ -222,17 +222,17 @@
                 <onleft>9000</onleft>
                 <onright>71</onright>
       
-                <include name="NormalListItemForDropListView" />
-                <include name="FocusedListItemForDropListView" />
+                <include content="NormalListItemForDropListView" />
+                <include content="FocusedListItemForDropListView" />
             </control>
                 
             <control type="group">
                 <visible>Control.IsVisible(11)</visible>
-                <include name="ContentCategoryForDropListView" />
-                <include name="ContentNameForDropListView" />
-                <include name="ContentDetailForDropListView" />
-                <include name="ContentMediaFlagsForDropListView" />
-                <include name="ContentDescriptionForDropListView" />
+                <include content="ContentCategoryForDropListView" />
+                <include content="ContentNameForDropListView" />
+                <include content="ContentDetailForDropListView" />
+                <include content="ContentMediaFlagsForDropListView" />
+                <include content="ContentDescriptionForDropListView" />
                 
                 <control type="scrollbar" id="71">
                     <visible allowhiddenfocus="true">true</visible>
@@ -247,12 +247,12 @@
                     <onright>Noop</onright>
                 </control>
 
-                <include name="PreviewForPVR" />
+                <include content="PreviewForPVR" />
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="EPGGuideNextViewForPVR">
+    <include name="EPGGuideNextViewForPVR">
         <definition>
             <control type="fixedlist" id="12">
                 <viewtype label="19031">list</viewtype>
@@ -271,17 +271,17 @@
                 <onleft>9000</onleft>
                 <onright>72</onright>
               
-                <include name="NormalListItemForDropListView" />
-                <include name="FocusedListItemForDropListView" />
+                <include content="NormalListItemForDropListView" />
+                <include content="FocusedListItemForDropListView" />
             </control>
                 
             <control type="group">
                 <visible>Control.IsVisible(12)</visible>
-                <include name="ContentCategoryForDropListView" />
-                <include name="ContentNameForDropListView" />
-                <include name="ContentDetailForDropListView" />
-                <include name="ContentMediaFlagsForDropListView" />
-                <include name="ContentDescriptionForDropListView" />
+                <include content="ContentCategoryForDropListView" />
+                <include content="ContentNameForDropListView" />
+                <include content="ContentDetailForDropListView" />
+                <include content="ContentMediaFlagsForDropListView" />
+                <include content="ContentDescriptionForDropListView" />
                 
                 <control type="scrollbar" id="72">
                     <visible allowhiddenfocus="true">true</visible>
@@ -296,12 +296,12 @@
                     <onright>Noop</onright>
                 </control>
             
-                <include name="PreviewForPVR" />
+                <include content="PreviewForPVR" />
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="EPGGuideChannelViewForPVR">  
+    <include name="EPGGuideChannelViewForPVR">  
         <definition>
             <control type="fixedlist" id="13">
                 <viewtype label="19029">list</viewtype>
@@ -320,17 +320,17 @@
                 <onleft>9000</onleft>
                 <onright>73</onright>
               
-                <include name="NormalListItemForDropListView" />
-                <include name="FocusedListItemForDropListView" />
+                <include content="NormalListItemForDropListView" />
+                <include content="FocusedListItemForDropListView" />
             </control>
 
             <control type="group">
                 <visible>Control.IsVisible(13)</visible>
-                <include name="ContentCategoryForDropListView" />
-                <include name="ContentNameForDropListView" />
-                <include name="ContentDetailForDropListView" />
-                <include name="ContentMediaFlagsForDropListView" />
-                <include name="ContentDescriptionForDropListView" />
+                <include content="ContentCategoryForDropListView" />
+                <include content="ContentNameForDropListView" />
+                <include content="ContentDetailForDropListView" />
+                <include content="ContentMediaFlagsForDropListView" />
+                <include content="ContentDescriptionForDropListView" />
                 
                 <control type="scrollbar" id="73">
                     <visible allowhiddenfocus="true">true</visible>
@@ -345,10 +345,10 @@
                     <onright>Noop</onright>
                 </control>
             
-                <include name="PreviewForPVR" />
+                <include content="PreviewForPVR" />
             </control>
         </definition>
-	</include>
+    </include>
 
     <constant name="PosXForChannelGroupLabelForPVR">1900</constant>
     <constant name="PosYForChannelGroupLabelForPVR">60</constant>
@@ -364,7 +364,7 @@
                 <control type="label" id="29">
                     <visible>false</visible>
                 </control>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="width" value="760" />
                     <param name="height" value="40" />
                     <param name="font" value="DialogTitleFont" />
@@ -390,7 +390,7 @@
                 <control type="label" id="30">
                     <visible>false</visible>
                 </control>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="width" value="760" />
                     <param name="height" value="40" />
                     <param name="font" value="DialogTitleFont" />
@@ -402,7 +402,7 @@
         </definition>
     </include>
     
-	<include name="PreviewForPVR">
+    <include name="PreviewForPVR">
         <definition>
             <control type="group">
                 <visible>Player.HasVideo + !Skin.HasSetting(Background.Video.Active)</visible>
@@ -433,5 +433,5 @@
                 </control>
             </control>
         </definition>
-	</include>
+    </include>
 </includes>

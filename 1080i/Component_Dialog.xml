@@ -205,12 +205,12 @@
         <param name="height" default="-" />
     
         <definition>
-			<posx>40</posx>
-			<posy>$PARAM[posy]</posy>
-			<width>480</width>
-			<height>$PARAM[height]</height>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
+            <posx>40</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>480</width>
+            <height>$PARAM[height]</height>
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
         </definition>
     </include>
@@ -222,13 +222,13 @@
         <param name="scrolltime" default="200" />
     
         <definition>
-			<posx>560</posx>
-			<posy>$PARAM[posy]</posy>
-			<width>1240</width>
-			<height>$PARAM[height]</height>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<pagecontrol>$PARAM[pagecontrol]</pagecontrol>
+            <posx>560</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>1240</width>
+            <height>$PARAM[height]</height>
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
+            <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
             <scrolltime>$PARAM[scrolltime]</scrolltime>
         </definition>
     </include>
@@ -239,19 +239,19 @@
         <param name="pagecontrol" default="-" />
     
         <definition>
-			<posx>560</posx>
-			<posy>$PARAM[posy]</posy>
-			<width>1240</width>
-			<height>$PARAM[height]</height>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<pagecontrol>$PARAM[pagecontrol]</pagecontrol>
+            <posx>560</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>1240</width>
+            <height>$PARAM[height]</height>
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
+            <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
             <scrolltime>200</scrolltime>
             <autoscroll delay="3000" time="1000" repeat="3000">Skin.HasSetting(Settings.DialogInfoAutoScroll)</autoscroll>
         </definition>
     </include>
 
-	<include name="MarkupForScrollbarForDialog">
+    <include name="MarkupForScrollbarForDialog">
         <param name="posx" default="1840" />
         <param name="posy" default="0" />
         <param name="height" default="0" />
@@ -267,7 +267,7 @@
             <orientation>vertical</orientation>
             <showonepage>false</showonepage>
         </definition>
-	</include>
+    </include>
 
     <include name="LabelForDialog">
         <param name="id" default="0" />
@@ -276,7 +276,7 @@
         <param name="label" default="-" />
     
         <definition>
-   			<control type="label" id="$PARAM[id]">
+               <control type="label" id="$PARAM[id]">
                 <posx>560</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>1240</width>
@@ -284,12 +284,12 @@
                 <font>DialogTextFont</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
                 <align>left</align>
-				<label>$PARAM[label]</label>
-			</control>
+                <label>$PARAM[label]</label>
+            </control>
         </definition>
     </include>
 
-	<include name="ScrollbarForDialog">
+    <include name="ScrollbarForDialog">
         <param name="id" default="0" />
         <param name="posx" default="1840" />
         <param name="posy" default="80" />
@@ -301,7 +301,7 @@
     
         <definition>
             <control id="$PARAM[id]" type="scrollbar">
-				<include name="MarkupForScrollbarForDialog">
+                <include content="MarkupForScrollbarForDialog">
                     <param name="posx" value="$PARAM[posx]" />
                     <param name="posy" value="$PARAM[posy]" />
                     <param name="height" value="$PARAM[height]" />
@@ -340,7 +340,7 @@
             
             <control type="scrollbar" id="$PARAM[scrollbarid]">
                 <visible>Control.IsVisible($PARAM[textboxid])</visible>
-                <include name="MarkupForScrollbarForDialog">
+                <include content="MarkupForScrollbarForDialog">
                     <param name="posy" value="$PARAM[posy]" />
                     <param name="height" value="$PARAM[height]" />
                 </include>
@@ -352,7 +352,7 @@
         </definition>
     </include>
 
-	<include name="ControlListForDialog">
+    <include name="ControlListForDialog">
         <param name="posy" default="80" />
         <param name="id" default="0" />
         <param name="height" default="220" />
@@ -364,7 +364,7 @@
         <param name="onright" default="Noop" />
         
         <definition>
-  			<control type="grouplist" id="$PARAM[id]">
+              <control type="grouplist" id="$PARAM[id]">
                 <posx>560</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>1240</width>
@@ -378,11 +378,11 @@
                 <ondown>$PARAM[ondown]</ondown>
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
-			</control>
+            </control>
         </definition>
     </include>
     
-	<include name="DefaultControlsForDialog">
+    <include name="DefaultControlsForDialog">
         <param name="buttonid" default="7" />
         <param name="radiobuttonid" default="8" />
         <param name="spincontrolexid" default="9" />
@@ -393,40 +393,40 @@
         <param name="labelid" default="14" />
         
         <definition>
-			<control type="button" id="$PARAM[buttonid]">
-				<width>1240</width>
-				<align>left</align>
-			</control>
+            <control type="button" id="$PARAM[buttonid]">
+                <width>1240</width>
+                <align>left</align>
+            </control>
 
-			<control type="radiobutton" id="$PARAM[radiobuttonid]">
-				<width>1240</width>
-				<align>left</align>
-			</control>
+            <control type="radiobutton" id="$PARAM[radiobuttonid]">
+                <width>1240</width>
+                <align>left</align>
+            </control>
 
-			<control type="spincontrolex" id="$PARAM[spincontrolexid]">
-				<width>1240</width>
-				<align>left</align>
-				<reverse>yes</reverse>
-			</control>
+            <control type="spincontrolex" id="$PARAM[spincontrolexid]">
+                <width>1240</width>
+                <align>left</align>
+                <reverse>yes</reverse>
+            </control>
 
-			<control type="image" id="$PARAM[imageid]">
-				<height>20</height>
-				<texture>-</texture>
-			</control>
+            <control type="image" id="$PARAM[imageid]">
+                <height>20</height>
+                <texture>-</texture>
+            </control>
 
-			<control type="edit" id="$PARAM[editid]">
+            <control type="edit" id="$PARAM[editid]">
                 <visible>$PARAM[editvisible]</visible>
-				<width>1240</width>
-				<align>left</align>
-			</control>
+                <width>1240</width>
+                <align>left</align>
+            </control>
 
-			<control type="sliderex" id="$PARAM[sliderexid]">
-				<width>1240</width>
-				<align>left</align>
-			</control>
+            <control type="sliderex" id="$PARAM[sliderexid]">
+                <width>1240</width>
+                <align>left</align>
+            </control>
 
             <control type="label" id="$PARAM[labelid]">
-				<width>1240</width>
+                <width>1240</width>
                 <textcolor>$VAR[SelectColor]</textcolor>
                 <label>-</label>
             </control>
@@ -442,17 +442,17 @@
             <control type="group">
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
-				<include>BackgroundForDefaultCircleThumbnailIcon</include>
+                <include>BackgroundForDefaultCircleThumbnailIcon</include>
 
-				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
-					<width>262</width>
-					<height>262</height>
-					<texture diffuse="elements/circle-mask.png" background="true">$PARAM[texture]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-			</control>
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>4</posy>
+                    <width>262</width>
+                    <height>262</height>
+                    <texture diffuse="elements/circle-mask.png" background="true">$PARAM[texture]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
         </definition>
     </include>
     
@@ -497,7 +497,7 @@
         </definition>
     </include>
     
-	<include name="ItemsForNormalListInDialog">
+    <include name="ItemsForNormalListInDialog">
         <param name="listid" default="0" />
     
         <definition>
@@ -516,9 +516,9 @@
                 </control>
             </focusedlayout>
         </definition>
-	</include>
+    </include>
 
-	<include name="NormalItemsForNormalListInDialog">
+    <include name="NormalItemsForNormalListInDialog">
         <definition>
             <control type="image">
                 <width>1240</width>
@@ -545,9 +545,9 @@
                 <info>ListItem.Label2</info>
             </control>
         </definition>
-	</include>
-	
-	<include name="FocusedItemsForNormalListInDialog">
+    </include>
+    
+    <include name="FocusedItemsForNormalListInDialog">
         <definition>
             <control type="image">
                 <width>1240</width>
@@ -571,9 +571,9 @@
                 <info>ListItem.Label2</info>
             </control>
         </definition>
-	</include>
-	
-	<include name="SelectedItemsForNormalListInDialog">
+    </include>
+    
+    <include name="SelectedItemsForNormalListInDialog">
         <definition>
             <control type="image">
                 <width>1240</width>
@@ -597,30 +597,30 @@
                 <info>ListItem.Label2</info>
             </control>
         </definition>
-	</include>
-	
-	<include name="ItemsForInfoListInDialog">
+    </include>
+    
+    <include name="ItemsForInfoListInDialog">
         <param name="listid" default="0" />
     
         <definition>
             <itemlayout height="40">
-                <include name="NormalItemsForInfoListInDialog" />
+                <include content="NormalItemsForInfoListInDialog" />
             </itemlayout>
                 
             <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include name="FocusedItemsForInfoListInDialog" />
+                    <include content="FocusedItemsForInfoListInDialog" />
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include name="NormalItemsForInfoListInDialog" />
+                    <include content="NormalItemsForInfoListInDialog" />
                 </control>
             </focusedlayout>
         </definition>
-	</include>
+    </include>
 
-	<include name="NormalItemsForInfoListInDialog">
+    <include name="NormalItemsForInfoListInDialog">
         <definition>
             <control type="label">
                 <posx>0</posx>
@@ -641,9 +641,9 @@
                 <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
             </control>
         </definition>
-	</include>
-	
-	<include name="FocusedItemsForInfoListInDialog">
+    </include>
+    
+    <include name="FocusedItemsForInfoListInDialog">
         <definition>
             <control type="image">
                 <posx>300</posx>
@@ -671,34 +671,34 @@
                 <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="HalfListFrameForDialog">
+    <include name="HalfListFrameForDialog">
         <param name="posx" default="560" />
         <param name="posy" default="80" />
         <param name="height" default="-" />
         <param name="bordercolor" default="$VAR[TextColor]" />
     
         <definition>
-			<control type="image">
-				<posx>$PARAM[posx]</posx>
-				<posy>$PARAM[posy]</posy>
-				<width>600</width>
-				<height>$PARAM[height]</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="$PARAM[bordercolor]" border="20" >controls/rectangle-clear.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
+            <control type="image">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>600</width>
+                <height>$PARAM[height]</height>
+                <fadetime>100</fadetime>
+                <texture colordiffuse="$PARAM[bordercolor]" border="20" >controls/rectangle-clear.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
         </definition>
-	</include>    
-	
-	<include name="DefaultItemsForHalfListInDialog">
+    </include>    
+    
+    <include name="DefaultItemsForHalfListInDialog">
         <param name="listid" default="0" />
         <param name="texture" default="$INFO[ListItem.Icon]" />
     
         <definition>
             <itemlayout height="40">
-                <include name="NormalDefaultItemsForHalfListInDialog">
+                <include content="NormalDefaultItemsForHalfListInDialog">
                     <param name="texture" value="$PARAM[texture]" />
                 </include>
             </itemlayout>
@@ -706,21 +706,21 @@
             <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include name="FocusedDefaultItemsForHalfListInDialog">
+                    <include content="FocusedDefaultItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include name="SelectedDefaultItemsForHalfListInDialog">
+                    <include content="SelectedDefaultItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
             </focusedlayout>
         </definition>
-	</include>
+    </include>
 
-	<include name="NormalDefaultItemsForHalfListInDialog">
+    <include name="NormalDefaultItemsForHalfListInDialog">
         <definition>
             <control type="image">
                 <width>588</width>
@@ -736,9 +736,9 @@
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="FocusedDefaultItemsForHalfListInDialog">
+    <include name="FocusedDefaultItemsForHalfListInDialog">
         <definition>
             <control type="image">
                 <width>588</width>
@@ -754,9 +754,9 @@
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="SelectedDefaultItemsForHalfListInDialog">
+    <include name="SelectedDefaultItemsForHalfListInDialog">
         <definition>
             <control type="image">
                 <width>588</width>
@@ -772,15 +772,15 @@
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="ThumbnailItemsForHalfListInDialog">
+    <include name="ThumbnailItemsForHalfListInDialog">
         <param name="listid" default="0" />
         <param name="texture" default="$INFO[ListItem.Icon]" />
     
         <definition>
             <itemlayout height="100">
-                <include name="NormalThumbnailItemsForHalfListInDialog">
+                <include content="NormalThumbnailItemsForHalfListInDialog">
                     <param name="texture" value="$PARAM[texture]" />
                 </include>
             </itemlayout>
@@ -788,28 +788,28 @@
             <focusedlayout height="100">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include name="FocusedThumbnailItemsForHalfListInDialog">
+                    <include content="FocusedThumbnailItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include name="SelectedThumbnailItemsForHalfListInDialog">
+                    <include content="SelectedThumbnailItemsForHalfListInDialog">
                         <param name="texture" value="$PARAM[texture]" />
                     </include>
                 </control>
             </focusedlayout>
         </definition>
-	</include>
+    </include>
 
-	<include name="NormalThumbnailItemsForHalfListInDialog">
+    <include name="NormalThumbnailItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
         
         <definition>
             <control type="group">
                 <posx>20</posx>
                 <posy>5</posy>
-                <include name="SmallCircleThumbnailIcon">
+                <include content="SmallCircleThumbnailIcon">
                     <param name="icontexture" value="$PARAM[texture]" />
                 </include>
             </control>
@@ -834,9 +834,9 @@
                 <label>$INFO[ListItem.Label2]</label>
             </control>
         </definition>
-	</include>
-	
-	<include name="FocusedThumbnailItemsForHalfListInDialog">
+    </include>
+    
+    <include name="FocusedThumbnailItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
     
         <definition>
@@ -849,7 +849,7 @@
             <control type="group">
                 <posx>20</posx>
                 <posy>5</posy>
-                <include name="SmallCircleThumbnailIcon">
+                <include content="SmallCircleThumbnailIcon">
                     <param name="icontexture" value="$PARAM[texture]" />
                 </include>
             </control>
@@ -874,9 +874,9 @@
                 <label>$INFO[ListItem.Label2]</label>
             </control>
         </definition>
-	</include>
+    </include>
     
-	<include name="SelectedThumbnailItemsForHalfListInDialog">
+    <include name="SelectedThumbnailItemsForHalfListInDialog">
         <param name="texture" default="$INFO[ListItem.Icon]" />
 
         <definition>
@@ -889,7 +889,7 @@
             <control type="group">
                 <posx>20</posx>
                 <posy>5</posy>
-                <include name="SmallCircleThumbnailIcon">
+                <include content="SmallCircleThumbnailIcon">
                     <param name="icontexture" value="$PARAM[texture]" />
                 </include>
             </control>
@@ -914,62 +914,62 @@
                 <label>$INFO[ListItem.Label2]</label>
             </control>
         </definition>
-	</include>    
+    </include>    
 
-	<include name="TitledFullListFrameForDialog">
+    <include name="TitledFullListFrameForDialog">
         <definition>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>600</width>
-				<height>800</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="$VAR[MainColor]" border="30" fallback="white.png">elements/poster-background.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>4</posx>
-				<posy>58</posy>
-				<width>592</width>
-				<height>704</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="$VAR[BackgroundColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>600</width>
+                <height>800</height>
+                <fadetime>100</fadetime>
+                <texture colordiffuse="$VAR[MainColor]" border="30" fallback="white.png">elements/poster-background.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <posx>4</posx>
+                <posy>58</posy>
+                <width>592</width>
+                <height>704</height>
+                <fadetime>100</fadetime>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
         </definition>
-	</include>
-	
-	<include name="TitledHalfListFrameForDialog">
+    </include>
+    
+    <include name="TitledHalfListFrameForDialog">
         <definition>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>600</width>
-				<height>390</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="$VAR[MainColor]" border="30" fallback="white.png">elements/poster-background.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>-1</posx>
-				<posy>351</posy>
-				<width>602</width>
-				<height>40</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="$VAR[MainColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>4</posx>
-				<posy>58</posy>
-				<width>592</width>
-				<height>324</height>
-				<fadetime>100</fadetime>
-				<texture colordiffuse="$VAR[BackgroundColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>600</width>
+                <height>390</height>
+                <fadetime>100</fadetime>
+                <texture colordiffuse="$VAR[MainColor]" border="30" fallback="white.png">elements/poster-background.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <posx>-1</posx>
+                <posy>351</posy>
+                <width>602</width>
+                <height>40</height>
+                <fadetime>100</fadetime>
+                <texture colordiffuse="$VAR[MainColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <posx>4</posx>
+                <posy>58</posy>
+                <width>592</width>
+                <height>324</height>
+                <fadetime>100</fadetime>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20" fallback="white.png">controls/rectangle-fill.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
         </definition>
-	</include>
+    </include>
     
     <include name="ThumbnailElementForListForDialog">
         <param name="listid" default="0" />
@@ -991,7 +991,7 @@
                         <texture diffuse="elements/poster-mask.png">$PARAM[texture]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="posx" value="10" />
                         <param name="posy" value="150" />
                         <param name="width" value="290" />
@@ -1004,7 +1004,7 @@
                         <param name="scroll" value="false" />
                         <param name="label" value="$PARAM[label]" />
                     </include>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="posx" value="10" />
                         <param name="posy" value="170" />
                         <param name="width" value="290" />
@@ -1039,7 +1039,7 @@
                         <texture diffuse="elements/poster-mask.png">$PARAM[texture]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="posx" value="10" />
                         <param name="posy" value="150" />
                         <param name="width" value="290" />
@@ -1052,7 +1052,7 @@
                         <param name="scroll" value="true" />
                         <param name="label" value="$PARAM[label]" />
                     </include>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="posx" value="10" />
                         <param name="posy" value="170" />
                         <param name="width" value="290" />
@@ -1078,7 +1078,7 @@
                         <texture diffuse="elements/poster-mask.png">$PARAM[texture]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="posx" value="10" />
                         <param name="posy" value="150" />
                         <param name="width" value="290" />
@@ -1091,7 +1091,7 @@
                         <param name="scroll" value="false" />
                         <param name="label" value="$PARAM[label]" />
                     </include>
-                    <include name="OutlineLabel">
+                    <include content="OutlineLabel">
                         <param name="posx" value="10" />
                         <param name="posy" value="170" />
                         <param name="width" value="290" />
@@ -1151,7 +1151,7 @@
     <constant name="PosYForKeyboardDialog">270</constant>
     <constant name="HeightForKeyboardDialog">540</constant>
 
-	<include name="SmallIconForWindowForDialog">
+    <include name="SmallIconForWindowForDialog">
         <param name="visible" default="true" />
         <param name="iconthumbnail" default="-" />
         <param name="icontexture" default="-" />
@@ -1162,7 +1162,7 @@
                 <visible>$PARAM[visible]</visible>
                 <posx>PosXForSmallIconFrameForDialog</posx>
                 <posy>PosYForSmallIconFrameForDialog</posy>
-                <include name="BackgroundForSmallCircleThumbnailIcon" />
+                <include content="BackgroundForSmallCircleThumbnailIcon" />
                 
                 <control type="label">
                     <posx>15</posx>
@@ -1196,7 +1196,7 @@
         </definition>
     </include>
 
-	<include name="DefaultIconForWindowForDialog">
+    <include name="DefaultIconForWindowForDialog">
         <param name="visible" default="true" />
         <param name="iconthumbnail" default="-" />
         <param name="icontexture" default="-" />
@@ -1208,7 +1208,7 @@
                 <visible>$PARAM[visible]</visible>
                 <posx>PosXForDefaultIconFrameForDialog</posx>
                 <posy>PosYForDefaultIconFrameForDialog</posy>
-                <include name="BackgroundForDefaultCircleThumbnailIcon" />
+                <include content="BackgroundForDefaultCircleThumbnailIcon" />
 
                 <control type="label">
                     <posx>35</posx>
@@ -1243,7 +1243,7 @@
                     <visible>$PARAM[iconoverlayvisible]</visible>
                     <posx>35</posx>
                     <posy>35</posy>
-                    <include name="DefaultOverlayMediaFlag" />
+                    <include content="DefaultOverlayMediaFlag" />
                 </control>
             </control>
         </definition>
@@ -1264,7 +1264,7 @@
         </definition>
     </include>
 
-	<include name="WindowForDialog">
+    <include name="WindowForDialog">
         <param name="visible" default="true" />
         <param name="height" default="220" />
         <param name="headerid" default="0" />
@@ -1282,7 +1282,7 @@
             <control type="group">
                 <visible>$PARAM[visible]</visible>
 
-                <include name="DialogWindow">
+                <include content="DialogWindow">
                     <param name="height" value="$PARAM[height]" />
                 </include>
 
@@ -1290,7 +1290,7 @@
                     <visible>$PARAM[animate] + Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
                     <animation effect="fade" delay="0" start="99" end="100" time="200">WindowOpen</animation>
                     <animation effect="fade" start="100" end="99" time="200">WindowClose</animation>
-                    <include name="MarkupForButtonAreaForWindowForDialog">
+                    <include content="MarkupForButtonAreaForWindowForDialog">
                         <param name="height" value="$PARAM[height]" />
                         <param name="color" value="$VAR[SelectColor]" />
                     </include>
@@ -1300,7 +1300,7 @@
                     <visible>$PARAM[animate] + !Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
                     <animation effect="fade" delay="0" start="99" end="100" time="200">WindowOpen</animation>
                     <animation effect="fade" start="100" end="99" time="200">WindowClose</animation>
-                    <include name="MarkupForButtonAreaForWindowForDialog">
+                    <include content="MarkupForButtonAreaForWindowForDialog">
                         <param name="height" value="$PARAM[height]" />
                         <param name="color" value="$VAR[BackgroundColor]" />
                     </include>
@@ -1308,7 +1308,7 @@
                 
                 <control type="image">
                     <visible>!$PARAM[animate] + Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
-                    <include name="MarkupForButtonAreaForWindowForDialog">
+                    <include content="MarkupForButtonAreaForWindowForDialog">
                         <param name="height" value="$PARAM[height]" />
                         <param name="color" value="$VAR[SelectColor]" />
                     </include>
@@ -1316,7 +1316,7 @@
                 
                 <control type="image">
                     <visible>!$PARAM[animate] + !Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
-                    <include name="MarkupForButtonAreaForWindowForDialog">
+                    <include content="MarkupForButtonAreaForWindowForDialog">
                         <param name="height" value="$PARAM[height]" />
                         <param name="color" value="$VAR[BackgroundColor]" />
                     </include>
@@ -1327,7 +1327,7 @@
                     
                     <control type="group">
                         <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),0)</visible>
-                        <include name="OrbitCircle">
+                        <include content="OrbitCircle">
                             <param name="posx" value="CenterXForSmallIconFrameForDialog" />
                             <param name="posy" value="CenterYForSmallIconFrameForDialog" />
                             <param name="size" value="20" />
@@ -1338,7 +1338,7 @@
                     
                     <control type="group">
                         <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),3)</visible>
-                        <include name="OrbitCircle">
+                        <include content="OrbitCircle">
                             <param name="posx" value="CenterXForSmallIconFrameForDialog" />
                             <param name="posy" value="CenterYForSmallIconFrameForDialog" />
                             <param name="size" value="40" />
@@ -1347,7 +1347,7 @@
                             <param name="direction" value="false" />
                         </include>
 
-                        <include name="OrbitCircle">
+                        <include content="OrbitCircle">
                             <param name="posx" value="CenterXForSmallIconFrameForDialog" />
                             <param name="posy" value="CenterYForSmallIconFrameForDialog" />
                             <param name="size" value="10" />
@@ -1363,7 +1363,7 @@
                     
                     <control type="group">
                         <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),0)</visible>
-                        <include name="OrbitCircle">
+                        <include content="OrbitCircle">
                             <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
                             <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
                             <param name="size" value="20" />
@@ -1374,7 +1374,7 @@
                     
                     <control type="group">
                         <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),3)</visible>
-                        <include name="OrbitCircle">
+                        <include content="OrbitCircle">
                             <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
                             <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
                             <param name="size" value="30" />
@@ -1383,7 +1383,7 @@
                             <param name="direction" value="false" />
                         </include>
 
-                        <include name="OrbitCircle">
+                        <include content="OrbitCircle">
                             <param name="posx" value="CenterXForDefaultIconFrameForDialog" />
                             <param name="posy" value="CenterYForDefaultIconFrameForDialog" />
                             <param name="size" value="15" />
@@ -1404,21 +1404,21 @@
                     <label>$PARAM[headerlabel]</label>
                 </control>
                 
-                <include name="SmallIconForWindowForDialog">
+                <include content="SmallIconForWindowForDialog">
                     <param name="visible" value="$PARAM[iconsmallvisible]" />
                     <param name="iconthumbnail" value="$PARAM[iconthumbnail]" />
                     <param name="icontexture" value="$PARAM[icontexture]" />
                     <param name="iconlabel" value="$PARAM[iconlabel]" />
                 </include>
 
-                <include name="DefaultIconForWindowForDialog">
+                <include content="DefaultIconForWindowForDialog">
                     <param name="visible" value="$PARAM[icondefaultvisible]" />
                     <param name="iconthumbnail" value="$PARAM[iconthumbnail]" />
                     <param name="icontexture" value="$PARAM[icontexture]" />
                     <param name="iconlabel" value="$PARAM[iconlabel]" />
                     <param name="iconoverlayvisible" value="$PARAM[iconoverlayvisible]" />
                 </include>
-			</control>
+            </control>
         </definition>
-	</include>
+    </include>
 </includes>

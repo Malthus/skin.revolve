@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1185">
-	<defaultcontrol>248</defaultcontrol>
+    <defaultcontrol>248</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForTenLinesDialog</posy>
-            <include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForTenLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForTenLinesDialog" />
                 <param name="headerid" value="2" />
                 <param name="headerlabel" value="$LOCALIZE[31484]" />
@@ -17,7 +17,7 @@
                 <posx>560</posx>
                 <posy>80</posy>
                 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="200" />
                     <param name="posx" value="0" />
                     <param name="posy" value="0" />
@@ -28,7 +28,7 @@
                     <param name="onright" value="201" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="201" />
                     <param name="posx" value="100" />
                     <param name="posy" value="0" />
@@ -39,7 +39,7 @@
                     <param name="onright" value="202" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="202" />
                     <param name="posx" value="200" />
                     <param name="posy" value="0" />
@@ -50,7 +50,7 @@
                     <param name="onright" value="203" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="203" />
                     <param name="posx" value="300" />
                     <param name="posy" value="0" />
@@ -61,7 +61,7 @@
                     <param name="onright" value="204" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="204" />
                     <param name="posx" value="400" />
                     <param name="posy" value="0" />
@@ -72,7 +72,7 @@
                     <param name="onright" value="205" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="205" />
                     <param name="posx" value="500" />
                     <param name="posy" value="0" />
@@ -83,7 +83,7 @@
                     <param name="onright" value="206" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="206" />
                     <param name="posx" value="600" />
                     <param name="posy" value="0" />
@@ -94,7 +94,7 @@
                     <param name="onright" value="207" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="207" />
                     <param name="posx" value="700" />
                     <param name="posy" value="0" />
@@ -105,7 +105,7 @@
                     <param name="onright" value="208" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="208" />
                     <param name="posx" value="800" />
                     <param name="posy" value="0" />
@@ -116,7 +116,7 @@
                     <param name="onright" value="209" />
                 </include>
                 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="209" />
                     <param name="posx" value="900" />
                     <param name="posy" value="0" />
@@ -127,7 +127,7 @@
                     <param name="onright" value="210" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="210" />
                     <param name="posx" value="1000" />
                     <param name="posy" value="0" />
@@ -138,7 +138,7 @@
                     <param name="onright" value="211" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="211" />
                     <param name="posx" value="1100" />
                     <param name="posy" value="0" />
@@ -149,7 +149,7 @@
                     <param name="onright" value="Noop" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="212" />
                     <param name="posx" value="0" />
                     <param name="posy" value="80" />
@@ -160,7 +160,7 @@
                     <param name="onright" value="213" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="213" />
                     <param name="posx" value="100" />
                     <param name="posy" value="80" />
@@ -171,7 +171,7 @@
                     <param name="onright" value="214" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="214" />
                     <param name="posx" value="200" />
                     <param name="posy" value="80" />
@@ -182,7 +182,7 @@
                     <param name="onright" value="215" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="215" />
                     <param name="posx" value="300" />
                     <param name="posy" value="80" />
@@ -193,7 +193,7 @@
                     <param name="onright" value="216" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="216" />
                     <param name="posx" value="400" />
                     <param name="posy" value="80" />
@@ -204,7 +204,7 @@
                     <param name="onright" value="217" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="217" />
                     <param name="posx" value="500" />
                     <param name="posy" value="80" />
@@ -215,7 +215,7 @@
                     <param name="onright" value="218" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="218" />
                     <param name="posx" value="600" />
                     <param name="posy" value="80" />
@@ -226,7 +226,7 @@
                     <param name="onright" value="219" />
                 </include>
                 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="219" />
                     <param name="posx" value="700" />
                     <param name="posy" value="80" />
@@ -237,7 +237,7 @@
                     <param name="onright" value="220" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="220" />
                     <param name="posx" value="800" />
                     <param name="posy" value="80" />
@@ -248,7 +248,7 @@
                     <param name="onright" value="221" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="221" />
                     <param name="posx" value="900" />
                     <param name="posy" value="80" />
@@ -259,7 +259,7 @@
                     <param name="onright" value="222" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="222" />
                     <param name="posx" value="1000" />
                     <param name="posy" value="80" />
@@ -270,7 +270,7 @@
                     <param name="onright" value="223" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="223" />
                     <param name="posx" value="1100" />
                     <param name="posy" value="80" />
@@ -281,7 +281,7 @@
                     <param name="onright" value="Noop" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="224" />
                     <param name="posx" value="0" />
                     <param name="posy" value="160" />
@@ -292,7 +292,7 @@
                     <param name="onright" value="225" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="225" />
                     <param name="posx" value="100" />
                     <param name="posy" value="160" />
@@ -303,7 +303,7 @@
                     <param name="onright" value="226" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="226" />
                     <param name="posx" value="200" />
                     <param name="posy" value="160" />
@@ -314,7 +314,7 @@
                     <param name="onright" value="227" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="227" />
                     <param name="posx" value="300" />
                     <param name="posy" value="160" />
@@ -325,7 +325,7 @@
                     <param name="onright" value="228" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="228" />
                     <param name="posx" value="400" />
                     <param name="posy" value="160" />
@@ -336,7 +336,7 @@
                     <param name="onright" value="229" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="229" />
                     <param name="posx" value="500" />
                     <param name="posy" value="160" />
@@ -347,7 +347,7 @@
                     <param name="onright" value="230" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="230" />
                     <param name="posx" value="600" />
                     <param name="posy" value="160" />
@@ -358,7 +358,7 @@
                     <param name="onright" value="231" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="231" />
                     <param name="posx" value="700" />
                     <param name="posy" value="160" />
@@ -369,7 +369,7 @@
                     <param name="onright" value="232" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="232" />
                     <param name="posx" value="800" />
                     <param name="posy" value="160" />
@@ -380,7 +380,7 @@
                     <param name="onright" value="233" />
                 </include>
                 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="233" />
                     <param name="posx" value="900" />
                     <param name="posy" value="160" />
@@ -391,7 +391,7 @@
                     <param name="onright" value="234" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="234" />
                     <param name="posx" value="1000" />
                     <param name="posy" value="160" />
@@ -402,7 +402,7 @@
                     <param name="onright" value="235" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="235" />
                     <param name="posx" value="1100" />
                     <param name="posy" value="160" />
@@ -413,7 +413,7 @@
                     <param name="onright" value="Noop" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="236" />
                     <param name="posx" value="0" />
                     <param name="posy" value="240" />
@@ -424,7 +424,7 @@
                     <param name="onright" value="237" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="237" />
                     <param name="posx" value="100" />
                     <param name="posy" value="240" />
@@ -435,7 +435,7 @@
                     <param name="onright" value="238" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="238" />
                     <param name="posx" value="200" />
                     <param name="posy" value="240" />
@@ -446,7 +446,7 @@
                     <param name="onright" value="239" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="239" />
                     <param name="posx" value="300" />
                     <param name="posy" value="240" />
@@ -457,7 +457,7 @@
                     <param name="onright" value="240" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="240" />
                     <param name="posx" value="400" />
                     <param name="posy" value="240" />
@@ -468,7 +468,7 @@
                     <param name="onright" value="241" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="241" />
                     <param name="posx" value="500" />
                     <param name="posy" value="240" />
@@ -479,7 +479,7 @@
                     <param name="onright" value="242" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="242" />
                     <param name="posx" value="600" />
                     <param name="posy" value="240" />
@@ -490,7 +490,7 @@
                     <param name="onright" value="243" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="243" />
                     <param name="posx" value="700" />
                     <param name="posy" value="240" />
@@ -501,7 +501,7 @@
                     <param name="onright" value="244" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="244" />
                     <param name="posx" value="800" />
                     <param name="posy" value="240" />
@@ -512,7 +512,7 @@
                     <param name="onright" value="245" />
                 </include>
                 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="245" />
                     <param name="posx" value="900" />
                     <param name="posy" value="240" />
@@ -523,7 +523,7 @@
                     <param name="onright" value="246" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="246" />
                     <param name="posx" value="1000" />
                     <param name="posy" value="240" />
@@ -534,7 +534,7 @@
                     <param name="onright" value="247" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="247" />
                     <param name="posx" value="1100" />
                     <param name="posy" value="240" />
@@ -545,7 +545,7 @@
                     <param name="onright" value="Noop" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="248" />
                     <param name="posx" value="0" />
                     <param name="posy" value="320" />
@@ -556,7 +556,7 @@
                     <param name="onright" value="249" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="249" />
                     <param name="posx" value="100" />
                     <param name="posy" value="320" />
@@ -567,7 +567,7 @@
                     <param name="onright" value="250" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="250" />
                     <param name="posx" value="200" />
                     <param name="posy" value="320" />
@@ -578,7 +578,7 @@
                     <param name="onright" value="251" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="251" />
                     <param name="posx" value="300" />
                     <param name="posy" value="320" />
@@ -589,7 +589,7 @@
                     <param name="onright" value="252" />
                 </include>
 
-                <include name="ColorPickerButtonForSkinSettings">
+                <include content="ColorPickerButtonForSkinSettings">
                     <param name="id" value="252" />
                     <param name="posx" value="400" />
                     <param name="posy" value="320" />
@@ -601,8 +601,8 @@
                 </include>
             </control>
             
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="380" />
                     <param name="height" value="100" />
                 </include>
@@ -610,19 +610,19 @@
                 <ondown>200</ondown>
                 <onright>248</onright>
 
-				<control type="button" id="22">
-					<description>Custom Color Button</description>
-					<label>$LOCALIZE[31250]</label>
+                <control type="button" id="22">
+                    <description>Custom Color Button</description>
+                    <label>$LOCALIZE[31250]</label>
                     <onclick>SetProperty(DialogRelatedColorPrefix,$INFO[Window.Property(DialogRelatedColorPrefix)],1186)</onclick>
                     <onclick>SetProperty(DialogTarget,$INFO[Window.Property(DialogTarget)],1186)</onclick>
                     <onclick>SetProperty(DialogRelatedTarget,$INFO[Window.Property(DialogRelatedTarget)],1186)</onclick>
                     <onclick>ActivateWindow(1186)</onclick>
-				</control>
-                <include name="CloseButtonForDialog">
+                </control>
+                <include content="CloseButtonForDialog">
                     <param name="id" value="21" />
                     <param name="posy" value="20" />
                 </include>
-			</control>
-		</control>
-	</controls>
+            </control>
+        </control>
+    </controls>
 </window>

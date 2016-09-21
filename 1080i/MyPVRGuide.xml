@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
+    <defaultcontrol always="true">10</defaultcontrol>
     <menucontrol>9001</menucontrol>
-	<views>10,11,12,13</views>
+    <views>10,11,12,13</views>
     
-	<controls>
-		<include name="FullscreenDimensions" />
-		<include name="GlobalBackground" />
+    <controls>
+        <include content="FullscreenDimensions" />
+        <include content="GlobalBackground" />
 
         <control type="group" id="42">
-			<include name="EPGTimelineViewForPVR" />
-			<include name="EPGGuideNowViewForPVR" />
-			<include name="EPGGuideNextViewForPVR" />
-			<include name="EPGGuideChannelViewForPVR" />
+            <include content="EPGTimelineViewForPVR" />
+            <include content="EPGGuideNowViewForPVR" />
+            <include content="EPGGuideNextViewForPVR" />
+            <include content="EPGGuideChannelViewForPVR" />
         </control>
 
-		<include name="DefaultClock" />
-        <include name="ChannelGroupLabelForGuidePVR" />
+        <include content="DefaultClock" />
+        <include content="ChannelGroupLabelForGuidePVR" />
 
-		<control type="group" id="9000">
-			<include name="SideMenu" />
+        <control type="group" id="9000">
+            <include content="SideMenu" />
 
-			<control type="grouplist" id="9001">
-                <include name="BeginOfButtonListForSideMenu">
+            <control type="grouplist" id="9001">
+                <include content="BeginOfButtonListForSideMenu">
                     <param name="onright" value="42" />
                 </include>
 
-                <include name="ViewGroupLabelForSideMenu" />
-				<include name="ViewTypeButtonForSideMenu" />
-				<include name="SortCriteriumButtonForSideMenu" />
-				<include name="SortOrderButtonForSideMenu" />
-				<include name="ChannelGroupButtonForSideMenu" />
+                <include content="ViewGroupLabelForSideMenu" />
+                <include content="ViewTypeButtonForSideMenu" />
+                <include content="SortCriteriumButtonForSideMenu" />
+                <include content="SortOrderButtonForSideMenu" />
+                <include content="ChannelGroupButtonForSideMenu" />
                 
-                <include name="NavigationGroupLabelForSideMenu" />
-				<include name="ChannelsButtonForSideMenu" />
-				<include name="RecordingsButtonForSideMenu" />
-				<include name="TimersButtonForSideMenu" />
-				<include name="PVRSearchButtonForSideMenu" />
-				<include name="PVRBackendInfoButtonForSideMenu" />
-				<include name="GlobalSearchButtonForSideMenu" />
+                <include content="NavigationGroupLabelForSideMenu" />
+                <include content="ChannelsButtonForSideMenu" />
+                <include content="RecordingsButtonForSideMenu" />
+                <include content="TimersButtonForSideMenu" />
+                <include content="PVRSearchButtonForSideMenu" />
+                <include content="PVRBackendInfoButtonForSideMenu" />
+                <include content="GlobalSearchButtonForSideMenu" />
                 
-                <include name="EndOfButtonListForSideMenu" />
-			</control>
+                <include content="EndOfButtonListForSideMenu" />
+            </control>
 
-            <include name="PlayerControlsForSideMenu">
+            <include content="PlayerControlsForSideMenu">
                 <param name="onright" value="42" />
             </include>
-		</control>
+        </control>
         
-		<include name="Overlay" />
-        <include name="BackButton" />
-	</controls>
+        <include content="Overlay" />
+        <include content="BackButton" />
+    </controls>
 </window>

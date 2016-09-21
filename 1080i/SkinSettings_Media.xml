@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="OptionsForMediaSkinSettings">
+    <include name="OptionsForMediaSkinSettings">
         <control type="group">
-			<visible>Container(99).Hasfocus(7)</visible>
+            <visible>Container(99).Hasfocus(7)</visible>
         
             <control type="image">
                 <posx>0</posx>
@@ -147,7 +147,7 @@
         </control>
     </include>
     
-	<include name="AnnotationsForMediaSkinSettings">
+    <include name="AnnotationsForMediaSkinSettings">
         <definition>
             <control type="group">
                 <description>Settings Description Textbox</description>

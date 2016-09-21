@@ -5,8 +5,8 @@
     <include name="Overlay">
         <definition>
             <control type="group">
-                <include name="VideoOverlay" />
-                <include name="MusicOverlay" />
+                <include content="VideoOverlay" />
+                <include content="MusicOverlay" />
             </control>
         </definition>
     </include>
@@ -15,12 +15,12 @@
         <definition>
             <control type="group">
                 <visible>Player.HasVideo</visible>
-                <include name="BackgroundForOverlay" />
-                <include name="InformationLabelForOverlay">
+                <include content="BackgroundForOverlay" />
+                <include content="InformationLabelForOverlay">
                     <param name="medialabel" value="$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]" />
                     <param name="timelabel" value="| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]" />
                 </include>
-                <include name="PlayerMediaIconForOverlay" />
+                <include content="PlayerMediaIconForOverlay" />
             </control>
         </definition>
     </include>
@@ -29,12 +29,12 @@
         <definition>
             <control type="group">
                 <visible>Player.HasAudio</visible>
-                <include name="BackgroundForOverlay" />
-                <include name="InformationLabelForOverlay">
+                <include content="BackgroundForOverlay" />
+                <include content="InformationLabelForOverlay">
                     <param name="medialabel" value="$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]" />
                     <param name="timelabel" value="| $INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]" />
                 </include>
-                <include name="PlayerMediaIconForOverlay" />
+                <include content="PlayerMediaIconForOverlay" />
             </control>
         </definition>
     </include>
@@ -60,12 +60,12 @@
             <control type="group">
                 <visible>!Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
                 
-                <include name="MediaLabelForOverlay">
+                <include content="MediaLabelForOverlay">
                     <param name="posx" value="1520" />
                     <param name="width" value="1500" />
                     <param name="label" value="$PARAM[medialabel]" />
                 </include>
-                <include name="TimeLabelForOverlay">
+                <include content="TimeLabelForOverlay">
                     <param name="posx" value="1530" />
                     <param name="width" value="400" />
                     <param name="label" value="$PARAM[timelabel]" />
@@ -75,12 +75,12 @@
             <control type="group">
                 <visible>Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
                 
-                <include name="MediaLabelForOverlay">
+                <include content="MediaLabelForOverlay">
                     <param name="posx" value="1320" />
                     <param name="width" value="1300" />
                     <param name="label" value="$PARAM[medialabel]" />
                 </include>
-                <include name="TimeLabelForOverlay">
+                <include content="TimeLabelForOverlay">
                     <param name="posx" value="1330" />
                     <param name="width" value="400" />
                     <param name="label" value="$PARAM[timelabel]" />
@@ -114,7 +114,7 @@
             
             <control type="group">
                 <visible>!Skin.HasSetting(Media.OverlayBackground.Visible)</visible>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="$PARAM[posx]" />
                     <param name="posy" value="$PARAM[posy]" />
                     <param name="width" value="$PARAM[width]" />
@@ -155,7 +155,7 @@
 
             <control type="group">
                 <visible>!Skin.HasSetting(Media.OverlayBackground.Visible)</visible>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="$PARAM[posx]" />
                     <param name="posy" value="$PARAM[posy]" />
                     <param name="width" value="$PARAM[width]" />
@@ -178,7 +178,7 @@
 
                 <control type="group">
                     <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),1)</visible>
-                    <include name="OrbitCircle">
+                    <include content="OrbitCircle">
                         <param name="posx" value="1765" />
                         <param name="posy" value="941" />
                         <param name="size" value="25" />
@@ -189,7 +189,7 @@
                 
                 <control type="group">
                     <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),3)</visible>
-                    <include name="OrbitCircle">
+                    <include content="OrbitCircle">
                         <param name="posx" value="1765" />
                         <param name="posy" value="941" />
                         <param name="size" value="30" />
@@ -198,7 +198,7 @@
                         <param name="direction" value="false" />
                     </include>
                     
-                    <include name="OrbitCircle">
+                    <include content="OrbitCircle">
                         <param name="posx" value="1765" />
                         <param name="posy" value="941" />
                         <param name="size" value="10" />
@@ -207,7 +207,7 @@
                         <param name="direction" value="false" />
                     </include>
 
-                    <include name="OrbitCircle">
+                    <include content="OrbitCircle">
                         <param name="posx" value="1765" />
                         <param name="posy" value="941" />
                         <param name="size" value="20" />
@@ -220,7 +220,7 @@
                 <control type="group">
                     <posx>1630</posx>
                     <posy>806</posy>
-                    <include name="DefaultCirclePlayerMediaIcon" />
+                    <include content="DefaultCirclePlayerMediaIcon" />
                 </control>
                     
                 <control type="button" id="9990">

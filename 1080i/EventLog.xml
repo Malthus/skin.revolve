@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="50">
-	<defaultcontrol always="yes">570</defaultcontrol>
+    <defaultcontrol always="yes">570</defaultcontrol>
     <menucontrol>9001</menucontrol>
-	<views>570</views>
+    <views>570</views>
 
-	<controls>
-		<include name="FullscreenDimensions" />
-		<include name="GlobalBackground" />
+    <controls>
+        <include content="FullscreenDimensions" />
+        <include content="GlobalBackground" />
 
-		<control type="group">
-			<visible>Control.IsVisible(570)</visible>
-			<include name="BackgroundAnimationForBottomRing" />
-		</control>
-        
-		<control type="fixedlist" id="570">
-			<viewtype label="31933">list</viewtype>
-			<visible allowhiddenfocus="true">true</visible>
-			
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<pagecontrol>580</pagecontrol>
-			<orientation>horizontal</orientation>
-			<focusposition>2</focusposition>
-			<defaultcontrol>99</defaultcontrol>
-			<onup>9000</onup>
-			<ondown>580</ondown>
-			<onleft>570</onleft>
-			<onright>570</onright>
-			
-            <include name="InvisibleHorizontalListItemsForMenu" />
+        <control type="group">
+            <visible>Control.IsVisible(570)</visible>
+            <include content="BackgroundAnimationForBottomRing" />
         </control>
         
-        <include name="LandscapeView">
+        <control type="fixedlist" id="570">
+            <viewtype label="31933">list</viewtype>
+            <visible allowhiddenfocus="true">true</visible>
+            
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1920</width>
+            <height>1080</height>
+            <pagecontrol>580</pagecontrol>
+            <orientation>horizontal</orientation>
+            <focusposition>2</focusposition>
+            <defaultcontrol>99</defaultcontrol>
+            <onup>9000</onup>
+            <ondown>580</ondown>
+            <onleft>570</onleft>
+            <onright>570</onright>
+            
+            <include content="InvisibleHorizontalListItemsForMenu" />
+        </control>
+        
+        <include content="LandscapeView">
             <param name="listid" value="570" />
             <param name="scrollbarid" value="580" />
             <param name="labelsvisible" value="false" />
@@ -45,39 +45,39 @@
             <param name="shadowvisible" value="true" />
         </include>
         
-        <include name="ContentLabelForBottomRing">
+        <include content="ContentLabelForBottomRing">
             <param name="highlightvisible" value="false" />
             <param name="namelabel" value="$INFO[Container(570).ListItem.Label]" />
             <param name="informationlabel" value="$INFO[Container(570).ListItem.Label2]" />
         </include>
         
         <control type="group" id="9000">
-            <include name="SideMenu">
+            <include content="SideMenu">
                 <param name="topmenuoverride" value="true" />
             </include>
 
             <control type="grouplist" id="9001">
-                <include name="BeginOfButtonListForSideMenu">
+                <include content="BeginOfButtonListForSideMenu">
                     <param name="onright" value="570" />
                 </include>
 
-                <include name="ViewGroupLabelForSideMenu" />
-                <include name="SortOrderButtonForSideMenu" />
-                <include name="EventLogLevelButtonForSideMenu" />
-                <include name="EventLogLevelRadioButtonForSideMenu" />
+                <include content="ViewGroupLabelForSideMenu" />
+                <include content="SortOrderButtonForSideMenu" />
+                <include content="EventLogLevelButtonForSideMenu" />
+                <include content="EventLogLevelRadioButtonForSideMenu" />
                 
-                <include name="ActionGroupLabelForSideMenu" />
-                <include name="EventLogClearButtonForSideMenu" />
+                <include content="ActionGroupLabelForSideMenu" />
+                <include content="EventLogClearButtonForSideMenu" />
                 
-                <include name="EndOfButtonListForSideMenu" />
+                <include content="EndOfButtonListForSideMenu" />
             </control>
 
-            <include name="PlayerControlsForSideMenu">
+            <include content="PlayerControlsForSideMenu">
                 <param name="onright" value="570" />
             </include>
-		</control>
+        </control>
 
-		<include name="Overlay" />
-        <include name="BackButton" />
-	</controls>
+        <include content="Overlay" />
+        <include content="BackButton" />
+    </controls>
 </window>

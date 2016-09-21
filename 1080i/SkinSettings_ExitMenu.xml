@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="OptionsForExitMenuSkinSettings">
+    <include name="OptionsForExitMenuSkinSettings">
         <control type="group">
-			<visible>Container(99).Hasfocus(5)</visible>
+            <visible>Container(99).Hasfocus(5)</visible>
         
             <control type="image">
                 <posx>0</posx>
@@ -37,7 +37,7 @@
                 <onleft>99</onleft>
                 <onright>599</onright>
 
-                <include name="ButtonsForExitMenuSkinSettings" />
+                <include content="ButtonsForExitMenuSkinSettings" />
 
                 <control type="label" id="548">
                     <description>Spacer</description>
@@ -71,77 +71,77 @@
         </control>
     </include>
     
-	<include name="ButtonsForExitMenuSkinSettings">
+    <include name="ButtonsForExitMenuSkinSettings">
         <definition>
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="501" />
                 <param name="label" value="$LOCALIZE[13005]" />
                 <param name="variable" value="ExitMenu.ShutdownOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="502" />
                 <param name="label" value="$LOCALIZE[13012]" />
                 <param name="enable" value="System.ShowExitButton" />
                 <param name="variable" value="ExitMenu.ExitOption" />
             </include>
             
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="503" />
                 <param name="label" value="$LOCALIZE[20126]" />
                 <param name="enable" value="System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]" />
                 <param name="variable" value="ExitMenu.LogOffOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="504" />
                 <param name="label" value="$LOCALIZE[13313]" />
                 <param name="enable" value="System.Platform.Windows | System.Platform.Linux" />
                 <param name="variable" value="ExitMenu.RestartOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="505" />
                 <param name="label" value="$LOCALIZE[13011]" />
                 <param name="enable" value="System.CanSuspend" />
                 <param name="variable" value="ExitMenu.SuspendOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="506" />
                 <param name="label" value="$LOCALIZE[13010]" />
                 <param name="enable" value="System.CanHibernate" />
                 <param name="variable" value="ExitMenu.HibernateOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="507" />
                 <param name="label" value="$LOCALIZE[13013]" />
                 <param name="enable" value="System.CanReboot" />
                 <param name="variable" value="ExitMenu.RebootOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="508" />
                 <param name="label" value="$LOCALIZE[31082]" />
                 <param name="enable" value="System.CanPowerdown" />
                 <param name="variable" value="ExitMenu.PowerdownOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="509" />
                 <param name="label" value="$LOCALIZE[31083]" />
                 <param name="variable" value="ExitMenu.CustomTimerOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="510" />
                 <param name="label" value="$LOCALIZE[15023]" />
                 <param name="enable" value="System.HasLocks" />
                 <param name="variable" value="ExitMenu.MasterModeOption" />
             </include>
 
-            <include name="StandardButtonForExitMenuSkinSettings">
+            <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="511" />
                 <param name="label" value="$LOCALIZE[5]" />
                 <param name="variable" value="ExitMenu.SettingsOption" />
@@ -149,7 +149,7 @@
        </definition>
     </include>
     
-	<include name="AnnotationsForExitMenuSkinSettings">
+    <include name="AnnotationsForExitMenuSkinSettings">
         <definition>
             <control type="group">
                 <description>Settings Description Textbox</description>

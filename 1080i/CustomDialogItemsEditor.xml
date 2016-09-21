@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1193">
-	<defaultcontrol always="true">34</defaultcontrol>
+    <defaultcontrol always="true">34</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForThirteenLinesDialog</posy>
-            <include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForThirteenLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForThirteenLinesDialog" />
                 <param name="headerlabel" value="$LOCALIZE[31887]" />
                 <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
 
-            <include name="LabelForDialog">
+            <include content="LabelForDialog">
                 <param name="posy" value="80" />
                 <param name="textcolor" value="$VAR[TextColor]" />
                 <param name="label" value="$LOCALIZE[31913]:" />
             </include>
 
-			<control type="list" id="33">
+            <control type="list" id="33">
                 <description>Predefined Option Types List</description>
-                <include name="MarkupForListForDialog">
+                <include content="MarkupForListForDialog">
                     <param name="posy" value="120" />
                     <param name="height" value="40" />
                     <param name="scrolltime" value="0" />
                 </include>
-				<onup>21</onup>
-				<ondown>40</ondown>
-				<onleft>9000</onleft>
-				<onright>34</onright>
+                <onup>21</onup>
+                <ondown>40</ondown>
+                <onleft>9000</onleft>
+                <onright>34</onright>
 
-				<itemlayout height="0">
-				</itemlayout>
-				
-				<focusedlayout height="40">
-					<control type="group">
-						<visible>Control.HasFocus(34) | Control.HasFocus(35)</visible>
-						<control type="image">
-							<width>1240</width>
-							<height>40</height>
-							<texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
-						</control>
-						<control type="label">
-							<posx>20</posx>
-							<width>1140</width>
-							<height>40</height>
-							<textcolor>$VAR[BackgroundColor]</textcolor>
-							<font>DialogTextFont</font>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</control>
-					
-					<control type="group">
-						<visible>!Control.HasFocus(34) + !Control.HasFocus(35)</visible>
-						<control type="image">
-							<width>1240</width>
-							<height>40</height>
-							<texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
-						</control>
-						<control type="label">
-							<posx>20</posx>
-							<width>1140</width>
-							<height>40</height>
-							<textcolor>$VAR[MainColor]</textcolor>
-							<font>DialogTextFont</font>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</control>
-				</focusedlayout>
-				
-				<content>
-					<item id="99">
+                <itemlayout height="0">
+                </itemlayout>
+                
+                <focusedlayout height="40">
+                    <control type="group">
+                        <visible>Control.HasFocus(34) | Control.HasFocus(35)</visible>
+                        <control type="image">
+                            <width>1240</width>
+                            <height>40</height>
+                            <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <width>1140</width>
+                            <height>40</height>
+                            <textcolor>$VAR[BackgroundColor]</textcolor>
+                            <font>DialogTextFont</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                    
+                    <control type="group">
+                        <visible>!Control.HasFocus(34) + !Control.HasFocus(35)</visible>
+                        <control type="image">
+                            <width>1240</width>
+                            <height>40</height>
+                            <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <width>1140</width>
+                            <height>40</height>
+                            <textcolor>$VAR[MainColor]</textcolor>
+                            <font>DialogTextFont</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+                
+                <content>
+                    <item id="99">
                         <description>All Item Groups Option</description>
-						<label>$LOCALIZE[31700]</label>
-						<onclick>Noop</onclick>
-					</item>
-					<item id="1">
-						<description>XBMC Item Group Option</description>
-						<label>$LOCALIZE[31701]</label>
-						<onclick>Noop</onclick>
-					</item>
-					<item id="2">
-						<description>Screen Widgets Item Group Option</description>
-						<visible>System.HasAddon(service.skin.widgets)</visible>
+                        <label>$LOCALIZE[31700]</label>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="1">
+                        <description>XBMC Item Group Option</description>
+                        <label>$LOCALIZE[31701]</label>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="2">
+                        <description>Screen Widgets Item Group Option</description>
+                        <visible>System.HasAddon(service.skin.widgets)</visible>
                         <label>$LOCALIZE[31702]</label>
-						<onclick>Noop</onclick>
-					</item>
-					<item id="3">
-						<description>Library Data Provider Item Group Option</description>
-						<visible>System.HasAddon(service.library.data.provider)</visible>
-						<label>$LOCALIZE[31703]</label>
-						<onclick>Noop</onclick>
-					</item>
-				</content>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="3">
+                        <description>Library Data Provider Item Group Option</description>
+                        <visible>System.HasAddon(service.library.data.provider)</visible>
+                        <label>$LOCALIZE[31703]</label>
+                        <onclick>Noop</onclick>
+                    </item>
+                </content>
             </control>
 
-            <include name="UpDownButton">
+            <include content="UpDownButton">
                 <param name="posx" value="1700" />
                 <param name="posy" value="120" />
                 <param name="downbuttonid" value="34" />
@@ -107,15 +107,15 @@
                 <param name="onright" value="Noop" />
             </include>
 
-            <include name="LabelForDialog">
+            <include content="LabelForDialog">
                 <param name="posy" value="200" />
                 <param name="textcolor" value="$VAR[TextColor]" />
                 <param name="label" value="$LOCALIZE[31900]:" />
             </include>
 
-			<control type="group">
+            <control type="group">
                 <control type="list" id="40">
-                    <include name="MarkupForListForDialog">
+                    <include content="MarkupForListForDialog">
                         <param name="posy" value="240" />
                         <param name="height" value="360" />
                         <param name="pagecontrol" value="41" />
@@ -128,7 +128,7 @@
                     <itemlayout height="40">
                         <include>NormalItemsForNormalListInDialog</include>
                     </itemlayout>
-				
+                
                     <focusedlayout height="40">
                         <control type="group">
                             <visible>Control.HasFocus(40)</visible>
@@ -142,7 +142,7 @@
 
                     <content>
                         <item id="101">
-							<description>XBMC / Latest Movies Option</description>
+                            <description>XBMC / Latest Movies Option</description>
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31721] $LOCALIZE[31711]</label>
                             <property name="Type">S</property>
@@ -151,7 +151,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="102">
-							<description>XBMC / Latest Episodes Option</description>
+                            <description>XBMC / Latest Episodes Option</description>
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31722] $LOCALIZE[31711]</label>
                             <property name="Type">S</property>
@@ -160,7 +160,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="103">
-							<description>XBMC / Latest Music Video Option</description>
+                            <description>XBMC / Latest Music Video Option</description>
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31723] $LOCALIZE[31711]</label>
                             <property name="Type">S</property>
@@ -169,7 +169,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="104">
-							<description>XBMC / Latest Song Option</description>
+                            <description>XBMC / Latest Song Option</description>
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31724] $LOCALIZE[31711]</label>
                             <property name="Type">S</property>
@@ -178,7 +178,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="105">
-							<description>XBMC / Latest Albums Option</description>
+                            <description>XBMC / Latest Albums Option</description>
                             <visible>Container(33).HasFocus(1) | Container(33).HasFocus(99)</visible>
                             <label>$LOCALIZE[31725] $LOCALIZE[31711]</label>
                             <property name="Type">S</property>
@@ -187,7 +187,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="201">
-							<description>Screen Widgets / Random Movies Option</description>
+                            <description>Screen Widgets / Random Movies Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31726] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -196,7 +196,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="202">
-							<description>Screen Widgets / Random Episodes Option</description>
+                            <description>Screen Widgets / Random Episodes Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31727] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -205,7 +205,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="203">
-							<description>Screen Widgets / Random Music Videos Option</description>
+                            <description>Screen Widgets / Random Music Videos Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31728] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -214,7 +214,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="204">
-							<description>Screen Widgets / Random Albums Option</description>
+                            <description>Screen Widgets / Random Albums Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31729] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -223,7 +223,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="205">
-							<description>Screen Widgets / Random Artists Option</description>
+                            <description>Screen Widgets / Random Artists Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31730] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -232,7 +232,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="206">
-							<description>Screen Widgets / Random Songs Option</description>
+                            <description>Screen Widgets / Random Songs Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31731] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -241,7 +241,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="207">
-							<description>Screen Widgets / Random Addons Option</description>
+                            <description>Screen Widgets / Random Addons Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31732] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -250,7 +250,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="221">
-							<description>Screen Widgets / Recommended Movies Option</description>
+                            <description>Screen Widgets / Recommended Movies Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31733] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -259,7 +259,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="222">
-							<description>Screen Widgets / Recommended Episodes Option</description>
+                            <description>Screen Widgets / Recommended Episodes Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31734] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -268,7 +268,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="223">
-							<description>Screen Widgets / Recommended Music Videos Option</description>
+                            <description>Screen Widgets / Recommended Music Videos Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31735] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -277,7 +277,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="224">
-							<description>Screen Widgets / Recommended Albums Option</description>
+                            <description>Screen Widgets / Recommended Albums Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31736] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -286,7 +286,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="241">
-							<description>Screen Widgets / Recent Movies Option</description>
+                            <description>Screen Widgets / Recent Movies Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31737] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -295,7 +295,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="242">
-							<description>Screen Widgets / Recent Episodes Option</description>
+                            <description>Screen Widgets / Recent Episodes Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31738] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -304,7 +304,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="243">
-							<description>Screen Widgets / Recent Music Videos Option</description>
+                            <description>Screen Widgets / Recent Music Videos Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31739] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -313,7 +313,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="244">
-							<description>Screen Widgets / Recent Albums Option</description>
+                            <description>Screen Widgets / Recent Albums Option</description>
                             <visible>[Container(33).HasFocus(2) | Container(33).HasFocus(99)] + System.HasAddon(service.skin.widgets)</visible>
                             <label>$LOCALIZE[31740] $LOCALIZE[31712]</label>
                             <property name="Type">S</property>
@@ -322,7 +322,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="301">
-							<description>Library Data Provider / Random Movies Option</description>
+                            <description>Library Data Provider / Random Movies Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31726] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -331,7 +331,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="302">
-							<description>Library Data Provider / Random Episodes Option</description>
+                            <description>Library Data Provider / Random Episodes Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31727] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -340,7 +340,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="303">
-							<description>Library Data Provider / Random Albums Option</description>
+                            <description>Library Data Provider / Random Albums Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31729] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -349,7 +349,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="304">
-							<description>Library Data Provider / Random Songs Option</description>
+                            <description>Library Data Provider / Random Songs Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31731] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -358,7 +358,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="321">
-							<description>Library Data Provider / Recommended Movies Option</description>
+                            <description>Library Data Provider / Recommended Movies Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31733] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -367,7 +367,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="322">
-							<description>Library Data Provider / Recommended Episodes Option</description>
+                            <description>Library Data Provider / Recommended Episodes Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31734] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -376,7 +376,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="323">
-							<description>Library Data Provider / Recommended Albums Option</description>
+                            <description>Library Data Provider / Recommended Albums Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31736] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -385,7 +385,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="341">
-							<description>Library Data Provider / Recent Movies Option</description>
+                            <description>Library Data Provider / Recent Movies Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31737] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -394,7 +394,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="342">
-							<description>Library Data Provider / Recent Episodes Option</description>
+                            <description>Library Data Provider / Recent Episodes Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31738] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -403,7 +403,7 @@
                             <onclick>Noop</onclick>
                         </item>
                         <item id="343">
-							<description>Library Data Provider / Recent Albums Option</description>
+                            <description>Library Data Provider / Recent Albums Option</description>
                             <visible>[Container(33).HasFocus(3) | Container(33).HasFocus(99)] + System.HasAddon(service.library.data.provider)</visible>
                             <label>$LOCALIZE[31740] $LOCALIZE[31713]</label>
                             <property name="Type">D</property>
@@ -415,45 +415,45 @@
                 </control>
                 
                 <control id="41" type="scrollbar">
-                    <include name="MarkupForScrollbarForDialog">
+                    <include content="MarkupForScrollbarForDialog">
                         <param name="posy" value="240" />
                         <param name="height" value="360" />
                     </include>
                     <onleft>40</onleft>
                     <onright>Noop</onright>
                 </control>
-			</control>
+            </control>
                 
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="460" />
                     <param name="height" value="140" />
                 </include>
                 <onup>40</onup>
                 <ondown>34</ondown>
-				<onright>40</onright>
+                <onright>40</onright>
 
-				<control type="radiobutton" id="26">
+                <control type="radiobutton" id="26">
                     <description>Help Radiobutton</description>
-					<label>$LOCALIZE[10043]</label>
+                    <label>$LOCALIZE[10043]</label>
                     <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
-					<onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
-				</control>
-				<control type="button" id="20">
+                    <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
+                </control>
+                <control type="button" id="20">
                     <description>Ok Button</description>
                     <posy>20</posy>
-					<label>$LOCALIZE[186]</label>
-					<onclick>SetProperty($INFO[Window.Property(TargetType)],$INFO[Container(40).ListItem.Property(Type)],$INFO[Window.Property(TargetWindow)])</onclick>
-					<onclick>SetProperty($INFO[Window.Property(TargetMenuTitle)],$INFO[Container(40).ListItem.Property(MenuTitle)],$INFO[Window.Property(TargetWindow)])</onclick>
-					<onclick>SetProperty($INFO[Window.Property(TargetSourceInfo)],$INFO[Container(40).ListItem.Property(SourceInfo)],$INFO[Window.Property(TargetWindow)])</onclick>
-					<onclick>Close</onclick>
-				</control>
-				<control type="button" id="21">
+                    <label>$LOCALIZE[186]</label>
+                    <onclick>SetProperty($INFO[Window.Property(TargetType)],$INFO[Container(40).ListItem.Property(Type)],$INFO[Window.Property(TargetWindow)])</onclick>
+                    <onclick>SetProperty($INFO[Window.Property(TargetMenuTitle)],$INFO[Container(40).ListItem.Property(MenuTitle)],$INFO[Window.Property(TargetWindow)])</onclick>
+                    <onclick>SetProperty($INFO[Window.Property(TargetSourceInfo)],$INFO[Container(40).ListItem.Property(SourceInfo)],$INFO[Window.Property(TargetWindow)])</onclick>
+                    <onclick>Close</onclick>
+                </control>
+                <control type="button" id="21">
                     <description>Cancel Button</description>
-					<label>$LOCALIZE[222]</label>
-					<onclick>Close</onclick>
-				</control>
-			</control>
+                    <label>$LOCALIZE[222]</label>
+                    <onclick>Close</onclick>
+                </control>
+            </control>
             
             <control type="group">
                 <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
@@ -501,6 +501,6 @@
                     </control>
                 </control>
             </control>
-		</control>
-	</controls>
+        </control>
+    </controls>
 </window>

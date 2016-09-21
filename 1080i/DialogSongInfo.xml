@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="135">
-	<defaultcontrol always="true">14</defaultcontrol>
+    <defaultcontrol always="true">14</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForFifteenLinesDialog</posy>
-			<include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForFifteenLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForFifteenLinesDialog" />
                 <param name="headerlabel" value="$INFO[ListItem.Title]" />
                 <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
                 <param name="animate" value="true" />
             </include>
 
-			<control type="list" id="20">
-                <include name="MarkupForInfoListForDialog">
+            <control type="list" id="20">
+                <include content="MarkupForInfoListForDialog">
                     <param name="height" value="280" />
                     <param name="pagecontrol" value="21" />
                 </include>
-				
-				<include>ItemsForInfoListInDialog</include>
-				
-				<content>
-					<item>
-						<visible>!String.IsEmpty(ListItem.Artist)</visible>
-						<label>$LOCALIZE[557]:</label>
-						<label2>$INFO[ListItem.Artist]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!String.IsEmpty(ListItem.Album)</visible>
-						<label>$LOCALIZE[558]:</label>
-						<label2>$INFO[ListItem.Album]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!String.IsEmpty(ListItem.Year)</visible>
-						<label>$LOCALIZE[562]:</label>
-						<label2>$INFO[ListItem.Year]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!String.IsEmpty(ListItem.Duration)</visible>
-						<label>$LOCALIZE[180]:</label>
-						<label2>$INFO[ListItem.Duration]</label2>
-						<onclick>Noop</onclick>
-					</item>
-					<item>
-						<visible>!String.IsEmpty(ListItem.Genre)</visible>
-						<label>$LOCALIZE[515]:</label>
-						<label2>$INFO[ListItem.Genre]</label2>
-						<onclick>Noop</onclick>
-					</item>
-				</content>
-			</control>
-			
-			<control type="scrollbar" id="21">
+                
+                <include>ItemsForInfoListInDialog</include>
+                
+                <content>
+                    <item>
+                        <visible>!String.IsEmpty(ListItem.Artist)</visible>
+                        <label>$LOCALIZE[557]:</label>
+                        <label2>$INFO[ListItem.Artist]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(ListItem.Album)</visible>
+                        <label>$LOCALIZE[558]:</label>
+                        <label2>$INFO[ListItem.Album]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(ListItem.Year)</visible>
+                        <label>$LOCALIZE[562]:</label>
+                        <label2>$INFO[ListItem.Year]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(ListItem.Duration)</visible>
+                        <label>$LOCALIZE[180]:</label>
+                        <label2>$INFO[ListItem.Duration]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(ListItem.Genre)</visible>
+                        <label>$LOCALIZE[515]:</label>
+                        <label2>$INFO[ListItem.Genre]</label2>
+                        <onclick>Noop</onclick>
+                    </item>
+                </content>
+            </control>
+            
+            <control type="scrollbar" id="21">
                 <description>Song Information Scrollbar</description>
-				<include name="MarkupForScrollbarForDialog">
+                <include content="MarkupForScrollbarForDialog">
                     <param name="posy" value="80" />
                     <param name="height" value="280" />
                 </include>
-				<onleft>9001</onleft>
-				<onright>Noop</onright>
-			</control>
+                <onleft>9001</onleft>
+                <onright>Noop</onright>
+            </control>
 
-            <include name="HorizontalDialogListOfContentMediaFlag">
+            <include content="HorizontalDialogListOfContentMediaFlag">
                 <param name="posx" value="560" />
                 <param name="posy" value="370" />
             </include>
 
-            <include name="TextboxForDialog">
+            <include content="TextboxForDialog">
                 <param name="textboxid" value="4" />
                 <param name="scrollbarid" value="24" />
                 <param name="posy" value="440" />
@@ -79,33 +79,33 @@
                 <param name="onleft" value="9000" />
             </include>
 
-            <include name="StarRatingMediaFlag">
+            <include content="StarRatingMediaFlag">
                 <param name="posx" value="190" />
                 <param name="posy" value="310" />
             </include>
 
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="520" />
                     <param name="height" value="160" />
                 </include>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
-				<onright>24</onright>
+                <onright>24</onright>
 
-				<control type="button" id ="12">
+                <control type="button" id ="12">
                     <description>Album Info Button</description>
-					<label>$LOCALIZE[10523]</label>
-				</control>
-				<control type="button" id ="13">
+                    <label>$LOCALIZE[10523]</label>
+                </control>
+                <control type="button" id ="13">
                     <description>Get Thumbnail Button</description>
-					<label>$LOCALIZE[13405]</label>
-				</control>
-                <include name="SetUserRatingButtonForDialog" />
-                <include name="CloseButtonForDialog">
+                    <label>$LOCALIZE[13405]</label>
+                </control>
+                <include content="SetUserRatingButtonForDialog" />
+                <include content="CloseButtonForDialog">
                     <param name="id" value="14" />
                 </include>
-			</control>
-		</control>
-	</controls>
+            </control>
+        </control>
+    </controls>
 </window>

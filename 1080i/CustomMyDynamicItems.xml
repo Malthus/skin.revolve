@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1102">
-	<defaultcontrol always="yes">450</defaultcontrol>
+    <defaultcontrol always="yes">450</defaultcontrol>
     <menucontrol>9001</menucontrol>
     <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyLists.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
     <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
     <onload condition="String.IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
     
-	<controls>
-		<include name="FullscreenDimensions" />
-		<include name="GlobalBackground" />
+    <controls>
+        <include content="FullscreenDimensions" />
+        <include content="GlobalBackground" />
 
-		<control type="fixedlist" id="450">
-			<visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<height>1080</height>
-			<focusposition>4</focusposition>
-			<onup>450</onup>
-			<ondown>450</ondown>
-			<onleft>9000</onleft>
-			<onright>Noop</onright>
+        <control type="fixedlist" id="450">
+            <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1920</width>
+            <height>1080</height>
+            <focusposition>4</focusposition>
+            <onup>450</onup>
+            <ondown>450</ondown>
+            <onleft>9000</onleft>
+            <onright>Noop</onright>
 
-            <include name="InvisibleVerticalListItemsForMenu" />
+            <include content="InvisibleVerticalListItemsForMenu" />
 
             <content>plugin://$INFO[Window.Property(SourceInfo)]</content>
-		</control>
+        </control>
 
         <control type="group">
             <visible>Skin.HasSetting(MyItemsMenu.Default)</visible>
-            <include name="RevolveMenu">
-                <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
-            </include>
-		</control>
-        
-        <control type="group">
-            <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
-            <include name="CircleMenu">
+            <include content="RevolveMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
         </control>
         
-		<control type="group" id="9000">
-			<include name="SideMenu" />
+        <control type="group">
+            <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
+            <include content="CircleMenu">
+                <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
+            </include>
+        </control>
+        
+        <control type="group" id="9000">
+            <include content="SideMenu" />
 
-			<control type="grouplist" id="9001">
-                <include name="BeginOfButtonListForSideMenu">
+            <control type="grouplist" id="9001">
+                <include content="BeginOfButtonListForSideMenu">
                     <param name="onright" value="450" />
                 </include>
 
-                <include name="ViewGroupLabelForSideMenu" />
-				<include name="MyItemsMenuTypeButtonForSideMenu" />
+                <include content="ViewGroupLabelForSideMenu" />
+                <include content="MyItemsMenuTypeButtonForSideMenu" />
 
-                <include name="PlaylistLibraryGroupLabelForSideMenu" />
-                <include name="GenericPlaylistButtonForSideMenu" />
-                <include name="ClearPlaylistButtonForSideMenu" />
+                <include content="PlaylistLibraryGroupLabelForSideMenu" />
+                <include content="GenericPlaylistButtonForSideMenu" />
+                <include content="ClearPlaylistButtonForSideMenu" />
 
-                <include name="NavigationGroupLabelForSideMenu">
+                <include content="NavigationGroupLabelForSideMenu">
                     <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
                 </include>
-				<include name="GlobalSearchButtonForSideMenu" />
+                <include content="GlobalSearchButtonForSideMenu" />
                 
-                <include name="EndOfButtonListForSideMenu" />
-			</control>
+                <include content="EndOfButtonListForSideMenu" />
+            </control>
 
-            <include name="PlayerControlsForSideMenu">
+            <include content="PlayerControlsForSideMenu">
                 <param name="onright" value="450" />
             </include>
-		</control>
+        </control>
         
-		<include name="Overlay" />
-        <include name="BackButton" />
-	</controls>
+        <include content="Overlay" />
+        <include content="BackButton" />
+    </controls>
 </window>

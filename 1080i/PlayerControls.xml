@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="114">
-	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
-	<defaultcontrol>410</defaultcontrol>
+    <visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
+    <defaultcontrol>410</defaultcontrol>
     <onunload>SetProperty(DialogCloseButton,False,114)</onunload>
 
-	<controls>
+    <controls>
         <control type="group">
             <visible>StringCompare(Skin.String(Background.Animation.Level),3) | StringCompare(Skin.String(Background.Animation.Level),4)</visible>
             
-            <include name="OrbitCircle">
+            <include content="OrbitCircle">
                 <param name="posx" value="960" />
                 <param name="posy" value="540" />
                 <param name="size" value="60" />
                 <param name="radius" value="150" />
                 <param name="time" value="8000" />
             </include>
-		</control>
+        </control>
     
         <control type="group">
             <visible>StringCompare(Skin.String(Background.Animation.Level),4)</visible>
             
-            <include name="OrbitCircle">
+            <include content="OrbitCircle">
                 <param name="posx" value="960" />
                 <param name="posy" value="540" />
                 <param name="size" value="20" />
@@ -29,35 +29,35 @@
                 <param name="direction" value="false" />
             </include>
             
-            <include name="OrbitCircle">
+            <include content="OrbitCircle">
                 <param name="posx" value="960" />
                 <param name="posy" value="540" />
                 <param name="size" value="30" />
                 <param name="radius" value="250" />
                 <param name="time" value="5000" />
             </include>
-		</control>
+        </control>
     
-		<control type="image">
-			<posx>815</posx>
-			<posy>395</posy>
-			<width>290</width>
-			<height>290</height>
-			<texture colordiffuse="$VAR[MainColor]" background="true">elements/circle-mask.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
+        <control type="image">
+            <posx>815</posx>
+            <posy>395</posy>
+            <width>290</width>
+            <height>290</height>
+            <texture colordiffuse="$VAR[MainColor]" background="true">elements/circle-mask.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
 
-		<control type="image">
-			<posx>820</posx>
-			<posy>400</posy>
-			<width>280</width>
-			<height>280</height>
-			<texture colordiffuse="$VAR[BackgroundColor]">elements/circle-mask.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
+        <control type="image">
+            <posx>820</posx>
+            <posy>400</posy>
+            <width>280</width>
+            <height>280</height>
+            <texture colordiffuse="$VAR[BackgroundColor]">elements/circle-mask.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
 
         <control type="group" id="410">
-            <include name="CircleControlsForPlayer">
+            <include content="CircleControlsForPlayer">
                 <param name="posx" value="825" />
                 <param name="posy" value="405" />
                 <param name="onup" value="9001" />
@@ -65,11 +65,11 @@
                 <param name="onleft" value="9001" />
                 <param name="onright" value="9001" />
             </include>
-		</control>
+        </control>
 
-		<control type="group">
+        <control type="group">
             <visible>Substring(Window.Property(DialogCloseButton),T,left)</visible>
-            <include name="CloseButtonForPlayer">
+            <include content="CloseButtonForPlayer">
                 <param name="id" value="408" />
                 <param name="posx" value="920" />
                 <param name="posy" value="500" />
@@ -78,14 +78,14 @@
                 <param name="onleft" value="401" />
                 <param name="onright" value="406" />
             </include>
-		</control>
+        </control>
 
-		<control type="group">
-			<visible>Window.IsActive(playercontrols)</visible>
-            <include name="DescriptionForControlsForPlayer">
+        <control type="group">
+            <visible>Window.IsActive(playercontrols)</visible>
+            <include content="DescriptionForControlsForPlayer">
                 <param name="posx" value="700" />
                 <param name="posy" value="700" />
             </include>
-		</control>
-	</controls>
+        </control>
+    </controls>
 </window>

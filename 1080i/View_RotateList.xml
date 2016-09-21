@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="RotateListView">
+    <include name="RotateListView">
         <definition>
             <control type="group">
                 <visible>Control.IsVisible(58)</visible>
-                <include name="BackgroundAnimationForRightRing" />
+                <include content="BackgroundAnimationForRightRing" />
             </control>
 
             <control type="fixedlist" id="58">
@@ -24,19 +24,19 @@
                 <onleft>9000</onleft>
                 <onright>68</onright>
 
-                <include name="InvisibleVerticalListItemsForMenu" />
+                <include content="InvisibleVerticalListItemsForMenu" />
             </control>
             
-            <include name="MainRotateListView" />
+            <include content="MainRotateListView" />
         </definition>
-	</include>
+    </include>
 
-	<include name="MainRotateListView">
+    <include name="MainRotateListView">
         <definition>
             <control type="group">
                 <visible>Control.IsVisible(58)</visible>
 
-                <include name="RightRing" />
+                <include content="RightRing" />
                 
                 <control type="group">
                     <animation type="WindowOpen">
@@ -58,8 +58,8 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="-16" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(-2).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(-2).Label]" />
                             </include>
@@ -68,22 +68,22 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="-8" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
                             </include>
                         </control>
                         <control type="group">
                             <visible>Container(58).OnNext</visible>
-                            <include name="VisibilityForNoBanner" />
+                            <include content="VisibilityForNoBanner" />
                             <animation type="Visible" reversible="false">
                                 <effect type="rotate" center="1100,200" end="8" />
                                 <effect type="slide" end="0,20" />
@@ -93,7 +93,7 @@
                                 <effect type="fade" start="100" end="0" time="200" />
                                 <effect type="slide" start="0,20" end="0,0" time="200" />
                             </animation>
-                            <include name="OtherElementForRotateListView">
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
                             </include>
@@ -106,7 +106,7 @@
                                 <effect type="fade" start="0" end="100" time="200" />
                                 <effect type="slide" start="0,20" end="0,0" time="200" />
                             </animation>
-                            <include name="OtherElementForRotateListView">
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
                             </include>
@@ -115,14 +115,14 @@
                     
                     <control type="group">
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="LabelOnOriginForRotateListView" />
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="LabelOnOriginForRotateListView" />
                         </control>
                         
                         <control type="group">
                             <visible>!Container(58).OnPrevious + !Container(58).OnNext</visible>
                             <animation effect="fade" start="0" end="100" time="200" reversible="false">Visible</animation>
-                            <include name="BannerOnOriginForRotateListView" />
+                            <include content="BannerOnOriginForRotateListView" />
                         </control>
                             
                         <control type="group">
@@ -135,7 +135,7 @@
                                 <effect type="slide" start="0,-20" end="0,0" time="200" />
                             </animation>
 
-                            <include name="LabelOnOriginForRotateListView" />
+                            <include content="LabelOnOriginForRotateListView" />
                         </control>
                         <control type="group">
                             <visible>Container(58).OnPrevious</visible>
@@ -145,7 +145,7 @@
                                 <effect type="fade" start="100" end="0" time="200" />
                                 <effect type="slide" start="0,0" end="0,20" time="200" />
                             </animation>
-                            <include name="OtherElementForRotateListView">
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItem.IsPlaying" />
                                 <param name="label" value="$INFO[ListItem.Label]" />
                             </include>
@@ -161,7 +161,7 @@
                                 <effect type="slide" start="0,-20" end="0,0" time="200" />
                             </animation>
 
-                            <include name="LabelOnOriginForRotateListView" />
+                            <include content="LabelOnOriginForRotateListView" />
                         </control>
                         <control type="group">
                             <visible>Container(58).OnNext</visible>
@@ -171,7 +171,7 @@
                                 <effect type="fade" start="100" end="0" time="200" />
                                 <effect type="slide" start="0,0" end="0,20" time="200" />
                             </animation>
-                            <include name="OtherElementForRotateListView">
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItem.IsPlaying" />
                                 <param name="label" value="$INFO[ListItem.Label]" />
                             </include>
@@ -181,15 +181,15 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="8" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
                             </include>
                         </control>
                         <control type="group">
                             <visible>Container(58).OnPrevious</visible>
-                            <include name="VisibilityForNoBanner" />
+                            <include content="VisibilityForNoBanner" />
                             <animation type="Visible" reversible="false">
                                 <effect type="rotate" center="1100,200" end="-8" />
                                 <effect type="slide" end="0,20" />
@@ -199,7 +199,7 @@
                                 <effect type="fade" start="100" end="0" time="200" />
                                 <effect type="slide" start="0,20" end="0,0" time="200" />
                             </animation>
-                            <include name="MainElementForRotateListView">
+                            <include content="MainElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
                             </include>
@@ -212,14 +212,14 @@
                                 <effect type="fade" start="0" end="100" time="200" />
                                 <effect type="slide" start="0,20" end="0,0" time="200" />
                             </animation>
-                            <include name="OtherElementForRotateListView">
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
                             </include>
@@ -228,22 +228,22 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="16" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(2).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(2).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(2).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(2).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(2).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(2).Label]" />
                             </include>
@@ -254,21 +254,21 @@
                         <control type="group">
                             <visible>!Container(58).OnPrevious + !Container(58).OnNext</visible>
                             <animation effect="fade" start="0" end="100" time="0" delay="200" reversible="false">Visible</animation>
-                            <include name="OtherElementForRotateListView">
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(3).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(3).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(3).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(3).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(3).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(3).Label]" />
                             </include>
@@ -277,22 +277,22 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="32" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(4).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(4).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(4).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(4).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(4).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(4).Label]" />
                             </include>
@@ -301,22 +301,22 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="40" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(5).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(5).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(5).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(5).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(5).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(5).Label]" />
                             </include>
@@ -325,22 +325,22 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="48" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(6).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(6).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(6).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(6).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(6).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(6).Label]" />
                             </include>
@@ -349,22 +349,22 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="56" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="NoMovementAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NoMovementAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(7).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(7).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(7).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(7).Label]" />
                             </include>
                         </control>
                         <control type="group">
-                            <include name="NextAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="NextAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(7).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(7).Label]" />
                             </include>
@@ -373,8 +373,8 @@
                     <control type="group">
                         <animation effect="rotate" center="1100,200" end="64" condition="true">Conditional</animation>
                         <control type="group">
-                            <include name="PreviousAnimationForRotateListView" />
-                            <include name="OtherElementForRotateListView">
+                            <include content="PreviousAnimationForRotateListView" />
+                            <include content="OtherElementForRotateListView">
                                 <param name="highlightvisible" value="ListItemNoWrap(8).IsPlaying" />
                                 <param name="label" value="$INFO[ListItemNoWrap(8).Label]" />
                             </include>
@@ -397,30 +397,30 @@
                 <onright>Noop</onright>
             </control>
         </definition>
-	</include>
-	
-	<include name="BannerOnOriginForRotateListView">
+    </include>
+    
+    <include name="BannerOnOriginForRotateListView">
         <definition>
             <control type="group">
-                <include name="VisibilityForBanner" />
+                <include content="VisibilityForBanner" />
                 <posx>-764</posx>
                 <posy>74</posy>
 
                 <control type="group">
                     <visible>!Control.HasFocus(58)</visible>
-                    <include name="FadeMaskForDefaultBannerIcon" />
+                    <include content="FadeMaskForDefaultBannerIcon" />
                 </control>
                             
-                <include name="DefaultBannerIcon" />
+                <include content="DefaultBannerIcon" />
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="LabelOnOriginForRotateListView">
+    <include name="LabelOnOriginForRotateListView">
         <definition>
             <control type="group">
                 <visible>ListItem.IsPlaying</visible>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="0" />
                     <param name="posy" value="180" />
                     <param name="width" value="880" />
@@ -433,7 +433,7 @@
                     <param name="scroll" value="true" />
                     <param name="label" value="$VAR[ContentNoBannerLabel]" />
                 </include>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="0" />
                     <param name="posy" value="220" />
                     <param name="width" value="880" />
@@ -450,7 +450,7 @@
         
             <control type="group">
                 <visible>!Control.HasFocus(58) + !ListItem.IsPlaying</visible>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="0" />
                     <param name="posy" value="180" />
                     <param name="width" value="880" />
@@ -463,7 +463,7 @@
                     <param name="scroll" value="true" />
                     <param name="label" value="$VAR[ContentNoBannerLabel]" />
                 </include>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="0" />
                     <param name="posy" value="220" />
                     <param name="width" value="880" />
@@ -480,7 +480,7 @@
 
             <control type="group">
                 <visible>Control.HasFocus(58) + !ListItem.IsPlaying</visible>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="0" />
                     <param name="posy" value="180" />
                     <param name="width" value="880" />
@@ -493,7 +493,7 @@
                     <param name="scroll" value="true" />
                     <param name="label" value="$VAR[ContentNoBannerLabel]" />
                 </include>
-                <include name="OutlineLabel">
+                <include content="OutlineLabel">
                     <param name="posx" value="0" />
                     <param name="posy" value="220" />
                     <param name="width" value="880" />
@@ -508,58 +508,58 @@
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="MainElementForRotateListView">
+    <include name="MainElementForRotateListView">
         <param name="highlightvisible" default="false" />
         <param name="label" default="-" />
     
         <definition>
             <control type="group">
                 <visible>$PARAM[highlightvisible]</visible>
-                <include name="BasicElementForRotateListView">
+                <include content="BasicElementForRotateListView">
                     <param name="textcolor" value="$VAR[HighlightColor]" />
                     <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
             <control type="group">
                 <visible>!$PARAM[highlightvisible]</visible>
-                <include name="BasicElementForRotateListView">
+                <include content="BasicElementForRotateListView">
                     <param name="textcolor" value="$VAR[MainColor]" />
                     <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="OtherElementForRotateListView">
+    <include name="OtherElementForRotateListView">
         <param name="highlightvisible" default="false" />
         <param name="label" default="-" />
     
         <definition>
             <control type="group">
                 <visible>$PARAM[highlightvisible]</visible>
-                <include name="BasicElementForRotateListView">
+                <include content="BasicElementForRotateListView">
                     <param name="textcolor" value="$VAR[HighlightColor]" />
                     <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
             <control type="group">
                 <visible>!$PARAM[highlightvisible]</visible>
-                <include name="BasicElementForRotateListView">
+                <include content="BasicElementForRotateListView">
                     <param name="textcolor" value="$VAR[TextColor]" />
                     <param name="label" value="$PARAM[label]" />
                 </include>
             </control>
         </definition>
-	</include>
+    </include>
 
-	<include name="BasicElementForRotateListView">
+    <include name="BasicElementForRotateListView">
         <param name="textcolor" default="$VAR[TextColor]" />
         <param name="label" default="-" />
     
         <definition>
-            <include name="OutlineLabel">
+            <include content="OutlineLabel">
                 <param name="posx" value="0" />
                 <param name="posy" value="160" />
                 <param name="width" value="900" />
@@ -573,28 +573,28 @@
                 <param name="label" value="$PARAM[label]" />
             </include>
         </definition>
-	</include>
+    </include>
 
-	<include name="NoMovementAnimationForRotateListView">
+    <include name="NoMovementAnimationForRotateListView">
         <definition>
             <visible>!Container(58).OnPrevious + !Container(58).OnNext</visible>
             <animation effect="fade" start="0" end="100" time="0" delay="200" reversible="false">Visible</animation>
         </definition>
-	</include>
-	
-	<include name="PreviousAnimationForRotateListView">
+    </include>
+    
+    <include name="PreviousAnimationForRotateListView">
         <definition>
             <visible>Container(58).OnPrevious</visible>
             <animation effect="rotate" center="1100,200" end="-8">Visible</animation>
             <animation effect="rotate" center="1100,200" start="-8" end="0" time="200" reversible="false">Hidden</animation>
         </definition>
-	</include>
+    </include>
 
-	<include name="NextAnimationForRotateListView">
+    <include name="NextAnimationForRotateListView">
         <definition>
             <visible>Container(58).OnNext</visible>
             <animation effect="rotate" center="1100,200" end="8">Visible</animation>
             <animation effect="rotate" center="1100,200" start="8" end="0" time="200" reversible="false">Hidden</animation>
         </definition>
-	</include>
+    </include>
 </includes>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2006">
-	<defaultcontrol always="true">-</defaultcontrol>
+    <defaultcontrol always="true">-</defaultcontrol>
     <onload condition="Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)">RunScript(script.artistslideshow)</onload>
 
-	<controls>
-		<control type="visualisation" id="2">
-			<include name="FullscreenDimensions" />
-		</control>
+    <controls>
+        <control type="visualisation" id="2">
+            <include content="FullscreenDimensions" />
+        </control>
 
         <control type="multiimage">
             <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</visible>
-			<include name="FullscreenDimensions" />
+            <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <timeperimage>8000</timeperimage>
             <fadetime>500</fadetime>
@@ -18,27 +18,27 @@
             <randomize>true</randomize>
         </control>        
         
-		<control type="group">
+        <control type="group">
             <visible>!Window.IsVisible(VisualisationSettings) + !Window.IsVisible(VisualisationPresetList)</visible>
 
             <control type="group">
                 <visible>Player.ShowInfo</visible>
-                <include name="MediaInformationLabelForOSD" />
-                <include name="MediaPlaylistPositionLabelForOSD" />
-                <include name="MediaNameLabelForOSD" />
-                <include name="MediaStarRatingIconForOSD" />
-                <include name="MediaSeekBarForOSD" />
+                <include content="MediaInformationLabelForOSD" />
+                <include content="MediaPlaylistPositionLabelForOSD" />
+                <include content="MediaNameLabelForOSD" />
+                <include content="MediaStarRatingIconForOSD" />
+                <include content="MediaSeekBarForOSD" />
             </control>
             
             <control type="group">
                 <visible>Player.ShowCodec</visible>
-                <include name="MediaVisualisationLabelForOSD" />
+                <include content="MediaVisualisationLabelForOSD" />
             </control>
                 
             <control type="group">
                 <visible>[Player.ShowInfo + Skin.HasSetting(MediaIcons.Visible)] | Player.ShowCodec</visible>
-                <include name="DefaultAnimationForOSD" />
-                <include name="HorizontalListOfMusicPlayerMediaFlag">
+                <include content="DefaultAnimationForOSD" />
+                <include content="HorizontalListOfMusicPlayerMediaFlag">
                     <param name="posx" value="340" />
                     <param name="posy" value="870" />
                 </include>
@@ -46,8 +46,8 @@
             
             <control type="group">
                 <visible>Player.ShowInfo | Player.ShowCodec</visible>
-                <include name="MediaThumbnailIconForOSD" />
+                <include content="MediaThumbnailIconForOSD" />
             </control>
-		</control>
-	</controls>
+        </control>
+    </controls>
 </window>

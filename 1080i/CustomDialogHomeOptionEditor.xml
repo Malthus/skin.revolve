@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1196">
-	<defaultcontrol always="true">31</defaultcontrol>
+    <defaultcontrol always="true">31</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
-	<controls>
-		<control type="group">
-			<posy>PosYForSixLinesDialog</posy>
-            <include name="WindowForDialog">
+    <controls>
+        <control type="group">
+            <posy>PosYForSixLinesDialog</posy>
+            <include content="WindowForDialog">
                 <param name="height" value="HeightForSixLinesDialog" />
                 <param name="headerlabel" value="$INFO[Window.Property(CustomOptionName)] $LOCALIZE[31974]" />
                 <param name="iconsmallvisible" value="true" />
@@ -14,7 +14,7 @@
                 <param name="icontexture" value="icons/icon-pencil.png" />
             </include>
 
-			<control type="grouplist" id="5">
+            <control type="grouplist" id="5">
                 <posx>560</posx>
                 <posy>80</posy>
                 <width>1240</width>
@@ -24,7 +24,7 @@
                 <usecontrolcoords>true</usecontrolcoords>
                 <onup>21</onup>
                 <ondown>25</ondown>
-				<onleft>9000</onleft>
+                <onleft>9000</onleft>
 
                 <control type="label" id="30">
                     <width>1240</width>
@@ -91,39 +91,39 @@
                 </control>
             </control>
 
-			<control type="grouplist" id="9000">
-                <include name="MarkupForButtonListForDialog">
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="180" />
                     <param name="height" value="140" />
                 </include>
                 <onup>35</onup>
                 <ondown>31</ondown>
-				<onright>5</onright>
+                <onright>5</onright>
 
-				<control type="button" id="25">
-					<description>Clear Button</description>
-					<label>$LOCALIZE[192]</label>
-					<onclick>ClearProperty(CustomBackgroundImage)</onclick>
-				</control>
-				<control type="button" id="20">
+                <control type="button" id="25">
+                    <description>Clear Button</description>
+                    <label>$LOCALIZE[192]</label>
+                    <onclick>ClearProperty(CustomBackgroundImage)</onclick>
+                </control>
+                <control type="button" id="20">
                     <description>Ok Button</description>
                     <posy>20</posy>
-					<label>$LOCALIZE[186]</label>
+                    <label>$LOCALIZE[186]</label>
                     <onclick condition="!Substring(Window.Property(CustomOptionActive),T,Left)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
                     <onclick condition="Substring(Window.Property(CustomOptionActive),T,Left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
-					<onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
+                    <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
                     <onclick condition="!Substring(Window.Property(CustomOptionImmutablePath),T,Left)">Skin.Reset($INFO[Window.Property(TargetOption)].ImmutablePath)</onclick>
                     <onclick condition="Substring(Window.Property(CustomOptionImmutablePath),T,Left)">Skin.SetBool($INFO[Window.Property(TargetOption)].ImmutablePath)</onclick>
                     <onclick condition="!Substring(Window.Property(CustomOptionCustomWindow),T,Left)">Skin.Reset($INFO[Window.Property(TargetOption)].CustomWindow)</onclick>
                     <onclick condition="Substring(Window.Property(CustomOptionCustomWindow),T,Left)">Skin.SetBool($INFO[Window.Property(TargetOption)].CustomWindow)</onclick>
-					<onclick>Close</onclick>
-				</control>
-				<control type="button" id="21">
+                    <onclick>Close</onclick>
+                </control>
+                <control type="button" id="21">
                     <description>Cancel Button</description>
-					<label>$LOCALIZE[222]</label>
-					<onclick>Close</onclick>
-				</control>
-			</control>
-		</control>
-	</controls>
+                    <label>$LOCALIZE[222]</label>
+                    <onclick>Close</onclick>
+                </control>
+            </control>
+        </control>
+    </controls>
 </window>
