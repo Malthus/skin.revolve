@@ -84,6 +84,11 @@
             </include>
 
             <include content="ContentTypeForDebug">
+                <param name="visible" value="Container.Content(roles)" />
+                <param name="label" value="Roles" />
+            </include>
+
+            <include content="ContentTypeForDebug">
                 <param name="visible" value="Container.Content(studios)" />
                 <param name="label" value="Studios" />
             </include>
