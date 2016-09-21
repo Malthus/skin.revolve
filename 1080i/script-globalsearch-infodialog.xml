@@ -24,9 +24,9 @@
                 
                 <content>
                     <item>
-                        <visible>!String.IsEmpty(Container(100).ListItem.Property(ChannelNumber))</visible>
+                        <visible>!String.IsEmpty(Container(100).ListItem.Property(ChannelName))</visible>
                         <label>$LOCALIZE[19029]</label>
-                        <label2>$INFO[Container(100).ListItem.Property(ChannelNumber)]$INFO[Container(100).ListItem.Property(ChannelName), | ]</label2>
+                        <label2>$INFO[Container(100).ListItem.Property(ChannelName)]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
