@@ -11,19 +11,19 @@
 
     <include name="EmptyBackground">
         <definition>
-            <control type="largeimage">
+            <control type="image">
                 <include content="FullscreenDimensions" />
-                <texture>black.png</texture>
+                <texture background="true">black.png</texture>
             </control>
         </definition>
     </include>
     
     <include name="DefaultBackground">
         <definition>
-            <control type="largeimage">
+            <control type="image">
                 <visible>!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(Background.Visualiser.Active)] | [Player.HasVideo + !Skin.HasSetting(Background.Video.Active)]</visible>
                 <include content="FullscreenDimensions" />
-                <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
+                <texture colordiffuse="$VAR[BackgroundColor]" background="true">white.png</texture>
             </control>
         </definition>
     </include>
@@ -33,7 +33,7 @@
             <control type="group">
                 <visible>Skin.HasSetting(Background.Image.Active) + [!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(Background.Visualiser.Active)] | [Player.HasVideo + !Skin.HasSetting(Background.Video.Active)]]</visible>
 
-                <control type="largeimage">
+                <control type="image">
                     <include content="FadeAnimationForBackground" />
                     <include content="FullscreenDimensions" />
                     <fadetime>500</fadetime>
@@ -51,12 +51,12 @@
                     <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
 
-                <control type="largeimage">
+                <control type="image">
                     <visible>Skin.HasSetting(Background.Image.Faded)</visible>
                     <include content="FadeAnimationForBackground" />
                     <include content="FullscreenDimensions" />
                     <fadetime>500</fadetime>
-                    <texture colordiffuse="$VAR[FademaskColor]">white.png</texture>
+                    <texture colordiffuse="$VAR[FademaskColor]" background="true">white.png</texture>
                 </control>
         </control>
         </definition>
@@ -72,7 +72,7 @@
                     <include content="FullscreenDimensions" />
                 </control>
             
-                <control type="largeimage">
+                <control type="image">
                     <visible>Skin.HasSetting(Background.Visualiser.Faded)</visible>
                     <include content="FadeAnimationForBackground" />
                     <include content="FullscreenDimensions" />
@@ -92,7 +92,7 @@
                     <include content="FullscreenDimensions" />
                 </control>
             
-                <control type="largeimage">
+                <control type="image">
                     <visible>Skin.HasSetting(Background.Video.Faded)</visible>
                     <include content="FadeAnimationForBackground" />
                     <include content="FullscreenDimensions" />
