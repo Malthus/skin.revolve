@@ -7,7 +7,7 @@
 
 		<control type="button" id="200">
             <description>Skin Settings Initialisation</description>
-			<visible>!Skin.HasSetting(RevolveConfiguration) + IsEmpty(Skin.String(Revolve.Configuration))</visible>
+			<visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
 			<include name="DefaultSettingsForSkinSettings" />
@@ -62,7 +62,7 @@
 			<defaultcontrol>8</defaultcontrol>
 			<onup>300</onup>
 			<ondown>300</ondown>
-			<onleft condition="[Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source))] | [Container(300).HasFocus(6) + !IsEmpty(Skin.String(CircleEpisodeOption.Source))] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable)] | [Container(300).HasFocus(16) + !IsEmpty(Skin.String(CircleAlbumOption.Source))]">600</onleft>
+			<onleft condition="[Container(300).HasFocus(5) + !String.IsEmpty(Skin.String(CircleMovieOption.Source))] | [Container(300).HasFocus(6) + !String.IsEmpty(Skin.String(CircleEpisodeOption.Source))] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable)] | [Container(300).HasFocus(16) + !String.IsEmpty(Skin.String(CircleAlbumOption.Source))]">600</onleft>
 			<onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)">900</onleft>
 			<onright>Noop</onright>
 

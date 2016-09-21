@@ -24,145 +24,145 @@
 				
 				<content>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(ChannelNumber))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(ChannelNumber))</visible>
 						<label>$LOCALIZE[19029]</label>
 						<label2>$INFO[Container(100).ListItem.Property(ChannelNumber)]$INFO[Container(100).ListItem.Property(ChannelName), | ]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Starttime))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Starttime))</visible>
 						<label>$LOCALIZE[555]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Starttime)]$INFO[Container(100).ListItem.Property(Endtime), - ]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(TvShowTitle))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(TvShowTitle))</visible>
 						<label>$LOCALIZE[20364]</label>
 						<label2>$INFO[Container(100).ListItem.Property(TvShowTitle)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Season))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Season))</visible>
 						<label>$LOCALIZE[20373]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Season)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Episode))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Episode))</visible>
 						<label>$LOCALIZE[20359]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Episode)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist))</visible>
 						<label>$LOCALIZE[557]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Born))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Born))</visible>
 						<label>$LOCALIZE[21893]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist_Born)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
 						<label>$LOCALIZE[21897]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist_Died)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Formed))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Formed))</visible>
 						<label>$LOCALIZE[21894]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist_Formend)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Disbanded))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Disbanded))</visible>
 						<label>$LOCALIZE[21896]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist_Disbanded)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist_YearsActive))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_YearsActive))</visible>
 						<label>$LOCALIZE[21898]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist_YearsActive)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Album))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Album))</visible>
 						<label>$LOCALIZE[558]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Album)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Track))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Track))</visible>
 						<label>$LOCALIZE[554]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Track)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Year))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Year))</visible>
 						<label>$LOCALIZE[562]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Year)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Duration))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Duration))</visible>
 						<label>$LOCALIZE[180]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Duration)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Studio))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Studio))</visible>
 						<label>$LOCALIZE[572]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Studio)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Director))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Director))</visible>
 						<label>$LOCALIZE[20339]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Director)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Writer))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Writer))</visible>
 						<label>$LOCALIZE[20417]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Writer)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Genre))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Genre))</visible>
 						<label>$LOCALIZE[515]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Genre)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Style))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Style))</visible>
 						<label>$LOCALIZE[176]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist_Style)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Mood))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Mood))</visible>
 						<label>$LOCALIZE[175]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Artist_Mood)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Album_Style))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Album_Style))</visible>
 						<label>$LOCALIZE[176]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Album_Style)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Album_Mood))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Album_Mood))</visible>
 						<label>$LOCALIZE[175]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Album_Mood)]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Container(100).ListItem.Property(Mpaa))</visible>
+						<visible>!String.IsEmpty(Container(100).ListItem.Property(Mpaa))</visible>
 						<label>$LOCALIZE[20074]</label>
 						<label2>$INFO[Container(100).ListItem.Property(Mpaa)]</label2>
 						<onclick>Noop</onclick>

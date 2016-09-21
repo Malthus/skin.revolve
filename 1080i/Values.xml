@@ -212,8 +212,8 @@
 
 	<include name="MediaSettingsMigratedValues">
         <definition>
-            <onfocus condition="!IsEmpty(AddonLyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(AddonLyrics)])</onfocus>
-            <onfocus condition="!IsEmpty(Music.LyricsAddon)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(Music.LyricsAddon)])</onfocus>
+            <onfocus condition="!String.IsEmpty(AddonLyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(AddonLyrics)])</onfocus>
+            <onfocus condition="!String.IsEmpty(Music.LyricsAddon)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(Music.LyricsAddon)])</onfocus>
             <onfocus>Skin.Reset(Media.ArtistSlideshowVisualization.Active)</onfocus>
             <onfocus condition="Skin.HasSetting(PlayerArtwork.Visible)">Skin.SetBool(Media.PlayerArtwork.Visible)</onfocus>
             <onfocus condition="!Skin.HasSetting(PlayerArtwork.Visible)">Skin.Reset(Media.PlayerArtwork.Visible)</onfocus>

@@ -37,109 +37,109 @@
 				
 				<content>
                     <item>
-                        <visible>!IsEmpty(ListItem.OriginalTitle) + !StringCompare(ListItem.OriginalTitle,Listitem.Title)</visible>
+                        <visible>!String.IsEmpty(ListItem.OriginalTitle) + !StringCompare(ListItem.OriginalTitle,Listitem.Title)</visible>
                         <label>$LOCALIZE[20376]</label>
                         <label2>$INFO[ListItem.OriginalTitle]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+                        <visible>!String.IsEmpty(ListItem.TVShowTitle)</visible>
                         <label>$LOCALIZE[20364]</label>
                         <label2>$INFO[ListItem.TVShowTitle]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Season)</visible>
+                        <visible>!String.IsEmpty(ListItem.Season)</visible>
                         <label>$LOCALIZE[20373]</label>
                         <label2>$INFO[ListItem.Season]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Episode)</visible>
+                        <visible>!String.IsEmpty(ListItem.Episode)</visible>
                         <label>$LOCALIZE[20359]</label>
                         <label2>$INFO[ListItem.Episode]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.EpisodeName)</visible>
+                        <visible>!String.IsEmpty(ListItem.EpisodeName)</visible>
                         <label>$LOCALIZE[21442]</label>
                         <label2>$INFO[ListItem.EpisodeName]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Artist)</visible>
+                        <visible>!String.IsEmpty(ListItem.Artist)</visible>
                         <label>$LOCALIZE[557]</label>
                         <label2>$INFO[ListItem.Artist]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Album)</visible>
+                        <visible>!String.IsEmpty(ListItem.Album)</visible>
                         <label>$LOCALIZE[558]</label>
                         <label2>$INFO[ListItem.Album]</label2>
                         <onclick>Noop</onclick>
                     </item>
 					<item>
-						<visible>!IsEmpty(ListItem.Year)</visible>
+						<visible>!String.IsEmpty(ListItem.Year)</visible>
 						<label>$LOCALIZE[172]</label>
 						<label2>$INFO[ListItem.Year]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.Premiered)</visible>
+						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 						<label>$LOCALIZE[20416]</label>
 						<label2>$INFO[ListItem.Premiered]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 						<label>$LOCALIZE[180]</label>
 						<label2>$INFO[ListItem.Duration] $LOCALIZE[31901]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						<label>$LOCALIZE[515]</label>
 						<label2>$INFO[ListItem.Genre]</label2>
 						<onclick>Noop</onclick>
 					</item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Studio)</visible>
+                        <visible>!String.IsEmpty(ListItem.Studio)</visible>
                         <label>$LOCALIZE[572]</label>
                         <label2>$INFO[ListItem.Studio]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Writer)</visible>
+                        <visible>!String.IsEmpty(ListItem.Writer)</visible>
                         <label>$LOCALIZE[20417]</label>
                         <label2>$INFO[ListItem.Writer]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Director)</visible>
+                        <visible>!String.IsEmpty(ListItem.Director)</visible>
                         <label>$LOCALIZE[20339]</label>
                         <label2>$INFO[ListItem.Director]</label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
-                        <visible>!IsEmpty(ListItem.Country)</visible>
+                        <visible>!String.IsEmpty(ListItem.Country)</visible>
                         <label>$LOCALIZE[574]</label>
                         <label2>$INFO[ListItem.Country]</label2>
                         <onclick>Noop</onclick>
                     </item>
 					<item>
-						<visible>!IsEmpty(ListItem.MPAA)</visible>
+						<visible>!String.IsEmpty(ListItem.MPAA)</visible>
 						<label>$LOCALIZE[20074]</label>
 						<label2>$INFO[ListItem.MPAA]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+						<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
 						<label>$LOCALIZE[563]</label>
 						<label2>$INFO[ListItem.RatingAndVotes]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.UserRating)</visible>
+						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 						<label>$LOCALIZE[33067]</label>
 						<label2>$INFO[ListItem.UserRating]</label2>
 						<onclick>Noop</onclick>

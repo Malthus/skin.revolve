@@ -25,7 +25,7 @@
 			<!-- Folderpath Labels -->
 
 			<control type="group">
-                <visible>StringCompare(Skin.String(Debug.Info.AdditionalType),P) + !IsEmpty(Container.FolderPath)</visible>
+                <visible>StringCompare(Skin.String(Debug.Info.AdditionalType),P) + !String.IsEmpty(Container.FolderPath)</visible>
 				<include name="InformationForDebug">
                     <param name="label" value="$INFO[Container.FolderPath]" />
                 </include>
@@ -139,7 +139,7 @@
             </include>
 
 			<include name="ContentTypeForDebug">
-                <param name="visible" value="!IsEmpty(Container.ListItem.ChannelNumber)" />
+                <param name="visible" value="!String.IsEmpty(Container.ListItem.ChannelNumber)" />
                 <param name="label" value="Radio/TV Items" />
             </include>
 

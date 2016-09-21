@@ -130,7 +130,7 @@
 					<description>Ok Button</description>
 					<label>$LOCALIZE[186]</label>
 					<onclick>Skin.SetString($INFO[Window.Property(DialogTarget)],$INFO[Control.GetLabel(9)])</onclick>
-					<onclick condition="!IsEmpty(Window.Property(DialogRelatedTarget))">Skin.SetString($INFO[Window.Property(DialogRelatedTarget)],$INFO[Control.GetLabel(10)])</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(DialogRelatedTarget))">Skin.SetString($INFO[Window.Property(DialogRelatedTarget)],$INFO[Control.GetLabel(10)])</onclick>
 					<onclick>Dialog.Close(1185)</onclick>
 					<onclick>Close</onclick>
 				</control>

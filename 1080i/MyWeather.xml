@@ -40,56 +40,56 @@
 					<onclick>Noop</onclick>
 				</item>
 				<item id="1">
-					<visible>!IsEmpty(Window(weather).Property(Day0.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day0.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day0.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day0.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day0.OutlookIcon)]</icon>
 					<onclick>Noop</onclick>
 				</item>
 				<item id="2">
-					<visible>!IsEmpty(Window(weather).Property(Day1.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day1.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day1.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day1.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
 					<onclick>Noop</onclick>
 				</item>
 				<item id="3">
-					<visible>!IsEmpty(Window(weather).Property(Day2.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day2.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day2.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day2.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
 					<onclick>Noop</onclick>
 				</item>
 				<item id="4">
-					<visible>!IsEmpty(Window(weather).Property(Day3.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day3.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day3.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day3.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day3.OutlookIcon)]</icon>
 					<onclick>Noop</onclick>
 				</item>
 				<item id="5">
-					<visible>!IsEmpty(Window(weather).Property(Day4.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day4.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day4.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day4.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day4.OutlookIcon)]</icon>
 					<onclick>Noop</onclick>
 				</item>
 				<item id="6">
-					<visible>!IsEmpty(Window(weather).Property(Day5.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day5.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day5.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day5.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day5.OutlookIcon)]</icon>
 					<onclick>Noop</onclick>
 				</item>
 				<item id="7">
-					<visible>!IsEmpty(Window(weather).Property(Day6.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day6.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day6.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day6.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day6.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day6.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day6.OutlookIcon)]</icon>
 					<onclick>Noop</onclick>
 				</item>
 				<item id="8">
-					<visible>!IsEmpty(Window(weather).Property(Day7.Title))</visible>
+					<visible>!String.IsEmpty(Window(weather).Property(Day7.Title))</visible>
 					<label>$INFO[Window(weather).Property(Day7.Title)]</label>
 					<property name="Weather">$LOCALIZE[31480]: $INFO[Window(weather).Property(Day7.LowTemp)]$INFO[System.TemperatureUnits] / $INFO[Window(weather).Property(Day7.HighTemp)]$INFO[System.TemperatureUnits] | $LOCALIZE[33030]: $INFO[Window(weather).Property(Day7.Outlook)]</property>
 					<icon>$INFO[Window(weather).Property(Day7.OutlookIcon)]</icon>

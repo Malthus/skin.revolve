@@ -433,7 +433,7 @@
     
         <definition>
             <control type="radiobutton" id="$PARAM[id]">
-                <visible>Skin.HasSetting($PARAM[lastitem].Active) | !IsEmpty(Skin.String($PARAM[lastitem].Name)) | Skin.HasSetting($PARAM[variable].Active) | !IsEmpty(Skin.String($PARAM[variable].Name))</visible>
+                <visible>Skin.HasSetting($PARAM[lastitem].Active) | !String.IsEmpty(Skin.String($PARAM[lastitem].Name)) | Skin.HasSetting($PARAM[variable].Active) | !String.IsEmpty(Skin.String($PARAM[variable].Name))</visible>
                 <width>1100</width>
                 <radioposx>1040</radioposx>
                 <align>left</align>

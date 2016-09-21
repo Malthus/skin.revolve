@@ -13,7 +13,7 @@
             </control>
             
             <control type="group">
-                <visible>!IsEmpty(ListItem.Label2)</visible>
+                <visible>!String.IsEmpty(ListItem.Label2)</visible>
                 <control type="label">
                     <posx>20</posx>
                     <posy>5</posy>
@@ -35,7 +35,7 @@
             </control>
             
             <control type="group">
-                <visible>IsEmpty(ListItem.Label2)</visible>
+                <visible>String.IsEmpty(ListItem.Label2)</visible>
                 <control type="label">
                     <posx>20</posx>
                     <posy>15</posy>
@@ -62,7 +62,7 @@
             </control>
         
             <control type="group">
-                <visible>!IsEmpty(ListItem.Label2)</visible>
+                <visible>!String.IsEmpty(ListItem.Label2)</visible>
                 <control type="label">
                     <posx>20</posx>
                     <posy>5</posy>
@@ -84,7 +84,7 @@
             </control>
             
             <control type="group">
-                <visible>IsEmpty(ListItem.Label2)</visible>
+                <visible>String.IsEmpty(ListItem.Label2)</visible>
                 <control type="label">
                     <posx>20</posx>
                     <posy>15</posy>
@@ -111,7 +111,7 @@
             </control>
         
             <control type="group">
-                <visible>!IsEmpty(ListItem.Label2)</visible>
+                <visible>!String.IsEmpty(ListItem.Label2)</visible>
                 <control type="label">
                     <posx>20</posx>
                     <posy>5</posy>
@@ -133,7 +133,7 @@
             </control>
             
             <control type="group">
-                <visible>IsEmpty(ListItem.Label2)</visible>
+                <visible>String.IsEmpty(ListItem.Label2)</visible>
                 <control type="label">
                     <posx>20</posx>
                     <posy>15</posy>

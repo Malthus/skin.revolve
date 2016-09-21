@@ -732,7 +732,7 @@
 
         <definition>
             <control type="button" id="$PARAM[id]">
-                <enable>!IsEmpty(Skin.String(Media.MusicLyricsAddon.Script))</enable>
+                <enable>!String.IsEmpty(Skin.String(Media.MusicLyricsAddon.Script))</enable>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>

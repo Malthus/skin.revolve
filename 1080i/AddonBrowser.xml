@@ -10,7 +10,7 @@
 
 		<control type="button" id="200">
             <description>Skin Settings Initialisation</description>
-			<visible>!Skin.HasSetting(RevolveConfiguration) + IsEmpty(Skin.String(Revolve.Configuration))</visible>
+			<visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
 			<texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
 			<include name="DefaultSettingsForSkinSettings" />

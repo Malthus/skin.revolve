@@ -251,7 +251,7 @@
                 </control>
             
                 <control type="group">
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-1).Label)</visible>
+                    <visible>!String.IsEmpty(Container($PARAM[listid]).ListItemNoWrap(-1).Label)</visible>
 
                     <control type="group">
                         <visible>Container($PARAM[listid]).OnNext</visible>
@@ -363,7 +363,7 @@
                 </control>
             
                 <control type="group">
-                    <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap(1).Label)</visible>
+                    <visible>!String.IsEmpty(Container($PARAM[listid]).ListItemNoWrap(1).Label)</visible>
 
                     <control type="group">
                         <visible>Container($PARAM[listid]).OnPrevious</visible>
@@ -469,7 +469,7 @@
     
         <definition>
             <control type="group">
-                <visible>!IsEmpty(Container($PARAM[listid]).ListItemNoWrap($PARAM[listindex]).Label)</visible>
+                <visible>!String.IsEmpty(Container($PARAM[listid]).ListItemNoWrap($PARAM[listindex]).Label)</visible>
                 <animation type="Conditional" condition="true">
                     <effect type="zoom" center="960,724" end="80" />
                     <effect type="rotate" center="auto" end="0" />

@@ -19,11 +19,11 @@
 			
                 <control type="group">
                     <visible>!System.HasHiddenInput + System.HasAddon(plugin.program.autocompletion) + Skin.HasSetting(Keyboard.AutoCompleteActive)</visible>
-                    <animation type="Conditional" reversible="false" condition="!IsEmpty(Container(5000).ListItem.Label)">
+                    <animation type="Conditional" reversible="false" condition="!String.IsEmpty(Container(5000).ListItem.Label)">
                         <effect type="fade" end="100" time="200" />
                         <effect type="slide" start="0,260" end="0,0" time="200" tween="cubic" easing="out" />
                     </animation>	
-                    <animation type="Conditional" reversible="false" condition="IsEmpty(Container(5000).ListItem.Label)">
+                    <animation type="Conditional" reversible="false" condition="String.IsEmpty(Container(5000).ListItem.Label)">
                         <effect type="fade" start="100" end="0" time="200" />
                         <effect type="slide" start="0,0" end="0,260" time="200" tween="cubic" easing="out" />
                     </animation>

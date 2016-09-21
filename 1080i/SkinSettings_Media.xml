@@ -73,7 +73,7 @@
 
                 <control type="button" id="702">
                     <description>Lyrics Settings Button</description>
-                    <visible>!IsEmpty(Skin.String(Media.MusicLyricsAddon.Script))</visible>
+                    <visible>!String.IsEmpty(Skin.String(Media.MusicLyricsAddon.Script))</visible>
                     <width>1100</width>
                     <align>left</align>
                     <label>- $LOCALIZE[5]</label>

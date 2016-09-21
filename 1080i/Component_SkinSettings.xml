@@ -70,7 +70,7 @@
                     <onleft>$PARAM[onleft]</onleft>
                     <onright>$PARAM[onright]</onright>
                     <onclick>Skin.SetString($INFO[$PARAM[target]],FF$PARAM[color])</onclick>
-					<onclick condition="!IsEmpty($PARAM[relatedtarget])">Skin.SetString($INFO[$PARAM[relatedtarget]],$PARAM[relatedcolorprefix]$PARAM[color])</onclick>
+					<onclick condition="!String.IsEmpty($PARAM[relatedtarget])">Skin.SetString($INFO[$PARAM[relatedtarget]],$PARAM[relatedcolorprefix]$PARAM[color])</onclick>
 					<onclick>Close</onclick>
                 </control>
 
@@ -221,7 +221,7 @@
                 </include>
 
                 <control type="group">
-                    <visible>!Skin.HasSetting(RevolveConfiguration) + IsEmpty(Skin.String(Revolve.Configuration))</visible>
+                    <visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
 
                     <include name="TextboxForDialog">
                         <param name="posy" value="80" />

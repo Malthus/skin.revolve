@@ -37,7 +37,7 @@
             </control>
 
 			<control type="button" id="30">
-				<enable>!IsEmpty(Window.Property(CustomizableOption))</enable>
+				<enable>!String.IsEmpty(Window.Property(CustomizableOption))</enable>
 				<posx>560</posx>
 				<posy>160</posy>
 				<width>1240</width>
@@ -55,7 +55,7 @@
 			</control>
 
 			<control type="button" id="31">
-				<enable>!IsEmpty(Window.Property(CustomizableOption))</enable>
+				<enable>!String.IsEmpty(Window.Property(CustomizableOption))</enable>
 				<posx>560</posx>
 				<posy>200</posy>
 				<width>1240</width>
@@ -399,7 +399,7 @@
 				<control type="button" id="24">
 					<description>Edit Submenu Button</description>
                     <visible>StringCompare(Window.Property(CustomOptionType),M)</visible>
-                    <enable>!IsEmpty(Window.Property(CustomSourceInfo))</enable>
+                    <enable>!String.IsEmpty(Window.Property(CustomSourceInfo))</enable>
 					<label>$LOCALIZE[31806]</label>
 					<onclick>SetProperty(CustomMenuTitle,$INFO[Window.Property(CustomMenuTitle)],1192)</onclick>
 					<onclick>SetProperty(TargetOption,$INFO[Window.Property(CustomSourceInfo)],1192)</onclick>

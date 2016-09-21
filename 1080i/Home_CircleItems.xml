@@ -3,7 +3,7 @@
 	<include name="HomeCircleItems">
 		<control type="group">
             <control type="fixedlist" id="600">
-                <visible allowhiddenfocus="true">Control.HasFocus(600) | [Container(300).HasFocus(5) + !IsEmpty(Skin.String(CircleMovieOption.Source)) + Skin.HasSetting(CircleMovieOption.NotInvisible)] | [Container(300).HasFocus(6) + !IsEmpty(Skin.String(CircleEpisodeOption.Source)) + Skin.HasSetting(CircleEpisodeOption.NotInvisible)] | [Container(300).HasFocus(16) + !IsEmpty(Skin.String(CircleAlbumOption.Source)) + Skin.HasSetting(CircleAlbumOption.NotInvisible)] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable) + Skin.HasSetting(CircleNextAired.NotInvisible)]</visible>
+                <visible allowhiddenfocus="true">Control.HasFocus(600) | [Container(300).HasFocus(5) + !String.IsEmpty(Skin.String(CircleMovieOption.Source)) + Skin.HasSetting(CircleMovieOption.NotInvisible)] | [Container(300).HasFocus(6) + !String.IsEmpty(Skin.String(CircleEpisodeOption.Source)) + Skin.HasSetting(CircleEpisodeOption.NotInvisible)] | [Container(300).HasFocus(16) + !String.IsEmpty(Skin.String(CircleAlbumOption.Source)) + Skin.HasSetting(CircleAlbumOption.NotInvisible)] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable) + Skin.HasSetting(CircleNextAired.NotInvisible)]</visible>
                 <description>Items In Circle List</description>
                 <animation effect="fade" start="0" end="100" time="500">Visible</animation>
                 <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
@@ -147,7 +147,7 @@
                     </control>
                     
                     <control type="image">
-                        <visible>!IsEmpty(ListItem.Property(Number))</visible>
+                        <visible>!String.IsEmpty(ListItem.Property(Number))</visible>
                         <posx>120</posx>
                         <posy>625</posy>
                         <width>30</width>
@@ -177,7 +177,7 @@
 	
 	<include name="ListOfHomeCircleItems">
 		<item id="5">
-            <visible>Container(300).HasFocus(5) + IsEmpty(Window.Property(CircleMovie01Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + String.IsEmpty(Window.Property(CircleMovie01Option.Name))</visible>
 			<label>-</label>
 			<label2>-</label2>
 			<icon>-</icon>
@@ -185,7 +185,7 @@
 			<onclick>Noop</onclick>
 		</item>
 		<item id="6">
-            <visible>Container(300).HasFocus(6) + IsEmpty(Window.Property(CircleEpisode01Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + String.IsEmpty(Window.Property(CircleEpisode01Option.Name))</visible>
 			<label>-</label>
 			<label2>-</label2>
 			<icon>-</icon>
@@ -193,7 +193,7 @@
 			<onclick>Noop</onclick>
 		</item>
 		<item id="15">
-            <visible>Container(300).HasFocus(15) + IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + String.IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
 			<label>-</label>
 			<label2>-</label2>
 			<icon>circle/tvshows-fallback.jpg</icon>
@@ -201,7 +201,7 @@
 			<onclick>Noop</onclick>
 		</item>
 		<item id="16">
-            <visible>Container(300).HasFocus(16) + IsEmpty(Window.Property(CircleAlbum01Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + String.IsEmpty(Window.Property(CircleAlbum01Option.Name))</visible>
 			<label>-</label>
 			<label2>-</label2>
 			<icon>-</icon>
@@ -210,7 +210,7 @@
 		</item>
 
 		<item id="50">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie01Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie01Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie01Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie01Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie01Option.BackgroundImage)]</icon>
@@ -219,7 +219,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie01Option.Action)]</onclick>
 		</item>
 		<item id="51">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie02Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie02Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie02Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie02Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie02Option.BackgroundImage)]</icon>
@@ -228,7 +228,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie02Option.Action)]</onclick>
 		</item>
 		<item id="52">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie03Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie03Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie03Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie03Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie03Option.BackgroundImage)]</icon>
@@ -237,7 +237,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie03Option.Action)]</onclick>
 		</item>
 		<item id="53">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie04Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie04Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie04Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie04Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie04Option.BackgroundImage)]</icon>
@@ -246,7 +246,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie04Option.Action)]</onclick>
 		</item>
 		<item id="54">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie05Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie05Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie05Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie05Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie05Option.BackgroundImage)]</icon>
@@ -255,7 +255,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie05Option.Action)]</onclick>
 		</item>
 		<item id="55">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie06Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie06Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie06Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie06Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie06Option.BackgroundImage)]</icon>
@@ -264,7 +264,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie06Option.Action)]</onclick>
 		</item>
 		<item id="56">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie07Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie07Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie07Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie07Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie07Option.BackgroundImage)]</icon>
@@ -273,7 +273,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie07Option.Action)]</onclick>
 		</item>
 		<item id="57">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie08Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie08Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie08Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie08Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie08Option.BackgroundImage)]</icon>
@@ -282,7 +282,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie08Option.Action)]</onclick>
 		</item>
 		<item id="58">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie09Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie09Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie09Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie09Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie09Option.BackgroundImage)]</icon>
@@ -291,7 +291,7 @@
 			<onclick>$INFO[Window.Property(CircleMovie09Option.Action)]</onclick>
 		</item>
 		<item id="59">
-            <visible>Container(300).HasFocus(5) + !IsEmpty(Window.Property(CircleMovie10Option.Name))</visible>
+            <visible>Container(300).HasFocus(5) + !String.IsEmpty(Window.Property(CircleMovie10Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleMovie10Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleMovie10Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleMovie10Option.BackgroundImage)]</icon>
@@ -301,7 +301,7 @@
 		</item>
 
 		<item id="60">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode01Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode01Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode01Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode01Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode01Option.Thumbnail)]</icon>
@@ -310,7 +310,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode01Option.Action)]</onclick>
 		</item>
 		<item id="61">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode02Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode02Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode02Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode02Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode02Option.Thumbnail)]</icon>
@@ -319,7 +319,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode02Option.Action)]</onclick>
 		</item>
 		<item id="62">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode03Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode03Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode03Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode03Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode03Option.Thumbnail)]</icon>
@@ -328,7 +328,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode03Option.Action)]</onclick>
 		</item>
 		<item id="63">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode04Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode04Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode04Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode04Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode04Option.Thumbnail)]</icon>
@@ -337,7 +337,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode04Option.Action)]</onclick>
 		</item>
 		<item id="64">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode05Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode05Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode05Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode05Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode05Option.Thumbnail)]</icon>
@@ -346,7 +346,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode05Option.Action)]</onclick>
 		</item>
 		<item id="65">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode06Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode06Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode06Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode06Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode06Option.Thumbnail)]</icon>
@@ -355,7 +355,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode06Option.Action)]</onclick>
 		</item>
 		<item id="66">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode07Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode07Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode07Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode07Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode07Option.Thumbnail)]</icon>
@@ -364,7 +364,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode07Option.Action)]</onclick>
 		</item>
 		<item id="67">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode08Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode08Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode08Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode08Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode08Option.Thumbnail)]</icon>
@@ -373,7 +373,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode08Option.Action)]</onclick>
 		</item>
 		<item id="68">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode09Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode09Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode09Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode09Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode09Option.Thumbnail)]</icon>
@@ -382,7 +382,7 @@
 			<onclick>$INFO[Window.Property(CircleEpisode09Option.Action)]</onclick>
 		</item>
 		<item id="69">
-            <visible>Container(300).HasFocus(6) + !IsEmpty(Window.Property(CircleEpisode10Option.Name))</visible>
+            <visible>Container(300).HasFocus(6) + !String.IsEmpty(Window.Property(CircleEpisode10Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleEpisode10Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleEpisode10Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleEpisode10Option.Thumbnail)]</icon>
@@ -392,7 +392,7 @@
 		</item>
         
 		<item id="150">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.1.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.1.AirTime)]$INFO[Window.Property(NextAired.1.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.1.Thumb)]</icon>
@@ -401,7 +401,7 @@
 			<onclick>$INFO[Window.Property(NextAired.1.Path)]</onclick>
 		</item>
 		<item id="151">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.2.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.2.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.2.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.2.AirTime)]$INFO[Window.Property(NextAired.2.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.2.Thumb)]</icon>
@@ -410,7 +410,7 @@
 			<onclick>$INFO[Window.Property(NextAired.2.Path)]</onclick>
 		</item>
 		<item id="152">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.3.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.3.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.3.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.3.AirTime)]$INFO[Window.Property(NextAired.3.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.3.Thumb)]</icon>
@@ -419,7 +419,7 @@
 			<onclick>$INFO[Window.Property(NextAired.3.Path)]</onclick>
 		</item>
 		<item id="153">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.4.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.4.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.4.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.4.AirTime)]$INFO[Window.Property(NextAired.4.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.4.Thumb)]</icon>
@@ -428,7 +428,7 @@
 			<onclick>$INFO[Window.Property(NextAired.4.Path)]</onclick>
 		</item>
 		<item id="154">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.5.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.5.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.5.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.5.AirTime)]$INFO[Window.Property(NextAired.5.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.5.Thumb)]</icon>
@@ -437,7 +437,7 @@
 			<onclick>$INFO[Window.Property(NextAired.5.Path)]</onclick>
 		</item>
 		<item id="155">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.6.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.6.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.6.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.6.AirTime)]$INFO[Window.Property(NextAired.6.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.6.Thumb)]</icon>
@@ -446,7 +446,7 @@
 			<onclick>$INFO[Window.Property(NextAired.6.Path)]</onclick>
 		</item>
 		<item id="156">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.7.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.7.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.7.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.7.AirTime)]$INFO[Window.Property(NextAired.7.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.7.Thumb)]</icon>
@@ -455,7 +455,7 @@
 			<onclick>$INFO[Window.Property(NextAired.7.Path)]</onclick>
 		</item>
 		<item id="157">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.8.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.8.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.8.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.8.AirTime)]$INFO[Window.Property(NextAired.8.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.8.Thumb)]</icon>
@@ -464,7 +464,7 @@
 			<onclick>$INFO[Window.Property(NextAired.8.Path)]</onclick>
 		</item>
 		<item id="158">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.9.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.9.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.9.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.9.AirTime)]$INFO[Window.Property(NextAired.9.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.9.Thumb)]</icon>
@@ -473,7 +473,7 @@
 			<onclick>$INFO[Window.Property(NextAired.9.Path)]</onclick>
 		</item>
 		<item id="159">
-            <visible>Container(300).HasFocus(15) + !IsEmpty(Window.Property(NextAired.10.NextDate))</visible>
+            <visible>Container(300).HasFocus(15) + !String.IsEmpty(Window.Property(NextAired.10.NextDate))</visible>
 			<label>$INFO[Window.Property(NextAired.10.Label)]</label>
 			<label2>$INFO[Window.Property(NextAired.10.AirTime)]$INFO[Window.Property(NextAired.10.Runtime), | , $LOCALIZE[31901]]</label2>
 			<icon>$INFO[Window.Property(NextAired.10.Thumb)]</icon>
@@ -483,7 +483,7 @@
 		</item>
 
 		<item id="160">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum01Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum01Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum01Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum01Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum01Option.Thumbnail)]</icon>
@@ -492,7 +492,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum01Option.Action)]</onclick>
 		</item>
 		<item id="161">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum02Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum02Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum02Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum02Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum02Option.Thumbnail)]</icon>
@@ -501,7 +501,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum02Option.Action)]</onclick>
 		</item>
 		<item id="162">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum03Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum03Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum03Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum03Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum03Option.Thumbnail)]</icon>
@@ -510,7 +510,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum03Option.Action)]</onclick>
 		</item>
 		<item id="163">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum04Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum04Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum04Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum04Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum04Option.Thumbnail)]</icon>
@@ -519,7 +519,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum04Option.Action)]</onclick>
 		</item>
 		<item id="164">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum05Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum05Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum05Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum05Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum05Option.Thumbnail)]</icon>
@@ -528,7 +528,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum05Option.Action)]</onclick>
 		</item>
 		<item id="165">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum06Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum06Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum06Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum06Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum06Option.Thumbnail)]</icon>
@@ -537,7 +537,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum06Option.Action)]</onclick>
 		</item>
 		<item id="166">+
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum07Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum07Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum07Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum07Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum07Option.Thumbnail)]</icon>
@@ -546,7 +546,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum07Option.Action)]</onclick>
 		</item>
 		<item id="167">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum08Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum08Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum08Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum08Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum08Option.Thumbnail)]</icon>
@@ -555,7 +555,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum08Option.Action)]</onclick>
 		</item>
 		<item id="168">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum09Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum09Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum09Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum09Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum09Option.Thumbnail)]</icon>
@@ -564,7 +564,7 @@
 			<onclick>$INFO[Window.Property(CircleAlbum09Option.Action)]</onclick>
 		</item>
 		<item id="169">
-            <visible>Container(300).HasFocus(16) + !IsEmpty(Window.Property(CircleAlbum10Option.Name))</visible>
+            <visible>Container(300).HasFocus(16) + !String.IsEmpty(Window.Property(CircleAlbum10Option.Name))</visible>
 			<label>$INFO[Window.Property(CircleAlbum10Option.Name)]</label>
 			<label2>$INFO[Window.Property(CircleAlbum10Option.Subtitle)]</label2>
 			<icon>$INFO[Window.Property(CircleAlbum10Option.Thumbnail)]</icon>

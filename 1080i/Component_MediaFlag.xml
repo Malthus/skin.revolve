@@ -86,7 +86,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>60</width>
             
                 <control type="image">
@@ -124,7 +124,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>160</width>
             
                 <control type="image">
@@ -154,7 +154,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>100</width>
             
                 <control type="image">
@@ -184,7 +184,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>70</width>
             
                 <control type="image">
@@ -245,7 +245,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>160</width>
             
                 <control type="image">
@@ -267,7 +267,7 @@
             </control>
             
             <control type="group">
-                <visible>IsEmpty($PARAM[infolabel]) + !Container.Content(addons) + [SubString($PARAM[filelabel],ape) | SubString($PARAM[filelabel],flac) | SubString($PARAM[filelabel],mp3) | SubString($PARAM[filelabel],wav) | SubString($PARAM[filelabel],wma)]</visible>
+                <visible>String.IsEmpty($PARAM[infolabel]) + !Container.Content(addons) + [SubString($PARAM[filelabel],ape) | SubString($PARAM[filelabel],flac) | SubString($PARAM[filelabel],mp3) | SubString($PARAM[filelabel],wav) | SubString($PARAM[filelabel],wma)]</visible>
                 <width>160</width>
 
                 <control type="image">
@@ -338,7 +338,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>120</width>
             
                 <control type="image">
@@ -467,7 +467,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>180</width>
             
                 <control type="image">
@@ -553,7 +553,7 @@
         
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>180</width>
             
                 <control type="image">
@@ -593,7 +593,7 @@
             
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>100</width>
             
                 <control type="image">
@@ -632,7 +632,7 @@
             
         <definition>
             <control type="group">
-                <visible>!IsEmpty($PARAM[infolabel])</visible>
+                <visible>!String.IsEmpty($PARAM[infolabel])</visible>
                 <width>160</width>
             
                 <control type="image">

@@ -144,7 +144,7 @@
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label" id="1">
-                        <visible>!IsEmpty(ListItem.Label)</visible>
+                        <visible>!String.IsEmpty(ListItem.Label)</visible>
                         <posx>8</posx>
                         <posy>40</posy>
                         <width>44</width>
@@ -176,7 +176,7 @@
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label" id="1">
-                        <visible>!IsEmpty(ListItem.Label)</visible>
+                        <visible>!String.IsEmpty(ListItem.Label)</visible>
                         <posx>8</posx>
                         <posy>40</posy>
                         <width>44</width>

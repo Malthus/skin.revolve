@@ -28,105 +28,105 @@
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.BackendName)</visible>
+						<visible>!String.IsEmpty(Pvr.BackendName)</visible>
 						<label>$LOCALIZE[551]</label>
 						<label2>$INFO[Pvr.BackendName]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.BackendHost)</visible>
+						<visible>!String.IsEmpty(Pvr.BackendHost)</visible>
 						<label>$LOCALIZE[31994]</label>
 						<label2>$INFO[Pvr.BackendHost]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.BackendVersion)</visible>
+						<visible>!String.IsEmpty(Pvr.BackendVersion)</visible>
 						<label>$LOCALIZE[19114]</label>
 						<label2>$INFO[Pvr.BackendVersion]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.BackendChannels)</visible>
+						<visible>!String.IsEmpty(Pvr.BackendChannels)</visible>
 						<label>$LOCALIZE[19019]</label>
 						<label2>$INFO[Pvr.BackendChannels]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.BackendTimers)</visible>
+						<visible>!String.IsEmpty(Pvr.BackendTimers)</visible>
 						<label>$LOCALIZE[19040]</label>
 						<label2>$INFO[Pvr.BackendTimers]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.BackendRecordings)</visible>
+						<visible>!String.IsEmpty(Pvr.BackendRecordings)</visible>
 						<label>$LOCALIZE[19163]</label>
 						<label2>$INFO[Pvr.BackendRecordings]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.BackendDiskspace)</visible>
+						<visible>!String.IsEmpty(Pvr.BackendDiskspace)</visible>
 						<label>$LOCALIZE[31995]</label>
 						<label2>$INFO[Pvr.BackendDiskspace]</label2>
 						<onclick>Noop</onclick>
 					</item>
 
 					<item>
-						<visible>!IsEmpty(Pvr.NowRecordingTitle) | !IsEmpty(Pvr.NowRecordingDateTime) | !IsEmpty(Pvr.NowRecordingChannel)</visible>
+						<visible>!String.IsEmpty(Pvr.NowRecordingTitle) | !String.IsEmpty(Pvr.NowRecordingDateTime) | !String.IsEmpty(Pvr.NowRecordingChannel)</visible>
 						<label>-</label>
 						<label2>-</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NowRecordingTitle) | !IsEmpty(Pvr.NowRecordingDateTime) | !IsEmpty(Pvr.NowRecordingChannel)</visible>
+						<visible>!String.IsEmpty(Pvr.NowRecordingTitle) | !String.IsEmpty(Pvr.NowRecordingDateTime) | !String.IsEmpty(Pvr.NowRecordingChannel)</visible>
 						<label>$LOCALIZE[31418]</label>
 						<label2>-</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NowRecordingTitle)</visible>
+						<visible>!String.IsEmpty(Pvr.NowRecordingTitle)</visible>
 						<label>$LOCALIZE[369]</label>
 						<label2>$INFO[Pvr.NowRecordingTitle]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NowRecordingDateTime)</visible>
+						<visible>!String.IsEmpty(Pvr.NowRecordingDateTime)</visible>
 						<label>$LOCALIZE[14063]</label>
 						<label2>$INFO[Pvr.NowRecordingDateTime]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NowRecordingChannel)</visible>
+						<visible>!String.IsEmpty(Pvr.NowRecordingChannel)</visible>
 						<label>$LOCALIZE[19029]</label>
 						<label2>$INFO[Pvr.NowRecordingChannel]</label2>
 						<onclick>Noop</onclick>
 					</item>
 
 					<item>
-						<visible>!IsEmpty(Pvr.NextRecordingTitle) | !IsEmpty(Pvr.NextRecordingDateTime) | !IsEmpty(Pvr.NextRecordingChannel)</visible>
+						<visible>!String.IsEmpty(Pvr.NextRecordingTitle) | !String.IsEmpty(Pvr.NextRecordingDateTime) | !String.IsEmpty(Pvr.NextRecordingChannel)</visible>
 						<label>-</label>
 						<label2>-</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NextRecordingTitle) | !IsEmpty(Pvr.NextRecordingDateTime) | !IsEmpty(Pvr.NextRecordingChannel)</visible>
+						<visible>!String.IsEmpty(Pvr.NextRecordingTitle) | !String.IsEmpty(Pvr.NextRecordingDateTime) | !String.IsEmpty(Pvr.NextRecordingChannel)</visible>
 						<label>$LOCALIZE[31419]</label>
 						<label2>-</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NextRecordingTitle)</visible>
+						<visible>!String.IsEmpty(Pvr.NextRecordingTitle)</visible>
 						<label>$LOCALIZE[369]</label>
 						<label2>$INFO[Pvr.NextRecordingTitle]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NextRecordingDateTime)</visible>
+						<visible>!String.IsEmpty(Pvr.NextRecordingDateTime)</visible>
 						<label>$LOCALIZE[14063]</label>
 						<label2>$INFO[Pvr.NextRecordingDateTime]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(Pvr.NextRecordingChannel)</visible>
+						<visible>!String.IsEmpty(Pvr.NextRecordingChannel)</visible>
 						<label>$LOCALIZE[19029]</label>
 						<label2>$INFO[Pvr.NextRecordingChannel]</label2>
 						<onclick>Noop</onclick>

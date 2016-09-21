@@ -147,7 +147,7 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-					<visible>!IsEmpty(Container(11).ListItem.Icon)</visible>
+					<visible>!String.IsEmpty(Container(11).ListItem.Icon)</visible>
 					<posx>44</posx>
 					<posy>810</posy>
 					<width>262</width>
@@ -156,7 +156,7 @@
 					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				</control>
 				<control type="label">
-					<visible>IsEmpty(Container(11).ListItem.Icon)</visible>
+					<visible>String.IsEmpty(Container(11).ListItem.Icon)</visible>
 					<posx>42</posx>
 					<posy>806</posy>
 					<width>270</width>

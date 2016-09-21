@@ -610,7 +610,7 @@
 	<include name="VideoFilterActivateButtonForSideMenu">
         <definition>
             <control type="button" id="21">
-                <visible>IsEmpty(Window.Property(filter))</visible>
+                <visible>String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$LOCALIZE[587]</label>
                 <onclick>SendClick(videolibrary,19)</onclick>
@@ -622,7 +622,7 @@
 	<include name="MusicFilterActivateButtonForSideMenu">
         <definition>
             <control type="button" id="21">
-                <visible>IsEmpty(Window.Property(filter))</visible>
+                <visible>String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$LOCALIZE[587]</label>
                 <onclick>SendClick(musiclibrary,19)</onclick>
@@ -652,7 +652,7 @@
 	<include name="VideoFilterShowButtonForSideMenu">
         <definition>
             <control type="button" id="22">
-                <visible>!IsEmpty(Window.Property(filter))</visible>
+                <visible>!String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$INFO[Window.Property(filter)]</label>
                 <onclick>SendClick(videolibrary,19)</onclick>
@@ -664,7 +664,7 @@
 	<include name="MusicFilterShowButtonForSideMenu">
         <definition>
             <control type="button" id="22">
-                <visible>!IsEmpty(Window.Property(filter))</visible>
+                <visible>!String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$LOCALIZE[587] - $INFO[Window.Property(filter)]</label>
                 <onclick>SendClick(musiclibrary,19)</onclick>
@@ -724,8 +724,8 @@
             <control type="button" id="32">
                 <align>left</align>
                 <label>$LOCALIZE[22020]</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvguide)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radioguide)</onclick>
+                <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvguide)</onclick>
+                <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radioguide)</onclick>
                 <onclick>Control.SetFocus(10)</onclick>
             </control>
         </definition>
@@ -736,8 +736,8 @@
             <control type="button" id="33">
                 <align>left</align>
                 <label>$LOCALIZE[19019]</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvchannels)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiochannels)</onclick>
+                <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvchannels)</onclick>
+                <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiochannels)</onclick>
             </control>
         </definition>
 	</include>
@@ -747,8 +747,8 @@
             <control type="button" id="34">
                 <align>left</align>
                 <label>$LOCALIZE[19163]</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvrecordings)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiorecordings)</onclick>
+                <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvrecordings)</onclick>
+                <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiorecordings)</onclick>
             </control>
         </definition>
 	</include>
@@ -758,8 +758,8 @@
             <control type="button" id="35">
                 <align>left</align>
                 <label>$LOCALIZE[19040]</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvtimers)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiotimers)</onclick>            
+                <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvtimers)</onclick>
+                <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiotimers)</onclick>            
             </control>
         </definition>
 	</include>
@@ -769,8 +769,8 @@
             <control type="button" id="36">
                 <align>left</align>
                 <label>$LOCALIZE[137]</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvsearch)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiosearch)</onclick>
+                <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvsearch)</onclick>
+                <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiosearch)</onclick>
             </control>
         </definition>
 	</include>

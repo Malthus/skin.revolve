@@ -20,25 +20,25 @@
     
     <include name="VisibilityForBanner">
         <definition>
-            <visible>!IsEmpty(ListItem.Art(banner))</visible>
+            <visible>!String.IsEmpty(ListItem.Art(banner))</visible>
         </definition>
     </include>
 	
     <include name="VisibilityForNoBanner">
         <definition>
-            <visible>IsEmpty(ListItem.Art(banner))</visible>
+            <visible>String.IsEmpty(ListItem.Art(banner))</visible>
         </definition>
     </include>
 	
     <include name="VisibilityForThumbnail">
         <definition>
-            <visible>!IsEmpty(ListItem.Art(thumb)) | !IsEmpty(ListItem.Icon)</visible>
+            <visible>!String.IsEmpty(ListItem.Art(thumb)) | !String.IsEmpty(ListItem.Icon)</visible>
         </definition>
     </include>
 	
     <include name="VisibilityForNoThumbnail">
         <definition>
-            <visible>IsEmpty(ListItem.Art(thumb)) + IsEmpty(ListItem.Icon)</visible>
+            <visible>String.IsEmpty(ListItem.Art(thumb)) + String.IsEmpty(ListItem.Icon)</visible>
         </definition>
     </include>
 	

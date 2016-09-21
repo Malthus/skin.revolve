@@ -61,7 +61,7 @@
             </control>
             
 			<control type="group">
-				<visible>!IsEmpty(ListItem.AddonBroken)</visible>
+				<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 				<posx>560</posx>
 				<posy>280</posy>
 

@@ -207,7 +207,7 @@
 
 					<control type="radiobutton" id="307">
 						<description>Circle Movies Not Invisible Option</description>
-                        <enable>!IsEmpty(Skin.String(CircleMovieOption.Source))</enable>
+                        <enable>!String.IsEmpty(Skin.String(CircleMovieOption.Source))</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -228,7 +228,7 @@
 
 					<control type="radiobutton" id="308">
 						<description>Circle Episodes Not Invisible Option</description>
-                        <enable>!IsEmpty(Skin.String(CircleEpisodeOption.Source))</enable>
+                        <enable>!String.IsEmpty(Skin.String(CircleEpisodeOption.Source))</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>
@@ -249,7 +249,7 @@
                     
 					<control type="radiobutton" id="309">
 						<description>Circle Albums Not Invisible Option</description>
-                        <enable>!IsEmpty(Skin.String(CircleAlbumOption.Source))</enable>
+                        <enable>!String.IsEmpty(Skin.String(CircleAlbumOption.Source))</enable>
 						<width>1100</width>
 						<radioposx>1040</radioposx>
 						<align>left</align>

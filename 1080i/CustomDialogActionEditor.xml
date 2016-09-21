@@ -906,7 +906,7 @@
 				</control>
 				<control type="button" id="16">
                     <description>Paste Path Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),P) + !IsEmpty(Skin.String(Revolve.PathClipboard))</visible>
+                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),P) + !String.IsEmpty(Skin.String(Revolve.PathClipboard))</visible>
 					<label>$LOCALIZE[31613]</label>
                     <onclick>SetProperty(ParameterPath,$INFO[Skin.String(Revolve.PathClipboard)])</onclick>
 				</control>

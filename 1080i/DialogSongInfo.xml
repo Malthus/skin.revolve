@@ -23,31 +23,31 @@
 				
 				<content>
 					<item>
-						<visible>!IsEmpty(ListItem.Artist)</visible>
+						<visible>!String.IsEmpty(ListItem.Artist)</visible>
 						<label>$LOCALIZE[557]:</label>
 						<label2>$INFO[ListItem.Artist]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.Album)</visible>
+						<visible>!String.IsEmpty(ListItem.Album)</visible>
 						<label>$LOCALIZE[558]:</label>
 						<label2>$INFO[ListItem.Album]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.Year)</visible>
+						<visible>!String.IsEmpty(ListItem.Year)</visible>
 						<label>$LOCALIZE[562]:</label>
 						<label2>$INFO[ListItem.Year]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 						<label>$LOCALIZE[180]:</label>
 						<label2>$INFO[ListItem.Duration]</label2>
 						<onclick>Noop</onclick>
 					</item>
 					<item>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						<label>$LOCALIZE[515]:</label>
 						<label2>$INFO[ListItem.Genre]</label2>
 						<onclick>Noop</onclick>
