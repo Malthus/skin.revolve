@@ -38,10 +38,18 @@
                     <param name="posy" value="80" />
                     <param name="height" value="120" />
                 </include>
-            
+
+                <include content="SpacerForButtonListForDialog">
+                    <param name="id" value="22" />
+                    <param name="buttonid" value="12" />
+                </include>
                 <control type="button" id="12">
                     <description>Third Button</description>
                 </control>
+                <include content="SpacerForButtonListForDialog">
+                    <param name="id" value="21" />
+                    <param name="buttonid" value="11" />
+                </include>
                 <control type="button" id="11">
                     <description>Yes Button</description>
                 </control>

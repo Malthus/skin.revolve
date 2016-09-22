@@ -195,7 +195,6 @@
             <control type="image" id="$PARAM[id]">
                 <visible>!Control.IsVisible($PARAM[buttonid])</visible>
                 <height>40</height>
-                <texture>-</texture>
             </control>
         </definition>
     </include>
