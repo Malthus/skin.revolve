@@ -23,7 +23,7 @@
             <content>
                 <item id="1">
                     <description>Player Settings</description>
-                    <label>$LOCALIZE[3]</label>
+                    <label>$LOCALIZE[16003]</label>
                     <label2>$LOCALIZE[5]</label2>
                     <property name="Label3">$LOCALIZE[31023]</property>
                     <icon>special://skin/backgrounds/playersettings.jpg</icon>
@@ -31,7 +31,7 @@
                 </item>
                 <item id="2">
                     <description>Media Settings</description>
-                    <label>$LOCALIZE[2]</label>
+                    <label>$LOCALIZE[14211]</label>
                     <label2>$LOCALIZE[5]</label2>
                     <property name="Label3">$LOCALIZE[31023]</property>
                     <icon>special://skin/backgrounds/mediaettings.jpg</icon>
@@ -39,7 +39,7 @@
                 </item>
                 <item id="3">
                     <description>PVR Settings</description>
-                    <label>$LOCALIZE[31001]</label>
+                    <label>$LOCALIZE[31005]</label>
                     <label2>$LOCALIZE[5]</label2>
                     <property name="Label3">$LOCALIZE[31023]</property>
                     <icon>special://skin/backgrounds/pvrsettings.jpg</icon>
@@ -47,8 +47,7 @@
                 </item>
                 <item id="4">
                     <description>Interface Settings</description>
-                    <label>$LOCALIZE[480]</label>
-                    <label2>-</label2>
+                    <label>$LOCALIZE[14206]</label>
                     <property name="Label3">$LOCALIZE[31028]</property>
                     <icon>special://skin/backgrounds/interfacesettings.jpg</icon>
                     <onclick>ActivateWindow(InterfaceSettings)</onclick>
