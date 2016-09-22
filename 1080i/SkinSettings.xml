@@ -724,6 +724,16 @@
                     <onright>Noop</onright>
                     <orientation>vertical</orientation>
 
+                    <control type="label" id="906">
+                        <description>Debug Information Label</description>
+                        <width>1100</width>
+                        <height>40</height>
+                        <font>NormalButtonFont</font>
+                        <textcolor>$VAR[BackgroundColor]</textcolor>
+                        <align>left</align>
+                        <label>$LOCALIZE[31127]</label>
+                    </control>
+                    
                     <control type="radiobutton" id="901">
                         <description>Debug Grid Setting</description>
                         <width>1100</width>
