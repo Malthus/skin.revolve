@@ -192,7 +192,7 @@
         <param name="buttonid" default="0" />
     
         <definition>
-            <control type="image" id="$PARAM[id]">
+            <control type="label" id="$PARAM[id]">
                 <visible>!Control.IsVisible($PARAM[buttonid])</visible>
                 <height>40</height>
             </control>
