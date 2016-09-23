@@ -19,34 +19,21 @@
         </control>        
         
         <control type="group">
-            <visible>!Window.IsVisible(addonsettings) + !Window.IsVisible(VisualisationPresetList)</visible>
-
-            <control type="group">
-                <visible>Player.ShowInfo</visible>
-                <include content="MediaInformationLabelForOSD" />
-                <include content="MediaPlaylistPositionLabelForOSD" />
-                <include content="MediaNameLabelForOSD" />
-                <include content="MediaStarRatingIconForOSD" />
-                <include content="MediaSeekBarForOSD" />
-            </control>
+            <visible>Player.ShowInfo</visible>
+            <include content="MediaThumbnailIconForOSD" />
+            <include content="MediaInformationLabelForOSD" />
+            <include content="MediaPlaylistPositionLabelForOSD" />
+            <include content="MediaNameLabelForOSD" />
+            <include content="MediaStarRatingIconForOSD" />
+            <include content="MediaSeekBarForOSD" />
             
             <control type="group">
-                <visible>Player.ShowCodec</visible>
-                <include content="MediaVisualisationLabelForOSD" />
-            </control>
-                
-            <control type="group">
-                <visible>[Player.ShowInfo + Skin.HasSetting(MediaIcons.Visible)] | Player.ShowCodec</visible>
+                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
                 <include content="DefaultAnimationForOSD" />
                 <include content="HorizontalListOfMusicPlayerMediaFlag">
                     <param name="posx" value="340" />
                     <param name="posy" value="870" />
                 </include>
-            </control>
-            
-            <control type="group">
-                <visible>Player.ShowInfo | Player.ShowCodec</visible>
-                <include content="MediaThumbnailIconForOSD" />
             </control>
         </control>
     </controls>

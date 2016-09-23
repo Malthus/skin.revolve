@@ -4,50 +4,26 @@
 
     <controls>
         <control type="group">
-            <visible>Player.ShowCodec + ![Window.IsVisible(addonsettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+            <include content="InvisibleLabel">
+                <param name="id" value="10" />
+            </include>
+            <include content="InvisibleLabel">
+                <param name="id" value="11" />
+            </include>
+            <include content="InvisibleLabel">
+                <param name="id" value="12" />
+            </include>
+        </control>
 
-            <control type="group">
-                <posx>40</posx>
-                <posy>90</posy>
-                <include>ShadowForDefaultCircleThumbnailIcon</include>
-                <include>BackgroundForDefaultCircleThumbnailIcon</include>
-        
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>4</posy>
-                    <width>262</width>
-                    <height>262</height>
-                    <texture colordiffuse="$VAR[BackgroundColor]">icons/icon-projector.png</texture>
-                    <aspectratio>scale</aspectratio>
-                </control>
-            </control>
-                
-            <control type="group">
-                <posx>340</posx>
-                <posy>90</posy>
-
-                <include content="InvisibleLabel">
-                    <param name="id" value="10" />
-                </include>
-                <include content="InvisibleLabel">
-                    <param name="id" value="11" />
-                </include>
-                <include content="InvisibleLabel">
-                    <param name="id" value="12" />
-                </include>
-                <include content="OutlineLabel">
-                    <param name="width" value="1530" />
-                    <param name="height" value="360" />
-                    <param name="font" value="MessageTextFont" />
-                    <param name="textcolor" value="$VAR[BackgroundColor]" />
-                    <param name="outlinecolor" value="$VAR[MainColor]" />
-                    <param name="outlinesize" value="2" />
-                    <param name="align" value="left" />
-                    <param name="aligny" value="top" />
-                    <param name="wrapmultiline" value="true" />
-                    <param name="label" value="$LOCALIZE[445]: $INFO[Control.GetLabel(10)][CR]$LOCALIZE[444]: $INFO[Control.GetLabel(11)][CR]$LOCALIZE[16000]: $INFO[Control.GetLabel(12)]" />
-                </include>
-            </control>
+        <control type="group">
+            <description>Caching Animation</description>
+            <visible>Player.Caching</visible>
+			<animation effect="fade" delay="500" time="200">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+            <include content="DefaultBusyAnimationForProgressBar">
+                <param name="posx" value="40" />
+                <param name="posy" value="40" />
+            </include>
         </control>
     </controls>
 </window>
