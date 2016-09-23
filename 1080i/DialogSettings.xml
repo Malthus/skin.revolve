@@ -11,7 +11,7 @@
             <include content="WindowForDialog">
                 <param name="height" value="HeightForThirteenLinesDialog" />
                 <param name="headerid" value="2" />
-                <param name="icontexture" value="icons/icon-projector.png" />
+                <param name="icontexture" value="icons/icon-settings.png" />
             </include>
 
             <control type="grouplist" id="5">
@@ -48,6 +48,15 @@
                 <include content="SpacerForButtonListForDialog">
                     <param name="id" value="31" />
                     <param name="buttonid" value="30" />
+                </include>
+                <include content="SpacerForButtonListForDialog">
+                    <param name="id" value="32" />
+                    <param name="buttonid" value="28" />
+                    <param name="posy" value="40" />
+                </include>
+                <include content="SpacerForButtonListForDialog">
+                    <param name="id" value="33" />
+                    <param name="buttonid" value="29" />
                 </include>
                 <control type="button" id="30">
                     <description>Settings/Clear Button</description>
