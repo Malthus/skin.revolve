@@ -15,13 +15,13 @@
             </include>
 
             <include content="DefaultIconForWindowForDialog">
-                <param name="visible" value="!Window.IsVisible(gamepadinput)" />
+                <param name="visible" value="!Window.Is(gamepadinput)" />
                 <param name="iconlabel" value="$LOCALIZE[31904]" />
                 <param name="iconthumbnail" value="$INFO[Container(6).ListItem.Icon]" />
             </include>
 
             <include content="DefaultIconForWindowForDialog">
-                <param name="visible" value="Window.IsVisible(gamepadinput)" />
+                <param name="visible" value="Window.Is(gamepadinput)" />
                 <param name="icontexture" value="icons/icon-gamepad.png" />
             </include>
 

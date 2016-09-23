@@ -14,12 +14,12 @@
             </include>
 
             <include content="DefaultIconForWindowForDialog">
-                <param name="visible" value="!Window.IsVisible(pvrrecordinginfo)" />
+                <param name="visible" value="!Window.Is(pvrrecordinginfo)" />
                 <param name="icontexture" value="icons/icon-television.png" />
             </include>
             
             <include content="DefaultIconForWindowForDialog">
-                <param name="visible" value="Window.IsVisible(pvrrecordinginfo)" />
+                <param name="visible" value="Window.Is(pvrrecordinginfo)" />
                 <param name="icontexture" value="icons/icon-clapperboard.png" />
             </include>
             

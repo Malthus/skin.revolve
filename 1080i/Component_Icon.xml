@@ -297,7 +297,7 @@
             </control>
         
             <control type="group">
-                <visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + Window.IsVisible(mutebug)</visible>
+                <visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + Player.Muted</visible>
                 <include content="FadeMaskForDefaultCircleThumbnailIcon" />
             
                 <control type="group">
@@ -348,7 +348,7 @@
             </control>
         
             <control type="group">
-                <visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + !Window.IsVisible(mutebug)</visible>
+                <visible>[Player.Forwarding | Player.Rewinding | Player.Paused] + !Player.Muted</visible>
                 <include content="FadeMaskForDefaultCircleThumbnailIcon" />
             
                 <control type="group">
@@ -390,7 +390,7 @@
             </control>
         
             <control type="group">
-                <visible>![Player.Forwarding | Player.Rewinding | Player.Paused] + Window.IsVisible(mutebug)</visible>
+                <visible>![Player.Forwarding | Player.Rewinding | Player.Paused] + Player.Muted</visible>
                 <include content="FadeMaskForDefaultCircleThumbnailIcon" />
             
                 <control type="image" id="901">
