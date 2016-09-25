@@ -389,7 +389,7 @@
 
             <include content="DialogNameForDebug">
                 <param name="dialog" value="contentsettings" />
-                <param name="label" value="contentsettings (DialogContentSettings.xml)" />
+                <param name="label" value="contentsettings (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
@@ -429,12 +429,12 @@
         
             <include content="DialogNameForDebug">
                 <param name="dialog" value="locksettings" />
-                <param name="label" value="locksettings (LockSettings.xml)" />
+                <param name="label" value="locksettings (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
                 <param name="dialog" value="mediafilter" />
-                <param name="label" value="mediafilter (DialogMediaFilter.xml)" />
+                <param name="label" value="mediafilter (DialogSettings.xml)" />
             </include>
         
             <include content="DialogNameForDebug">
@@ -459,7 +459,7 @@
 
             <include content="DialogNameForDebug">
                 <param name="dialog" value="networksetup" />
-                <param name="label" value="networksetup (DialogNetworkSetup.xml)" />
+                <param name="label" value="networksetup (DialogSettings.xml)" />
             </include>
         
             <include content="DialogNameForDebug">
@@ -479,22 +479,22 @@
 
             <include content="DialogNameForDebug">
                 <param name="dialog" value="osdaudiodspsettings" />
-                <param name="label" value="osdaudiodspsettings (DialogAudioDSPSettings.xml)" />
+                <param name="label" value="osdaudiodspsettings (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
                 <param name="dialog" value="osdaudiosettings" />
-                <param name="label" value="osdaudiosettings (VideoOSDSettings.xml)" />
+                <param name="label" value="osdaudiosettings (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
                 <param name="dialog" value="osdvideosettings" />
-                <param name="label" value="osdvideosettings (VideoOSDSettings.xml)" />
+                <param name="label" value="osdvideosettings (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
                 <param name="dialog" value="peripheralsettings" />
-                <param name="label" value="peripheralsettings (DialogPeripheralSettings.xml)" />
+                <param name="label" value="peripheralsettings (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
@@ -506,10 +506,15 @@
                 <param name="dialog" value="playercontrols" />
                 <param name="label" value="playercontrols (PlayerControls.xml)" />
             </include>
-        
+
+            <include content="DialogNameForDebug">
+                <param name="dialog" value="playercontrols" />
+                <param name="label" value="playerprocessinfo (DialogPlayerProcessInfo.xml)" />
+            </include>
+
             <include content="DialogNameForDebug">
                 <param name="dialog" value="profilesettings" />
-                <param name="label" value="profilesettings (ProfileSettings.xml)" />
+                <param name="label" value="profilesettings (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
@@ -554,7 +559,7 @@
         
             <include content="DialogNameForDebug">
                 <param name="dialog" value="pvrtimersetting" />
-                <param name="label" value="pvrtimersetting (DialogPVRTimerSettings.xml)" />
+                <param name="label" value="pvrtimersetting (DialogSettings.xml)" />
             </include>
 
             <include content="DialogNameForDebug">
