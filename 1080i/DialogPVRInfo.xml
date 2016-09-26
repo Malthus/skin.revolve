@@ -163,35 +163,32 @@
                 </include>
                 <onright>61</onright>
 
-                <control type="image" id="2">
-                    <visible>!Window.IsActive(pvrguideinfo) + !Window.IsActive(pvrrecordinginfo)</visible>
+                <control type="label" id="2">
+                    <visible>!Window.Is(pvrguideinfo) + !Window.Is(pvrrecordinginfo)</visible>
                     <height>120</height>
-                    <texture>-</texture>
                 </control>
-                <control type="image" id="3">
-                    <visible>Window.IsActive(pvrrecordinginfo)</visible>
+                <control type="label" id="3">
+                    <visible>Window.Is(pvrrecordinginfo)</visible>
                     <height>80</height>
-                    <texture>-</texture>
                 </control>
                 <control type="button" id="4">
                     <description>Find Similar Button</description>
-                    <visible>Window.IsActive(pvrguideinfo)</visible>
+                    <visible>Window.Is(pvrguideinfo)</visible>
                     <label>$LOCALIZE[19003]</label>
                 </control>
                 <control type="button" id="5">
                     <description>Switch to Channel Button</description>
-                    <visible>Window.IsActive(pvrguideinfo)</visible>
+                    <visible>Window.Is(pvrguideinfo)</visible>
                     <label>$LOCALIZE[19165]</label>
                 </control>
                 <control type="button" id="8">
                     <description>Play Recording Button</description>
-                    <visible>Window.IsActive(pvrrecordinginfo)</visible>
+                    <visible>Window.Is(pvrrecordinginfo)</visible>
                     <label>$LOCALIZE[19687]</label>
                 </control>
                 <control type="button" id="6">
                     <description>Record Button</description>
-                    <visible>Window.IsActive(pvrguideinfo)</visible>
-                    <label>-</label>
+                    <visible>Window.Is(pvrguideinfo)</visible>
                 </control>
                 <control type="button" id="7">
                     <description>Ok/Close Button</description>
