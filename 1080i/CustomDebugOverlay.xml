@@ -256,6 +256,11 @@
             </include>
 
             <include content="WindowNameForDebug">
+                <param name="window" value="radiotimerrules" />
+                <param name="label" value="radiotimerrules (MyPVRTimers.xml)" />
+            </include>
+
+            <include content="WindowNameForDebug">
                 <param name="window" value="radiotimers" />
                 <param name="label" value="radiotimers (MyPVRTimers.xml)" />
             </include>
@@ -303,6 +308,11 @@
             <include content="WindowNameForDebug">
                 <param name="window" value="tvsearch" />
                 <param name="label" value="tvsearch (MyPVRSearch.xml)" />
+            </include>
+
+            <include content="WindowNameForDebug">
+                <param name="window" value="tvtimerrules" />
+                <param name="label" value="tvtimerrules (MyPVRTimers.xml)" />
             </include>
 
             <include content="WindowNameForDebug">
