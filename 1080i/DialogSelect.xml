@@ -32,8 +32,8 @@
                     <param name="height" value="520" />
                     <param name="pagecontrol" value="21" />
                 </include>
-                <onup>9</onup>
-                <ondown>5</ondown>
+                <onup>3</onup>
+                <ondown>3</ondown>
                 <onleft>9000</onleft>
                 <onright>21</onright>
 
@@ -60,8 +60,8 @@
                     <param name="height" value="520" />
                     <param name="pagecontrol" value="22" />
                 </include>
-                <onup>9</onup>
-                <ondown>5</ondown>
+                <onup>6</onup>
+                <ondown>6</ondown>
                 <onleft>9000</onleft>
                 <onright>22</onright>
                 
@@ -116,26 +116,22 @@
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="500" />
-                    <param name="height" value="100" />
+                    <param name="posy" value="520" />
+                    <param name="height" value="80" />
                 </include>
-                <onup>3</onup>
-                <ondown>3</ondown>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
                 <onright>3</onright>
 
+                <include content="SpacerForButtonListForDialog">
+                    <param name="id" value="8" />
+                    <param name="buttonid" value="5" />
+                </include>
                 <control type="button" id="5">
-                    <description>Manual Search/Get More Button</description>
-                    <label>$LOCALIZE[368]</label>
-                </control>
-                <control type="image" id="8">
-                    <description>Spacer Image</description>
-                    <visible>!Control.IsVisible(5)</visible>
-                    <height>40</height>
-                    <texture>-</texture>
+                    <description>Ok/Manual Search/Get More Button</description>
                 </control>
                 <control type="button" id="7">
                     <description>Cancel Button</description>
-                    <posy>20</posy>
                 </control>
             </control>
         </control>
