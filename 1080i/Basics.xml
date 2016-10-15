@@ -368,11 +368,11 @@
     </include>
 
     <include name="ColorLabel">
+        <param name="visible" default="true" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="color" default="-" />
         <param name="buttonid" default="0" />
-        <param name="visible" default="true" />
 
         <definition>
             <control type="group">
