@@ -24,7 +24,7 @@
                 <content>
                     <item>
                         <label>$LOCALIZE[19012]</label>
-                        <label2>-</label2>
+                        <label2></label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
@@ -72,14 +72,14 @@
 
                     <item>
                         <visible>!String.IsEmpty(Pvr.NowRecordingTitle) | !String.IsEmpty(Pvr.NowRecordingDateTime) | !String.IsEmpty(Pvr.NowRecordingChannel)</visible>
-                        <label>-</label>
-                        <label2>-</label2>
+                        <label></label>
+                        <label2></label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(Pvr.NowRecordingTitle) | !String.IsEmpty(Pvr.NowRecordingDateTime) | !String.IsEmpty(Pvr.NowRecordingChannel)</visible>
                         <label>$LOCALIZE[31418]</label>
-                        <label2>-</label2>
+                        <label2></label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
@@ -103,14 +103,14 @@
 
                     <item>
                         <visible>!String.IsEmpty(Pvr.NextRecordingTitle) | !String.IsEmpty(Pvr.NextRecordingDateTime) | !String.IsEmpty(Pvr.NextRecordingChannel)</visible>
-                        <label>-</label>
-                        <label2>-</label2>
+                        <label></label>
+                        <label2></label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(Pvr.NextRecordingTitle) | !String.IsEmpty(Pvr.NextRecordingDateTime) | !String.IsEmpty(Pvr.NextRecordingChannel)</visible>
                         <label>$LOCALIZE[31419]</label>
-                        <label2>-</label2>
+                        <label2></label2>
                         <onclick>Noop</onclick>
                     </item>
                     <item>
