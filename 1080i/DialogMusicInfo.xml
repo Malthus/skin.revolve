@@ -307,6 +307,8 @@
                     <param name="posy" value="480" />
                     <param name="height" value="200" />
                 </include>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
                 <onright condition="Control.IsVisible(50)">50</onright>
                 <onright condition="!Control.IsVisible(50)">24</onright>
 
