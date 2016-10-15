@@ -485,6 +485,15 @@
         </definition>
     </include>
     
+    <include name="HideDisabledTimersButtonForSideMenu">
+        <definition>
+            <control type="radiobutton" id="8">
+                <align>left</align>
+                <label>$LOCALIZE[19077]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="HideBrokenButtonForSideMenu">
         <definition>
             <control type="radiobutton" id="8">
@@ -493,7 +502,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="EditorClearButtonForSideMenu">
         <definition>
             <control type="button" id="8">
@@ -756,10 +765,18 @@
     <include name="TimersButtonForSideMenu">
         <definition>
             <control type="button" id="35">
+                <visible>!Window.Is(tvtimers) + !Window.Is(radiotimers)</visible>
                 <align>left</align>
-                <label>$LOCALIZE[19040]</label>
+                <label>$LOCALIZE[31494]</label>
                 <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvtimers)</onclick>
                 <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiotimers)</onclick>            
+            </control>
+            <control type="button" id="37">
+                <visible>!Window.Is(tvtimerrules) + !Window.Is(radiotimerrules)</visible>
+                <align>left</align>
+                <label>$LOCALIZE[19138]</label>
+                <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvtimerrules)</onclick>
+                <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiotimerrules)</onclick>            
             </control>
         </definition>
     </include>
