@@ -27,6 +27,11 @@
                     <onright>Noop</onright>
                     <orientation>vertical</orientation>
 
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="123" />
+                        <param name="label" value="$LOCALIZE[31122]" />
+                    </include>
+
                     <control type="radiobutton" id="101">
                         <description>Background Image and Picture Option</description>
                         <width>1100</width>
@@ -111,13 +116,15 @@
                         <onclick>Skin.ToggleSetting(Background.Video.Faded)</onclick>
                     </control>
                     
-                    <control type="label" id="122">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
-                    
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="122" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="124" />
+                        <param name="label" value="$LOCALIZE[31798]" />
+                    </include>
+
                     <control type="button" id="107">
                         <description>Background Animation Option</description>
                         <width>1100</width>
@@ -140,12 +147,9 @@
                         <onclick>ActivateWindow(1188)</onclick>
                     </control>
                     
-                    <control type="label" id="121">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="121" />
+                    </include>
                     
                     <control type="button" id="120">
                         <description>Reset Page Setting Button</description>
@@ -162,7 +166,7 @@
                 <include content="OptionsForHomeMenuSkinSettings" />
 
                 <control type="grouplist" id="300">
-                    <description>Control Area For Background Visuals</description>
+                    <description>Control Area For Circle Items</description>
                     <visible>Container(99).Hasfocus(3)</visible>
                     <width>1100</width>
                     <height>760</height>
@@ -172,6 +176,11 @@
                     <onleft>99</onleft>
                     <onright>Noop</onright>
                     <orientation>vertical</orientation>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="322" />
+                        <param name="label" value="$LOCALIZE[31197]" />
+                    </include>
 
                     <control type="radiobutton" id="305">
                         <description>Circle Next Aired Option</description>
@@ -268,12 +277,9 @@
                         <onclick>Skin.ToggleSetting(CircleExitMenu.Enable)</onclick>
                     </control>
                     
-                    <control type="label" id="321">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="321" />
+                    </include>
                     
                     <control type="button" id="320">
                         <description>Reset Page Setting Button</description>
@@ -298,6 +304,11 @@
                     <onleft>99</onleft>
                     <onright>Noop</onright>
                     <orientation>vertical</orientation>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="424" />
+                        <param name="label" value="$LOCALIZE[31246]" />
+                    </include>
 
                     <control type="button" id="401">
                         <description>Primary Color Theme Option</description>
@@ -339,12 +350,14 @@
                         <param name="colorsetting" value="Colors.HighlightColorCustomValue" />
                     </include>
 
-                    <control type="label" id="421">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="421" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="425" />
+                        <param name="label" value="$LOCALIZE[31248]" />
+                    </include>
 
                     <control type="button" id="402">
                         <description>Background Color Theme Option</description>
@@ -391,12 +404,14 @@
                         <param name="colorsetting" value="Colors.TextColorCustomValue" />
                     </include>
 
-                    <control type="label" id="422">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="422" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="426" />
+                        <param name="label" value="$LOCALIZE[31270]" />
+                    </include>
 
                     <control type="radiobutton" id="410">
                         <description>Show Separate Dialog Key Area Option</description>
@@ -408,12 +423,9 @@
                         <onclick>Skin.ToggleSetting(Colors.ButtonAreaSeparate)</onclick>
                     </control>
                     
-                    <control type="label" id="423">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="423" />
+                    </include>
                     
                     <control type="button" id="419">
                         <description>Panic Button</description>
@@ -457,6 +469,11 @@
                     <onright>899</onright>
                     <orientation>vertical</orientation>
 
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="857" />
+                        <param name="label" value="$LOCALIZE[335]" />
+                    </include>
+
                     <control type="radiobutton" id="803">
                         <description>Visible Title Screen Option</description>
                         <width>1100</width>
@@ -467,12 +484,14 @@
                         <onclick>Skin.ToggleSetting(TitleScreen.Visible)</onclick>
                     </control>
                     
-                    <control type="label" id="852">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="852" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="858" />
+                        <param name="label" value="$LOCALIZE[24140]" />
+                    </include>
 
                     <control type="radiobutton" id="812">
                         <description>Show Name in Thumbnails and Panels Option</description>
@@ -520,12 +539,14 @@
                         <onclick>Skin.ToggleSetting(ViewScrollbar.Visible)</onclick>
                     </control>
 
-                    <control type="label" id="853">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="853" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="859" />
+                        <param name="label" value="$LOCALIZE[31907]" />
+                    </include>
 
                     <control type="radiobutton" id="810">
                         <description>Group Items In Side Menu Option</description>
@@ -557,12 +578,14 @@
                         <onclick>Skin.ToggleSetting(SideMenu.GlobalSearch)</onclick>
                     </control>
 
-                    <control type="label" id="854">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="854" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="860" />
+                        <param name="label" value="$LOCALIZE[31271]" />
+                    </include>
 
                     <control type="radiobutton" id="809">
                         <description>Show Back Button Option</description>
@@ -618,12 +641,14 @@
                         <onclick>Skin.ToggleSetting(NoInformationLabel.Visible)</onclick>
                     </control>
                     
-                    <control type="label" id="856">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="856" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
+                        <param name="id" value="861" />
+                        <param name="label" value="$LOCALIZE[31272]" />
+                    </include>
 
                     <control type="radiobutton" id="823">
                         <description>Auto Completion Activation Radiobutton</description>
@@ -655,13 +680,6 @@
                         <label2>$LOCALIZE[416]</label2>
                     </control>
 
-                    <control type="label" id="855">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
-
                     <control type="radiobutton" id="817">
                         <description>Info Dialog Auto Refresh Option</description>
                         <width>1100</width>
@@ -682,12 +700,9 @@
                         <onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
                     </control>
                     
-                    <control type="label" id="851">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="851" />
+                    </include>
                     
                     <control type="button" id="850">
                         <description>Reset Page Setting Button</description>
@@ -783,12 +798,9 @@
                         <onclick>Skin.ToggleSetting(Debug.ListBorder.Visible)</onclick>
                     </control>
                     
-                    <control type="label" id="903">
-                        <description>Spacer</description>
-                        <width>1100</width>
-                        <height>20</height>
-                        <label>-</label>
-                    </control>
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="903" />
+                    </include>
 
                     <control type="button" id="910">
                         <description>Reload Skin Button</description>

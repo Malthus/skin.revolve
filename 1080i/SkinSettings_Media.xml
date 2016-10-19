@@ -4,14 +4,6 @@
         <control type="group">
             <visible>Container(99).Hasfocus(7)</visible>
         
-            <control type="image">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1100</width>
-                <height>40</height>
-                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
-            </control>
-            
             <control type="grouplist" id="700">
                 <posx>0</posx>
                 <posy>0</posy>
@@ -24,6 +16,11 @@
                 <ondown>700</ondown>
                 <onleft>99</onleft>
                 <onright>799</onright>
+
+                <include content="LabelForSkinSettings">
+                    <param name="id" value="752" />
+                    <param name="label" value="$LOCALIZE[31273]" />
+                </include>
 
                 <control type="radiobutton" id="703">
                     <description>Show OSD / Overlay Player Icon Option</description>
@@ -55,12 +52,14 @@
                     <onclick>Skin.ToggleSetting(Media.OverlayBackground.Visible)</onclick>
                 </control>
 
-                <control type="label" id="751">
-                    <description>Spacer</description>
-                    <width>1100</width>
-                    <height>20</height>
-                    <label>-</label>
-                </control>
+                <include content="SpacerForSkinSettings">
+                    <param name="id" value="751" />
+                </include>
+
+                <include content="LabelForSkinSettings">
+                    <param name="id" value="755" />
+                    <param name="label" value="$LOCALIZE[24001]" />
+                </include>
 
                 <control type="button" id="701">
                     <description>Lyrics Selection Button</description>
@@ -78,13 +77,6 @@
                     <align>left</align>
                     <label>- $LOCALIZE[5]</label>
                     <onclick>Addon.OpenSettings($INFO[Skin.String(Media.MusicLyricsAddon.Script)])</onclick>
-                </control>
-
-                <control type="label" id="752">
-                    <description>Spacer</description>
-                    <width>1100</width>
-                    <height>20</height>
-                    <label>-</label>
                 </control>
 
                 <control type="radiobutton" id="706">
@@ -116,23 +108,14 @@
                     <label2>$LOCALIZE[416]</label2>
                 </control>
 
-                <control type="label" id="753">
-                    <description>Spacer</description>
-                    <width>1100</width>
-                    <height>20</height>
-                    <label>-</label>
-                </control>
+                <include content="SpacerForSkinSettings">
+                    <param name="id" value="753" />
+                </include>
 
-                <control type="button" id="750">
-                    <description>Reset Page Setting Button</description>
-                    <width>1100</width>
-                    <align>left</align>
-                    <label>$LOCALIZE[10041]</label>
-                    <onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
-                    <onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
-                    <onclick>SetProperty(DialogAction,SetFocus(57),1189)</onclick>
-                    <onclick>ActivateWindow(1189)</onclick>
-                </control>
+                <include content="ResetPageButtonForSkinSettings">
+                    <param name="id" value="750" />
+                    <param name="resetbuttonid" value="57" />
+                 </include>
             </control>
 
             <control type="scrollbar" id="799">

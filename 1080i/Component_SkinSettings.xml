@@ -4,6 +4,52 @@
     <include file="SkinSettings_ExitMenu.xml" />
     <include file="SkinSettings_Media.xml" />
 
+    <include name="ResetPageButtonForSkinSettings">
+        <param name="id" default="0" />
+        <param name="resetbuttonid" default="0" />
+        
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <width>1100</width>
+                <height>40</height>
+                <align>left</align>
+                <label>$LOCALIZE[10041]</label>
+                <onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
+                <onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
+                <onclick>SetProperty(DialogAction,SetFocus($PARAM[resetbuttonid]),1189)</onclick>
+                <onclick>ActivateWindow(1189)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="LabelForSkinSettings">
+        <param name="id" default="0" />
+        <param name="label" default="" />
+        
+        <definition>
+            <control type="label" id="$PARAM[id]">
+                <width>1100</width>
+                <height>40</height>
+                <font>NormalButtonFont</font>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
+                <align>left</align>
+                <label>$PARAM[label]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="SpacerForSkinSettings">
+        <param name="id" default="0" />
+        
+        <definition>
+            <control type="label" id="$PARAM[id]">
+                <width>1100</width>
+                <height>20</height>
+                <label>-</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="ColorSettingButtonForSkinSettings">
         <param name="id" default="0" />
         <param name="label" default="-" />

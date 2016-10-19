@@ -15,24 +15,16 @@
                 <onleft>99</onleft>
                 <onright>299</onright>
 
-                <control type="label" id="247">
-                    <description>Home Menu Items Label</description>
-                    <width>1100</width>
-                    <height>40</height>
-                    <font>NormalButtonFont</font>
-                    <textcolor>$VAR[BackgroundColor]</textcolor>
-                    <align>left</align>
-                    <label>$LOCALIZE[31120]</label>
-                </control>
+                <include content="LabelForSkinSettings">
+                    <param name="id" value="247" />
+                    <param name="label" value="$LOCALIZE[31120]" />
+                </include>
 
                 <include content="ButtonsForHomeMenuSkinSettings" />
 
-                <control type="label" id="248">
-                    <description>Spacer</description>
-                    <width>1100</width>
-                    <height>20</height>
-                    <label>-</label>
-                </control>
+                <include content="SpacerForSkinSettings">
+                    <param name="id" value="248" />
+                </include>
 
                 <control type="button" id="249">
                     <description>Rearrange Custom Options Button</description>
@@ -46,17 +38,10 @@
                     <onclick>ActivateWindow(1197)</onclick>
                 </control>
                 
-                <control type="button" id="250">
-                    <description>Reset Page Setting Button</description>
-                    <width>1100</width>
-                    <height>40</height>
-                    <align>left</align>
-                    <label>$LOCALIZE[10041]</label>
-                    <onclick>SetProperty(DialogTitle,$LOCALIZE[31898],1189)</onclick>
-                    <onclick>SetProperty(DialogMessage,$LOCALIZE[31899],1189)</onclick>
-                    <onclick>SetProperty(DialogAction,SetFocus(52),1189)</onclick>
-                    <onclick>ActivateWindow(1189)</onclick>
-                </control>
+                <include content="ResetPageButtonForSkinSettings">
+                    <param name="id" value="250" />
+                    <param name="resetbuttonid" value="52" />
+                 </include>
             </control>
 
             <control type="scrollbar" id="299">
