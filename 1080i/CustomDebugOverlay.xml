@@ -498,6 +498,11 @@
             </include>
 
             <include content="DialogNameForDebug">
+                <param name="dialog" value="osdcmssettings" />
+                <param name="label" value="osdcmssettings (DialogSettings.xml)" />
+            </include>
+
+            <include content="DialogNameForDebug">
                 <param name="dialog" value="osdvideosettings" />
                 <param name="label" value="osdvideosettings (DialogSettings.xml)" />
             </include>
