@@ -41,6 +41,21 @@
                         <param name="posx" value="4" />
                         <param name="posy" value="4" />
                         <param name="onleft" value="416" />
+                        <param name="onright" value="426" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
+                    <include content="ColorButtonForPlayer">
+                        <param name="id" value="426" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="420" />
                         <param name="onright" value="421" />
                     </include>
                 </control>
