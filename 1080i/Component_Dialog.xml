@@ -124,6 +124,30 @@
         </definition>
     </include>
     
+    <include name="HelpButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[10043]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ResetButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[10035]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="SetHelpButtonForDialog">
         <param name="id" default="26" />
         <param name="posy" default="0" />
@@ -315,6 +339,33 @@
         </definition>
     </include>
 
+    <include name="ControlListForDialog">
+        <param name="posy" default="80" />
+        <param name="id" default="0" />
+        <param name="height" default="220" />
+        <param name="pagecontrol" default="-" />
+        <param name="scrolltime" default="200" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="9000" />
+        <param name="onright" default="Noop" />
+        
+        <definition>
+              <control type="grouplist" id="$PARAM[id]">
+                <include content="MarkupForListForDialog">
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="pagecontrol" value="$PARAM[pagecontrolid]" />
+                    <param name="scrolltime" value="$PARAM[scrolltime]" />
+                </include>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+            </control>
+        </definition>
+    </include>
+
     <include name="TextboxForDialog">
         <param name="visible" default="true" />
         <param name="posy" default="80" />
@@ -358,11 +409,11 @@
         </definition>
     </include>
 
-    <include name="ControlListForDialog">
-        <param name="posy" default="80" />
+    <include name="ListForDialog">
         <param name="id" default="0" />
+        <param name="pagecontrolid" default="-" />
+        <param name="posy" default="80" />
         <param name="height" default="220" />
-        <param name="pagecontrol" default="-" />
         <param name="scrolltime" default="200" />
         <param name="onup" default="Noop" />
         <param name="ondown" default="Noop" />
@@ -370,24 +421,28 @@
         <param name="onright" default="Noop" />
         
         <definition>
-              <control type="grouplist" id="$PARAM[id]">
-                <posx>560</posx>
-                <posy>$PARAM[posy]</posy>
-                <width>1240</width>
-                <height>$PARAM[height]</height>
-                <orientation>vertical</orientation>
-                <itemgap>0</itemgap>
-                <usecontrolcoords>true</usecontrolcoords>
-                <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-                <scrolltime>$PARAM[scrolltime]</scrolltime>
-                <onup>$PARAM[onup]</onup>
-                <ondown>$PARAM[ondown]</ondown>
-                <onleft>$PARAM[onleft]</onleft>
-                <onright>$PARAM[onright]</onright>
-            </control>
+            <include content="ControlListForDialog">
+                <param name="posy" value="$PARAM[posy]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="pagecontrol" value="$PARAM[pagecontrolid]" />
+                <param name="scrolltime" value="$PARAM[scrolltime]" />
+                <param name="onup" value="$PARAM[onup]" />
+                <param name="ondown" value="$PARAM[ondown]" />
+                <param name="onleft" value="$PARAM[onleft]" />
+                <param name="onright" value="$PARAM[pagecontrolid]" />
+            </include>
+            
+            <include content="ScrollbarForDialog">
+                <param name="posy" value="$PARAM[posy]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="onup" value="$PARAM[onup]" />
+                <param name="ondown" value="$PARAM[ondown]" />
+                <param name="onleft" value="$PARAM[id]" />
+                <param name="onright" value="$PARAM[onright]" />
+            </include>
         </definition>
     </include>
-    
+
     <include name="DefaultControlsForDialog">
         <param name="buttonid" default="7" />
         <param name="radiobuttonid" default="8" />

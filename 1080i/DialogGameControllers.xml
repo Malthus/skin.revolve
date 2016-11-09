@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">5</defaultcontrol>
+    <menucontrol>9000</menucontrol>
+
+    <controls>
+        <control type="group">
+            <posy>PosYForThirteenLinesDialog</posy>
+            <include content="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerid" value="2" />
+                <param name="icontexture" value="icons/icon-settings.png" />
+            </include>
+
+            <control type="gamecontroller" id="31">
+                <posx>40</posx>
+                <posy>40</posy>
+                <width>500</width>
+                <height>500</height>
+            </control>
+            
+            <include content="ListForDialog">
+                <param name="id" value="3" />
+                <param name="pagecontrolid" value="4" />
+                <param name="posy" value="80" />
+                <param name="height" value="120" />
+                <param name="onup" value="5" />
+                <param name="ondown" value="5" />
+            </include>
+
+            <control type="button" id="10">
+                <width>1240</width>
+                <align>left</align>
+            </control>
+
+            <include content="ListForDialog">
+                <param name="id" value="5" />
+                <param name="pagecontrolid" value="6" />
+                <param name="posy" value="240" />
+                <param name="height" value="320" />
+                <param name="onup" value="3" />
+                <param name="ondown" value="3" />
+            </include>
+
+            <include content="DefaultControlsForDialog">
+                <param name="buttonid" value="7" />
+                <param name="labelid" value="8" />            
+                <param name="imageid" value="9" />
+                <param name="radiobuttonid" value="50" />
+                <param name="spincontrolexid" value="51" />
+                <param name="editvisible" value="false" />
+                <param name="editid" value="52" />
+                <param name="sliderexid" value="53" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
+                    <param name="posy" value="440" />
+                    <param name="height" value="160" />
+                </include>
+                <onright>5</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+
+                <include content="HelpButtonForDialog">
+                    <param name="id" default="17" />
+                </include>
+                <include content="ButtonForDialog">
+                    <param name="id" default="20" />
+                    <param name="label" default="21452" />
+                </include>
+                <include content="ResetButtonForDialog">
+                    <param name="id" default="19" />
+                </include>
+                <include content="OkButtonForDialog">
+                    <param name="id" default="18" />
+                    <param name="posy" value="40" />
+                </include>
+                <include content="CloseButtonForDialog">
+                    <param name="id" default="21" />
+                </include>
+            </control>
+        </control>
+    </controls>
+</window>
+
+<!--
+ 2016-03-12 new dialog - DialogGameControllers.xml
+
+a new dialog, DialogGameControllers.xml (gamecontrollers), has been added to kodi.
+this also introduces a new control type: "gamecontroller"
+
+the new dialog has these builtin id's:
+
+    grouplist id="3" (controller types)
+    button id="10" (template)
+    gamecontroller id="31" (controller artwork)
+
+    grouplist id="5" (feature types)
+    button id="7" (template)
+    control type="label" id="8" (settings category label)
+    control type="image" id="9" (settings category separator)
+
+also three new default icons were added:
+
+    DefaultAddonGame.png
+    DefaultAddonPeripheral.png
+    DefaultGameAddons.png
+
+
+
+confluence example: https://github.com/garbear/skin.confluen...980da6536c
+
+git commit: https://github.com/xbmc/xbmc/commit/e851...32d5ac1246
+pull request: https://github.com/xbmc/xbmc/pull/8807 
+
+
+ 2016-08-15 DialogGameControllers.xml
+
+please add the following controls to this dialog:
+
+
+
+
+git commit: https://github.com/xbmc/xbmc/commit/7564...137a204a6e
+pull request: https://github.com/xbmc/xbmc/pull/10293 
+
+-->
