@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="StarRatingMediaFlag">
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-
-        <definition>
-            <control type="image">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-                <width>180</width>
-                <height>40</height>
-                <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[MainColor]">$VAR[ContentStarRating]</texture>
-            </control>
-        </definition>
-    </include>
-
     <include name="SmallOverlayMediaFlag">
         <definition>
             <control type="image">
@@ -1217,6 +1201,9 @@
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
             
+                <include content="UserRatingMediaFlag">
+                    <param name="infolabel" value="MusicPlayer.UserRating" />
+                </include>
                 <include content="AudioCodecMediaFlag">
                     <param name="infolabel" value="MusicPlayer.Codec" />
                 </include>

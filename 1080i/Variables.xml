@@ -192,16 +192,6 @@
         <value>-</value>
     </variable>
 
-    <variable name="ContentStarRating">
-        <value condition="String.IsEqual(ListItem.StarRating,rating5.png)">icons/rating-5.png</value>
-        <value condition="String.IsEqual(ListItem.StarRating,rating4.png)">icons/rating-4.png</value>
-        <value condition="String.IsEqual(ListItem.StarRating,rating3.png)">icons/rating-3.png</value>
-        <value condition="String.IsEqual(ListItem.StarRating,rating2.png)">icons/rating-2.png</value>
-        <value condition="String.IsEqual(ListItem.StarRating,rating1.png)">icons/rating-1.png</value>
-        <value condition="String.IsEqual(ListItem.StarRating,rating0.png)">icons/rating-0.png</value>
-        <value>icons/rating-0.png</value>
-    </variable>
-
     <variable name="ContentDescription">
         <value condition="Window.Is(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,$LOCALIZE[20334]: ,[CR]]$INFO[ListItem.PictureDatetime,$LOCALIZE[552]: ,[CR]]$INFO[ListItem.Size,$LOCALIZE[21802]: ,[CR]]$INFO[ListItem.PictureResolution,$LOCALIZE[169]: ,[CR][CR]]$INFO[ListItem.PictureISO,$LOCALIZE[21837]: ,[CR]]$INFO[ListItem.PictureAperture,$LOCALIZE[21826]: $LOCALIZE[31916],[CR]]$INFO[ListItem.PictureExpMode,$LOCALIZE[21832]: ,[CR]]$INFO[ListItem.PictureExposure,$LOCALIZE[21829]: ,[CR]]$INFO[ListItem.PictureExpTime,$LOCALIZE[21830]: ,[CR]]$INFO[ListItem.PictureFocalLen,$LOCALIZE[21827]: ,[CR]]$INFO[ListItem.PictureFocusDist,$LOCALIZE[21828]: ,[CR]]$INFO[ListItem.PictureMeteringMode,$LOCALIZE[21836]: ,[CR]]$INFO[ListItem.PictureCamMake,[CR]$LOCALIZE[21822]: ,[CR]]$INFO[ListItem.PictureCamModel,$LOCALIZE[21823]: ,[CR]]$INFO[ListItem.PictureCCDWidth,$LOCALIZE[21839]: ,]</value>
         <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
@@ -370,15 +360,6 @@
         <value>$INFO[Visualisation.Name] | $INFO[Visualisation.Preset]</value>
     </variable>
 
-    <variable name="PlayerStarRating">
-        <value condition="String.IsEqual(Player.StarRating,rating5.png)">icons/rating-5.png</value>
-        <value condition="String.IsEqual(Player.StarRating,rating4.png)">icons/rating-4.png</value>
-        <value condition="String.IsEqual(Player.StarRating,rating3.png)">icons/rating-3.png</value>
-        <value condition="String.IsEqual(Player.StarRating,rating2.png)">icons/rating-2.png</value>
-        <value condition="String.IsEqual(Player.StarRating,rating1.png)">icons/rating-1.png</value>
-        <value condition="String.IsEqual(Player.StarRating,rating0.png)">icons/rating-0.png</value>
-    </variable>
-    
     <variable name="PlayerDirectionIcon">
         <value condition="Player.Paused">icons/player-pause.png</value>
         <value condition="Player.Forwarding">icons/player-fastforward.png</value>
