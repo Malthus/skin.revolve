@@ -86,7 +86,7 @@
     <include name="VideoBackground">
         <definition>
             <control type="group">
-                <visible>Player.HasVideo + Skin.HasSetting(Background.Video.Active)</visible>
+                <visible>Player.HasVideo + Skin.HasSetting(Background.Video.Active) + [!SlideShow.IsActive]</visible>
 
                 <control type="videowindow">
                     <include content="FullscreenDimensions" />
