@@ -227,8 +227,6 @@
                     <param name="posy" value="440" />
                     <param name="height" value="160" />
                 </include>
-                <onup>9001</onup>
-                <ondown>9001</ondown>
                 <onright>24</onright>
 
                 <include content="SpacerForButtonListForDialog">
@@ -236,10 +234,8 @@
                     <param name="buttonid" value="193" />
                 </include>
                 <control type="button" id ="192">
-                    <label>-</label>
                 </control>
                 <control type="button" id ="193">
-                    <label>-</label>
                 </control>
                 <control type="button" id ="191">
                     <posy>40</posy>
