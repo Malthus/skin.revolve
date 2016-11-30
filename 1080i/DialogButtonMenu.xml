@@ -32,12 +32,8 @@
                 <posy>20</posy>
                 <width>512</width>
                 <height>660</height>
-                <itemgap>0</itemgap>
-                <onup>3110</onup>
-                <ondown>3110</ondown>
-                <onleft>Noop</onleft>
-                <onright>Noop</onright>
                 <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
 
                 <control type="button" id="1">
                     <visible>System.CanPowerDown</visible>

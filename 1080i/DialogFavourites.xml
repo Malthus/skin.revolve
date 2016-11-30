@@ -30,8 +30,6 @@
                 <scrolltime>200</scrolltime>
                 <pagecontrol>451</pagecontrol>
                 <orientation>vertical</orientation>
-                <onup>450</onup>
-                <ondown>450</ondown>
                 <onleft>9000</onleft>
                 <onright>451</onright>
 
@@ -95,10 +93,7 @@
                     <param name="posy" value="80" />
                     <param name="height" value="600" />
                 </include>
-                <onup>451</onup>
-                <ondown>451</ondown>
                 <onleft>450</onleft>
-                <onright>Noop</onright>
             </control>
 
             <control type="grouplist" id="9000">
@@ -106,10 +101,7 @@
                     <param name="posy" value="640" />
                     <param name="height" value="40" />
                 </include>
-                <onleft>Noop</onleft>
                 <onright>450</onright>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
 
                 <include content="CloseButtonForDialog">
                     <param name="id" value="7" />

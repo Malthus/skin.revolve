@@ -21,7 +21,7 @@
                 <align>left</align>
                 <label>$LOCALIZE[19133]</label>
                 <onleft>9000</onleft>
-                <onup>25</onup>
+                <onup>27</onup>
                 <ondown>10</ondown>
             </control>
 
@@ -220,7 +220,7 @@
                 <align>left</align>
                 <label>$LOCALIZE[19125]</label>
                 <onup>22</onup>
-                <ondown>29</ondown>
+                <ondown>9</ondown>
                 <onleft>24</onleft>
             </control>
 
@@ -229,8 +229,6 @@
                     <param name="posy" value="380" />
                     <param name="height" value="180" />
                 </include>
-                <onup>27</onup>
-                <ondown>9</ondown>
                 <onright>9</onright>
 
                 <include content="HelpButtonForDialog">

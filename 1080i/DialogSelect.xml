@@ -89,7 +89,6 @@
                     <param name="height" value="520" />
                 </include>
                 <onleft>3</onleft>
-                <onright>Noop</onright>
             </control>
 
             <control type="scrollbar" id="22">
@@ -100,7 +99,6 @@
                     <param name="height" value="520" />
                 </include>
                 <onleft>6</onleft>
-                <onright>Noop</onright>
             </control>
 
             <control type="label" id="2">
@@ -111,7 +109,6 @@
                 <font>DialogTextFont</font>
                 <textcolor>$VAR[TextColor]</textcolor>
                 <align>center</align>
-                <label>-</label>
             </control>
 
             <control type="grouplist" id="9000">
@@ -119,8 +116,6 @@
                     <param name="posy" value="520" />
                     <param name="height" value="80" />
                 </include>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
                 <onright>3</onright>
 
                 <include content="SpacerForButtonListForDialog">

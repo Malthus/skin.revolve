@@ -25,7 +25,7 @@
                     <param name="height" value="200" />
                     <param name="pagecontrol" value="121" />
                 </include>
-                <onup>7</onup>
+                <onup>150</onup>
                 <ondown>150</ondown>
                 <onleft>9000</onleft>
                 <onright>121</onright>
@@ -52,7 +52,6 @@
                     <param name="height" value="200" />
                 </include>
                 <onleft>120</onleft>
-                <onright>Noop</onright>
             </control>
         
             <include content="LabelForDialog">
@@ -69,8 +68,9 @@
                     <param name="pagecontrol" value="151" />
                 </include>
                 <onup>120</onup>
-                <ondown>160</ondown>
+                <ondown>120</ondown>
                 <onleft>9000</onleft>
+                <onright>151</onright>
 
                 <itemlayout height="40">
                     <include>NormalItemsForNormalListInDialog</include>
@@ -94,7 +94,6 @@
                     <param name="height" value="160" />
                 </include>
                 <onleft>150</onleft>
-                <onright>Noop</onright>
             </control>
             
             <control type="label" id="130">
@@ -128,8 +127,6 @@
                     <param name="posy" value="500" />
                     <param name="height" value="100" />
                 </include>
-                <onup>150</onup>
-                <ondown>120</ondown>
                 <onright>120</onright>
 
                 <control type="button" id="160">

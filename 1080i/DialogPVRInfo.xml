@@ -135,9 +135,6 @@
                     <param name="height" value="200" />
                 </include>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
-                <ondown>61</ondown>
-                <onup>61</onup>
             </control>
             
             <include content="HorizontalDialogListOfContentMediaFlag">
@@ -151,8 +148,6 @@
                 <param name="posy" value="360" />
                 <param name="height" value="320" />
                 <param name="label" value="$INFO[ListItem.Plot]" />
-                <param name="onup" value="60" />
-                <param name="ondown" value="60" />
                 <param name="onleft" value="9000" />
             </include>
             

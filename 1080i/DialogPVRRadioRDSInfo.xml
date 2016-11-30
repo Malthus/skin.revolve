@@ -140,8 +140,6 @@
                     <param name="height" value="360" />
                 </include>
                 <onleft>9000</onleft>
-                <ondown>32</ondown>
-                <onup>32</onup>
             </control>
             
             <include content="TextboxForDialog">
@@ -150,8 +148,6 @@
                 <param name="posy" value="480" />
                 <param name="height" value="120" />
                 <param name="label" value="$INFO[RDS.Comment]" />
-                <param name="onup" value="60" />
-                <param name="ondown" value="60" />
                 <param name="onleft" value="9000" />
             </include>
             

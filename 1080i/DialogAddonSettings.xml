@@ -19,8 +19,6 @@
                     <param name="height" value="520" />
                     <param name="pagecontrol" value="22" />
                 </include>
-                <onup>11</onup>
-                <ondown>9</ondown>
                 <onleft>9</onleft>
                 <onright>22</onright>
             </control>
@@ -40,10 +38,7 @@
                     <param name="posy" value="80" />
                     <param name="height" value="520" />
                 </include>
-                <onup>22</onup>
-                <ondown>22</ondown>
                 <onleft>2</onleft>
-                <onright>Noop</onright>
             </control>
             
             <control type="grouplist" id="9">
@@ -52,7 +47,7 @@
                     <param name="height" value="120" />
                 </include>
                 <pagecontrol>15</pagecontrol>
-                <onup>2</onup>
+                <onup>11</onup>
                 <ondown>12</ondown>
                 <onright>2</onright>
             </control>
@@ -93,7 +88,7 @@
                     <param name="height" value="120" />
                 </include>
                 <onup>9</onup>
-                <ondown>2</ondown>
+                <ondown>9</ondown>
                 <onright>2</onright>
 
                 <include content="DefaultsButtonForDialog">

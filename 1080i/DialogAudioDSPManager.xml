@@ -125,10 +125,8 @@
                     <height>740</height>
                     <scrolltime>200</scrolltime>
                     <pagecontrol>61</pagecontrol>
-                    <onup>25</onup>
-                    <ondown>20</ondown>
                     <onleft>9001</onleft>
-                    <onright>20</onright>
+                    <onright>61</onright>
 
                     <include content="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="21" />
@@ -141,8 +139,8 @@
                     <param name="posx" value="1148" />
                     <param name="posy" value="120" />
                     <param name="height" value="740" />
-                    <param name="onleft" value="20" />
-                    <param name="onright" value="Noop" />
+                    <param name="onleft" value="21" />
+                    <param name="onright" value="20" />
                 </include>
             </control>
 
@@ -174,9 +172,8 @@
                     <height>740</height>
                     <pagecontrol>60</pagecontrol>
                     <scrolltime>200</scrolltime>
-                    <onup>21</onup>
-                    <ondown>9000</ondown>
-                    <onleft>21</onleft>
+                    <onleft>61</onleft>
+                    <onright>60</onright>
 
                     <include content="ThumbnailItemsForHalfListInDialog">
                         <param name="listid" value="20" />
@@ -190,7 +187,6 @@
                     <param name="posy" value="120" />
                     <param name="height" value="740" />
                     <param name="onleft" value="20" />
-                    <param name="onright" value="Noop" />
                 </include>
             </control>
             
@@ -200,7 +196,7 @@
                     <param name="height" value="220" />
                 </include>
                 <onup>9000</onup>
-                <ondown>21</ondown>
+                <ondown>9000</ondown>
                 <onright>21</onright>
 
                 <include content="SetHelpButtonForDialog" />

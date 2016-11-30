@@ -225,8 +225,7 @@
                 <width>400</width>
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
-                <ondown>10052</ondown>
-                <onup>10051</onup>
+                <onleft>9001</onleft>
 
                 <control type="slider" id="8000">
                     <description>Preamp Frequency Band Slider</description>
@@ -467,8 +466,6 @@
                     <param name="posy" value="380" />
                     <param name="height" value="140" />
                 </include>
-                <onup>8010</onup>
-                <ondown>8000</ondown>
                 <onright>9000</onright>
 
                 <control type="button" id="10052">
