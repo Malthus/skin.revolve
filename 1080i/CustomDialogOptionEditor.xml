@@ -28,10 +28,9 @@
                 <align>left</align>
                 <label>$LOCALIZE[31405]</label>
                 <selected>Substring(Window.Property(CustomOptionActive),T,left)</selected>
-                <onup>21</onup>
+                <onup>40</onup>
                 <ondown>30</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick condition="!Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,True)</onclick>
                 <onclick condition="Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,False)</onclick>
             </control>
@@ -47,7 +46,6 @@
                 <onup>27</onup>
                 <ondown>31</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomOptionName)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
                 <onclick>SetProperty(CustomOptionName,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -65,7 +63,6 @@
                 <onup>30</onup>
                 <ondown>32</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomSubtitle)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
                 <onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -82,7 +79,6 @@
                 <onup>31</onup>
                 <ondown>34</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick>Skin.SetImage(Dialog.Input)</onclick>
                 <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Dialog.Input)])</onclick>
                 <onclick>Skin.Reset(Dialog.Input)</onclick>
@@ -275,7 +271,6 @@
                 <onup>36</onup>
                 <ondown>38</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomSourceInfo)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
                 <onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -294,7 +289,6 @@
                 <onup>37</onup>
                 <ondown>39</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomSourceInfo)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
                 <onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -313,7 +307,6 @@
                 <onup>38</onup>
                 <ondown>40</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomSourceInfo)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
                 <onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -337,7 +330,7 @@
                 <align>left</align>
                 <label>ActivateWindow(1103)</label>
                 <onup>39</onup>
-                <ondown>24</ondown>
+                <ondown>27</ondown>
             </control>
 
             <control type="button" id="40">
@@ -351,7 +344,7 @@
                 <align>left</align>
                 <label>ActivateWindow(1101)</label>
                 <onup>39</onup>
-                <ondown>24</ondown>
+                <ondown>27</ondown>
             </control>
 
             <control type="button" id="40">
@@ -365,7 +358,7 @@
                 <align>left</align>
                 <label>ActivateWindow(1102)</label>
                 <onup>39</onup>
-                <ondown>24</ondown>
+                <ondown>27</ondown>
             </control>
 
             <control type="button" id="40">
@@ -378,9 +371,8 @@
                 <align>left</align>
                 <label>$INFO[Window.Property(CustomAction)]</label>
                 <onup>37</onup>
-                <ondown>24</ondown>
+                <ondown>27</ondown>
                 <onleft>9000</onleft>
-                <onright>Noop</onright>
                 <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomAction)])</onclick>
                 <onclick>Skin.SetString(Dialog.Input)</onclick>
                 <onclick>SetProperty(CustomAction,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -392,8 +384,6 @@
                     <param name="posy" value="360" />
                     <param name="height" value="240" />
                 </include>
-                <onup>40</onup>
-                <ondown>27</ondown>
                 <onright>34</onright>
 
                 <control type="button" id="24">
