@@ -24,7 +24,7 @@
                 <posy>120</posy>
                 <width>1240</width>
                 <align>left</align>
-                <onup>19</onup>
+                <onup>17</onup>
                 <ondown>16</ondown>
                 <onleft>9000</onleft>
             </control>
@@ -59,7 +59,7 @@
                 <width>480</width>
                 <label>$LOCALIZE[1024]</label>
                 <onup>16</onup>
-                <ondown>18</ondown>
+                <ondown>15</ondown>
                 <onleft>17</onleft>
             </control>
 
@@ -68,8 +68,6 @@
                     <param name="posy" value="160" />
                     <param name="height" value="80" />
                 </include>
-                <onup>17</onup>
-                <ondown>15</ondown>
                 <onright>16</onright>
                 
                 <include content="OkButtonForDialog">
