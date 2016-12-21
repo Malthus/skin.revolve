@@ -51,6 +51,7 @@
                     <description>Yes/Ok Button</description>
                 </control>
                 <control type="button" id="10">
+                    <visible>!Window.Is(progressdialog)</visible>
                     <description>No/Cancel Button</description>
                 </control>
             </control>
@@ -86,6 +87,7 @@
 
             <control type="button" id="10">
                 <description>Cancel Button</description>
+                <visible>Window.Is(progressdialog)</visible>
                 <posx>560</posx>
                 <posy>250</posy>
                 <width>480</width>
