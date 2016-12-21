@@ -130,64 +130,60 @@
     </variable>
     
     <variable name="ContentSingleImageBackground">
-        <value condition="Window.Is(favourites) + !String.IsEmpty(Container(450).ListItem.Art(fanart))">$INFO[Container(450).ListItem.Art(fanart)]</value>
-        <value condition="Window.Is(favourites) + !String.IsEmpty(Container(450).ListItem.Property(Fanart_Image))">$INFO[Container(450).ListItem.Property(Fanart_Image)]</value>
-        <value condition="Window.Is(favourites)">special://skin/backgrounds/favourites.jpg</value>
-
-        <value condition="Window.Is(1101) + !String.IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
-        <value condition="Window.Is(1101)">special://skin/backgrounds/items.jpg</value>
+        <value condition="Window.IsVisible(1101) + !String.IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
+        <value condition="Window.IsVisible(1101)">special://skin/backgrounds/items.jpg</value>
         
-        <value condition="Window.Is(1102) + !String.IsEmpty(Container(450).ListItem.Property(Fanart_image))">$INFO[Container(450).ListItem.Property(fanart_image)]</value>
-        <value condition="Window.Is(1102)">special://skin/backgrounds/items.jpg</value>
+        <value condition="Window.IsVisible(1102) + !String.IsEmpty(Container(450).ListItem.Property(Fanart_image))">$INFO[Container(450).ListItem.Property(fanart_image)]</value>
+        <value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>
 
-        <value condition="Window.Is(1103) + !String.IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
-        <value condition="Window.Is(1103)">special://skin/backgrounds/default.jpg</value>
+        <value condition="Window.IsVisible(1103) + !String.IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
+        <value condition="Window.IsVisible(1103)">special://skin/backgrounds/default.jpg</value>
 
-        <value condition="Window.Is(1104) + !String.IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
-        <value condition="Window.Is(1104)">special://skin/backgrounds/favourites.jpg</value>
+        <value condition="Window.IsVisible(1104) + !String.IsEmpty(Container(450).ListItem.Property(BackgroundImage))">$INFO[Container(450).ListItem.Property(BackgroundImage)]</value>
+        <value condition="Window.IsVisible(1104)">special://skin/backgrounds/favourites.jpg</value>
 
-        <value condition="Window.Is(1120)">black.png</value>
-        <value condition="Window.Is(1121)">black.png</value>
+        <value condition="Window.IsVisible(1120)">black.png</value>
+        <value condition="Window.IsVisible(1121)">black.png</value>
         
-        <value condition="Window.Is(settings) + !String.IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
-        <value condition="Window.Is(settings)">special://skin/backgrounds/settings.jpg</value>
+        <value condition="Window.IsVisible(settings) + !String.IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
+        <value condition="Window.IsVisible(settings)">special://skin/backgrounds/settings.jpg</value>
 
-        <value condition="Window.Is(1150) + !String.IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
-        <value condition="Window.Is(1150)">special://skin/backgrounds/exit.jpg</value>
+        <value condition="Window.IsVisible(1150) + !String.IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
+        <value condition="Window.IsVisible(1150)">special://skin/backgrounds/exit.jpg</value>
         
-        <value condition="Window.Is(weather) + !String.IsEmpty(Skin.String(Background.Image.WeatherResource.Path)) + !Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
-        <value condition="Window.Is(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">white.png</value>
-        <value condition="Window.Is(weather)">special://skin/backgrounds/weather.jpg</value>
-        <value condition="Window.Is(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
-        <value condition="Window.Is(eventlog)">special://skin/backgrounds/eventlog.jpg</value>
+        <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(Background.Image.WeatherResource.Path)) + !Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+        <value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">white.png</value>
+        <value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>
+        <value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
+        <value condition="Window.IsVisible(eventlog)">special://skin/backgrounds/eventlog.jpg</value>
         
-        <value condition="Window.Is(playersettings)">special://skin/backgrounds/playersettings.jpg</value>
-        <value condition="Window.Is(mediasettings)">special://skin/backgrounds/mediasettings.jpg</value>
-        <value condition="Window.Is(pvrsettings)">special://skin/backgrounds/pvrsettings.jpg</value>
-        <value condition="Window.Is(interfacesettings)">special://skin/backgrounds/interfacesettings.jpg</value>
-        <value condition="Window.Is(skinsettings)">special://skin/backgrounds/skinsettings.jpg</value>
-        <value condition="Window.Is(servicesettings)">special://skin/backgrounds/servicesettings.jpg</value>
-        <value condition="Window.Is(systemsettings)">special://skin/backgrounds/systemsettings.jpg</value>
-        <value condition="Window.Is(profiles)">special://skin/backgrounds/profiles.jpg</value>
-        <value condition="Window.Is(systeminfo)">special://skin/backgrounds/systeminfo.jpg</value>
-        <value condition="Window.Is(1151)">special://skin/backgrounds/skininfo.jpg</value>
+        <value condition="Window.IsVisible(playersettings)">special://skin/backgrounds/playersettings.jpg</value>
+        <value condition="Window.IsVisible(mediasettings)">special://skin/backgrounds/mediasettings.jpg</value>
+        <value condition="Window.IsVisible(pvrsettings)">special://skin/backgrounds/pvrsettings.jpg</value>
+        <value condition="Window.IsVisible(interfacesettings)">special://skin/backgrounds/interfacesettings.jpg</value>
+        <value condition="Window.IsVisible(skinsettings)">special://skin/backgrounds/skinsettings.jpg</value>
+        <value condition="Window.IsVisible(servicesettings)">special://skin/backgrounds/servicesettings.jpg</value>
+        <value condition="Window.IsVisible(systemsettings)">special://skin/backgrounds/systemsettings.jpg</value>
+        <value condition="Window.IsVisible(profiles)">special://skin/backgrounds/profiles.jpg</value>
+        <value condition="Window.IsVisible(systeminfo)">special://skin/backgrounds/systeminfo.jpg</value>
+        <value condition="Window.IsVisible(1151)">special://skin/backgrounds/skininfo.jpg</value>
 
-        <value condition="Window.Is(home) + !String.IsEmpty(Container(300).ListItem.Property(BackgroundImage))">$INFO[Container(300).ListItem.Property(BackgroundImage)]</value>
-        <value condition="Window.Is(home) + !String.IsEmpty(Container(300).ListItem.Property(FallbackImage))">$INFO[Container(300).ListItem.Property(FallbackImage)]</value>
-        <value condition="Window.Is(home)">special://skin/backgrounds/default.jpg</value>
+        <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(300).ListItem.Property(BackgroundImage))">$INFO[Container(300).ListItem.Property(BackgroundImage)]</value>
+        <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(300).ListItem.Property(FallbackImage))">$INFO[Container(300).ListItem.Property(FallbackImage)]</value>
+        <value condition="Window.IsVisible(home)">special://skin/backgrounds/default.jpg</value>
 
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
         <value condition="!String.IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
         
-        <value condition="Container.Content(addons) | Window.Is(addonbrowser)">special://skin/backgrounds/addons.jpg</value>
+        <value condition="Container.Content(addons) | Window.IsVisible(addonbrowser)">special://skin/backgrounds/addons.jpg</value>
         <value condition="Container.Content(files) + Skin.HasSetting(Background.Image.FanartForFiles) + !SubString(Container.FolderPath,library,Left)">$INFO[Container.FolderPath,,fanart.jpg]</value>
         <value>special://skin/backgrounds/default.jpg</value>
     </variable>
     
     <variable name="ContentMultiImageBackground">
-        <value condition="Window.Is(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
-        <value>-</value>
+        <value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+        <value></value>
     </variable>
 
     <variable name="ContentDescription">
