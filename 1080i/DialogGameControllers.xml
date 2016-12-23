@@ -5,122 +5,101 @@
 
     <controls>
         <control type="group">
-            <posy>PosYForThirteenLinesDialog</posy>
+            <posy>PosYForFullWindowDialog</posy>
             <include content="WindowForDialog">
-                <param name="height" value="HeightForThirteenLinesDialog" />
-                <param name="headerid" value="2" />
+                <param name="height" value="HeightForFullWindowDialog" />
+                <param name="headerlabel" value="Game Controller Settings" />
                 <param name="icontexture" value="icons/icon-settings.png" />
             </include>
 
             <control type="gamecontroller" id="31">
-                <posx>40</posx>
-                <posy>40</posy>
-                <width>500</width>
+                <posx>600</posx>
+                <posy>220</posy>
+                <width>700</width>
                 <height>500</height>
             </control>
-            
-            <include content="ListForDialog">
-                <param name="id" value="3" />
-                <param name="pagecontrolid" value="4" />
-                <param name="posy" value="80" />
-                <param name="height" value="120" />
-                <param name="onup" value="5" />
-                <param name="ondown" value="5" />
-            </include>
 
-            <control type="button" id="10">
-                <width>1240</width>
+            <control type="grouplist" id="5">
+                <posx>1400</posx>
+                <posy>80</posy>
+                <width>400</width>
+                <height>780</height>
+                <pagecontrol>6</pagecontrol>
+                <onleft>9000</onleft>
+                <onright>6</onright>
+            </control>
+            
+            <control type="button" id="7">
+                <width>400</width>
                 <align>left</align>
             </control>
 
-            <include content="ListForDialog">
-                <param name="id" value="5" />
-                <param name="pagecontrolid" value="6" />
-                <param name="posy" value="240" />
-                <param name="height" value="320" />
-                <param name="onup" value="3" />
-                <param name="ondown" value="3" />
-            </include>
+            <control type="label" id="8">
+                <width>400</width>
+                <textcolor>$VAR[SelectColor]</textcolor>
+            </control>            
+            
+            <control type="image" id="9">
+                <height>20</height>
+            </control>
 
-            <include content="DefaultControlsForDialog">
-                <param name="buttonid" value="7" />
-                <param name="labelid" value="8" />            
-                <param name="imageid" value="9" />
-                <param name="radiobuttonid" value="50" />
-                <param name="spincontrolexid" value="51" />
-                <param name="editvisible" value="false" />
-                <param name="editid" value="52" />
-                <param name="sliderexid" value="53" />
+            <include content="ScrollbarForDialog">
+                <param name="id" value="6" />
+                <param name="posy" value="80" />
+                <param name="height" value="780" />
+                <param name="onleft" value="5" />
             </include>
+            
+            <control type="grouplist" id="3">
+                <include content="MarkupForButtonListForDialog">
+                    <param name="posy" value="320" />
+                    <param name="height" value="240" />
+                </include>
+                <onup>18</onup>
+                <ondown>17</ondown>
+                <onright>5</onright>
+            </control>
+
+            <control type="button" id="10">
+                <width>480</width>
+                <align>center</align>
+            </control>
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="440" />
-                    <param name="height" value="160" />
+                    <param name="posy" value="600" />
+                    <param name="height" value="280" />
                 </include>
+                <onup>3</onup>
+                <ondown>3</ondown>
                 <onright>5</onright>
 
-                <include content="HelpButtonForDialog">
-                    <param name="id" default="17" />
+                <include content="ButtonForDialog">
+                    <param name="id" value="17" />
+                    <param name="label" value="$LOCALIZE[10043]" />
                 </include>
                 <include content="ButtonForDialog">
-                    <param name="id" default="20" />
-                    <param name="label" default="21452" />
+                    <param name="id" value="21" />
+                    <param name="label" value="$LOCALIZE[31274]" />
                 </include>
                 <include content="ResetButtonForDialog">
-                    <param name="id" default="19" />
+                    <param name="id" value="19" />
+                </include>
+                <include content="ButtonForDialog">
+                    <param name="id" value="20" />
+                    <param name="posy" value="40" />
+                    <param name="label" value="$LOCALIZE[21452]" />
                 </include>
                 <include content="OkButtonForDialog">
-                    <param name="id" default="18" />
+                    <param name="id" value="18" />
                     <param name="posy" value="40" />
                 </include>
+<!--                
                 <include content="CloseButtonForDialog">
-                    <param name="id" default="21" />
+                    <param name="id" value="22" />
                 </include>
+-->                
             </control>
         </control>
     </controls>
 </window>
-
-<!--
- 2016-03-12 new dialog - DialogGameControllers.xml
-
-a new dialog, DialogGameControllers.xml (gamecontrollers), has been added to kodi.
-this also introduces a new control type: "gamecontroller"
-
-the new dialog has these builtin id's:
-
-    grouplist id="3" (controller types)
-    button id="10" (template)
-    gamecontroller id="31" (controller artwork)
-
-    grouplist id="5" (feature types)
-    button id="7" (template)
-    control type="label" id="8" (settings category label)
-    control type="image" id="9" (settings category separator)
-
-also three new default icons were added:
-
-    DefaultAddonGame.png
-    DefaultAddonPeripheral.png
-    DefaultGameAddons.png
-
-
-
-confluence example: https://github.com/garbear/skin.confluen...980da6536c
-
-git commit: https://github.com/xbmc/xbmc/commit/e851...32d5ac1246
-pull request: https://github.com/xbmc/xbmc/pull/8807 
-
-
- 2016-08-15 DialogGameControllers.xml
-
-please add the following controls to this dialog:
-
-
-
-
-git commit: https://github.com/xbmc/xbmc/commit/7564...137a204a6e
-pull request: https://github.com/xbmc/xbmc/pull/10293 
-
--->
