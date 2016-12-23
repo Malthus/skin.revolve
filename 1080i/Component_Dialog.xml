@@ -27,7 +27,7 @@
     <include name="ButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
 
         <definition>
             <control type="button" id="$PARAM[id]">
@@ -227,7 +227,7 @@
 
     <include name="MarkupForButtonListForDialog">
         <param name="posy" default="320" />
-        <param name="height" default="-" />
+        <param name="height" default="80" />
     
         <definition>
             <posx>40</posx>
@@ -242,8 +242,8 @@
 
     <include name="MarkupForListForDialog">
         <param name="posy" default="80" />
-        <param name="height" default="-" />
-        <param name="pagecontrol" default="-" />
+        <param name="height" default="80" />
+        <param name="pagecontrol" default="0" />
         <param name="scrolltime" default="200" />
     
         <definition>
@@ -260,8 +260,8 @@
     
     <include name="MarkupForInfoListForDialog">
         <param name="posy" default="80" />
-        <param name="height" default="-" />
-        <param name="pagecontrol" default="-" />
+        <param name="height" default="80" />
+        <param name="pagecontrol" default="0" />
     
         <definition>
             <posx>560</posx>
@@ -298,7 +298,7 @@
         <param name="id" default="0" />
         <param name="posy" default="80" />
         <param name="textcolor" default="$VAR[SecondaryColor]" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
     
         <definition>
                <control type="label" id="$PARAM[id]">
@@ -343,7 +343,7 @@
         <param name="posy" default="80" />
         <param name="id" default="0" />
         <param name="height" default="220" />
-        <param name="pagecontrol" default="-" />
+        <param name="pagecontrol" default="0" />
         <param name="scrolltime" default="200" />
         <param name="onup" default="Noop" />
         <param name="ondown" default="Noop" />
@@ -411,7 +411,7 @@
 
     <include name="ListForDialog">
         <param name="id" default="0" />
-        <param name="pagecontrolid" default="-" />
+        <param name="pagecontrolid" default="0" />
         <param name="posy" default="80" />
         <param name="height" default="220" />
         <param name="scrolltime" default="200" />
@@ -444,35 +444,44 @@
     </include>
 
     <include name="DefaultControlsForDialog">
+        <param name="buttonvisible" default="true" />
         <param name="buttonid" default="7" />
+        <param name="radiobuttonvisible" default="true" />
         <param name="radiobuttonid" default="8" />
+        <param name="spincontrolexvisible" default="true" />
         <param name="spincontrolexid" default="9" />
+        <param name="imagevisible" default="true" />
         <param name="imageid" default="11" />
         <param name="editvisible" default="true" />
         <param name="editid" default="12" />
+        <param name="sliderexvisible" default="true" />
         <param name="sliderexid" default="13" />
+        <param name="labelvisible" default="true" />
         <param name="labelid" default="14" />
         
         <definition>
             <control type="button" id="$PARAM[buttonid]">
+                <visible>$PARAM[buttonvisible]</visible>
                 <width>1240</width>
                 <align>left</align>
             </control>
 
             <control type="radiobutton" id="$PARAM[radiobuttonid]">
+                <visible>$PARAM[radiobuttonvisible]</visible>
                 <width>1240</width>
                 <align>left</align>
             </control>
 
             <control type="spincontrolex" id="$PARAM[spincontrolexid]">
+                <visible>$PARAM[spincontrolexvisible]</visible>
                 <width>1240</width>
                 <align>left</align>
                 <reverse>yes</reverse>
             </control>
 
             <control type="image" id="$PARAM[imageid]">
+                <visible>$PARAM[imagevisible]</visible>
                 <height>20</height>
-                <texture>-</texture>
             </control>
 
             <control type="edit" id="$PARAM[editid]">
@@ -482,14 +491,15 @@
             </control>
 
             <control type="sliderex" id="$PARAM[sliderexid]">
+                <visible>$PARAM[sliderexvisible]</visible>
                 <width>1240</width>
                 <align>left</align>
             </control>
 
             <control type="label" id="$PARAM[labelid]">
+                <visible>$PARAM[labelvisible]</visible>
                 <width>1240</width>
                 <textcolor>$VAR[SelectColor]</textcolor>
-                <label>-</label>
             </control>
         </definition>
     </include>
@@ -497,7 +507,7 @@
     <include name="DefaultImageForDialog">
         <param name="posx" default="PosXForDefaultIconFrameForDialog" />
         <param name="posy" default="PosYForDefaultIconFrameForDialog" />
-        <param name="texture" default="-" />
+        <param name="texture" default="" />
         
         <definition>
             <control type="group">
@@ -737,7 +747,7 @@
     <include name="HalfListFrameForDialog">
         <param name="posx" default="560" />
         <param name="posy" default="80" />
-        <param name="height" default="-" />
+        <param name="height" default="80" />
         <param name="bordercolor" default="$VAR[TextColor]" />
     
         <definition>
@@ -1217,9 +1227,9 @@
 
     <include name="SmallIconForWindowForDialog">
         <param name="visible" default="true" />
-        <param name="iconthumbnail" default="-" />
-        <param name="icontexture" default="-" />
-        <param name="iconlabel" default="-" />
+        <param name="iconthumbnail" default="" />
+        <param name="icontexture" default="" />
+        <param name="iconlabel" default="" />
     
         <definition>
             <control type="group">
@@ -1262,9 +1272,9 @@
 
     <include name="DefaultIconForWindowForDialog">
         <param name="visible" default="true" />
-        <param name="iconthumbnail" default="-" />
-        <param name="icontexture" default="-" />
-        <param name="iconlabel" default="-" />
+        <param name="iconthumbnail" default="" />
+        <param name="icontexture" default="" />
+        <param name="iconlabel" default="" />
         <param name="iconoverlayvisible" default="false" />
     
         <definition>
@@ -1332,13 +1342,13 @@
         <param name="visible" default="true" />
         <param name="height" default="220" />
         <param name="headerid" default="0" />
-        <param name="headerlabel" default="-" />
+        <param name="headerlabel" default="" />
         <param name="iconid" default="0" />
         <param name="iconsmallvisible" default="false" />
         <param name="icondefaultvisible" default="true" />
-        <param name="iconthumbnail" default="-" />
-        <param name="icontexture" default="-" />
-        <param name="iconlabel" default="-" />
+        <param name="iconthumbnail" default="" />
+        <param name="icontexture" default="" />
+        <param name="iconlabel" default="" />
         <param name="iconoverlayvisible" default="false" />
         <param name="animate" default="false" />
         
