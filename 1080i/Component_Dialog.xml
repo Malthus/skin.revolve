@@ -214,13 +214,16 @@
     <include name="SpacerForButtonListForDialog">
         <param name="id" default="0" />
         <param name="buttonid" default="0" />
+        <param name="visible" default="true" />
         <param name="posy" default="0" />
+        <param name="height" default="40" />
     
         <definition>
             <control type="label" id="$PARAM[id]">
-                <visible>!Control.IsVisible($PARAM[buttonid])</visible>
+                <visible>[Integer.IsEqual($PARAM[buttonid], 0) | !Control.IsVisible($PARAM[buttonid])] + $PARAM[visible]</visible>
                 <posy>$PARAM[posy]</posy>
-                <height>40</height>
+                <height>$PARAM[height]</height>
+                <label></label>
             </control>
         </definition>
     </include>
