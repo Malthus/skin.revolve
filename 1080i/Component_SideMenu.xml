@@ -273,6 +273,19 @@
         </definition>
     </include>
 
+    <include name="MediaGroupLabelForSideMenu">
+        <definition>
+            <control type="label" id="996">
+                <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+                <height>20</height>
+                <align>left</align>
+                <font>SideMenuGroupFont</font>
+                <textcolor>$VAR[SelectColor]</textcolor>
+                <label>  [UPPERCASE]$LOCALIZE[31110][/UPPERCASE]</label>
+            </control>
+        </definition>
+    </include>
+
     <include name="MusicPlaylistButtonForSideMenu">
         <definition>
             <control type="button" id="1">
