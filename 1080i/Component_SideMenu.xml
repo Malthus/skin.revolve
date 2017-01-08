@@ -811,6 +811,7 @@
                 <align>left</align>
                 <label>$LOCALIZE[31420]</label>
                 <onclick>ActivateWindow(favourites)</onclick>
+                <onclick>AlarmClock(FavouritesClock,RunScript(script.revolve.service,ClearProperties,MyFavourites%02dOption,1104),00:01,silent)</onclick>
                 <onclick>AlarmClock(FavouritesClock,RunScript(script.revolve.service,PopulateStaticItemsFromHomeProperties,favourite.%d,MyFavourites%02dOption,1104),00:01,silent)</onclick>
             </control>
         </definition>
