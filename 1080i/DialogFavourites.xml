@@ -39,7 +39,7 @@
                         <posy>5</posy>
                         <width>300</width>
                         <height>190</height>
-                        <texture diffuse="elements/view-mask.png">$INFO[ListItem.Icon]</texture>
+                        <texture diffuse="elements/view-mask.png" fallback="defaultfavourite.png">$INFO[ListItem.Icon]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <include content="OutlineLabel">
@@ -70,7 +70,7 @@
                         <posy>5</posy>
                         <width>300</width>
                         <height>190</height>
-                        <texture diffuse="elements/view-mask.png">$INFO[ListItem.Icon]</texture>
+                        <texture diffuse="elements/view-mask.png" fallback="defaultfavourite.png">$INFO[ListItem.Icon]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <include content="OutlineLabel">
