@@ -26,12 +26,12 @@
                 <posy>50</posy>
                 <width>1060</width>
                 <height>30</height>
-                <font>DialogTextFont</font>
+                <font>DialogDescriptionFont</font>
                 <info>ListItem.Label2</info>
             </control>
         </definition>
     </include>
-    
+
     <include name="FocusedItemsForLargeThumbnailList">
         <definition>
             <control type="image">
@@ -59,7 +59,7 @@
                 <posy>50</posy>
                 <width>1060</width>
                 <height>30</height>
-                <font>DialogTextFont</font>
+                <font>DialogDescriptionFont</font>
                 <textcolor>$VAR[BackgroundColor]</textcolor>
                 <info>ListItem.Label2</info>
             </control>
@@ -93,7 +93,7 @@
                 <posy>50</posy>
                 <width>1060</width>
                 <height>30</height>
-                <font>DialogTextFont</font>
+                <font>DialogDescriptionFont</font>
                 <textcolor>$VAR[MainColor]</textcolor>
                 <info>ListItem.Label2</info>
             </control>
