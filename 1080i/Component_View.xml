@@ -42,7 +42,27 @@
             <scrolltime>200</scrolltime>
         </definition>
     </include>
-    
+
+    <include name="ScrollbarForView">
+        <param name="id" default="0" />
+        <param name="viewid" default="0" />
+        
+        <definition>
+            <control type="scrollbar" id="$PARAM[id]">
+                <visible allowhiddenfocus="true">Control.IsVisible($PARAM[viewid])</visible>
+                <animation type="Conditional" condition="!Control.HasFocus($PARAM[id]) + !Container($PARAM[viewid]).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
+                    <effect type="slide" start="0,0" end="40,0" time="100" />
+                </animation>
+                
+                <posx>PosXForVerticalScrollbarForView</posx>
+                <posy>PosYForVerticalScrollbarForView</posy>
+                <width>WidthForVerticalScrollbarForView</width>
+                <height>HeightForVerticalScrollbarForView</height>
+                <onleft>$PARAM[viewid]</onleft>
+            </control>
+        </definition>
+    </include>
+
     <include name="BackgroundForNameInThumbnailOrPanelForView">
         <param name="posy" default="200" />
         <param name="outlinecolor" default="$VAR[TextColor]" />
