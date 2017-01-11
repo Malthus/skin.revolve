@@ -175,7 +175,7 @@
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
         <value condition="!String.IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
-        
+
         <value condition="Container.Content(addons) | Window.IsVisible(addonbrowser)">special://skin/backgrounds/addons.jpg</value>
         <value condition="Container.Content(files) + Skin.HasSetting(Background.Image.FanartForFiles) + !SubString(Container.FolderPath,library,Left)">$INFO[Container.FolderPath,,fanart.jpg]</value>
         <value>special://skin/backgrounds/default.jpg</value>
