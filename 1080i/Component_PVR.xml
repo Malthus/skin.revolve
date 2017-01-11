@@ -13,10 +13,10 @@
                 <animation effect="slide" start="0,0" end="0,1080" time="500">WindowClose</animation>
 
                 <posx>40</posx>
-                <posy>100</posy>
-                <width>1860</width>
-                <height>919</height>
-                <pagecontrol>10</pagecontrol>
+                <posy>108</posy>
+                <width>1820</width>
+                <height>760</height>
+                <pagecontrol>70</pagecontrol>
                 <scrolltime>200</scrolltime>
                 <progresstexture colordiffuse="$VAR[SelectColor]">white.png</progresstexture>
                 <timeblocks>24</timeblocks>
@@ -24,7 +24,6 @@
                 <onleft>10</onleft>
                 <onright>10</onright>
                 <onup>9000</onup>
-                <ondown>Noop</ondown>
                 <onback>50</onback>
 
                 <rulerlayout height="40" width="60">
@@ -190,6 +189,11 @@
                 </focusedlayout>
             </control>
 
+            <include content="ScrollbarForView">
+                <param name="id" value="70" />
+                <param name="viewid" value="10" />
+            </include>
+            
             <control type="group">
                 <visible>Control.IsVisible(10)</visible>
                 <control type="group">
@@ -234,18 +238,10 @@
                 <include content="ContentMediaFlagsForDropListView" />
                 <include content="ContentDescriptionForDropListView" />
                 
-                <control type="scrollbar" id="71">
-                    <visible allowhiddenfocus="true">true</visible>
-                    <animation type="Conditional" condition="!Control.HasFocus(71) + !Container(11).Scrolling">
-                        <effect type="slide" start="0,0" end="100,0" time="100" />
-                    </animation>
-
-                    <posx>1860</posx>
-                    <posy>100</posy>
-                    <height>700</height>
-                    <onleft>16</onleft>
-                    <onright>Noop</onright>
-                </control>
+                <include content="ScrollbarForView">
+                    <param name="id" value="71" />
+                    <param name="viewid" value="11" />
+                </include>
 
                 <include content="PreviewForPVR" />
             </control>
@@ -283,19 +279,11 @@
                 <include content="ContentMediaFlagsForDropListView" />
                 <include content="ContentDescriptionForDropListView" />
                 
-                <control type="scrollbar" id="72">
-                    <visible allowhiddenfocus="true">true</visible>
-                    <animation type="Conditional" condition="!Control.HasFocus(72) + !Container(12).Scrolling">
-                        <effect type="slide" start="0,0" end="100,0" time="100" />
-                    </animation>
+                <include content="ScrollbarForView">
+                    <param name="id" value="72" />
+                    <param name="viewid" value="12" />
+                </include>
 
-                    <posx>1860</posx>
-                    <posy>100</posy>
-                    <height>700</height>
-                    <onleft>16</onleft>
-                    <onright>Noop</onright>
-                </control>
-            
                 <include content="PreviewForPVR" />
             </control>
         </definition>
@@ -331,20 +319,12 @@
                 <include content="ContentDetailForDropListView" />
                 <include content="ContentMediaFlagsForDropListView" />
                 <include content="ContentDescriptionForDropListView" />
-                
-                <control type="scrollbar" id="73">
-                    <visible allowhiddenfocus="true">true</visible>
-                    <animation type="Conditional" condition="!Control.HasFocus(73) + !Container(13).Scrolling">
-                        <effect type="slide" start="0,0" end="100,0" time="100" />
-                    </animation>
 
-                    <posx>1860</posx>
-                    <posy>100</posy>
-                    <height>700</height>
-                    <onleft>13</onleft>
-                    <onright>Noop</onright>
-                </control>
-            
+                <include content="ScrollbarForView">
+                    <param name="id" value="73" />
+                    <param name="viewid" value="13" />
+                </include>
+
                 <include content="PreviewForPVR" />
             </control>
         </definition>
