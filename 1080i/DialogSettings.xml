@@ -36,8 +36,8 @@
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="440" />
-                    <param name="height" value="160" />
+                    <param name="posy" value="400" />
+                    <param name="height" value="200" />
                 </include>
                 <onright>5</onright>
 
@@ -64,6 +64,9 @@
                 <control type="button" id="29">
                     <description>Cancel Button</description>
                 </control>
+                <include content="CloseButtonForDialog">
+                    <param name="id" value="34" />
+                </include>
             </control>
         </control>
     </controls>
