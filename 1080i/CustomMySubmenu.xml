@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1103">
-    <defaultcontrol always="yes">450</defaultcontrol>
+    <defaultcontrol always="yes">400</defaultcontrol>
     <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyLists.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
     <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
     <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
@@ -11,7 +11,7 @@
     <controls>
         <include content="GlobalBackground" />
 
-        <control type="fixedlist" id="450">
+        <control type="fixedlist" id="400">
             <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
             <posx>0</posx>
             <posy>0</posy>
@@ -19,15 +19,15 @@
             <height>1080</height>
             <focusposition>4</focusposition>
             <defaultcontrol>1</defaultcontrol>
-            <onup>450</onup>
-            <ondown>450</ondown>
+            <onup>400</onup>
+            <ondown>400</ondown>
             <onleft>9000</onleft>
 
             <include content="InvisibleVerticalListItemsForMenu" />
             
             <content>
                 <item id="1">
-                    <visible>Substring(Window.Property(MySubmenu01Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu01Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu01Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu01Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu01Option.BackgroundImage)]</property>
@@ -36,7 +36,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu01Option.Action)]</onclick>
                 </item>
                 <item id="2">
-                    <visible>Substring(Window.Property(MySubmenu02Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu02Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu02Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu02Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu02Option.BackgroundImage)]</property>
@@ -45,7 +45,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu02Option.Action)]</onclick>
                 </item>
                 <item id="3">
-                    <visible>Substring(Window.Property(MySubmenu03Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu03Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu03Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu03Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu03Option.BackgroundImage)]</property>
@@ -54,7 +54,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu03Option.Action)]</onclick>
                 </item>
                 <item id="4">
-                    <visible>Substring(Window.Property(MySubmenu04Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu04Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu04Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu04Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu04Option.BackgroundImage)]</property>
@@ -63,7 +63,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu04Option.Action)]</onclick>
                 </item>
                 <item id="5">
-                    <visible>Substring(Window.Property(MySubmenu05Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu05Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu05Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu05Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu05Option.BackgroundImage)]</property>
@@ -72,7 +72,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu05Option.Action)]</onclick>
                 </item>
                 <item id="6">
-                    <visible>Substring(Window.Property(MySubmenu06Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu06Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu06Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu06Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu06Option.BackgroundImage)]</property>
@@ -81,7 +81,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu06Option.Action)]</onclick>
                 </item>
                 <item id="7">
-                    <visible>Substring(Window.Property(MySubmenu07Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu07Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu07Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu07Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu07Option.BackgroundImage)]</property>
@@ -90,7 +90,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu07Option.Action)]</onclick>
                 </item>
                 <item id="8">
-                    <visible>Substring(Window.Property(MySubmenu08Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu08Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu08Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu08Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu08Option.BackgroundImage)]</property>
@@ -99,7 +99,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu08Option.Action)]</onclick>
                 </item>
                 <item id="9">
-                    <visible>Substring(Window.Property(MySubmenu09Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu09Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu09Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu09Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu09Option.BackgroundImage)]</property>
@@ -108,7 +108,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu09Option.Action)]</onclick>
                 </item>
                 <item id="10">
-                    <visible>Substring(Window.Property(MySubmenu10Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu10Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu10Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu10Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu10Option.BackgroundImage)]</property>
@@ -117,7 +117,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu10Option.Action)]</onclick>
                 </item>
                 <item id="11">
-                    <visible>Substring(Window.Property(MySubmenu11Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu11Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu11Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu11Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu11Option.BackgroundImage)]</property>
@@ -126,7 +126,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu11Option.Action)]</onclick>
                 </item>
                 <item id="12">
-                    <visible>Substring(Window.Property(MySubmenu12Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu12Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu12Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu12Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu12Option.BackgroundImage)]</property>
@@ -135,7 +135,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu12Option.Action)]</onclick>
                 </item>
                 <item id="13">
-                    <visible>Substring(Window.Property(MySubmenu13Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu13Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu13Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu13Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu13Option.BackgroundImage)]</property>
@@ -144,7 +144,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu13Option.Action)]</onclick>
                 </item>
                 <item id="14">
-                    <visible>Substring(Window.Property(MySubmenu14Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu14Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu14Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu14Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu14Option.BackgroundImage)]</property>
@@ -153,7 +153,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu14Option.Action)]</onclick>
                 </item>
                 <item id="15">
-                    <visible>Substring(Window.Property(MySubmenu15Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu15Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu15Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu15Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu15Option.BackgroundImage)]</property>
@@ -162,7 +162,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu15Option.Action)]</onclick>
                 </item>
                 <item id="16">
-                    <visible>Substring(Window.Property(MySubmenu16Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu16Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu16Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu16Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu16Option.BackgroundImage)]</property>
@@ -171,7 +171,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu16Option.Action)]</onclick>
                 </item>
                 <item id="17">
-                    <visible>Substring(Window.Property(MySubmenu17Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu17Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu17Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu17Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu17Option.BackgroundImage)]</property>
@@ -180,7 +180,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu17Option.Action)]</onclick>
                 </item>
                 <item id="18">
-                    <visible>Substring(Window.Property(MySubmenu18Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu18Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu18Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu18Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu18Option.BackgroundImage)]</property>
@@ -189,7 +189,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu18Option.Action)]</onclick>
                 </item>
                 <item id="19">
-                    <visible>Substring(Window.Property(MySubmenu19Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu19Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu19Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu19Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu19Option.BackgroundImage)]</property>
@@ -198,7 +198,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu19Option.Action)]</onclick>
                 </item>
                 <item id="20">
-                    <visible>Substring(Window.Property(MySubmenu20Option.Active),T,left)</visible>
+                    <visible>String.StartsWith(Window.Property(MySubmenu20Option.Active),T)</visible>
                     <label>$INFO[Window.Property(MySubmenu20Option.Name)]</label>
                     <property name="Label3">$INFO[Window.Property(MySubmenu20Option.Subtitle)]</property>
                     <property name="BackgroundImage">$INFO[Window.Property(MySubmenu20Option.BackgroundImage)]</property>
@@ -207,7 +207,7 @@
                     <onclick>$INFO[Window.Property(MySubmenu20Option.Action)]</onclick>
                 </item>
                 <item id="99">
-                    <visible>! [Substring(Window.Property(MySubmenu01Option.Active),T,left) | Substring(Window.Property(MySubmenu02Option.Active),T,left) | Substring(Window.Property(MySubmenu03Option.Active),T,left) | Substring(Window.Property(MySubmenu04Option.Active),T,left) | Substring(Window.Property(MySubmenu05Option.Active),T,left) | Substring(Window.Property(MySubmenu06Option.Active),T,left) | Substring(Window.Property(MySubmenu07Option.Active),T,left) | Substring(Window.Property(MySubmenu08Option.Active),T,left) | Substring(Window.Property(MySubmenu09Option.Active),T,left) | Substring(Window.Property(MySubmenu10Option.Active),T,left) | Substring(Window.Property(MySubmenu11Option.Active),T,left) | Substring(Window.Property(MySubmenu12Option.Active),T,left) | Substring(Window.Property(MySubmenu13Option.Active),T,left) | Substring(Window.Property(MySubmenu14Option.Active),T,left) | Substring(Window.Property(MySubmenu15Option.Active),T,left) | Substring(Window.Property(MySubmenu16Option.Active),T,left) | Substring(Window.Property(MySubmenu17Option.Active),T,left) | Substring(Window.Property(MySubmenu18Option.Active),T,left) | Substring(Window.Property(MySubmenu19Option.Active),T,left) | Substring(Window.Property(MySubmenu20Option.Active),T,left)]</visible>
+                    <visible>![String.StartsWith(Window.Property(MySubmenu01Option.Active),T) | String.StartsWith(Window.Property(MySubmenu02Option.Active),T) | String.StartsWith(Window.Property(MySubmenu03Option.Active),T) | String.StartsWith(Window.Property(MySubmenu04Option.Active),T) | String.StartsWith(Window.Property(MySubmenu05Option.Active),T) | String.StartsWith(Window.Property(MySubmenu06Option.Active),T) | String.StartsWith(Window.Property(MySubmenu07Option.Active),T) | String.StartsWith(Window.Property(MySubmenu08Option.Active),T) | String.StartsWith(Window.Property(MySubmenu09Option.Active),T) | String.StartsWith(Window.Property(MySubmenu10Option.Active),T) | String.StartsWith(Window.Property(MySubmenu11Option.Active),T) | String.StartsWith(Window.Property(MySubmenu12Option.Active),T) | String.StartsWith(Window.Property(MySubmenu13Option.Active),T) | String.StartsWith(Window.Property(MySubmenu14Option.Active),T) | String.StartsWith(Window.Property(MySubmenu15Option.Active),T) | String.StartsWith(Window.Property(MySubmenu16Option.Active),T) | String.StartsWith(Window.Property(MySubmenu17Option.Active),T) | String.StartsWith(Window.Property(MySubmenu18Option.Active),T) | String.StartsWith(Window.Property(MySubmenu19Option.Active),T) | String.StartsWith(Window.Property(MySubmenu20Option.Active),T)]</visible>
                     <label>-</label>
                     <property name="Label3">-</property>
                     <property name="BackgroundImage">-</property>

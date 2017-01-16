@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1101">
-    <defaultcontrol always="yes">450</defaultcontrol>
+    <defaultcontrol always="yes">400</defaultcontrol>
     <menucontrol>9001</menucontrol>
     <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyItems.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
     <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyItems.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
@@ -13,7 +13,7 @@
         <include content="FullscreenDimensions" />
         <include content="GlobalBackground" />
 
-        <control type="fixedlist" id="450">
+        <control type="fixedlist" id="400">
             <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
             <posx>0</posx>
             <posy>0</posy>
@@ -21,8 +21,8 @@
             <height>1080</height>
             <focusposition>4</focusposition>
             <defaultcontrol>1</defaultcontrol>
-            <onup>450</onup>
-            <ondown>450</ondown>
+            <onup>400</onup>
+            <ondown>400</ondown>
             <onleft>9000</onleft>
 
             <include content="InvisibleVerticalListItemsForMenu" />
@@ -218,7 +218,7 @@
 
             <control type="grouplist" id="9001">
                 <include content="BeginOfButtonListForSideMenu">
-                    <param name="onright" value="450" />
+                    <param name="onright" value="400" />
                 </include>
 
                 <include content="ViewGroupLabelForSideMenu" />
@@ -237,7 +237,7 @@
             </control>
 
             <include content="PlayerControlsForSideMenu">
-                <param name="onright" value="450" />
+                <param name="onright" value="400" />
             </include>
         </control>
         

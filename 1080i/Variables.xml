@@ -7,7 +7,7 @@
     <variable name="ContentSortLetterLabel">
         <value>$INFO[ListItem.SortLetter]</value>
     </variable>
-    
+
     <variable name="ContentCategoryLabel">
         <value condition="!String.IsEmpty(ListItem.ChannelNumber)">$INFO[ListItem.ChannelGroup,, | ]$INFO[ListItem.ChannelNumber]</value>
         <value condition="Container.Content(movies)">$INFO[ListItem.Director]</value>
@@ -253,33 +253,33 @@
     </variable>
 
     <variable name="MenuNameLabel">
-        <value>$INFO[Container(450).ListItem.Label]</value>
+        <value>$INFO[Container(400).ListItem.Label]</value>
     </variable>
 
     <variable name="MenuCategoryLabel">
-        <value condition="!String.IsEmpty(Container(450).ListItem.Property(Label3))">$INFO[Container(450).ListItem.Property(Label3)]</value>
-        <value condition="Container.Content(tvshows)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Rating,, | ]$INFO[Container(450).ListItem.MPAA]</value>
-        <value condition="Container.Content(seasons)">$INFO[Container(450).ListItem.TVShowTitle]</value>
-        <value condition="Container.Content(episodes)">$INFO[Container(450).ListItem.Premiered,, | ]$INFO[Container(450).ListItem.Duration]</value>
-        <value condition="Container.Content(movies)">$INFO[Container(450).ListItem.Director]</value>
-        <value condition="!String.IsEmpty(Container(450).ListItem.Album)">$INFO[Container(450).ListItem.Artist]$INFO[Container(450).ListItem.Album, | ,]</value>
-        <value condition="!String.IsEmpty(Container(450).ListItem.Artist)">$INFO[Container(450).ListItem.Artist]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Property(Label3))">$INFO[Container(400).ListItem.Property(Label3)]</value>
+        <value condition="Container.Content(tvshows)">$INFO[Container(400).ListItem.Year,, | ]$INFO[Container(400).ListItem.Rating,, | ]$INFO[Container(400).ListItem.MPAA]</value>
+        <value condition="Container.Content(seasons)">$INFO[Container(400).ListItem.TVShowTitle]</value>
+        <value condition="Container.Content(episodes)">$INFO[Container(400).ListItem.Premiered,, | ]$INFO[Container(400).ListItem.Duration]</value>
+        <value condition="Container.Content(movies)">$INFO[Container(400).ListItem.Director]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Album)">$INFO[Container(400).ListItem.Artist]$INFO[Container(400).ListItem.Album, | ,]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Artist)">$INFO[Container(400).ListItem.Artist]</value>
     </variable>
     
     <variable name="MenuDetailLabel">
-        <value condition="!String.IsEmpty(Container(450).ListItem.Label2)">$INFO[Container(450).ListItem.Label2]</value>
-        <value condition="Container.Content(episodes)">$INFO[Container(450).ListItem.Season,$LOCALIZE[20373] ,]</value>
-        <value condition="Container.Content(movies)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration,, $LOCALIZE[12391]]$INFO[Container(450).ListItem.Genre, | ,]$INFO[Container(450).ListItem.MPAA, | ,]</value>
-        <value condition="!String.IsEmpty(Container(450).ListItem.Property(Artist_Born))">$INFO[Container(450).ListItem.Property(Artist_Born)]$INFO[Container(450).ListItem.Property(Artist_Died), - ,]</value>
-        <value condition="!String.IsEmpty(Container(450).ListItem.Property(Artist_Formed))">$INFO[Container(450).ListItem.Property(Artist_Formed)]$INFO[Container(450).ListItem.Property(Artist_Disbanded), - ,]</value>
-        <value condition="!String.IsEmpty(Container(450).ListItem.Duration)">$INFO[Container(450).ListItem.Year,, | ]$INFO[Container(450).ListItem.Duration]$INFO[Container(450).ListItem.Genre, | ,]</value>
-        <value>$INFO[Container(450).ListItem.Year]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Label2)">$INFO[Container(400).ListItem.Label2]</value>
+        <value condition="Container.Content(episodes)">$INFO[Container(400).ListItem.Season,$LOCALIZE[20373] ,]</value>
+        <value condition="Container.Content(movies)">$INFO[Container(400).ListItem.Year,, | ]$INFO[Container(400).ListItem.Duration,, $LOCALIZE[12391]]$INFO[Container(400).ListItem.Genre, | ,]$INFO[Container(400).ListItem.MPAA, | ,]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Property(Artist_Born))">$INFO[Container(400).ListItem.Property(Artist_Born)]$INFO[Container(400).ListItem.Property(Artist_Died), - ,]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Property(Artist_Formed))">$INFO[Container(400).ListItem.Property(Artist_Formed)]$INFO[Container(400).ListItem.Property(Artist_Disbanded), - ,]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Duration)">$INFO[Container(400).ListItem.Year,, | ]$INFO[Container(400).ListItem.Duration]$INFO[Container(400).ListItem.Genre, | ,]</value>
+        <value>$INFO[Container(400).ListItem.Year]</value>
     </variable>
     
     <variable name="MenuThumbnail">
-        <value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[Container(450).ListItem.Art(thumb)]</value>
-        <value condition="!String.IsEmpty(ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
-        <value>$INFO[Container(450).ListItem.Icon]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Art(thumb))">$INFO[Container(400).ListItem.Art(thumb)]</value>
+        <value condition="!String.IsEmpty(Container(400).ListItem.Icon)">$INFO[Container(400).ListItem.Icon]</value>
+        <value>$INFO[Container(400).ListItem.Icon]</value>
     </variable>
 
     <variable name="BusyAnimationThumbnail">
