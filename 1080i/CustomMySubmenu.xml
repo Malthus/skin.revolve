@@ -217,9 +217,19 @@
         </control>
 
         <control type="group">
+            <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),1)</visible>
             <include content="RevolveMenu">
                 <param name="texture" value="circle/submenu.png" />
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
+                <param name="rotate" value="true" />
+            </include>
+        </control>
+        <control type="group">
+            <visible>!Integer.IsGreater(Skin.String(Background.Animation.Level),1)</visible>
+            <include content="RevolveMenu">
+                <param name="texture" value="circle/submenu.png" />
+                <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
+                <param name="rotate" value="false" />
             </include>
         </control>
         
