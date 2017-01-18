@@ -43,7 +43,7 @@
                         <orientation>horizontal</orientation>
                         <scrolltime>200</scrolltime>
                         <onup>221</onup>
-                        <ondown>111</ondown>
+                        <ondown>231</ondown>
                         <onleft>9000</onleft>
                         <onright>21</onright>
 
@@ -51,7 +51,43 @@
                             <param name="listid" value="211" />
                             <param name="texture" value="$INFO[ListItem.Icon]" />
                             <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="-" />
+                            <param name="label2" value="" />
+                        </include>
+                    </control>
+                </control>
+
+
+                <control type="group" id="239">
+                    <description>Director List</description>
+                    <width>1240</width>
+                    <height>250</height>
+
+                    <control type="label" id="230">
+                        <font></font>
+                    </control>
+            
+                    <include content="ElementLabelForGlobalSearchAddon">
+                        <param name="listid" value="231" />
+                        <param name="label" value="$LOCALIZE[20348]$INFO[Control.GetLabel(230), (,)]:" />
+                    </include>
+            
+                    <control type="list" id="231">
+                        <posx>0</posx>
+                        <posy>37</posy>
+                        <width>1240</width>
+                        <height>310</height>
+                        <orientation>horizontal</orientation>
+                        <scrolltime>200</scrolltime>
+                        <onup>211</onup>
+                        <ondown>111</ondown>
+                        <onleft>9000</onleft>
+                        <onright>21</onright>
+
+                        <include content="ThumbnailElementForListForDialog">
+                            <param name="listid" value="231" />
+                            <param name="texture" value="$INFO[ListItem.Icon]" />
+                            <param name="label" value="$INFO[ListItem.Label]" />
+                            <param name="label2" value="" />
                         </include>
                     </control>
                 </control>
@@ -77,7 +113,7 @@
                         <height>310</height>
                         <orientation>horizontal</orientation>
                         <scrolltime>200</scrolltime>
-                        <onup>211</onup>
+                        <onup>231</onup>
                         <ondown>121</ondown>
                         <onleft>9000</onleft>
                         <onright>21</onright>
@@ -261,7 +297,7 @@
                             <param name="listid" value="161" />
                             <param name="texture" value="$INFO[ListItem.Icon]" />
                             <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="-" />
+                            <param name="label2" value="" />
                         </include>
                     </control>
                 </control>
@@ -366,7 +402,7 @@
                             <param name="listid" value="221" />
                             <param name="texture" value="$INFO[ListItem.Icon]" />
                             <param name="label" value="$INFO[ListItem.Label]" />
-                            <param name="label2" value="-" />
+                            <param name="label2" value="" />
                         </include>
                     </control>
                 </control>
