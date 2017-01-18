@@ -255,13 +255,20 @@
                         <onclick>Noop</onclick>
                     </item>
                     <item id="205">
+                        <description>Open Videos / In Progress TV Shows Option</description>
+                        <visible>Container(30).HasFocus(2)</visible>
+                        <label>$LOCALIZE[31633]</label>
+                        <property name="Command">ActivateWindow(videos,videodb://inprogresstvshows/,return)</property>
+                        <onclick>Noop</onclick>
+                    </item>
+                    <item id="206">
                         <description>Open Videos / Music Videos Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31831]</label>
                         <property name="Command">ActivateWindow(videos,videodb://musicvideos/,return)</property>
                         <onclick>Noop</onclick>
                     </item>
-                    <item id="206">
+                    <item id="207">
                         <description>Open Videos / Path Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31612]</label>
@@ -269,28 +276,28 @@
                         <property name="Parameter">P</property>
                         <onclick>Noop</onclick>
                     </item>
-                    <item id="207">
+                    <item id="208">
                         <description>Open Videos / Playlists Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31832]</label>
                         <property name="Command">ActivateWindow(videos,special://videoplaylists/,return)</property>
                         <onclick>Noop</onclick>
                     </item>
-                    <item id="208">
+                    <item id="209">
                         <description>Open Videos / Addons Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31833]</label>
                         <property name="Command">ActivateWindow(videos,addons://sources/video/,return)</property>
                         <onclick>Noop</onclick>
                     </item>
-                    <item id="209">
+                    <item id="210">
                         <description>Open Videos / Files Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31834]</label>
                         <property name="Command">ActivateWindow(videos,sources://video/,return)</property>
                         <onclick>Noop</onclick>
                     </item>
-                    <item id="210">
+                    <item id="211">
                         <description>Open Video Playlist Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31835]</label>
@@ -299,7 +306,7 @@
                         <property name="InitialPath">special://videoplaylists/</property>
                         <onclick>Noop</onclick>
                     </item>
-                    <item id="211">
+                    <item id="212">
                         <description>Play Video Playlist Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31492]</label>
