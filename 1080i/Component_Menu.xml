@@ -1095,18 +1095,21 @@
 
         <definition>
             <control type="group">
-                <animation effect="rotate" center="51, 661" start="360" end="0" time="240000" delay="0" loop="true" condition="$PARAM[rotate]">Conditional</animation>
                 <animation effect="slide" tween="quadratic" easing="out" start="-1000,0" end="0,0" time="400" reversible="false">WindowOpen</animation>
                 <animation effect="slide" delay="400" tween="quadratic" easing="in" start="0,0" end="-1000,0" time="400" reversible="false">WindowClose</animation>
 
-                <control type="image">
-                    <posx>-280</posx>
-                    <posy>330</posy>
-                    <width>662</width>
-                    <height>662</height>
-                    <texture colordiffuse="$VAR[ShadowmaskColor]" background="true">$PARAM[texture]</texture>
-                    <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                    <fadetime>500</fadetime>
+                <control type="group">
+                    <animation effect="rotate" center="51, 661" start="360" end="0" time="240000" delay="0" loop="true" condition="$PARAM[rotate]">Conditional</animation>
+
+                    <control type="image">
+                        <posx>-280</posx>
+                        <posy>330</posy>
+                        <width>662</width>
+                        <height>662</height>
+                        <texture colordiffuse="$VAR[ShadowmaskColor]" background="true">$PARAM[texture]</texture>
+                        <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+                        <fadetime>500</fadetime>
+                </control>
                 </control>
             </control>
         </definition>
