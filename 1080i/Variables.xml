@@ -35,7 +35,7 @@
         <value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,]</value>
         <value condition="Container.Content(images)">$INFO[ListItem.Size]</value>
-        <value condition="Container.Content(files) + Substring(ListItem.Duration,:)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
+        <value condition="Container.Content(files) + String.Contains(ListItem.Duration,:)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
         <value condition="Container.Content(files) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
         <value condition="Container.Content(files) + !String.IsEmpty(Year)">$INFO[ListItem.Year]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
         <value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion]$INFO[ListItem.Property(Addon.Status), | ,]</value>
@@ -58,7 +58,7 @@
         <value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Duration, | ,]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]$INFO[ListItem.Genre, | ,]</value>
         <value condition="Container.Content(images)">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date]$INFO[ListItem.Size, | ,]</value>
-        <value condition="Container.Content(files) + Substring(ListItem.Duration,:)">$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
+        <value condition="Container.Content(files) + String.Contains(ListItem.Duration,:)">$INFO[ListItem.Album,, | ]$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration]</value>
         <value condition="Container.Content(files) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
         <value condition="Container.Content(files) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]$INFO[ListItem.Year, | ,]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
         <value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator,, | ]$INFO[ListItem.AddonType]$INFO[ListItem.AddonVersion, | ,]$INFO[ListItem.Property(Addon.Status), | ,]</value>
@@ -69,9 +69,9 @@
 
     <variable name="ContentThumbnail">
         <value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-        <value condition="SubString(ListItem.FileExtension,jpg) | SubString(ListItem.FileExtension,jpeg)">$INFO[ListItem.FileNameAndPath]</value>
-        <value condition="SubString(ListItem.FileExtension,png)">$INFO[ListItem.FileNameAndPath]</value>
-        <value condition="SubString(ListItem.FileExtension,gif)">$INFO[ListItem.FileNameAndPath]</value>
+        <value condition="String.IsEqual(ListItem.FileExtension,jpg) | String.IsEqual(ListItem.FileExtension,jpeg)">$INFO[ListItem.FileNameAndPath]</value>
+        <value condition="String.IsEqual(ListItem.FileExtension,png)">$INFO[ListItem.FileNameAndPath]</value>
+        <value condition="String.IsEqual(ListItem.FileExtension,gif)">$INFO[ListItem.FileNameAndPath]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
 
@@ -135,6 +135,8 @@
         <value condition="!String.IsEmpty(ListItem.PicturePath)">$INFO[ListItem.PicturePath]</value>
         <value condition="!String.IsEmpty(ListItem.Property(BackgroundImage))">$INFO[ListItem.Property(BackgroundImage)]</value>
 
+        <value condition="Container.Content(files) + Skin.HasSetting(Background.Image.FanartForFiles) + !String.StartsWith(Container.FolderPath,library)">$INFO[Container.FolderPath,,fanart.jpg]</value>
+        
         <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.String(FavouritesOption.BackgroundImage))">$INFO[Skin.String(FavouritesOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(1104)">special://skin/backgrounds/favourites.jpg</value>
 
@@ -156,6 +158,8 @@
         <value condition="Window.IsVisible(programs) + !String.IsEmpty(Skin.String(ProgramsOption.BackgroundImage))">$INFO[Skin.String(ProgramsOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(programs)">special://skin/backgrounds/programs.jpg</value>
 
+        <value condition="Window.IsVisible(addonbrowser)">special://skin/backgrounds/addons.jpg</value>
+        
         <value condition="Window.IsVisible(1101)">special://skin/backgrounds/items.jpg</value>
         <value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>
         <value condition="Window.IsVisible(1103)">special://skin/backgrounds/default.jpg</value>
@@ -166,8 +170,8 @@
         <value condition="Window.IsVisible(settings)">special://skin/backgrounds/settings.jpg</value>
         <value condition="Window.IsVisible(1150)">special://skin/backgrounds/exit.jpg</value>
         
-        <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(Background.Image.WeatherResource.Path)) + !Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
-        <value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">white.png</value>
+        <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(Background.Image.WeatherResource.Path)) + !String.Contains(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+        <value condition="Window.IsVisible(weather) + String.Contains(Skin.String(Background.Image.WeatherResource.Path),multi)">white.png</value>
         <value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>
         <value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
         <value condition="Window.IsVisible(eventlog)">special://skin/backgrounds/eventlog.jpg</value>
@@ -187,13 +191,11 @@
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(300).ListItem.Property(FallbackImage))">$INFO[Container(300).ListItem.Property(FallbackImage)]</value>
         <value condition="Window.IsVisible(home)">special://skin/backgrounds/default.jpg</value>
 
-        <value condition="Container.Content(addons) | Window.IsVisible(addonbrowser)">special://skin/backgrounds/addons.jpg</value>
-        <value condition="Container.Content(files) + Skin.HasSetting(Background.Image.FanartForFiles) + !SubString(Container.FolderPath,library,Left)">$INFO[Container.FolderPath,,fanart.jpg]</value>
         <value>special://skin/backgrounds/default.jpg</value>
     </variable>
     
     <variable name="ContentMultiImageBackground">
-        <value condition="Window.IsVisible(weather) + Substring(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+        <value condition="Window.IsVisible(weather) + String.Contains(Skin.String(Background.Image.WeatherResource.Path),multi)">resource://$INFO[Skin.String(Background.Image.WeatherResource.Path)]/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
         <value></value>
     </variable>
 
