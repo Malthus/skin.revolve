@@ -8,12 +8,17 @@
         <include content="FullscreenDimensions" />
         <include content="GlobalBackground" />
 
+        <include content="ButtonForValues">
+            <param name="buttonid" value="200" />
+            <param name="controlid" value="52" />
+        </include>
+<!--        
         <control type="button" id="200">
             <description>Skin Settings Initialisation</description>
             <visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
             <texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
-            <include content="DefaultSettingsForSkinSettings" />
+            <include content="DefaultSettingsForValues" />
             <onfocus>SetFocus(52)</onfocus>
         </control>
 
@@ -33,7 +38,7 @@
             <texturefocus>-</texturefocus>
             <onfocus>SetFocus(52)</onfocus>
         </control>
-
+-->
         <include content="CircleListView" />
         <include content="DropListView" />
         <include content="ThumbnailsView" />

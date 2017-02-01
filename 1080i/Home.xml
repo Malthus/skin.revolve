@@ -5,12 +5,17 @@
     <controls>
         <include content="GlobalBackground" />
 
+        <include content="ButtonForValues">
+            <param name="buttonid" value="200" />
+            <param name="controlid" value="210" />
+        </include>
+<!--
         <control type="button" id="200">
             <description>Skin Settings Initialisation</description>
             <visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
             <texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
-            <include content="DefaultSettingsForSkinSettings" />
+            <include content="DefaultSettingsForValues" />
             <onfocus>SetFocus(210)</onfocus>
         </control>
 
@@ -30,7 +35,7 @@
             <texturefocus>-</texturefocus>
             <onfocus>SetFocus(210)</onfocus>
         </control>
-
+-->
         <control type="button" id="210">
             <description>Script and Plugin Initialisation</description>
             <texturenofocus>-</texturenofocus>

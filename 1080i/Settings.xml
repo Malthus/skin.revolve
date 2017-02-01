@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="4">
-    <defaultcontrol always="true">400</defaultcontrol>
+    <defaultcontrol always="true">200</defaultcontrol>
 
     <controls>
         <include content="GlobalBackground" />
 
+        <include content="ButtonForValues">
+            <param name="buttonid" value="200" />
+            <param name="controlid" value="400" />
+        </include>
+        
         <control type="wraplist" id="400">
             <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
             <posx>0</posx>
