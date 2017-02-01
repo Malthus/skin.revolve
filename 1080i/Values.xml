@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="DefaultSettingsForSkinSettings">
+    <include name="ButtonForValues">
+        <param name="buttonid" default="200" />
+        <param name="controlid" default="210" />
+
+        <definition>
+            <control type="button" id="$PARAM[buttonid]">
+                <description>Skin Settings Initialisation</description>
+                <visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <include content="DefaultSettingsForValues" />
+                <onfocus>SetFocus($PARAM[controlid])</onfocus>
+            </control>
+
+            <control type="button" id="$PARAM[buttonid]">
+                <description>Skin Settings Migration</description>
+                <visible>[Skin.HasSetting(RevolveConfiguration) | StringCompare(Skin.String(Revolve.Configuration),3.0.2)] + !StringCompare(Skin.String(Revolve.Configuration),4.1.1)</visible>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <include content="MigratedValues" />
+                <onfocus>SetFocus($PARAM[controlid])</onfocus>
+            </control>
+
+            <control type="button" id="$PARAM[buttonid]">
+                <description>Skin Settings Evasion</description>
+                <visible>StringCompare(Skin.String(Revolve.Configuration),4.1.1)</visible>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <onfocus>SetFocus($PARAM[controlid])</onfocus>
+            </control>
+        </definition>
+    </include>
+
+    <include name="DefaultSettingsForValues">
         <definition>
             <onfocus>Skin.ResetSettings</onfocus>
             
