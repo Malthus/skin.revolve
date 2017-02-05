@@ -11,9 +11,19 @@
             <include name="WindowForDialog">
                 <param name="height" value="HeightForThirteenLinesDialog" />
                 <param name="headerid" value="2" />
-                <param name="icontexture" value="icons/icon-projector.png" />
+                <param name="icontexture" value="icons/icon-settings.png" />
             </include>
 
+			<include name="DefaultIconForWindowForDialog">
+                <param name="visible" value="Window.IsVisible(osdvideosettings)" />
+                <param name="icontexture" value="icons/icon-projector.png" />
+            </include>
+            
+			<include name="DefaultIconForWindowForDialog">
+                <param name="visible" value="Window.IsVisible(osdaudiosettings)" />
+                <param name="icontexture" value="icons/icon-audio.png" />
+            </include>
+            
 			<control type="grouplist" id="5">
                 <include name="MarkupForListForDialog">
                     <param name="posy" value="80" />
