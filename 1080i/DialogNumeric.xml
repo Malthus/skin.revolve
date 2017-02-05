@@ -172,6 +172,8 @@
                         <posy>288</posy>
                         <itemgap>0</itemgap> 
                         <orientation>horizontal</orientation> 
+                        <onleft>29</onleft>
+                        <onright>29</onright>
                         
                         <control type="button" id="21">
                             <description>Done Button</description>
@@ -192,6 +194,19 @@
                         </control>
                     </control>
                 </control>
+            </control>
+
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
+                    <param name="posy" value="480" />
+                    <param name="height" value="40" />
+                </include>
+                <onleft>23</onleft>
+                <onright>21</onright>
+
+                <include content="CloseButtonForDialog">
+                    <param name="id" value="29" />
+                </include>
             </control>
         </control>
     </controls>
