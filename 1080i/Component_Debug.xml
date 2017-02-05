@@ -30,7 +30,7 @@
                 </control>
 
                 <!-- Content Labels -->
-                
+
                 <include content="ContentTypeForDebug">
                     <param name="visible" value="Container.Content(tvshows)" />
                     <param name="label" value="TV Shows" />
@@ -54,6 +54,11 @@
                 <include content="ContentTypeForDebug">
                     <param name="visible" value="Container.Content(musicvideos)" />
                     <param name="label" value="Music Videos" />
+                </include>
+
+                <include content="ContentTypeForDebug">
+                    <param name="visible" value="Container.Content(videos)" />
+                    <param name="label" value="Videos" />
                 </include>
 
                 <include content="ContentTypeForDebug">
@@ -97,6 +102,11 @@
                 </include>
 
                 <include content="ContentTypeForDebug">
+                    <param name="visible" value="Container.Content(countries)" />
+                    <param name="label" value="Countries" />
+                </include>
+
+                <include content="ContentTypeForDebug">
                     <param name="visible" value="Container.Content(years)" />
                     <param name="label" value="Years" />
                 </include>
@@ -137,8 +147,23 @@
                 </include>
 
                 <include content="ContentTypeForDebug">
+                    <param name="visible" value="Container.Content(events)" />
+                    <param name="label" value="Events" />
+                </include>
+
+                <include content="ContentTypeForDebug">
                     <param name="visible" value="Container.Content(livetv)" />
                     <param name="label" value="Live TV Items" />
+                </include>
+
+                <include content="ContentTypeForDebug">
+                    <param name="visible" value="Container.Content(mixed)" />
+                    <param name="label" value="Mixed Items" />
+                </include>
+
+                <include content="ContentTypeForDebug">
+                    <param name="visible" value="Container.Content(unknown)" />
+                    <param name="label" value="Unknown Items" />
                 </include>
 
                 <include content="ContentTypeForDebug">
