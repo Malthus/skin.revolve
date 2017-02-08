@@ -415,7 +415,6 @@
                     <param name="height" value="800" />
                 </include>
 				<onleft>20</onleft>
-				<onright>Noop</onright>
 			</control>
             
 			<control type="grouplist" id="9000">
@@ -423,8 +422,6 @@
                     <param name="posy" value="760" />
                     <param name="height" value="120" />
                 </include>
-                <onup>9000</onup>
-                <ondown>9000</ondown>
                 <onright>20</onright>
 
                 <control type="button" id="198">
