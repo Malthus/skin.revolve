@@ -27,8 +27,8 @@
                 <align>left</align>
                 <scrolltime>0</scrolltime>
                 <pagecontrol>31</pagecontrol>
-                <onup>21</onup>
-                <ondown>22</ondown>
+                <onup>30</onup>
+                <ondown>30</ondown>
                 <onleft>9000</onleft>
                 <onright>31</onright>
 
@@ -224,7 +224,6 @@
                     <param name="height" value="400" />
                 </include>
 				<onleft>30</onleft>
-				<onright>Noop</onright>
 			</control>
 
 			<control type="grouplist" id="9000">
@@ -232,8 +231,6 @@
                     <param name="posy" value="400" />
                     <param name="height" value="200" />
                 </include>
-				<onup>30</onup>
-				<ondown>30</ondown>
 				<onright>30</onright>
 
 				<control type="button" id="22">

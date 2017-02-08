@@ -42,7 +42,7 @@
                 <param name="posy" value="80" />
                 <param name="labelprefix" value="" />
                 <param name="labelsuffix" value="0000" />
-                <param name="onup" value="21" />
+                <param name="onup" value="8" />
                 <param name="ondown" value="7" />
             </include>
 
@@ -81,7 +81,7 @@
                 <param name="labelprefix" value="0000" />
                 <param name="labelsuffix" value="" />
                 <param name="onup" value="7" />
-                <param name="ondown" value="20" />
+                <param name="ondown" value="6" />
             </include>
 
             <control type="label">
@@ -123,8 +123,7 @@
                     <param name="posy" value="160" />
                     <param name="height" value="80" />
                 </include>
-                <onup>8</onup>
-                <ondown>6</ondown>
+                <onright>8</onright>
 
 				<control type="button" id="20">
 					<description>Ok Button</description>
