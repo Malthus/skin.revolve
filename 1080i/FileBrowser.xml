@@ -18,8 +18,6 @@
                     <param name="height" value="550" />
                     <param name="pagecontrol" value="451" />
                 </include>
-				<onup>414</onup>
-				<ondown>415</ondown>
 				<onleft>9000</onleft>
 				<onright>451</onright>
 
@@ -55,11 +53,9 @@
             
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="500" />
-                    <param name="height" value="180" />
+                    <param name="posy" value="480" />
+                    <param name="height" value="200" />
                 </include>
-				<onup>450</onup>
-				<ondown>450</ondown>
 				<onright>450</onright>
 
 				<control type="button" id="415">
@@ -72,7 +68,7 @@
 				</control>
                 <include name="OkButtonForDialog">
                     <param name="id" value="413" />
-                    <param name="posy" value="20" />
+                    <param name="posy" value="40" />
                 </include>
                 <include name="CancelButtonForDialog">
                     <param name="id" value="414" />

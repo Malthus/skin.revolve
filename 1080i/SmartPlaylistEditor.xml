@@ -19,7 +19,7 @@
 				<width>1240</width>
 				<align>left</align>
 				<label>$LOCALIZE[467]</label>
-				<onup>21</onup>
+				<onup>23</onup>
 				<ondown>12</ondown>
 				<onleft>9000</onleft>
 			</control>
@@ -54,7 +54,6 @@
 				<onup>12</onup>
 				<ondown>16</ondown>
 				<onleft>9000</onleft>
-				<onright>Noop</onright>
 				
 				<itemlayout height="40">
 					<include>NormalItemsForNormalListInDialog</include>
@@ -81,7 +80,6 @@
 				<onup>10</onup>
 				<ondown>17</ondown>
 				<onleft>9000</onleft>
-				<onright>Noop</onright>
 			</control>
 
 			<control type="spincontrolex" id="17">
@@ -92,7 +90,6 @@
 				<label>$LOCALIZE[21427]</label>
 				<onup>16</onup>
 				<ondown>18</ondown>
-				<onright>Noop</onright>
 				<onleft>9000</onleft>
 			</control>
 
@@ -102,10 +99,10 @@
 				<posy>520</posy>
 				<width>740</width>
 				<label>$LOCALIZE[21429]</label>
-				<onright>19</onright>
-				<onleft>9000</onleft>
 				<onup>17</onup>
 				<ondown>23</ondown>
+				<onright>19</onright>
+				<onleft>9000</onleft>
 			</control>
 
 			<control type="togglebutton" id="19">
@@ -118,7 +115,6 @@
 				<onup>17</onup>
 				<ondown>24</ondown>
 				<onleft>18</onleft>
-				<onright>Noop</onright>
 			</control>
 
 			<control type="spincontrolex" id="23">
@@ -128,7 +124,7 @@
 				<width>740</width>
 				<label>$LOCALIZE[21458]</label>
 				<onup>18</onup>
-				<ondown>13</ondown>
+				<ondown>22</ondown>
 				<onleft>9000</onleft>
 				<onright>24</onright>
 			</control>
@@ -140,17 +136,15 @@
 				<width>480</width>
 				<label>$LOCALIZE[21459]</label>
 				<onup>19</onup>
-				<ondown>13</ondown>
+				<ondown>22</ondown>
 				<onleft>23</onleft>
 			</control>
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="380" />
-                    <param name="height" value="220" />
+                    <param name="posy" value="400" />
+                    <param name="height" value="240" />
                 </include>
-                <onup>23</onup>
-                <ondown>22</ondown>
 				<onright>10</onright>
                 
 				<control type="button" id="13">
@@ -168,7 +162,7 @@
                 
                 <include name="OkButtonForDialog">
                     <param name="id" value="20" />
-                    <param name="posy" value="20" />
+                    <param name="posy" value="40" />
                 </include>
                 <include name="CancelButtonForDialog">
                     <param name="id" value="21" />
