@@ -46,8 +46,8 @@
 					<posy>120</posy>
 					<width>608</width>
 					<height>750</height>
-					<onup>6</onup>
-					<ondown>7</ondown>
+					<onup>20</onup>
+					<ondown>20</ondown>
 					<onleft>9000</onleft>
 					<onright>9002</onright>
                     
@@ -69,9 +69,9 @@
 					<radioposx>540</radioposx>
 					<align>left</align>
 					<label>$LOCALIZE[31405]</label>
-					<onup>20</onup>
+					<onup>13</onup>
 					<ondown>8</ondown>
-					<onleft>20</onleft>
+                    <onleft>20</onleft>
 				</control>
 
 				<control type="edit" id="8">
@@ -115,18 +115,16 @@
 					<align>left</align>
 					<label>$LOCALIZE[31408]</label>
 					<onup>12</onup>
-					<ondown>31</ondown>
+					<ondown>7</ondown>
 					<onleft>20</onleft>
 				</control>
 			</control>
 			
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="640" />
-                    <param name="height" value="280" />
+                    <param name="posy" value="600" />
+                    <param name="height" value="320" />
                 </include>
-				<onup>13</onup>
-				<ondown>20</ondown>
 				<onright>20</onright>
 
                 <control type="button" id="31">
@@ -135,7 +133,7 @@
                 </control>
                 <control type="togglebutton" id="34">
                     <description>Radio / TV Toggle Button</description>
-                    <posy>20</posy>
+                    <posy>40</posy>
                     <label>$LOCALIZE[19023]</label>
                     <altlabel>$LOCALIZE[19024]</altlabel>
                 </control>
@@ -145,7 +143,7 @@
                 </control>
                 <include name="OkButtonForDialog">
                     <param name="id" value="4" />
-                    <param name="posy" value="20" />
+                    <param name="posy" value="40" />
                 </include>
                 <include name="ApplyButtonForDialog">
                     <param name="id" value="5" />

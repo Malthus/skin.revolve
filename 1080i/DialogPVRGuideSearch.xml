@@ -21,7 +21,7 @@
 				<align>left</align>
 				<label>$LOCALIZE[19133]</label>
 				<onleft>9000</onleft>
-				<onup>25</onup>
+				<onup>27</onup>
 				<ondown>10</ondown>
 			</control>
 
@@ -220,17 +220,15 @@
 				<align>left</align>
 				<label>$LOCALIZE[19125]</label>
 				<onup>22</onup>
-				<ondown>29</ondown>
+				<ondown>9</ondown>
 				<onleft>24</onleft>
 			</control>
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="380" />
-                    <param name="height" value="180" />
+                    <param name="posy" value="360" />
+                    <param name="height" value="200" />
                 </include>
-				<onup>27</onup>
-				<ondown>9</ondown>
 				<onright>9</onright>
 
                 <include name="HelpButtonForDialog">
@@ -242,7 +240,7 @@
 				</control>
 				<control type="button" id="26">
                     <description>Search Button</description>
-                    <posy>20</posy>
+                    <posy>40</posy>
 					<label>$LOCALIZE[137]</label>
 				</control>
                 <include name="CancelButtonForDialog">

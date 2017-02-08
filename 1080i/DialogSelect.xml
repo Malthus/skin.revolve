@@ -32,8 +32,8 @@
                     <param name="height" value="520" />
                     <param name="pagecontrol" value="21" />
                 </include>
-				<onup>9</onup>
-				<ondown>5</ondown>
+				<onup>3</onup>
+				<ondown>3</ondown>
 				<onleft>9000</onleft>
 				<onright>21</onright>
 
@@ -60,8 +60,8 @@
                     <param name="height" value="520" />
                     <param name="pagecontrol" value="22" />
                 </include>
-				<onup>9</onup>
-				<ondown>5</ondown>
+				<onup>6</onup>
+				<ondown>6</ondown>
 				<onleft>9000</onleft>
 				<onright>22</onright>
 				
@@ -89,7 +89,6 @@
                     <param name="height" value="520" />
                 </include>
 				<onleft>3</onleft>
-				<onright>Noop</onright>
 			</control>
 
 			<control type="scrollbar" id="22">
@@ -100,7 +99,6 @@
                     <param name="height" value="520" />
                 </include>
 				<onleft>6</onleft>
-				<onright>Noop</onright>
 			</control>
 
 			<control type="label" id="2">
@@ -116,11 +114,9 @@
 
 			<control type="grouplist" id="9000">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="500" />
-                    <param name="height" value="100" />
+                    <param name="posy" value="480" />
+                    <param name="height" value="120" />
                 </include>
-                <onup>3</onup>
-                <ondown>3</ondown>
                 <onright>3</onright>
 
                 <control type="button" id="5">
@@ -135,7 +131,7 @@
                 </control>
                 <control type="button" id="9">
                     <description>Close Button</description>
-                    <posy>20</posy>
+                    <posy>40</posy>
                     <label>$LOCALIZE[31915]</label>
                     <onclick>Close</onclick>
                 </control>

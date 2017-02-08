@@ -225,8 +225,6 @@
 				<width>400</width>
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
-				<ondown>10052</ondown>
-				<onup>10051</onup>
 
 				<control type="slider" id="8000">
 					<description>Preamp Frequency Band Slider</description>
@@ -464,11 +462,9 @@
 			
 			<control type="grouplist" id="9001">
                 <include name="MarkupForButtonListForDialog">
-                    <param name="posy" value="380" />
-                    <param name="height" value="140" />
+                    <param name="posy" value="360" />
+                    <param name="height" value="160" />
                 </include>
-				<onup>8010</onup>
-				<ondown>8000</ondown>
 				<onright>9000</onright>
 
 				<control type="button" id="10052">
@@ -477,7 +473,7 @@
 				</control>			
 				<control type="button" id="10050">
 					<description>OK Button</description>
-                    <posy>20</posy>
+                    <posy>40</posy>
 					<label>$LOCALIZE[186]</label>
 				</control>			
 				<control type="button" id="10051">
