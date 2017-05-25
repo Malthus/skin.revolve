@@ -213,14 +213,13 @@
 
     <include name="SpacerForButtonListForDialog">
         <param name="id" default="0" />
-        <param name="buttonid" default="0" />
         <param name="visible" default="true" />
         <param name="posy" default="0" />
         <param name="height" default="40" />
     
         <definition>
             <control type="label" id="$PARAM[id]">
-                <visible>[Integer.IsEqual($PARAM[buttonid], 0) | !Control.IsVisible($PARAM[buttonid])] + $PARAM[visible]</visible>
+                <visible>$PARAM[visible]</visible>
                 <posy>$PARAM[posy]</posy>
                 <height>$PARAM[height]</height>
                 <label></label>
@@ -368,7 +367,7 @@
             </control>
         </definition>
     </include>
-
+3
     <include name="TextboxForDialog">
         <param name="visible" default="true" />
         <param name="posy" default="80" />
