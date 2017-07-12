@@ -65,13 +65,6 @@
                     <onclick>ActivateWindow(SkinSettings)</onclick>
                 </item>
                 <item id="6">
-                    <description>Addons Settings</description>
-                    <label>$LOCALIZE[24001]</label>
-                    <property name="Label3">$LOCALIZE[31023]</property>
-                    <icon>special://skin/backgrounds/addons.jpg</icon>
-                    <onclick>ActivateWindow(AddonBrowser)</onclick>
-                </item>
-                <item id="7">
                     <description>Network/Service Settings</description>
                     <label>$LOCALIZE[14036]</label>
                     <label2>$LOCALIZE[5]</label2>
@@ -79,13 +72,20 @@
                     <icon>special://skin/backgrounds/servicesettings.jpg</icon>
                     <onclick>ActivateWindow(ServiceSettings)</onclick>
                 </item>
-                <item id="8">
+                <item id="7">
                     <description>System Settings</description>
                     <label>$LOCALIZE[13000]</label>
                     <label2>$LOCALIZE[5]</label2>
                     <property name="Label3">$LOCALIZE[31028]</property>
                     <icon>special://skin/backgrounds/systemsettings.jpg</icon>
                     <onclick>ActivateWindow(SystemSettings)</onclick>
+                </item>
+                <item id="8">
+                    <description>Addons Settings</description>
+                    <label>$LOCALIZE[24001]</label>
+                    <property name="Label3">$LOCALIZE[31023]</property>
+                    <icon>special://skin/backgrounds/addons.jpg</icon>
+                    <onclick>ActivateWindow(AddonBrowser)</onclick>
                 </item>
                 <item id="9">
                     <description>Profiles</description>
