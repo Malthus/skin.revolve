@@ -1277,6 +1277,7 @@
         <param name="iconthumbnail" default="" />
         <param name="icontexture" default="" />
         <param name="iconlabel" default="" />
+        <param name="iconlabelvisible" default="true" />
         <param name="iconoverlayvisible" default="false" />
     
         <definition>
@@ -1287,6 +1288,7 @@
                 <include content="BackgroundForDefaultCircleThumbnailIcon" />
 
                 <control type="label">
+                    <visible>$PARAM[iconlabelvisible]</visible>
                     <posx>35</posx>
                     <posy>35</posy>
                     <width>200</width>
