@@ -802,6 +802,30 @@
                         <param name="id" value="903" />
                     </include>
 
+                    <control type="label" id="908">
+                        <description>Debug Information Label</description>
+                        <width>1100</width>
+                        <height>40</height>
+                        <font>NormalButtonFont</font>
+                        <textcolor>$VAR[BackgroundColor]</textcolor>
+                        <align>left</align>
+                        <label>Music Visualization Sound Workaround</label>
+                    </control>
+                    
+                    <control type="radiobutton" id="909">
+                        <description>Music Visualization Sound Workaround Setting</description>
+                        <width>1100</width>
+                        <radioposx>1040</radioposx>
+                        <align>left</align>
+                        <label>Hidden Music Visualization</label>
+                        <selected>Skin.HasSetting(Background.Visualiser.RunHidden)</selected>
+                        <onclick>Skin.ToggleSetting(Background.Visualiser.RunHidden)</onclick>
+                    </control>
+
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="907" />
+                    </include>
+
                     <control type="button" id="910">
                         <description>Reload Skin Button</description>
                         <width>1100</width>

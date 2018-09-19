@@ -2,10 +2,11 @@
 <includes>
     <include name="GlobalBackground">
         <definition>
+            <include content="VideoBackground" />
+            <include content="MusicVisualizationBackground" />
+
             <include content="DefaultBackground" />
             <include content="ImageBackground" />
-            <include content="MusicVisualizationBackground" />
-            <include content="VideoBackground" />
         </definition>
     </include>
 
@@ -65,7 +66,7 @@
     <include name="MusicVisualizationBackground">
         <definition>
             <control type="group">
-                <visible>Player.HasAudio + Skin.HasSetting(Background.Visualiser.Active) + !SlideShow.IsActive</visible>
+                <visible>Player.HasAudio + [[Skin.HasSetting(Background.Visualiser.Active) + !SlideShow.IsActive] | Skin.HasSetting(Background.Visualiser.RunHidden)]</visible>
 
                 <control type="visualisation">
                     <include content="FadeAnimationForBackground" />
