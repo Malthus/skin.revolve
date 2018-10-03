@@ -45,7 +45,7 @@
             <control type="label" id="$PARAM[id]">
                 <width>1100</width>
                 <height>20</height>
-                <label>-</label>
+                <label></label>
             </control>
         </definition>
     </include>
@@ -110,7 +110,7 @@
                     <texturenofocus colordiffuse="FF$PARAM[color]" border="20">controls/rectangle-fill.png</texturenofocus>
                     <texturefocus colordiffuse="FF$PARAM[color]" border="20">controls/rectangle-fill.png</texturefocus>
                     <align>left</align>
-                    <label>-</label>
+                    <label></label>
                     <onup>$PARAM[onup]</onup>
                     <ondown>$PARAM[ondown]</ondown>
                     <onleft>$PARAM[onleft]</onleft>

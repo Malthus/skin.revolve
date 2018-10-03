@@ -14,7 +14,7 @@
             <width>250</width>
             <height>250</height>
             <texturefocus>elements/calibration-topleft.png</texturefocus>
-            <texturenofocus>-</texturenofocus>
+            <texturenofocus></texturenofocus>
         </control>
 
         <control type="mover" id="9">
@@ -24,7 +24,7 @@
             <width>250</width>
             <height>250</height>
             <texturefocus>elements/calibration-bottomright.png</texturefocus>
-            <texturenofocus>-</texturenofocus>
+            <texturenofocus></texturenofocus>
         </control>
 
         <control type="mover" id="10">
@@ -34,7 +34,7 @@
             <width>500</width>
             <height>50</height>
             <texturefocus>elements/calibration-subtitles.png</texturefocus>
-            <texturenofocus>-</texturenofocus>
+            <texturenofocus></texturenofocus>
         </control>
 
         <control type="resize" id="11">
@@ -44,7 +44,7 @@
             <width>250</width>
             <height>250</height>
             <texturefocus>elements/calibration-center.png</texturefocus>
-            <texturenofocus>-</texturenofocus>
+            <texturenofocus></texturenofocus>
         </control>
 
         <control type="group">
@@ -66,7 +66,7 @@
                 <height>30</height>
                 <align>center</align>
                 <textcolor>$VAR[MainColor]</textcolor>
-                <label>-</label>
+                <label></label>
             </control>
         </control>
 
@@ -89,7 +89,7 @@
                 <height>30</height>
                 <align>center</align>
                 <textcolor>$VAR[MainColor]</textcolor>
-                <label>-</label>
+                <label></label>
             </control>
         </control>
     </controls>

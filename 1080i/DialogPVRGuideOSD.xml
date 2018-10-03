@@ -19,7 +19,7 @@
                         <posx>323</posx>
                         <width>1500</width>
                         <height>0</height>
-                        <font>-</font>
+                        <font></font>
                         <textcolor>$VAR[MainColor]</textcolor>
                         <align>left</align>
                         <label>$VAR[ContentNameLabel]</label>
@@ -31,7 +31,7 @@
                         <posx>323</posx>
                         <width>1500</width>
                         <height>120</height>
-                        <font>-</font>
+                        <font></font>
                         <textcolor>$VAR[MainColor]</textcolor>
                         <align>left</align>
                         <label>$VAR[ContentNameLabel]</label>
@@ -114,7 +114,7 @@
                     <posy>1010</posy>
                     <width>1210</width>
                     <height>24</height>
-                    <texturebg border="6">-</texturebg>
+                    <texturebg border="6"></texturebg>
                     <midtexture colordiffuse="$VAR[MainColor]" border="6">controls/horizontalbar-thin.png</midtexture>
                     <info>Container(11).ListItem.Progress</info>
                 </control>

@@ -482,6 +482,6 @@
     
     <variable name="AutoCompletionAddon">
         <value condition="!System.HasHiddenInput + System.HasAddon(plugin.program.autocompletion) + Skin.HasSetting(Keyboard.AutoCompleteActive)">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=8</value>
-        <value>-</value>
+        <value></value>
     </variable>
 </includes>

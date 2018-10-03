@@ -122,9 +122,9 @@
                     <width>20</width>
                     <height>460</height>
                     <showonepage>false</showonepage>
-                    <texturesliderbackground>-</texturesliderbackground>
-                    <texturesliderbar>-</texturesliderbar>
-                    <texturesliderbarfocus>-</texturesliderbarfocus>
+                    <texturesliderbackground></texturesliderbackground>
+                    <texturesliderbar></texturesliderbar>
+                    <texturesliderbarfocus></texturesliderbarfocus>
                 </control>
 
                 <control type="label">
@@ -155,10 +155,10 @@
                     <posy>0</posy>
                     <width>528</width>
                     <height>780</height>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
-                    <font>-</font>
-                    <label>-</label>
+                    <texturenofocus></texturenofocus>
+                    <texturefocus></texturefocus>
+                    <font></font>
+                    <label></label>
                     <onfocus>Control.SetFocus(9001)</onfocus>
                 </control>
             
@@ -595,7 +595,7 @@
         <definition>
             <control type="button" id="20">
                 <align>left</align>
-                <label>-</label>
+                <label></label>
                 <onclick>SettingsLevelChange</onclick>
             </control>
         </definition>
@@ -657,7 +657,7 @@
         <definition>
             <control type="button" id="21">
                 <align>left</align>
-                <label>-</label>
+                <label></label>
             </control>
         </definition>
     </include>
@@ -699,7 +699,7 @@
         <definition>
             <control type="radiobutton" id="22">
                 <align>left</align>
-                <label>-</label>
+                <label></label>
             </control>
         </definition>
     </include>
@@ -727,7 +727,7 @@
         <definition>
             <control type="button" id="28">
                 <align>left</align>
-                <label>-</label>
+                <label></label>
             </control>
         </definition>
     </include>

@@ -12,7 +12,7 @@
         <scroll>true</scroll>
         <scrollspeed>50</scrollspeed>
         <scrollsuffix> | </scrollsuffix>
-        <label>-</label>
+        <label></label>
     </default>
 
     <default type="edit">
@@ -25,15 +25,15 @@
         <textoffsetx>20</textoffsetx>
         <align>center</align>
         <aligny>center</aligny>
-        <label>-</label>
+        <label></label>
     </default>
     
     <default type="image">
-        <width>-</width>
-        <height>-</height>
+        <width></width>
+        <height></height>
         <align>center</align>
         <aligny>center</aligny>
-        <texture>-</texture>
+        <texture></texture>
     </default>
 
     <default type="button">
@@ -48,7 +48,7 @@
         <texturefocus colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texturefocus>
         <align>center</align>
         <aligny>center</aligny>
-        <label>-</label>
+        <label></label>
     </default>
 
     <default type="togglebutton">
@@ -65,7 +65,7 @@
         <alttexturefocus colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</alttexturefocus>
         <align>center</align>
         <aligny>center</aligny>
-        <label>-</label>
+        <label></label>
     </default>
 
     <default type="radiobutton">
@@ -88,7 +88,7 @@
         <textureradiooffdisabled colordiffuse="$VAR[TextColor]">controls/circle-clear.png</textureradiooffdisabled>
         <align>center</align>
         <aligny>center</aligny>
-        <label>-</label>
+        <label></label>
     </default>
 
     <default type="spincontrol">
@@ -136,7 +136,7 @@
         <align>left</align>
         <aligny>center</aligny>
         <reverse>yes</reverse>
-        <label>-</label>
+        <label></label>
     </default>
 
     <default type="slider">
@@ -144,8 +144,8 @@
         <posy>0</posy>
         <width>346</width>
         <height>40</height>
-        <texturefocus>-</texturefocus>
-        <texturenofocus>-</texturenofocus>
+        <texturefocus></texturefocus>
+        <texturenofocus></texturenofocus>
         <texturesliderbar colordiffuse="$VAR[SecondaryColor]">controls/line-horizontal.png</texturesliderbar>
         <textureslidernib colordiffuse="$VAR[SecondaryColor]">controls/circle-verticalhole.png</textureslidernib>
         <textureslidernibfocus colordiffuse="$VAR[BackgroundColor]">controls/circle-verticalhole.png</textureslidernibfocus>
@@ -171,11 +171,11 @@
     </default>
 
     <default type="progress">
-        <texturebg border="6">-</texturebg>
+        <texturebg border="6"></texturebg>
         <midtexture colordiffuse="$VAR[MainColor]" border="6">controls/horizontalbar-thin.png</midtexture>
-        <lefttexture>-</lefttexture>
-        <righttexture>-</righttexture>
-        <overlaytexture>-</overlaytexture>
+        <lefttexture></lefttexture>
+        <righttexture></righttexture>
+        <overlaytexture></overlaytexture>
     </default>
 
     <default type="scrollbar">
@@ -190,8 +190,8 @@
     <default type="textbox">
         <font>DescriptionViewFont</font>
         <textcolor>$VAR[SecondaryColor]</textcolor>
-        <pagecontrol>-</pagecontrol>
+        <pagecontrol></pagecontrol>
         <autoscroll delay="3000" time="2000" repeat="5000"/>
-        <label>-</label>
+        <label></label>
     </default>
 </includes>
