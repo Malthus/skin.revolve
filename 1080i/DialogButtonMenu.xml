@@ -56,7 +56,7 @@
 
                 <control type="button" id="3">
                     <description>Logoff Profile Button</description>
-                    <visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]</visible>
+                    <visible>System.IsLoggedOn + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)]</visible>
                     <width>512</width>
                     <height>60</height>
                     <scroll>Control.HasFocus(3)</scroll>

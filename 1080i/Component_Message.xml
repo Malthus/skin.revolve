@@ -14,7 +14,7 @@
 
         <definition>
             <control type="group">
-                <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),1)</visible>
+                <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),1)</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 
@@ -29,7 +29,7 @@
             </control>
             
             <control type="group">
-                <visible>IntegerGreaterThan(Skin.String(Background.Animation.Level),3)</visible>
+                <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),3)</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 

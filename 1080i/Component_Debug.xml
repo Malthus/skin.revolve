@@ -14,7 +14,7 @@
                 <!-- Background Labels -->
 
                 <control type="group">
-                    <visible>StringCompare(Skin.String(Debug.Info.AdditionalType),B)</visible>
+                    <visible>String.IsEqual(Skin.String(Debug.Info.AdditionalType),B)</visible>
                     <include content="InformationForDebug">
                         <param name="label" value="$VAR[ContentSingleImageBackground]$VAR[ContentMultiImageBackground, | ,]" />
                     </include>
@@ -23,7 +23,7 @@
                 <!-- Folderpath Labels -->
 
                 <control type="group">
-                    <visible>StringCompare(Skin.String(Debug.Info.AdditionalType),P) + !String.IsEmpty(Container.FolderPath)</visible>
+                    <visible>String.IsEqual(Skin.String(Debug.Info.AdditionalType),P) + !String.IsEmpty(Container.FolderPath)</visible>
                     <include content="InformationForDebug">
                         <param name="label" value="$INFO[Container.FolderPath]" />
                     </include>

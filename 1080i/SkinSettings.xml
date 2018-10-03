@@ -337,7 +337,7 @@
                     <include content="ColorSettingButtonForSkinSettings">
                         <param name="id" value="403" />
                         <param name="label" value="- $LOCALIZE[31485]" />
-                        <param name="enable" value="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)" />
+                        <param name="enable" value="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),X)" />
                         <param name="relatedcolorprefix" value="$NUMBER[80]" />           
                         <param name="colorsetting" value="Colors.MainColorCustomValue" />
                         <param name="relatedcolorsetting" value="Colors.SelectColorCustomValue" />
@@ -346,7 +346,7 @@
                     <include content="ColorSettingButtonForSkinSettings">
                         <param name="id" value="404" />
                         <param name="label" value="- $LOCALIZE[31486]" />
-                        <param name="enable" value="StringCompare(Skin.String(Colors.PrimaryColorTheme),X)" />
+                        <param name="enable" value="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),X)" />
                         <param name="colorsetting" value="Colors.HighlightColorCustomValue" />
                     </include>
 
@@ -384,7 +384,7 @@
                     <include content="ColorSettingButtonForSkinSettings">
                         <param name="id" value="405" />
                         <param name="label" value="- $LOCALIZE[31487]" />
-                        <param name="enable" value="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)" />
+                        <param name="enable" value="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),X)" />
                         <param name="relatedcolorprefix" value="A0" />
                         <param name="colorsetting" value="Colors.BackgroundColorCustomValue" />
                         <param name="relatedcolorsetting" value="Colors.FademaskColorCustomValue" />
@@ -393,14 +393,14 @@
                     <include content="ColorSettingButtonForSkinSettings">
                         <param name="id" value="406" />
                         <param name="label" value="- $LOCALIZE[31488]" />
-                        <param name="enable" value="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)" />
+                        <param name="enable" value="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),X)" />
                         <param name="colorsetting" value="Colors.SecondaryColorCustomValue" />
                     </include>
 
                     <include content="ColorSettingButtonForSkinSettings">
                         <param name="id" value="407" />
                         <param name="label" value="- $LOCALIZE[31489]" />
-                        <param name="enable" value="StringCompare(Skin.String(Colors.BackgroundColorTheme),X)" />
+                        <param name="enable" value="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),X)" />
                         <param name="colorsetting" value="Colors.TextColorCustomValue" />
                     </include>
 

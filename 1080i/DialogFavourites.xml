@@ -18,8 +18,8 @@
                 <description>Empty Favourites List Condition</description>
                 <texturenofocus>-</texturenofocus>
                 <texturefocus>-</texturefocus>
-                <onfocus condition="!StringCompare(Container(450).NumItems,0)">SetFocus(450)</onfocus>
-                <onfocus condition="StringCompare(Container(450).NumItems,0)">SetFocus(7)</onfocus>
+                <onfocus condition="!String.IsEqual(Container(450).NumItems,0)">SetFocus(450)</onfocus>
+                <onfocus condition="String.IsEqual(Container(450).NumItems,0)">SetFocus(7)</onfocus>
             </control>
 
             <control type="panel" id="450">

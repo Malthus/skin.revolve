@@ -16,7 +16,7 @@
 
             <control type="button" id="$PARAM[buttonid]">
                 <description>Skin Settings Migration</description>
-                <visible>[Skin.HasSetting(RevolveConfiguration) | StringCompare(Skin.String(Revolve.Configuration),3.0.2)] + !StringCompare(Skin.String(Revolve.Configuration),4.1.1)</visible>
+                <visible>[Skin.HasSetting(RevolveConfiguration) | String.IsEqual(Skin.String(Revolve.Configuration),3.0.2)] + !String.IsEqual(Skin.String(Revolve.Configuration),4.1.1)</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
                 <include content="MigratedValues" />
@@ -25,7 +25,7 @@
 
             <control type="button" id="$PARAM[buttonid]">
                 <description>Skin Settings Evasion</description>
-                <visible>StringCompare(Skin.String(Revolve.Configuration),4.1.1)</visible>
+                <visible>String.IsEqual(Skin.String(Revolve.Configuration),4.1.1)</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>

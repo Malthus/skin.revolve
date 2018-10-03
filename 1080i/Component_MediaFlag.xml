@@ -34,7 +34,7 @@
     </include>
     
     <include name="WatchedPropertyMediaFlag">
-        <param name="visible" default="StringCompare(ListItem.Overlay,OverlayWatched.png)" />
+        <param name="visible" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
         <param name="mediaflagcolor" default="$VAR[MainColor]" />
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
@@ -251,7 +251,7 @@
             </control>
             
             <control type="group">
-                <visible>String.IsEmpty($PARAM[infolabel]) + !Container.Content(addons) + [SubString($PARAM[filelabel],ape) | SubString($PARAM[filelabel],flac) | SubString($PARAM[filelabel],mp3) | SubString($PARAM[filelabel],wav) | SubString($PARAM[filelabel],wma)]</visible>
+                <visible>String.IsEmpty($PARAM[infolabel]) + !Container.Content(addons) + [String.Contains($PARAM[filelabel],ape) | String.Contains($PARAM[filelabel],flac) | String.Contains($PARAM[filelabel],mp3) | String.Contains($PARAM[filelabel],wav) | String.Contains($PARAM[filelabel],wma)]</visible>
                 <width>160</width>
 
                 <control type="image">
@@ -264,7 +264,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],ape)</visible>
+                    <visible>String.Contains($PARAM[filelabel],ape)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/audio-ape.png</texture>
@@ -272,7 +272,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],flac)</visible>
+                    <visible>String.Contains($PARAM[filelabel],flac)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/audio-flac.png</texture>
@@ -280,7 +280,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],mp3)</visible>
+                    <visible>String.Contains($PARAM[filelabel],mp3)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/audio-mp3.png</texture>
@@ -288,7 +288,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],ogg)</visible>
+                    <visible>String.Contains($PARAM[filelabel],ogg)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/audio-ogg.png</texture>
@@ -296,7 +296,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],wav)</visible>
+                    <visible>String.Contains($PARAM[filelabel],wav)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/audio-wav.png</texture>
@@ -304,7 +304,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],wma)</visible>
+                    <visible>String.Contains($PARAM[filelabel],wma)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/audio-wma.png</texture>
@@ -342,7 +342,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],1)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],1)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -353,7 +353,7 @@
                     <label>1.0</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],2)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],2)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -364,7 +364,7 @@
                     <label>2.0</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],3)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],3)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -375,7 +375,7 @@
                     <label>2.1</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],4)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],4)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -386,7 +386,7 @@
                     <label>4.0</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],5)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],5)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -397,7 +397,7 @@
                     <label>4.1</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],6)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],6)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -408,7 +408,7 @@
                     <label>5.1</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],7)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],7)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -419,7 +419,7 @@
                     <label>6.1</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],8)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],8)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -430,7 +430,7 @@
                     <label>7.1</label>
                 </control>
                 <control type="label">
-                    <visible>StringCompare($PARAM[infolabel],10)</visible>
+                    <visible>String.IsEqual($PARAM[infolabel],10)</visible>
                     <posx>100</posx>
                     <width>100</width>
                     <height>60</height>
@@ -489,7 +489,7 @@
         
         <definition>
             <control type="group">
-                <visible>SubString($PARAM[filelabel],jpg) | SubString($PARAM[filelabel],jpeg) | SubString($PARAM[filelabel],png) | SubString($PARAM[filelabel],gif)</visible>
+                <visible>String.Contains($PARAM[filelabel],jpg) | String.Contains($PARAM[filelabel],jpeg) | String.Contains($PARAM[filelabel],png) | String.Contains($PARAM[filelabel],gif)</visible>
                 <width>160</width>
             
                 <control type="image">
@@ -509,7 +509,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="label">
-                    <visible>SubString($PARAM[filelabel],jpg)</visible>
+                    <visible>String.Contains($PARAM[filelabel],jpg)</visible>
                     <width>160</width>
                     <height>60</height>
                     <font>LargeMediaFlagFont</font>
@@ -518,7 +518,7 @@
                     <label>JPEG</label>
                 </control>
                 <control type="label">
-                    <visible>!SubString($PARAM[filelabel],jpg)</visible>
+                    <visible>!String.Contains($PARAM[filelabel],jpg)</visible>
                     <width>160</width>
                     <height>60</height>
                     <font>LargeMediaFlagFont</font>
@@ -655,7 +655,7 @@
             
         <definition>
             <control type="group">
-                <visible>SubString($PARAM[filelabel],bluray) | SubString($PARAM[filelabel],blu-ray) | SubString($PARAM[filelabel],brrip) | SubString($PARAM[filelabel],bd25) | SubString($PARAM[filelabel],bd50) | SubString($PARAM[filelabel],dvd) | SubString($PARAM[filelabel],hdtv) | SubString($PARAM[filelabel],pdtv) | SubString($PARAM[filelabel],dsr) | SubString($PARAM[filelabel],vhs)</visible>
+                <visible>String.Contains($PARAM[filelabel],bluray) | String.Contains($PARAM[filelabel],blu-ray) | String.Contains($PARAM[filelabel],brrip) | String.Contains($PARAM[filelabel],bd25) | String.Contains($PARAM[filelabel],bd50) | String.Contains($PARAM[filelabel],dvd) | String.Contains($PARAM[filelabel],hdtv) | String.Contains($PARAM[filelabel],pdtv) | String.Contains($PARAM[filelabel],dsr) | String.Contains($PARAM[filelabel],vhs)</visible>
                 <width>160</width>
             
                 <control type="image">
@@ -668,35 +668,35 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],bluray) | SubString($PARAM[filelabel],blu-ray) | SubString($PARAM[filelabel],brrip) | SubString($PARAM[filelabel],bd25) | SubString($PARAM[filelabel],bd50)</visible>
+                    <visible>String.Contains($PARAM[filelabel],bluray) | String.Contains($PARAM[filelabel],blu-ray) | String.Contains($PARAM[filelabel],brrip) | String.Contains($PARAM[filelabel],bd25) | String.Contains($PARAM[filelabel],bd50)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture colordiffuse="$PARAM[mediaflagcolor]">icons/medium-bluray.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],hddvd)</visible>
+                    <visible>String.Contains($PARAM[filelabel],hddvd)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture colordiffuse="$PARAM[mediaflagcolor]">icons/medium-hddvd.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],dvd) + !SubString($PARAM[filelabel],hddvd)</visible>
+                    <visible>String.Contains($PARAM[filelabel],dvd) + !String.Contains($PARAM[filelabel],hddvd)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture colordiffuse="$PARAM[mediaflagcolor]">icons/medium-dvd.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],hdtv) | SubString($PARAM[filelabel],pdtv) | SubString($PARAM[filelabel],dsr)</visible>
+                    <visible>String.Contains($PARAM[filelabel],hdtv) | String.Contains($PARAM[filelabel],pdtv) | String.Contains($PARAM[filelabel],dsr)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture colordiffuse="$PARAM[mediaflagcolor]">icons/medium-tv.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[filelabel],vhs)</visible>
+                    <visible>String.Contains($PARAM[filelabel],vhs)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture colordiffuse="$PARAM[mediaflagcolor]">icons/medium-vhs.png</texture>
@@ -707,7 +707,7 @@
     </include>
 
     <include name="CompressedPropertyMediaFlag">
-        <param name="visible" default="StringCompare(ListItem.Overlay,OverlayRAR.png) | StringCompare(ListItem.Overlay,OverlayZIP.png)" />
+        <param name="visible" default="String.IsEqual(ListItem.Overlay,OverlayRAR.png) | String.IsEqual(ListItem.Overlay,OverlayZIP.png)" />
         <param name="mediaflagcolor" default="$VAR[MainColor]" />
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
@@ -795,7 +795,7 @@
     </include>
 
     <include name="LockedPropertyMediaFlag">
-        <param name="visible" default="ListItem.IsEncrypted | StringCompare(ListItem.Overlay,OverlayLocked.png)" />
+        <param name="visible" default="ListItem.IsEncrypted | String.IsEqual(ListItem.Overlay,OverlayLocked.png)" />
         <param name="mediaflagcolor" default="$VAR[MainColor]" />
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
@@ -825,7 +825,7 @@
     </include>
 
     <include name="TrainerPropertyMediaFlag">
-        <param name="visible" default="StringCompare(ListItem.Overlay,OverlayTrainer.png) | StringCompare(ListItem.Overlay,OverlayHasTrainer.png)" />
+        <param name="visible" default="String.IsEqual(ListItem.Overlay,OverlayTrainer.png) | String.IsEqual(ListItem.Overlay,OverlayHasTrainer.png)" />
         <param name="mediaflagcolor" default="$VAR[MainColor]" />
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         
@@ -861,7 +861,7 @@
         
         <definition>
             <control type="group">
-                <visible>SubString($PARAM[infolabel],rated)</visible>
+                <visible>String.Contains($PARAM[infolabel],rated)</visible>
                 <width>160</width>
             
                 <control type="image">
@@ -874,7 +874,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[infolabel],rated r)</visible>
+                    <visible>String.Contains($PARAM[infolabel],rated r)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/mpaarating-restricted.png</texture>
@@ -882,7 +882,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[infolabel],rated nc)</visible>
+                    <visible>String.Contains($PARAM[infolabel],rated nc)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/mpaarating-nc13.png</texture>
@@ -890,7 +890,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[infolabel],rated pg-13)</visible>
+                    <visible>String.Contains($PARAM[infolabel],rated pg-13)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/mpaarating-pg13.png</texture>
@@ -898,7 +898,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[infolabel],rated pg) + !SubString($PARAM[infolabel],rated pg-13)</visible>
+                    <visible>String.Contains($PARAM[infolabel],rated pg) + !String.Contains($PARAM[infolabel],rated pg-13)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/mpaarating-pg.png</texture>
@@ -906,7 +906,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString($PARAM[infolabel],rated g)</visible>
+                    <visible>String.Contains($PARAM[infolabel],rated g)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/mpaarating-general.png</texture>
@@ -914,7 +914,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>SubString(VideoPlayer.Mpaa,not rated)</visible>
+                    <visible>String.Contains(VideoPlayer.Mpaa,not rated)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/mpaarating-notrated.png</texture>
@@ -922,7 +922,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="image">
-                    <visible>!SubString($PARAM[infolabel],rated r) + !SubString($PARAM[infolabel],rated nc) + !SubString($PARAM[infolabel],rated pg) + !SubString($PARAM[infolabel],rated g) + !SubString(VideoPlayer.Mpaa,not rated)</visible>
+                    <visible>!String.Contains($PARAM[infolabel],rated r) + !String.Contains($PARAM[infolabel],rated nc) + !String.Contains($PARAM[infolabel],rated pg) + !String.Contains($PARAM[infolabel],rated g) + !String.Contains(VideoPlayer.Mpaa,not rated)</visible>
                     <width>160</width>
                     <height>60</height>
                     <texture>icons/mpaarating-unknown.png</texture>

@@ -2,7 +2,7 @@
 <window type="dialog" id="1195">
     <defaultcontrol>27</defaultcontrol>
     <menucontrol>9000</menucontrol>
-    <onload condition="!StringCompare(Window.Property(CustomOptionType),M) + !StringCompare(Window.Property(CustomOptionType),S) + !StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onload>
+    <onload condition="!String.IsEqual(Window.Property(CustomOptionType),M) + !String.IsEqual(Window.Property(CustomOptionType),S) + !String.IsEqual(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onload>
 
     <controls>
         <control type="group">
@@ -26,12 +26,12 @@
                 <radioposx>1180</radioposx>
                 <align>left</align>
                 <label>$LOCALIZE[31405]</label>
-                <selected>Substring(Window.Property(CustomOptionActive),T,left)</selected>
+                <selected>String.Contains(Window.Property(CustomOptionActive),T,left)</selected>
                 <onup>40</onup>
                 <ondown>30</ondown>
                 <onleft>9000</onleft>
-                <onclick condition="!Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,True)</onclick>
-                <onclick condition="Substring(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,False)</onclick>
+                <onclick condition="!String.Contains(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,True)</onclick>
+                <onclick condition="String.Contains(Window.Property(CustomOptionActive),T,left)">SetProperty(CustomOptionActive,False)</onclick>
             </control>
 
             <control type="button" id="30">
@@ -109,7 +109,7 @@
 
             <control type="group">
                 <description>Custom Static Item Label</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),S)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),S)</visible>
                 <posx>580</posx>
                 <posy>360</posy>
                 
@@ -133,7 +133,7 @@
 
             <control type="group">
                 <description>Custom Dynamic Item Item Label</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),D)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),D)</visible>
                 <posx>580</posx>
                 <posy>360</posy>
 
@@ -157,7 +157,7 @@
 
             <control type="group">
                 <description>Custom Action Label</description>
-                <visible>!StringCompare(Window.Property(CustomOptionType),S) + !StringCompare(Window.Property(CustomOptionType),D)</visible>
+                <visible>!String.IsEqual(Window.Property(CustomOptionType),S) + !String.IsEqual(Window.Property(CustomOptionType),D)</visible>
                 <posx>580</posx>
                 <posy>360</posy>
 
@@ -191,9 +191,9 @@
                 <ondown>36</ondown>
                 <onleft>9000</onleft>
                 <onright>35</onright>
-                <onclick condition="StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onclick>
-                <onclick condition="StringCompare(Window.Property(CustomOptionType),S)">SetProperty(CustomOptionType,D)</onclick>
-                <onclick condition="StringCompare(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,S)</onclick>
+                <onclick condition="String.IsEqual(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onclick>
+                <onclick condition="String.IsEqual(Window.Property(CustomOptionType),S)">SetProperty(CustomOptionType,D)</onclick>
+                <onclick condition="String.IsEqual(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,S)</onclick>
             </control>
             
             <control type="button" id="35">
@@ -208,14 +208,14 @@
                 <ondown>36</ondown>
                 <onleft>34</onleft>
                 <onright>Noop</onright>
-                <onclick condition="StringCompare(Window.Property(CustomOptionType),S)">SetProperty(CustomOptionType,A)</onclick>
-                <onclick condition="StringCompare(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,S)</onclick>
-                <onclick condition="StringCompare(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,D)</onclick>
+                <onclick condition="String.IsEqual(Window.Property(CustomOptionType),S)">SetProperty(CustomOptionType,A)</onclick>
+                <onclick condition="String.IsEqual(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,S)</onclick>
+                <onclick condition="String.IsEqual(Window.Property(CustomOptionType),A)">SetProperty(CustomOptionType,D)</onclick>
             </control>
 
             <control type="button" id="36">
                 <description>Menu/Window Title For Custom Option Button</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),S) | StringCompare(Window.Property(CustomOptionType),D)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),S) | String.IsEqual(Window.Property(CustomOptionType),D)</visible>
                 <posx>560</posx>
                 <posy>400</posy>
                 <width>1240</width>
@@ -234,7 +234,7 @@
 
             <control type="button" id="37">
                 <description>Source Description For Custom Option Button</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),S)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),S)</visible>
                 <posx>560</posx>
                 <posy>440</posy>
                 <width>1240</width>
@@ -253,7 +253,7 @@
 
             <control type="button" id="38">
                 <description>Source Description For Custom Dynamic Items Button</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),D)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),D)</visible>
                 <posx>560</posx>
                 <posy>440</posy>
                 <width>1240</width>
@@ -277,7 +277,7 @@
 
             <control type="button" id="40">
                 <description>Custom Static Items Action Button</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),S)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),S)</visible>
                 <enable>false</enable>
                 <posx>560</posx>
                 <posy>560</posy>
@@ -291,7 +291,7 @@
 
             <control type="button" id="40">
                 <description>Custom Dynamic Items Action Button</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),D)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),D)</visible>
                 <enable>false</enable>
                 <posx>560</posx>
                 <posy>560</posy>
@@ -305,7 +305,7 @@
 
             <control type="button" id="40">
                 <description>Custom Option Action Button</description>
-                <visible>StringCompare(Window.Property(CustomOptionType),A)</visible>
+                <visible>String.IsEqual(Window.Property(CustomOptionType),A)</visible>
                 <posx>560</posx>
                 <posy>560</posy>
                 <width>1240</width>
@@ -331,7 +331,7 @@
 
                 <control type="button" id="23">
                     <description>Choose Items Button</description>
-                    <visible>StringCompare(Window.Property(CustomOptionType),S) | StringCompare(Window.Property(CustomOptionType),D)</visible>
+                    <visible>String.IsEqual(Window.Property(CustomOptionType),S) | String.IsEqual(Window.Property(CustomOptionType),D)</visible>
                     <label>$LOCALIZE[31807]</label>
                     <onclick>SetProperty(TargetType,CustomOptionType,1193)</onclick>
                     <onclick>SetProperty(TargetMenuTitle,CustomMenuTitle,1193)</onclick>
@@ -342,7 +342,7 @@
                 </control>
                 <control type="button" id="22">
                     <description>Create Command Button</description>
-                    <visible>StringCompare(Window.Property(CustomOptionType),A)</visible>
+                    <visible>String.IsEqual(Window.Property(CustomOptionType),A)</visible>
                     <label>$LOCALIZE[31808]</label>
                     <onclick>SetProperty(TargetType,CustomOptionType,1191)</onclick>
                     <onclick>SetProperty(TargetMenuTitle,CustomMenuTitle,1191)</onclick>
@@ -372,18 +372,18 @@
                     <description>Ok Button</description>
                     <posy>20</posy>
                     <label>$LOCALIZE[186]</label>
-                    <onclick condition="!Substring(Window.Property(CustomOptionActive),T,left)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
-                    <onclick condition="Substring(Window.Property(CustomOptionActive),T,left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
+                    <onclick condition="!String.Contains(Window.Property(CustomOptionActive),T,left)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
+                    <onclick condition="String.Contains(Window.Property(CustomOptionActive),T,left)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
                     <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomOptionName)])</onclick>
                     <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
                     <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
                     <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Window.Property(CustomOptionType)])</onclick>
                     <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].MenuTitle,$INFO[Window.Property(CustomMenuTitle)])</onclick>
                     <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].SourceInfo,$INFO[Window.Property(CustomSourceInfo)])</onclick>
-                    <onclick condition="StringCompare(Window.Property(CustomOptionType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1103)</onclick>
-                    <onclick condition="StringCompare(Window.Property(CustomOptionType),S)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1101)</onclick>
-                    <onclick condition="StringCompare(Window.Property(CustomOptionType),D)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1102)</onclick>
-                    <onclick condition="StringCompare(Window.Property(CustomOptionType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,0)</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1103)</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),S)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1101)</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),D)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1102)</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,0)</onclick>
                     <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Control.GetLabel(40)])</onclick>
                     <onclick>Close</onclick>
                 </control>

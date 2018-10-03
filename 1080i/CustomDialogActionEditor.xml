@@ -705,7 +705,7 @@
 
             <control type="group">
                 <description>Playlist Option Group</description>
-                <visible>StringCompare(Container(40).ListItem.Property(Parameter),L)</visible>
+                <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),L)</visible>
             
                 <include content="LabelForDialog">
                     <param name="posy" value="480" />
@@ -726,7 +726,7 @@
 
             <control type="group">
                 <description>Image Option Group</description>
-                <visible>StringCompare(Container(40).ListItem.Property(Parameter),I)</visible>
+                <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),I)</visible>
             
                 <include content="LabelForDialog">
                     <param name="posy" value="480" />
@@ -746,7 +746,7 @@
 
             <control type="group">
                 <description>File Option Group</description>
-                <visible>StringCompare(Container(40).ListItem.Property(Parameter),F)</visible>
+                <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),F)</visible>
             
                 <include content="LabelForDialog">
                     <param name="posy" value="480" />
@@ -766,7 +766,7 @@
 
             <control type="group">
                 <description>Path Option Group</description>
-                <visible>StringCompare(Container(40).ListItem.Property(Parameter),P)</visible>
+                <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),P)</visible>
             
                 <include content="LabelForDialog">
                     <param name="posy" value="480" />
@@ -787,7 +787,7 @@
 
             <control type="group">
                 <description>Addon Option Group</description>
-                <visible>StringCompare(Container(40).ListItem.Property(Parameter),A)</visible>
+                <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),A)</visible>
             
                 <include content="LabelForDialog">
                     <param name="posy" value="480" />
@@ -808,7 +808,7 @@
 
             <control type="group">
                 <description>String Option Group</description>
-                <visible>StringCompare(Container(40).ListItem.Property(Parameter),S)</visible>
+                <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),S)</visible>
             
                 <include content="LabelForDialog">
                     <param name="posy" value="480" />
@@ -857,7 +857,7 @@
                 
                 <control type="button" id="10">
                     <description>Choose Playlist Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),L)</visible>
+                    <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),L)</visible>
                     <label>$LOCALIZE[31881]</label>
                     <onclick>Skin.SetFile(Dialog.Input,,$INFO[Container(40).ListItem.Property(InitialPath)])</onclick>
                     <onclick>SetProperty(ParameterPlaylist,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -865,7 +865,7 @@
                 </control>
                 <control type="button" id="11">
                     <description>Choose Image Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),I)</visible>
+                    <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),I)</visible>
                     <label>$LOCALIZE[31882]</label>
                     <onclick>Skin.SetImage(Dialog.Input)</onclick>
                     <onclick>SetProperty(ParameterImage,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -873,7 +873,7 @@
                 </control>
                 <control type="button" id="12">
                     <description>Choose File Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),F)</visible>
+                    <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),F)</visible>
                     <label>$LOCALIZE[31883]</label>
                     <onclick>Skin.SetFile(Dialog.Input)</onclick>
                     <onclick>SetProperty(ParameterFile,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -881,7 +881,7 @@
                 </control>
                 <control type="button" id="13">
                     <description>Choose Path Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),P)</visible>
+                    <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),P)</visible>
                     <label>$LOCALIZE[31884]</label>
                     <onclick>Skin.SetPath(Dialog.Input)</onclick>
                     <onclick>SetProperty(ParameterPath,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -889,7 +889,7 @@
                 </control>
                 <control type="button" id="14">
                     <description>Choose Addon Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),A)</visible>
+                    <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),A)</visible>
                     <label>$LOCALIZE[31885]</label>
                     <onclick>Skin.SetAddon(Dialog.Input)</onclick>
                     <onclick>SetProperty(ParameterAddon,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -897,7 +897,7 @@
                 </control>
                 <control type="button" id="15">
                     <description>Choose String Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),S)</visible>
+                    <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),S)</visible>
                     <label>$LOCALIZE[31886]</label>
                     <onclick>Skin.SetString(Dialog.Input)</onclick>
                     <onclick>SetProperty(ParameterString,$INFO[Skin.String(Dialog.Input)])</onclick>
@@ -905,13 +905,13 @@
                 </control>
                 <control type="image" id="19">
                     <description>No Choose Button Spacer</description>
-                    <visible>!StringCompare(Container(40).ListItem.Property(Parameter),L) + !StringCompare(Container(40).ListItem.Property(Parameter),I) + !StringCompare(Container(40).ListItem.Property(Parameter),F) + !StringCompare(Container(40).ListItem.Property(Parameter),P) + !StringCompare(Container(40).ListItem.Property(Parameter),A) + !StringCompare(Container(40).ListItem.Property(Parameter),S)</visible>
+                    <visible>!String.IsEqual(Container(40).ListItem.Property(Parameter),L) + !String.IsEqual(Container(40).ListItem.Property(Parameter),I) + !String.IsEqual(Container(40).ListItem.Property(Parameter),F) + !String.IsEqual(Container(40).ListItem.Property(Parameter),P) + !String.IsEqual(Container(40).ListItem.Property(Parameter),A) + !String.IsEqual(Container(40).ListItem.Property(Parameter),S)</visible>
                     <height>40</height>
                     <texture></texture>
                 </control>
                 <control type="button" id="16">
                     <description>Paste Path Button</description>
-                    <visible>StringCompare(Container(40).ListItem.Property(Parameter),P) + !String.IsEmpty(Skin.String(Revolve.PathClipboard))</visible>
+                    <visible>String.IsEqual(Container(40).ListItem.Property(Parameter),P) + !String.IsEmpty(Skin.String(Revolve.PathClipboard))</visible>
                     <label>$LOCALIZE[31613]</label>
                     <onclick>SetProperty(ParameterPath,$INFO[Skin.String(Revolve.PathClipboard)])</onclick>
                 </control>

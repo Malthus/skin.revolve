@@ -45,7 +45,7 @@
         
         <definition>
             <control type="group">
-                <visible>Player.HasMedia + !IntegerGreaterThan(Container(9001).NumItems,10)</visible>
+                <visible>Player.HasMedia + !Integer.IsGreater(Container(9001).NumItems,10)</visible>
                 <posx>PosXForSideMenuCircleControlsForPlayer</posx>
                 <posy>PosYForSideMenuCircleControlsForPlayer</posy>
                 <include content="CircleControlsForPlayer">
@@ -57,7 +57,7 @@
             </control>
             
             <control type="group">
-                <visible>Player.HasMedia + IntegerGreaterThan(Container(9001).NumItems,10)</visible>
+                <visible>Player.HasMedia + Integer.IsGreater(Container(9001).NumItems,10)</visible>
                 <posx>PosXForSideMenuButtonControlsForPlayer</posx>
                 <posy>PosYForSideMenuButtonControlsForPlayer</posy>
                 <include content="ButtonControlsForPlayer">

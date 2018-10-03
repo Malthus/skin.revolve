@@ -61,7 +61,7 @@
             <include content="StandardButtonForExitMenuSkinSettings">
                 <param name="id" value="503" />
                 <param name="label" value="$LOCALIZE[20126]" />
-                <param name="enable" value="System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)]" />
+                <param name="enable" value="System.IsLoggedOn + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)]" />
                 <param name="variable" value="ExitMenu.LogOffOption" />
             </include>
 

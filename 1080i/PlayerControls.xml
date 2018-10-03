@@ -6,7 +6,7 @@
 
     <controls>
         <control type="group">
-            <visible>StringCompare(Skin.String(Background.Animation.Level),3) | StringCompare(Skin.String(Background.Animation.Level),4)</visible>
+            <visible>String.IsEqual(Skin.String(Background.Animation.Level),3) | String.IsEqual(Skin.String(Background.Animation.Level),4)</visible>
             
             <include content="OrbitCircle">
                 <param name="posx" value="960" />
@@ -18,7 +18,7 @@
         </control>
     
         <control type="group">
-            <visible>StringCompare(Skin.String(Background.Animation.Level),4)</visible>
+            <visible>String.IsEqual(Skin.String(Background.Animation.Level),4)</visible>
             
             <include content="OrbitCircle">
                 <param name="posx" value="960" />
@@ -68,7 +68,7 @@
         </control>
 
         <control type="group">
-            <visible>Substring(Window.Property(DialogCloseButton),T,left)</visible>
+            <visible>String.Contains(Window.Property(DialogCloseButton),T,left)</visible>
             <include content="CloseButtonForPlayer">
                 <param name="id" value="408" />
                 <param name="posx" value="920" />

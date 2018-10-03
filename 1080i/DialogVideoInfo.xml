@@ -2,7 +2,7 @@
 <window id="2003">
     <defaultcontrol always="true">9000</defaultcontrol>
     <menucontrol>9000</menucontrol>
-    <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !StringCompare(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2003,6),00:01,silent)</onload>
+    <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !String.IsEqual(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2003,6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
 
     <controls>
@@ -37,7 +37,7 @@
                 
                 <content>
                     <item>
-                        <visible>!String.IsEmpty(ListItem.OriginalTitle) + !StringCompare(ListItem.OriginalTitle,Listitem.Title)</visible>
+                        <visible>!String.IsEmpty(ListItem.OriginalTitle) + !String.IsEqual(ListItem.OriginalTitle,Listitem.Title)</visible>
                         <label>$LOCALIZE[20376]</label>
                         <label2>$INFO[ListItem.OriginalTitle]</label2>
                         <onclick>Noop</onclick>

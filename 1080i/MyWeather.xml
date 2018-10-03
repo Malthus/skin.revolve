@@ -33,7 +33,7 @@
             
             <content>
                 <item id="99">
-                    <visible>!IntegerGreaterThan(Container(53).NumItems,1)</visible>
+                    <visible>!Integer.IsGreater(Container(53).NumItems,1)</visible>
                     <label>-</label>
                     <property name="Weather">-</property>
                     <icon>-</icon>

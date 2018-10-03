@@ -12,7 +12,7 @@
                 <posy>$PARAM[posy]</posy>
 
                 <control type="group">
-                    <visible>!SubString(System.Time(xx),M)</visible> 
+                    <visible>!String.Contains(System.Time(xx),M)</visible> 
                     <include content="TimeForBigClock">
                         <param name="posx" value="0" />
                         <param name="posy" value="0" />
@@ -20,7 +20,7 @@
                 </control>
 
                 <control type="group">
-                    <visible>SubString(System.Time(xx),M)</visible> 
+                    <visible>String.Contains(System.Time(xx),M)</visible> 
                     <include content="TimeForBigClock">
                         <param name="posx" value="-70" />
                         <param name="posy" value="0" />
@@ -28,7 +28,7 @@
                 </control>
                     
                 <control type="group">
-                    <visible>SubString(System.Time(xx),M)</visible> 
+                    <visible>String.Contains(System.Time(xx),M)</visible> 
                     <include content="AmPmForBigClock">
                         <param name="posx" value="-60" />
                         <param name="posy" value="0" />
@@ -130,12 +130,12 @@
         
         <definition>
             <control type="group">
-                <visible>SubString(System.Time(xx),M)</visible> 
+                <visible>String.Contains(System.Time(xx),M)</visible> 
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                         
                 <control type="group">
-                    <visible>SubString(System.Time(xx),A)</visible> 
+                    <visible>String.Contains(System.Time(xx),A)</visible> 
                     <posy>0</posy>
                     <include content="OutlineLabel">
                         <param name="width" value="70" />
@@ -150,7 +150,7 @@
                 </control>
                 
                 <control type="group">
-                    <visible>SubString(System.Time(xx),P)</visible> 
+                    <visible>String.Contains(System.Time(xx),P)</visible> 
                     <posy>0</posy>
                     <include content="OutlineLabel">
                         <param name="width" value="70" />

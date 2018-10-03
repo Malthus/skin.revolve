@@ -20,7 +20,7 @@
                 </item>
                 <item id="3">
                     <description>Log Off Profile Option</description>
-                    <visible>System.IsLoggedOn + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + Skin.HasSetting(ExitMenu.LogOffOption.Active)</visible>
+                    <visible>System.IsLoggedOn + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + Skin.HasSetting(ExitMenu.LogOffOption.Active)</visible>
                     <label>$LOCALIZE[20126]</label>
                     <label2>$INFO[System.ProfileName]</label2>
                     <icon>special://skin/backgrounds/logoff.jpg</icon>
