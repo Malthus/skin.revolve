@@ -71,42 +71,34 @@
                     <item id="1">
                         <description>Radio and TV Related Category Option</description>
                         <label>$LOCALIZE[31811]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="2">
                         <description>Video Related Category Option</description>
                         <label>$LOCALIZE[31812]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="3">
                         <description>Music Related Category Option</description>
                         <label>$LOCALIZE[31813]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="4">
                         <description>Picture Related Category Option</description>
                         <label>$LOCALIZE[31814]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="5">
                         <description>Game and Program Related Category Option</description>
                         <label>$LOCALIZE[31815]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="6">
                         <description>Menu Option Related Category Option</description>
                         <label>$LOCALIZE[31816]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="8">
                         <description>Miscellaneous Category Option</description>
                         <label>$LOCALIZE[31817]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="9">
                         <description>Custom Action Option</description>
                         <label>$LOCALIZE[31819]</label>
-                        <onclick>Noop</onclick>
                     </item>
                 </content>
             </control>
@@ -161,112 +153,96 @@
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31822]</label>
                         <property name="Command">ActivateWindow(tvchannels)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="102">
                         <description>Open Radio Channels Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31823]</label>
                         <property name="Command">ActivateWindow(radiochannels)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="103">
                         <description>Open TV Guide Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31790]</label>
                         <property name="Command">ActivateWindow(tvguide)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="104">
                         <description>Open Radio Guide Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31791]</label>
                         <property name="Command">ActivateWindow(radioguide)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="105">
                         <description>Open TV Recordings Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31792]</label>
                         <property name="Command">ActivateWindow(tvrecordings)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="106">
                         <description>Open Radio Recordings Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31793]</label>
                         <property name="Command">ActivateWindow(radiorecordings)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="107">
                         <description>Open TV Timers Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31794]</label>
                         <property name="Command">ActivateWindow(tvtimers)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="108">
                         <description>Open Radio Timers Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31795]</label>
                         <property name="Command">ActivateWindow(radiotimers)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="109">
                         <description>Open TV Search Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31796]</label>
                         <property name="Command">ActivateWindow(tvsearch)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="110">
                         <description>Open Radio Search Option</description>
                         <visible>Container(30).HasFocus(1)</visible>
                         <label>$LOCALIZE[31797]</label>
                         <property name="Command">ActivateWindow(radiosearch)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="201">
                         <description>Open Videos Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31827]</label>
                         <property name="Command">ActivateWindow(videos)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="202">
                         <description>Open Videos Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31828]</label>
                         <property name="Command">ActivateWindow(videos,videodb://,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="203">
                         <description>Open Videos / Movies Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31829]</label>
                         <property name="Command">ActivateWindow(videos,videodb://movies/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="204">
                         <description>Open Videos / TV Shows Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31830]</label>
                         <property name="Command">ActivateWindow(videos,videodb://tvshows/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="205">
                         <description>Open Videos / In Progress TV Shows Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31633]</label>
                         <property name="Command">ActivateWindow(videos,videodb://inprogresstvshows/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="206">
                         <description>Open Videos / Music Videos Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31831]</label>
                         <property name="Command">ActivateWindow(videos,videodb://musicvideos/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="207">
                         <description>Open Videos / Path Option</description>
@@ -274,28 +250,24 @@
                         <label>$LOCALIZE[31612]</label>
                         <property name="Command">ActivateWindow(videos$INFO[Window.Property(ParameterPath),$COMMA,])</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="208">
                         <description>Open Videos / Playlists Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31832]</label>
                         <property name="Command">ActivateWindow(videos,special://videoplaylists/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="209">
                         <description>Open Videos / Addons Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31833]</label>
                         <property name="Command">ActivateWindow(videos,addons://sources/video/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="210">
                         <description>Open Videos / Files Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31834]</label>
                         <property name="Command">ActivateWindow(videos,sources://video/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="211">
                         <description>Open Video Playlist Option</description>
@@ -304,7 +276,6 @@
                         <property name="Command">ActivateWindow(videos,$INFO[Window.Property(ParameterPlaylist),,$COMMA]return)</property>
                         <property name="Parameter">L</property>
                         <property name="InitialPath">special://videoplaylists/</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="212">
                         <description>Play Video Playlist Option</description>
@@ -313,21 +284,18 @@
                         <property name="Command">PlayMedia($INFO[Window.Property(ParameterPlaylist)])</property>
                         <property name="Parameter">L</property>
                         <property name="InitialPath">special://videoplaylists/</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="220">
                         <description>Play DVD Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31836]</label>
                         <property name="Command">PlayDVD</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="280">
                         <description>Update Complete Video Library Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31837]</label>
                         <property name="Command">UpdateLibrary(video)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="281">
                         <description>Update Path Video Library Option</description>
@@ -335,26 +303,22 @@
                         <label>$LOCALIZE[31838]</label>
                         <property name="Command">UpdateLibrary(video$INFO[Window.Property(ParameterPath),$COMMA,])</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="282">
                         <description>Clean Video Library Option</description>
                         <visible>Container(30).HasFocus(2)</visible>
                         <label>$LOCALIZE[31839]</label>
                         <property name="Command">CleanLibrary(video)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="301">
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31840]</label>
                         <property name="Command">ActivateWindow(music)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="302">
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31841]</label>
                         <property name="Command">ActivateWindow(music,musicdb://,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="306">
                         <description>Open Music / Path Option</description>
@@ -362,26 +326,22 @@
                         <label>$LOCALIZE[31616]</label>
                         <property name="Command">ActivateWindow(music$INFO[Window.Property(ParameterPath),$COMMA,])</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="307">
                         <description>Open Music Playlist Option</description>
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31842]</label>
                         <property name="Command">ActivateWindow(music,special://musicplaylists/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="308">
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31843]</label>
                         <property name="Command">ActivateWindow(music,addons://sources/audio/,return)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="309">
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31844]</label>
                         <property name="Command">ActivateWindow(music)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="310">
                         <description>Open Music Playlist Option</description>
@@ -390,7 +350,6 @@
                         <property name="Command">ActivateWindow(music,$INFO[Window.Property(ParameterPlaylist),,$COMMA]return)</property>
                         <property name="Parameter">L</property>
                         <property name="InitialPath">special://musicplaylists/</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="311">
                         <description>Play Music Playlist Option</description>
@@ -399,35 +358,30 @@
                         <property name="Command">PlayMedia($INFO[Window.Property(ParameterPlaylist)])</property>
                         <property name="Parameter">L</property>
                         <property name="InitialPath">special://musicplaylists/</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="350">
                         <description>Rip CD Option</description>
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31846]</label>
                         <property name="Command">RipCD</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="380">
                         <description>Update Music Library Option</description>
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31847]</label>
                         <property name="Command">UpdateLibrary(music)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="381">
                         <description>Clean Music Library Option</description>
                         <visible>Container(30).HasFocus(3)</visible>
                         <label>$LOCALIZE[31848]</label>
                         <property name="Command">CleanLibrary(music)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="401">
                         <description>Open Pictures Option</description>
                         <visible>Container(30).HasFocus(4)</visible>
                         <label>$LOCALIZE[31849]</label>
                         <property name="Command">ActivateWindow(pictures)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="406">
                         <description>Open Pictures / Path Option</description>
@@ -435,49 +389,42 @@
                         <label>$LOCALIZE[31617]</label>
                         <property name="Command">ActivateWindow(pictures$INFO[Window.Property(ParameterPath),$COMMA,])</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="411">
                         <visible>Container(30).HasFocus(4)</visible>
                         <label>$LOCALIZE[31850]</label>
                         <property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],notrandom)</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="412">
                         <visible>Container(30).HasFocus(4)</visible>
                         <label>$LOCALIZE[31851]</label>
                         <property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],random)</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="413">
                         <visible>Container(30).HasFocus(4)</visible>
                         <label>$LOCALIZE[31852]</label>
                         <property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],recursive,notrandom)</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="414">
                         <visible>Container(30).HasFocus(4)</visible>
                         <label>$LOCALIZE[31853]</label>
                         <property name="Command">SlideShow($INFO[Window.Property(ParameterPath)],recursive,random)</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="501">
                         <description>Open Programs Option</description>
                         <visible>Container(30).HasFocus(5)</visible>
                         <label>$LOCALIZE[31854]</label>
                         <property name="Command">ActivateWindow(programs)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="502">
                         <description>Open Addons Option</description>
                         <visible>Container(30).HasFocus(5)</visible>
                         <label>$LOCALIZE[31855]</label>
                         <property name="Command">ActivateWindow(programs,addons://sources/executable/)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="506">
                         <description>Open Programs / Path Option</description>
@@ -485,14 +432,12 @@
                         <label>$LOCALIZE[31618]</label>
                         <property name="Command">ActivateWindow(programs$INFO[Window.Property(ParameterPath),$COMMA,])</property>
                         <property name="Parameter">P</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="510">
                         <description>Open Programs / Rom Collection Browser</description>
                         <visible>Container(30).HasFocus(5) + System.HasAddon(script.games.rom.collection.browser)</visible>
                         <label>$LOCALIZE[31232] $INFO[System.AddonTitle(script.games.rom.collection.browser)]</label>
                         <property name="Command">RunScript(script.games.rom.collection.browser)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     
                     <item id="551">
@@ -501,7 +446,6 @@
                         <label>$LOCALIZE[31856]</label>
                         <property name="Command">System.Exec(&quot;$INFO[Window.Property(ParameterFile)]&quot;)</property>
                         <property name="Parameter">F</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="552">
                         <description>Run External Program And Wait Option</description>
@@ -509,77 +453,66 @@
                         <label>$LOCALIZE[31857]</label>
                         <property name="Command">System.ExecWait(&quot;$INFO[Window.Property(ParameterFile)]&quot;)</property>
                         <property name="Parameter">F</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="601">
                         <description>Open Favourites Option</description>
                         <visible>Container(30).HasFocus(6)</visible>
                         <label>$LOCALIZE[31858]</label>
                         <property name="Command">ActivateWindow(favourites)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="602">
                         <description>Open Weather Option</description>
                         <visible>Container(30).HasFocus(6)</visible>
                         <label>$LOCALIZE[31859]</label>
                         <property name="Command">ActivateWindow(weather)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="610">
                         <description>Open Addon Browser Option</description>
                         <visible>Container(30).HasFocus(6)</visible>
                         <label>$LOCALIZE[31860]</label>
                         <property name="Command">ActivateWindow(addonbrowser)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="611">
                         <description>Open File Manager Option</description>
                         <visible>Container(30).HasFocus(6)</visible>
                         <label>$LOCALIZE[31861]</label>
                         <property name="Command">ActivateWindow(filemanager)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="620">
                         <description>Open Settings Option</description>
                         <visible>Container(30).HasFocus(6)</visible>
                         <label>$LOCALIZE[31862]</label>
                         <property name="Command">ActivateWindow(settings)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="802">
                         <description>Run Global Search Plug-in Option</description>
                         <visible>Container(30).HasFocus(8) + System.HasAddon(script.globalsearch)</visible>
                         <label>$LOCALIZE[31232] $INFO[System.AddonTitle(script.globalsearch)]</label>
                         <property name="Command">RunScript(script.globalsearch)</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="871">
                         <description>Activate Screen Saver Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31863]</label>
                         <property name="Command">ActivateScreensaver</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="872">
                         <description>Take Screenshot Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31864]</label>
                         <property name="Command">TakeScreenshot</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="873">
                         <description>Mute Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31865]</label>
                         <property name="Command">Mute</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="874">
                         <description>Eject Tray Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31866]</label>
                         <property name="Command">EjectTray()</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="880">
                         <description>Execute Shell Command Option</description>
@@ -587,7 +520,6 @@
                         <label>$LOCALIZE[31868]</label>
                         <property name="Command">System.Exec(&quot;$INFO[Window.Property(ParameterString)]&quot;)</property>
                         <property name="Parameter">S</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="881">
                         <description>Execute Shell Command And Wait Option</description>
@@ -595,7 +527,6 @@
                         <label>$LOCALIZE[31869]</label>
                         <property name="Command">System.ExecWait(&quot;$INFO[Window.Property(ParameterString)]&quot;)</property>
                         <property name="Parameter">S</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="882">
                         <description>Wake Device On LAN Option</description>
@@ -603,84 +534,72 @@
                         <label>$LOCALIZE[31867]</label>
                         <property name="Command">WakeOnLan($INFO[Window.Property(ParameterString)])</property>
                         <property name="Parameter">S</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="883">
                         <description>Refresh RSS Feeds Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31870]</label>
                         <property name="Command">RefreshRSS</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="884">
                         <description>Reload Current Skin Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31871]</label>
                         <property name="Command">ReloadSkin()</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="890">
                         <description>Shut Down Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31629]</label>
                         <property name="Command">ShutDown</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="891">
                         <description>Log Off User Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31873]</label>
                         <property name="Command">System.LogOff</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="892">
                         <description>Minimize XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31872]</label>
                         <property name="Command">Minimize</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="893">
                         <description>Restart XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31876]</label>
                         <property name="Command">RestartApp</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="894">
                         <description>Quit XBMC Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31877]</label>
                         <property name="Command">Quit</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="895">
                         <description>Suspend Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31874]</label>
                         <property name="Command">Suspend</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="896">
                         <description>Hibernate Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31875]</label>
                         <property name="Command">Hibernate</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="897">
                         <description>Reboot Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31878]</label>
                         <property name="Command">Reboot</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="898">
                         <description>Power Down Option</description>
                         <visible>Container(30).HasFocus(8)</visible>
                         <label>$LOCALIZE[31879]</label>
                         <property name="Command">Powerdown</property>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="901">
                         <description>Custom Action Option</description>
@@ -688,7 +607,6 @@
                         <label>$LOCALIZE[31880]</label>
                         <property name="Command">$INFO[Window.Property(ParameterString)]</property>
                         <property name="Parameter">S</property>
-                        <onclick>Noop</onclick>
                     </item>
                 </content>
             </control>

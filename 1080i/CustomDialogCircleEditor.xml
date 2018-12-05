@@ -48,7 +48,6 @@
                             <label>$LOCALIZE[31720]</label>
                             <property name="ItemName">$LOCALIZE[31720]</property>
                             <property name="OriginMask"></property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="51">
                             <description>XBMC / Latest Movies Option</description>
@@ -56,7 +55,6 @@
                             <label>$LOCALIZE[31721] $LOCALIZE[31711]</label>
                             <property name="ItemName">$LOCALIZE[31721]</property>
                             <property name="OriginMask">LatestMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="52">
                             <description>Screen Widgets / Random Movies Option</description>
@@ -64,7 +62,6 @@
                             <label>$LOCALIZE[31726] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31726]</property>
                             <property name="OriginMask">RandomMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="53">
                             <description>Screen Widgets / Recommended Movies Option</description>
@@ -72,7 +69,6 @@
                             <label>$LOCALIZE[31733] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31733]</property>
                             <property name="OriginMask">RecommendedMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="54">
                             <description>Screen Widgets / Recent Movies Option</description>
@@ -81,7 +77,6 @@
                             <label>$LOCALIZE[31737] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31737]</property>
                             <property name="OriginMask">RecentMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         
                         <item id="61">
@@ -90,7 +85,6 @@
                             <label>$LOCALIZE[31722] $LOCALIZE[31711]</label>
                             <property name="ItemName">$LOCALIZE[31722]</property>
                             <property name="OriginMask">LatestEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="62">
                             <description>Screen Widgets / Random Episodes Option</description>
@@ -98,7 +92,6 @@
                             <label>$LOCALIZE[31727] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31727]</property>
                             <property name="OriginMask">RandomEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="63">
                             <description>Screen Widgets / Recommended Episodes Option</description>
@@ -106,7 +99,6 @@
                             <label>$LOCALIZE[31734] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31734]</property>
                             <property name="OriginMask">RecommendedEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="64">
                             <description>Screen Widgets / Recent Episodes Option</description>
@@ -114,7 +106,6 @@
                             <label>$LOCALIZE[31738] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31738]</property>
                             <property name="OriginMask">RecentEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         
                         <item id="161">
@@ -123,7 +114,6 @@
                             <label>$LOCALIZE[31725] $LOCALIZE[31711]</label>
                             <property name="ItemName">$LOCALIZE[31725]</property>
                             <property name="OriginMask">LatestAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="162">
                             <description>Screen Widgets / Random Albums Option</description>
@@ -131,7 +121,6 @@
                             <label>$LOCALIZE[31729] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31729]</property>
                             <property name="OriginMask">RandomAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="163">
                             <description>Screen Widgets / Recommended Albums Option</description>
@@ -139,7 +128,6 @@
                             <label>$LOCALIZE[31736] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31736]</property>
                             <property name="OriginMask">RecommendedAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="164">
                             <description>Screen Widgets / Recent Albums Option</description>
@@ -147,7 +135,6 @@
                             <label>$LOCALIZE[31740] $LOCALIZE[31712]</label>
                             <property name="ItemName">$LOCALIZE[31740]</property>
                             <property name="OriginMask">RecentAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                     </content>
                 </control>

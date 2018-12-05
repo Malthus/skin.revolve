@@ -29,181 +29,151 @@
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
                         <label>$LOCALIZE[21893]</label>
                         <label2>$INFO[ListItem.Property(Artist_Born)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Died))</visible>
                         <label>$LOCALIZE[21897]</label>
                         <label2>$INFO[ListItem.Property(Artist_Died)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
                         <label>$LOCALIZE[21894]</label>
                         <label2>$INFO[ListItem.Property(Artist_Formed)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
                         <label>$LOCALIZE[21896]</label>
                         <label2>$INFO[ListItem.Property(Artist_Disbanded)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
                         <label>$LOCALIZE[21898]</label>
                         <label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Genre))</visible>
                         <label>$LOCALIZE[515]</label>
                         <label2>$INFO[ListItem.Property(Artist_Genre)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Style))</visible>
                         <label>$LOCALIZE[176]</label>
                         <label2>$INFO[ListItem.Property(Artist_Style)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
                         <label>$LOCALIZE[175]</label>
                         <label>$INFO[ListItem.Property(Artist_Mood)]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Artist_Instrument))</visible>
                         <label>$LOCALIZE[21892]</label>
                         <label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(ListItem.Artist)</visible>
                         <label>$LOCALIZE[557]</label>
                         <label2>$INFO[ListItem.Artist]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListItem.Album)</visible>
                         <label>$LOCALIZE[558]</label>
                         <label2>$INFO[ListItem.Album]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Year)</visible>
                         <label>$LOCALIZE[172]</label>
                         <label2>$INFO[ListItem.Year]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
                         <label>$LOCALIZE[564]</label>
                         <label2>$INFO[ListItem.Property(Album_Type)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
                         <label>$LOCALIZE[21899]</label>
                         <label2>$INFO[ListItem.Property(Album_Label)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
                         <label>$LOCALIZE[176]</label>
                         <label2>$INFO[ListItem.Property(Album_Style)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Album_Theme))</visible>
                         <label>$LOCALIZE[15111]</label>
                         <label2>$INFO[ListItem.Property(Album_Theme)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
                         <label>$LOCALIZE[175]</label>
                         <label2>$INFO[ListItem.Property(Album_Mood)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Mood)</visible>
                         <label>$LOCALIZE[175]</label>
                         <label2>$INFO[ListItem.Mood]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.DiscNumber))</visible>
                         <label>$LOCALIZE[427]</label>
                         <label2>$INFO[ListItem.Property(Role.DiscNumber)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Conductor))</visible>
                         <label>$LOCALIZE[29905]</label>
                         <label2>$INFO[ListItem.Property(Role.Conductor)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Orchestra))</visible>
                         <label>$LOCALIZE[38034]</label>
                         <label2>$INFO[ListItem.Property(Role.Orchestra)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Composer))</visible>
                         <label>$LOCALIZE[29903]</label>
                         <label2>$INFO[ListItem.Property(Role.Composer)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Lyricist))</visible>
                         <label>$LOCALIZE[38035]</label>
                         <label2>$INFO[ListItem.Property(Role.Lyricist)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Arranger))</visible>
                         <label>$LOCALIZE[38037]</label>
                         <label2>$INFO[ListItem.Property(Role.Arranger)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Engineer))</visible>
                         <label>$LOCALIZE[38038]</label>
                         <label2>$INFO[ListItem.Property(Role.Engineer)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
                         <label>$LOCALIZE[38041]</label>
                         <label2>$INFO[ListItem.Property(Role.Mixer)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Producer))</visible>
                         <label>$LOCALIZE[38039]</label>
                         <label2>$INFO[ListItem.Property(Role.Producer)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.Remixer))</visible>
                         <label>$LOCALIZE[38036]</label>
                         <label2>$INFO[ListItem.Property(Role.Remixer)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Property(Role.DJMixer))</visible>
                         <label>$LOCALIZE[38040]</label>
                         <label2>$INFO[ListItem.Property(Role.DJMixer)]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Rating)</visible>
                         <label>$LOCALIZE[563]</label>
                         <label2>$INFO[ListItem.Rating]</label2>
-                        <onclick>Noop</onclick>
                     </item>
                 </content>
             </control>

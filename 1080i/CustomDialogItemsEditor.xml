@@ -73,24 +73,20 @@
                     <item id="99">
                         <description>All Item Groups Option</description>
                         <label>$LOCALIZE[31700]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="1">
                         <description>XBMC Item Group Option</description>
                         <label>$LOCALIZE[31701]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="2">
                         <description>Screen Widgets Item Group Option</description>
                         <visible>System.HasAddon(service.skin.widgets)</visible>
                         <label>$LOCALIZE[31702]</label>
-                        <onclick>Noop</onclick>
                     </item>
                     <item id="3">
                         <description>Library Data Provider Item Group Option</description>
                         <visible>System.HasAddon(service.library.data.provider)</visible>
                         <label>$LOCALIZE[31703]</label>
-                        <onclick>Noop</onclick>
                     </item>
                 </content>
             </control>
@@ -147,7 +143,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31721]</property>
                             <property name="SourceInfo">LatestMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="102">
                             <description>XBMC / Latest Episodes Option</description>
@@ -156,7 +151,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31722]</property>
                             <property name="SourceInfo">LatestEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="103">
                             <description>XBMC / Latest Music Video Option</description>
@@ -165,7 +159,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31723]</property>
                             <property name="SourceInfo">LatestMusicVideo.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="104">
                             <description>XBMC / Latest Song Option</description>
@@ -174,7 +167,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31724]</property>
                             <property name="SourceInfo">LatestSong.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="105">
                             <description>XBMC / Latest Albums Option</description>
@@ -183,7 +175,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31725]</property>
                             <property name="SourceInfo">LatestAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="201">
                             <description>Screen Widgets / Random Movies Option</description>
@@ -192,7 +183,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31726]</property>
                             <property name="SourceInfo">RandomMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="202">
                             <description>Screen Widgets / Random Episodes Option</description>
@@ -201,7 +191,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31727]</property>
                             <property name="SourceInfo">RandomEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="203">
                             <description>Screen Widgets / Random Music Videos Option</description>
@@ -210,7 +199,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31728]</property>
                             <property name="SourceInfo">RandomMusicVideo.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="204">
                             <description>Screen Widgets / Random Albums Option</description>
@@ -219,7 +207,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31729]</property>
                             <property name="SourceInfo">RandomAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="205">
                             <description>Screen Widgets / Random Artists Option</description>
@@ -228,7 +215,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31730]</property>
                             <property name="SourceInfo">RandomArtist.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="206">
                             <description>Screen Widgets / Random Songs Option</description>
@@ -237,7 +223,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31731]</property>
                             <property name="SourceInfo">RandomSong.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="207">
                             <description>Screen Widgets / Random Addons Option</description>
@@ -246,7 +231,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31732]</property>
                             <property name="SourceInfo">RandomAddon.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="221">
                             <description>Screen Widgets / Recommended Movies Option</description>
@@ -255,7 +239,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31733]</property>
                             <property name="SourceInfo">RecommendedMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="222">
                             <description>Screen Widgets / Recommended Episodes Option</description>
@@ -264,7 +247,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31734]</property>
                             <property name="SourceInfo">RecommendedEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="223">
                             <description>Screen Widgets / Recommended Music Videos Option</description>
@@ -273,7 +255,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31735]</property>
                             <property name="SourceInfo">RecommendedMusicVideo.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="224">
                             <description>Screen Widgets / Recommended Albums Option</description>
@@ -282,7 +263,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31736]</property>
                             <property name="SourceInfo">RecommendedAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="241">
                             <description>Screen Widgets / Recent Movies Option</description>
@@ -291,7 +271,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31737]</property>
                             <property name="SourceInfo">RecentMovie.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="242">
                             <description>Screen Widgets / Recent Episodes Option</description>
@@ -300,7 +279,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31738]</property>
                             <property name="SourceInfo">RecentEpisode.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="243">
                             <description>Screen Widgets / Recent Music Videos Option</description>
@@ -309,7 +287,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31739]</property>
                             <property name="SourceInfo">RecentMusicVideo.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="244">
                             <description>Screen Widgets / Recent Albums Option</description>
@@ -318,7 +295,6 @@
                             <property name="Type">S</property>
                             <property name="MenuTitle">$LOCALIZE[31740]</property>
                             <property name="SourceInfo">RecentAlbum.%d</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="301">
                             <description>Library Data Provider / Random Movies Option</description>
@@ -327,7 +303,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31726]</property>
                             <property name="SourceInfo">service.library.data.provider?type=randommovies</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="302">
                             <description>Library Data Provider / Random Episodes Option</description>
@@ -336,7 +311,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31727]</property>
                             <property name="SourceInfo">service.library.data.provider?type=randomepisodes</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="303">
                             <description>Library Data Provider / Random Albums Option</description>
@@ -345,7 +319,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31729]</property>
                             <property name="SourceInfo">service.library.data.provider?type=randomalbums</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="304">
                             <description>Library Data Provider / Random Songs Option</description>
@@ -354,7 +327,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31731]</property>
                             <property name="SourceInfo">service.library.data.provider?type=randomsongs</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="321">
                             <description>Library Data Provider / Recommended Movies Option</description>
@@ -363,7 +335,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31733]</property>
                             <property name="SourceInfo">service.library.data.provider?type=recommendedmovies</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="322">
                             <description>Library Data Provider / Recommended Episodes Option</description>
@@ -372,7 +343,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31734]</property>
                             <property name="SourceInfo">service.library.data.provider?type=recommendedepisodes</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="323">
                             <description>Library Data Provider / Recommended Albums Option</description>
@@ -381,7 +351,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31736]</property>
                             <property name="SourceInfo">service.library.data.provider?type=recommendedalbums</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="341">
                             <description>Library Data Provider / Recent Movies Option</description>
@@ -390,7 +359,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31737]</property>
                             <property name="SourceInfo">service.library.data.provider?type=recentmovies</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="342">
                             <description>Library Data Provider / Recent Episodes Option</description>
@@ -399,7 +367,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31738]</property>
                             <property name="SourceInfo">service.library.data.provider?type=recentepisodes</property>
-                            <onclick>Noop</onclick>
                         </item>
                         <item id="343">
                             <description>Library Data Provider / Recent Albums Option</description>
@@ -408,7 +375,6 @@
                             <property name="Type">D</property>
                             <property name="MenuTitle">$LOCALIZE[31740]</property>
                             <property name="SourceInfo">service.library.data.provider?type=recentalbums</property>
-                            <onclick>Noop</onclick>
                         </item>
                     </content>
                 </control>

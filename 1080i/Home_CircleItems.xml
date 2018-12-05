@@ -182,7 +182,6 @@
             <label2></label2>
             <icon></icon>
             <property name="BackgroundImage"></property>
-            <onclick>Noop</onclick>
         </item>
         <item id="6">
             <visible>Container(300).HasFocus(6) + String.IsEmpty(Window.Property(CircleEpisode01Option.Name))</visible>
@@ -190,7 +189,6 @@
             <label2></label2>
             <icon></icon>
             <property name="BackgroundImage"></property>
-            <onclick>Noop</onclick>
         </item>
         <item id="15">
             <visible>Container(300).HasFocus(15) + String.IsEmpty(Window.Property(NextAired.1.NextDate))</visible>
@@ -198,7 +196,6 @@
             <label2></label2>
             <icon>circle/tvshows-fallback.jpg</icon>
             <property name="BackgroundImage"></property>
-            <onclick>Noop</onclick>
         </item>
         <item id="16">
             <visible>Container(300).HasFocus(16) + String.IsEmpty(Window.Property(CircleAlbum01Option.Name))</visible>
@@ -206,7 +203,6 @@
             <label2></label2>
             <icon></icon>
             <property name="BackgroundImage"></property>
-            <onclick>Noop</onclick>
         </item>
 
         <item id="50">
