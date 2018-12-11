@@ -172,7 +172,7 @@
                 </include>
 
                 <include content="ContentTypeForDebug">
-                    <param name="visible" value="!String.IsEmpty(Container.ListItem.ChannelNumber)" />
+                    <param name="visible" value="!String.IsEmpty(Container.ListItem.ChannelNumberLabel)" />
                     <param name="label" value="Radio/TV Items" />
                 </include>
 
