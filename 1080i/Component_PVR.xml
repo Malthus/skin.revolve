@@ -81,7 +81,7 @@
                         <font>DetailViewFont</font>
                         <align>left</align>
                         <scroll>false</scroll>
-                        <label>$INFO[ListItem.ChannelNumber,,. ]</label>
+                        <label>$INFO[ListItem.ChannelNumberLabel,,. ]</label>
                     </control>
                     <control type="group">
                         <posx>405</posx>
@@ -116,7 +116,7 @@
                         <textcolor>$VAR[BackgroundColor]</textcolor>
                         <font>DetailViewFont</font>
                         <align>left</align>
-                        <label>$INFO[ListItem.ChannelNumber,,. ]</label>
+                        <label>$INFO[ListItem.ChannelNumberLabel,,. ]</label>
                     </control>
                     <control type="group">
                         <posx>405</posx>

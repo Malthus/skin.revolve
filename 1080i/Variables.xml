@@ -9,7 +9,7 @@
     </variable>
 
     <variable name="ContentCategoryLabel">
-        <value condition="!String.IsEmpty(ListItem.ChannelNumber)">$INFO[ListItem.ChannelGroup,, | ]$INFO[ListItem.ChannelNumber]</value>
+        <value condition="!String.IsEmpty(ListItem.ChannelNumberLabel)">$INFO[ListItem.ChannelGroup,, | ]$INFO[ListItem.ChannelNumberLabel]</value>
         <value condition="Container.Content(movies)">$INFO[ListItem.Director]</value>
         <value condition="Container.Content(tvshows)">$INFO[ListItem.year,, | ]$INFO[ListItem.Rating,, | ]$INFO[ListItem.MPAA]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.TVShowTitle]</value>
@@ -20,12 +20,12 @@
         <value condition="Container.Content(files) + !String.IsEmpty(Artist)">$INFO[ListItem.Artist]$INFO[ListItem.Album, | ,]</value>
         <value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator,, | ]$INFO[ListItem.AddonType]</value>
         <value condition="Window.Is(pictures) + !ListItem.IsFolder">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.Date]</value>
-        <value condition="Window.Is(radiotimers) | Window.IsVisible(tvtimers) | Window.Is(radiotimerrules) | Window.IsVisible(tvtimerrules)">$INFO[ListItem.Timertype]$INFO[ListItem.ChannelNumber, | ,]$INFO[ListItem.ChannelName, | ,]</value>
+        <value condition="Window.Is(radiotimers) | Window.IsVisible(tvtimers) | Window.Is(radiotimerrules) | Window.IsVisible(tvtimerrules)">$INFO[ListItem.Timertype]$INFO[ListItem.ChannelNumberLabel, | ,]$INFO[ListItem.ChannelName, | ,]</value>
     </variable>
 
     <variable name="ContentDetailLabel">
         <value condition="ListItem.IsParentFolder">$INFO[Container.NumItems,, $LOCALIZE[31900]]</value>
-        <value condition="!String.IsEmpty(ListItem.ChannelNumber) + !String.IsEmpty(ListItem.Title) + String.IsEmpty(ListItem.Timertype)">$INFO[ListItem.Title]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
+        <value condition="!String.IsEmpty(ListItem.ChannelNumberLabel) + !String.IsEmpty(ListItem.Title) + String.IsEmpty(ListItem.Timertype)">$INFO[ListItem.Title]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
         <value condition="Container.Content(movies)">$INFO[ListItem.Year,, | ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Genre, | ,]$INFO[ListItem.MPAA, | ,]</value>
         <value condition="Container.Content(tvshows)">$INFO[ListItem.Property(UnWatchedEpisodes)] / $INFO[ListItem.Property(TotalEpisodes)]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes)] / $INFO[ListItem.Property(TotalEpisodes)]</value>
@@ -41,13 +41,13 @@
         <value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion]$INFO[ListItem.Property(Addon.Status), | ,]</value>
         <value condition="Window.Is(radiorecordings) | Window.Is(tvrecordings)">$INFO[ListItem.StartDate]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
         <value condition="Window.Is(radiotimers) | Window.Is(tvtimers) | Window.Is(radiotimerrules) | Window.Is(tvtimerrules)">$INFO[Pvr.BackendTimers,, $LOCALIZE[19040]]$INFO[Pvr.BackendDiskSpace, | ,]</value>
-        <value condition="String.IsEmpty(ListItem.ChannelNumber)">$INFO[ListItem.Label2]</value>
+        <value condition="String.IsEmpty(ListItem.ChannelNumberLabel)">$INFO[ListItem.Label2]</value>
     </variable>
 
     <variable name="ContentInformationLabel">
         <value condition="ListItem.IsParentFolder">$INFO[Container.NumItems,, $LOCALIZE[31900]]</value>
-        <value condition="!String.IsEmpty(ListItem.ChannelNumber) + String.IsEmpty(ListItem.Timertype)">$INFO[ListItem.ChannelGroup,, | ]$INFO[ListItem.ChannelNumber]$INFO[ListItem.Title, | ,]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
-        <value condition="!String.IsEmpty(ListItem.ChannelNumber) + !String.IsEmpty(ListItem.Timertype)">$INFO[ListItem.Timertype]$INFO[ListItem.ChannelNumber, | ,]$INFO[ListItem.ChannelName, | ,]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
+        <value condition="!String.IsEmpty(ListItem.ChannelNumberLabel) + String.IsEmpty(ListItem.Timertype)">$INFO[ListItem.ChannelGroup,, | ]$INFO[ListItem.ChannelNumberLabel]$INFO[ListItem.Title, | ,]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
+        <value condition="!String.IsEmpty(ListItem.ChannelNumberLabel) + !String.IsEmpty(ListItem.Timertype)">$INFO[ListItem.Timertype]$INFO[ListItem.ChannelNumberLabel, | ,]$INFO[ListItem.ChannelName, | ,]$INFO[ListItem.StartDate, | ,]$INFO[ListItem.StartTime, | ,]$INFO[ListItem.EndTime, - ,]</value>
         <value condition="!String.IsEmpty(ListItem.PictureDatetime)">$INFO[ListItem.FolderName,, | ]$INFO[ListItem.PictureDatetime]$INFO[ListItem.Size, | ,]</value>
         <value condition="Container.Content(tvshows)">$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20453]]</value>
@@ -154,6 +154,9 @@
 
         <value condition="Window.IsVisible(pictures) + !String.IsEmpty(Skin.String(PicturesOption.BackgroundImage))">$INFO[Skin.String(PicturesOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(pictures)">special://skin/backgrounds/pictures.jpg</value>
+
+        <value condition="Window.IsVisible(games) + !String.IsEmpty(Skin.String(ProgramsOption.BackgroundImage))">$INFO[Skin.String(GamesOption.BackgroundImage)]</value>
+        <value condition="Window.IsVisible(games)">special://skin/backgrounds/games.jpg</value>
 
         <value condition="Window.IsVisible(programs) + !String.IsEmpty(Skin.String(ProgramsOption.BackgroundImage))">$INFO[Skin.String(ProgramsOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(programs)">special://skin/backgrounds/programs.jpg</value>
@@ -317,7 +320,7 @@
     </variable>
 
     <variable name="AdditionalDebugInfoLabel">
-        <value condition="String.IsEqual(Skin.String(Debug.Info.AdditionalType),B)">$LOCALIZE[19190]</value>
+        <value condition="String.IsEqual(Skin.String(Debug.Info.AdditionalType),B)">$LOCALIZE[31802]</value>
         <value condition="String.IsEqual(Skin.String(Debug.Info.AdditionalType),P)">$LOCALIZE[573]</value>
         <value>$LOCALIZE[16018]</value>
     </variable>
@@ -330,7 +333,7 @@
     
     <variable name="PlayerInformationLabel">
         <value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.EXIFDate,, | ]$INFO[Slideshow.Filesize]</value>
-        <value condition="Player.HasVideo + !String.IsEmpty(VideoPlayer.ChannelNumber)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</value>
+        <value condition="Player.HasVideo + !String.IsEmpty(VideoPlayer.ChannelNumberLabel)">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]</value>
         <value condition="Player.HasVideo">$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season, $LOCALIZE[20373] , | ]$INFO[VideoPlayer.Episode, $LOCALIZE[20359] , | ]$INFO[VideoPlayer.Artist, | ]$INFO[VideoPlayer.Year]</value>
         <value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.Year, | ]</value>
     </variable>

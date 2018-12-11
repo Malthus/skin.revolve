@@ -18,7 +18,7 @@
                 <visible>Player.HasVideo</visible>
                 <include content="BackgroundForOverlay" />
                 <include content="InformationLabelForOverlay">
-                    <param name="medialabel" value="$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]" />
+                    <param name="medialabel" value="$INFO[VideoPlayer..ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]" />
                     <param name="timelabel" value="| $INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]" />
                 </include>
                 <include content="PlayerMediaIconForOverlay" />
