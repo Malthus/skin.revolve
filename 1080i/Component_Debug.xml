@@ -132,6 +132,11 @@
                 </include>
 
                 <include content="ContentTypeForDebug">
+                    <param name="visible" value="Container.Content(games)" />
+                    <param name="label" value="Games" />
+                </include>
+
+                <include content="ContentTypeForDebug">
                     <param name="visible" value="Container.Content(files)" />
                     <param name="label" value="Files" />
                 </include>
@@ -189,8 +194,23 @@
                 </include>
 
                 <include content="WindowNameForDebug">
+                    <param name="window" value="fullscreengame" />
+                    <param name="label" value="fullscreengame (VideoFullScreen.xml)" />
+                </include>
+
+                <include content="WindowNameForDebug">
                     <param name="window" value="fullscreenvideo" />
                     <param name="label" value="fullscreenvideo (VideoFullScreen.xml)" />
+                </include>
+
+                <include content="WindowNameForDebug">
+                    <param name="window" value="games" />
+                    <param name="label" value="games (MyGames.xml)" />
+                </include>
+
+                <include content="WindowNameForDebug">
+                    <param name="window" value="gamesettings" />
+                    <param name="label" value="gamesettings (SettingsCategory.xml)" />
                 </include>
 
                 <include content="WindowNameForDebug">
@@ -409,7 +429,7 @@
                     <param name="dialog" value="addonsettings" />
                     <param name="label" value="addonsettings (DialogAddonSettings.xml)" />
                 </include>
-            
+
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="audiodspmanager" />
                     <param name="label" value="audiodspmanager (DialogAudioDSPManager.xml)" />
@@ -456,6 +476,11 @@
                 </include>
 
                 <include content="DialogNameForDebug">
+                    <param name="dialog" value="gameadvancedsettings" />
+                    <param name="label" value="gameadvancedsettings (DialogAddonSettings.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
                     <param name="dialog" value="gamecontrollers" />
                     <param name="label" value="gamecontrollers (DialogGameControllers.xml)" />
                 </include>
@@ -463,6 +488,31 @@
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="gamepadinput" />
                     <param name="label" value="gamepadinput (DialogSelect.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="gamestretchmode" />
+                    <param name="label" value="gamestretchmode (DialogSelect.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="gamevideofilter" />
+                    <param name="label" value="gamevideofilter (DialogSettings.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="gamevideorotation" />
+                    <param name="label" value="gamevideorotation (DialogSelect.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="gameviewmode" />
+                    <param name="label" value="gameviewmode (DialogSelect.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="gamevolume" />
+                    <param name="label" value="gamevolume (DialogVolumeBar.xml)" />
                 </include>
 
                 <include content="DialogNameForDebug">
@@ -614,7 +664,7 @@
                     <param name="dialog" value="selectdialog" />
                     <param name="label" value="selectdialog (DialogSelect.xml)" />
                 </include>
-            
+
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="shutdownmenu" />
                     <param name="label" value="shutdownmenu (DialogButtonMenu.xml)" />
