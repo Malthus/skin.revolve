@@ -84,7 +84,7 @@
                     <item>
                         <visible>!String.IsEmpty(ListItem.Duration)</visible>
                         <label>$LOCALIZE[180]</label>
-                        <label2>$INFO[ListItem.Duration] $LOCALIZE[31901]</label2>
+                        <label2>$INFO[ListItem.Duration]</label2>
                     </item>
                     <item>
                         <visible>!String.IsEmpty(ListItem.Genre)</visible>
