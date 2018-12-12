@@ -101,18 +101,20 @@
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="400" />
-                    <param name="height" value="280" />
+                    <param name="posy" value="360" />
+                    <param name="height" value="320" />
                 </include>
                 <onright>410</onright>
 
+                <control type="button" id="10">
+                    <description>View Dependencies Button</description>
+                    <label>$LOCALIZE[31704]</label>
+                </control>
                 <control type="button" id="6">
                     <description>Install/Uninstall Addon Button</description>
-                    <label></label>
                 </control>
                 <control type="button" id="7">
                     <description>Enable/Disable Addon Button</description>
-                    <label></label>
                 </control>
                 <control type="button" id="8">
                     <description>Update Addon Button</description>
@@ -124,7 +126,6 @@
                 </control>
                 <control type="button" id="12">
                     <description>Run Button</description>
-                    <label></label>
                 </control>
                 <control type="radiobutton" id="13">
                     <description>Auto Update Button</description>
