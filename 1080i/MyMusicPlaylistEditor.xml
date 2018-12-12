@@ -2,6 +2,7 @@
 <window id="503">
     <defaultcontrol always="true">50</defaultcontrol>
     <menucontrol>9001</menucontrol>
+    <views>50</views>
 
     <controls>
         <include content="FullscreenDimensions" />
@@ -63,7 +64,7 @@
                 <param name="outlinecolor" value="$VAR[BackgroundColor]" />
             </include>
         </control>
-            
+
         <control type="group" id="9000">
             <include content="SideMenu" />
 
