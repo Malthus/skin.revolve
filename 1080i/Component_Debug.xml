@@ -616,6 +616,11 @@
                 </include>
 
                 <include content="DialogNameForDebug">
+                    <param name="dialog" value="pvrchannelguide" />
+                    <param name="label" value="pvrchannelguide (DialogPVRChannelGuide.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
                     <param name="dialog" value="pvrchannelmanager" />
                     <param name="label" value="pvrchannelmanager (DialogPVRChannelManager.xml)" />
                 </include>
@@ -638,11 +643,6 @@
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="pvrosdchannels" />
                     <param name="label" value="pvrosdchannels (DialogPVRChannelsOSD.xml)" />
-                </include>
-
-                <include content="DialogNameForDebug">
-                    <param name="dialog" value="pvrosdguide" />
-                    <param name="label" value="pvrosdguide (DialogPVRGuideOSD.xml)" />
                 </include>
 
                 <include content="DialogNameForDebug">
