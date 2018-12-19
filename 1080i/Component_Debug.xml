@@ -581,6 +581,11 @@
                 </include>
 
                 <include content="DialogNameForDebug">
+                    <param name="dialog" value="osdsubtitlesettings" />
+                    <param name="label" value="osdsubtitlesettings (DialogSettings.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
                     <param name="dialog" value="osdvideosettings" />
                     <param name="label" value="osdvideosettings (DialogSettings.xml)" />
                 </include>
