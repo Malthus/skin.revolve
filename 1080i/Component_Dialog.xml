@@ -37,6 +37,34 @@
         </definition>
     </include>
 
+    <include name="RadioButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+        <param name="label" default="" />
+
+        <definition>
+            <control type="radiobutton" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$PARAM[label]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ToggleButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+        <param name="label" default="" />
+        <param name="altlabel" default="" />
+
+        <definition>
+            <control type="togglebutton" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$PARAM[label]</label>
+                <altlabel>$PARAM[altlabel]</altlabel>
+            </control>
+        </definition>
+    </include>
+
     <include name="AddButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />

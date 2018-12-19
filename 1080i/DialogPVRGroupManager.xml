@@ -128,21 +128,27 @@
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="660" />
-                    <param name="height" value="220" />
+                    <param name="posy" value="600" />
+                    <param name="height" value="280" />
                 </include>
                 <onright>13</onright>
 
+                <include content="ToggleButtonForDialog">
+                    <param name="id" value="34" />
+                    <param name="label" value="$LOCALIZE[19174]" />
+                    <param name="altlabel" value="$LOCALIZE[19173]" />
+                </include>
                 <include content="AddButtonForDialog">
                     <param name="id" value="26" />
+                    <param name="posy" value="20" />
                 </include>
                 <include content="EditButtonForDialog">
                     <param name="id" value="27" />
                 </include>
-                <control type="radiobutton" id="25">
-                    <description>Hide/Unhide Group Radiobutton</description>
-                    <label>$LOCALIZE[19289]</label>
-                </control>
+                <include content="RadioButtonForDialog">
+                    <param name="id" value="25" />
+                    <param name="label" value="$LOCALIZE[19289]" />
+                </include>
                 <include content="DeleteButtonForDialog">
                     <param name="id" value="28" />
                 </include>
