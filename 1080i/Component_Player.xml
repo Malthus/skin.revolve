@@ -10,7 +10,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="PlayPauseButtonForPlayer">
         <param name="id" default="0" />
         <param name="posx" default="0" />
@@ -53,6 +53,34 @@
             </control>
         </definition>
     </include>
+    
+    <include name="ResumeButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-play.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-play.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[13404]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>Play</onclick>
+            </control>
+        </definition>
+    </include>    
 
     <include name="RewindButtonForPlayer">
         <param name="id" default="0" />
@@ -316,6 +344,34 @@
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
                 <onclick>PlayerControl(stop)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ResetButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-repeat.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-repeat.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[13007]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>PlayerControl(reset)</onclick>
             </control>
         </definition>
     </include>
@@ -884,6 +940,62 @@
         </definition>
     </include>
     
+    <include name="GameSettingsButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-settings.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-settings.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[13395]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>ActivateWindow(gameadvancedsettings)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="InputButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-settings.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-settings.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[31084]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>ActivateWindow(gamecontrollers)</onclick>
+            </control>
+        </definition>
+    </include>
+
     <include name="ColorButtonForPlayer">
         <param name="id" default="0" />
         <param name="posx" default="0" />

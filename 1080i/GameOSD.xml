@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="822">
+    <defaultcontrol always="true">403</defaultcontrol>
+    <menucontrol>100</menucontrol>
+
+    <controls>
+        <control type="group">
+            <posx>0</posx>
+            <posy>0</posy>
+
+            <control type="group">
+                <visible>!Window.IsActive(gamevideosettings) + !Window.IsVisible(gamecontrollers)</visible>
+                <posx>700</posx>
+                <posy>96</posy>
+                <include content="DescriptionForControlsForPlayer" />
+            </control>
+
+            <control type="grouplist" id="100">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>90</height>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <align>center</align>
+                <onup>Noop</onup>
+                <ondown>Noop</ondown>
+                <onleft>100</onleft>
+                <onright>100</onright>
+
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
+                    <include content="GameSettingsButtonForPlayer">
+                        <param name="id" value="11107" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="11103" />
+                        <param name="onright" value="11109" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+                    
+                    <include content="InputButtonForPlayer">
+                        <param name="id" value="11109" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="11107" />
+                        <param name="onright" value="11102" />
+                    </include>
+                </control>
+
+                <control type="label">
+                    <width>30</width>
+                </control>
+                
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
+                    <include content="ResumeButtonForPlayer">
+                        <param name="id" value="11102" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="11109" />
+                        <param name="onright" value="11104" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
+                    <include content="StopButtonForPlayer">
+                        <param name="id" value="11104" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="11102" />
+                        <param name="onright" value="11103" />
+                    </include>
+                </control>
+                
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
+                    <include content="ResetButtonForPlayer">
+                        <param name="id" value="11103" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="11104" />
+                        <param name="onright" value="11109" />
+                    </include>
+                </control>
+
+            </control>
+        </control>
+    </controls>
+</window>
