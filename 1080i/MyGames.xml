@@ -30,7 +30,9 @@
                 <include content="NameForThumbnailsButtonForSideMenu" />
                 <include content="DescriptionForLandscapeButtonForSideMenu" />
                 
-                <include content="NavigationGroupLabelForSideMenu" />
+                <include content="NavigationGroupLabelForSideMenu">
+                    <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
+                </include>
                 <include content="GlobalSearchButtonForSideMenu" />
 
                 <include content="EndOfButtonListForSideMenu" />
