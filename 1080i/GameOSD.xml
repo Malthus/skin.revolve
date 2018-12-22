@@ -4,7 +4,56 @@
     <menucontrol>100</menucontrol>
 
     <controls>
-        <control type="group">
+        <control type="group" id="10">
+<!--            <visible>System.GetBool(gamesgeneral.showosdhelp)</visible> -->
+            <posy>PosYForTwelveLinesDialog</posy>
+
+            <include content="WindowForDialog">
+                <param name="height" value="HeightForTwelveLinesDialog" />
+                <param name="headerlabel" value="$LOCALIZE[35221]" />
+                <param name="iconthumbnail" value="icons/icon-gamepad.png" />
+                <param name="animate" value="true" />
+            </include>
+            
+            <control type="gamecontroller" id="1102">
+                <description>Game Controller</description>
+                <posx>600</posx>
+                <posy>80</posy>
+                <width>500</width>
+                <height>500</height>
+            </control>            
+
+            <control type="textbox" id="1101"> 
+                <description>Help Text</description>
+                <posx>1140</posx>
+                <posy>80</posy>
+                <width>720</width>
+                <height>160</height>
+            </control>
+
+            <control type="textbox">
+                <description>Additional Help Text</description>
+                <posx>1140</posx>
+                <posy>280</posy>
+                <width>720</width>
+                <height>160</height>
+                <label>$LOCALIZE[35236]</label>
+            </control>
+
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
+                    <param name="posy" value="500" />
+                    <param name="height" value="40" />
+                </include>
+
+                <include content="CloseButtonForDialog">
+                    <param name="id" value="22" />
+                </include>
+            </control>
+        </control>
+
+        <control type="group" id="20">
+            <visible>!System.GetBool(gamesgeneral.showosdhelp)</visible>
             <posx>0</posx>
             <posy>0</posy>
 
