@@ -940,34 +940,6 @@
         </definition>
     </include>
     
-    <include name="GameSettingsButtonForPlayer">
-        <param name="id" default="0" />
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-        <param name="onup" default="Noop" />
-        <param name="ondown" default="Noop" />
-        <param name="onleft" default="Noop" />
-        <param name="onright" default="Noop" />
-
-        <definition>
-            <control type="button" id="$PARAM[id]">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-                <width>80</width>
-                <height>80</height>
-                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-settings.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-settings.png</texturenofocus>
-                <font></font>
-                <label>$LOCALIZE[13395]</label>
-                <onup>$PARAM[onup]</onup>
-                <ondown>$PARAM[ondown]</ondown>
-                <onleft>$PARAM[onleft]</onleft>
-                <onright>$PARAM[onright]</onright>
-                <onclick>ActivateWindow(gameadvancedsettings)</onclick>
-            </control>
-        </definition>
-    </include>
-
     <include name="InputButtonForPlayer">
         <param name="id" default="0" />
         <param name="posx" default="0" />
@@ -992,6 +964,146 @@
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
                 <onclick>ActivateWindow(gamecontrollers)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="GameSettingsButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-settings.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-settings.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[35226]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>ActivateWindow(gameadvancedsettings)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="GameVideoFilterButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-settings.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-settings.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[35225]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>ActivateWindow(gamevideofilter)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="GameStretchModeButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-settings.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-settings.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[35233]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>ActivateWindow(gamestretchmode)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="GameVideoRotationButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-settings.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-settings.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[35227]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>ActivateWindow(gamevideorotation)</onclick>
+            </control>
+        </definition>
+    </include>
+
+    <include name="GameVolumeButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>80</width>
+                <height>80</height>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-audio.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-audio.png</texturenofocus>
+                <font></font>
+                <label>$LOCALIZE[13376]</label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <onclick>ActivateWindow(gamevolume)</onclick>
             </control>
         </definition>
     </include>
