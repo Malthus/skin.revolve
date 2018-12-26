@@ -93,7 +93,7 @@
 
         <definition>
             <control type="button" id="$PARAM[id]">
-                <enable>Player.SeekEnabled</enable>
+                <enable>[!Window.IsVisible(fullscreengame) + Player.SeekEnabled] | [Window.IsVisible(fullscreengame) + GamesGeneral.EnableRewind]</enable>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
@@ -108,9 +108,9 @@
                 <onright>$PARAM[onright]</onright>
                 <onclick>PlayerControl(rewind)</onclick>
             </control>
-            
+
             <control type="image">
-                <visible>!Player.SeekEnabled</visible>
+                <visible>[!Window.IsVisible(fullscreengame) + !Player.SeekEnabled] | [Window.IsVisible(fullscreengame) + !GamesGeneral.EnableRewind]</visible>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
@@ -363,8 +363,8 @@
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
                 <height>80</height>
-                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-repeat.png</texturefocus>
-                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-repeat.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-reset.png</texturefocus>
+                <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-reset.png</texturenofocus>
                 <font></font>
                 <label>$LOCALIZE[13007]</label>
                 <onup>$PARAM[onup]</onup>
