@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="822">
-    <defaultcontrol always="true">403</defaultcontrol>
+    <defaultcontrol always="true">2</defaultcontrol>
     <menucontrol>100</menucontrol>
 
     <controls>
         <control type="group" id="10">
             <visible>System.GetBool(gamesgeneral.showosdhelp)</visible>
+            <defaultcontrol always="true">22</defaultcontrol>
             <posy>PosYForTwelveLinesDialog</posy>
 
             <include content="WindowForDialog">
@@ -46,14 +47,17 @@
                     <param name="height" value="40" />
                 </include>
 
-                <include content="CloseButtonForDialog">
-                    <param name="id" value="22" />
-                </include>
+                <control type="button" id="22">
+                    <label>$LOCALIZE[31915]</label>
+                    <onclick>Close</onclick>
+                    <onclick>SetFocus(2)</onclick>
+                </control>
             </control>
         </control>
 
         <control type="group" id="20">
             <visible>!System.GetBool(gamesgeneral.showosdhelp)</visible>
+            <defaultcontrol always="true">2</defaultcontrol>
             <posx>0</posx>
             <posy>0</posy>
 
@@ -76,21 +80,6 @@
                 <ondown>Noop</ondown>
                 <onleft>100</onleft>
                 <onright>100</onright>
-
-                <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
-
-                    <include content="GameSettingsButtonForPlayer">
-                        <param name="id" value="16" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
-                        <param name="onleft" value="9" />
-                        <param name="onright" value="15" />
-                    </include>
-                </control>
 
                 <control type="group">
                     <posx>1</posx>
@@ -133,37 +122,7 @@
                         <param name="posx" value="4" />
                         <param name="posy" value="4" />
                         <param name="onleft" value="14" />
-                        <param name="onright" value="12" />
-                    </include>
-                </control>
-
-                <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
-
-                    <include content="GameVolumeButtonForPlayer">
-                        <param name="id" value="12" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
-                        <param name="onleft" value="13" />
-                        <param name="onright" value="11" />
-                    </include>
-                </control>
-
-                <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
-                    
-                    <include content="InputButtonForPlayer">
-                        <param name="id" value="11" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
-                        <param name="onleft" value="12" />
-                        <param name="onright" value="2" />
+                        <param name="onright" value="1" />
                     </include>
                 </control>
 
@@ -177,11 +136,26 @@
                     <width>90</width>
                     <include content="FrameForPlayer" />
 
+                    <include content="RewindButtonForPlayer">
+                        <param name="id" value="1" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="13" />
+                        <param name="onright" value="2" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
                     <include content="ResumeButtonForPlayer">
                         <param name="id" value="2" />
                         <param name="posx" value="4" />
                         <param name="posy" value="4" />
-                        <param name="onleft" value="11" />
+                        <param name="onleft" value="1" />
                         <param name="onright" value="4" />
                     </include>
                 </control>
@@ -212,10 +186,58 @@
                         <param name="posx" value="4" />
                         <param name="posy" value="4" />
                         <param name="onleft" value="4" />
+                        <param name="onright" value="12" />
+                    </include>
+                </control>
+
+                <control type="label">
+                    <width>30</width>
+                </control>
+
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
+                    <include content="GameVolumeButtonForPlayer">
+                        <param name="id" value="12" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="9" />
+                        <param name="onright" value="11" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+                    
+                    <include content="InputButtonForPlayer">
+                        <param name="id" value="11" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="12" />
                         <param name="onright" value="16" />
                     </include>
                 </control>
 
+                <control type="group">
+                    <posx>1</posx>
+                    <posy>1</posy>
+                    <width>90</width>
+                    <include content="FrameForPlayer" />
+
+                    <include content="GameSettingsButtonForPlayer">
+                        <param name="id" value="16" />
+                        <param name="posx" value="4" />
+                        <param name="posy" value="4" />
+                        <param name="onleft" value="11" />
+                        <param name="onright" value="15" />
+                    </include>
+                </control>
             </control>
         </control>
     </controls>
