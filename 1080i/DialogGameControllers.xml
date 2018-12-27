@@ -8,21 +8,21 @@
             <posy>PosYForFullWindowDialog</posy>
             <include content="WindowForDialog">
                 <param name="height" value="HeightForFullWindowDialog" />
-                <param name="headerlabel" value="Game Controller Settings" />
+                <param name="headerlabel" value="$LOCALIZE[35058]" />
                 <param name="icontexture" value="icons/icon-gamepad.png" />
             </include>
 
             <control type="gamecontroller" id="31">
                 <posx>600</posx>
-                <posy>220</posy>
+                <posy>120</posy>
                 <width>700</width>
-                <height>500</height>
+                <height>700</height>
             </control>
 
             <control type="grouplist" id="5">
-                <posx>1400</posx>
+                <posx>1340</posx>
                 <posy>80</posy>
-                <width>400</width>
+                <width>460</width>
                 <height>780</height>
                 <pagecontrol>6</pagecontrol>
                 <onleft>9000</onleft>
@@ -30,12 +30,12 @@
             </control>
             
             <control type="button" id="7">
-                <width>400</width>
+                <width>460</width>
                 <align>left</align>
             </control>
 
             <control type="label" id="8">
-                <width>400</width>
+                <width>460</width>
                 <textcolor>$VAR[SelectColor]</textcolor>
             </control>            
             
@@ -67,38 +67,47 @@
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="600" />
-                    <param name="height" value="280" />
+                    <param name="posy" value="580" />
+                    <param name="height" value="300" />
                 </include>
                 <onup>3</onup>
                 <ondown>3</ondown>
                 <onright>5</onright>
 
+                <include content="SpacerForButtonListForDialog">
+                    <param name="id" default="28" />
+                    <param name="visible" default="!Control.IsVisible(20)" />
+                    <param name="height" value="60" />
+                </include>
+                <include content="SpacerForButtonListForDialog">
+                    <param name="id" default="29" />
+                    <param name="visible" default="!Control.IsVisible(22)" />
+                </include>
                 <include content="ButtonForDialog">
                     <param name="id" value="17" />
                     <param name="label" value="$LOCALIZE[10043]" />
                 </include>
                 <include content="ButtonForDialog">
                     <param name="id" value="21" />
-                    <param name="label" value="$LOCALIZE[31274]" />
+                    <param name="posy" value="20" />
+                    <param name="label" value="$LOCALIZE[35019]" />
                 </include>
                 <include content="ResetButtonForDialog">
                     <param name="id" value="19" />
                 </include>
                 <include content="ButtonForDialog">
                     <param name="id" value="20" />
-                    <param name="posy" value="40" />
+                    <param name="posy" value="20" />
                     <param name="label" value="$LOCALIZE[21452]" />
+                </include>
+                <include content="ButtonForDialog">
+                    <param name="id" value="22" />
+                    <param name="label" value="$LOCALIZE[35021]" />
                 </include>
                 <include content="OkButtonForDialog">
                     <param name="id" value="18" />
-                    <param name="posy" value="40" />
+                    <param name="posy" value="20" />
                 </include>
-<!--                
-                <include content="CloseButtonForDialog">
-                    <param name="id" value="22" />
-                </include>
--->                
             </control>
         </control>
     </controls>
