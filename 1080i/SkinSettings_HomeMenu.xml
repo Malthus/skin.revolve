@@ -265,10 +265,16 @@
                 <param name="variable" value="CustomPicturesOption" />
             </include>
 
-            <include content="CustomizableButtonForHomeMenuSkinSettings">
+            <include content="StandardButtonForHomeMenuSkinSettings">
                 <param name="id" value="272" />
                 <param name="label" value="$LOCALIZE[15016]" />
                 <param name="variable" value="GamesOption" />
+                <param name="immutablepath" value="True" />
+            </include>
+
+            <include content="VisibleCustomButtonForHomeMenuSkinSettings">
+                <param name="id" value="295" />
+                <param name="variable" value="CustomGamesOption" />
             </include>
 
             <include content="StandardButtonForHomeMenuSkinSettings">

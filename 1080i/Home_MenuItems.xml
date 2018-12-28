@@ -278,10 +278,13 @@
                     <property name="Circle">circle/games.png</property>
                     <property name="BackgroundImage">$INFO[Skin.String(GamesOption.BackgroundImage)]</property>
                     <property name="FallbackImage">special://skin/backgrounds/games.jpg</property>
-                    <onclick>SetProperty(MenuTitle,$INFO[Skin.String(GamesOption.MenuTitle)],$INFO[Skin.String(GamesOption.Window)])</onclick>
-                    <onclick>SetProperty(SourceInfo,$INFO[Skin.String(GamesOption.SourceInfo)],$INFO[Skin.String(GamesOption.Window)])</onclick>
-                    <onclick>$INFO[Skin.String(GamesOption.Action)]</onclick>
+                    <onclick>ActivateWindow(games)</onclick>
                 </item>
+
+                <include content="CustomOptionForHomeMenuItems">
+                    <param name="id" value="45" />
+                    <param name="variable" value="CustomGamesOption" />
+                </include>
 
                 <item id="1">
                     <description>Programs Option</description>

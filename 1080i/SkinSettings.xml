@@ -781,7 +781,7 @@
                         <onclick>SetProperty(DialogTarget,Debug.Info.AdditionalType,1188)</onclick>
                         <onclick>SetProperty(List01Option.Name,$LOCALIZE[16018],1188)</onclick>
                         <onclick>SetProperty(List01Option.Action,N,1188)</onclick>
-                        <onclick>SetProperty(List02Option.Name,$LOCALIZE[19190],1188)</onclick>
+                        <onclick>SetProperty(List02Option.Name,$LOCALIZE[31802],1188)</onclick>
                         <onclick>SetProperty(List02Option.Action,B,1188)</onclick>
                         <onclick>SetProperty(List03Option.Name,$LOCALIZE[573],1188)</onclick>
                         <onclick>SetProperty(List03Option.Action,P,1188)</onclick>
@@ -1216,56 +1216,48 @@
                             <description>Background Visuals Option</description>
                             <label>$LOCALIZE[31122]</label>
                             <label2>$LOCALIZE[31221]</label2>
-                            <onclick>Noop</onclick>
                         </item>
 
                         <item id="4">
                             <description>Colors Option</description>
                             <label>$LOCALIZE[14078]</label>
                             <label2>$LOCALIZE[31224]</label2>
-                            <onclick>Noop</onclick>
                         </item>
 
                         <item id="2">
                             <description>Home Menu Option</description>
                             <label>$LOCALIZE[31120]</label>
                             <label2>$LOCALIZE[31222]</label2>
-                            <onclick>Noop</onclick>
                         </item>
 
                         <item id="3">
                             <description>Circle Items Option</description>
                             <label>$LOCALIZE[31197]</label>
                             <label2>$LOCALIZE[31223]</label2>
-                            <onclick>Noop</onclick>
                         </item>
 
                         <item id="5">
                             <description>Exit Menu Items Option</description>
                             <label>$LOCALIZE[31412]</label>
                             <label2>$LOCALIZE[31413]</label2>
-                            <onclick>Noop</onclick>
                         </item>
 
                         <item id="7">
                             <description>Media Option</description>
                             <label>$LOCALIZE[31259]</label>
                             <label2>$LOCALIZE[31260]</label2>
-                            <onclick>Noop</onclick>
                         </item>
 
                         <item id="8">
                             <description>Miscellaneous Option</description>
                             <label>$LOCALIZE[31132]</label>
                             <label2>$LOCALIZE[31228]</label2>
-                            <onclick>Noop</onclick>
                         </item>
 
                         <item id="9">
                             <description>Debug Option</description>
                             <label>$LOCALIZE[31133]</label>
                             <label2>$LOCALIZE[31229]</label2>
-                            <onclick>Noop</onclick>
                         </item>
                     </content>
                 </control>
