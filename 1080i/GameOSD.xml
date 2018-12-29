@@ -2,6 +2,7 @@
 <window id="822">
     <defaultcontrol always="true">2</defaultcontrol>
     <menucontrol>100</menucontrol>
+    <onload condition="System.GetBool(gamesgeneral.showosdhelp)">SetFocus(22)</onload>
 
     <controls>
         <control type="group" id="10">
