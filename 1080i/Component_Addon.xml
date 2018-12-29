@@ -40,32 +40,4 @@
             </control>
         </definition>
     </include>
-    
-    <include name="MarkupForUnfocusedRightAlignedLabelForAudioDSPAddon">
-        <definition>
-            <width>200</width>
-            <height>40</height>
-            <font>DialogTextFont</font>
-            <textcolor>$VAR[MainColor]</textcolor>
-            <align>right</align>
-        </definition>
-    </include>
-    
-    <include name="MarkupForFocusedRightAlignedLabelForAudioDSPAddon">
-        <definition>
-            <width>200</width>
-            <height>40</height>
-            <font>DialogTextFont</font>
-            <textcolor>$VAR[BackgroundColor]</textcolor>
-            <align>right</align>
-        </definition>
-    </include>
-    
-    <include name="BackgroundForSettingsForAudioDSPAddon">
-        <definition>
-            <width>1240</width>
-            <height>40</height>
-            <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
-        </definition>
-    </include>
 </includes>
