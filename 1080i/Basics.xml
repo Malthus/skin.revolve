@@ -27,7 +27,7 @@
         <param name="aligny" default="center" />
         <param name="wrapmultiline" default="false" />
         <param name="angle" default="0" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
         
         <definition>
             <control type="group">
@@ -119,7 +119,7 @@
         <param name="aligny" default="center" />
         <param name="wrapmultiline" default="false" />
         <param name="angle" default="0" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
         
         <definition>
             <include content="BackgroundForOutlineLabel">
@@ -167,13 +167,13 @@
         <param name="font" default="SmallMessageFont" />
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="outlinesize" default="1" />
-        <param name="pagecontrol" default="-" />
+        <param name="pagecontrol" default="" />
         <param name="autoscroll" default="true" />
         <param name="autoscrolldelay" default="3000" />
         <param name="autoscrolltime" default="5000" />
         <param name="autoscrollrepeat" default="2000" />
         <param name="align" default="left" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
         
         <definition>
             <control type="group">
@@ -242,13 +242,13 @@
         <param name="textcolor" default="$VAR[MainColor]" />
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="outlinesize" default="1" />
-        <param name="pagecontrol" default="-" />
+        <param name="pagecontrol" default="" />
         <param name="autoscroll" default="true" />
         <param name="autoscrolldelay" default="3000" />
         <param name="autoscrolltime" default="2000" />
         <param name="autoscrollrepeat" default="5000" />
         <param name="align" default="left" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
         
         <definition>
             <include content="BackgroundForOutlineTextbox">
@@ -323,9 +323,9 @@
     <include name="UpDownButton">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
-        <param name="downbuttonid" default="-" />
-        <param name="upbuttonid" default="-" />
-        <param name="controlid" default="-" />
+        <param name="downbuttonid" default="" />
+        <param name="upbuttonid" default="" />
+        <param name="controlid" default="" />
         <param name="onup" default="Noop" />
         <param name="ondown" default="Noop" />
         <param name="onleft" default="Noop" />
@@ -371,7 +371,7 @@
         <param name="visible" default="true" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
-        <param name="color" default="-" />
+        <param name="color" default="" />
         <param name="buttonid" default="0" />
 
         <definition>
