@@ -231,7 +231,7 @@
             </control>
                     
             <control type="image">
-                <visible>String.Contains(ListItem.Property(Active),T,left)</visible>
+                <visible>String.IsEqual(ListItem.Property(Active),True)</visible>
                 <posx>$PARAM[radioposx]</posx>
                 <posy>0</posy>
                 <width>40</width>
@@ -239,7 +239,7 @@
                 <texture colordiffuse="$PARAM[radiobuttoncolor]" border="20">controls/circle-dot.png</texture>
             </control>
             <control type="image">
-                <visible>!String.Contains(ListItem.Property(Active),T,left)</visible>
+                <visible>!String.IsEqual(ListItem.Property(Active),True)</visible>
                 <posx>$PARAM[radioposx]</posx>
                 <posy>0</posy>
                 <width>40</width>
