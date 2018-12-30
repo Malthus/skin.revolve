@@ -12,30 +12,53 @@
                 <param name="icontexture" value="icons/icon-gamepad.png" />
             </include>
 
+            <include content="LabelForDialog">
+                <param name="id" value="32" />
+                <param name="visible" value="false" />
+            </include>
+
+            <include content="TextboxForDialog">
+                <param name="textboxid" value="42" />
+                <param name="scrollbarid" value="43" />
+                <param name="posy" value="80" />
+                <param name="height" value="160" />
+                <param name="label" value="$INFO[Control.GetLabel(32)]" />
+                <param name="onleft" value="3" />
+            </include>
+
+            <control type="image">
+                <posx>560</posx>
+                <posy>260</posy>
+                <width>640</width>
+                <height>620</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="$VAR[SelectColor]" border="20" >controls/rectangle-clear.png</texture>
+            </control>
+
             <control type="gamecontroller" id="31">
-                <posx>600</posx>
-                <posy>120</posy>
-                <width>700</width>
-                <height>700</height>
+                <posx>570</posx>
+                <posy>260</posy>
+                <width>620</width>
+                <height>620</height>
             </control>
 
             <control type="grouplist" id="5">
-                <posx>1340</posx>
-                <posy>80</posy>
-                <width>460</width>
-                <height>780</height>
+                <posx>1240</posx>
+                <posy>260</posy>
+                <width>480</width>
+                <height>620</height>
                 <pagecontrol>6</pagecontrol>
                 <onleft>9000</onleft>
                 <onright>6</onright>
             </control>
             
             <control type="button" id="7">
-                <width>460</width>
+                <width>480</width>
                 <align>left</align>
             </control>
 
             <control type="label" id="8">
-                <width>460</width>
+                <width>480</width>
                 <textcolor>$VAR[SelectColor]</textcolor>
             </control>            
             
@@ -45,8 +68,8 @@
 
             <include content="ScrollbarForDialog">
                 <param name="id" value="6" />
-                <param name="posy" value="80" />
-                <param name="height" value="780" />
+                <param name="posy" value="260" />
+                <param name="height" value="620" />
                 <param name="onleft" value="5" />
             </include>
             
