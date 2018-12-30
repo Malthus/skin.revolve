@@ -10,20 +10,6 @@
     <constant name="CenterXForDefaultIconFrameForDialog">280</constant>
     <constant name="CenterYForDefaultIconFrameForDialog">155</constant>
 
-    <include name="HelpButtonForDialog">
-        <param name="id" default="0" />
-        <param name="posy" default="0" />
-
-        <definition>
-            <control type="radiobutton" id="$PARAM[id]">
-                <posy>$PARAM[posy]</posy>
-                <label>$LOCALIZE[10043]</label>
-                <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
-                <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
-            </control>
-        </definition>
-    </include>
-    
     <include name="ButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -65,6 +51,20 @@
         </definition>
     </include>
 
+    <include name="HelpButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="radiobutton" id="$PARAM[id]">
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[10043]</label>
+                <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
+                <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
+            </control>
+        </definition>
+    </include>
+    
     <include name="AddButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -250,7 +250,6 @@
                 <visible>$PARAM[visible]</visible>
                 <posy>$PARAM[posy]</posy>
                 <height>$PARAM[height]</height>
-                <label></label>
             </control>
         </definition>
     </include>
@@ -326,19 +325,31 @@
 
     <include name="LabelForDialog">
         <param name="id" default="0" />
+        <param name="visible" default="true" />
         <param name="posy" default="80" />
+        <param name="width" default="1240" />
+        <param name="height" default="40" />
         <param name="textcolor" default="$VAR[SecondaryColor]" />
+        <param name="scroll" default="true" />
+        <param name="scrollspeed" default="50" />
+        <param name="scrollsuffix" default=" | " />
+        <param name="wrapmultiline" default="false" />
         <param name="label" default="" />
     
         <definition>
-               <control type="label" id="$PARAM[id]">
+            <control type="label" id="$PARAM[id]">
+                <visible>$PARAM[visible]</visible>
                 <posx>560</posx>
                 <posy>$PARAM[posy]</posy>
-                <width>1240</width>
-                <height>40</height>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
                 <font>DialogTextFont</font>
                 <textcolor>$PARAM[textcolor]</textcolor>
+                <scroll>$PARAM[scroll]</scroll>
+                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
                 <align>left</align>
+                <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
                 <label>$PARAM[label]</label>
             </control>
         </definition>
