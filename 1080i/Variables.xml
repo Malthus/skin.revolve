@@ -135,9 +135,6 @@
 
         <value condition="Container.Content(files) + Skin.HasSetting(Background.Image.FanartForFiles) + !String.StartsWith(Container.FolderPath,library)">$INFO[Container.FolderPath,,fanart.jpg]</value>
         
-        <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.String(FavouritesOption.BackgroundImage))">$INFO[Skin.String(FavouritesOption.BackgroundImage)]</value>
-        <value condition="Window.IsVisible(1104)">special://skin/backgrounds/favourites.jpg</value>
-
         <value condition="[Window.IsVisible(tvguide) | Window.IsVisible(tvchannels) | Window.IsVisible(tvrecordings) | Window.IsVisible(tvtimers) | Window.IsVisible(tvtimerrules) | Window.IsVisible(tvsearch)] + !String.IsEmpty(Skin.String(TVOption.BackgroundImage))">$INFO[Skin.String(TVOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(tvguide) | Window.IsVisible(tvchannels) | Window.IsVisible(tvrecordings) | Window.IsVisible(tvtimers) | Window.IsVisible(tvtimerrules) | Window.IsVisible(tvsearch)">special://skin/backgrounds/tv.jpg</value>
 
@@ -161,9 +158,17 @@
 
         <value condition="Window.IsVisible(addonbrowser)">special://skin/backgrounds/addons.jpg</value>
         
+        <value condition="Window.IsVisible(1101) + !String.IsEmpty(Skin.String(ActiveCustomOption.BackgroundImage))">$INFO[Skin.String(ActiveCustomOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(1101)">special://skin/backgrounds/items.jpg</value>
+
+        <value condition="Window.IsVisible(1102) + !String.IsEmpty(Skin.String(ActiveCustomOption.BackgroundImage))">$INFO[Skin.String(ActiveCustomOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(1102)">special://skin/backgrounds/items.jpg</value>
+
+        <value condition="Window.IsVisible(1103) + !String.IsEmpty(Skin.String(ActiveCustomOption.BackgroundImage))">$INFO[Skin.String(ActiveCustomOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(1103)">special://skin/backgrounds/default.jpg</value>
+        
+        <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.String(FavouritesOption.BackgroundImage))">$INFO[Skin.String(FavouritesOption.BackgroundImage)]</value>
+        <value condition="Window.IsVisible(1104)">special://skin/backgrounds/favourites.jpg</value>
 
         <value condition="Window.IsVisible(1120)">black.png</value>
         <value condition="Window.IsVisible(1121)">black.png</value>
@@ -176,7 +181,7 @@
         <value condition="Window.IsVisible(weather)">special://skin/backgrounds/weather.jpg</value>
         <value condition="Window.IsVisible(filemanager)">special://skin/backgrounds/filemanager.jpg</value>
         <value condition="Window.IsVisible(eventlog)">special://skin/backgrounds/eventlog.jpg</value>
-        
+
         <value condition="Window.IsVisible(playersettings)">special://skin/backgrounds/playersettings.jpg</value>
         <value condition="Window.IsVisible(mediasettings)">special://skin/backgrounds/mediasettings.jpg</value>
         <value condition="Window.IsVisible(pvrsettings)">special://skin/backgrounds/pvrsettings.jpg</value>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1103">
     <defaultcontrol always="yes">400</defaultcontrol>
-    <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyLists.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
-    <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
-    <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
-    <onload condition="String.IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
+    <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MySubmenu.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
+    <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MySubmenu.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
+    <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MySubmenu.MenuTitle)])</onload>
+    <onload condition="String.IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MySubmenu.SourceInfo)])</onload>
+    <onload>Skin.SetString(ActiveCustomOption.BackgroundImage,$INFO[Window.Property(BackgroundImage)])</onload>
     <onload>RunScript(script.revolve.service,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(SourceInfo)]%02dOption,MySubmenu%02dOption,1103)</onload>
     <onunload>RunScript(script.revolve.service,ClearProperties,MySubmenu%02dOption,1103)</onunload>
 

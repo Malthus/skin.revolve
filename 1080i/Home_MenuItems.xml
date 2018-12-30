@@ -379,7 +379,7 @@
 
     <include name="CustomOptionForHomeMenuItems">
         <param name="id" default="0" />
-        <param name="variable" defailt="Option" />
+        <param name="variable" default="Option" />
     
         <definition>
             <item id="$PARAM[id]">
@@ -389,6 +389,7 @@
                 <property name="BackgroundImage">$INFO[Skin.String($PARAM[variable].BackgroundImage)]</property>
                 <onclick>SetProperty(MenuTitle,$INFO[Skin.String($PARAM[variable].MenuTitle)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
                 <onclick>SetProperty(SourceInfo,$INFO[Skin.String($PARAM[variable].SourceInfo)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
+                <onclick>SetProperty(BackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
                 <onclick>$INFO[Skin.String($PARAM[variable].Action)]</onclick>
             </item>
         </definition>

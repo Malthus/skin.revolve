@@ -2,11 +2,12 @@
 <window id="1102">
     <defaultcontrol always="yes">400</defaultcontrol>
     <menucontrol>9001</menucontrol>
-    <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyLists.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
-    <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyLists.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
-    <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyLists.MenuTitle)])</onload>
-    <onload condition="String.IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyLists.SourceInfo)])</onload>
-    
+    <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyDynamicItems.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
+    <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyDynamicItems.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
+    <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyDynamicItems.MenuTitle)])</onload>
+    <onload condition="String.IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyDynamicItems.SourceInfo)])</onload>
+    <onload>Skin.SetString(ActiveCustomOption.BackgroundImage,$INFO[Window.Property(BackgroundImage)])</onload>
+
     <controls>
         <include content="FullscreenDimensions" />
         <include content="GlobalBackground" />
@@ -28,14 +29,14 @@
         </control>
 
         <control type="group">
-            <visible>Skin.HasSetting(MyItemsMenu.Default)</visible>
+            <visible>Skin.HasSetting(MyDynamicItems.Default)</visible>
             <include content="RevolveMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
         </control>
         
         <control type="group">
-            <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
+            <visible>!Skin.HasSetting(MyDynamicItems.Default)</visible>
             <include content="CircleMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
@@ -50,7 +51,7 @@
                 </include>
 
                 <include content="ViewGroupLabelForSideMenu" />
-                <include content="MyItemsMenuTypeButtonForSideMenu" />
+                <include content="MyDynamicItemsTypeButtonForSideMenu" />
 
                 <include content="PlaylistLibraryGroupLabelForSideMenu" />
                 <include content="GenericPlaylistButtonForSideMenu" />
