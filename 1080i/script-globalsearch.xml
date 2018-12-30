@@ -175,15 +175,9 @@
                             <label>($INFO[ListItem.Label2])</label>
                         </control>
                     </control>
-                    
+
                     <control type="group">
                         <visible>!Control.HasFocus(9000)</visible>
-                        <control type="image">
-                            <width>480</width>
-                            <height>40</height>
-                            <aspectratio>stretch</aspectratio>
-                            <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
-                        </control>
                         <control type="image">
                             <width>480</width>
                             <height>40</height>
