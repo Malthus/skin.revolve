@@ -224,7 +224,7 @@
             <onfocus condition="Skin.HasSetting(GamesOption.Active)">Skin.SetBool(CustomGamesOption.Active)</onfocus>
             <onfocus condition="!Skin.HasSetting(GamesOption.Active)">Skin.Reset(CustomGamesOption.Active)</onfocus>
             <onfocus condition="Skin.HasSetting(GamesOption.Active)">Skin.SetString(CustomGamesOption.Name,$LOCALIZE[31705])</onfocus>
-            <onfocus condition="Skin.HasSetting(GamesOption.Active)">Skin.SetString(CustomGamesOption.Subtitle,$LOCALIZE[31020])</onfocus>
+            <onfocus condition="Skin.HasSetting(GamesOption.Active)">Skin.SetString(CustomGamesOption.Subtitle,$LOCALIZE[208])</onfocus>
             <onfocus>Skin.SetString(CustomGamesOption.BackgroundImage,$INFO[Skin.String(GamesOption.BackgroundImage)])</onfocus>
             <onfocus>Skin.SetString(CustomGamesOption.Type,$INFO[Skin.String(GamesOption.Type)])</onfocus>
             <onfocus>Skin.SetString(CustomGamesOption.MenuTitle,$INFO[Skin.String(GamesOption.MenuTitle)])</onfocus>
