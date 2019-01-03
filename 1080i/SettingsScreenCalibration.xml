@@ -55,7 +55,7 @@
             <include content="BackgroundForOutlineLabel">
                 <param name="width" value="1860" />
                 <param name="height" value="30" />
-                <param name="font" value="SmallMessageFont" />
+                <param name="font" value="DialogTextFont" />
                 <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 <param name="outlinesize" value="2" />
                 <param name="align" value="center" />
@@ -64,9 +64,9 @@
             <control type="label" id="2">
                 <width>1860</width>
                 <height>30</height>
+                <font>DialogTextFont</font>
                 <align>center</align>
                 <textcolor>$VAR[MainColor]</textcolor>
-                <label></label>
             </control>
         </control>
 
@@ -78,7 +78,7 @@
             <include content="BackgroundForOutlineLabel">
                 <param name="width" value="1860" />
                 <param name="height" value="30" />
-                <param name="font" value="SmallMessageFont" />
+                <param name="font" value="DialogTextFont" />
                 <param name="outlinecolor" value="$VAR[BackgroundColor]" />
                 <param name="outlinesize" value="2" />
                 <param name="align" value="center" />
@@ -87,9 +87,9 @@
             <control type="label" id="3">
                 <width>1860</width>
                 <height>30</height>
+                <font>DialogTextFont</font>
                 <align>center</align>
                 <textcolor>$VAR[MainColor]</textcolor>
-                <label></label>
             </control>
         </control>
     </controls>
