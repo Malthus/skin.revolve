@@ -36,12 +36,12 @@
                     <width>90</width>
                     <include content="FrameForPlayer" />
 
-                    <include content="SubtitlesButtonForPlayer">
-                        <param name="id" value="420" />
+                    <include content="ColorButtonForPlayer">
+                        <param name="id" value="426" />
                         <param name="posx" value="4" />
                         <param name="posy" value="4" />
                         <param name="onleft" value="416" />
-                        <param name="onright" value="426" />
+                        <param name="onright" value="420" />
                     </include>
                 </control>
 
@@ -51,11 +51,11 @@
                     <width>90</width>
                     <include content="FrameForPlayer" />
 
-                    <include content="ColorButtonForPlayer">
-                        <param name="id" value="426" />
+                    <include content="SubtitlesButtonForPlayer">
+                        <param name="id" value="420" />
                         <param name="posx" value="4" />
                         <param name="posy" value="4" />
-                        <param name="onleft" value="420" />
+                        <param name="onleft" value="426" />
                         <param name="onright" value="421" />
                     </include>
                 </control>
@@ -334,7 +334,7 @@
                         <param name="posx" value="4" />
                         <param name="posy" value="4" />
                         <param name="onleft" value="411" />
-                        <param name="onright" value="420" />
+                        <param name="onright" value="426" />
                     </include>
                 </control>
             </control>
