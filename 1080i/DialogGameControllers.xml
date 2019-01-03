@@ -98,13 +98,13 @@
                 <onright>5</onright>
 
                 <include content="SpacerForButtonListForDialog">
-                    <param name="id" default="28" />
-                    <param name="visible" default="!Control.IsVisible(20)" />
+                    <param name="id" value="28" />
+                    <param name="visible" value="!Control.IsVisible(20)" />
                     <param name="height" value="60" />
                 </include>
                 <include content="SpacerForButtonListForDialog">
-                    <param name="id" default="29" />
-                    <param name="visible" default="!Control.IsVisible(22)" />
+                    <param name="id" value="29" />
+                    <param name="visible" value="!Control.IsVisible(22)" />
                 </include>
                 <include content="ButtonForDialog">
                     <param name="id" value="17" />
