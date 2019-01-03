@@ -250,8 +250,9 @@
 
             <include content="CustomizableButtonForHomeMenuSkinSettings">
                 <param name="id" value="271" />
-                <param name="label" value="$LOCALIZE[31004]" />
                 <param name="variable" value="BooksOption" />
+                <param name="label" value="$LOCALIZE[31004]" />
+                <param name="subtitle" value="$LOCALIZE[31027]" />
             </include>
 
             <include content="StandardButtonForHomeMenuSkinSettings">
@@ -347,7 +348,7 @@
     
     <include name="StandardButtonForHomeMenuSkinSettings">
         <param name="id" default="0" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
         <param name="variable" default="Option" />
         <param name="immutablepath" default="False" />
         <param name="customwindow" default="False" />
@@ -377,8 +378,9 @@
     
     <include name="CustomizableButtonForHomeMenuSkinSettings">
         <param name="id" default="0" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
         <param name="variable" default="Option" />
+        <param name="subtitle" default="" />
     
         <definition>
             <control type="radiobutton" id="$PARAM[id]">
@@ -390,8 +392,8 @@
                 <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
                 <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
                 <onclick>SetProperty(CustomOptionType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
-                <onclick>SetProperty(CustomOptionName,$LOCALIZE[15016],1190)</onclick>
-                <onclick>SetProperty(CustomSubtitle,$LOCALIZE[31020],1190)</onclick>
+                <onclick>SetProperty(CustomOptionName,$PARAM[label],1190)</onclick>
+                <onclick>SetProperty(CustomSubtitle,$PARAM[subtitle],1190)</onclick>
                 <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1190)</onclick>
                 <onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String($PARAM[variable].MenuTitle)],1190)</onclick>
                 <onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String($PARAM[variable].SourceInfo)],1190)</onclick>
@@ -433,7 +435,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="VisibleCustomButtonForHomeMenuSkinSettings">
         <param name="id" default="0" />
         <param name="variable" default="Option" />
