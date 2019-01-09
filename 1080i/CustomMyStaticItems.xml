@@ -199,14 +199,14 @@
         </control>
 
         <control type="group">
-            <visible>Skin.HasSetting(MyStaticItemsMenu.Default)</visible>
+            <visible>Skin.HasSetting(MyItemsMenu.Default)</visible>
             <include content="RevolveMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
         </control>
         
         <control type="group">
-            <visible>!Skin.HasSetting(MyStaticItemsMenu.Default)</visible>
+            <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
             <include content="CircleMenu">
                 <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
             </include>
@@ -221,7 +221,7 @@
                 </include>
 
                 <include content="ViewGroupLabelForSideMenu" />
-                <include content="MyStaticItemsMenuTypeButtonForSideMenu" />
+                <include content="MyItemsMenuTypeButtonForSideMenu" />
 
                 <include content="PlaylistLibraryGroupLabelForSideMenu" />
                 <include content="GenericPlaylistButtonForSideMenu" />

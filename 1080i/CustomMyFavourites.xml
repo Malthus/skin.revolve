@@ -192,7 +192,7 @@
         </control>
 
         <control type="group">
-            <visible>Skin.HasSetting(MyItemsMenu.Default)</visible>
+            <visible>Skin.HasSetting(FavouritesMenu.Default)</visible>
             <include content="RevolveMenu">
                 <param name="texture" value="circle/favourites.png" />
                 <param name="label" value="$LOCALIZE[1036]" />
@@ -201,7 +201,7 @@
         </control>
         
         <control type="group">
-            <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
+            <visible>!Skin.HasSetting(FavouritesMenu.Default)</visible>
             <include content="CircleMenu">
                 <param name="label" value="$LOCALIZE[1036]" />
                 <param name="fallback" value="defaultfavourite.jpg" />
@@ -217,7 +217,7 @@
                 </include>
 
                 <include content="ViewGroupLabelForSideMenu" />
-                <include content="MyItemsMenuTypeButtonForSideMenu" />
+                <include content="FavouritesMenuTypeButtonForSideMenu" />
                 
                 <include content="PlaylistLibraryGroupLabelForSideMenu" />
                 <include content="GenericPlaylistButtonForSideMenu" />
