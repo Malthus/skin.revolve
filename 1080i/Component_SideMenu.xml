@@ -877,16 +877,4 @@
             </control>
         </definition>
     </include>
-    
-    <include name="MusicLibraryButtonForSideMenu">
-        <definition>
-            <control type="button" id="99">
-                <align>left</align>
-                <label>$LOCALIZE[29800]</label>
-                <onclick>ReplaceWindow(music)</onclick>
-                <onclick>SetFocus(50)</onclick>
-                <enable>Library.HasContent(Music)</enable>
-            </control>
-        </definition>
-    </include>
 </includes>
