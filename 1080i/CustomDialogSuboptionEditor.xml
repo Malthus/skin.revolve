@@ -271,37 +271,11 @@
             </control>
 
             <include content="LabelForDialog">
+                <param name="visible" value="String.IsEqual(Window.Property(CustomOptionType),A)" />
                 <param name="posy" value="520" />
+                <param name="textcolor" value="$VAR[TextColor]" />
                 <param name="label" value="$LOCALIZE[31910]:" />
             </include>
-
-            <control type="button" id="40">
-                <description>Custom Static Items Action Button</description>
-                <visible>String.IsEqual(Window.Property(CustomOptionType),S)</visible>
-                <enable>false</enable>
-                <posx>560</posx>
-                <posy>560</posy>
-                <width>1240</width>
-                <font>DialogTextFont</font>
-                <align>left</align>
-                <label>ActivateWindow(1101)</label>
-                <onup>38</onup>
-                <ondown>23</ondown>
-            </control>
-
-            <control type="button" id="40">
-                <description>Custom Dynamic Items Action Button</description>
-                <visible>String.IsEqual(Window.Property(CustomOptionType),D)</visible>
-                <enable>false</enable>
-                <posx>560</posx>
-                <posy>560</posy>
-                <width>1240</width>
-                <font>DialogTextFont</font>
-                <align>left</align>
-                <label>ActivateWindow(1102)</label>
-                <onup>38</onup>
-                <ondown>23</ondown>
-            </control>
 
             <control type="button" id="40">
                 <description>Custom Option Action Button</description>
@@ -384,7 +358,10 @@
                     <onclick condition="String.IsEqual(Window.Property(CustomOptionType),S)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1101)</onclick>
                     <onclick condition="String.IsEqual(Window.Property(CustomOptionType),D)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1102)</onclick>
                     <onclick condition="String.IsEqual(Window.Property(CustomOptionType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,0)</onclick>
-                    <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Control.GetLabel(40)])</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].Action,ActivateWindow(1103))</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),S)">Skin.SetString($INFO[Window.Property(TargetOption)].Action,ActivateWindow(1101))</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),D)">Skin.SetString($INFO[Window.Property(TargetOption)].Action,ActivateWindow(1102))</onclick>
+                    <onclick condition="String.IsEqual(Window.Property(CustomOptionType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Action,$INFO[Control.GetLabel(40)])</onclick>
                     <onclick>Close</onclick>
                 </control>
                 <control type="button" id="21">
