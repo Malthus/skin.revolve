@@ -89,7 +89,6 @@
                     <icon>special://skin/backgrounds/systemsettings.jpg</icon>
                     <onclick>ActivateWindow(SystemSettings)</onclick>
                 </item>
-<!--
                 <item id="9">
                     <description>LibreELEC Settings</description>
                     <visible>System.HasAddon(service.libreelec.settings)</visible>
@@ -99,7 +98,6 @@
                     <icon>special://skin/backgrounds/libreelecsettings.jpg</icon>
                     <onclick>RunAddon(service.libreelec.settings)</onclick>
                 </item>
--->
                 <item id="10">
                     <description>Addons Settings</description>
                     <label>$LOCALIZE[24001]</label>
