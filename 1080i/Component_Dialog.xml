@@ -51,6 +51,26 @@
         </definition>
     </include>
 
+    <include name="SelectButtonForDialog">
+        <param name="id" default="0" />
+        <param name="posy" default="0" />
+        <param name="label" default="" />
+        <param name="visible" default="true" />
+        <param name="enable" default="true" />
+        <param name="active" default="false" />
+        <param name="property" default="DialogInfoPage" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <visible>$PARAM[visible]</visible>
+                <enable>$PARAM[enable]</enable>
+                <posy>$PARAM[posy]</posy>
+                <label>$PARAM[label]</label>
+                <onclick>SetProperty($PARAM[property],$PARAM[id])</onclick>
+            </control>
+        </definition>
+    </include>
+
     <include name="HelpButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -288,8 +308,8 @@
     </include>
     
     <include name="MarkupForInfoListForDialog">
-        <param name="posy" default="80" />
-        <param name="height" default="80" />
+        <param name="posy" default="120" />
+        <param name="height" default="500" />
         <param name="pagecontrol" default="0" />
     
         <definition>
@@ -329,8 +349,40 @@
         <param name="posy" default="80" />
         <param name="width" default="1240" />
         <param name="height" default="40" />
-        <param name="textcolor" default="$VAR[SecondaryColor]" />
+        <param name="textcolor" default="$VAR[TextColor]" />
         <param name="scroll" default="true" />
+        <param name="scrollspeed" default="50" />
+        <param name="scrollsuffix" default=" | " />
+        <param name="wrapmultiline" default="false" />
+        <param name="label" default="" />
+    
+        <definition>
+            <control type="label" id="$PARAM[id]">
+                <visible>$PARAM[visible]</visible>
+                <posx>560</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <font>DialogTextFont</font>
+                <textcolor>$PARAM[textcolor]</textcolor>
+                <scroll>$PARAM[scroll]</scroll>
+                <scrollspeed>$PARAM[scrollspeed]</scrollspeed>
+                <scrollsuffix>$PARAM[scrollsuffix]</scrollsuffix>
+                <align>left</align>
+                <wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
+                <label>$PARAM[label]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="HeaderForDialog">
+        <param name="id" default="0" />
+        <param name="visible" default="true" />
+        <param name="posy" default="80" />
+        <param name="width" default="1240" />
+        <param name="height" default="40" />
+        <param name="textcolor" default="$VAR[SecondaryColor]" />
+        <param name="scroll" default="false" />
         <param name="scrollspeed" default="50" />
         <param name="scrollsuffix" default=" | " />
         <param name="wrapmultiline" default="false" />
@@ -1305,7 +1357,7 @@
                     <width>86</width>
                     <height>86</height>
                     <texture diffuse="elements/circle-mask.png" background="true">$PARAM[iconthumbnail]</texture>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
                 </control>
             </control>
         </definition>

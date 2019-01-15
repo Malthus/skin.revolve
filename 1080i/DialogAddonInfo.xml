@@ -2,6 +2,7 @@
 <window id="146">
     <defaultcontrol always="true">9000</defaultcontrol>
     <menucontrol>9000</menucontrol>
+    <onload>SetProperty(DialogInfoPage,41)</onload>
 
     <controls>
         <control type="group">
@@ -11,62 +12,87 @@
                 <param name="height" value="HeightForFifteenLinesDialog" />
                 <param name="headerlabel" value="$VAR[ContentNameLabel]" />
                 <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+                <param name="iconsmallvisible" value="true" />
+                <param name="icondefaultvisible" value="false" />
                 <param name="animate" value="true" />
             </include>
 
-            <control type="list" id="20">
-                <include content="MarkupForInfoListForDialog">
-                    <param name="height" value="160" />
-                    <param name="pagecontrol" value="21" />
+            <control type="group">
+                <visible>String.IsEqual(Window.Property(DialogInfoPage),41)</visible>
+
+                <include content="HeaderForDialog">
+                    <param name="label" value="$LOCALIZE[14116]" />
                 </include>
-                <posx>560</posx>
-                <posy>80</posy>
-                <width>1240</width>
-                <height>200</height>
-                <itemgap>0</itemgap>
-                
-                <include>ItemsForInfoListInDialog</include>
-                
-                <content>
-                    <item>
-                        <label>$LOCALIZE[564]</label>
-                        <label2>$INFO[ListItem.AddonType]</label2>
-                    </item>
-                    <item>
-                        <label>$LOCALIZE[31415]</label>
-                        <label2>$INFO[ListItem.AddonCreator]</label2>
-                    </item>
-                    <item>
-                        <label>$LOCALIZE[19114]</label>
-                        <label2>$INFO[ListItem.AddonVersion]</label2>
-                    </item>
-                    <item>
-                        <label>$LOCALIZE[126]</label>
-                        <label2>$INFO[ListItem.Property(Addon.Status)]</label2>
-                    </item>
-                </content>
+
+                <control type="list" id="20">
+                    <include content="MarkupForInfoListForDialog">
+                        <param name="pagecontrol" value="21" />
+                    </include>
+                    
+                    <include content="ItemsForInfoListInDialog" />
+                    
+                    <content>
+                        <item>
+                            <label>$LOCALIZE[564]</label>
+                            <label2>$INFO[ListItem.AddonType]</label2>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[31415]</label>
+                            <label2>$INFO[ListItem.AddonCreator]</label2>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[19114]</label>
+                            <label2>$INFO[ListItem.AddonVersion]</label2>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[126]</label>
+                            <label2>$INFO[ListItem.Property(Addon.Status)]</label2>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[12013]</label>
+                            <label2>$INFO[ListItem.AddonInstallDate]</label2>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[12014]</label>
+                            <label2>$INFO[ListItem.AddonLastUpdated]</label2>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[12012]</label>
+                            <label2>$INFO[ListItem.AddonLastUsed]</label2>
+                        </item>
+                    </content>
+                </control>
+
+                <control type="scrollbar" id="21">
+                    <include content="MarkupForScrollbarForDialog">
+                        <param name="posy" value="120" />
+                        <param name="height" value="500" />
+                    </include>
+                    <onleft>9000</onleft>
+                </control>
             </control>
 
-            <control type="scrollbar" id="21">
-                <include content="MarkupForScrollbarForDialog">
-                    <param name="posy" value="80" />
-                    <param name="height" value="200" />
+            <control type="group">
+                <visible>String.IsEqual(Window.Property(DialogInfoPage),42)</visible>
+                
+                <include content="HeaderForDialog">
+                    <param name="label" value="$LOCALIZE[21821]" />
                 </include>
-                <onleft>9000</onleft>
+
+                <include content="TextboxForDialog">
+                    <param name="posy" value="120" />
+                    <param name="height" value="500" />
+                        <param name="textboxid" value="400" />
+                        <param name="scrollbarid" value="410" />
+                        <param name="label" value="$VAR[ContentDescription]" />
+                        <param name="onleft" value="9000" />
+                </include>
             </control>
-            
+
             <control type="group">
                 <visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
                 <posx>560</posx>
-                <posy>280</posy>
-
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>1240</width>
-                    <height>80</height>
-                    <texture>white.png</texture>
-                </control>
+                <posy>620</posy>
 
                 <control type="image">
                     <description>Broken Icon Image</description>
@@ -89,29 +115,30 @@
                     <label>$INFO[ListItem.AddonBroken]</label>
                 </control>
             </control>
-            
-            <include content="TextboxForDialog">
-                    <param name="posy" value="360" />
-                    <param name="height" value="320" />
-                    <param name="textboxid" value="400" />
-                    <param name="scrollbarid" value="410" />
-                    <param name="label" value="$VAR[ContentDescription]" />
-                    <param name="onleft" value="9000" />
-            </include>
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="360" />
-                    <param name="height" value="320" />
+                    <param name="posy" value="240" />
+                    <param name="height" value="440" />
                 </include>
                 <onright>410</onright>
 
+                <include content="SelectButtonForDialog">
+                    <param name="id" value="41" />
+                    <param name="label" value="$LOCALIZE[14116]" />
+                </include>
+                <include content="SelectButtonForDialog">
+                    <param name="id" value="42" />
+                    <param name="label" value="$LOCALIZE[21821]" />
+                </include>
                 <control type="button" id="10">
                     <description>View Dependencies Button</description>
                     <label>$LOCALIZE[31704]</label>
+                    <posy>20</posy>
                 </control>
                 <control type="button" id="6">
                     <description>Install/Uninstall Addon Button</description>
+                    <posy>20</posy>
                 </control>
                 <control type="button" id="7">
                     <description>Enable/Disable Addon Button</description>
