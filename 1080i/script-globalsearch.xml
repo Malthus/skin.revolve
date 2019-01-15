@@ -10,6 +10,7 @@
 
         <control type="group">
             <posy>PosYForFullWindowDialog</posy>
+            <include content="FadeAnimationForDialogWindow" />
             <include content="WindowForDialog">
                 <param name="height" value="HeightForFullWindowDialog" />
                 <param name="headerlabel" value="$INFO[System.AddonTitle(script.globalsearch)]$INFO[Window.Property(GlobalSearch.SearchString), | ]" />
