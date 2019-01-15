@@ -917,6 +917,8 @@
                 <control type="group">
                     <description>Settings Description Textbox</description>
                     <visible>Control.HasFocus(99) | ControlGroup(100).HasFocus | ControlGroup(300).HasFocus | ControlGroup(400).HasFocus | ControlGroup(700).HasFocus | ControlGroup(800).HasFocus | ControlGroup(900).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(9010).HasFocus</visible>
+                    <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                     <posx>720</posx>
                     <posy>880</posy>
                     <width>880</width>
