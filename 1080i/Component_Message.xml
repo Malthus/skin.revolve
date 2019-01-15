@@ -90,6 +90,8 @@
     
         <definition>
             <control type="group">
+                <include content="FadeAnimationForDialogWindow" />
+<!--
                 <control type="image">
                     <posx>90</posx>
                     <posy>-135</posy>
@@ -97,7 +99,7 @@
                     <height>370</height>
                     <texture>elements/circle-shadow.png</texture>
                 </control>
-
+-->
                 <control type="group">
                     <visible>$PARAM[backgroundvisible]</visible>
                     <include content="DialogWindow">
