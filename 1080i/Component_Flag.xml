@@ -19,7 +19,7 @@
                 <visible>$PARAM[visible]</visible>
                 <width>$PARAM[height]</width>
                 <height>$PARAM[height]</height>
-                <texture colordiffuse="$PARAM[flagcolor]" background="true">flags/property-background.png</texture>
+                <texture colordiffuse="$PARAM[flagcolor]">flags/property-background.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -37,8 +37,8 @@
         <definition>
             <control type="label">
                 <visible>$PARAM[visible]</visible>
-                <posx>0</posx>
-                <posy>$PARAM[labelposy]</posy>
+                <left>0</left>
+                <top>$PARAM[labelposy]</top>
                 <width>$PARAM[height]</width>
                 <height>16</height>
                 <font>FlagFont</font>
@@ -87,7 +87,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-watched.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-watched.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
             </control>
@@ -116,13 +116,13 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-userrating.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-userrating.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
                     <font>UserFlagFont</font>
@@ -158,13 +158,13 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-playcount.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-playcount.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
                 <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
+                    <top>0</top>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
                     <font>UserFlagFont</font>
@@ -199,7 +199,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[flagcolor]" background="true">flags/property-3d.png</texture>
+                    <texture colordiffuse="$PARAM[flagcolor]">flags/property-3d.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
             </control>
@@ -229,7 +229,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-videocodec.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-videocodec.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -267,7 +267,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-videoresolution.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-videoresolution.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -305,7 +305,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-videoaspectratio.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-videoaspectratio.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -416,7 +416,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-audiochannels.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-audiochannels.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -519,7 +519,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-bitrate.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-bitrate.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -557,7 +557,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-samplerate.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-samplerate.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -595,7 +595,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-picturecodec.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-picturecodec.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -642,7 +642,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-picturesize.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-picturesize.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -681,7 +681,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-pictureiso.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-pictureiso.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -719,7 +719,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-aperture.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-aperture.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -877,7 +877,7 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-rating.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-rating.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
 
@@ -916,49 +916,49 @@
                     <visible>String.Contains($PARAM[value],rated r)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-mpaarating-restricted.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-restricted.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 <control type="image">
                     <visible>String.Contains($PARAM[value],rated nc)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-mpaarating-nc17.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-nc17.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 <control type="image">
                     <visible>String.Contains($PARAM[value],rated pg-13)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-mpaarating-pg13.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-pg13.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 <control type="image">
                     <visible>String.Contains($PARAM[value],rated pg) + !String.Contains($PARAM[value],rated pg-13)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-mpaarating-pg.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-pg.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 <control type="image">
                     <visible>String.Contains($PARAM[value],rated g)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-mpaarating-general.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-general.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 <control type="image">
                     <visible>String.Contains($PARAM[value],not rated)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-mpaarating-notrated.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-notrated.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 <control type="image">
                     <visible>!String.Contains($PARAM[value],rated r) + !String.Contains($PARAM[value],rated nc) + !String.Contains($PARAM[value],rated pg) + !String.Contains($PARAM[value],rated g) + !String.Contains($PARAM[value],not rated)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" background="true">flags/property-mpaarating-unknown.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-unknown.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
             </control>
@@ -972,8 +972,8 @@
 
         <definition>
             <control type="grouplist">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
+                <left>$PARAM[posx]</left>
+                <top>$PARAM[posy]</top>
                 <width>$PARAM[width]</width>
                 <height>60</height>
                 <itemgap>0</itemgap>
@@ -1021,7 +1021,7 @@
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
-                <include content="VideoStereoscopicPropertyFlag">
+                <include content="VideoStereoscopicFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
@@ -1080,8 +1080,8 @@
         <definition>
             <control type="grouplist">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
+                <left>$PARAM[posx]</left>
+                <top>$PARAM[posy]</top>
                 <width>$PARAM[width]</width>
                 <height>60</height>
                 <itemgap>0</itemgap>
@@ -1130,7 +1130,7 @@
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
                 </include>
-                <include content="VideoStereoscopicPropertyFlag">
+                <include content="VideoStereoscopicFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
                 </include>
@@ -1188,8 +1188,8 @@
         <definition>
             <control type="grouplist">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
+                <left>$PARAM[posx]</left>
+                <top>$PARAM[posy]</top>
                 <width>$PARAM[width]</width>
                 <height>60</height>
                 <itemgap>0</itemgap>
@@ -1235,7 +1235,7 @@
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="value" value="VideoPlayer.VideoAspect" />
                 </include>
-                <include content="VideoStereoscopicPropertyFlag">
+                <include content="VideoStereoscopicFlag">
                     <param name="visible" value="VideoPlayer.IsStereoscopic" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
@@ -1279,8 +1279,8 @@
         <definition>
             <control type="grouplist">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
+                <left>$PARAM[posx]</left>
+                <top>$PARAM[posy]</top>
                 <width>$PARAM[width]</width>
                 <height>60</height>
                 <itemgap>0</itemgap>
@@ -1339,8 +1339,8 @@
         <definition>
             <control type="grouplist">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
+                <left>$PARAM[posx]</left>
+                <top>$PARAM[posy]</top>
                 <width>$PARAM[width]</width>
                 <height>60</height>
                 <itemgap>0</itemgap>
