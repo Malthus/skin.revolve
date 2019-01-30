@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <expression name="hasFinalSkinSettings">String.IsEqual(Skin.String(Revolve.Configuration),6.0.0)</expression>
+    <expression name="isCreatingSkinSettings">!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</expression>
+    <expression name="isMigratingSkinSettings">Skin.HasSetting(RevolveConfiguration) | !String.IsEmpty(Skin.String(Revolve.Configuration))</expression>
+
     <include name="ButtonForValues">
         <param name="buttonid" default="200" />
         <param name="controlid" default="210" />
@@ -25,7 +29,7 @@
             </control>
 
             <control type="button" id="$PARAM[buttonid]">
-                <description>Skin Settings Evasion</description>
+                <description>Skin Settings Migration</description>
                 <visible>String.IsEqual(Skin.String(Revolve.Configuration),4.1.1)</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
@@ -35,7 +39,7 @@
 
             <control type="button" id="$PARAM[buttonid]">
                 <description>Skin Settings Evasion</description>
-                <visible>String.IsEqual(Skin.String(Revolve.Configuration),6.0.0)</visible>
+                <visible>$EXP[hasFinalSkinSettings]</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>
@@ -59,7 +63,7 @@
             <onfocus>Skin.SetString(Revolve.Configuration,4.1.1)</onfocus>
         </definition>
     </include>
-    
+
     <include name="RevolveJarvisMigratedValues">
         <definition>
             <include content="ExitMenuItemsDefaultValues" />
@@ -72,7 +76,7 @@
             <onfocus>Skin.SetString(Revolve.Configuration,4.1.1)</onfocus>
         </definition>
     </include>
-    
+
     <include name="RevolveLeiaMigratedValues">
         <definition>
             <include content="HomeMenuItemsSettingsRevolveLeiaMigratedValues" />
@@ -80,7 +84,7 @@
             <onfocus>Skin.SetString(Revolve.Configuration,6.0.0)</onfocus>
         </definition>
     </include>
-    
+
     <include name="BackgroundSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(Background.Image.Active)</onfocus>
@@ -319,7 +323,7 @@
             <onfocus>Skin.SetBool(Settings.HelpVisible)</onfocus>
         </definition>
     </include>
-    
+
     <include name="DebugSettingsDefaultValues">
         <definition>
             <onfocus>Skin.Reset(Debug.Grid.Visible)</onfocus>
