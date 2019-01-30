@@ -37,7 +37,7 @@
                 <control type="image">
                     <include content="FadeAnimationForBackground" />
                     <include content="FullscreenDimensions" />
-                    <fadetime>500</fadetime>
+                    <fadetime>WindowFadeDuration</fadetime>
                     <texture background="true" fallback="special://skin/backgrounds/default.jpg">$VAR[ContentSingleImageBackground]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
@@ -47,7 +47,7 @@
                     <include content="FullscreenDimensions" />
                     <timeperimage>8000</timeperimage>
                     <randomize>true</randomize>
-                    <fadetime>500</fadetime>
+                    <fadetime>WindowFadeDuration</fadetime>
                     <imagepath background="true">$VAR[ContentMultiImageBackground]</imagepath>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
@@ -56,7 +56,7 @@
                     <visible>Skin.HasSetting(Background.Image.Faded)</visible>
                     <include content="FadeAnimationForBackground" />
                     <include content="FullscreenDimensions" />
-                    <fadetime>500</fadetime>
+                    <fadetime>WindowFadeDuration</fadetime>
                     <texture colordiffuse="$VAR[FademaskColor]" background="true">white.png</texture>
                 </control>
         </control>
@@ -75,7 +75,7 @@
                 <control type="image">
                     <visible>Skin.HasSetting(Background.Visualiser.Faded)</visible>
                     <include content="FullscreenDimensions" />
-                    <fadetime>500</fadetime>
+                    <fadetime>WindowFadeDuration</fadetime>
                     <texture colordiffuse="$VAR[FademaskColor]" background="true">white.png</texture>
                 </control>
             </control>
@@ -94,7 +94,7 @@
                 <control type="image">
                     <visible>Skin.HasSetting(Background.Video.Faded)</visible>
                     <include content="FullscreenDimensions" />
-                    <fadetime>500</fadetime>
+                    <fadetime>WindowFadeDuration</fadetime>
                     <texture colordiffuse="$VAR[FademaskColor]" background="true">white.png</texture>
                 </control>
             </control>
@@ -103,10 +103,10 @@
 
     <include name="FadeAnimationForBackground">
         <definition>
-            <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
-            <animation effect="fade" start="0" end="100" time="500">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
-            <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+            <animation effect="fade" start="0" end="100" time="WindowFadeDuration">WindowOpen</animation>
+            <animation effect="fade" start="0" end="100" time="WindowFadeDuration">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="WindowFadeDuration">Hidden</animation>
+            <animation effect="fade" start="100" end="0" time="WindowFadeDuration">WindowClose</animation>
         </definition>
     </include>
 </includes>
