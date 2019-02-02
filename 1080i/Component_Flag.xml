@@ -14,7 +14,7 @@
                 <texture colordiffuse="$PARAM[backgroundcolor]">elements/circle-mask.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
-            
+
             <control type="image">
                 <visible>$PARAM[visible]</visible>
                 <width>$PARAM[height]</width>
@@ -1200,9 +1200,14 @@
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="value" value="VideoPlayer.UserRating" />
                 </include>
+                <include content="PlayCountFlag">
+                    <param name="flagcolor" value="$VAR[flagcolor]" />
+                    <param name="backgroundcolor" value="$VAR[backgroundcolor]" />
+                    <param name="value" value="VideoPlayer.PlayCount" />
+                </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Integer.IsGreater(VideoPlayer.UserRating,0)" />
+                    <param name="visible" value="Integer.IsGreater(VideoPlayer.UserRating,0) | Integer.IsGreater(VideoPlayer.PlayCount,0)" />
                 </include>
 
                 <include content="RatingFlag">
