@@ -51,46 +51,6 @@
         </definition>
     </include>
 
-    <include name="SelectButtonForDialog">
-        <param name="id" default="0" />
-        <param name="posy" default="0" />
-        <param name="label" default="" />
-        <param name="visible" default="true" />
-        <param name="enable" default="true" />
-        <param name="active" default="false" />
-        <param name="property" default="DialogInfoPage" />
-
-        <definition>
-            <control type="button" id="$PARAM[id]">
-                <visible>$PARAM[visible]</visible>
-                <enable>$PARAM[enable]</enable>
-                <posy>$PARAM[posy]</posy>
-                <label>$PARAM[label]</label>
-                <onclick>SetProperty($PARAM[property],$PARAM[id])</onclick>
-            </control>
-        </definition>
-    </include>
-
-    <include name="SelectButtonForDialog">
-        <param name="id" default="0" />
-        <param name="posy" default="0" />
-        <param name="label" default="" />
-        <param name="visible" default="true" />
-        <param name="enable" default="true" />
-        <param name="active" default="false" />
-        <param name="property" default="DialogInfoPage" />
-
-        <definition>
-            <control type="button" id="$PARAM[id]">
-                <visible>$PARAM[visible]</visible>
-                <enable>$PARAM[enable]</enable>
-                <posy>$PARAM[posy]</posy>
-                <label>$PARAM[label]</label>
-                <onclick>SetProperty($PARAM[property],$PARAM[id])</onclick>
-            </control>
-        </definition>
-    </include>
-
     <include name="HelpButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />

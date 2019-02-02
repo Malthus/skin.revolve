@@ -5,6 +5,7 @@
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !String.IsEqual(Skin.String(Dialog.LastAutoRefresh),ListItem.Label) + Control.IsVisible(6)">AlarmClock(DialogRefreshTimer,SendClick(6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
     <onload>SetProperty(DialogInfoPage,41)</onload>
+    <onload>SetFocus(9001,0,absolute)</onload>
 
     <controls>
         <control type="group">
@@ -267,7 +268,7 @@
                 <include content="TextboxForDialog">
                     <param name="visible" value="String.IsEqual(ListItem.DBType,artist) + String.IsEmpty(Container(50).ListItem(1).Label)" />
                     <param name="posy" value="120" />
-                    <param name="height" value="500" />
+                    <param name="height" value="480" />
                     <param name="textboxid" value="51" />
                     <param name="scrollbarid" value="52" />
                     <param name="label" value="$VAR[ContentNoAlbumListing]" />
@@ -276,7 +277,7 @@
                 <include content="TextboxForDialog">
                     <param name="visible" value="String.IsEqual(ListItem.DBType,album) + String.IsEmpty(Container(50).ListItem(1).Label)" />
                     <param name="posy" value="120" />
-                    <param name="height" value="500" />
+                    <param name="height" value="480" />
                     <param name="textboxid" value="53" />
                     <param name="scrollbarid" value="54" />
                     <param name="label" value="$VAR[ContentNoTrackListing]" />
@@ -311,31 +312,58 @@
                 </include>
                 <include content="SpacerForButtonListForDialog">
                     <param name="id" value="34" />
-                    <param name="visible" value="!Control.IsVisible(43) + !Control.IsVisible(44)" />
+                    <param name="visible" value="Integer.IsLess(Container(9001).NumItems,3)" />
                 </include>
+
                 <control type="label" id="33">
                     <description>Get Song Thumbnail Button Spacer</description>
                     <visible>Window.Is(songinformation)</visible>
                     <height>40</height>
                 </control>
-                <include content="SelectButtonForDialog">
-                    <param name="id" value="41" />
-                    <param name="label" value="$LOCALIZE[14116]" />
-                </include>
-                <include content="SelectButtonForDialog">
-                    <param name="id" value="42" />
-                    <param name="label" value="$LOCALIZE[21821]" />
-                </include>
-                <include content="SelectButtonForDialog">
-                    <param name="id" value="43" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
-                    <param name="label" value="$LOCALIZE[132]" />
-                </include>
-                <include content="SelectButtonForDialog">
-                    <param name="id" value="44" />
-                    <param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
-                    <param name="label" value="$LOCALIZE[182]" />
-                </include>
+
+                <control type="list" id="9001">
+                    <description>Info Page Selection Button List</description>
+                    <include content="MarkupForButtonListForDialog">
+                        <param name="posx" value="0" />
+                        <param name="posy" value="0" />
+                        <param name="height" value="120" />
+                    </include>
+
+                    <include content="ItemsForButtonListForDialog">
+                        <param name="listid" value="9001" />
+                    </include>
+
+                    <content>
+                        <item id="41">
+                            <label>$LOCALIZE[14116]</label>
+                            <property name="InfoItemId">$NUMBER[41]</property>
+                            <onclick>SetProperty(DialogInfoPage,41)</onclick>
+                        </item>
+                        <item id="42">
+                            <label>$LOCALIZE[21821]</label>
+                            <property name="InfoItemId">$NUMBER[42]</property>
+                            <onclick>SetProperty(DialogInfoPage,42)</onclick>
+                        </item>
+                        <item id="43">
+                            <visible>String.IsEqual(ListItem.DBType,artist)</visible>
+                            <label>$LOCALIZE[132]</label>
+                            <property name="InfoItemId">$NUMBER[43]</property>
+                            <onclick>SetProperty(DialogInfoPage,43)</onclick>
+                        </item>
+                        <item id="44">
+                            <visible>String.IsEqual(ListItem.DBType,album)</visible>
+                            <label>$LOCALIZE[182]</label>
+                            <property name="InfoItemId">$NUMBER[44]</property>
+                            <onclick>SetProperty(DialogInfoPage,44)</onclick>
+                        </item>
+                        <item id="45">
+                            <visible>!String.IsEqual(ListItem.DBType,artist) + !String.IsEqual(ListItem.DBType,album)</visible>
+                            <enable>false</enable>
+                            <label></label>
+                        </item>
+                    </content>
+                </control>
+
                 <include content="SpacerForButtonListForDialog">
                     <param name="id" value="39" />
                     <param name="height" value="20" />
