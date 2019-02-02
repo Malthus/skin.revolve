@@ -68,7 +68,7 @@
                 <control type="scrollbar" id="21">
                     <include content="MarkupForScrollbarForDialog">
                         <param name="posy" value="120" />
-                        <param name="height" value="500" />
+                        <param name="height" value="480" />
                     </include>
                     <onleft>9000</onleft>
                 </control>
@@ -83,7 +83,7 @@
 
                 <include content="TextboxForDialog">
                     <param name="posy" value="120" />
-                    <param name="height" value="500" />
+                    <param name="height" value="480" />
                         <param name="textboxid" value="400" />
                         <param name="scrollbarid" value="410" />
                         <param name="label" value="$VAR[ContentDescription]" />
@@ -94,7 +94,7 @@
             <control type="group">
                 <visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
                 <posx>560</posx>
-                <posy>620</posy>
+                <posy>640</posy>
 
                 <control type="image">
                     <description>Broken Icon Image</description>
@@ -104,24 +104,18 @@
                     <height>48</height>
                     <texture>DefaultIconError.png</texture>
                 </control>
-                
-                <control type="textbox">
+
+                <control type="label">
                     <description>Reason For Broken Label</description>
-                    <posx>100</posx>
+                    <posx>80</posx>
                     <posy>0</posy>
                     <width>1140</width>
-                    <height>80</height>
+                    <height>40</height>
                     <align>left</align>
                     <textcolor>$VAR[BackgroundColor]</textcolor>
-                    <autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
                     <label>$INFO[ListItem.AddonBroken]</label>
                 </control>
             </control>
-
-            <include content="DialogListForFlag">
-                <param name="posx" value="560" />
-                <param name="posy" value="620" />
-            </include>
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">

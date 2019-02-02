@@ -141,7 +141,7 @@
                 <control type="scrollbar" id="23">
                     <include content="MarkupForScrollbarForDialog">
                         <param name="posy" value="120" />
-                        <param name="height" value="500" />
+                        <param name="height" value="480" />
                     </include>
                     <onleft>9000</onleft>
                 </control>
@@ -158,7 +158,7 @@
                     <param name="textboxid" value="4" />
                     <param name="scrollbarid" value="61" />
                     <param name="posy" value="120" />
-                    <param name="height" value="500" />
+                    <param name="height" value="480" />
                     <param name="onleft" value="9000" />
                     <param name="onright" value="61" />
                 </include>
@@ -175,7 +175,7 @@
                     <description>Cast List</description>
                     <include content="MarkupForListForDialog">
                         <param name="posy" value="120" />
-                        <param name="height" value="500" />
+                        <param name="height" value="480" />
                         <param name="pagecontrol" value="51" />
                     </include>
                     <onleft>9000</onleft>
@@ -190,7 +190,7 @@
                     <visible>Control.IsVisible(50)</visible>
                     <include content="MarkupForScrollbarForDialog">
                         <param name="posy" value="120" />
-                        <param name="height" value="500" />
+                        <param name="height" value="480" />
                     </include>
                     <onleft>50</onleft>
                 </control>
