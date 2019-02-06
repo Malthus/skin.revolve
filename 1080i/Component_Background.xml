@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <expression name="BackgroundHasVideo">Player.HasVideo + Skin.HasSetting(Background.Video.Active) + !SlideShow.IsActive</expression>
+    <expression name="BackgroundHasVisualization">Player.HasAudio + Visualisation.Enabled + [[Skin.HasSetting(Background.Visualiser.Active) + !SlideShow.IsActive] | Skin.HasSetting(Background.Visualiser.RunHidden)]</expression>
+    <expression name="BackgroundHasImage">!Player.HasMedia | [!$EXP[BackgroundHasVideo] + !$EXP[BackgroundHasVisualization]]</expression>
+
     <include name="GlobalBackground">
         <definition>
             <include content="VideoBackground" />
             <include content="MusicVisualizationBackground" />
-
             <include content="DefaultBackground" />
             <include content="ImageBackground" />
         </definition>
@@ -22,7 +25,8 @@
     <include name="DefaultBackground">
         <definition>
             <control type="image">
-                <visible>!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(Background.Visualiser.Active)] | [Player.HasVideo + !Skin.HasSetting(Background.Video.Active)]</visible>
+                <visible>$EXP[BackgroundHasImage]</visible>
+
                 <include content="FullscreenDimensions" />
                 <texture colordiffuse="$VAR[BackgroundColor]" background="true">white.png</texture>
             </control>
@@ -32,7 +36,7 @@
     <include name="ImageBackground">
         <definition>
             <control type="group">
-                <visible>Skin.HasSetting(Background.Image.Active) + [!Player.HasMedia | [Player.HasAudio + !Skin.HasSetting(Background.Visualiser.Active)] | [Player.HasVideo + !Skin.HasSetting(Background.Video.Active)]]</visible>
+                <visible>$EXP[BackgroundHasImage] + Skin.HasSetting(Background.Image.Active)</visible>
 
                 <control type="image">
                     <include content="FadeAnimationForBackground" />
@@ -66,7 +70,7 @@
     <include name="MusicVisualizationBackground">
         <definition>
             <control type="group">
-                <visible>Player.HasAudio + [[Skin.HasSetting(Background.Visualiser.Active) + !SlideShow.IsActive] | Skin.HasSetting(Background.Visualiser.RunHidden)]</visible>
+                <visible>$EXP[BackgroundHasVisualization]</visible>
 
                 <control type="visualisation">
                     <include content="FullscreenDimensions" />
@@ -85,7 +89,7 @@
     <include name="VideoBackground">
         <definition>
             <control type="group">
-                <visible>Player.HasVideo + Skin.HasSetting(Background.Video.Active) + !SlideShow.IsActive</visible>
+                <visible>$EXP[BackgroundHasVideo]</visible>
 
                 <control type="videowindow">
                     <include content="FullscreenDimensions" />
