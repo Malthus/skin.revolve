@@ -177,6 +177,85 @@
         </definition>
     </include>
 
+    <include name="YearFlag">
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="labelposy" default="28" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="value" default="ListItem.Year" />
+
+        <definition>
+            <control type="group">
+                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-year.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <include content="LabelForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="labelposy" value="$PARAM[labelposy]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="$INFO[$PARAM[value]]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="DurationFlag">
+        <param name="visible" default="true" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="labelposy" default="28" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="value" default="ListItem.Duration" />
+        <param name="markupvalue" default="(mm:ss)" />
+        <param name="unitvalue" default="" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible] + !String.IsEmpty($PARAM[value])</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-duration.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <include content="LabelForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="labelposy" value="$PARAM[labelposy]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="$INFO[$PARAM[value]$PARAM[markupvalue]] $PARAM[unitvalue]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
     <include name="VideoStereoscopicFlag">
         <param name="visible" default="ListItem.IsStereoscopic" />
         <param name="width" default="62" />
@@ -996,6 +1075,27 @@
                     <param name="visible" value="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0)" />
                 </include>
 
+                <include content="YearFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
+                <include content="DurationFlag">
+                    <param name="visible" value="String.IsEqual(ListItem.Duration(hh),00)" />
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
+                <include content="DurationFlag">
+                    <param name="visible" value="!String.IsEqual(ListItem.Duration(hh),00)" />
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                    <param name="markupvalue" value="(mins)" />
+                    <param name="unitvalue" value="$LOCALIZE[31901]" />
+                </include>
+
+                <include content="SpacerFlag">
+                    <param name="visible" value="!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)" />
+                </include>
+
                 <include content="RatingFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
@@ -1105,6 +1205,27 @@
                     <param name="visible" value="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0)" />
                 </include>
 
+                <include content="YearFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
+                <include content="DurationFlag">
+                    <param name="visible" value="String.IsEqual(ListItem.Duration(hh),00)" />
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
+                <include content="DurationFlag">
+                    <param name="visible" value="!String.IsEqual(ListItem.Duration(hh),00)" />
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                    <param name="markupvalue" value="(mins)" />
+                    <param name="unitvalue" value="$LOCALIZE[31901]" />
+                </include>
+
+                <include content="SpacerFlag">
+                    <param name="visible" value="!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)" />
+                </include>
+
                 <include content="RatingFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
@@ -1201,8 +1322,8 @@
                     <param name="value" value="VideoPlayer.UserRating" />
                 </include>
                 <include content="PlayCountFlag">
-                    <param name="flagcolor" value="$VAR[flagcolor]" />
-                    <param name="backgroundcolor" value="$VAR[backgroundcolor]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="value" value="VideoPlayer.PlayCount" />
                 </include>
 
@@ -1210,9 +1331,26 @@
                     <param name="visible" value="Integer.IsGreater(VideoPlayer.UserRating,0) | Integer.IsGreater(VideoPlayer.PlayCount,0)" />
                 </include>
 
+                <include content="YearFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="value" value="VideoPlayer.Year" />
+                </include>
+                <include content="DurationFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="value" value="Player.Duration" />
+                    <param name="markupvalue" value="(mins)" />
+                    <param name="unitvalue" value="$LOCALIZE[31901]" />
+                </include>
+
+                <include content="SpacerFlag">
+                    <param name="visible" value="!String.IsEmpty(VideoPlayer.Year) | !String.IsEmpty(Player.Duration)" />
+                </include>
+
                 <include content="RatingFlag">
-                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="value" value="VideoPlayer.Rating" />
                 </include>
                 <include content="MpaaRatingFlag">
@@ -1301,9 +1439,24 @@
                     <param name="visible" value="Integer.IsGreater(MusicPlayer.UserRating,0)" />
                 </include>
 
+                <include content="YearFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="value" value="MusicPlayer.Year" />
+                </include>
+                <include content="DurationFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="value" value="Player.Duration" />
+                </include>
+
+                <include content="SpacerFlag">
+                    <param name="visible" value="!String.IsEmpty(MusicPlayer.Year) | !String.IsEmpty(Player.Duration)" />
+                </include>
+
                 <include content="RatingFlag">
-                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="value" value="MusicPlayer.Rating" />
                 </include>
 
