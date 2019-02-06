@@ -306,6 +306,7 @@
                 </include>
 
                 <control type="image">
+                    <visible>!String.IsEqual($PARAM[value],divx) + !String.IsEqual($PARAM[value],xvid)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
                     <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-videocodec.png</texture>
@@ -313,12 +314,28 @@
                 </control>
 
                 <include content="LabelForFlag">
+                    <visible>!String.IsEqual($PARAM[value],divx) + !String.IsEqual($PARAM[value],xvid)</visible>
                     <param name="height" value="$PARAM[height]" />
                     <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
                 </include>
+
+                <control type="image">
+                    <visible>String.IsEqual($PARAM[value],divx)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-videocodec-divx.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>String.IsEqual($PARAM[value],xvid)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-videocodec-xvid.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
             </control>
         </definition>
     </include>
@@ -438,7 +455,7 @@
                 </include>
 
                 <control type="image">
-                    <visible>!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)</visible>
+                    <visible>!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],aac) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
                     <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-audiocodec.png</texture>
@@ -446,7 +463,7 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="visible" value="!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)" />
+                    <param name="visible" value="!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],aac) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)" />
                     <param name="height" value="$PARAM[height]" />
                     <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
@@ -454,6 +471,13 @@
                     <param name="label" value="$INFO[$PARAM[value]]" />
                 </include>
 
+                <control type="image">
+                    <visible>String.IsEqual($PARAM[value],aac)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-audiocodec-aac.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
                 <control type="image">
                     <visible>String.IsEqual($PARAM[value],flac) | [String.IsEmpty($PARAM[value]) + String.IsEqual($PARAM[fileextensionvalue],flac)]</visible>
                     <width>$PARAM[height]</width>
