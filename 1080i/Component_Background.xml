@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <expression name="BackgroundHasVideo">Player.HasVideo + Skin.HasSetting(Background.Video.Active) + !SlideShow.IsActive</expression>
-    <expression name="BackgroundHasVisualization">Player.HasAudio + Visualisation.Enabled + [[Skin.HasSetting(Background.Visualiser.Active) + !SlideShow.IsActive] | Skin.HasSetting(Background.Visualiser.RunHidden)]</expression>
-    <expression name="BackgroundHasImage">!Player.HasMedia | [!$EXP[BackgroundHasVideo] + !$EXP[BackgroundHasVisualization]]</expression>
+    <expression name="HasVideoInBackground">Player.HasVideo + Skin.HasSetting(Background.Video.Active) + !SlideShow.IsActive</expression>
+    <expression name="HasVisualizationInBackground">Player.HasAudio + Visualisation.Enabled + [[Skin.HasSetting(Background.Visualiser.Active) + !SlideShow.IsActive] | Skin.HasSetting(Background.Visualiser.RunHidden)]</expression>
+    <expression name="HasImageInBackground">!Player.HasMedia | [!$EXP[HasVideoInBackground] + !$EXP[HasVisualizationInBackground]]</expression>
 
     <include name="GlobalBackground">
         <definition>
@@ -25,7 +25,7 @@
     <include name="DefaultBackground">
         <definition>
             <control type="image">
-                <visible>$EXP[BackgroundHasImage]</visible>
+                <visible>$EXP[HasImageInBackground]</visible>
 
                 <include content="FullscreenDimensions" />
                 <texture colordiffuse="$VAR[BackgroundColor]" background="true">white.png</texture>
@@ -36,7 +36,7 @@
     <include name="ImageBackground">
         <definition>
             <control type="group">
-                <visible>$EXP[BackgroundHasImage] + Skin.HasSetting(Background.Image.Active)</visible>
+                <visible>$EXP[HasImageInBackground] + Skin.HasSetting(Background.Image.Active)</visible>
 
                 <control type="image">
                     <include content="FadeAnimationForBackground" />
@@ -70,7 +70,7 @@
     <include name="MusicVisualizationBackground">
         <definition>
             <control type="group">
-                <visible>$EXP[BackgroundHasVisualization]</visible>
+                <visible>$EXP[HasVisualizationInBackground]</visible>
 
                 <control type="visualisation">
                     <include content="FullscreenDimensions" />
@@ -89,7 +89,7 @@
     <include name="VideoBackground">
         <definition>
             <control type="group">
-                <visible>$EXP[BackgroundHasVideo]</visible>
+                <visible>$EXP[HasVideoInBackground]</visible>
 
                 <control type="videowindow">
                     <include content="FullscreenDimensions" />

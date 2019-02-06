@@ -76,7 +76,7 @@
         <definition>
 
             <control type="group">
-                <visible>!$EXP[hasFinalSkinSettings]</visible>
+                <visible>!$EXP[HasFinalSkinSettings]</visible>
                 <posy>PosYForProgressDialog</posy>
 
                 <include content="WindowForDialog">
@@ -90,7 +90,7 @@
                 </include>
 
                 <control type="group">
-                    <visible>$EXP[isCreatingSkinSettings]</visible>
+                    <visible>$EXP[IsCreatingSkinSettings]</visible>
 
                     <include content="TextboxForDialog">
                         <param name="posy" value="80" />
@@ -103,7 +103,7 @@
                 </control>
                 
                 <control type="group">
-                    <visible>$EXP[isMigratingSkinSettings]</visible>
+                    <visible>$EXP[IsMigratingSkinSettings]</visible>
 
                     <include content="TextboxForDialog">
                         <param name="posy" value="80" />
