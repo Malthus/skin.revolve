@@ -992,6 +992,13 @@
                 </include>
 
                 <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-warning.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <control type="image">
                     <visible>String.Contains($PARAM[value],rated r)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
