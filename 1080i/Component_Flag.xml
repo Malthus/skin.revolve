@@ -74,7 +74,7 @@
 
         <definition>
             <control type="group">
-                <visible>$PARAM[visible]</visible>
+                <visible>Skin.HasSetting(Media.PersonalFlags.Visible) + $PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -103,7 +103,7 @@
 
         <definition>
             <control type="group">
-                <visible>Integer.IsGreater($PARAM[value],0)</visible>
+                <visible>Skin.HasSetting(Media.PersonalFlags.Visible) + Integer.IsGreater($PARAM[value],0)</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -145,7 +145,7 @@
 
         <definition>
             <control type="group">
-                <visible>Integer.IsGreater($PARAM[value],0)</visible>
+                <visible>Skin.HasSetting(Media.PersonalFlags.Visible) + Integer.IsGreater($PARAM[value],0)</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -187,7 +187,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.InformationFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -228,7 +228,7 @@
 
         <definition>
             <control type="group">
-                <visible>$PARAM[visible] + !String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.InformationFlags.Visible) + $PARAM[visible] + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -256,6 +256,124 @@
         </definition>
     </include>
 
+    <include name="RatingFlag">
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="labelposy" default="28" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="value" default="ListItem.Rating" />
+
+        <definition>
+            <control type="group">
+                <visible>Skin.HasSetting(Media.RatingFlags.Visible) + Integer.IsGreater($PARAM[value],0)</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-rating.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <include content="LabelForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="labelposy" value="$PARAM[labelposy]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="$INFO[$PARAM[value]]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="MpaaRatingFlag">
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="labelposy" default="28" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="value" default="ListItem.Mpaa" />
+
+        <definition>
+            <control type="group">
+                <visible>Skin.HasSetting(Media.RatingFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-warning.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <control type="image">
+                    <visible>String.Contains($PARAM[value],rated r)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-restricted.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>String.Contains($PARAM[value],rated nc)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-nc17.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>String.Contains($PARAM[value],rated pg-13)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-pg13.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>String.Contains($PARAM[value],rated pg) + !String.Contains($PARAM[value],rated pg-13)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-pg.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>String.Contains($PARAM[value],rated g)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-general.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>String.Contains($PARAM[value],not rated)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-notrated.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>!String.Contains($PARAM[value],rated r) + !String.Contains($PARAM[value],rated nc) + !String.Contains($PARAM[value],rated pg) + !String.Contains($PARAM[value],rated g) + !String.Contains($PARAM[value],not rated)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-unknown.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="VideoStereoscopicFlag">
         <param name="visible" default="ListItem.IsStereoscopic" />
         <param name="width" default="62" />
@@ -265,7 +383,7 @@
 
         <definition>
             <control type="group">
-                <visible>$PARAM[visible]</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -295,7 +413,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -350,7 +468,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -388,7 +506,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -444,7 +562,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value]) | String.IsEqual($PARAM[fileextensionvalue],flac) | String.IsEqual($PARAM[fileextensionvalue],mp3)</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + [!String.IsEmpty($PARAM[value]) | String.IsEqual($PARAM[fileextensionvalue],flac) | String.IsEqual($PARAM[fileextensionvalue],mp3)]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -506,7 +624,7 @@
 
         <definition>
             <control type="group">
-                <visible>Integer.IsGreater($PARAM[value],0)</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + Integer.IsGreater($PARAM[value],0)</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -609,7 +727,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -647,7 +765,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -685,7 +803,7 @@
 
         <definition>
             <control type="group">
-                <visible>String.Contains($PARAM[fileextensionvalue],jpg) | String.Contains($PARAM[fileextensionvalue],jpeg) | String.Contains($PARAM[fileextensionvalue],png) | String.Contains($PARAM[fileextensionvalue],gif)</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + [String.Contains($PARAM[fileextensionvalue],jpg) | String.Contains($PARAM[fileextensionvalue],jpeg) | String.Contains($PARAM[fileextensionvalue],png) | String.Contains($PARAM[fileextensionvalue],gif)]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -732,7 +850,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -771,7 +889,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -809,7 +927,7 @@
 
         <definition>
             <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -847,7 +965,7 @@
 
         <definition>
             <control type="group">
-                <visible>$PARAM[visible]</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -877,7 +995,7 @@
 
         <definition>
             <control type="group">
-                <visible>$PARAM[visible]</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -907,7 +1025,7 @@
 
         <definition>
             <control type="group">
-                <visible>$PARAM[visible]</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -937,7 +1055,7 @@
 
         <definition>
             <control type="group">
-                <visible>$PARAM[visible]</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -957,124 +1075,6 @@
         </definition>
     </include>
 
-    <include name="RatingFlag">
-        <param name="width" default="62" />
-        <param name="height" default="60" />
-        <param name="labelposy" default="28" />
-        <param name="flagcolor" default="$VAR[MainColor]" />
-        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
-        <param name="value" default="ListItem.Rating" />
-
-        <definition>
-            <control type="group">
-                <visible>Integer.IsGreater($PARAM[value],0)</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-
-                <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                </include>
-
-                <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-rating.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-
-                <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                    <param name="label" value="$INFO[$PARAM[value]]" />
-                </include>
-            </control>
-        </definition>
-    </include>
-
-    <include name="MpaaRatingFlag">
-        <param name="width" default="62" />
-        <param name="height" default="60" />
-        <param name="labelposy" default="28" />
-        <param name="flagcolor" default="$VAR[MainColor]" />
-        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
-        <param name="value" default="ListItem.Mpaa" />
-
-        <definition>
-            <control type="group">
-                <visible>!String.IsEmpty($PARAM[value])</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-
-                <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                </include>
-
-                <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-warning.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-
-                <control type="image">
-                    <visible>String.Contains($PARAM[value],rated r)</visible>
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-restricted.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-                <control type="image">
-                    <visible>String.Contains($PARAM[value],rated nc)</visible>
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-nc17.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-                <control type="image">
-                    <visible>String.Contains($PARAM[value],rated pg-13)</visible>
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-pg13.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-                <control type="image">
-                    <visible>String.Contains($PARAM[value],rated pg) + !String.Contains($PARAM[value],rated pg-13)</visible>
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-pg.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-                <control type="image">
-                    <visible>String.Contains($PARAM[value],rated g)</visible>
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-general.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-                <control type="image">
-                    <visible>String.Contains($PARAM[value],not rated)</visible>
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-notrated.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-                <control type="image">
-                    <visible>!String.Contains($PARAM[value],rated r) + !String.Contains($PARAM[value],rated nc) + !String.Contains($PARAM[value],rated pg) + !String.Contains($PARAM[value],rated g) + !String.Contains($PARAM[value],not rated)</visible>
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-mpaarating-unknown.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-            </control>
-        </definition>
-    </include>
-    
     <include name="DialogListForFlag">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -1103,7 +1103,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0)" />
+                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0)]" />
                 </include>
 
                 <include content="YearFlag">
@@ -1124,7 +1124,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">
@@ -1137,7 +1137,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Mpaa)" />
+                    <param name="visible" value="Skin.HasSetting(Media.RatingFlags.Visible) + [Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Mpaa)]" />
                 </include>
 
                 <include content="VideoCodecFlag">
@@ -1233,7 +1233,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0)" />
+                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0)]" />
                 </include>
 
                 <include content="YearFlag">
@@ -1254,7 +1254,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">
@@ -1267,7 +1267,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Mpaa)" />
+                    <param name="visible" value="Skin.HasSetting(Media.RatingFlags.Visible) + [Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Mpaa)]" />
                 </include>
 
                 <include content="VideoCodecFlag">
@@ -1359,7 +1359,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Integer.IsGreater(VideoPlayer.UserRating,0) | Integer.IsGreater(VideoPlayer.PlayCount,0)" />
+                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [Integer.IsGreater(VideoPlayer.UserRating,0) | Integer.IsGreater(VideoPlayer.PlayCount,0)]" />
                 </include>
 
                 <include content="YearFlag">
@@ -1376,7 +1376,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="!String.IsEmpty(VideoPlayer.Year) | !String.IsEmpty(Player.Duration)" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [!String.IsEmpty(VideoPlayer.Year) | !String.IsEmpty(Player.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">
@@ -1391,7 +1391,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Integer.IsGreater(VideoPlayer.Rating,0) | !String.IsEmpty(VideoPlayer.Mpaa)" />
+                    <param name="visible" value="Skin.HasSetting(Media.RatingFlags.Visible) + [Integer.IsGreater(VideoPlayer.Rating,0) | !String.IsEmpty(VideoPlayer.Mpaa)]" />
                 </include>
 
                 <include content="VideoCodecFlag">
@@ -1467,7 +1467,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Integer.IsGreater(MusicPlayer.UserRating,0)" />
+                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + Integer.IsGreater(MusicPlayer.UserRating,0)" />
                 </include>
 
                 <include content="YearFlag">
@@ -1482,7 +1482,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="!String.IsEmpty(MusicPlayer.Year) | !String.IsEmpty(Player.Duration)" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [!String.IsEmpty(MusicPlayer.Year) | !String.IsEmpty(Player.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">
@@ -1492,7 +1492,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Integer.IsGreater(MusicPlayer.Rating,0)" />
+                    <param name="visible" value="Skin.HasSetting(Media.RatingFlags.Visible) + Integer.IsGreater(MusicPlayer.Rating,0)" />
                 </include>
 
                 <include content="AudioCodecFlag">

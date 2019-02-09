@@ -597,16 +597,6 @@
                         <onclick>Skin.ToggleSetting(BackButton.Visible)</onclick>
                     </control>
                     
-                    <control type="radiobutton" id="804">
-                        <description>Show Media Icons Option</description>
-                        <width>1100</width>
-                        <radioposx>1040</radioposx>
-                        <align>left</align>
-                        <label>$LOCALIZE[31144]</label>
-                        <selected>Skin.HasSetting(MediaIcons.Visible)</selected>
-                        <onclick>Skin.ToggleSetting(MediaIcons.Visible)</onclick>
-                    </control>
-                    
                     <control type="button" id="807">
                         <description>Busy Animation Option</description>
                         <width>1100</width>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <expression name="HasFinalSkinSettings">String.IsEqual(Skin.String(Revolve.Configuration),6.0.0)</expression>
+    <expression name="HasFinalSkinSettings">String.IsEqual(Skin.String(Revolve.Configuration),6.1.0)</expression>
     <expression name="IsCreatingSkinSettings">!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</expression>
     <expression name="IsMigratingSkinSettings">Skin.HasSetting(RevolveConfiguration) | !String.IsEmpty(Skin.String(Revolve.Configuration))</expression>
 
@@ -23,8 +23,9 @@
                 <visible>[Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))] | String.IsEqual(Skin.String(Revolve.Configuration),3.0.2)</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
-                <include content="RevolveJarvisMigratedValues" />
-                <include content="RevolveLeiaMigratedValues" />
+                <include content="RevolveJarvis411MigratedValues" />
+                <include content="RevolveLeia600MigratedValues" />
+                <include content="RevolveLeia610MigratedValues" />
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>
             </control>
 
@@ -33,7 +34,17 @@
                 <visible>String.IsEqual(Skin.String(Revolve.Configuration),4.1.1)</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
-                <include content="RevolveLeiaMigratedValues" />
+                <include content="RevolveLeia600MigratedValues" />
+                <include content="RevolveLeia610MigratedValues" />
+                <onfocus>SetFocus($PARAM[controlid])</onfocus>
+            </control>
+
+            <control type="button" id="$PARAM[buttonid]">
+                <description>Skin Settings Migration</description>
+                <visible>String.IsEqual(Skin.String(Revolve.Configuration),6.0.0)</visible>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <include content="RevolveLeia610MigratedValues" />
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>
             </control>
 
@@ -54,17 +65,17 @@
             <include content="BackgroundSettingsDefaultValues" />
             <include content="ColorsSettingsForSkinSettings" />
             <include content="HomeMenuItemsSettingsDefaultValues" />
-            <include content="CircleItemsSettingsForSkinSettings" />
+            <include content="CircleItemsSettingsDefaultValues" />
             <include content="ExitMenuItemsDefaultValues" />
             <include content="MediaSettingsDefaultValues" />
-            <include content="MiscellaneousSettingsForSkinSettings" />
+            <include content="MiscellaneousSettingsDefaultValues" />
             <include content="DebugSettingsDefaultValues" />
 
-            <onfocus>Skin.SetString(Revolve.Configuration,4.1.1)</onfocus>
+            <onfocus>Skin.SetString(Revolve.Configuration,6.1.0)</onfocus>
         </definition>
     </include>
 
-    <include name="RevolveJarvisMigratedValues">
+    <include name="RevolveJarvis411MigratedValues">
         <definition>
             <include content="ExitMenuItemsDefaultValues" />
 
@@ -77,11 +88,19 @@
         </definition>
     </include>
 
-    <include name="RevolveLeiaMigratedValues">
+    <include name="RevolveLeia600MigratedValues">
         <definition>
             <include content="HomeMenuItemsSettingsRevolveLeiaMigratedValues" />
             
             <onfocus>Skin.SetString(Revolve.Configuration,6.0.0)</onfocus>
+        </definition>
+    </include>
+
+    <include name="RevolveLeia610MigratedValues">
+        <definition>
+            <include content="MediaSettingsRevolveLeiaMigratedValues" />
+            
+            <onfocus>Skin.SetString(Revolve.Configuration,6.1.0)</onfocus>
         </definition>
     </include>
 
@@ -244,8 +263,8 @@
             <onfocus>Skin.Reset(GamesOption.Action)</onfocus>
         </definition>
     </include>
-    
-    <include name="CircleItemsSettingsForSkinSettings">
+
+    <include name="CircleItemsSettingsDefaultValues">
         <definition>
             <onfocus>Skin.Reset(CircleNextAired.Enable)</onfocus>
             <onfocus>Skin.Reset(CircleNextAired.NotInvisible)</onfocus>
@@ -282,6 +301,11 @@
         <definition>
             <onfocus condition="System.HasAddon(script.cu.lrclyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,script.cu.lrclyrics)</onfocus>
             <onfocus condition="!System.HasAddon(script.cu.lrclyrics)">Skin.Reset(Media.MusicLyricsAddon.Script)</onfocus>
+            <onfocus>Skin.SetBool(Media.PersonalFlags.Visible)</onfocus>
+            <onfocus>Skin.SetBool(Media.InformationFlags.Visible)</onfocus>
+            <onfocus>Skin.SetBool(Media.RatingFlags.Visible)</onfocus>
+            <onfocus>Skin.SetBool(Media.TechnicalFlags.Visible)</onfocus>
+            <onfocus>Skin.SetBool(Media.IconOverlays.Visible)</onfocus>
             <onfocus>Skin.Reset(Media.ArtistSlideshowVisualization.Active)</onfocus>
             <onfocus>Skin.SetBool(Media.PlayerArtwork.Visible)</onfocus>
             <onfocus>Skin.SetBool(Media.PlayerSeekBar.Visible)</onfocus>
@@ -303,7 +327,17 @@
         </definition>
     </include>
 
-    <include name="MiscellaneousSettingsForSkinSettings">
+    <include name="MediaSettingsRevolveLeiaMigratedValues">
+        <definition>
+            <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.PersonalFlags.Visible)</onfocus>
+            <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.InformationFlags.Visible)</onfocus>
+            <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.RatingFlags.Visible)</onfocus>
+            <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.TechnicalFlags.Visible)</onfocus>
+            <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.IconOverlays.Visible)</onfocus>
+        </definition>
+    </include>
+
+    <include name="MiscellaneousSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
             <onfocus>Skin.SetBool(SideMenu.Grouped)</onfocus>
@@ -312,7 +346,6 @@
             <onfocus>Skin.SetBool(ViewScrollbar.Visible)</onfocus>
             <onfocus>Skin.SetBool(BackButton.Visible)</onfocus>
             <onfocus>Skin.SetBool(RSSFeed.BackgroundVisible)</onfocus>
-            <onfocus>Skin.SetBool(MediaIcons.Visible)</onfocus>
             <onfocus>Skin.SetString(BusyAnimation.Type,A)</onfocus>
             <onfocus>Skin.SetBool(NoInformationLabel.Visible)</onfocus>
             <onfocus>Skin.SetString(Thumbnails.Type,C)</onfocus>
