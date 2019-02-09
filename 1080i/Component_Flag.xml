@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="ImageForOverlayFlag">
+        <value condition="ListItem.IsPlaying">flags/overlay-playing.png</value>
+        <value condition="ListItem.IsRecording">flags/overlay-recording.png</value>
+        <value condition="ListItem.HasTimer">flags/overlay-timer.png</value>
+        <value condition="ListItem.IsEncrypted | String.IsEqual(ListItem.Overlay,OverlayLocked.png)">flags/overlay-locked.png</value>
+        <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">flags/overlay-watched.png</value>
+        <value condition="String.IsEqual(ListItem.Overlay,OverlayRAR.png) | String.IsEqual(ListItem.Overlay,OverlayZIP.png)">flags/overlay-compressed.png</value>
+    </variable>
+
     <include name="BackgroundForFlag">
         <param name="visible" default="true" />
         <param name="height" default="60" />
@@ -61,6 +70,25 @@
                 <visible>$PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ListItemOverlayFlag">
+        <param name="left" default="0" />
+        <param name="top" default="0" />
+        <param name="width" default="200" />
+        <param name="height" default="200" />
+        
+        <definition>
+            <control type="image">
+                <visible>Skin.HasSetting(Media.IconOverlays.Visible)</visible>
+                <left>$PARAM[left]</left>
+                <top>$PARAM[top]</top>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <texture colordiffuse="$VAR[FademaskColor]" background="true">$VAR[ImageForOverlayFlag]</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
     </include>
