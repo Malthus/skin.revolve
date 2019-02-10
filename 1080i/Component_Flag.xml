@@ -2,7 +2,6 @@
 <includes>
     <variable name="ImageForOverlayFlag">
         <value condition="ListItem.IsPlaying">flags/overlay-playing.png</value>
-        <value condition="ListItem.IsRecording">flags/overlay-recording.png</value>
         <value condition="ListItem.HasTimer">flags/overlay-timer.png</value>
         <value condition="ListItem.IsEncrypted | String.IsEqual(ListItem.Overlay,OverlayLocked.png)">flags/overlay-locked.png</value>
         <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">flags/overlay-watched.png</value>
@@ -74,20 +73,61 @@
         </definition>
     </include>
 
+
+    <include name="BooleanFlag">
+        <param name="visible" default="false" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="iconfilename" default="" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">$PARAM[iconfilename]</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="ListItemOverlayFlag">
         <param name="left" default="0" />
         <param name="top" default="0" />
         <param name="width" default="200" />
         <param name="height" default="200" />
-        
+
         <definition>
             <control type="image">
-                <visible>Skin.HasSetting(Media.IconOverlays.Visible)</visible>
+                <visible>Skin.HasSetting(Media.IconOverlays.Visible) + !ListItem.IsRecording</visible>
                 <left>$PARAM[left]</left>
                 <top>$PARAM[top]</top>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
-                <texture colordiffuse="$VAR[FademaskColor]" background="true">$VAR[ImageForOverlayFlag]</texture>
+                <texture colordiffuse="$VAR[FademaskColor]">$VAR[ImageForOverlayFlag]</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+
+            <control type="image">
+                <visible>Skin.HasSetting(Media.IconOverlays.Visible) + ListItem.IsRecording</visible>
+                <left>$PARAM[left]</left>
+                <top>$PARAM[top]</top>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <texture>elements/element-recorddot.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -101,24 +141,14 @@
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <control type="group">
-                <visible>Skin.HasSetting(Media.PersonalFlags.Visible) + $PARAM[visible]</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-
-                <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                </include>
-
-                <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-watched.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-            </control>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-watched.png" />
+            </include>
         </definition>
     </include>
 
@@ -410,24 +440,14 @@
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <control type="group">
-                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-
-                <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                </include>
-
-                <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[flagcolor]">flags/property-3d.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-            </control>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-3d.png" />
+            </include>
         </definition>
     </include>
 
@@ -460,7 +480,7 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <visible>!String.IsEqual($PARAM[value],divx) + !String.IsEqual($PARAM[value],xvid)</visible>
+                    <param name="visible" value="!String.IsEqual($PARAM[value],divx) + !String.IsEqual($PARAM[value],xvid)" />
                     <param name="height" value="$PARAM[height]" />
                     <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
@@ -987,29 +1007,18 @@
         <param name="visible" default="ListItem.HasEpg" />
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <control type="group">
-                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-
-                <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                </include>
-
-                <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-epg.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-            </control>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-epg.png" />
+            </include>
         </definition>
     </include>
 
@@ -1017,73 +1026,89 @@
         <param name="visible" default="VideoPlayer.HasTeletext" />
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <control type="group">
-                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
-
-                <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                </include>
-
-                <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-text.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-            </control>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-text.png" />
+            </include>
         </definition>
     </include>
 
-    <include name="CompressedPropertyFlag">
-        <param name="visible" default="String.IsEqual(ListItem.Overlay,OverlayRAR.png) | String.IsEqual(ListItem.Overlay,OverlayZIP.png)" />
+    <include name="InternetStreamPropertyFlag">
+        <param name="visible" default="Player.IsInternetStream" />
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <control type="group">
-                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-internetstream.png" />
+            </include>
+        </definition>
+    </include>
+    
+    <include name="CompressedPropertyFlag">
+        <param name="visible" default="[String.IsEqual(ListItem.Overlay,OverlayRAR.png) | String.IsEqual(ListItem.Overlay,OverlayZIP.png)]" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
-                <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="flagcolor" value="$PARAM[flagcolor]" />
-                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                </include>
-
-                <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-compressed.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
-            </control>
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-compressed.png" />
+            </include>
         </definition>
     </include>
 
     <include name="LockedPropertyFlag">
-        <param name="visible" default="ListItem.IsEncrypted | String.IsEqual(ListItem.Overlay,OverlayLocked.png)" />
+        <param name="visible" default="[ListItem.IsEncrypted | String.IsEqual(ListItem.Overlay,OverlayLocked.png)]" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-locked.png" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="AddonVersionFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
         <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="value" default="ListItem.AddonVersion" />
 
         <definition>
             <control type="group">
-                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + !String.IsEmpty($PARAM[value])</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -1096,10 +1121,95 @@
                 <control type="image">
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-locked.png</texture>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-addonversion.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
+
+                <include content="LabelForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="labelposy" value="$PARAM[labelposy]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="$INFO[$PARAM[value]]" />
+                </include>
             </control>
+        </definition>
+    </include>
+
+    <include name="EnabledPropertyFlag">
+        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),enabled)" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-enabled.png" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="DisabledPropertyFlag">
+        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),disabled)" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="labelposy" default="28" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-disabled.png" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="UpdateAvailablePropertyFlag">
+        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),update)" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-updateavailable.png" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="AddonBrokenPropertyFlag">
+        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),broken)" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-addonbroken.png" />
+            </include>
         </definition>
     </include>
 
@@ -1210,8 +1320,29 @@
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
-                    
+
                 <include content="EpgPropertyFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
+
+                <include content="AddonVersionFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
+                <include content="EnabledPropertyFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
+                <include content="DisabledPropertyFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
+                <include content="UpdateAvailablePropertyFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
+                <include content="AddonBrokenPropertyFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
@@ -1346,6 +1477,27 @@
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
                 </include>
 
+                <include content="AddonVersionFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
+                <include content="EnabledPropertyFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
+                <include content="DisabledPropertyFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
+                <include content="UpdateAvailablePropertyFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
+                <include content="AddonBrokenPropertyFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
+
                 <include content="CompressedPropertyFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
@@ -1462,6 +1614,10 @@
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
+                <include content="InternetStreamPropertyFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
                 <include content="LockedPropertyFlag">
                     <param name="visible" value="VideoPlayer.Content(LiveTV) + Pvr.ActStreamIsEncrypted" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
@@ -1539,6 +1695,10 @@
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
                 <include content="AudioSamplerateFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+                <include content="InternetStreamPropertyFlag">
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
