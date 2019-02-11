@@ -63,6 +63,16 @@
                 </control>
 
                 <control type="radiobutton" id="713">
+                    <description>Show Technical Media Icons Option</description>
+                    <width>1100</width>
+                    <radioposx>1040</radioposx>
+                    <align>left</align>
+                    <label>$LOCALIZE[31285]</label>
+                    <selected>Skin.HasSetting(Media.StatusFlags.Visible)</selected>
+                    <onclick>Skin.ToggleSetting(Media.StatusFlags.Visible)</onclick>
+                </control>
+
+                <control type="radiobutton" id="714">
                     <description>Show Icon Overlays Option</description>
                     <width>1100</width>
                     <radioposx>1040</radioposx>
@@ -257,6 +267,11 @@
                 </control>
                 <control type="textbox">
                     <visible>Control.HasFocus(713)</visible>
+                    <font>DialogHelpFont</font>
+                    <label>$LOCALIZE[31286]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(714)</visible>
                     <font>DialogHelpFont</font>
                     <label>$LOCALIZE[31284]</label>
                 </control>
