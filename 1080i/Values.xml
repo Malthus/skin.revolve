@@ -305,7 +305,6 @@
             <onfocus>Skin.SetBool(Media.InformationFlags.Visible)</onfocus>
             <onfocus>Skin.SetBool(Media.RatingFlags.Visible)</onfocus>
             <onfocus>Skin.SetBool(Media.TechnicalFlags.Visible)</onfocus>
-            <onfocus>Skin.SetBool(Media.StatusFlags.Visible)</onfocus>
             <onfocus>Skin.SetBool(Media.IconOverlays.Visible)</onfocus>
             <onfocus>Skin.Reset(Media.ArtistSlideshowVisualization.Active)</onfocus>
             <onfocus>Skin.SetBool(Media.PlayerArtwork.Visible)</onfocus>
@@ -334,7 +333,6 @@
             <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.InformationFlags.Visible)</onfocus>
             <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.RatingFlags.Visible)</onfocus>
             <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.TechnicalFlags.Visible)</onfocus>
-            <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.StatusFlags.Visible)</onfocus>
             <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.IconOverlays.Visible)</onfocus>
         </definition>
     </include>
