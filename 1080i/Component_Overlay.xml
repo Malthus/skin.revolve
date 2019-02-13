@@ -15,7 +15,6 @@
     <include name="GlobalOverlay">
         <definition>
             <control type="group">
-                <include content="MediaArtworkOverlay" />
                 <include content="BackButtonOverlay" />
                 <include content="MediaPlayerOverlay" />
                 <include content="SkinSettingsOverlay" />
@@ -59,9 +58,39 @@
             <control type="group">
                 <visible>Player.HasVideo | Player.HasAudio</visible>
                 <include content="BackgroundForOverlay" />
+                <include content="MediaArtworkOverlay" />
                 <include content="MediaPlayerLabelForOverlay">
                     <param name="medialabel" value="$VAR[PlayerMediaLabelForOverlay]" />
                     <param name="timelabel" value="$VAR[PlayerTimeLabelForOverlay]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="SkinSettingsOverlay">
+        <definition>
+            <include content="OverlayDialogForSkinSettings" />
+        </definition>
+    </include>
+
+    <include name="MediaPlayerLabelForOverlay">
+        <param name="medialabel" default="" />
+        <param name="timelabel" default="" />
+
+        <definition>
+            <control type="group">
+                <include content="LabelForOverlay">
+                    <param name="posx" value="1420" />
+                    <param name="width" value="1500" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$PARAM[medialabel]" />
+                </include>
+
+                <include content="LabelForOverlay">
+                    <param name="posx" value="1420" />
+                    <param name="width" value="400" />
+                    <param name="align" value="left" />
+                    <param name="label" value="$PARAM[timelabel]" />
                 </include>
             </control>
         </definition>
@@ -136,79 +165,37 @@
         </definition>
     </include>
 
-    <include name="SkinSettingsOverlay">
-        <definition>
-            <include content="OverlayDialogForSkinSettings" />
-        </definition>
-    </include>
-
     <include name="BackgroundForOverlay">
+        <param name="top" default="1020" />
+        <param name="height" default="60" />
+
         <definition>
             <control type="image">
                 <visible>Skin.HasSetting(Media.OverlayBackground.Visible)</visible>
                 <posx>0</posx>
-                <posy>1020</posy>
+                <top>$PARAM[top]</top>
                 <width>1920</width>
-                <height>60</height>
+                <height>$PARAM[height]</height>
                 <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
-            </control>
-        </definition>
-    </include>
-
-    <include name="MediaPlayerLabelForOverlay">
-        <param name="medialabel" default="" />
-        <param name="timelabel" default="" />
-
-        <definition>
-            <control type="group">
-                <visible>!Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
-
-                <include content="LabelForOverlay">
-                    <param name="posx" value="1520" />
-                    <param name="width" value="1500" />
-                    <param name="label" value="$PARAM[medialabel]" />
-                </include>
-                <include content="LabelForOverlay">
-                    <param name="posx" value="1530" />
-                    <param name="width" value="400" />
-                    <param name="align" value="left" />
-                    <param name="label" value="$PARAM[timelabel]" />
-                </include>
-            </control>
-
-            <control type="group">
-                <visible>Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
-                
-                <include content="LabelForOverlay">
-                    <param name="posx" value="1320" />
-                    <param name="width" value="1300" />
-                    <param name="label" value="$PARAM[medialabel]" />
-                </include>
-                <include content="LabelForOverlay">
-                    <param name="posx" value="1330" />
-                    <param name="width" value="400" />
-                    <param name="align" value="left" />
-                    <param name="label" value="$PARAM[timelabel]" />
-                </include>
             </control>
         </definition>
     </include>
 
     <include name="LabelForOverlay">
         <param name="outline" default="!Skin.HasSetting(Media.OverlayBackground.Visible)" />
-        <param name="left" default="1320" />
-        <param name="top" default="PosYForPlayerInformationForOverlay" />
+        <param name="posx" default="1420" />
+        <param name="posy" default="PosYForPlayerInformationForOverlay" />
         <param name="width" default="1300" />
         <param name="height" default="30" />
         <param name="align" default="right" />
-        <param name="label" default="-" />
+        <param name="label" default="" />
 
         <definition>
             <control type="group">
                 <visible>!$PARAM[outline]</visible>
                 <control type="label">
-                    <left>$PARAM[left]</left>
-                    <top>$PARAM[top]</top>
+                    <posx>$PARAM[posx]</posx>
+                    <posy>$PARAM[posy]</posy>
                     <width>$PARAM[width]</width>
                     <height>$PARAM[height]</height>
                     <font>MessageTextFont</font>
@@ -218,12 +205,12 @@
                     <label>$PARAM[label]</label>
                 </control>
             </control>
-            
+
             <control type="group">
                 <visible>$PARAM[outline]</visible>
                 <include content="OutlineLabel">
-                    <param name="posx" value="$PARAM[left]" />
-                    <param name="posy" value="$PARAM[top]" />
+                    <param name="posx" value="$PARAM[posx]" />
+                    <param name="posy" value="$PARAM[posy]" />
                     <param name="width" value="$PARAM[width]" />
                     <param name="height" value="$PARAM[height]" />
                     <param name="font" value="MessageTextFont" />
