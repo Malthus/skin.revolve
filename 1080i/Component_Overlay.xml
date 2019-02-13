@@ -81,14 +81,14 @@
             <control type="group">
                 <include content="LabelForOverlay">
                     <param name="posx" value="1420" />
-                    <param name="width" value="1500" />
+                    <param name="width" value="1400" />
                     <param name="align" value="right" />
                     <param name="label" value="$PARAM[medialabel]" />
                 </include>
 
                 <include content="LabelForOverlay">
                     <param name="posx" value="1420" />
-                    <param name="width" value="400" />
+                    <param name="width" value="480" />
                     <param name="align" value="left" />
                     <param name="label" value="$PARAM[timelabel]" />
                 </include>
