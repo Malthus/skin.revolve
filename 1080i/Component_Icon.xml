@@ -803,7 +803,10 @@
             <control type="group">
                 <posx>20</posx>
                 <posy>28</posy>
-                <include content="SmallOverlayMediaFlag" />
+                <include content="ListItemOverlayFlag">
+                  <param name="width" value="90" />
+                  <param name="height" value="90" />
+                </include>
             </control>
         </definition>
     </include>

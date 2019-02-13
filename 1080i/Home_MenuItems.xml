@@ -260,7 +260,7 @@
                     <property name="Label3">$LOCALIZE[31027]</property>
                     <property name="Circle">circle/books.png</property>
                     <property name="BackgroundImage">$INFO[Skin.String(ComicsOption.BackgroundImage)]</property>
-                    <property name="FallbackImage">special://skin/backgrounds/comics.jpg</property>
+                    <property name="FallbackImage">special://skin/backgrounds/books.jpg</property>
                     <onclick>SetProperty(MenuTitle,$INFO[Skin.String(ComicsOption.MenuTitle)],$INFO[Skin.String(ComicsOption.Window)])</onclick>
                     <onclick>SetProperty(SourceInfo,$INFO[Skin.String(ComicsOption.SourceInfo)],$INFO[Skin.String(ComicsOption.Window)])</onclick>
                     <onclick>$INFO[Skin.String(ComicsOption.Action)]</onclick>
