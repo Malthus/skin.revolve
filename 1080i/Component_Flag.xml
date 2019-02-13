@@ -1087,7 +1087,7 @@
 
         <definition>
             <include content="BooleanFlag">
-                <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + $PARAM[visible]" />
+                <param name="visible" value="Skin.HasSetting(Media.TechnicalFlags.Visible) + $PARAM[visible]" />
                 <param name="width" value="$PARAM[width]" />
                 <param name="height" value="$PARAM[height]" />
                 <param name="flagcolor" value="$PARAM[flagcolor]" />
