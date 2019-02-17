@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="56">
-    <defaultcontrol always="true">99</defaultcontrol>
+    <defaultcontrol always="true">200</defaultcontrol>
     <menucontrol>9001</menucontrol>
 
     <controls>
@@ -1275,6 +1275,9 @@
             </include>
         </control>
         
-        <include content="GlobalOverlay" />
+        <include content="GlobalOverlay">
+            <param name="buttonid" value="200" />
+            <param name="controlid" value="99" />
+        </include>
     </controls>
 </window>

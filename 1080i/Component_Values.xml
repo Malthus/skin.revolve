@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <expression name="HasFinalSkinSettings">String.IsEqual(Skin.String(Revolve.Configuration),6.1.0)</expression>
-    <expression name="IsCreatingSkinSettings">!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</expression>
-    <expression name="IsMigratingSkinSettings">Skin.HasSetting(RevolveConfiguration) | !String.IsEmpty(Skin.String(Revolve.Configuration))</expression>
+    <expression name="HasFinalSkinSettingsValues">String.IsEqual(Skin.String(Revolve.Configuration),6.1.0)</expression>
+
+    <variable name="OverlayMessageForValues">
+        <value condition="!String.IsEmpty(Skin.String(Revolve.Configuration))">$LOCALIZE[31264]</value>
+        <value>$LOCALIZE[31263]</value>
+    </variable>
 
     <include name="ButtonForValues">
         <param name="buttonid" default="200" />
@@ -11,7 +14,7 @@
         <definition>
             <control type="button" id="$PARAM[buttonid]">
                 <description>Skin Settings Initialisation</description>
-                <visible>!Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
+                <visible>String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
                 <include content="DefaultSettingsForValues" />
@@ -20,7 +23,7 @@
 
             <control type="button" id="$PARAM[buttonid]">
                 <description>Skin Settings Migration</description>
-                <visible>[Skin.HasSetting(RevolveConfiguration) + String.IsEmpty(Skin.String(Revolve.Configuration))] | String.IsEqual(Skin.String(Revolve.Configuration),3.0.2)</visible>
+                <visible>String.IsEqual(Skin.String(Revolve.Configuration),3.0.2)</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
                 <include content="RevolveJarvis411MigratedValues" />
@@ -50,10 +53,37 @@
 
             <control type="button" id="$PARAM[buttonid]">
                 <description>Skin Settings Evasion</description>
-                <visible>$EXP[HasFinalSkinSettings]</visible>
+                <visible>$EXP[HasFinalSkinSettingsValues]</visible>
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>
+            </control>
+        </definition>
+    </include>
+
+    <include name="OverlayDialogForValues">
+        <definition>
+            <control type="group">
+                <visible>!$EXP[HasFinalSkinSettingsValues]</visible>
+                <posy>PosYForProgressDialog</posy>
+
+                <include content="WindowForDialog">
+                    <param name="height" value="HeightForProgressDialog" />
+                    <param name="headerlabel" value="$LOCALIZE[20186]" />
+                </include>
+
+                <include content="DefaultBusyAnimationForProgressBar">
+                    <param name="posx" value="145" />
+                    <param name="posy" value="20" />
+                </include>
+
+                <include content="TextboxForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="120" />
+                    <param name="textboxid" value="9" />
+                    <param name="scrollbarid" value="19" />
+                    <param name="label" value="$VAR[OverlayMessageForValues]" />
+                </include>
             </control>
         </definition>
     </include>
@@ -63,7 +93,7 @@
             <onfocus>Skin.ResetSettings</onfocus>
             
             <include content="BackgroundSettingsDefaultValues" />
-            <include content="ColorsSettingsForSkinSettings" />
+            <include content="ColorsSettingsDefaultValues" />
             <include content="HomeMenuItemsSettingsDefaultValues" />
             <include content="CircleItemsSettingsDefaultValues" />
             <include content="ExitMenuItemsDefaultValues" />
@@ -143,7 +173,7 @@
         </definition>
     </include>
     
-    <include name="ColorsSettingsForSkinSettings">
+    <include name="ColorsSettingsDefaultValues">
         <definition>
             <onfocus>Skin.Reset(Colors.PrimaryColorTheme)</onfocus>
             <onfocus>Skin.Reset(Colors.BackgroundColorTheme)</onfocus>

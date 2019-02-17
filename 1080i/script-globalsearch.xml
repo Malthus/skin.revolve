@@ -231,5 +231,10 @@
                 </include>
             </control>
         </control>
+
+        <include content="GlobalOverlay">
+            <param name="buttonid" value="200" />
+            <param name="controlid" value="50" />
+        </include>
     </controls>
 </window>
