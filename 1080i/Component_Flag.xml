@@ -658,7 +658,7 @@
                 </include>
 
                 <control type="image">
-                    <visible>!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],aac) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)</visible>
+                    <visible>!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],aac) + !String.IsEqual($PARAM[value],dts) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)</visible>
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
                     <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-audiocodec.png</texture>
@@ -666,7 +666,7 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="visible" value="!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],aac) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)" />
+                    <param name="visible" value="!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],aac) + !String.IsEqual($PARAM[value],dts) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)" />
                     <param name="height" value="$PARAM[height]" />
                     <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
@@ -679,6 +679,13 @@
                     <width>$PARAM[height]</width>
                     <height>$PARAM[height]</height>
                     <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-audiocodec-aac.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <visible>String.IsEqual($PARAM[value],dts)</visible>
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/property-audiocodec-dts.png</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
                 <control type="image">
@@ -1135,8 +1142,8 @@
         </definition>
     </include>
 
-    <include name="EnabledPropertyFlag">
-        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),enabled)" />
+    <include name="AddonEnabledPropertyFlag">
+        <param name="visible" default="ListItem.Property(Addon.IsEnabled)" />
         <param name="width" default="62" />
         <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
@@ -1149,13 +1156,13 @@
                 <param name="height" value="$PARAM[height]" />
                 <param name="flagcolor" value="$PARAM[flagcolor]" />
                 <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="flags/property-enabled.png" />
+                <param name="iconfilename" value="flags/property-addonenabled.png" />
             </include>
         </definition>
     </include>
 
-    <include name="DisabledPropertyFlag">
-        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),disabled)" />
+    <include name="AddonDisabledPropertyFlag">
+        <param name="visible" default="ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)" />
         <param name="width" default="62" />
         <param name="height" default="60" />
         <param name="labelposy" default="28" />
@@ -1169,13 +1176,13 @@
                 <param name="height" value="$PARAM[height]" />
                 <param name="flagcolor" value="$PARAM[flagcolor]" />
                 <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="flags/property-disabled.png" />
+                <param name="iconfilename" value="flags/property-addondisabled.png" />
             </include>
         </definition>
     </include>
 
-    <include name="UpdateAvailablePropertyFlag">
-        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),update)" />
+    <include name="AddonUpdateAvailablePropertyFlag">
+        <param name="visible" default="ListItem.Property(Addon.HasUpdate)" />
         <param name="width" default="62" />
         <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
@@ -1188,13 +1195,13 @@
                 <param name="height" value="$PARAM[height]" />
                 <param name="flagcolor" value="$PARAM[flagcolor]" />
                 <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="flags/property-updateavailable.png" />
+                <param name="iconfilename" value="flags/property-addonupdate.png" />
             </include>
         </definition>
     </include>
 
     <include name="AddonBrokenPropertyFlag">
-        <param name="visible" default="String.IsEqual(ListItem.Property(Addon.Status),broken)" />
+        <param name="visible" default="!String.IsEmpty(ListItem.AddonBroken)" />
         <param name="width" default="62" />
         <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
@@ -1375,15 +1382,15 @@
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
-                <include content="EnabledPropertyFlag">
+                <include content="AddonEnabledPropertyFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
-                <include content="DisabledPropertyFlag">
+                <include content="AddonDisabledPropertyFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
-                <include content="UpdateAvailablePropertyFlag">
+                <include content="AddonUpdateAvailablePropertyFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
@@ -1534,15 +1541,15 @@
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
                 </include>
-                <include content="EnabledPropertyFlag">
+                <include content="AddonEnabledPropertyFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
                 </include>
-                <include content="DisabledPropertyFlag">
+                <include content="AddonDisabledPropertyFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
                 </include>
-                <include content="UpdateAvailablePropertyFlag">
+                <include content="AddonUpdateAvailablePropertyFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
                 </include>
