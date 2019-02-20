@@ -172,7 +172,8 @@
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
-        <value condition="!String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(ListItem.AddonBroken) | !String.IsEmpty(ListItem.AddonNews) | !String.IsEmpty(ListItem.AddonDisclaimer)">$INFO[ListItem.AddonBroken,[B],[/B][CR][CR]]$INFO[ListItem.AddonDescription]$INFO[ListItem.AddonNews,[CR][CR],]$INFO[ListItem.AddonDisclaimer,[CR][CR],]</value>
+        <value condition="!String.IsEmpty(ListItem.AddonBroken)">[B]$LOCALIZE[24096] $INFO[ListItem.AddonBroken][/B]$INFO[ListItem.AddonDescription,[CR][CR],]$INFO[ListItem.AddonDisclaimer,[CR][CR],]$INFO[ListItem.AddonNews,[CR][CR],]$INFO[ListItem.Property(Addon.Changelog),[CR][CR],]</value>
+        <value condition="!String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(ListItem.AddonDisclaimer) | !String.IsEmpty(ListItem.AddonNews) | !String.IsEmpty(ListItem.Property(Addon.Changelog))">$INFO[ListItem.AddonDescription]$INFO[ListItem.AddonDisclaimer,[CR][CR],]$INFO[ListItem.AddonNews,[CR][CR],]$INFO[ListItem.Property(Addon.Changelog),[CR][CR],]</value>
         <value condition="Skin.HasSetting(NoInformationLabel.Visible)">$LOCALIZE[31300]</value>
     </variable>
 
