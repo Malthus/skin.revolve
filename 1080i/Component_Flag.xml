@@ -1143,7 +1143,7 @@
     </include>
 
     <include name="AddonEnabledPropertyFlag">
-        <param name="visible" default="ListItem.Property(Addon.IsEnabled)" />
+        <param name="visible" default="ListItem.Property(Addon.IsEnabled) + String.IsEmpty(ListItem.AddonBroken)" />
         <param name="width" default="62" />
         <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
