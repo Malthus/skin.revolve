@@ -4,7 +4,6 @@
     <menucontrol>9000</menucontrol>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !String.IsEqual(Skin.String(Dialog.LastAutoRefresh),ListItem.Label) + Control.IsVisible(6)">AlarmClock(DialogRefreshTimer,SendClick(6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
-    <onload>SetProperty(DialogInfoPage,41)</onload>
     <onload>SetFocus(9001,0,absolute)</onload>
 
     <controls>
@@ -19,7 +18,7 @@
             </include>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),41)</visible>
+                <visible>Container(9001).HasFocus(41)</visible>
 
                 <include content="HeaderForDialog">
                     <param name="label" value="$LOCALIZE[14116]" />
@@ -196,7 +195,7 @@
             </control>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),42)</visible>
+                <visible>Container(9001).HasFocus(42)</visible>
 
                 <include content="HeaderForDialog">
                     <param name="label" value="$LOCALIZE[21821]" />
@@ -213,7 +212,7 @@
             </control>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),43) | String.IsEqual(Window.Property(DialogInfoPage),44)</visible>
+                <visible>Container(9001).HasFocus(43) | Container(9001).HasFocus(44)</visible>
                 
                 <include content="HeaderForDialog">
                     <param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
@@ -273,7 +272,7 @@
                     <param name="scrollbarid" value="52" />
                     <param name="label" value="$VAR[ContentNoAlbumListing]" />
                 </include>
-                
+
                 <include content="TextboxForDialog">
                     <param name="visible" value="String.IsEqual(ListItem.DBType,album) + String.IsEmpty(Container(50).ListItem(1).Label)" />
                     <param name="posy" value="120" />
@@ -294,9 +293,9 @@
                     <param name="posy" value="340" />
                     <param name="height" value="340" />
                 </include>
-                <onright condition="String.IsEqual(Window.Property(DialogInfoPage),41)">30</onright>
-                <onright condition="String.IsEqual(Window.Property(DialogInfoPage),42)">24</onright>
-                <onright condition="String.IsEqual(Window.Property(DialogInfoPage),43) | String.IsEqual(Window.Property(DialogInfoPage),44)">50</onright>
+                <onright condition="Container(9001).HasFocus(41)">30</onright>
+                <onright condition="Container(9001).HasFocus(42)">24</onright>
+                <onright condition="Container(9001).HasFocus(43) | Container(9001).HasFocus(44)">50</onright>
 
                 <include content="SpacerForButtonListForDialog">
                     <param name="id" value="26" />
@@ -336,25 +335,17 @@
                     <content>
                         <item id="41">
                             <label>$LOCALIZE[14116]</label>
-                            <property name="InfoItemId">$NUMBER[41]</property>
-                            <onclick>SetProperty(DialogInfoPage,41)</onclick>
                         </item>
                         <item id="42">
                             <label>$LOCALIZE[21821]</label>
-                            <property name="InfoItemId">$NUMBER[42]</property>
-                            <onclick>SetProperty(DialogInfoPage,42)</onclick>
                         </item>
                         <item id="43">
                             <visible>String.IsEqual(ListItem.DBType,artist)</visible>
                             <label>$LOCALIZE[132]</label>
-                            <property name="InfoItemId">$NUMBER[43]</property>
-                            <onclick>SetProperty(DialogInfoPage,43)</onclick>
                         </item>
                         <item id="44">
                             <visible>String.IsEqual(ListItem.DBType,album)</visible>
                             <label>$LOCALIZE[182]</label>
-                            <property name="InfoItemId">$NUMBER[44]</property>
-                            <onclick>SetProperty(DialogInfoPage,44)</onclick>
                         </item>
                         <item id="45">
                             <visible>!String.IsEqual(ListItem.DBType,artist) + !String.IsEqual(ListItem.DBType,album)</visible>

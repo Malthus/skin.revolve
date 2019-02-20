@@ -2,7 +2,6 @@
 <window id="146">
     <defaultcontrol always="true">9000</defaultcontrol>
     <menucontrol>9000</menucontrol>
-    <onload>SetProperty(DialogInfoPage,41)</onload>
     <onload>SetFocus(9001,0,absolute)</onload>
 
     <controls>
@@ -20,7 +19,7 @@
             </include>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),41)</visible>
+                <visible>Container(9001).HasFocus(41)</visible>
 
                 <include content="HeaderForDialog">
                     <param name="label" value="$LOCALIZE[14116]" />
@@ -30,9 +29,9 @@
                     <include content="MarkupForInfoListForDialog">
                         <param name="pagecontrol" value="21" />
                     </include>
-                    
+
                     <include content="ItemsForInfoListInDialog" />
-                    
+
                     <content>
                         <item>
                             <label>$LOCALIZE[564]</label>
@@ -45,6 +44,10 @@
                         <item>
                             <label>$LOCALIZE[19114]</label>
                             <label2>$INFO[ListItem.AddonVersion]</label2>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[21802]</label>
+                            <label2>$INFO[ListItem.AddonSize]</label2>
                         </item>
                         <item>
                             <label>$LOCALIZE[126]</label>
@@ -75,8 +78,8 @@
             </control>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),42)</visible>
-                
+                <visible>Container(9001).HasFocus(42)</visible>
+
                 <include content="HeaderForDialog">
                     <param name="label" value="$LOCALIZE[21821]" />
                 </include>
@@ -84,53 +87,25 @@
                 <include content="TextboxForDialog">
                     <param name="posy" value="120" />
                     <param name="height" value="480" />
-                        <param name="textboxid" value="400" />
-                        <param name="scrollbarid" value="410" />
-                        <param name="label" value="$VAR[ContentDescription]" />
-                        <param name="onleft" value="9000" />
+                    <param name="textboxid" value="400" />
+                    <param name="scrollbarid" value="410" />
+                    <param name="label" value="$VAR[ContentDescription]" />
+                    <param name="onleft" value="9000" />
                 </include>
             </control>
 
-            <control type="group">
-                <visible>String.IsEmpty(ListItem.AddonBroken)</visible>
-                <include content="DialogListForFlag">
-                    <param name="posx" value="560" />
-                    <param name="posy" value="620" />
-                </include>
-            </control>
-
-            <control type="group">
-                <visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
-                <posx>560</posx>
-                <posy>620</posy>
-
-                <control type="image">
-                    <description>Broken Icon Image</description>
-                    <posx>16</posx>
-                    <posy>16</posy>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture>DefaultIconError.png</texture>
-                </control>
-
-                <control type="label">
-                    <description>Reason For Broken Label</description>
-                    <posx>80</posx>
-                    <posy>0</posy>
-                    <width>1140</width>
-                    <height>40</height>
-                    <align>left</align>
-                    <textcolor>$VAR[BackgroundColor]</textcolor>
-                    <label>$INFO[ListItem.AddonBroken]</label>
-                </control>
-            </control>
+            <include content="DialogListForFlag">
+                <param name="posx" value="560" />
+                <param name="posy" value="620" />
+            </include>
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
                     <param name="posy" value="240" />
                     <param name="height" value="440" />
                 </include>
-                <onright>410</onright>
+                <onright condition="Container(9001).HasFocus(41)">21</onright>
+                <onright condition="Container(9001).HasFocus(42)">410</onright>
 
                 <control type="list" id="9001">
                     <description>Info Page Selection Button List</description>
@@ -147,13 +122,9 @@
                     <content>
                         <item id="41">
                             <label>$LOCALIZE[14116]</label>
-                            <property name="InfoItemId">$NUMBER[41]</property>
-                            <onclick>SetProperty(DialogInfoPage,41)</onclick>
                         </item>
                         <item id="42">
                             <label>$LOCALIZE[21821]</label>
-                            <property name="InfoItemId">$NUMBER[42]</property>
-                            <onclick>SetProperty(DialogInfoPage,42)</onclick>
                         </item>
                     </content>
                 </control>

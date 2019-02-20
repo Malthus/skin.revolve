@@ -272,8 +272,6 @@
 
     <include name="ItemsForButtonListForDialog">
         <param name="listid" default="0" />
-        <param name="itemid" default="InfoItemId" />
-        <param name="property" default="DialogInfoPage" />
 
         <definition>
             <itemlayout height="40">
@@ -298,9 +296,6 @@
             <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <control type="button">
-                        <onfocus>SetProperty($PARAM[property],$INFO[Container(9001).ListItem.Property($PARAM[itemid])])</onfocus>
-                    </control>
                     <control type="image">
                         <width>480</width>
                         <height>40</height>
@@ -534,7 +529,7 @@
                     <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
                     <label>$PARAM[label] </label>
                 </control>
-                
+
                 <control type="scrollbar" id="$PARAM[scrollbarid]">
                     <visible>Control.IsVisible($PARAM[textboxid])</visible>
                     <include content="MarkupForScrollbarForDialog">

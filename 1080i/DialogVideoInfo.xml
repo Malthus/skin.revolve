@@ -4,7 +4,7 @@
     <menucontrol>9000</menucontrol>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh) + !String.IsEqual(Skin.String(Dialog.LastAutoRefresh),ListItem.Label)">AlarmClock(DialogRefreshTimer,SendClick(2003,6),00:01,silent)</onload>
     <onload condition="Skin.HasSetting(Settings.DialogInfoAutoRefresh)">Skin.SetString(Dialog.LastAutoRefresh,$INFO[ListItem.Label])</onload>
-    <onload>SetProperty(DialogInfoPage,41)</onload>
+    <onload condition="Control.IsVisible(4)">SendClick(2003,5)</onload>
     <onload>SetFocus(9001,0,absolute)</onload>
 
     <controls>
@@ -31,7 +31,7 @@
             </control>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),41)</visible>
+                <visible>Container(9001).HasFocus(41)</visible>
 
                 <include content="HeaderForDialog">
                     <param name="label" value="$LOCALIZE[14116]" />
@@ -148,7 +148,7 @@
             </control>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),42)</visible>
+                <visible>Container(9001).HasFocus(42)</visible>
 
                 <include content="HeaderForDialog">
                     <param name="label" value="$LOCALIZE[207]" />
@@ -156,16 +156,23 @@
 
                 <include content="TextboxForDialog">
                     <param name="textboxid" value="4" />
+                    <param name="posy" value="120" />
+                    <param name="height" value="480" />
+                </include>
+
+                <include content="TextboxForDialog">
+                    <param name="textboxid" value="60" />
                     <param name="scrollbarid" value="61" />
                     <param name="posy" value="120" />
                     <param name="height" value="480" />
+                    <param name="label" value="$INFO[ListItem.Plot]" />
                     <param name="onleft" value="9000" />
                     <param name="onright" value="61" />
                 </include>
             </control>
 
             <control type="group">
-                <visible>String.IsEqual(Window.Property(DialogInfoPage),43)</visible>
+                <visible>Container(9001).HasFocus(43)</visible>
 
                 <include content="HeaderForDialog">
                     <param name="label" value="$LOCALIZE[206]" />
@@ -206,9 +213,9 @@
                     <param name="posy" value="200" />
                     <param name="height" value="480" />
                 </include>
-                <onright condition="String.IsEqual(Window.Property(DialogInfoPage),41)">23</onright>
-                <onright condition="String.IsEqual(Window.Property(DialogInfoPage),42)">61</onright>
-                <onright condition="String.IsEqual(Window.Property(DialogInfoPage),43)">50</onright>
+                <onright condition="Container(9001).HasFocus(41)">23</onright>
+                <onright condition="Container(9001).HasFocus(42)">61</onright>
+                <onright condition="Container(9001).HasFocus(43)">50</onright>
 
                 <control type="list" id="9001">
                     <description>Info Page Selection Button List</description>
@@ -218,86 +225,19 @@
                         <param name="height" value="120" />
                     </include>
 
-                    <itemlayout height="40">
-                        <control type="image">
-                            <width>480</width>
-                            <height>40</height>
-                            <aspectratio>stretch</aspectratio>
-                            <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
-                        </control>
-                        <control type="label">
-                            <left>20</left>
-                            <width>440</width>
-                            <font>NormalButtonFont</font>
-                            <textcolor>$VAR[MainColor]</textcolor>
-                            <scroll>false</scroll>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                    </itemlayout>
-
-                    <focusedlayout height="40">
-                        <control type="group">
-                            <visible>Control.HasFocus(9001)</visible>
-                            <control type="button">
-                                <onfocus>SetProperty(DialogInfoPage,$INFO[Container(9001).ListItem.Property(InfoItemId)])</onfocus>
-                                <onfocus condition="Control.IsVisible(50) + Integer.IsEqual(Container(9001).ListItem.Property(InfoItemId),42)">SendClick(2003,5)</onfocus>
-                                <onfocus condition="Control.IsVisible(4) + Integer.IsEqual(Container(9001).ListItem.Property(InfoItemId),43)">SendClick(2003,5)</onfocus>
-                            </control>
-                            <control type="image">
-                                <width>480</width>
-                                <height>40</height>
-                                <aspectratio>stretch</aspectratio>
-                                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
-                            </control>
-                            <control type="label">
-                                <left>20</left>
-                                <width>440</width>
-                                <font>NormalButtonFont</font>
-                                <textcolor>$VAR[BackgroundColor]</textcolor>
-                                <align>center</align>
-                                <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>!Control.HasFocus(9001)</visible>
-                            <control type="image">
-                                <width>480</width>
-                                <height>40</height>
-                                <aspectratio>stretch</aspectratio>
-                                <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
-                            </control>
-                            <control type="label">
-                                <left>20</left>
-                                <width>440</width>
-                                <font>NormalButtonFont</font>
-                                <textcolor>$VAR[BackgroundColor]</textcolor>
-                                <align>center</align>
-                                <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </control>
-                    </focusedlayout>
+                    <include content="ItemsForButtonListForDialog">
+                        <param name="listid" value="9001" />
+                    </include>
 
                     <content>
                         <item id="41">
                             <label>$LOCALIZE[14116]</label>
-                            <property name="InfoItemId">$NUMBER[41]</property>
-                            <onclick>SetProperty(DialogInfoPage,41)</onclick>
                         </item>
                         <item id="42">
                             <label>$LOCALIZE[207]</label>
-                            <property name="InfoItemId">$NUMBER[42]</property>
-                            <onclick>SetProperty(DialogInfoPage,42)</onclick>
-                            <onclick condition="Control.IsVisible(50)">SendClick(2003,5)</onclick>
                         </item>
                         <item id="43">
                             <label>$LOCALIZE[206]</label>
-                            <property name="InfoItemId">$NUMBER[43]</property>
-                            <onclick>SetProperty(DialogInfoPage,43)</onclick>
-                            <onclick condition="Control.IsVisible(4)">SendClick(2003,5)</onclick>
                         </item>
                     </content>
                 </control>
