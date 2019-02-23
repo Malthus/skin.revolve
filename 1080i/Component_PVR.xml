@@ -6,7 +6,7 @@
                 <visible>Control.IsVisible(10)</visible>
                 <include content="BackgroundAnimationForBottomRing" />
             </control>
-        
+
             <control type="epggrid" id="10">
                 <viewtype label="19032">list</viewtype>
                 <animation effect="slide" start="0,1080" end="0,0" time="500">WindowOpen</animation>
@@ -15,7 +15,7 @@
                 <posx>40</posx>
                 <posy>108</posy>
                 <width>1820</width>
-                <height>760</height>
+                <height>839</height>
                 <pagecontrol>70</pagecontrol>
                 <scrolltime>200</scrolltime>
                 <progresstexture colordiffuse="$VAR[SelectColor]">white.png</progresstexture>
@@ -47,7 +47,7 @@
                 </rulerlayout>
                     
                 <channellayout height="80" width="480">
-                    <control type="image">                    
+                    <control type="image">
                         <posx>20</posx>
                         <posy>0</posy>
                         <width>480</width>
@@ -193,7 +193,7 @@
                 <param name="id" value="70" />
                 <param name="viewid" value="10" />
             </include>
-            
+
             <control type="group">
                 <visible>Control.IsVisible(10)</visible>
                 <control type="group">
