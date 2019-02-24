@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <expression name="HasFinalSkinSettingsValues">String.IsEqual(Skin.String(Revolve.Configuration),6.1.0)</expression>
+    <expression name="HasFinalSkinSettingsValues">String.IsEqual(Skin.String(Revolve.Configuration),6.2.0)</expression>
 
     <variable name="OverlayMessageForValues">
         <value condition="!String.IsEmpty(Skin.String(Revolve.Configuration))">$LOCALIZE[31264]</value>
@@ -29,6 +29,7 @@
                 <include content="RevolveJarvis411MigratedValues" />
                 <include content="RevolveLeia600MigratedValues" />
                 <include content="RevolveLeia610MigratedValues" />
+                <include content="RevolveLeia620MigratedValues" />
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>
             </control>
 
@@ -39,6 +40,7 @@
                 <texturefocus></texturefocus>
                 <include content="RevolveLeia600MigratedValues" />
                 <include content="RevolveLeia610MigratedValues" />
+                <include content="RevolveLeia620MigratedValues" />
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>
             </control>
 
@@ -48,6 +50,16 @@
                 <texturenofocus></texturenofocus>
                 <texturefocus></texturefocus>
                 <include content="RevolveLeia610MigratedValues" />
+                <include content="RevolveLeia620MigratedValues" />
+                <onfocus>SetFocus($PARAM[controlid])</onfocus>
+            </control>
+
+            <control type="button" id="$PARAM[buttonid]">
+                <description>Skin Settings Migration</description>
+                <visible>String.IsEqual(Skin.String(Revolve.Configuration),6.1.0)</visible>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <include content="RevolveLeia620MigratedValues" />
                 <onfocus>SetFocus($PARAM[controlid])</onfocus>
             </control>
 
@@ -98,6 +110,7 @@
             <include content="CircleItemsSettingsDefaultValues" />
             <include content="ExitMenuItemsDefaultValues" />
             <include content="MediaSettingsDefaultValues" />
+            <include content="ViewSettingsDefaultValues" />
             <include content="MiscellaneousSettingsDefaultValues" />
             <include content="DebugSettingsDefaultValues" />
 
@@ -131,6 +144,14 @@
             <include content="MediaSettingsRevolveLeiaMigratedValues" />
             
             <onfocus>Skin.SetString(Revolve.Configuration,6.1.0)</onfocus>
+        </definition>
+    </include>
+
+    <include name="RevolveLeia620MigratedValues">
+        <definition>
+            <include content="ViewSettingsDefaultValues" />
+            
+            <onfocus>Skin.SetString(Revolve.Configuration,6.2.0)</onfocus>
         </definition>
     </include>
 
@@ -367,6 +388,23 @@
         </definition>
     </include>
 
+    <include name="ViewSettingsDefaultValues">
+        <definition>
+            <onfocus>Skin.SetBool(View.EPGColors.Enabled)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.MovieColor,FF8020)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.NewsColor,008040)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ShowColor,FFFF00)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.SportsColor,FF0000)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ChildColor,00FFFF)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.MusicColor,00FF40)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ArtsColor,0080FF)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.SocialColor,B0B0B0)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ScienceColor,FF0080)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.HobbyColor,8080B0)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.SpecialColor,408080)</onfocus>
+        </definition>
+    </include>
+    
     <include name="MiscellaneousSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
