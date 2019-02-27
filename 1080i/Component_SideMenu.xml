@@ -855,6 +855,18 @@
         </definition>
     </include>
     
+    <include name="EPGColorsButtonForSideMenu">
+        <definition>
+            <control type="radiobutton" id="96">
+                <visible>Control.IsVisible(10)</visible>
+                <align>left</align>
+                <label>Genre Colors</label>
+                <selected>Skin.HasSetting(View.EPGColors.Enabled)</selected>
+                <onclick>Skin.ToggleSetting(View.EPGColors.Enabled)</onclick>
+            </control>
+        </definition>
+    </include>
+
     <include name="NameForThumbnailsButtonForSideMenu">
         <definition>
             <control type="radiobutton" id="97">
@@ -866,7 +878,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="DescriptionForLandscapeButtonForSideMenu">
         <definition>
             <control type="radiobutton" id="98">
