@@ -41,6 +41,14 @@
                 </control>
             </control>
 
+            <control type="button" id="41">
+                <description>EPG Guide Genre Colors Reset Button</description>
+                <visible allowhiddenfocus="true">false</visible>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <include>EPGGuideColorsSettingsDefaultValues</include>
+            </control>
+
             <control type="button" id="51">
                 <description>Background Visuals Settings Reset Button</description>
                 <visible allowhiddenfocus="true">false</visible>
