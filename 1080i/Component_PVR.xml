@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="EPGGridItemColorForPVR">
+        <value condition="!Skin.HasSetting(View.EPGColors.Enabled)">BackgroundColor</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),16)">$INFO[Skin.String(View.EPGColors.MovieColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),32)">$INFO[Skin.String(View.EPGColors.NewsColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),48)">$INFO[Skin.String(View.EPGColors.ShowColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),64)">$INFO[Skin.String(View.EPGColors.SportsColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),80)">$INFO[Skin.String(View.EPGColors.ChildColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),96)">$INFO[Skin.String(View.EPGColors.MusicColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),112)">$INFO[Skin.String(View.EPGColors.ArtsColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),128)">$INFO[Skin.String(View.EPGColors.SocialColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),144)">$INFO[Skin.String(View.EPGColors.ScienceColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),160)">$INFO[Skin.String(View.EPGColors.HobbyColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),176)">$INFO[Skin.String(View.EPGColors.SpecialColor)]</value>
+        <value>$INFO[Skin.String(View.EPGColors.OtherGenreColor)]</value>
+    </variable>
+
     <include name="EPGTimelineViewForPVR">
         <definition>
             <control type="group">
@@ -124,12 +140,18 @@
                         <include content="TinyCircleThumbnailIcon" />
                     </control>
                 </focusedchannellayout>
-                    
+
                 <itemlayout height="80" width="60">
                     <control type="image" id="2">
                         <width>60</width>
                         <height>80</height>
                         <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
+                    </control>
+                    <control type="image" id="2">
+                        <visible>Skin.HasSetting(View.EPGColors.Enabled)</visible>
+                        <width>60</width>
+                        <height>80</height>
+                        <texture colordiffuse="$VAR[EPGGridItemColorForPVR]" border="20">controls/rectangle-clear.png</texture>
                     </control>
                     <control type="label" id="1">
                         <posx>8</posx>
@@ -162,6 +184,12 @@
                         <width>60</width>
                         <height>80</height>
                         <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
+                    </control>
+                    <control type="image" id="2">
+                        <visible>Skin.HasSetting(View.EPGColors.Enabled)</visible>
+                        <width>60</width>
+                        <height>80</height>
+                        <texture colordiffuse="$VAR[EPGGridItemColorForPVR]" border="20">controls/rectangle-clear.png</texture>
                     </control>
                     <control type="label" id="1">
                         <posx>8</posx>
