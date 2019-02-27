@@ -8,6 +8,31 @@
         <value condition="String.IsEqual(ListItem.Overlay,OverlayRAR.png) | String.IsEqual(ListItem.Overlay,OverlayZIP.png)">flags/overlay-compressed.png</value>
     </variable>
 
+    <variable name="AudioVolumeImageForFlag">
+        <value condition="Player.Muted">flags/state-volumemutebug.png</value>
+        <value>flags/state-volumeon.png</value>
+    </variable>
+
+    <variable name="PlayerDirectionImageForFlag">
+        <value condition="Player.Playing + Player.IsTempo">flags/state-playspeed.png</value>
+        <value condition="Player.Playing">flags/state-play.png</value>
+        <value condition="Player.Paused">flags/state-pause.png</value>
+        <value condition="Player.Forwarding + [Player.Forwarding2x | Player.Forwarding4x | Player.Forwarding8x | Player.Forwarding16x | Player.Forwarding32x]">flags/state-fastforwardspeed.png</value>
+        <value condition="Player.Forwarding">flags/state-fastforward.png</value>
+        <value condition="Player.Rewinding + [Player.Rewinding2x | Player.Rewinding4x | Player.Rewinding8x | Player.Rewinding16x | Player.Rewinding32x]">flags/state-rewindspeed.png</value>
+        <value condition="Player.Rewinding">flags/state-rewind.png</value>
+    </variable>
+
+    <variable name="PlayerSpeedLabelForFlag">
+        <value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
+        <value condition="Player.Forwarding4x | Player.Rewinding4x">4x</value>
+        <value condition="Player.Forwarding8x | Player.Rewinding4x">8x</value>
+        <value condition="Player.Forwarding16x | Player.Rewinding16x">16x</value>
+        <value condition="Player.Forwarding32x | Player.Rewinding32x">32x</value>
+        <value condition="Player.IsTempo">$INFO[Player.PlaySpeed]</value>
+        <value></value>
+    </variable>
+
     <include name="BackgroundForFlag">
         <param name="visible" default="true" />
         <param name="height" default="60" />
@@ -1254,6 +1279,74 @@
                 <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 <param name="iconfilename" value="flags/property-locked.png" />
             </include>
+        </definition>
+    </include>
+
+    <include name="AudioVolumeFlag">
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">$VAR[AudioVolumeImageForFlag]</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <include content="LabelForFlag">
+                    <param name="visible" value="!Player.Muted" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="labelposy" value="$PARAM[labelposy]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="$INFO[Player.Volume]" />
+                </include>
+        </definition>
+    </include>
+
+    <include name="PlayerSpeedFlag">
+        <param name="visible" default="Player.HasMedia" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">$VAR[PlayerDirectionImageForFlag]</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <include content="LabelForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="labelposy" value="$PARAM[labelposy]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="$VAR[PlayerSpeedLabelForFlag]" />
+                </include>
+            </control>
         </definition>
     </include>
 
