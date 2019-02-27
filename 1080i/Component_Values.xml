@@ -110,7 +110,7 @@
             <include content="CircleItemsSettingsDefaultValues" />
             <include content="ExitMenuItemsDefaultValues" />
             <include content="MediaSettingsDefaultValues" />
-            <include content="ViewSettingsDefaultValues" />
+            <include content="EPGGuideColorsSettingsDefaultValues" />
             <include content="MiscellaneousSettingsDefaultValues" />
             <include content="DebugSettingsDefaultValues" />
 
@@ -149,7 +149,7 @@
 
     <include name="RevolveLeia620MigratedValues">
         <definition>
-            <include content="ViewSettingsDefaultValues" />
+            <include content="EPGGuideColorsSettingsDefaultValues" />
             
             <onfocus>Skin.SetString(Revolve.Configuration,6.2.0)</onfocus>
         </definition>
@@ -388,23 +388,23 @@
         </definition>
     </include>
 
-    <include name="ViewSettingsDefaultValues">
+    <include name="EPGGuideColorsSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(View.EPGColors.Enabled)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.MovieColor,FF8020)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.NewsColor,008040)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.ShowColor,FFFF00)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.SportsColor,FF0000)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.ChildColor,00FFFF)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.MusicColor,00FF40)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.ArtsColor,0080FF)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.SocialColor,B0B0B0)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.ScienceColor,FF0080)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.HobbyColor,8080B0)</onfocus>
-            <onfocus>Skin.SetString(View.EPGColors.SpecialColor,408080)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.MovieColor,FFFF8020)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.NewsColor,FF008040)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ShowColor,FFFFFF00)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.SportsColor,FFFF0000)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ChildColor,FF00FFFF)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.MusicColor,FF00FF40)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ArtsColor,FF0080FF)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.SocialColor,FFB0B0B0)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.ScienceColor,FFFF0080)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.HobbyColor,FF8080B0)</onfocus>
+            <onfocus>Skin.SetString(View.EPGColors.SpecialColor,FF408080)</onfocus>
         </definition>
     </include>
-    
+
     <include name="MiscellaneousSettingsDefaultValues">
         <definition>
             <onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
