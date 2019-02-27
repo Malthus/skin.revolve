@@ -14,9 +14,9 @@
             </include>
 
             <include content="LabelForDialog">
-                <param name="id" value="3" />
+                <param name="id" value="4" />
             </include>
-            
+
             <control type="list" id="10">
                 <include content="MarkupForListForDialog">
                     <param name="posy" value="120" />
@@ -29,7 +29,7 @@
                 <itemlayout height="40">
                     <include>NormalItemsForNormalListInDialog</include>
                 </itemlayout>
-                    
+
                 <focusedlayout height="40">
                     <control type="group">
                         <visible>Control.HasFocus(10)</visible>
@@ -41,7 +41,7 @@
                     </control>
                 </focusedlayout>
             </control>
-            
+
             <control type="scrollbar" id="60">
                 <visible>Control.IsVisible(10)</visible>
                 <include content="MarkupForScrollbarForDialog">

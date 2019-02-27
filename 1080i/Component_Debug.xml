@@ -783,16 +783,6 @@
                 <!-- Add-on Dialog Labels -->
 
                 <include content="DialogNameForDebug">
-                    <param name="dialog" value="script-RSS_Editor-rssEditor.xml" />    
-                    <param name="label" value="script-RSS_Editor-rssEditor.xml" />
-                </include>
-
-                <include content="DialogNameForDebug">
-                    <param name="dialog" value="script-RSS_Editor-setEditor.xml" />    
-                    <param name="label" value="script-RSS_Editor-setEditor.xml" />
-                </include>
-
-                <include content="DialogNameForDebug">
                     <param name="dialog" value="script-cu-lrclyrics-main.xml" />    
                     <param name="label" value="script-cu-lrclyrics-main.xml" />
                 </include>
@@ -800,6 +790,11 @@
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="script-globalsearch.xml" />    
                     <param name="label" value="script-globalsearch.xml" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="script-RSS_Editor.xml" />    
+                    <param name="label" value="script-RSS_Editor.xml" />
                 </include>
             </control>
 
