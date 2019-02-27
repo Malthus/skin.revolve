@@ -857,12 +857,11 @@
     
     <include name="EPGColorsButtonForSideMenu">
         <definition>
-            <control type="radiobutton" id="96">
+            <control type="button" id="96">
                 <visible>Control.IsVisible(10)</visible>
                 <align>left</align>
-                <label>Genre Colors</label>
-                <selected>Skin.HasSetting(View.EPGColors.Enabled)</selected>
-                <onclick>Skin.ToggleSetting(View.EPGColors.Enabled)</onclick>
+                <label>$LOCALIZE[31636]</label>
+                <onclick>ActivateWindow(1184)</onclick>
             </control>
         </definition>
     </include>
