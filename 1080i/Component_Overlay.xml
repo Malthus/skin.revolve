@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <constant name="PosYForLabelForOverlay">1030</constant>
+    <constant name="PosYForLabelForOverlay">1036</constant>
+    <constant name="PosYForIconForOverlay">1020</constant>
 
     <variable name="MediaLabelForOverlay">
         <value condition="Player.HasVideo">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</value>
@@ -64,7 +65,7 @@
     <include name="MediaPlayerOverlay">
         <definition>
             <control type="group">
-                <visible>Player.HasVideo | Player.HasAudio</visible>
+                <visible>Player.HasMedia</visible>
                 <include content="BackgroundForOverlay" />
                 <include content="ArtworkForOverlay" />
 
@@ -83,6 +84,31 @@
                         <param name="label" value="$VAR[TimeLabelForOverlay]" />
                     </include>
                 </control>
+
+                <include content="PlayerSpeedForOverlay" />
+                <include content="AudioVolumeForOverlay" />
+            </control>
+        </definition>
+    </include>
+
+    <include name="PlayerSpeedForOverlay">
+        <definition>
+            <control type="group">
+                <posx>1790</posx>
+                <posy>PosYForIconForOverlay</posy>
+                
+                <include content="PlayerSpeedFlag" />
+            </control>
+        </definition>
+    </include>
+
+    <include name="AudioVolumeForOverlay">
+        <definition>
+            <control type="group">
+                <posx>1852</posx>
+                <posy>PosYForIconForOverlay</posy>
+                
+                <include content="AudioVolumeFlag" />
             </control>
         </definition>
     </include>
