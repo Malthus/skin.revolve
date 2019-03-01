@@ -157,6 +157,25 @@
         </definition>
     </include>
 
+    <include name="ResumableFlag">
+        <param name="visible" default="ListItem.IsResumable" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-resumable.png" />
+            </include>
+        </definition>
+    </include>
+
     <include name="WatchedFlag">
         <param name="visible" default="String.IsEqual(ListItem.Overlay,OverlayWatched.png)" />
         <param name="width" default="62" />
@@ -293,6 +312,25 @@
                 <param name="flagcolor" value="$PARAM[flagcolor]" />
                 <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 <param name="iconfilename" value="flags/property-timer.png" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="MovieSetFlag">
+        <param name="visible" default="ListItem.IsCollection" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-movieset.png" />
             </include>
         </definition>
     </include>
@@ -1364,6 +1402,10 @@
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
 
+                <include content="ResumableFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
                 <include content="WatchedFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
@@ -1386,9 +1428,13 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0) | ListItem.IsRecording | ListItem.HasTimer]" />
+                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [List.IsResumable | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0) | ListItem.IsRecording | ListItem.HasTimer]" />
                 </include>
 
+                <include content="MovieSetFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
                 <include content="YearFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
@@ -1407,7 +1453,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [ListItem.IsCollection | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">
@@ -1523,6 +1569,10 @@
                 <orientation>horizontal</orientation>
                 <align>$PARAM[align]</align>
 
+                <include content="ResumableFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
                 <include content="WatchedFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
@@ -1545,9 +1595,13 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0) | ListItem.IsRecording | ListItem.HasTimer]" />
+                    <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [List.IsResumable | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0) | ListItem.IsRecording | ListItem.HasTimer]" />
                 </include>
 
+                <include content="MovieSetFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
                 <include content="YearFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
@@ -1566,7 +1620,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [ListItem.IsCollection | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">
