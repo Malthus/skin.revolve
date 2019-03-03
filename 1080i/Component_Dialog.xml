@@ -51,20 +51,6 @@
         </definition>
     </include>
 
-    <include name="HelpButtonForDialog">
-        <param name="id" default="0" />
-        <param name="posy" default="0" />
-
-        <definition>
-            <control type="radiobutton" id="$PARAM[id]">
-                <posy>$PARAM[posy]</posy>
-                <label>$LOCALIZE[10043]</label>
-                <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
-                <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
-            </control>
-        </definition>
-    </include>
-    
     <include name="AddButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -176,21 +162,6 @@
         </definition>
     </include>
 
-    <include name="SetHelpButtonForDialog">
-        <param name="id" default="26" />
-        <param name="posy" default="0" />
-
-        <definition>
-            <control type="radiobutton" id="$PARAM[id]">
-                <description>Help Radiobutton</description>
-                <posy>$PARAM[posy]</posy>
-                <label>$LOCALIZE[10043]</label>
-                <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
-                <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
-            </control>
-        </definition>
-    </include>
-    
     <include name="SetUserRatingButtonForDialog">
         <param name="id" default="7" />
         <param name="posy" default="0" />
@@ -235,6 +206,21 @@
             <control type="button" id="$PARAM[id]">
                 <posy>$PARAM[posy]</posy>
                 <label>$LOCALIZE[222]</label>
+            </control>
+        </definition>
+    </include>
+
+    <include name="DialogHelpButtonForDialog">
+        <param name="id" default="26" />
+        <param name="posy" default="0" />
+
+        <definition>
+            <control type="radiobutton" id="$PARAM[id]">
+                <description>Help Radiobutton</description>
+                <posy>$PARAM[posy]</posy>
+                <label>$LOCALIZE[10043]</label>
+                <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
+                <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
             </control>
         </definition>
     </include>
