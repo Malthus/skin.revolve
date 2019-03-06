@@ -193,7 +193,7 @@
             <include content="RevolveMenu">
                 <param name="texture" value="circle/favourites.png" />
                 <param name="label" value="$LOCALIZE[1036]" />
-                <param name="fallback" value="defaultfavourite.jpg" />
+                <param name="fallback" value="defaultfavourite.png" />
             </include>
         </control>
         
@@ -201,7 +201,7 @@
             <visible>!Skin.HasSetting(FavouritesMenu.Default)</visible>
             <include content="CircleMenu">
                 <param name="label" value="$LOCALIZE[1036]" />
-                <param name="fallback" value="defaultfavourite.jpg" />
+                <param name="fallback" value="defaultfavourite.png" />
             </include>
         </control>
         
