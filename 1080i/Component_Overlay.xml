@@ -3,6 +3,8 @@
     <constant name="PosYForLabelForOverlay">1036</constant>
     <constant name="PosYForIconForOverlay">1020</constant>
 
+    <expression name="ShowBackdropOverlay">System.HasVisibleModalDialog</expression>
+    
     <variable name="TextColorForOverlay">
         <value condition="Skin.HasSetting(Media.OverlayBackground.Visible)">$VAR[SecondaryColor]</value>
         <value>$VAR[TextColor]</value>
@@ -122,7 +124,7 @@
     <include name="BackdropForOverlay">
         <definition>
             <control type="image">
-                <visible>System.HasVisibleModalDialog</visible>
+                <visible>$EXP[ShowBackdropOverlay]</visible>
                 <animation effect="fade" start="0" end="100" time="DefaultFadeDuration">Visible</animation>
                 <animation effect="fade" start="100" end="0" time="DefaultFadeDuration">Hidden</animation>
 
