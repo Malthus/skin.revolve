@@ -891,23 +891,17 @@
     
         <definition>
             <itemlayout height="40">
-                <include content="NormalDefaultItemsForHalfListInDialog">
-                    <param name="texture" value="$PARAM[texture]" />
-                </include>
+                <include content="NormalDefaultItemsForHalfListInDialog" />
             </itemlayout>
                 
             <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include content="FocusedDefaultItemsForHalfListInDialog">
-                        <param name="texture" value="$PARAM[texture]" />
-                    </include>
+                    <include content="FocusedDefaultItemsForHalfListInDialog" />
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include content="SelectedDefaultItemsForHalfListInDialog">
-                        <param name="texture" value="$PARAM[texture]" />
-                    </include>
+                    <include content="SelectedDefaultItemsForHalfListInDialog" />
                 </control>
             </focusedlayout>
         </definition>
