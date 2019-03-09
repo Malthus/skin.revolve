@@ -27,6 +27,8 @@
 
                 <include content="MediaPlayerOverlay" />
 
+                <include content="BackdropForOverlay" />
+
                 <include content="ValuesOverlay">
                     <param name="buttonid" value="$PARAM[buttonid]" />
                     <param name="controlid" value="$PARAM[controlid]" />
@@ -113,6 +115,22 @@
                 <posy>PosYForIconForOverlay</posy>
                 
                 <include content="AudioVolumeFlag" />
+            </control>
+        </definition>
+    </include>
+
+    <include name="BackdropForOverlay">
+        <definition>
+            <control type="image">
+                <visible>System.HasVisibleModalDialog</visible>
+                <animation effect="fade" start="0" end="100" time="DefaultFadeDuration">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="DefaultFadeDuration">Hidden</animation>
+
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>1080</height>
+                <texture colordiffuse="$VAR[FademaskColor]" background="true">black.png</texture>
             </control>
         </definition>
     </include>

@@ -296,24 +296,14 @@
         <param name="height" default="220" />
 
         <definition>
-            <control type="group">
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>-540</posy>
-                    <width>1920</width>
-                    <height>2160</height>
-                    <texture colordiffuse="$VAR[FademaskColor]" background="true">black.png</texture>
-                </control>
-
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>1920</width>
-                    <height>$PARAM[height]</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
-                </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1920</width>
+                <height>$PARAM[height]</height>
+                <fadetime>100</fadetime>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
             </control>
         </definition>
     </include>
