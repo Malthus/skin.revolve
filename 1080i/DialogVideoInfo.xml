@@ -26,7 +26,7 @@
                 <description>Dialog Icon For Cast List</description>
                 <visible>Control.HasFocus(50)</visible>
                 <include content="SmallIconForWindowForDialog">
-                    <param name="texture" value="$INFO[Container(50).ListItem.Icon]" />
+                    <param name="icontexture" value="$INFO[Container(50).ListItem.Icon]" />
                 </include>
             </control>
 
