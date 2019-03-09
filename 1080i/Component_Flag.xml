@@ -958,7 +958,7 @@
 
         <definition>
             <control type="group">
-                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + [String.Contains($PARAM[fileextensionvalue],jpg) | String.Contains($PARAM[fileextensionvalue],jpeg) | String.Contains($PARAM[fileextensionvalue],png) | String.Contains($PARAM[fileextensionvalue],gif)]</visible>
+                <visible>Skin.HasSetting(Media.TechnicalFlags.Visible) + [String.EndsWith($PARAM[fileextensionvalue],jpg) | String.EndsWith($PARAM[fileextensionvalue],jpeg) | String.EndsWith($PARAM[fileextensionvalue],png) | String.EndsWith($PARAM[fileextensionvalue],gif)]</visible>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
 
@@ -976,7 +976,7 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="visible" value="String.IsEqual($PARAM[fileextensionvalue],jpg)" />
+                    <param name="visible" value="String.EndsWith($PARAM[fileextensionvalue],jpg) | String.EndsWith($PARAM[fileextensionvalue],jpeg)" />
                     <param name="height" value="$PARAM[height]" />
                     <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
@@ -984,12 +984,20 @@
                     <param name="label" value="JPEG" />
                 </include>
                 <include content="LabelForFlag">
-                    <param name="visible" value="!String.IsEqual($PARAM[fileextensionvalue],jpg)" />
+                    <param name="visible" value="String.EndsWith($PARAM[fileextensionvalue],gif)" />
                     <param name="height" value="$PARAM[height]" />
                     <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                    <param name="label" value="[UPPERCASE]$INFO[$PARAM[fileextensionvalue]][/UPPERCASE]" />
+                    <param name="label" value="GIF" />
+                </include>
+                <include content="LabelForFlag">
+                    <param name="visible" value="String.EndsWith($PARAM[fileextensionvalue],png)" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="labelposy" value="$PARAM[labelposy]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="PNG" />
                 </include>
             </control>
         </definition>
@@ -1945,7 +1953,7 @@
                 <include content="PictureCodecFlag">
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                    <param name="filenamevalue" value="Slideshow.Filename" />
+                    <param name="fileextensionvalue" value="Slideshow.Filename" />
                 </include>
                 <include content="PictureSizeFlag">
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
