@@ -230,7 +230,7 @@
                         <font>MediumViewFont</font>
                         <align>left</align>
                         <scroll>false</scroll>
-                        <label>$INFO[ListItem.Property(GenreType)] $INFO[ListItem.Label]</label>
+                        <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label" id="1">
                         <visible>!String.IsEmpty(ListItem.Label)</visible>
@@ -263,7 +263,7 @@
                         <font>MediumViewFont</font>
                         <align>left</align>
                         <scroll>true</scroll>
-                        <label>$INFO[ListItem.Property(GenreType)] $INFO[ListItem.Label]</label>
+                        <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label" id="1">
                         <visible>!String.IsEmpty(ListItem.Label)</visible>
