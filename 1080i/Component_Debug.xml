@@ -431,6 +431,11 @@
                 </include>
 
                 <include content="DialogNameForDebug">
+                    <param name="dialog" value="busydialognocancel" />
+                    <param name="label" value="busydialognocancel (DialogBusy.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
                     <param name="dialog" value="contentsettings" />
                     <param name="label" value="contentsettings (DialogSettings.xml)" />
                 </include>
@@ -498,6 +503,16 @@
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="gamevolume" />
                     <param name="label" value="gamevolume (DialogVolumeBar.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="infoprovidersettings" />
+                    <param name="label" value="infoprovidersettings (DialogSettings.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="libexportsettings" />
+                    <param name="label" value="libexportsettings (DialogSettings.xml)" />
                 </include>
 
                 <include content="DialogNameForDebug">
@@ -634,7 +649,12 @@
                     <param name="dialog" value="pvrrecordinginfo" />
                     <param name="label" value="pvrrecordinginfo (DialogPVRInfo.xml)" />
                 </include>
-            
+
+                <include content="DialogNameForDebug">
+                    <param name="dialog" value="pvrrecordingsettings" />
+                    <param name="label" value="pvrrecordingsettings (DialogSettings.xml)" />
+                </include>
+
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="pvrtimersetting" />
                     <param name="label" value="pvrtimersetting (DialogSettings.xml)" />
