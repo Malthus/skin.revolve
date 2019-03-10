@@ -1350,7 +1350,7 @@
         <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
-        <param name="hightlightcolor" default="$VAR[HighlightColor]" />
+        <param name="highlightcolor" default="$VAR[HighlightColor]" />
 
         <definition>
                 <include content="BackgroundForFlag">
@@ -1362,7 +1362,7 @@
                 <include content="HighlightForFlag">
                     <param name="visible" value="Player.Muted" />
                     <param name="height" value="$PARAM[height]" />
-                    <param name="hightlightcolor" value="$PARAM[hightlightcolor]" />
+                    <param name="highlightcolor" value="$PARAM[highlightcolor]" />
                 </include>
 
                 <control type="image">
@@ -1389,6 +1389,7 @@
         <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="highlightcolor" default="$VAR[HighlightColor]" />
 
         <definition>
             <control type="group">
@@ -1405,7 +1406,7 @@
                 <include content="HighlightForFlag">
                     <param name="visible" value="Player.Paused" />
                     <param name="height" value="$PARAM[height]" />
-                    <param name="hightlightcolor" value="$PARAM[hightlightcolor]" />
+                    <param name="highlightcolor" value="$PARAM[highlightcolor]" />
                 </include>
 
                 <control type="image">
