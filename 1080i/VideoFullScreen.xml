@@ -3,6 +3,13 @@
     <defaultcontrol></defaultcontrol>
 
     <controls>
+        <control type="group" id="1">
+            <description>Channel Number Input Label</description>
+            <include content="ChannelInputForMessage">
+                <param name="value" value="PVR.ChannelNumberInput" />
+            </include>
+        </control>
+
         <control type="group">
             <include content="InvisibleLabel">
                 <param name="id" value="10" />
