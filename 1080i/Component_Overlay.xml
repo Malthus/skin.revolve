@@ -100,23 +100,31 @@
     </include>
 
     <include name="PlayerSpeedForOverlay">
+        <param name="flagcolor" default="$VAR[TextColorForOverlay]" />
+
         <definition>
             <control type="group">
                 <posx>1790</posx>
                 <posy>PosYForIconForOverlay</posy>
                 
-                <include content="PlayerSpeedFlag" />
+                <include content="PlayerSpeedFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                </include>
             </control>
         </definition>
     </include>
 
     <include name="AudioVolumeForOverlay">
+        <param name="flagcolor" default="$VAR[TextColorForOverlay]" />
+
         <definition>
             <control type="group">
                 <posx>1852</posx>
                 <posy>PosYForIconForOverlay</posy>
                 
-                <include content="AudioVolumeFlag" />
+                <include content="AudioVolumeFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                </include>
             </control>
         </definition>
     </include>
