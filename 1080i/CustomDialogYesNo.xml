@@ -4,6 +4,10 @@
     <menucontrol>9000</menucontrol>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="CustomDialogYesNo.xml" />
+        </include>
+
         <control type="group">
             <posy>PosYForThreeLinesDialog</posy>
             <include content="FadeAnimationForDialogWindow" />

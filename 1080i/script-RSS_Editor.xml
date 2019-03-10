@@ -4,6 +4,10 @@
     <menucontrol>9000</menucontrol>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="script-RSS_Editor.xml" />
+        </include>
+
         <control type="group">
             <posy>PosYForThirteenLinesDialog</posy>
             <include content="WindowForDialog">

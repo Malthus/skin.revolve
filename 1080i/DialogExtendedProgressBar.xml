@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="151">
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="DialogExtendedProgressBar.xml" />
+        </include>
+
         <control type="group">
             <posx>0</posx>
             <posy>200</posy>

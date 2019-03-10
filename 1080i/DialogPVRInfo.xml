@@ -5,6 +5,10 @@
     <onload>SetFocus(9001,0,absolute)</onload>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="DialogPVRInfo.xml" />
+        </include>
+
         <control type="group">
             <posy>PosYForFifteenLinesDialog</posy>
             <include content="FadeAnimationForDialogWindow" />

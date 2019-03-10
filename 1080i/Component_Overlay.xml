@@ -3,8 +3,6 @@
     <constant name="PosYForLabelForOverlay">1036</constant>
     <constant name="PosYForIconForOverlay">1020</constant>
 
-    <expression name="ShowBackdropOverlay">System.HasVisibleModalDialog</expression>
-    
     <variable name="TextColorForOverlay">
         <value condition="Skin.HasSetting(Media.OverlayBackground.Visible)">$VAR[SecondaryColor]</value>
         <value>$VAR[TextColor]</value>
@@ -28,8 +26,6 @@
                 <include content="BackButtonOverlay" />
 
                 <include content="MediaPlayerOverlay" />
-
-                <include content="BackdropForOverlay" />
 
                 <include content="ValuesOverlay">
                     <param name="buttonid" value="$PARAM[buttonid]" />
@@ -125,22 +121,6 @@
                 <include content="AudioVolumeFlag">
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                 </include>
-            </control>
-        </definition>
-    </include>
-
-    <include name="BackdropForOverlay">
-        <definition>
-            <control type="image">
-                <visible>$EXP[ShowBackdropOverlay]</visible>
-                <animation effect="fade" start="0" end="100" time="DefaultFadeDuration">Visible</animation>
-                <animation effect="fade" start="100" end="0" time="DefaultFadeDuration">Hidden</animation>
-
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1920</width>
-                <height>1080</height>
-                <texture colordiffuse="$VAR[FademaskColor]" background="true">black.png</texture>
             </control>
         </definition>
     </include>

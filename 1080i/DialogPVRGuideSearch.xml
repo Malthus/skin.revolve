@@ -4,6 +4,10 @@
     <menucontrol>9000</menucontrol>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="DialogPVRGuideSearch.xml" />
+        </include>
+
         <control type="group">
             <posy>PosYForTwelveLinesDialog</posy>
             <include content="FadeAnimationForDialogWindow" />

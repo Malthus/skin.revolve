@@ -3,6 +3,10 @@
     <defaultcontrol always="true">1000</defaultcontrol>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="DialogContextMenu.xml" />
+        </include>
+
         <control type="group">
             <posx>681</posx>
             <posy>300</posy>

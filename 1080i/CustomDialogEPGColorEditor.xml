@@ -4,6 +4,10 @@
     <menucontrol>9000</menucontrol>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="CustomDialogEPGColorEditor.xml" />
+        </include>
+
         <control type="group">
             <posy>PosYForFourteenLinesDialog</posy>
             <include content="FadeAnimationForDialogWindow" />

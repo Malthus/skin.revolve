@@ -5,6 +5,10 @@
     <onload condition="!String.IsEqual(Window.Property(CustomOptionType),M) + !String.IsEqual(Window.Property(CustomOptionType),S) + !String.IsEqual(Window.Property(CustomOptionType),D)">SetProperty(CustomOptionType,A)</onload>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="CustomDialogOptionEditor.xml" />
+        </include>
+
         <control type="group">
             <posy>PosYForThirteenLinesDialog</posy>
             <include content="FadeAnimationForDialogWindow" />

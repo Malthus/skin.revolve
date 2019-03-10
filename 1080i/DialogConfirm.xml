@@ -4,6 +4,10 @@
     <menucontrol>9000</menucontrol>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="DialogConfirm.xml" />
+        </include>
+
         <include condition="!Window.Is(progressdialog)">DialogConfirmWindow</include>
         <include condition="Window.Is(progressdialog)">DialogProgressBarWindow</include>
     </controls>

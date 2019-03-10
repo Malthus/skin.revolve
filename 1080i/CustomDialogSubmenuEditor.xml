@@ -5,6 +5,10 @@
     <onunload>RunScript(script.revolve.service,ClearProperties,CustomSubmenu%02dOption,1192)</onunload>
 
     <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="CustomDialogSubmenuEditor.xml" />
+        </include>
+
         <control type="group">
             <posy>PosYForThirteenLinesDialog</posy>
             <include content="FadeAnimationForDialogWindow" />
