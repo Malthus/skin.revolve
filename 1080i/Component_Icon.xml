@@ -208,9 +208,13 @@
     </include>
 
     <include name="DefaultCirclePlayerMediaIcon">
+        <param name="backgroundcolor" default="$VAR[MainColor]" />
+    
         <definition>
             <control type="group">
-                <include content="BackgroundForDefaultCircleThumbnailIcon" />
+                <include content="BackgroundForDefaultCircleThumbnailIcon">
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
         
                 <control type="image">
                     <posx>4</posx>
