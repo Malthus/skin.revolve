@@ -151,7 +151,7 @@
     <include name="ArtworkForOverlay">
         <definition>
             <control type="group">
-                <visible>[Player.HasVideo | Player.HasAudio] + Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
+                <visible>Player.HasMedia + Skin.HasSetting(Media.PlayerArtwork.Visible)</visible>
 
                 <control type="group">
                     <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),1)</visible>
