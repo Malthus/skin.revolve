@@ -66,7 +66,7 @@
         <definition>
             <control type="image">
                 <visible>$PARAM[visible]</visible>
-                <animation effect="fade" start="0" end="100" time="4000" delay="8000" tween="sine" condition="true" pulse="true">Conditional</animation>            
+                <animation effect="fade" start="0" end="100" time="2000" delay="4000" tween="sine" condition="true" pulse="true">Conditional</animation>            
                 <width>$PARAM[height]</width>
                 <height>$PARAM[height]</height>
                 <texture colordiffuse="$PARAM[highlightcolor]">flags/property-background.png</texture>
@@ -1346,6 +1346,7 @@
     </include>
 
     <include name="AudioVolumeFlag">
+        <param name="visible" default="Player.Muted | Window.IsVisible(volumebar)" />
         <param name="width" default="62" />
         <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
@@ -1353,6 +1354,8 @@
         <param name="highlightcolor" default="$VAR[HighlightColor]" />
 
         <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
                 <include content="BackgroundForFlag">
                     <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
@@ -1380,6 +1383,7 @@
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[Player.Volume]" />
                 </include>
+            </control>
         </definition>
     </include>
 
