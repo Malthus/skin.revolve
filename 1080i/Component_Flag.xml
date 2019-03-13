@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <expression name="EPGGenreTypeVisible">[String.IsEqual(ListItem.Property(GenreType),16) | String.IsEqual(ListItem.Property(GenreType),32) | String.IsEqual(ListItem.Property(GenreType),48) | String.IsEqual(ListItem.Property(GenreType),64) | String.IsEqual(ListItem.Property(GenreType),80) | String.IsEqual(ListItem.Property(GenreType),96) | String.IsEqual(ListItem.Property(GenreType),112) | String.IsEqual(ListItem.Property(GenreType),128) | String.IsEqual(ListItem.Property(GenreType),144) | String.IsEqual(ListItem.Property(GenreType),160) | String.IsEqual(ListItem.Property(GenreType),176)]</expression>
+
     <variable name="ImageForOverlayFlag">
         <value condition="ListItem.IsPlaying">flags/overlay-playing.png</value>
         <value condition="ListItem.HasTimer">flags/overlay-timer.png</value>
@@ -33,6 +35,35 @@
         <value></value>
     </variable>
 
+    <variable name="EPGGenreTypeColorForFlag">
+        <value condition="String.IsEqual(ListItem.Property(GenreType),16)">$INFO[Skin.String(View.EPGColors.MovieColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),32)">$INFO[Skin.String(View.EPGColors.NewsColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),48)">$INFO[Skin.String(View.EPGColors.ShowColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),64)">$INFO[Skin.String(View.EPGColors.SportsColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),80)">$INFO[Skin.String(View.EPGColors.ChildColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),96)">$INFO[Skin.String(View.EPGColors.MusicColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),112)">$INFO[Skin.String(View.EPGColors.ArtsColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),128)">$INFO[Skin.String(View.EPGColors.SocialColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),144)">$INFO[Skin.String(View.EPGColors.ScienceColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),160)">$INFO[Skin.String(View.EPGColors.HobbyColor)]</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),176)">$INFO[Skin.String(View.EPGColors.SpecialColor)]</value>
+        <value>$INFO[Skin.String(View.EPGColors.OtherGenreColor)]</value>
+    </variable>
+
+    <variable name="EPGGenreTypeImageForFlag">
+        <value condition="String.IsEqual(ListItem.Property(GenreType),16)">flags/property-genretype-movie.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),32)">flags/property-genretype-news.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),48)">flags/property-genretype-show.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),64)">flags/property-genretype-sports.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),80)">flags/property-genretype-child.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),96)">flags/property-genretype-music.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),112)">flags/property-genretype-arts.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),128)">flags/property-genretype-social.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),144)">flags/property-genretype-science.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),160)">flags/property-genretype-hobby.png</value>
+        <value condition="String.IsEqual(ListItem.Property(GenreType),176)">flags/property-genretype-special.png</value>
+    </variable>
+    
     <include name="BackgroundForFlag">
         <param name="visible" default="true" />
         <param name="height" default="60" />
@@ -329,6 +360,33 @@
                 <param name="flagcolor" value="$PARAM[flagcolor]" />
                 <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 <param name="iconfilename" value="flags/property-timer.png" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="EPGGenreTypeFlag">
+        <param name="visible" default="$EXP[EPGGenreTypeVisible]" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + Skin.HasSetting(View.EPGColors.Enabled) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$VAR[EPGGenreTypeColorForFlag]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="$VAR[EPGGenreTypeImageForFlag]" />
+            </include>
+            <include content="BooleanFlag">
+                <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + !Skin.HasSetting(View.EPGColors.Enabled) + $PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="$VAR[EPGGenreTypeImageForFlag]" />
             </include>
         </definition>
     </include>
@@ -1474,6 +1532,10 @@
                     <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [List.IsResumable | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0) | ListItem.IsRecording | ListItem.HasTimer]" />
                 </include>
 
+                <include content="EPGGenreTypeFlag">
+                    <param name="flagcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
                 <include content="MovieSetFlag">
                     <param name="flagcolor" value="$VAR[MainColor]" />
                     <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
@@ -1496,7 +1558,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [ListItem.IsCollection | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [$EXP[EPGGenreTypeVisible] | ListItem.IsCollection | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">
@@ -1641,6 +1703,10 @@
                     <param name="visible" value="Skin.HasSetting(Media.PersonalFlags.Visible) + [List.IsResumable | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Integer.IsGreater(ListItem.UserRating,0) | Integer.IsGreater(ListItem.PlayCount,0) | ListItem.IsRecording | ListItem.HasTimer]" />
                 </include>
 
+                <include content="EPGGenreTypeFlag">
+                    <param name="flagcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[flagcolor]" />
+                </include>
                 <include content="MovieSetFlag">
                     <param name="flagcolor" value="$PARAM[backgroundcolor]" />
                     <param name="backgroundcolor" value="$PARAM[flagcolor]" />
@@ -1663,7 +1729,7 @@
                 </include>
 
                 <include content="SpacerFlag">
-                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [ListItem.IsCollection | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
+                    <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + [$EXP[EPGGenreTypeVisible] | ListItem.IsCollection | !String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration)]" />
                 </include>
 
                 <include content="RatingFlag">

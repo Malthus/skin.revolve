@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <variable name="EPGGridItemColorForPVR">
-        <value condition="!Skin.HasSetting(View.EPGColors.Enabled)">BackgroundColor</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),16)">$INFO[Skin.String(View.EPGColors.MovieColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),32)">$INFO[Skin.String(View.EPGColors.NewsColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),48)">$INFO[Skin.String(View.EPGColors.ShowColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),64)">$INFO[Skin.String(View.EPGColors.SportsColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),80)">$INFO[Skin.String(View.EPGColors.ChildColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),96)">$INFO[Skin.String(View.EPGColors.MusicColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),112)">$INFO[Skin.String(View.EPGColors.ArtsColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),128)">$INFO[Skin.String(View.EPGColors.SocialColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),144)">$INFO[Skin.String(View.EPGColors.ScienceColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),160)">$INFO[Skin.String(View.EPGColors.HobbyColor)]</value>
-        <value condition="String.IsEqual(ListItem.Property(GenreType),176)">$INFO[Skin.String(View.EPGColors.SpecialColor)]</value>
-        <value>$INFO[Skin.String(View.EPGColors.OtherGenreColor)]</value>
-    </variable>
-
     <include name="GenreBorderForEPGTimelineViewForPVR">
         <definition>
             <control type="image" id="2">
