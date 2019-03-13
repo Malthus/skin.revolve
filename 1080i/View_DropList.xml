@@ -29,7 +29,6 @@
                     <include content="VisibilityForVerticalIcon" />
                     <posx>120</posx>
                     <posy>150</posy>
-                    <include content="ShadowForVerticalPosterIcon" />
                     <include content="VerticalPosterIcon" />
                     <include content="OverlayForVerticalPosterIcon" />
                 </control>
@@ -38,7 +37,6 @@
                     <include content="VisibilityForSquareIcon" />
                     <posx>120</posx>
                     <posy>150</posy>
-                    <include content="ShadowForSquarePosterIcon" />
                     <include content="SquarePosterIcon" />
                     <include content="OverlayForSquarePosterIcon" />
                 </control>
@@ -93,9 +91,9 @@
                 
                 <control type="group">
                     <include content="VisibilityOfSortLetterInView" />
-                    <posx>770</posx>
-                    <posy>149</posy>
-                    <include content="ShadowForDefaultCircleThumbnailIcon" />
+                    <posx>840</posx>
+                    <posy>210</posy>
+                    <animation effect="zoom" end="120" center="auto" condition="true">Conditional</animation>
                     <include content="DefaultCircleSortLetterIcon" />
                 </control>
             </control>
@@ -126,7 +124,6 @@
                     <posy>-10</posy>
                     <width>310</width>
                     <height>310</height>
-                    <include content="ShadowForDefaultCircleThumbnailIcon" />
                     <include content="DefaultCircleThumbnailIcon" />
                     <include content="FadeMaskForDefaultCircleThumbnailIcon" />
                     <include content="OverlayForDefaultCircleThumbnailIcon" />
@@ -134,7 +131,7 @@
             </itemlayout>
         </definition>
     </include>
-    
+
     <include name="FocusedListItemForDropListView">
         <definition>
             <focusedlayout width="1080" height="310">
@@ -143,23 +140,13 @@
                     <posy>0</posy>
                     <width>310</width>
                     <height>310</height>
-                    <animation effect="zoom" center="auto" start="80" end="100" time="200" reversible="false">focus</animation>
-                    <animation effect="zoom" center="auto" start="100" end="80" time="200" reversible="false">unfocus</animation>
+                    <animation effect="zoom" center="auto" start="80" end="120" time="200" reversible="false">focus</animation>
+                    <animation effect="zoom" center="auto" start="120" end="80" time="200" reversible="false">unfocus</animation>
 
                     <control type="group">
-                        <animation effect="slide" start="0,31" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollNext">focus</animation>
-                        <animation effect="slide" start="0,0" end="0,-35" time="200" reversible="false" condition="Container(51).OnScrollNext">unfocus</animation>
-                        <animation effect="slide" start="0,-31" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollPrevious">focus</animation>
-                        <animation effect="slide" start="0,-62" end="0,-35" time="200" reversible="false" condition="Container(51).OnScrollPrevious">unfocus</animation>
+                        <animation effect="slide" start="0,30" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollNext">focus</animation>
+                        <animation effect="slide" start="0,0" end="0,-30" time="200" reversible="false" condition="Container(51).OnScrollPrevious">unfocus</animation>
                         <posy>20</posy>
-                        
-                        <control type="group">
-                            <animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">focus</animation>
-                            <animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">unfocus</animation>
-                            <include content="ShadowForDefaultCircleThumbnailIcon" />
-                        </control>
-
-                        <include content="ShadowForDefaultCircleThumbnailIcon" />
                         <include content="DefaultCircleThumbnailIcon" />
 
                         <control type="group">
