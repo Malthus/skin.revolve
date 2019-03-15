@@ -372,22 +372,30 @@
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <include content="BooleanFlag">
-                <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + Skin.HasSetting(View.EPGColors.Enabled) + $PARAM[visible]" />
-                <param name="width" value="$PARAM[width]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="flagcolor" value="$VAR[EPGGenreTypeColorForFlag]" />
-                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="$VAR[EPGGenreTypeImageForFlag]" />
-            </include>
-            <include content="BooleanFlag">
-                <param name="visible" value="Skin.HasSetting(Media.InformationFlags.Visible) + !Skin.HasSetting(View.EPGColors.Enabled) + $PARAM[visible]" />
-                <param name="width" value="$PARAM[width]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="flagcolor" value="$PARAM[flagcolor]" />
-                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="$VAR[EPGGenreTypeImageForFlag]" />
-            </include>
+            <control type="group">
+                <visible>Skin.HasSetting(Media.InformationFlags.Visible) + $PARAM[visible]</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <include content="HighlightForFlag">
+                    <param name="visible" value="Skin.HasSetting(View.EPGColors.Enabled)" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="highlightcolor" value="$VAR[EPGGenreTypeColorForFlag]" />
+                </include>
+
+                <control type="image">
+                    <width>$PARAM[height]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">$VAR[EPGGenreTypeImageForFlag]</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+            </control>
         </definition>
     </include>
 
@@ -1414,6 +1422,9 @@
         <definition>
             <control type="group">
                 <visible>$PARAM[visible]</visible>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+
                 <include content="BackgroundForFlag">
                     <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
