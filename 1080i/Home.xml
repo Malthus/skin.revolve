@@ -23,8 +23,6 @@
             <onfocus>SetFocus(300,0)</onfocus>
         </control>
 
-        <include content="RssFeed" />
-
         <control type="wraplist" id="300">
             <description>Invisible Home Wraplist</description>
             <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
@@ -40,7 +38,9 @@
             <include content="InvisibleVerticalListItemsForView" />
             <include content="HomeMenuItems" />
         </control>
-        
+
+        <include content="RssFeed" />
+
         <include content="BackgroundAnimationForHomeRevolveList" />
         <include content="ListForHomeRevolveList" />
         <include content="RingForHomeRevolveList" />
@@ -48,11 +48,11 @@
         <control type="group">
             <animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
             <animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
-            
+
             <control type="group">
                 <visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
                 <include content="BigClock">
-                    <param name="posy" value="50" />
+                    <param name="posy" value="70" />
                 </include>
             </control>
             <control type="group">
@@ -60,7 +60,7 @@
                 <include content="BigClock" />
             </control>
         </control>
-        
+
         <include content="GlobalOverlay">
             <param name="buttonid" value="200" />
             <param name="controlid" value="210" />
