@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="SmallBusyAnimationForProgressBar">
-        <param name="visible" default="true" />
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-        
-        <definition>
-            <control type="group">
-                <visible>$PARAM[visible]</visible>
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-
-                <control type="image">
-                    <posx>5</posx>
-                    <posy>5</posy>
-                    <width>80</width>
-                    <height>80</height>
-                    <texture colordiffuse="$VAR[BackgroundColor]">$VAR[BusyAnimationThumbnail]</texture>
-                    <aspectratio>keep</aspectratio>
-                    <animation effect="rotate" start="360" end="0" center="45,45" time="1200" loop="true" condition="true">conditional</animation>
-                </control>
-            </control>
-        </definition>
-    </include>
-    
     <include name="DefaultBusyAnimationForProgressBar">
         <param name="visible" default="true" />
         <param name="posx" default="0" />
@@ -43,25 +19,6 @@
                     <texture colordiffuse="$VAR[BackgroundColor]">$VAR[BusyAnimationThumbnail]</texture>
                     <aspectratio>keep</aspectratio>
                     <animation effect="rotate" start="360" end="0" center="135,135" time="1200" loop="true" condition="true">conditional</animation>
-                </control>
-            </control>
-        </definition>
-    </include>
-    
-    <include name="BackgroundForProgressBar">
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-        <param name="width" default="1240" />
-        
-        <definition>
-            <control type="group">
-                <control type="image">
-                    <posx>$PARAM[posx]</posx>
-                    <posy>$PARAM[posy]</posy>
-                    <width>$PARAM[width]</width>
-                    <height>28</height>
-                    <texture colordiffuse="$VAR[MainColor]" border="6">controls/horizontalbar-thick.png</texture>
-                    <aspectratio>stretch</aspectratio>
                 </control>
             </control>
         </definition>
