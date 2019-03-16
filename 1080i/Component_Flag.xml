@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <constant name="SizeForFlag">60</constant>
+    <constant name="SpacerSizeForFlag">20</constant>
+    <constant name="PlaceForFlag">62</constant>
+    <constant name="LabelWidthForFlag">50</constant>
+    <constant name="LabelHeightForFlag">16</constant>
+    <constant name="LabelPosXForFlag">5</constant>
+    <constant name="LabelPosYForFlag">28</constant>
+    <constant name="BusyIconSizeForFlag">50</constant>
+    
     <expression name="EPGGenreTypeVisible">[String.IsEqual(ListItem.Property(GenreType),16) | String.IsEqual(ListItem.Property(GenreType),32) | String.IsEqual(ListItem.Property(GenreType),48) | String.IsEqual(ListItem.Property(GenreType),64) | String.IsEqual(ListItem.Property(GenreType),80) | String.IsEqual(ListItem.Property(GenreType),96) | String.IsEqual(ListItem.Property(GenreType),112) | String.IsEqual(ListItem.Property(GenreType),128) | String.IsEqual(ListItem.Property(GenreType),144) | String.IsEqual(ListItem.Property(GenreType),160) | String.IsEqual(ListItem.Property(GenreType),176)]</expression>
 
     <variable name="ImageForOverlayFlag">
@@ -66,23 +75,22 @@
     
     <include name="BackgroundForFlag">
         <param name="visible" default="true" />
-        <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
             <control type="image">
                 <visible>$PARAM[visible]</visible>
-                <width>$PARAM[height]</width>
-                <height>$PARAM[height]</height>
+                <width>SizeForFlag</width>
+                <height>SizeForFlag</height>
                 <texture colordiffuse="$PARAM[backgroundcolor]">elements/circle-mask.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
 
             <control type="image">
                 <visible>$PARAM[visible]</visible>
-                <width>$PARAM[height]</width>
-                <height>$PARAM[height]</height>
+                <width>SizeForFlag</width>
+                <height>SizeForFlag</height>
                 <texture colordiffuse="$PARAM[flagcolor]">flags/property-background.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
@@ -91,15 +99,14 @@
 
     <include name="HighlightForFlag">
         <param name="visible" default="true" />
-        <param name="height" default="60" />
         <param name="highlightcolor" default="$VAR[HighlightColor]" />
 
         <definition>
             <control type="image">
                 <visible>$PARAM[visible]</visible>
                 <animation effect="fade" start="0" end="100" time="2000" delay="4000" tween="sine" condition="true" pulse="true">Conditional</animation>            
-                <width>$PARAM[height]</width>
-                <height>$PARAM[height]</height>
+                <width>SizeForFlag</width>
+                <height>SizeForFlag</height>
                 <texture colordiffuse="$PARAM[highlightcolor]">flags/property-background.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
@@ -108,8 +115,6 @@
 
     <include name="LabelForFlag">
         <param name="visible" default="true" />
-        <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="wrapmultiline" default="false" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
@@ -118,10 +123,10 @@
         <definition>
             <control type="label">
                 <visible>$PARAM[visible]</visible>
-                <left>0</left>
-                <top>$PARAM[labelposy]</top>
-                <width>$PARAM[height]</width>
-                <height>16</height>
+                <left>LabelPosXForFlag</left>
+                <top>LabelPosYForFlag</top>
+                <width>LabelWidthForFlag</width>
+                <height>LabelHeightForFlag</height>
                 <font>FlagFont</font>
                 <textcolor>$PARAM[backgroundcolor]</textcolor>
                 <align>center</align>
@@ -134,8 +139,8 @@
 
     <include name="SpacerFlag">
         <param name="visible" default="true" />
-        <param name="width" default="20" />
-        <param name="height" default="60" />
+        <param name="width" default="SpacerSizeForFlag" />
+        <param name="height" default="SizeForFlag" />
 
         <definition>
             <control type="group">
@@ -1458,8 +1463,6 @@
 
     <include name="PlayerSpeedFlag">
         <param name="visible" default="Player.HasMedia" />
-        <param name="width" default="62" />
-        <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="highlightcolor" default="$VAR[HighlightColor]" />
@@ -1467,8 +1470,8 @@
         <definition>
             <control type="group">
                 <visible>$PARAM[visible]</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
+                <width>PlaceForFlag</width>
+                <height>SizeForFlag</height>
 
                 <include content="BackgroundForFlag">
                     <param name="height" value="$PARAM[height]" />
@@ -1497,6 +1500,56 @@
                     <param name="label" value="$VAR[PlayerSpeedLabelForFlag]" />
                 </include>
             </control>
+        </definition>
+    </include>
+
+    <include name="BusyFlag">
+        <param name="visible" default="Window.IsVisible(extendedprogressdialog)" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="highlightcolor" default="$VAR[HighlightColor]" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <width>PlaceForFlag</width>
+                <height>SizeForFlag</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="height" value="SizeForFlag" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>BusyIconSizeForFlag</width>
+                    <height>BusyIconSizeForFlag</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">$VAR[BusyAnimationThumbnail]</texture>
+                    <aspectratio>keep</aspectratio>
+                    <animation effect="rotate" start="360" end="0" center="30,30" time="1200" loop="true" condition="true">conditional</animation>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="RssFeedFlag">
+        <param name="visible" default="System.GetBool(lookandfeel.enablerssfeeds)" />
+        <param name="width" default="62" />
+        <param name="height" default="60" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <include content="BooleanFlag">
+                <param name="visible" value="$PARAM[visible]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="flagcolor" value="$PARAM[flagcolor]" />
+                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                <param name="iconfilename" value="flags/property-rss.png" />
+            </include>
         </definition>
     </include>
 
