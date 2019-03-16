@@ -166,7 +166,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -262,7 +261,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -292,7 +290,6 @@
     <include name="PlayCountFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.PlayCount" />
@@ -304,7 +301,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -383,14 +379,12 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
 
                 <include content="HighlightForFlag">
                     <param name="visible" value="Skin.HasSetting(View.EPGColors.Enabled)" />
-                    <param name="height" value="$PARAM[height]" />
                     <param name="highlightcolor" value="$VAR[EPGGenreTypeColorForFlag]" />
                 </include>
 
@@ -426,7 +420,6 @@
     <include name="YearFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.Year" />
@@ -438,7 +431,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -451,8 +443,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -465,7 +455,6 @@
         <param name="visible" default="true" />
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.Duration" />
@@ -479,7 +468,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -492,8 +480,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]$PARAM[markupvalue]] $PARAM[unitvalue]" />
@@ -505,7 +491,6 @@
     <include name="RatingFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.Rating" />
@@ -517,7 +502,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -530,8 +514,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -543,7 +525,6 @@
     <include name="MpaaRatingFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.Mpaa" />
@@ -555,7 +536,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -642,7 +622,6 @@
     <include name="VideoCodecFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.VideoCodec" />
@@ -654,7 +633,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -669,8 +647,6 @@
 
                 <include content="LabelForFlag">
                     <param name="visible" value="!String.IsEqual($PARAM[value],divx) + !String.IsEqual($PARAM[value],xvid)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -697,7 +673,6 @@
     <include name="VideoResolutionFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.VideoResolution" />
@@ -709,7 +684,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -722,8 +696,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -735,7 +707,6 @@
     <include name="VideoAspectRatioFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.VideoAspect" />
@@ -747,7 +718,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -761,24 +731,18 @@
 
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],1.33) | String.IsEqual($PARAM[value],1.37)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="4:3" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],1.66) | String.IsEqual($PARAM[value],1.78)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="16:9" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="!String.IsEqual($PARAM[value],1.33) + !String.IsEqual($PARAM[value],1.37) + !String.IsEqual($PARAM[value],1.66) + !String.IsEqual($PARAM[value],1.78)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -790,7 +754,6 @@
     <include name="AudioCodecFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.AudioCodec" />
@@ -803,7 +766,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -818,8 +780,6 @@
 
                 <include content="LabelForFlag">
                     <param name="visible" value="!String.IsEmpty($PARAM[value]) + !String.IsEqual($PARAM[value],aac) + !String.IsEqual($PARAM[value],dts) + !String.IsEqual($PARAM[value],flac) + !String.IsEqual($PARAM[value],mp3) + !String.IsEqual($PARAM[value],mp3float)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -860,7 +820,6 @@
     <include name="AudioChannelsFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.AudioChannels" />
@@ -872,7 +831,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -886,72 +844,54 @@
 
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],1)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="1.0" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],2)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="2.0" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],3)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="2.1" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],4)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="4.0" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],5)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="4.1" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],6)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="5.1" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],7)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="6.1" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],8)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="7.1" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.IsEqual($PARAM[value],10)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="9.1" />
@@ -963,7 +903,6 @@
     <include name="AudioBitrateFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="MusicPlayer.BitRate" />
@@ -975,7 +914,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -988,8 +926,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value],, $LOCALIZE[31911]]" />
@@ -1001,7 +937,6 @@
     <include name="AudioSamplerateFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="MusicPlayer.SampleRate" />
@@ -1013,7 +948,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -1026,8 +960,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value],, $LOCALIZE[31998]]" />
@@ -1039,7 +971,6 @@
     <include name="PictureCodecFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="fileextensionvalue" default="ListItem.FileExtension" />
@@ -1051,7 +982,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -1065,24 +995,18 @@
 
                 <include content="LabelForFlag">
                     <param name="visible" value="String.EndsWith($PARAM[fileextensionvalue],jpg) | String.EndsWith($PARAM[fileextensionvalue],jpeg)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="JPEG" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.EndsWith($PARAM[fileextensionvalue],gif)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="GIF" />
                 </include>
                 <include content="LabelForFlag">
                     <param name="visible" value="String.EndsWith($PARAM[fileextensionvalue],png)" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="PNG" />
@@ -1094,7 +1018,6 @@
     <include name="PictureSizeFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.PictureResolution" />
@@ -1106,7 +1029,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -1119,8 +1041,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="wrapmultiline" value="true" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
@@ -1133,7 +1053,6 @@
     <include name="PictureISOFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.PictureISO" />
@@ -1145,7 +1064,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -1158,8 +1076,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -1171,7 +1087,6 @@
     <include name="PictureApertureFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.PictureAperture" />
@@ -1183,7 +1098,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -1196,8 +1110,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value],$LOCALIZE[31916],]" />
@@ -1266,7 +1178,6 @@
     <include name="AddonVersionFlag">
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="value" default="ListItem.AddonVersion" />
@@ -1278,7 +1189,6 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
@@ -1291,8 +1201,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[$PARAM[value]]" />
@@ -1324,7 +1232,6 @@
         <param name="visible" default="ListItem.Property(Addon.IsInstalled) + !ListItem.Property(Addon.IsEnabled)" />
         <param name="width" default="62" />
         <param name="height" default="60" />
-        <param name="labelposy" default="28" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
@@ -1431,14 +1338,12 @@
                 <height>$PARAM[height]</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
 
                 <include content="HighlightForFlag">
                     <param name="visible" value="Player.Muted" />
-                    <param name="height" value="$PARAM[height]" />
                     <param name="highlightcolor" value="$PARAM[highlightcolor]" />
                 </include>
 
@@ -1451,8 +1356,6 @@
 
                 <include content="LabelForFlag">
                     <param name="visible" value="!Player.Muted" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$INFO[Player.Volume]" />
@@ -1474,14 +1377,12 @@
                 <height>SizeForFlag</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="$PARAM[height]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
 
                 <include content="HighlightForFlag">
                     <param name="visible" value="Player.Paused" />
-                    <param name="height" value="$PARAM[height]" />
                     <param name="highlightcolor" value="$PARAM[highlightcolor]" />
                 </include>
 
@@ -1493,8 +1394,6 @@
                 </control>
 
                 <include content="LabelForFlag">
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="labelposy" value="$PARAM[labelposy]" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                     <param name="label" value="$VAR[PlayerSpeedLabelForFlag]" />
@@ -1516,7 +1415,6 @@
                 <height>SizeForFlag</height>
 
                 <include content="BackgroundForFlag">
-                    <param name="height" value="SizeForFlag" />
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
