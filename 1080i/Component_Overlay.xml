@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <constant name="PosYForLabelForOverlay">1032</constant>
+    <constant name="PosYForDoubleLabelForOverlay">1022</constant>
     <constant name="PosYForIconForOverlay">1020</constant>
 
     <variable name="TextColorForOverlay">
         <value condition="Skin.HasSetting(Media.OverlayBackground.Visible)">$VAR[SecondaryColor]</value>
-        <value>$VAR[TextColor]</value>
+        <value>$VAR[SecondaryColor]</value>
+<!--        <value>$VAR[TextColor]</value> -->
     </variable>
     <variable name="MediaLabelForOverlay">
+        <value condition="Window.IsVisible(extendedprogressdialog)"></value>
         <value condition="Player.HasVideo">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</value>
         <value condition="Player.HasAudio">$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]</value>
         <value>$INFO[Player.Title]</value>
     </variable>
     <variable name="TimeLabelForOverlay">
-        <value condition="Window.IsVisible(volumebar) + !Player.PassThrough"></value>
+        <value condition="Window.IsVisible(volumebar)"></value>
         <value condition="Player.HasDuration">$INFO[Player.Time] / $INFO[Player.Duration]</value>
         <value>$INFO[Player.Time]</value>
     </variable>
@@ -96,6 +99,15 @@
                         <param name="label" value="$VAR[TimeLabelForOverlay]" />
                     </include>
                 </control>
+            </control>
+
+            <control type="group">
+                <posx>6</posx>
+                <posy>PosYForIconForOverlay</posy>
+
+                <include content="BusyFlag">
+                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
+                </include>
             </control>
 
             <control type="group">
@@ -240,6 +252,52 @@
                 <param name="scroll" value="true" />
                 <param name="label" value="$PARAM[label]" />
             </include>
+        </definition>
+    </include>
+
+    <include name="DoubleLabelForOverlay">
+        <param name="posx" default="1420" />
+        <param name="posy" default="PosYForDoubleLabelForOverlay" />
+        <param name="width" default="1300" />
+        <param name="height" default="19" />
+        <param name="textcolor" default="$VAR[TextColorForOverlay]" />
+        <param name="align" default="left" />
+        <param name="label" default="" />
+        <param name="label2" default="" />
+
+        <definition>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <include content="OutlineLabel">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="0" />
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="font" value="MessageDetailFont" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                    <param name="outlinesize" value="2" />
+                    <param name="align" value="$PARAM[align]" />
+                    <param name="scroll" value="true" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+
+                <include content="OutlineLabel">
+                    <param name="posx" value="0" />
+                    <param name="posy" value="$PARAM[height]" />
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="font" value="MessageDetailFont" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                    <param name="outlinesize" value="2" />
+                    <param name="align" value="$PARAM[align]" />
+                    <param name="scroll" value="true" />
+                    <param name="label" value="$PARAM[label2]" />
+                </include>
+            </control>
         </definition>
     </include>
 
