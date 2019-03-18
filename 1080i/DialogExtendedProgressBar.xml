@@ -9,6 +9,14 @@
                 <param name="id" value="31" />
             </include>
 
+            <control type="group">
+                <posx>6</posx>
+                <posy>PosYForIconForOverlay</posy>
+                <include content="BusyFlag">
+                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
+                </include>
+            </control>
+
             <include content="DoubleLabelForOverlay">
                 <param name="posx" value="75" />
                 <param name="width" value="1285" />

@@ -102,27 +102,8 @@
             </control>
 
             <control type="group">
-                <posx>6</posx>
-                <posy>PosYForIconForOverlay</posy>
-
-                <include content="BusyFlag">
-                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
-                </include>
-            </control>
-
-            <control type="group">
-                <posx>1790</posx>
-                <posy>PosYForIconForOverlay</posy>
-
-                <include content="AudioVolumeFlag">
-                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
-                </include>
-            </control>
-
-            <control type="group">
                 <posx>1852</posx>
                 <posy>PosYForIconForOverlay</posy>
-
                 <include content="PlayerSpeedFlag">
                     <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
                 </include>

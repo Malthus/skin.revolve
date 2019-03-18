@@ -3,6 +3,15 @@
     <controls>
         <control type="group">
             <control type="group">
+                <description>Volume Flag</description>
+                <posx>1790</posx>
+                <posy>PosYForIconForOverlay</posy>
+                <include content="AudioVolumeFlag">
+                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
+                </include>
+            </control>
+
+            <control type="group">
                 <description>Volume Control</description>
                 <visible>!Player.PassThrough</visible>
 
