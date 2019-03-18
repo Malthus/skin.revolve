@@ -1325,8 +1325,6 @@
 
     <include name="AudioVolumeFlag">
         <param name="visible" default="Player.Muted | Window.IsVisible(volumebar)" />
-        <param name="width" default="62" />
-        <param name="height" default="60" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
         <param name="highlightcolor" default="$VAR[HighlightColor]" />
@@ -1334,8 +1332,8 @@
         <definition>
             <control type="group">
                 <visible>$PARAM[visible]</visible>
-                <width>$PARAM[width]</width>
-                <height>$PARAM[height]</height>
+                <width>PlaceForFlag</width>
+                <height>SizeForFlag</height>
 
                 <include content="BackgroundForFlag">
                     <param name="flagcolor" value="$PARAM[flagcolor]" />
@@ -1348,8 +1346,8 @@
                 </include>
 
                 <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
+                    <width>SizeForFlag</width>
+                    <height>SizeForFlag</height>
                     <texture colordiffuse="$PARAM[backgroundcolor]">$VAR[AudioVolumeImageForFlag]</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
@@ -1387,8 +1385,8 @@
                 </include>
 
                 <control type="image">
-                    <width>$PARAM[height]</width>
-                    <height>$PARAM[height]</height>
+                    <width>SizeForFlag</width>
+                    <height>SizeForFlag</height>
                     <texture colordiffuse="$PARAM[backgroundcolor]">$VAR[PlayerDirectionImageForFlag]</texture>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                 </control>
