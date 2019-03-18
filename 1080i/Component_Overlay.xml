@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <constant name="PosYForLabelForOverlay">1032</constant>
-    <constant name="PosYForDoubleLabelForOverlay">1022</constant>
-    <constant name="PosYForIconForOverlay">1020</constant>
+    <constant name="PosYForLabelForOverlay">1027</constant>
+    <constant name="PosYForDoubleLabelForOverlay">1012</constant>
+    <constant name="PosYForIconForOverlay">1015</constant>
 
-    <variable name="TextColorForOverlay">
-        <value condition="Skin.HasSetting(Media.OverlayBackground.Visible)">$VAR[SecondaryColor]</value>
-        <value>$VAR[SecondaryColor]</value>
-<!--        <value>$VAR[TextColor]</value> -->
-    </variable>
     <variable name="MediaLabelForOverlay">
         <value condition="Window.IsVisible(extendedprogressdialog)"></value>
         <value condition="Player.HasVideo">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</value>
@@ -102,10 +97,10 @@
             </control>
 
             <control type="group">
-                <posx>1852</posx>
+                <posx>1855</posx>
                 <posy>PosYForIconForOverlay</posy>
                 <include content="PlayerSpeedFlag">
-                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
+                    <param name="flagcolor" value="$VAR[SecondaryColor]" />
                 </include>
             </control>
         </definition>
@@ -126,17 +121,14 @@
     </include>
 
     <include name="BackgroundForOverlay">
-        <param name="top" default="1020" />
-        <param name="height" default="60" />
-
         <definition>
             <control type="image">
                 <visible>Skin.HasSetting(Media.OverlayBackground.Visible)</visible>
                 <posx>0</posx>
-                <top>$PARAM[top]</top>
+                <posy>1010</posy>
                 <width>1920</width>
-                <height>$PARAM[height]</height>
-                <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
+                <height>70</height>
+                <texture colordiffuse="$VAR[FademaskColor]">white.png</texture>
             </control>
         </definition>
     </include>
@@ -215,7 +207,7 @@
         <param name="posy" default="PosYForLabelForOverlay" />
         <param name="width" default="1300" />
         <param name="height" default="30" />
-        <param name="textcolor" default="$VAR[TextColorForOverlay]" />
+        <param name="textcolor" default="$VAR[SecondaryColor]" />
         <param name="align" default="right" />
         <param name="label" default="" />
 
@@ -240,8 +232,8 @@
         <param name="posx" default="1420" />
         <param name="posy" default="PosYForDoubleLabelForOverlay" />
         <param name="width" default="1300" />
-        <param name="height" default="19" />
-        <param name="textcolor" default="$VAR[TextColorForOverlay]" />
+        <param name="height" default="21" />
+        <param name="textcolor" default="$VAR[SecondaryColor]" />
         <param name="align" default="left" />
         <param name="label" default="" />
         <param name="label2" default="" />
