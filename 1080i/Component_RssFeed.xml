@@ -1,87 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="BackgroundForRssFeed">
-        <definition>
-            <control type="image">
-                <visible>Skin.HasSetting(Media.OverlayBackground.Visible)</visible>
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1920</width>
-                <height>60</height>
-                <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
-            </control>
-        </definition>
-    </include>
+    <expression name="VisibilityOfRssFeed">System.GetBool(lookandfeel.enablerssfeeds)</expression>
 
     <include name="RssFeed">
         <definition>
             <control type="group">
-                <visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
+                <visible>$EXP[$EXP[VisibilityOfRssFeed]]</visible>
 
-                <include content="BackgroundForRssFeed" />
-
-                <control type="group">
-                    <posx>1852</posx>
+                <control type="image">
+                    <posx>0</posx>
                     <posy>0</posy>
-                    <include content="RssFeedFlag">
-                        <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
-                    </include>
+                    <width>1920</width>
+                    <height>70</height>
+                    <texture colordiffuse="$VAR[FademaskColor]">white.png</texture>
                 </control>
 
-                <control type="rss" id="1">
-                    <posx>18</posx>
-                    <posy>8</posy>
-                    <width>1825</width>
-                    <height>40</height>
-                    <font>MessageTextFont</font>
-                    <titlecolor>$VAR[BackgroundColor]</titlecolor>
-                    <headlinecolor>$VAR[BackgroundColor]</headlinecolor>
-                    <textcolor>$VAR[BackgroundColor]</textcolor>
-                    <urlset>1</urlset>
-                </control>
-                <control type="rss" id="1">
-                    <posx>22</posx>
-                    <posy>8</posy>
-                    <width>1825</width>
-                    <height>40</height>
-                    <font>MessageTextFont</font>
-                    <titlecolor>$VAR[BackgroundColor]</titlecolor>
-                    <headlinecolor>$VAR[BackgroundColor]</headlinecolor>
-                    <textcolor>$VAR[BackgroundColor]</textcolor>
-                    <urlset>1</urlset>
-                </control>
-                <control type="rss" id="1">
-                    <posx>18</posx>
-                    <posy>12</posy>
-                    <width>1825</width>
-                    <height>40</height>
-                    <font>MessageTextFont</font>
-                    <titlecolor>$VAR[BackgroundColor]</titlecolor>
-                    <headlinecolor>$VAR[BackgroundColor]</headlinecolor>
-                    <textcolor>$VAR[BackgroundColor]</textcolor>
-                    <urlset>1</urlset>
-                </control>
-                <control type="rss" id="1">
-                    <posx>22</posx>
-                    <posy>12</posy>
-                    <width>1825</width>
-                    <height>40</height>
-                    <font>MessageTextFont</font>
-                    <titlecolor>$VAR[BackgroundColor]</titlecolor>
-                    <headlinecolor>$VAR[BackgroundColor]</headlinecolor>
-                    <textcolor>$VAR[BackgroundColor]</textcolor>
-                    <urlset>1</urlset>
-                </control>
                 <control type="rss" id="1">
                     <posx>20</posx>
-                    <posy>10</posy>
-                    <width>1825</width>
-                    <height>40</height>
+                    <posy>15</posy>
+                    <width>1885</width>
+                    <height>30</height>
                     <font>MessageTextFont</font>
                     <titlecolor>$VAR[MainColor]</titlecolor>
                     <headlinecolor>$VAR[SecondaryColor]</headlinecolor>
                     <textcolor>$VAR[TextColor]</textcolor>
                     <urlset>1</urlset>
+                </control>
+
+                <control type="group">
+                    <posx>1855</posx>
+                    <posy>5</posy>
+                    <include content="RssFeedFlag">
+                        <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
+                    </include>
                 </control>
             </control>
         </definition>

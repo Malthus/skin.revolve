@@ -50,13 +50,13 @@
             <animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
 
             <control type="group">
-                <visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
+                <visible>$EXP[VisibilityOfRssFeed]</visible>
                 <include content="BigClock">
-                    <param name="posy" value="70" />
+                    <param name="posy" value="80" />
                 </include>
             </control>
             <control type="group">
-                <visible>!System.GetBool(lookandfeel.enablerssfeeds)</visible>
+                <visible>!$EXP[VisibilityOfRssFeed]</visible>
                 <include content="BigClock" />
             </control>
         </control>
