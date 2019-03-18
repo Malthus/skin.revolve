@@ -4,10 +4,10 @@
         <control type="group">
             <control type="group">
                 <description>Volume Flag</description>
-                <posx>1790</posx>
+                <posx>1793</posx>
                 <posy>PosYForIconForOverlay</posy>
                 <include content="AudioVolumeFlag">
-                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
+                    <param name="flagcolor" value="$VAR[SecondaryColor]" />
                 </include>
             </control>
 
@@ -17,7 +17,7 @@
 
                 <control type="image">
                     <posx>1420</posx>
-                    <posy>1037</posy>
+                    <posy>1032</posy>
                     <width>365</width>
                     <height>26</height>
                     <texture colordiffuse="$VAR[BackgroundColor]" border="6">controls/horizontalbar-thick.png</texture>
@@ -25,15 +25,15 @@
                 </control>
                 <control type="image">
                     <posx>1422</posx>
-                    <posy>1039</posy>
+                    <posy>1034</posy>
                     <width>360</width>
                     <height>22</height>
-                    <texture colordiffuse="$VAR[TextColorForOverlay]" border="6">controls/horizontalbar-thick.png</texture>
+                    <texture colordiffuse="$VAR[SecondaryColor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="progress" id="1">
                     <posx>1422</posx>
-                    <posy>1026</posy>
+                    <posy>1022</posy>
                     <width>360</width>
                     <height>24</height>
                     <texturebg border="6"></texturebg>
