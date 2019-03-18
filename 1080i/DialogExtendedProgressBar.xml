@@ -10,10 +10,10 @@
             </include>
 
             <control type="group">
-                <posx>6</posx>
+                <posx>5</posx>
                 <posy>PosYForIconForOverlay</posy>
                 <include content="BusyFlag">
-                    <param name="flagcolor" value="$VAR[TextColorForOverlay]" />
+                    <param name="flagcolor" value="$VAR[SecondaryColor]" />
                 </include>
             </control>
 
@@ -27,7 +27,7 @@
 
             <control type="image">
                 <posx>73</posx>
-                <posy>1056</posy>
+                <posy>1052</posy>
                 <width>1307</width>
                 <height>26</height>
                 <texture colordiffuse="$VAR[BackgroundColor]" border="6">controls/horizontalbar-thick.png</texture>
@@ -35,15 +35,15 @@
             </control>
             <control type="image">
                 <posx>75</posx>
-                <posy>1058</posy>
+                <posy>1054</posy>
                 <width>1303</width>
                 <height>22</height>
-                <texture colordiffuse="$VAR[TextColorForOverlay]" border="6">controls/horizontalbar-thick.png</texture>
+                <texture colordiffuse="$VAR[SecondaryColor]" border="6">controls/horizontalbar-thick.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
             <control type="progress" id="32">
                 <posx>75</posx>
-                <posy>1045</posy>
+                <posy>1041</posy>
                 <width>1303</width>
                 <height>24</height>
                 <texturebg border="6"></texturebg>
