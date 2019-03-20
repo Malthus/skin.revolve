@@ -5,26 +5,43 @@
             <include content="InvisibleLabel">
                 <param name="id" value="30" />
             </include>
+
             <include content="InvisibleLabel">
                 <param name="id" value="31" />
             </include>
 
             <control type="group">
                 <posx>5</posx>
-                <posy>PosYForIconForOverlay</posy>
+                <posy>PosYForLowerIconForOverlay</posy>
                 <include content="BusyFlag">
                     <param name="flagcolor" value="$VAR[SecondaryColor]" />
                 </include>
             </control>
 
-            <include content="DoubleLabelForOverlay">
+            <include content="OutlineLabel">
                 <param name="posx" value="75" />
+                <param name="posy" value="1014" />
                 <param name="width" value="1305" />
-                <param name="align" value="left" />
+                <param name="height" value="22" />
+                <param name="font" value="MessageDetailFont" />
+                <param name="textcolor" value="$VAR[SecondaryColor]" />
+                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                <param name="outlinesize" value="2" />
                 <param name="label" value="$INFO[Control.GetLabel(30)]" />
-                <param name="label2" value="$INFO[Control.GetLabel(31)]" />
             </include>
 
+            <include content="OutlineLabel">
+                <param name="posx" value="75" />
+                <param name="posy" value="1036" />
+                <param name="width" value="1305" />
+                <param name="height" value="22" />
+                <param name="font" value="MessageDetailFont" />
+                <param name="textcolor" value="$VAR[SecondaryColor]" />
+                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                <param name="outlinesize" value="2" />
+                <param name="label" value="$INFO[Control.GetLabel(31)]" />
+            </include>
+            
             <control type="image">
                 <posx>73</posx>
                 <posy>1053</posy>
