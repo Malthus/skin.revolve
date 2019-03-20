@@ -19,7 +19,7 @@
 
             <include content="DoubleLabelForOverlay">
                 <param name="posx" value="75" />
-                <param name="width" value="1285" />
+                <param name="width" value="1305" />
                 <param name="align" value="left" />
                 <param name="label" value="$INFO[Control.GetLabel(30)]" />
                 <param name="label2" value="$INFO[Control.GetLabel(31)]" />
@@ -27,7 +27,7 @@
 
             <control type="image">
                 <posx>73</posx>
-                <posy>1052</posy>
+                <posy>1053</posy>
                 <width>1307</width>
                 <height>26</height>
                 <texture colordiffuse="$VAR[BackgroundColor]" border="6">controls/horizontalbar-thick.png</texture>
@@ -35,7 +35,7 @@
             </control>
             <control type="image">
                 <posx>75</posx>
-                <posy>1054</posy>
+                <posy>1055</posy>
                 <width>1303</width>
                 <height>22</height>
                 <texture colordiffuse="$VAR[SecondaryColor]" border="6">controls/horizontalbar-thick.png</texture>
@@ -43,7 +43,7 @@
             </control>
             <control type="progress" id="32">
                 <posx>75</posx>
-                <posy>1041</posy>
+                <posy>1042</posy>
                 <width>1303</width>
                 <height>24</height>
                 <texturebg border="6"></texturebg>
