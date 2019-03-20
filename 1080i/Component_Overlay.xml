@@ -78,7 +78,7 @@
                 </include>
 
                 <include content="BackgroundForOverlay">
-                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + [Window.IsVisible(extendedprogressdialog) | Window.IsVisible(volumebar) | Player.HasMedia]" />
+                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + [Window.IsVisible(extendedprogressdialog) | Window.IsVisible(volumebar) | Player.HasMedia | !$EXP[HasFinalSkinSettingsValues]]" />
                     <param name="posy" value="PosYForLowerBackgroundForOverlay" />
                 </include>
             </control>
@@ -135,7 +135,7 @@
                 <param name="controlid" value="$PARAM[controlid]" />
             </include>
 
-            <include content="OverlayDialogForValues" />
+            <include content="OverlayForValues" />
         </definition>
     </include>
 

@@ -73,27 +73,24 @@
         </definition>
     </include>
 
-    <include name="OverlayDialogForValues">
+    <include name="OverlayForValues">
         <definition>
             <control type="group">
-                <visible>!$EXP[HasFinalSkinSettingsValues]</visible>
-                <posy>PosYForProgressDialog</posy>
+                <visible>!$EXP[HasFinalSkinSettingsValues] + !Window.IsVisible(extendedprogressdialog)</visible>
 
-                <include content="WindowForDialog">
-                    <param name="height" value="HeightForProgressDialog" />
-                    <param name="headerlabel" value="$LOCALIZE[20186]" />
-                </include>
+                <control type="group">
+                    <posx>5</posx>
+                    <posy>PosYForIconForOverlay</posy>
+                    <include content="BusyFlag">
+                        <param name="visible" value="true" />
+                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
+                    </include>
+                </control>
 
-                <include content="DefaultBusyAnimationForProgressBar">
-                    <param name="posx" value="145" />
-                    <param name="posy" value="20" />
-                </include>
-
-                <include content="TextboxForDialog">
-                    <param name="posy" value="80" />
-                    <param name="height" value="120" />
-                    <param name="textboxid" value="9" />
-                    <param name="scrollbarid" value="19" />
+                <include content="LabelForOverlay">
+                    <param name="posx" value="75" />
+                    <param name="width" value="1305" />
+                    <param name="align" value="left" />
                     <param name="label" value="$VAR[OverlayMessageForValues]" />
                 </include>
             </control>
