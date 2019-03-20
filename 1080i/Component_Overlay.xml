@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <constant name="PosYForUpperBackgroundForOverlay">12</constant>
+    <constant name="PosYForLowerBackgroundForOverlay">1022</constant>
+    <constant name="HeightForBackgroundForOverlay">46</constant>
+
     <constant name="PosYForLabelForOverlay">1027</constant>
-    <constant name="PosYForDoubleLabelForOverlay">1012</constant>
+    <constant name="PosYForDoubleLabelForOverlay">1014</constant>
     <constant name="PosYForIconForOverlay">1015</constant>
 
     <variable name="MediaLabelForOverlay">
@@ -22,8 +26,8 @@
 
         <definition>
             <control type="group">
+                <include content="InformationBackgroundOverlay" />
                 <include content="BackButtonOverlay" />
-
                 <include content="MediaPlayerOverlay" />
 
                 <include content="ValuesOverlay">
@@ -65,11 +69,26 @@
         </definition>
     </include>
 
+    <include name="InformationBackgroundOverlay">
+        <definition>
+            <control type="group">
+                <include content="BackgroundForOverlay">
+                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + Window.IsVisible(notification)" />
+                    <param name="posy" value="PosYForUpperBackgroundForOverlay" />
+                </include>
+
+                <include content="BackgroundForOverlay">
+                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + [Window.IsVisible(extendedprogressdialog) | Window.IsVisible(volumebar) | Player.HasMedia]" />
+                    <param name="posy" value="PosYForLowerBackgroundForOverlay" />
+                </include>
+            </control>
+        </definition>
+    </include>
+    
     <include name="MediaPlayerOverlay">
         <definition>
             <control type="group">
                 <visible>Player.HasMedia</visible>
-                <include content="BackgroundForOverlay" />
                 <include content="ArtworkForOverlay" />
 
                 <control type="group">
@@ -121,13 +140,16 @@
     </include>
 
     <include name="BackgroundForOverlay">
+        <param name="visible" default="Skin.HasSetting(Media.OverlayBackground.Visible)" />
+        <param name="posy" default="PosYForLowerBackgroundForOverlay" />
+
         <definition>
             <control type="image">
-                <visible>Skin.HasSetting(Media.OverlayBackground.Visible)</visible>
+                <visible>$PARAM[visible]</visible>
                 <posx>0</posx>
-                <posy>1010</posy>
+                <posy>$PARAM[posy]</posy>
                 <width>1920</width>
-                <height>70</height>
+                <height>HeightForBackgroundForOverlay</height>
                 <texture colordiffuse="$VAR[FademaskColor]">white.png</texture>
             </control>
         </definition>
