@@ -5,19 +5,16 @@
     <include name="RssFeed">
         <definition>
             <control type="group">
-                <visible>$EXP[$EXP[VisibilityOfRssFeed]]</visible>
+                <visible>$EXP[VisibilityOfRssFeed] + !Window.IsVisible(notification)</visible>
 
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>1920</width>
-                    <height>70</height>
-                    <texture colordiffuse="$VAR[FademaskColor]">white.png</texture>
-                </control>
+                <include content="BackgroundForOverlay">
+                    <param name="visible" value="true" />
+                    <param name="posy" value="PosYForUpperBackgroundForOverlay" />
+                </include>
 
                 <control type="rss" id="1">
                     <posx>20</posx>
-                    <posy>15</posy>
+                    <posy>12</posy>
                     <width>1885</width>
                     <height>30</height>
                     <font>MessageTextFont</font>
