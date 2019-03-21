@@ -29,7 +29,8 @@
                 <include content="SortOrderButtonForSideMenu" />
                 <include content="ChannelGroupButtonForSideMenu" />
                 <include content="EPGColorsButtonForSideMenu" />
-                
+                <include content="EPGGridWrapRadioButtonForSideMenu" />
+
                 <include content="NavigationGroupLabelForSideMenu" />
                 <include content="ChannelsButtonForSideMenu" />
                 <include content="RecordingsButtonForSideMenu" />
@@ -45,7 +46,7 @@
                 <param name="onright" value="42" />
             </include>
         </control>
-        
+
         <include content="GlobalOverlay">
             <param name="buttonid" value="200" />
             <param name="controlid" value="10" />

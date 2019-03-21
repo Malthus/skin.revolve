@@ -802,6 +802,17 @@
         </definition>
     </include>
 
+    <include name="EPGGridWrapRadioButtonForSideMenu">
+        <definition>
+            <control type="radiobutton" id="88">
+                <align>left</align>
+                <label>$LOCALIZE[31144]</label>
+                <selected>Skin.HasSetting(View.EPGGrid.WrapAround)</selected>
+                <onclick>Skin.ToggleSetting(View.EPGGrid.WrapAround)</onclick>
+            </control>
+        </definition>
+    </include>
+
     <include name="FavouritesEditButtonForSideMenu">
         <definition>
             <control type="button" id="89">

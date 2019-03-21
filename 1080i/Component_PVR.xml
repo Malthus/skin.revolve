@@ -71,7 +71,6 @@
         </definition>
     </include>
     
-    
     <include name="EPGTimelineViewForPVR">
         <definition>
             <control type="group">
@@ -96,7 +95,8 @@
                 <rulerunit>6</rulerunit>
                 <onleft>10</onleft>
                 <onright>10</onright>
-                <onup>9000</onup>
+                <onup condition="!Skin.HasSetting(View.EPGGrid.WrapAround)">9000</onup>
+                <onup condition="Skin.HasSetting(View.EPGGrid.WrapAround)">10</onup>
                 <onback>50</onback>
 
                 <rulerlayout height="40" width="60">
