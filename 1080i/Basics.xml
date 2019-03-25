@@ -12,6 +12,28 @@
         </definition>
     </include>
 
+    <include name="InvisibleButton">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="width" default="0" />
+        <param name="height" default="0" />
+
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <visible allowhiddenfocus="true">true</visible>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>$PARAM[width]</width>
+                <height>$PARAM[height]</height>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <font></font>
+                <label></label>
+            </control>
+        </definition>
+    </include>
+
     <include name="BackgroundForOutlineLabel">
         <param name="id" default="0" />
         <param name="posx" default="0" />

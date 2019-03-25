@@ -77,10 +77,10 @@
 
         <definition>
             <animation effect="slide" start="0,0" end="-800,0" time="500" reversible="false">WindowClose</animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
                 <effect type="slide" start="0,0" end="-560,0" time="200" />
             </animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
                 <effect type="slide" start="0,0" end="0,-1080" time="200" />
             </animation>
 
@@ -110,6 +110,14 @@
                         <angle>90</angle>
                         <label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
                     </control>
+
+                    <include content="InvisibleButton">
+                        <param name="id" value="9021" />
+                        <param name="posx" value="560" />
+                        <param name="posy" value="390" />
+                        <param name="width" value="30" />
+                        <param name="height" value="300" />
+                    </include>
                 </control>
 
                 <control type="group">
@@ -136,6 +144,14 @@
                         <align>center</align>
                         <label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
                     </control>
+
+                    <include content="InvisibleButton">
+                        <param name="id" value="9021" />
+                        <param name="posx" value="130" />
+                        <param name="posy" value="1080" />
+                        <param name="width" value="300" />
+                        <param name="height" value="30" />
+                    </include>
                 </control>
 
                 <control type="image">
@@ -147,6 +163,14 @@
                     <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
+
+                <include content="InvisibleButton">
+                    <param name="id" value="9020" />
+                    <param name="posx" value="0" />
+                    <param name="posy" value="0" />
+                    <param name="width" value="560" />
+                    <param name="height" value="1080" />
+                </include>
             </control>
         </definition>
     </include>
