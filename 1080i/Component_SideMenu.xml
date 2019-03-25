@@ -7,9 +7,9 @@
         <param name="onright" default="52" />
         
         <definition>
-            <posx>24</posx>
-            <posy>20</posy>
-            <width>482</width>
+            <posx>20</posx>
+            <posy>380</posy>
+            <width>520</width>
             <height>620</height>
             <pagecontrol>9002</pagecontrol>
             <orientation>vertical</orientation>
@@ -36,18 +36,19 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="PlayerControlsForSideMenu">
         <param name="onup" default="9004" />
         <param name="ondown" default="9003" />
         <param name="onleft" default="Noop" />
         <param name="onright" default="52" />
-        
+
         <definition>
             <control type="group">
-                <visible>Player.HasMedia + !Integer.IsGreater(Container(9001).NumItems,10)</visible>
+                <visible>Player.HasMedia</visible>
                 <posx>PosXForSideMenuCircleControlsForPlayer</posx>
                 <posy>PosYForSideMenuCircleControlsForPlayer</posy>
+
                 <include content="CircleControlsForPlayer">
                     <param name="onup" value="$PARAM[onup]" />
                     <param name="ondown" value="$PARAM[ondown]" />
@@ -55,137 +56,96 @@
                     <param name="onright" value="$PARAM[onright]" />
                 </include>
             </control>
-            
+
             <control type="group">
-                <visible>Player.HasMedia + Integer.IsGreater(Container(9001).NumItems,10)</visible>
-                <posx>PosXForSideMenuButtonControlsForPlayer</posx>
-                <posy>PosYForSideMenuButtonControlsForPlayer</posy>
-                <include content="ButtonControlsForPlayer">
-                    <param name="onup" value="$PARAM[onup]" />
-                    <param name="ondown" value="$PARAM[ondown]" />
-                    <param name="onleft" value="$PARAM[onleft]" />
-                    <param name="onright" value="$PARAM[onright]" />
-                </include>
+                <visible>!Player.HasMedia</visible>
+                <posx>PosXForSideMenuCircleControlsForPlayer</posx>
+                <posy>PosYForSideMenuCircleControlsForPlayer</posy>
+
+                <control type="image">
+                    <width>270</width>
+                    <height>270</height>
+                    <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
             </control>
         </definition>
     </include>
 
     <include name="SideMenu">
-        <param name="topmenuoverride" default="false" />
-    
+        <param name="topmenu" default="false" />
+
         <definition>
-            <posx>20</posx>
-            <posy>100</posy>
-
             <animation effect="slide" start="0,0" end="-800,0" time="500" reversible="false">WindowClose</animation>
-
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenuoverride]">
-                <effect type="slide" start="0,0" end="-615,0" time="200" />
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
+                <effect type="slide" start="0,0" end="-560,0" time="200" />
             </animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenuoverride]">
-                <effect type="slide" start="0,0" end="-520,0" time="200" />
-            </animation>
-        
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenuoverride]]">
-                <effect type="rotate" start="0" end="90" center="0,0" time="200" />
-            </animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenuoverride]]">
-                <effect type="rotate" start="0" end="90" center="0,45" time="200" />
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
+                <effect type="slide" start="0,0" end="0,-1080" time="200" />
             </animation>
 
             <control type="group">
-                <control type="image">
-                    <posx>-30</posx>
-                    <posy>-30</posy>
-                    <width>588</width>
-                    <height>840</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio>stretch</aspectratio>
-                    <texture border="30" background="true">elements/poster-shadow.png</texture>
-                </control>
-            
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>528</width>
-                    <height>780</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="$VAR[BackgroundColor]" fallback="white.png">elements/poster-background.png</texture>
-                </control>
-                
-                <control type="scrollbar" id="9002">
-                    <description>Invisible Scrollbar</description>
-                    <enable>false</enable>
-                    <posx>24</posx>
-                    <posy>20</posy>
-                    <width>20</width>
-                    <height>460</height>
-                    <showonepage>false</showonepage>
-                    <texturesliderbackground></texturesliderbackground>
-                    <texturesliderbar></texturesliderbar>
-                    <texturesliderbarfocus></texturesliderbarfocus>
-                </control>
-
-                <control type="label">
-                    <description>More Options Label</description>
-                    <visible>Control.IsVisible(9002)</visible>
-                    <posx>500</posx>
-                    <posy>640</posy>
-                    <width>480</width>
-                    <height>20</height>
-                    <font>SideMenuGroupFont</font>
-                    <textcolor>$VAR[MainColor]</textcolor>
-                    <align>right</align>
-                    <label>$LOCALIZE[31971]</label>
-                </control>
-            </control>
-            
-            <control type="group">
-                <description>Side Menu Label When Side Menu Is Unfocused</description>
-                <visible>Skin.HasSetting(SideMenu.Visible)</visible>
-
-                <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + Skin.HasSetting(SideMenu.Visible)">
-                    <effect type="fade" start="0" end="100" time="200" />
-                </animation>
-
-                <control type="button" id="9020">
-                    <description>Invisible Mouse Control Side Menu Button</description>
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>528</width>
-                    <height>780</height>
-                    <texturenofocus></texturenofocus>
-                    <texturefocus></texturefocus>
-                    <font></font>
-                    <label></label>
-                    <onfocus>Control.SetFocus(9001)</onfocus>
-                </control>
-            
-                <control type="label">
+                <control type="group">
                     <description>Left Side Menu Label</description>
-                    <posx>112</posx>
-                    <posy>400</posy>
-                    <width>800</width>
-                    <height>20</height>
-                    <font>SideMenuLabelFont</font>
-                    <textcolor>$VAR[SelectColor]</textcolor>
-                    <align>center</align>
-                    <angle>90</angle>
-                    <label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
+                    <visible>Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]</visible>
+
+                    <control type="image">
+                        <posx>200</posx>
+                        <posy>340</posy>
+                        <width>400</width>
+                        <height>400</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>elements/circle-mask.png</texture>
+                    </control>
+
+                    <control type="label">
+                        <posx>394</posx>
+                        <posy>530</posy>
+                        <width>360</width>
+                        <height>20</height>
+                        <font>SideMenuLabelFont</font>
+                        <textcolor>$VAR[SelectColor]</textcolor>
+                        <align>center</align>
+                        <angle>90</angle>
+                        <label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
+                    </control>
                 </control>
-            
-                <control type="label" id="9021">
+
+                <control type="group">
                     <description>Top Side Menu Label</description>
-                    <posx>-385</posx>
-                    <posy>400</posy>
-                    <width>800</width>
-                    <height>20</height>
-                    <font>SideMenuLabelFont</font>
-                    <textcolor>$VAR[SelectColor]</textcolor>
-                    <align>center</align>
-                    <angle>270</angle>
-                    <label>[UPPERCASE]$LOCALIZE[31909][/UPPERCASE]</label>
+                    <visible>Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]</visible>
+
+                    <control type="image">
+                        <posx>80</posx>
+                        <posy>720</posy>
+                        <width>400</width>
+                        <height>400</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>elements/circle-mask.png</texture>
+                    </control>
+
+                    <control type="label">
+                        <posx>100</posx>
+                        <posy>1084</posy>
+                        <width>360</width>
+                        <height>20</height>
+                        <font>SideMenuLabelFont</font>
+                        <textcolor>$VAR[SelectColor]</textcolor>
+                        <align>center</align>
+                        <label>[UPPERCASE]$LOCALIZE[31907][/UPPERCASE]</label>
+                    </control>
+                </control>
+
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>560</width>
+                    <height>1080</height>
+                    <fadetime>100</fadetime>
+                    <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
+                    <aspectratio>stretch</aspectratio>
                 </control>
             </control>
         </definition>
