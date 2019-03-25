@@ -26,9 +26,9 @@
         <control type="wraplist" id="300">
             <description>Invisible Home Wraplist</description>
             <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
-            <include content="FullscreenDimensions" />
-            <focusposition>4</focusposition>
-            <defaultcontrol>8</defaultcontrol>
+            <include content="InvisibleListDimensionsForView" />
+            <focusposition>1</focusposition>
+            <defaultcontrol>1</defaultcontrol>
             <onup>300</onup>
             <ondown>300</ondown>
             <onleft condition="[Container(300).HasFocus(5) + !String.IsEmpty(Skin.String(CircleMovieOption.Source))] | [Container(300).HasFocus(6) + !String.IsEmpty(Skin.String(CircleEpisodeOption.Source))] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable)] | [Container(300).HasFocus(16) + !String.IsEmpty(Skin.String(CircleAlbumOption.Source))]">600</onleft>

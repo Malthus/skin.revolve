@@ -11,9 +11,10 @@
 
         <control type="fixedlist" id="400">
             <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
-            <include content="FullscreenDimensions" />
-            <focusposition>4</focusposition>
-            <onleft>9000</onleft>
+            <include content="InvisibleListDimensionsForView" />
+            <focusposition>1</focusposition>
+            <defaultcontrol>1</defaultcontrol>
+            <onleft>9001</onleft>
 
             <include content="InvisibleVerticalListItemsForView" />
 

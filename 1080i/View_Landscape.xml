@@ -21,11 +21,7 @@
             <control type="fixedlist" id="$PARAM[listid]">
                 <viewtype label="31933">list</viewtype>
                 <visible allowhiddenfocus="true">true</visible>
-                
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1920</width>
-                <height>1080</height>
+                <include content="InvisibleListDimensionsForView" />
                 <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
                 <orientation>horizontal</orientation>
                 <focusposition>2</focusposition>

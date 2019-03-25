@@ -114,22 +114,31 @@
         </definition>
     </include>
 
+    <include name="InvisibleListDimensionsForView">
+        <definition>
+            <posx>0</posx>
+            <posy>80</posy>
+            <width>1920</width>
+            <height>920</height>
+        </definition>
+    </include>
+
     <include name="InvisibleVerticalListItemsForView">
         <definition>
-            <itemlayout width="1920" height="125">
+            <itemlayout width="1920" height="160">
                 <control type="group">
                     <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
 
                     <control type="image">
                         <width>1920</width>
-                        <height>125</height>
+                        <height>160</height>
                         <texture colordiffuse="$VAR[TextColor]" border="20">controls/rectangle-clear.png</texture>
                         <aspectratio>stretch</aspectratio>
                     </control>
 
                     <include content="OutlineLabel">
                         <param name="width" value="1900" />
-                        <param name="height" value="125" />
+                        <param name="height" value="160" />
                         <param name="font" value="DebugFont" />
                         <param name="textcolor" value="$VAR[TextColor]" />
                         <param name="outlinecolor" value="$VAR[BackgroundColor]" />
@@ -140,20 +149,20 @@
                 </control>
             </itemlayout>
 
-            <focusedlayout width="1920" height="330">
+            <focusedlayout width="1920" height="600">
                 <control type="group">
                     <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
 
                     <control type="image">
                         <width>1920</width>
-                        <height>330</height>
+                        <height>600</height>
                         <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
                         <aspectratio>stretch</aspectratio>
                     </control>
 
                     <include content="OutlineLabel">
                         <param name="width" value="1900" />
-                        <param name="height" value="330" />
+                        <param name="height" value="600" />
                         <param name="font" value="DebugFont" />
                         <param name="textcolor" value="$VAR[MainColor]" />
                         <param name="outlinecolor" value="$VAR[BackgroundColor]" />

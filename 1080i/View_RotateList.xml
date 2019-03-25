@@ -11,13 +11,10 @@
                 <viewtype label="31938">list</viewtype>
                 <visible allowhiddenfocus="true">true</visible>
                 
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>1920</width>
-                <height>1080</height>
-                <pagecontrol>68</pagecontrol>
-                <defaultcontrol>6</defaultcontrol>
+                <include content="InvisibleListDimensionsForView" />
                 <focusposition>1</focusposition>
+                <defaultcontrol>1</defaultcontrol>
+                <pagecontrol>68</pagecontrol>
                 <scrolltime>200</scrolltime>
                 <onup>58</onup>
                 <ondown>58</ondown>
