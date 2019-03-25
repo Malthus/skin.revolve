@@ -41,24 +41,21 @@
         <definition>
             <control type="group">
                 <visible>Skin.HasSetting(BackButton.Visible) + !Window.Is(home)</visible>
-                <include content="FadeAnimationForOverlay" />
-                <posx>0</posx>
-                <posy>0</posy>
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>PlaceForFlag</width>
+                <height>SizeForFlag</height>
 
-                <control type="image">
-                    <width>88</width>
-                    <height>88</height>
-                    <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                </control>
+                <include content="BackgroundForFlag">
+                    <param name="flagcolor" value="$VAR[SecondaryColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                </include>
 
                 <control id="9999" type="button">
-                    <posx>4</posx>
-                    <posy>4</posy>
-                    <width>80</width>
-                    <height>80</height>
-                    <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-back.png</texturefocus>
-                    <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-back.png</texturenofocus>
+                    <width>SizeForFlag</width>
+                    <height>SizeForFlag</height>
+                    <texturefocus colordiffuse="$VAR[BackgroundColor]">flags/state-backbutton.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[BackgroundColor]">flags/state-backbutton.png</texturenofocus>
                     <aspectratio scalediffuse="false">keep</aspectratio>
                     <label>$LOCALIZE[31919]</label>
                     <font></font>
