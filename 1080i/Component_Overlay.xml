@@ -40,25 +40,22 @@
     <include name="BackButtonOverlay">
         <definition>
             <control type="group">
-                <visible>Skin.HasSetting(BackButton.Visible) + !Window.Is(home)</visible>
+                <visible>Skin.HasSetting(BackButton.Visible) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
                 <posx>5</posx>
                 <posy>5</posy>
-                <width>PlaceForFlag</width>
-                <height>SizeForFlag</height>
 
-                <include content="BackgroundForFlag">
+                <include content="NavigationFlag">
                     <param name="flagcolor" value="$VAR[SecondaryColor]" />
-                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
                 </include>
 
-                <control id="9999" type="button">
+                <control type="button" id="9999">
+                    <description>Invisible Mouse Control For Player Control Button</description>
                     <width>SizeForFlag</width>
                     <height>SizeForFlag</height>
-                    <texturefocus colordiffuse="$VAR[BackgroundColor]">flags/state-backbutton.png</texturefocus>
-                    <texturenofocus colordiffuse="$VAR[BackgroundColor]">flags/state-backbutton.png</texturenofocus>
-                    <aspectratio scalediffuse="false">keep</aspectratio>
-                    <label>$LOCALIZE[31919]</label>
+                    <texturenofocus></texturenofocus>
+                    <texturefocus></texturefocus>
                     <font></font>
+                    <label></label>
                     <onclick>Close</onclick>
                 </control>
             </control>
