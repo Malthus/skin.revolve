@@ -59,33 +59,4 @@
             </control>
         </definition>
     </include>
-
-    <constant name="PosYForSingleLineDialogForProgressBar">440</constant>
-    <include name="SingleLineDialogForProgressBar">
-        <definition>
-            <control type="group">
-                <control type="image">
-                    <posx>90</posx>
-                    <posy>-85</posy>
-                    <width>370</width>
-                    <height>370</height>
-                    <texture>elements/circle-shadow.png</texture>
-                </control>
-            
-                <include content="DialogWindow">
-                    <param name="height" value="200" />
-                </include>
-
-                <control type="group">
-                    <posx>140</posx>
-                    <posy>-35</posy>
-                    <include content="BackgroundForDefaultCircleThumbnailIcon" />
-                </control>
-        
-                <include content="DefaultBusyAnimationForProgressBar">
-                    <param name="posy" value="-20" />
-                </include>
-            </control>
-        </definition>
-    </include>
 </includes>
