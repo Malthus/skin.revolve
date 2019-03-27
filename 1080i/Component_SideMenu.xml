@@ -68,6 +68,14 @@
                     <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
+
+                <control type="image">
+                    <width>270</width>
+                    <height>270</height>
+                    <texture colordiffuse="$VAR[BackgroundColor]">icons/icon-revolve.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                    <animation effect="rotate" center="135,135" start="360" end="0" time="10000" loop="true" condition="true">conditional</animation>
+                </control>
             </control>
         </definition>
     </include>
