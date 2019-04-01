@@ -18,16 +18,44 @@
             <include content="LabelForDialog">
                 <param name="id" value="3130" />
                 <param name="visible" value="true" />
-                <param name="posy" value="20" />
-                <param name="width" value="1300" />
-                <param name="label" value="$INFO[System.Alarmpos,$LOCALIZE[20144]: , | ]$INFO[System.ProfileName,$LOCALIZE[20093]: , | ]$INFO[System.Uptime,$LOCALIZE[12390]: ,]$INFO[System.TotalUptime, | $LOCALIZE[12394]: ,]" />
-            </include>            
+                <param name="posx" value="1140" />
+                <param name="posy" value="180" />
+                <param name="width" value="780" />
+                <param name="label" value="$INFO[System.Alarmpos,$LOCALIZE[20144]: ,]" />
+            </include>
+
+            <include content="LabelForDialog">
+                <param name="id" value="3131" />
+                <param name="visible" value="true" />
+                <param name="posx" value="1140" />
+                <param name="posy" value="220" />
+                <param name="width" value="780" />
+                <param name="label" value="$INFO[System.Uptime,$LOCALIZE[12390]: ,]" />
+            </include>
+
+            <include content="LabelForDialog">
+                <param name="id" value="3132" />
+                <param name="visible" value="true" />
+                <param name="posx" value="1140" />
+                <param name="posy" value="260" />
+                <param name="width" value="780" />
+                <param name="label" value="$INFO[System.TotalUptime,$LOCALIZE[12394]: ,]" />
+            </include>
+
+            <include content="LabelForDialog">
+                <param name="id" value="3133" />
+                <param name="visible" value="true" />
+                <param name="posx" value="1140" />
+                <param name="posy" value="300" />
+                <param name="width" value="780" />
+                <param name="label" value="$INFO[System.ProfileName,$LOCALIZE[20093]: ,]" />
+            </include>
 
             <control type="grouplist" id="3110">
                 <posx>560</posx>
-                <posy>60</posy>
-                <width>1240</width>
-                <height>280</height>
+                <posy>20</posy>
+                <width>500</width>
+                <height>320</height>
                 <orientation>vertical</orientation>
                 <pagecontrol>3120</pagecontrol>
                 <itemgap>0</itemgap>
@@ -36,7 +64,7 @@
 
                 <control type="button" id="1">
                     <visible>System.CanPowerDown</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(1)</scroll>
                     <label>$LOCALIZE[13005]</label>
@@ -46,7 +74,7 @@
                 <control type="button" id="2">
                     <description>Exit Button</description>
                     <visible>System.ShowExitButton</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(2)</scroll>
                     <label>$LOCALIZE[13012]</label>
@@ -56,7 +84,7 @@
                 <control type="button" id="3">
                     <description>Logoff Profile Button</description>
                     <visible>System.IsLoggedOn + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)]</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(3)</scroll>
                     <label>$LOCALIZE[20126] $INFO[System.ProfileName]</label>
@@ -66,7 +94,7 @@
 
                 <control type="button" id="4">
                     <description>Restart Kodi Button</description>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(4)</scroll>
                     <label>$LOCALIZE[13313]</label>
@@ -76,7 +104,7 @@
                 <control type="button" id="5">
                     <description>Suspend Button</description>
                     <visible>System.CanSuspend</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(5)</scroll>
                     <label>$LOCALIZE[13011]</label>
@@ -86,7 +114,7 @@
                 <control type="button" id="6">
                     <description>Hibernate Button</description>
                     <visible>System.CanHibernate</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(6)</scroll>
                     <label>$LOCALIZE[13010]</label>
@@ -96,7 +124,7 @@
                 <control type="button" id="7">
                     <description>Reboot Button</description>
                     <visible>System.CanReboot</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(7)</scroll>
                     <label>$LOCALIZE[13013]</label>
@@ -106,7 +134,7 @@
                 <control type="button" id="8">
                     <description>Power Down Button</description>
                     <visible>System.CanPowerDown</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(8)</scroll>
                     <label>$LOCALIZE[31082]</label>
@@ -116,7 +144,7 @@
                 <control type="button" id="9">
                     <description>Custom Shutdown Timer Button</description>
                     <visible>!System.HasAlarm(shutdowntimer)</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(9)</scroll>
                     <label>$LOCALIZE[20150]</label>
@@ -126,7 +154,7 @@
                 <control type="button" id="10">
                     <description>Custom Cancel Timer Button</description>
                     <visible>System.HasAlarm(shutdowntimer)</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(10)</scroll>
                     <label>$LOCALIZE[20151]</label>
@@ -136,7 +164,7 @@
                 <control type="togglebutton" id="11">
                     <description>Master Mode Button</description>
                     <visible>System.HasLocks</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(11)</scroll>
                     <label>$LOCALIZE[20046]</label>
@@ -147,7 +175,7 @@
                 <control type="button" id="12">
                     <description>Settings Button</description>
                     <visible>!Skin.HasSetting(SettingsOption.Active)</visible>
-                    <width>1240</width>
+                    <width>500</width>
                     <height>40</height>
                     <scroll>Control.HasFocus(12)</scroll>
                     <label>$LOCALIZE[5]</label>
@@ -157,8 +185,9 @@
 
             <control type="scrollbar" id="3120">
                 <include content="MarkupForScrollbarForDialog">
-                    <param name="posy" value="60" />
-                    <param name="height" value="280" />
+                    <param name="posx" value="1080" />
+                    <param name="posy" value="20" />
+                    <param name="height" value="320" />
                 </include>
                 <onleft>3110</onleft>
             </control>
