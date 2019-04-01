@@ -260,16 +260,15 @@
         <param name="listid" default="0" />
 
         <definition>
-            <itemlayout height="40">
+            <itemlayout height="MenuButtonHeight">
                 <control type="image">
-                    <width>480</width>
-                    <height>40</height>
+                    <width>MenuButtonWidth</width>
+                    <height>MenuButtonHeight</height>
                     <aspectratio>stretch</aspectratio>
                     <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
                 </control>
                 <control type="label">
-                    <left>20</left>
-                    <width>440</width>
+                    <width>MenuButtonWidth</width>
                     <font>NormalButtonFont</font>
                     <textcolor>$VAR[MainColor]</textcolor>
                     <scroll>false</scroll>
@@ -279,18 +278,17 @@
                 </control>
             </itemlayout>
 
-            <focusedlayout height="40">
+            <focusedlayout height="MenuButtonHeight">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
                     <control type="image">
-                        <width>480</width>
-                        <height>40</height>
+                        <width>MenuButtonWidth</width>
+                        <height>MenuButtonHeight</height>
                         <aspectratio>stretch</aspectratio>
                         <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
                     </control>
                     <control type="label">
-                        <left>20</left>
-                        <width>440</width>
+                        <width>MenuButtonWidth</width>
                         <font>NormalButtonFont</font>
                         <textcolor>$VAR[BackgroundColor]</textcolor>
                         <align>center</align>
@@ -301,14 +299,13 @@
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
                     <control type="image">
-                        <width>480</width>
-                        <height>40</height>
+                        <width>MenuButtonWidth</width>
+                        <height>MenuButtonHeight</height>
                         <aspectratio>stretch</aspectratio>
                         <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
                     </control>
                     <control type="label">
-                        <left>20</left>
-                        <width>440</width>
+                        <width>MenuButtonWidth</width>
                         <font>NormalButtonFont</font>
                         <textcolor>$VAR[BackgroundColor]</textcolor>
                         <align>center</align>
@@ -655,7 +652,7 @@
         
         <definition>
             <control type="image">
-                <width>480</width>
+                <width>MenuButtonWidth</width>
                 <height>$PARAM[height]</height>
                 <aspectratio>stretch</aspectratio>
                 <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
@@ -663,15 +660,15 @@
 
             <control type="image">
                 <visible>!Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
-                <width>480</width>
+                <width>MenuButtonWidth</width>
                 <height>$PARAM[height]</height>
                 <aspectratio>stretch</aspectratio>
                 <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
             </control>
             
             <control type="image">
-                <posx>-17</posx>
-                <posy>20</posy>
+                <posx>20</posx>
+                <posy>-17</posy>
                 <width>35</width>
                 <height>35</height>
                 <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
@@ -679,8 +676,8 @@
 
             <control type="label">
                 <description>Question Mark Label</description>
-                <posx>-17</posx>
-                <posy>20</posy>
+                <posx>20</posx>
+                <posy>-17</posy>
                 <width>35</width>
                 <height>35</height>
                 <font>DialogTextFont</font>
