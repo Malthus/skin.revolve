@@ -241,14 +241,14 @@
     </include>
 
     <include name="MarkupForButtonListForDialog">
-        <param name="posx" default="40" />
+        <param name="posx" default="20" />
         <param name="posy" default="320" />
         <param name="height" default="80" />
 
         <definition>
             <posx>$PARAM[posx]</posx>
             <posy>$PARAM[posy]</posy>
-            <width>480</width>
+            <width>500</width>
             <height>$PARAM[height]</height>
             <orientation>vertical</orientation>
             <itemgap>0</itemgap>
@@ -375,6 +375,7 @@
     <include name="LabelForDialog">
         <param name="id" default="0" />
         <param name="visible" default="true" />
+        <param name="posx" default="560" />
         <param name="posy" default="80" />
         <param name="width" default="1240" />
         <param name="height" default="40" />
@@ -388,7 +389,7 @@
         <definition>
             <control type="label" id="$PARAM[id]">
                 <visible>$PARAM[visible]</visible>
-                <posx>560</posx>
+                <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>

@@ -86,7 +86,7 @@
         <definition>
             <animation effect="slide" start="0,0" end="-600,0" time="500" reversible="false">WindowClose</animation>
             <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
-                <effect type="slide" start="0,0" end="-560,0" time="200" />
+                <effect type="slide" start="0,0" end="-540,0" time="200" />
             </animation>
             <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
                 <effect type="slide" start="0,0" end="0,-1080" time="200" />
@@ -98,7 +98,7 @@
                     <visible>Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]</visible>
 
                     <control type="image">
-                        <posx>200</posx>
+                        <posx>180</posx>
                         <posy>340</posy>
                         <width>400</width>
                         <height>400</height>
@@ -108,7 +108,7 @@
                     </control>
 
                     <control type="label">
-                        <posx>394</posx>
+                        <posx>374</posx>
                         <posy>530</posy>
                         <width>360</width>
                         <height>20</height>
@@ -121,7 +121,7 @@
 
                     <include content="InvisibleButton">
                         <param name="id" value="9021" />
-                        <param name="posx" value="560" />
+                        <param name="posx" value="540" />
                         <param name="posy" value="390" />
                         <param name="width" value="30" />
                         <param name="height" value="300" />
@@ -133,7 +133,7 @@
                     <visible>Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]</visible>
 
                     <control type="image">
-                        <posx>80</posx>
+                        <posx>70</posx>
                         <posy>720</posy>
                         <width>400</width>
                         <height>400</height>
@@ -143,7 +143,7 @@
                     </control>
 
                     <control type="label">
-                        <posx>100</posx>
+                        <posx>90</posx>
                         <posy>1084</posy>
                         <width>360</width>
                         <height>20</height>
