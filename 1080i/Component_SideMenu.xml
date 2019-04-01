@@ -85,17 +85,17 @@
 
         <definition>
             <animation effect="slide" start="0,0" end="-600,0" time="500" reversible="false">WindowClose</animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
                 <effect type="slide" start="0,0" end="-560,0" time="200" />
             </animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
                 <effect type="slide" start="0,0" end="0,-1080" time="200" />
             </animation>
 
             <control type="group">
                 <control type="group">
                     <description>Left Side Menu Label</description>
-                    <visible>Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(10) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]</visible>
+                    <visible>Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]</visible>
 
                     <control type="image">
                         <posx>200</posx>
@@ -130,7 +130,7 @@
 
                 <control type="group">
                     <description>Top Side Menu Label</description>
-                    <visible>Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(10) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]</visible>
+                    <visible>Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]</visible>
 
                     <control type="image">
                         <posx>80</posx>

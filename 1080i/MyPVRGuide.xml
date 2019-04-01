@@ -16,7 +16,9 @@
         <include content="ChannelGroupLabelForGuidePVR" />
 
         <control type="group" id="9000">
-            <include content="SideMenu" />
+            <include content="SideMenu">
+                <param name="topmenu" value="true" />
+            </include>
 
             <control type="grouplist" id="9001">
                 <include content="BeginOfButtonListForSideMenu">
