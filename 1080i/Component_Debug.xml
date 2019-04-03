@@ -5,12 +5,12 @@
             <control type="grouplist">
                 <description>Window/Dialog Debug Information List</description>
                 <visible>Skin.HasSetting(Debug.Info.Visible)</visible>
-                <posx>10</posx>
-                <posy>70</posy>
-                <width>1900</width>
+                <posx>20</posx>
+                <posy>PosYForBigClock</posy>
+                <width>1880</width>
                 <height>600</height>
                 <itemgap>10</itemgap>
-                
+
                 <!-- Background Labels -->
 
                 <control type="group">
@@ -19,7 +19,7 @@
                         <param name="label" value="$VAR[ContentSingleImageBackground]$VAR[ContentMultiImageBackground, | ,]" />
                     </include>
                 </control>
-                
+
                 <!-- Folderpath Labels -->
 
                 <control type="group">
