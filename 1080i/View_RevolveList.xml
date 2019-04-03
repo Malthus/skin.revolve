@@ -12,7 +12,7 @@
                 <viewtype label="31934">list</viewtype>
                 <visible allowhiddenfocus="true">true</visible>
                 <animation effect="fade" start="100" end="0" time="200" condition="Container(54).Scrolling">Conditional</animation>
-                
+
                 <include content="InvisibleListDimensionsForView" />
                 <focusposition>1</focusposition>
                 <defaultcontrol>1</defaultcontrol>
@@ -34,6 +34,7 @@
         <definition>
             <control type="group">
                 <visible>Control.IsVisible(54)</visible>
+
                 <control type="group">
                     <visible>Control.IsVisible(303)</visible>
                     <animation effect="rotate" tween="quadratic" easing="out" center="0,773" start="180" end="360" time="1000" reversible="false">WindowOpen</animation>
@@ -41,7 +42,7 @@
                     <animation effect="fade" start="100" end="30" time="500" condition="!Control.HasFocus(54)">Conditional</animation>
                     <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
                     <animation effect="fade" end="0" reversible="false">Hidden</animation>
-                    
+
                     <control type="group">
                         <visible>ListItem.IsPlaying</visible>
                         <include content="OutlineLabel">
@@ -105,8 +106,19 @@
                     <animation effect="fade" start="100" end="30" time="500" condition="!Control.HasFocus(54)">Conditional</animation>
                     <include content="ItemsForRevolveListView" />
                 </control>
-                
+
                 <include content="LeftRing" />
+            </control>
+
+            <control type="group">
+                <visible>Control.IsVisible(54)</visible>
+
+                <animation type="WindowOpen">
+                    <effect type="slide" start="60,0" end="0,0" time="500" />
+                </animation>
+                <animation type="WindowClose">
+                    <effect type="slide" start="0,0" end="60,0" time="500" />
+                </animation>
 
                 <include content="VerticalScrollbarForView">
                     <param name="id" value="64" />
