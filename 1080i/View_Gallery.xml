@@ -288,34 +288,20 @@
                 </control>    
             </control>
         </control>        
-        
+
         <control type="group">
             <visible>Control.IsVisible(57)</visible>
             <include content="BottomRing" />
+
+            <include content="HorizontalScrollbarForView">
+                <param name="id" value="67" />
+                <param name="viewid" value="57" />
+            </include>
+
             <include content="LabelsForBottomRing" />
-        </control>        
-
-        <control type="scrollbar" id="67">
-            <visible allowhiddenfocus="true">Control.IsVisible(57)</visible>
-            <animation type="Conditional" condition="!Control.HasFocus(67) + !Container(57).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
-                <effect type="slide" start="0,0" end="0,-40" time="100" />
-            </animation>
-
-            <posx>PosXForHorizontalScrollbarForView</posx>
-            <posy>PosYForHorizontalScrollbarForView</posy>
-            <width>WidthForHorizontalScrollbarForView</width>
-            <height>HeightForHorizontalScrollbarForView</height>
-            <orientation>horizontal</orientation>
-            <texturesliderbackground border="14,0,14,0" colordiffuse="$VAR[BackgroundColor]">controls/verticalbar-thick.png</texturesliderbackground>
-            <texturesliderbar border="14,0,14,0" colordiffuse="$VAR[SelectColor]">controls/verticalbar-thin.png</texturesliderbar>
-            <texturesliderbarfocus border="14,0,14,0" colordiffuse="$VAR[MainColor]">controls/verticalbar-thin.png</texturesliderbarfocus>
-            <onup>57</onup>
-            <ondown>57</ondown>
-            <onleft>67</onleft>
-            <onright>67</onright>
         </control>
     </include>
-    
+
     <include name="ItemMinusThreeForGalleryView">
         <control type="image">
             <posx>0</posx>
@@ -333,7 +319,7 @@
             <aspectratio scalediffuse="false">scale</aspectratio>
         </control>
     </include>
-    
+
     <include name="ItemMinusTwoForGalleryView">
         <control type="image">
             <posx>0</posx>
@@ -351,7 +337,7 @@
             <aspectratio scalediffuse="false">scale</aspectratio>
         </control>
     </include>
-    
+
     <include name="ItemMinusOneForGalleryView">
         <control type="image">
             <posx>0</posx>
@@ -369,7 +355,7 @@
             <aspectratio scalediffuse="false">scale</aspectratio>
         </control>
     </include>
-    
+
     <include name="ItemOnOriginForGalleryView">
         <control type="image">
             <posx>0</posx>
@@ -392,7 +378,7 @@
             <include content="ListItemOverlayFlag" />
         </control>
     </include>
-    
+
     <include name="ItemPlusOneForGalleryView">
         <control type="image">
             <posx>0</posx>
@@ -410,7 +396,7 @@
             <aspectratio scalediffuse="false">scale</aspectratio>
         </control>
     </include>
-    
+
     <include name="ItemPlusTwoForGalleryView">
         <control type="image">
             <posx>0</posx>
