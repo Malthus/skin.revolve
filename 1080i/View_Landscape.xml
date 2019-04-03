@@ -66,6 +66,11 @@
 
                 <include content="BottomRing" />
                 
+                <include content="HorizontalScrollbarForView">
+                    <param name="id" value="$PARAM[scrollbarid]" />
+                    <param name="viewid" value="$PARAM[listid]" />
+                </include>
+
                 <control type="group">
                     <visible>$PARAM[labelsvisible]</visible>
                     <include content="LabelsForBottomRing" />
@@ -74,7 +79,7 @@
                 <include content="ItemsForLandscapeView">
                     <param name="listid" value="$PARAM[listid]" />
                 </include>
-                
+
                 <include content="ContentDescriptionForLandscapeView">
                     <param name="posx" value="$PARAM[descriptionposx]" />
                     <param name="posy" value="$PARAM[descriptionposy]" />
@@ -83,26 +88,6 @@
                     <param name="label" value="$PARAM[descriptionlabel]" />
                     <param name="visible" value="$PARAM[descriptionvisible]" />
                 </include>
-            </control>
-
-            <control type="scrollbar" id="$PARAM[scrollbarid]">
-                <visible allowhiddenfocus="true">Control.IsVisible($PARAM[listid])</visible>
-                <animation type="Conditional" condition="!Control.HasFocus($PARAM[scrollbarid]) + !Container($PARAM[listid]).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
-                    <effect type="slide" start="0,0" end="0,-40" time="100" />
-                </animation>
-
-                <posx>PosXForHorizontalScrollbarForView</posx>
-                <posy>PosYForHorizontalScrollbarForView</posy>
-                <width>WidthForHorizontalScrollbarForView</width>
-                <height>HeightForHorizontalScrollbarForView</height>
-                <orientation>horizontal</orientation>
-                <texturesliderbackground border="14,0,14,0" colordiffuse="$VAR[BackgroundColor]">controls/verticalbar-thick.png</texturesliderbackground>
-                <texturesliderbar border="14,0,14,0" colordiffuse="$VAR[SelectColor]">controls/verticalbar-thin.png</texturesliderbar>
-                <texturesliderbarfocus border="14,0,14,0" colordiffuse="$VAR[MainColor]">controls/verticalbar-thin.png</texturesliderbarfocus>
-                <onup>$PARAM[listid]</onup>
-                <ondown>$PARAM[listid]</ondown>
-                <onleft>$PARAM[scrollbarid]</onleft>
-                <onright>$PARAM[scrollbarid]</onright>
             </control>
         </definition>
     </include>

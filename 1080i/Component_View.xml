@@ -32,22 +32,46 @@
     <constant name="WidthForVerticalScrollbarForView">20</constant>
     <constant name="HeightForVerticalScrollbarForView">780</constant>
 
-    <include name="ScrollbarForView">
+    <include name="VerticalScrollbarForView">
         <param name="id" default="0" />
         <param name="viewid" default="0" />
-        
+
         <definition>
             <control type="scrollbar" id="$PARAM[id]">
                 <visible allowhiddenfocus="true">Control.IsVisible($PARAM[viewid])</visible>
                 <animation type="Conditional" condition="!Control.HasFocus($PARAM[id]) + !Container($PARAM[viewid]).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
                     <effect type="slide" start="0,0" end="40,0" time="100" />
                 </animation>
-                
+
                 <posx>PosXForVerticalScrollbarForView</posx>
                 <posy>PosYForVerticalScrollbarForView</posy>
                 <width>WidthForVerticalScrollbarForView</width>
                 <height>HeightForVerticalScrollbarForView</height>
                 <onleft>$PARAM[viewid]</onleft>
+            </control>
+        </definition>
+    </include>
+
+    <include name="HorizontalScrollbarForView">
+        <param name="id" default="0" />
+        <param name="viewid" default="0" />
+
+        <definition>
+            <control type="scrollbar" id="$PARAM[id]">
+                <visible allowhiddenfocus="true">Control.IsVisible($PARAM[viewid])</visible>
+                <animation type="Conditional" condition="!Control.HasFocus($PARAM[id]) + !Container($PARAM[viewid]).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
+                    <effect type="slide" start="0,0" end="0,100" time="100" />
+                </animation>
+
+                <posx>PosXForHorizontalScrollbarForView</posx>
+                <posy>PosYForHorizontalScrollbarForView</posy>
+                <width>WidthForHorizontalScrollbarForView</width>
+                <height>HeightForHorizontalScrollbarForView</height>
+                <orientation>horizontal</orientation>
+                <texturesliderbackground border="14,0,14,0" colordiffuse="$VAR[BackgroundColor]">controls/verticalbar-thick.png</texturesliderbackground>
+                <texturesliderbar border="14,0,14,0" colordiffuse="$VAR[SelectColor]">controls/verticalbar-thin.png</texturesliderbar>
+                <texturesliderbarfocus border="14,0,14,0" colordiffuse="$VAR[MainColor]">controls/verticalbar-thin.png</texturesliderbarfocus>
+                <onup>$PARAM[viewid]</onup>
             </control>
         </definition>
     </include>
