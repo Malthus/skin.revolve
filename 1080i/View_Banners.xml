@@ -49,30 +49,21 @@
                 </control>
             </focusedlayout>
         </control>
-        
+
         <control type="group">
             <visible>Control.IsVisible(59)</visible>
-            
+
             <control type="group">
                 <animation effect="slide" end="0,70" time="200" condition="Container(59).Row(5)">conditional</animation>                
                 <include content="BottomRing" />
             </control>
-            
-            <include content="LabelsForBottomRing" />
-        </control>
-        
-        <control type="scrollbar" id="69">
-            <visible allowhiddenfocus="true">Control.IsVisible(59)</visible>
-            <animation type="Conditional" condition="!Control.HasFocus(69) + !Container(59).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
-                <effect type="slide" start="0,0" end="40,0" time="100" />
-            </animation>
 
-            <posx>PosXForVerticalScrollbarForView</posx>
-            <posy>PosYForVerticalScrollbarForView</posy>
-            <width>WidthForVerticalScrollbarForView</width>
-            <height>HeightForVerticalScrollbarForView</height>
-            <onleft>59</onleft>
-            <onright>Noop</onright>
+            <include content="VerticalScrollbarForView">
+                <param name="id" value="69" />
+                <param name="viewid" value="59" />
+            </include>
+
+            <include content="LabelsForBottomRing" />
         </control>
     </include>
 </includes>

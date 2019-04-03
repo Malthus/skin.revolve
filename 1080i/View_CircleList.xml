@@ -66,6 +66,11 @@
                 <animation effect="rotate" center="320,560" start="0" end="-10" time="100" condition="Container(52).OnScrollPrevious">conditional</animation>
                 <animation effect="rotate" center="320,560" start="0" end="10" time="100" condition="Container(52).OnScrollNext">conditional</animation>
 
+                <include content="VerticalScrollbarForView">
+                    <param name="id" value="62" />
+                    <param name="viewid" value="52" />
+                </include>
+
                 <control type="group">
                     <include content="OtherElementForCircleListView">
                         <param name="angle" value="152" />
@@ -222,20 +227,6 @@
                     </include>
                 </control>
             </control>        
-
-            <control type="scrollbar" id="62">
-                <visible allowhiddenfocus="true">Control.IsVisible(52)</visible>
-                <animation type="Conditional" condition="!Control.HasFocus(62) + !Container(52).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
-                    <effect type="slide" start="0,0" end="40,0" time="100" />
-                </animation>
-                
-                <posx>PosXForVerticalScrollbarForView</posx>
-                <posy>PosYForVerticalScrollbarForView</posy>
-                <width>WidthForVerticalScrollbarForView</width>
-                <height>HeightForVerticalScrollbarForView</height>
-                <onleft>52</onleft>
-                <onright>Noop</onright>
-            </control>
         </definition>
     </include>
 
