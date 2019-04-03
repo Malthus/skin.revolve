@@ -241,19 +241,7 @@
             </control>
         </definition>
     </include>
-    
-    <include name="ShadowForDefaultCircleThumbnailIcon">
-        <definition>
-            <control type="image">
-                <posx>-30</posx>
-                <posy>-30</posy>
-                <width>330</width>
-                <height>330</height>
-                <texture background="true">elements/circle-shadow.png</texture>
-            </control>
-        </definition>
-    </include>
-    
+
     <include name="FadeMaskForDefaultCircleThumbnailIcon">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -364,19 +352,6 @@
             </control>
         </definition>
     </include>
-    
-    <include name="ShadowForDefaultSquareThumbnailIcon">
-        <definition>
-            <control type="group">
-                <posx>-30</posx>
-                <posy>-30</posy>
-                <width>330</width>
-                <height>330</height>
-                <texture border="30" background="true">elements/poster-shadow.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-        </definition>
-    </include>
 
     <include name="OverlayForDefaultSquareThumbnailIcon">
         <definition>
@@ -436,19 +411,6 @@
                 <height>397</height>
                 <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
-            </control>
-        </definition>
-    </include>
-
-    <include name="ShadowForDefaultVerticalThumbnailIcon">
-        <definition>
-            <control type="group">
-                <posx>-30</posx>
-                <posy>-30</posy>
-                <width>330</width>
-                <height>465</height>
-                <texture border="30" background="true">elements/poster-shadow.png</texture>
-                <aspectratio>stretch</aspectratio>
             </control>
         </definition>
     </include>
@@ -576,19 +538,6 @@
         </definition>
     </include>
 
-    <include name="ShadowForDefaultBannerIcon">
-        <definition>
-            <control type="image">
-                <posx>-30</posx>
-                <posy>-30</posy>
-                <height>206</height>
-                <width>824</width>
-                <texture border="30" background="true">elements/poster-shadow.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-        </definition>
-    </include>
-    
     <include name="OverlayForDefaultBannerIcon">
         <definition>
             <control type="group">
@@ -621,19 +570,6 @@
         </definition>
     </include>
 
-    <include name="ShadowForSquarePosterIcon">
-        <definition>
-            <control type="image">
-                <posx>-30</posx>
-                <posy>-30</posy>
-                <width>588</width>
-                <height>588</height>
-                <texture border="30" background="true">elements/poster-shadow.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-        </definition>
-    </include>
-    
     <include name="OverlayForSquarePosterIcon">
         <definition>
             <control type="group">
@@ -664,19 +600,6 @@
         </definition>
     </include>
 
-    <include name="ShadowForVerticalPosterIcon">
-        <definition>
-            <control type="image">
-                <posx>-30</posx>
-                <posy>-30</posy>
-                <width>588</width>
-                <height>832</height>
-                <texture border="30" background="true">elements/poster-shadow.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-        </definition>
-    </include>
-    
     <include name="OverlayForVerticalPosterIcon">
         <definition>
             <control type="group">
