@@ -68,9 +68,9 @@
                 <width>WidthForHorizontalScrollbarForView</width>
                 <height>HeightForHorizontalScrollbarForView</height>
                 <orientation>horizontal</orientation>
-                <texturesliderbackground border="14,0,14,0" colordiffuse="$VAR[BackgroundColor]">controls/verticalbar-thick.png</texturesliderbackground>
-                <texturesliderbar border="14,0,14,0" colordiffuse="$VAR[SelectColor]">controls/verticalbar-thin.png</texturesliderbar>
-                <texturesliderbarfocus border="14,0,14,0" colordiffuse="$VAR[MainColor]">controls/verticalbar-thin.png</texturesliderbarfocus>
+                <texturesliderbackground border="14,0,14,0" colordiffuse="$VAR[BackgroundColor]">controls/horizontalbar-thick.png</texturesliderbackground>
+                <texturesliderbar border="14,0,14,0" colordiffuse="$VAR[SelectColor]">controls/horizontalbar-thin.png</texturesliderbar>
+                <texturesliderbarfocus border="14,0,14,0" colordiffuse="$VAR[MainColor]">controls/horizontalbar-thin.png</texturesliderbarfocus>
                 <onup>$PARAM[viewid]</onup>
             </control>
         </definition>
