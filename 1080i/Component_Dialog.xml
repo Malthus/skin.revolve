@@ -1465,7 +1465,7 @@
 
         <definition>
             <control type="image">
-                <visible>Window.IsTopMost($PARAM[windowid])</visible>
+                <visible>Window.IsTopMost($PARAM[windowid]) | Window.Previous($PARAM[windowid]) | Window.Next($PARAM[windowid])</visible>
                 <animation effect="fade" start="0" end="100" time="DefaultFadeDuration">Visible</animation>
                 <animation effect="fade" start="100" end="0" time="DefaultFadeDuration">Hidden</animation>
                 <include content="FullscreenDimensions" />
