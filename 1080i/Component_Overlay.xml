@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <constant name="PosYForUpperBackgroundForOverlay">12</constant>
-    <constant name="PosYForLowerBackgroundForOverlay">1022</constant>
     <constant name="HeightForBackgroundForOverlay">46</constant>
 
+    <constant name="PosYForUpperBackgroundForOverlay">12</constant>
+    <constant name="PosYForUpperLabelForOverlay">17</constant>
+    <constant name="PosYForUpperIconForOverlay">5</constant>
+
+    <constant name="PosYForLowerBackgroundForOverlay">1022</constant>
     <constant name="PosYForLowerLabelForOverlay">1027</constant>
     <constant name="PosYForLowerIconForOverlay">1015</constant>
 
@@ -42,7 +45,7 @@
             <control type="group">
                 <visible>Skin.HasSetting(BackButton.Visible) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
                 <posx>5</posx>
-                <posy>5</posy>
+                <posy>PosYForUpperIconForOverlay</posy>
 
                 <include content="NavigationFlag">
                     <param name="flagcolor" value="$VAR[SecondaryColor]" />
