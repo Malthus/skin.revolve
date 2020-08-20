@@ -431,9 +431,9 @@
 
     <variable name="PrimaryColorThemeLabel">
         <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),Y)">$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
-        <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),R)">$LOCALIZE[31981]</value>
-        <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),B)">$LOCALIZE[31983]</value>
-        <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),G)">$LOCALIZE[31982]</value>
+        <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),R)">$LOCALIZE[13343]</value>
+        <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),B)">$LOCALIZE[762]</value>
+        <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),G)">$LOCALIZE[13341]</value>
         <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),P)">$LOCALIZE[31984]</value>
         <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),X)">$LOCALIZE[31244]</value>
         <value>$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
@@ -441,9 +441,9 @@
     
     <variable name="BackgroundColorThemeLabel">
         <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),Y)">$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
-        <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),W)">$LOCALIZE[31986]</value>
-        <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),G)">$LOCALIZE[31987]</value>
-        <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),B)">$LOCALIZE[31988]</value>
+        <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),W)">$LOCALIZE[742]</value>
+        <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),G)">$LOCALIZE[767]</value>
+        <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),B)">$LOCALIZE[353]</value>
         <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),X)">$LOCALIZE[31244]</value>
         <value>$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
     </variable>
