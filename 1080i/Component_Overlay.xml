@@ -16,6 +16,7 @@
         <value condition="Player.HasAudio">$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ,]</value>
         <value>$INFO[Player.Title]</value>
     </variable>
+
     <variable name="TimeLabelForOverlay">
         <value condition="Window.IsVisible(volumebar)"></value>
         <value condition="Player.HasDuration">$INFO[Player.Time] / $INFO[Player.Duration]</value>
@@ -118,7 +119,7 @@
     <include name="ValuesOverlay">
         <param name="buttonid" default="200" />
         <param name="controlid" default="52" />
-        
+
         <definition>
             <include content="ButtonForValues">
                 <param name="buttonid" value="$PARAM[buttonid]" />
