@@ -11,7 +11,7 @@
             </include>
 
             <control type="group">
-                <posx>5</posx>
+                <posx>20</posx>
                 <posy>PosYForLowerIconForOverlay</posy>
                 <include content="BusyFlag">
                     <param name="flagcolor" value="$VAR[SecondaryColor]" />
@@ -22,25 +22,25 @@
                 <visible>Player.HasMedia</visible>
 
                 <control type="image">
-                    <posx>73</posx>
+                    <posx>88</posx>
                     <posy>1053</posy>
-                    <width>1307</width>
+                    <width>1292</width>
                     <height>26</height>
                     <texture colordiffuse="$VAR[BackgroundColor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="image">
-                    <posx>75</posx>
+                    <posx>90</posx>
                     <posy>1055</posy>
-                    <width>1303</width>
+                    <width>1288</width>
                     <height>22</height>
                     <texture colordiffuse="$VAR[SecondaryColor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="progress" id="32">
-                    <posx>75</posx>
+                    <posx>90</posx>
                     <posy>1042</posy>
-                    <width>1303</width>
+                    <width>1288</width>
                     <height>24</height>
                     <texturebg border="6"></texturebg>
                     <midtexture border="6">controls/horizontalbar-thin.png</midtexture>
@@ -48,9 +48,9 @@
                 </control>
     
                 <include content="OutlineLabel">
-                    <param name="posx" value="75" />
+                    <param name="posx" value="90" />
                     <param name="posy" value="1035" />
-                    <param name="width" value="1305" />
+                    <param name="width" value="1290" />
                     <param name="height" value="22" />
                     <param name="font" value="MessageDetailFont" />
                     <param name="textcolor" value="$VAR[SecondaryColor]" />
@@ -60,9 +60,9 @@
                 </include>
     
                 <include content="OutlineLabel">
-                    <param name="posx" value="75" />
+                    <param name="posx" value="90" />
                     <param name="posy" value="1014" />
-                    <param name="width" value="1305" />
+                    <param name="width" value="1290" />
                     <param name="height" value="22" />
                     <param name="font" value="MessageDetailFont" />
                     <param name="textcolor" value="$VAR[SecondaryColor]" />
@@ -76,25 +76,25 @@
                 <visible>!Player.HasMedia</visible>
 
                 <control type="image">
-                    <posx>73</posx>
+                    <posx>88</posx>
                     <posy>1053</posy>
-                    <width>1827</width>
+                    <width>1812</width>
                     <height>26</height>
                     <texture colordiffuse="$VAR[BackgroundColor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="image">
-                    <posx>75</posx>
+                    <posx>90</posx>
                     <posy>1055</posy>
-                    <width>1823</width>
+                    <width>1807</width>
                     <height>22</height>
                     <texture colordiffuse="$VAR[SecondaryColor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="progress" id="32">
-                    <posx>75</posx>
+                    <posx>90</posx>
                     <posy>1042</posy>
-                    <width>1823</width>
+                    <width>1807</width>
                     <height>24</height>
                     <texturebg border="6"></texturebg>
                     <midtexture border="6">controls/horizontalbar-thin.png</midtexture>
@@ -102,9 +102,9 @@
                 </control>
     
                 <include content="OutlineLabel">
-                    <param name="posx" value="75" />
+                    <param name="posx" value="90" />
                     <param name="posy" value="1035" />
-                    <param name="width" value="1825" />
+                    <param name="width" value="1810" />
                     <param name="height" value="22" />
                     <param name="font" value="MessageDetailFont" />
                     <param name="textcolor" value="$VAR[SecondaryColor]" />
@@ -114,9 +114,9 @@
                 </include>
     
                 <include content="OutlineLabel">
-                    <param name="posx" value="75" />
+                    <param name="posx" value="90" />
                     <param name="posy" value="1014" />
-                    <param name="width" value="1825" />
+                    <param name="width" value="1810" />
                     <param name="height" value="22" />
                     <param name="font" value="MessageDetailFont" />
                     <param name="textcolor" value="$VAR[SecondaryColor]" />

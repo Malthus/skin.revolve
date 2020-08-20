@@ -4,7 +4,7 @@
         <control type="group">
             <control type="group">
                 <description>Volume Flag</description>
-                <posx>1793</posx>
+                <posx>1775</posx>
                 <posy>PosYForLowerIconForOverlay</posy>
                 <include content="AudioVolumeFlag">
                     <param name="flagcolor" value="$VAR[SecondaryColor]" />
@@ -18,7 +18,7 @@
                 <control type="image">
                     <posx>1420</posx>
                     <posy>1032</posy>
-                    <width>365</width>
+                    <width>350</width>
                     <height>26</height>
                     <texture colordiffuse="$VAR[BackgroundColor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
@@ -26,7 +26,7 @@
                 <control type="image">
                     <posx>1422</posx>
                     <posy>1034</posy>
-                    <width>360</width>
+                    <width>345</width>
                     <height>22</height>
                     <texture colordiffuse="$VAR[SecondaryColor]" border="6">controls/horizontalbar-thick.png</texture>
                     <aspectratio>stretch</aspectratio>
@@ -34,7 +34,7 @@
                 <control type="progress" id="1">
                     <posx>1422</posx>
                     <posy>1022</posy>
-                    <width>360</width>
+                    <width>345</width>
                     <height>24</height>
                     <texturebg border="6"></texturebg>
                     <midtexture border="6">controls/horizontalbar-thin.png</midtexture>
@@ -49,7 +49,7 @@
 
                 <include content="LabelForOverlay">
                     <param name="posx" value="1420" />
-                    <param name="width" value="360" />
+                    <param name="width" value="345" />
                     <param name="align" value="left" />
                     <param name="label" value="$LOCALIZE[14252]" />
                 </include>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <expression name="VisibilityOfRssFeed">System.GetBool(lookandfeel.enablerssfeeds)</expression>
+    <expression name="VisibilityOfRssFeed">System.GetBool(lookandfeel.enablerssfeeds) + !Window.IsVisible(notification)</expression>
 
     <include name="RssFeed">
         <definition>
             <control type="group">
-                <visible>$EXP[VisibilityOfRssFeed] + !Window.IsVisible(notification)</visible>
+                <visible>$EXP[VisibilityOfRssFeed]</visible>
 
                 <include content="BackgroundForOverlay">
                     <param name="visible" value="true" />
@@ -15,7 +15,7 @@
                 <control type="rss" id="1">
                     <posx>20</posx>
                     <posy>12</posy>
-                    <width>1850</width>
+                    <width>1835</width>
                     <height>30</height>
                     <font>MessageTextFont</font>
                     <titlecolor>$VAR[MainColor]</titlecolor>
@@ -25,7 +25,7 @@
                 </control>
 
                 <control type="group">
-                    <posx>1855</posx>
+                    <posx>1840</posx>
                     <posy>PosYForUpperIconForOverlay</posy>
                     <include content="RssFeedFlag">
                         <param name="flagcolor" value="$VAR[SecondaryColor]" />

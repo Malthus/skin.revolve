@@ -45,7 +45,7 @@
         <definition>
             <control type="group">
                 <visible>Skin.HasSetting(BackButton.Visible) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
-                <posx>5</posx>
+                <posx>20</posx>
                 <posy>PosYForUpperIconForOverlay</posy>
 
                 <include content="NavigationFlag">
