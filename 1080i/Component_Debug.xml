@@ -14,9 +14,16 @@
                 <!-- Background Labels -->
 
                 <control type="group">
-                    <visible>String.IsEqual(Skin.String(Debug.Info.AdditionalType),B)</visible>
+                    <visible>String.IsEqual(Skin.String(Debug.Info.AdditionalType),B) + !$EXP[HasSlideshowInBackground]</visible>
                     <include content="InformationForDebug">
                         <param name="label" value="$VAR[ContentSingleImageBackground]$VAR[ContentMultiImageBackground, | ,]" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>String.IsEqual(Skin.String(Debug.Info.AdditionalType),B) + $EXP[HasSlideshowInBackground]</visible>
+                    <include content="InformationForDebug">
+                        <param name="label" value="$INFO[Skin.String(Background.Slideshow.ImagePath)]" />
                     </include>
                 </control>
 
