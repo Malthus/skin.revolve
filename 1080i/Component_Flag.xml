@@ -97,6 +97,30 @@
         </definition>
     </include>
 
+    <include name="ColorForFlag">
+        <param name="visible" default="true" />
+        <param name="color" default="$VAR[HighlightColor]" />
+        <param name="fademaskcolor" default="$VAR[FadeMaskColor]" />
+
+        <definition>
+            <control type="image">
+                <visible>$PARAM[visible]</visible>
+                <width>SizeForFlag</width>
+                <height>SizeForFlag</height>
+                <texture colordiffuse="$PARAM[color]">flags/property-background.png</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+            
+            <control type="image">
+                <visible>$PARAM[visible]</visible>
+                <width>SizeForFlag</width>
+                <height>SizeForFlag</height>
+                <texture colordiffuse="$PARAM[fademaskcolor]">flags/property-background.png</texture>
+                <aspectratio scalediffuse="false">keep</aspectratio>
+            </control>
+        </definition>
+    </include>
+
     <include name="HighlightForFlag">
         <param name="visible" default="true" />
         <param name="highlightcolor" default="$VAR[HighlightColor]" />
@@ -360,9 +384,9 @@
                     <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
                 </include>
 
-                <include content="HighlightForFlag">
+                <include content="ColorForFlag">
                     <param name="visible" value="Skin.HasSetting(View.EPGColors.Enabled)" />
-                    <param name="highlightcolor" value="$VAR[EPGGenreTypeColorForFlag]" />
+                    <param name="color" value="$VAR[EPGGenreTypeColorForFlag]" />
                 </include>
 
                 <control type="image">
