@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="GenreBorderForEPGTimelineViewForPVR">
+    <include name="GenreBackgroundForEPGTimelineViewForPVR">
         <definition>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),16)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.MovieColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.MovieColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),32)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.NewsColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.NewsColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),48)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ShowColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ShowColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),64)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.SportsColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.SportsColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),80)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ChildColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ChildColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),96)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.MusicColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.MusicColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),112)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ArtsColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ArtsColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),128)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.SocialColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.SocialColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),144)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ScienceColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.ScienceColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),160)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.HobbyColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.HobbyColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
             <control type="image" id="2">
                 <visible>Skin.HasSetting(View.EPGColors.Enabled) + String.IsEqual(ListItem.Property(GenreType),176)</visible>
                 <width>60</width>
                 <height>80</height>
-                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.SpecialColor)]" border="20">controls/rectangle-clear.png</texture>
+                <texture colordiffuse="$INFO[Skin.String(View.EPGColors.SpecialColor)]" border="20">controls/rectangle-fill.png</texture>
             </control>
         </definition>
     </include>
@@ -204,7 +204,15 @@
                         <height>80</height>
                         <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
                     </control>
-                    <include content="GenreBorderForEPGTimelineViewForPVR" />
+                    <include content="GenreBackgroundForEPGTimelineViewForPVR" />
+                    <control type="image" id="2">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <width>52</width>
+                        <height>72</height>
+                        <texture colordiffuse="$VAR[FademaskColor]" border="20">controls/rectangle-fill.png</texture>
+                    </control>
+
                     <control type="label" id="1">
                         <posx>8</posx>
                         <posy>10</posy>
@@ -232,12 +240,19 @@
                     
                 <focusedlayout height="80" width="60">
                     <control type="image" id="2">
-                        <posy>0</posy>
                         <width>60</width>
                         <height>80</height>
                         <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
                     </control>
-                    <include content="GenreBorderForEPGTimelineViewForPVR" />
+                    <include content="GenreBackgroundForEPGTimelineViewForPVR" />
+                    <control type="image" id="2">
+                        <posx>4</posx>
+                        <posy>4</posy>
+                        <width>52</width>
+                        <height>72</height>
+                        <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
+                    </control>
+
                     <control type="label" id="1">
                         <posx>8</posx>
                         <posy>10</posy>
