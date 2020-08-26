@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="ChannelIconForPVR">
+        <definition>
+            <include content="BackgroundForTinyCircleThumbnailIcon" />
+
+            <control type="image">
+                <posx>3</posx>
+                <posy>3</posy>
+                <width>64</width>
+                <height>64</height>
+                <texture colordiffuse="$VAR[BackgroundColor]">elements/circle-mask.png</texture>
+            </control>
+            <control type="image">
+                <posx>3</posx>
+                <posy>3</posy>
+                <width>64</width>
+                <height>64</height>
+                <texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+            </control>
+        </definition>
+    </include>
+    
+
     <include name="GenreBackgroundForEPGTimelineViewForPVR">
         <definition>
             <control type="image" id="2">
@@ -159,7 +182,7 @@
                     <control type="group">
                         <posx>405</posx>
                         <posy>5</posy>
-                        <include content="TinyCircleThumbnailIcon" />
+                        <include content="ChannelIconForPVR" />
                     </control>
                 </channellayout>
                     
@@ -194,7 +217,7 @@
                     <control type="group">
                         <posx>405</posx>
                         <posy>5</posy>
-                        <include content="TinyCircleThumbnailIcon" />
+                        <include content="ChannelIconForPVR" />
                     </control>
                 </focusedchannellayout>
 
