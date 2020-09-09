@@ -10,6 +10,58 @@
     <constant name="CenterXForDefaultIconFrameForDialog">280</constant>
     <constant name="CenterYForDefaultIconFrameForDialog">155</constant>
 
+    <constant name="PosYForButtonMenuDialog">360</constant>
+    <constant name="HeightForButtonMenuDialog">360</constant>
+
+    <constant name="PosYForTwoLinesDialog">450</constant>
+    <constant name="HeightForTwoLinesDialog">180</constant>
+
+    <constant name="PosYForThreeLinesDialog">430</constant>
+    <constant name="HeightForThreeLinesDialog">220</constant>
+    
+    <constant name="PosYForFourLinesDialog">410</constant>
+    <constant name="HeightForFourLinesDialog">260</constant>
+
+    <constant name="PosYForSixLinesDialog">370</constant>
+    <constant name="HeightForSixLinesDialog">340</constant>
+
+    <constant name="PosYForEightLinesDialog">330</constant>
+    <constant name="HeightForEightLinesDialog">420</constant>
+
+    <constant name="PosYForNineLinesDialog">310</constant>
+    <constant name="HeightForNineLinesDialog">460</constant>
+
+    <constant name="PosYForTenLinesDialog">290</constant>
+    <constant name="HeightForTenLinesDialog">500</constant>
+
+    <constant name="PosYForElevenLinesDialog">270</constant>
+    <constant name="HeightForElevenLinesDialog">540</constant>
+
+    <constant name="PosYForTwelveLinesDialog">250</constant>
+    <constant name="HeightForTwelveLinesDialog">580</constant>
+
+    <constant name="PosYForThirteenLinesDialog">230</constant>
+    <constant name="HeightForThirteenLinesDialog">620</constant>
+
+    <constant name="PosYForFourteenLinesDialog">210</constant>
+    <constant name="HeightForFourteenLinesDialog">660</constant>
+
+    <constant name="PosYForFifteenLinesDialog">190</constant>
+    <constant name="HeightForFifteenLinesDialog">700</constant>
+
+    <constant name="PosYForFullWindowDialog">90</constant>
+    <constant name="HeightForFullWindowDialog">900</constant>
+
+    <constant name="PosYForProgressDialog">385</constant>
+    <constant name="HeightForProgressDialog">310</constant>
+    
+    <constant name="PosYForKeyboardDialog">270</constant>
+    <constant name="HeightForKeyboardDialog">540</constant>
+
+    <constant name="PosYForLoginDialog">385</constant>
+    <constant name="HeightForLoginDialog">310</constant>
+
+
     <include name="ButtonForDialog">
         <param name="id" default="0" />
         <param name="posy" default="0" />
@@ -239,136 +291,8 @@
             </control>
         </definition>
     </include>
-
-    <include name="MarkupForButtonListForDialog">
-        <param name="posx" default="20" />
-        <param name="posy" default="320" />
-        <param name="height" default="80" />
-
-        <definition>
-            <posx>$PARAM[posx]</posx>
-            <posy>$PARAM[posy]</posy>
-            <width>500</width>
-            <height>$PARAM[height]</height>
-            <orientation>vertical</orientation>
-            <align>right</align>
-            <itemgap>0</itemgap>
-            <usecontrolcoords>true</usecontrolcoords>
-        </definition>
-    </include>
-
-    <include name="ItemsForButtonListForDialog">
-        <param name="listid" default="0" />
-
-        <definition>
-            <itemlayout height="MenuButtonHeight">
-                <control type="image">
-                    <width>MenuButtonWidth</width>
-                    <height>MenuButtonHeight</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
-                </control>
-                <control type="label">
-                    <width>MenuButtonWidth</width>
-                    <font>NormalButtonFont</font>
-                    <textcolor>$VAR[MainColor]</textcolor>
-                    <scroll>false</scroll>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-            </itemlayout>
-
-            <focusedlayout height="MenuButtonHeight">
-                <control type="group">
-                    <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <control type="image">
-                        <width>MenuButtonWidth</width>
-                        <height>MenuButtonHeight</height>
-                        <aspectratio>stretch</aspectratio>
-                        <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
-                    </control>
-                    <control type="label">
-                        <width>MenuButtonWidth</width>
-                        <font>NormalButtonFont</font>
-                        <textcolor>$VAR[BackgroundColor]</textcolor>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                </control>
-                <control type="group">
-                    <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <control type="image">
-                        <width>MenuButtonWidth</width>
-                        <height>MenuButtonHeight</height>
-                        <aspectratio>stretch</aspectratio>
-                        <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
-                    </control>
-                    <control type="label">
-                        <width>MenuButtonWidth</width>
-                        <font>NormalButtonFont</font>
-                        <textcolor>$VAR[BackgroundColor]</textcolor>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                </control>
-            </focusedlayout>
-        </definition>
-    </include>    
-
-    <include name="MarkupForListForDialog">
-        <param name="posy" default="80" />
-        <param name="height" default="80" />
-        <param name="pagecontrol" default="0" />
-        <param name="scrolltime" default="200" />
-
-        <definition>
-            <posx>560</posx>
-            <posy>$PARAM[posy]</posy>
-            <width>1240</width>
-            <height>$PARAM[height]</height>
-            <orientation>vertical</orientation>
-            <itemgap>0</itemgap>
-            <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-            <scrolltime>$PARAM[scrolltime]</scrolltime>
-        </definition>
-    </include>
     
-    <include name="MarkupForInfoListForDialog">
-        <param name="posy" default="120" />
-        <param name="height" default="480" />
-        <param name="pagecontrol" default="0" />
-
-        <definition>
-            <posx>560</posx>
-            <posy>$PARAM[posy]</posy>
-            <width>1240</width>
-            <height>$PARAM[height]</height>
-            <orientation>vertical</orientation>
-            <itemgap>0</itemgap>
-            <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
-        </definition>
-    </include>
-
-    <include name="MarkupForScrollbarForDialog">
-        <param name="posx" default="1840" />
-        <param name="posy" default="0" />
-        <param name="height" default="0" />
-    
-        <definition>
-            <posx>$PARAM[posx]</posx>
-            <posy>$PARAM[posy]</posy>
-            <width>20</width>
-            <height>$PARAM[height]</height>
-            <texturesliderbackground border="0,14,0,14" colordiffuse="$VAR[MainColor]">controls/horizontalbar-thick.png</texturesliderbackground>
-            <texturesliderbar border="0,14,0,14" colordiffuse="$VAR[FademaskColor]">controls/horizontalbar-thin.png</texturesliderbar>
-            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[BackgroundColor]">controls/horizontalbar-thin.png</texturesliderbarfocus>
-            <orientation>vertical</orientation>
-            <showonepage>false</showonepage>
-        </definition>
-    </include>
+    <!-- Label -->
 
     <include name="LabelForDialog">
         <param name="id" default="0" />
@@ -403,6 +327,8 @@
         </definition>
     </include>
 
+    <!-- Header -->
+
     <include name="HeaderForDialog">
         <param name="id" default="0" />
         <param name="visible" default="true" />
@@ -435,6 +361,26 @@
         </definition>
     </include>
 
+    <!-- Scrollbar -->
+
+    <include name="MarkupForScrollbarForDialog">
+        <param name="posx" default="1840" />
+        <param name="posy" default="0" />
+        <param name="height" default="0" />
+    
+        <definition>
+            <posx>$PARAM[posx]</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>20</width>
+            <height>$PARAM[height]</height>
+            <texturesliderbackground border="0,14,0,14" colordiffuse="$VAR[MainColor]">controls/horizontalbar-thick.png</texturesliderbackground>
+            <texturesliderbar border="0,14,0,14" colordiffuse="$VAR[FademaskColor]">controls/horizontalbar-thin.png</texturesliderbar>
+            <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[BackgroundColor]">controls/horizontalbar-thin.png</texturesliderbarfocus>
+            <orientation>vertical</orientation>
+            <showonepage>false</showonepage>
+        </definition>
+    </include>
+
     <include name="ScrollbarForDialog">
         <param name="id" default="0" />
         <param name="posx" default="1840" />
@@ -460,39 +406,14 @@
         </definition>
     </include>
 
-    <include name="ControlListForDialog">
-        <param name="posy" default="80" />
-        <param name="id" default="0" />
-        <param name="height" default="220" />
-        <param name="pagecontrol" default="0" />
-        <param name="scrolltime" default="200" />
-        <param name="onup" default="Noop" />
-        <param name="ondown" default="Noop" />
-        <param name="onleft" default="9000" />
-        <param name="onright" default="Noop" />
-        
-        <definition>
-              <control type="grouplist" id="$PARAM[id]">
-                <include content="MarkupForListForDialog">
-                    <param name="posy" value="$PARAM[posy]" />
-                    <param name="height" value="$PARAM[height]" />
-                    <param name="pagecontrol" value="$PARAM[pagecontrolid]" />
-                    <param name="scrolltime" value="$PARAM[scrolltime]" />
-                </include>
-                <onup>$PARAM[onup]</onup>
-                <ondown>$PARAM[ondown]</ondown>
-                <onleft>$PARAM[onleft]</onleft>
-                <onright>$PARAM[onright]</onright>
-            </control>
-        </definition>
-    </include>
+    <!-- Textbox -->
 
     <include name="TextboxForDialog">
+        <param name="textboxid" default="" />
+        <param name="scrollbarid" default="" />
         <param name="visible" default="true" />
         <param name="posy" default="80" />
         <param name="height" default="120" />
-        <param name="textboxid" default="" />
-        <param name="scrollbarid" default="" />
         <param name="label" default="$VAR[ContentNoDescription]" />
         <param name="onup" default="Noop" />
         <param name="ondown" default="Noop" />
@@ -529,40 +450,76 @@
             </control>
         </definition>
     </include>
-
-    <include name="ListForDialog">
-        <param name="id" default="0" />
-        <param name="pagecontrolid" default="0" />
-        <param name="posy" default="80" />
-        <param name="height" default="220" />
-        <param name="scrolltime" default="200" />
-        <param name="onup" default="Noop" />
-        <param name="ondown" default="Noop" />
-        <param name="onleft" default="9000" />
-        <param name="onright" default="Noop" />
+    
+    <!-- Image -->
+    
+    <include name="DefaultImageForDialog">
+        <param name="posx" default="PosXForDefaultIconFrameForDialog" />
+        <param name="posy" default="PosYForDefaultIconFrameForDialog" />
+        <param name="texture" default="" />
         
         <definition>
-            <include content="ControlListForDialog">
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="pagecontrol" value="$PARAM[pagecontrolid]" />
-                <param name="scrolltime" value="$PARAM[scrolltime]" />
-                <param name="onup" value="$PARAM[onup]" />
-                <param name="ondown" value="$PARAM[ondown]" />
-                <param name="onleft" value="$PARAM[onleft]" />
-                <param name="onright" value="$PARAM[pagecontrolid]" />
-            </include>
-            
-            <include content="ScrollbarForDialog">
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="onup" value="$PARAM[onup]" />
-                <param name="ondown" value="$PARAM[ondown]" />
-                <param name="onleft" value="$PARAM[id]" />
-                <param name="onright" value="$PARAM[onright]" />
-            </include>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <include>BackgroundForDefaultCircleThumbnailIcon</include>
+
+                <control type="image">
+                    <posx>4</posx>
+                    <posy>4</posy>
+                    <width>262</width>
+                    <height>262</height>
+                    <texture diffuse="elements/circle-mask.png" background="true">$PARAM[texture]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
         </definition>
     </include>
+    
+    <!-- Help Frame -->
+
+    <include name="HelpFrameForDialog">
+        <param name="height" default="280" />
+        
+        <definition>
+            <control type="image">
+                <width>MenuButtonWidth</width>
+                <height>$PARAM[height]</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
+            </control>
+
+            <control type="image">
+                <visible>!Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
+                <width>MenuButtonWidth</width>
+                <height>$PARAM[height]</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
+            </control>
+            
+            <control type="image">
+                <posx>20</posx>
+                <posy>-17</posy>
+                <width>35</width>
+                <height>35</height>
+                <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
+            </control>
+
+            <control type="label">
+                <description>Question Mark Label</description>
+                <posx>20</posx>
+                <posy>-17</posy>
+                <width>35</width>
+                <height>35</height>
+                <font>DialogTextFont</font>
+                <textcolor>$VAR[BackgroundColor]</textcolor>
+                <align>center</align>
+                <label>$LOCALIZE[31904]</label>
+            </control>
+        </definition>
+    </include>
+    
+    <!-- Default Controls -->
 
     <include name="DefaultControlsForDialog">
         <param name="buttonvisible" default="true" />
@@ -624,195 +581,240 @@
             </control>
         </definition>
     </include>
-    
-    <include name="DefaultImageForDialog">
-        <param name="posx" default="PosXForDefaultIconFrameForDialog" />
-        <param name="posy" default="PosYForDefaultIconFrameForDialog" />
-        <param name="texture" default="" />
-        
-        <definition>
-            <control type="group">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-                <include>BackgroundForDefaultCircleThumbnailIcon</include>
 
-                <control type="image">
-                    <posx>4</posx>
-                    <posy>4</posy>
-                    <width>262</width>
-                    <height>262</height>
-                    <texture diffuse="elements/circle-mask.png" background="true">$PARAM[texture]</texture>
-                    <aspectratio>keep</aspectratio>
-                </control>
+    <!-- Button List -->
+
+    <include name="ButtonListForDialog">
+        <param name="id" default="9000" />
+        <param name="posx" default="20" />
+        <param name="posy" default="320" />
+        <param name="height" default="80" />
+        <param name="onup" default="9000" />
+        <param name="ondown" default="9000" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="grouplist" id="$PARAM[id]">
+                <include content="MarkupForButtonListForDialog">
+                    <param name="posx" value="$PARAM[posx]" />
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                </include>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+
+                <nested />
             </control>
         </definition>
     </include>
-    
-    <include name="HelpFrameForDialog">
-        <param name="height" default="280" />
-        
+
+    <include name="MarkupForButtonListForDialog">
+        <param name="posx" default="20" />
+        <param name="posy" default="320" />
+        <param name="height" default="80" />
+
         <definition>
-            <control type="image">
-                <width>MenuButtonWidth</width>
-                <height>$PARAM[height]</height>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
-            </control>
-
-            <control type="image">
-                <visible>!Skin.HasSetting(Colors.ButtonAreaSeparate)</visible>
-                <width>MenuButtonWidth</width>
-                <height>$PARAM[height]</height>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
-            </control>
-            
-            <control type="image">
-                <posx>20</posx>
-                <posy>-17</posy>
-                <width>35</width>
-                <height>35</height>
-                <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
-            </control>
-
-            <control type="label">
-                <description>Question Mark Label</description>
-                <posx>20</posx>
-                <posy>-17</posy>
-                <width>35</width>
-                <height>35</height>
-                <font>DialogTextFont</font>
-                <textcolor>$VAR[BackgroundColor]</textcolor>
-                <align>center</align>
-                <label>$LOCALIZE[31904]</label>
-            </control>
+            <posx>$PARAM[posx]</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>500</width>
+            <height>$PARAM[height]</height>
+            <orientation>vertical</orientation>
+            <align>right</align>
+            <itemgap>0</itemgap>
+            <usecontrolcoords>true</usecontrolcoords>
         </definition>
     </include>
     
-    <include name="ItemsForNormalListInDialog">
+    <include name="ItemsForButtonListForDialog">
         <param name="listid" default="0" />
-    
+
         <definition>
-            <itemlayout height="40">
-                <include>NormalItemsForNormalListInDialog</include>
+            <itemlayout height="MenuButtonHeight">
+                <control type="image">
+                    <width>MenuButtonWidth</width>
+                    <height>MenuButtonHeight</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
+                </control>
+                <control type="label">
+                    <width>MenuButtonWidth</width>
+                    <font>NormalButtonFont</font>
+                    <textcolor>$VAR[MainColor]</textcolor>
+                    <scroll>false</scroll>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
             </itemlayout>
 
-            <focusedlayout height="40">
+            <focusedlayout height="MenuButtonHeight">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include>FocusedItemsForNormalListInDialog</include>
+                    <control type="image">
+                        <width>MenuButtonWidth</width>
+                        <height>MenuButtonHeight</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
+                    </control>
+                    <control type="label">
+                        <width>MenuButtonWidth</width>
+                        <font>NormalButtonFont</font>
+                        <textcolor>$VAR[BackgroundColor]</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include>SelectedItemsForNormalListInDialog</include>
+                    <control type="image">
+                        <width>MenuButtonWidth</width>
+                        <height>MenuButtonHeight</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
+                    </control>
+                    <control type="label">
+                        <width>MenuButtonWidth</width>
+                        <font>NormalButtonFont</font>
+                        <textcolor>$VAR[BackgroundColor]</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
                 </control>
             </focusedlayout>
         </definition>
     </include>
 
-    <include name="NormalItemsForNormalListInDialog">
+    <!-- Default List -->
+
+    <include name="MarkupForListForDialog">
+        <param name="posy" default="80" />
+        <param name="height" default="80" />
+        <param name="pagecontrol" default="0" />
+        <param name="scrolltime" default="200" />
+
         <definition>
-            <control type="image">
-                <width>1240</width>
-                <height>40</height>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
-            </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1200</width>
-                <height>40</height>
-                <font>DialogTextFont</font>
-                <textcolor>$VAR[MainColor]</textcolor>
-                <scroll>false</scroll>
-                <info>ListItem.Label</info>
-            </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1200</width>
-                <font>DialogTextFont</font>
-                <textcolor>$VAR[MainColor]</textcolor>
-                <align>right</align>
-                <scroll>false</scroll>
-                <info>ListItem.Label2</info>
-            </control>
+            <posx>560</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>1240</width>
+            <height>$PARAM[height]</height>
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
+            <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
+            <scrolltime>$PARAM[scrolltime]</scrolltime>
         </definition>
     </include>
     
-    <include name="FocusedItemsForNormalListInDialog">
+    <!-- Info List -->
+
+    <include name="InfoListForDialog">
+        <param name="id" default="0" />
+        <param name="scrollbarid" default="0" />
+        <param name="posy" default="80" />
+        <param name="height" default="220" />
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+        <param name="scrolltime" default="200" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="9000" />
+        <param name="onright" default="Noop" />
+
         <definition>
-            <control type="image">
+            <control type="list" id="$PARAM[id]">
+                <posx>560</posx>
+                <posy>$PARAM[posy]</posy>
                 <width>1240</width>
-                <height>40</height>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
+                <height>$PARAM[height]</height>
+                <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
+                <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
+                <scrolltime>$PARAM[scrolltime]</scrolltime>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+
+                <include content="ItemsForInfoListInDialog">
+                    <param name="listid" value="$PARAM[id]" />
+                    <param name="label" value="$PARAM[label]" />
+                    <param name="label2" value="$PARAM[label2]" />
+                </include>
+
+                <nested />
             </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1200</width>
-                <font>DialogTextFont</font>
-                <textcolor>$VAR[BackgroundColor]</textcolor>
-                <info>ListItem.Label</info>
-            </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1200</width>
-                <font>DialogTextFont</font>
-                <textcolor>$VAR[BackgroundColor]</textcolor>
-                <align>right</align>
-                <info>ListItem.Label2</info>
+
+            <control type="group">
+                <visible>Control.IsVisible($PARAM[id])</visible>
+                <include content="ScrollbarForDialog">
+                    <param name="id" value="$PARAM[scrollbarid]" />
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="onup" value="$PARAM[onup]" />
+                    <param name="ondown" value="$PARAM[ondown]" />
+                    <param name="onleft" value="$PARAM[id]" />
+                    <param name="onright" value="$PARAM[onright]" />
+                </include>
             </control>
         </definition>
     </include>
-    
-    <include name="SelectedItemsForNormalListInDialog">
+
+    <include name="MarkupForInfoListForDialog">
+        <param name="posy" default="120" />
+        <param name="height" default="480" />
+        <param name="pagecontrol" default="0" />
+
         <definition>
-            <control type="image">
-                <width>1240</width>
-                <height>40</height>
-                <aspectratio>stretch</aspectratio>
-                <texture colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texture>
-            </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1200</width>
-                <font>DialogTextFont</font>
-                <textcolor>$VAR[MainColor]</textcolor>
-                <info>ListItem.Label</info>
-            </control>
-            <control type="label">
-                <posx>20</posx>
-                <width>1200</width>
-                <font>DialogTextFont</font>
-                <textcolor>$VAR[MainColor]</textcolor>
-                <align>right</align>
-                <info>ListItem.Label2</info>
-            </control>
+            <posx>560</posx>
+            <posy>$PARAM[posy]</posy>
+            <width>1240</width>
+            <height>$PARAM[height]</height>
+            <orientation>vertical</orientation>
+            <itemgap>0</itemgap>
+            <pagecontrol>$PARAM[pagecontrol]</pagecontrol>
         </definition>
     </include>
-    
+
     <include name="ItemsForInfoListInDialog">
         <param name="listid" default="0" />
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
     
         <definition>
             <itemlayout height="40">
-                <include content="NormalItemsForInfoListInDialog" />
+                <include content="NormalItemsForInfoListInDialog">
+                    <param name="label" value="$PARAM[label]" />
+                    <param name="label2" value="$PARAM[label2]" />
+                </include>
             </itemlayout>
-                
+
             <focusedlayout height="40">
                 <control type="group">
                     <visible>Control.HasFocus($PARAM[listid])</visible>
-                    <include content="FocusedItemsForInfoListInDialog" />
+                    <include content="FocusedItemsForInfoListInDialog">
+                        <param name="label" value="$PARAM[label]" />
+                        <param name="label2" value="$PARAM[label2]" />
+                    </include>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus($PARAM[listid])</visible>
-                    <include content="NormalItemsForInfoListInDialog" />
+                    <include content="NormalItemsForInfoListInDialog">
+                        <param name="label" value="$PARAM[label]" />
+                        <param name="label2" value="$PARAM[label2]" />
+                    </include>
                 </control>
             </focusedlayout>
         </definition>
     </include>
 
     <include name="NormalItemsForInfoListInDialog">
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+
         <definition>
             <control type="label">
                 <posx>0</posx>
@@ -821,7 +823,7 @@
                 <font>DialogTextFont</font>
                 <textcolor>$VAR[TextColor]</textcolor>
                 <align>left</align>
-                <label>$INFO[ListItem.Label]</label>
+                <label>$PARAM[label]</label>
             </control>
             <control type="label">
                 <posx>320</posx>
@@ -830,12 +832,15 @@
                 <font>DialogTextFont</font>
                 <textcolor>$VAR[MainColor]</textcolor>
                 <align>left</align>
-                <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+                <label>[UPPERCASE]$PARAM[label2][/UPPERCASE]</label>
             </control>
         </definition>
     </include>
     
     <include name="FocusedItemsForInfoListInDialog">
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+        
         <definition>
             <control type="image">
                 <posx>300</posx>
@@ -851,7 +856,7 @@
                 <font>DialogTextFont</font>
                 <textcolor>$VAR[TextColor]</textcolor>
                 <align>left</align>
-                <label>$INFO[ListItem.Label]</label>
+                <label>$PARAM[label]</label>
             </control>
             <control type="label">
                 <posx>320</posx>
@@ -860,30 +865,176 @@
                 <font>DialogTextFont</font>
                 <textcolor>$VAR[BackgroundColor]</textcolor>
                 <align>left</align>
-                <label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+                <label>[UPPERCASE]$PARAM[label2][/UPPERCASE]</label>
+            </control>
+        </definition>
+    </include>
+
+    <!-- Normal List -->
+
+    <include name="NormalListForDialog">
+        <param name="id" default="0" />
+        <param name="scrollbarid" default="0" />
+        <param name="posy" default="80" />
+        <param name="height" default="220" />
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+        <param name="scrolltime" default="200" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="9000" />
+        <param name="onright" default="Noop" />
+        
+        <definition>
+            <control type="list" id="$PARAM[id]">
+                <posx>560</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>1240</width>
+                <height>$PARAM[height]</height>
+                <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
+                <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
+                <scrolltime>$PARAM[scrolltime]</scrolltime>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+
+                <include content="ItemsForNormalListInDialog">
+                    <param name="listid" value="$PARAM[id]" />
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$PARAM[label]" />
+                    <param name="label2" value="$PARAM[label2]" />
+                </include>
+            
+                <nested />
+            </control>
+
+            <control type="group">
+                <visible>Control.IsVisible($PARAM[id])</visible>
+                <include content="ScrollbarForDialog">
+                    <param name="id" value="$PARAM[scrollbarid]" />
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="onup" value="$PARAM[onup]" />
+                    <param name="ondown" value="$PARAM[ondown]" />
+                    <param name="onleft" value="$PARAM[id]" />
+                    <param name="onright" value="$PARAM[onright]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ItemsForNormalListInDialog">
+        <param name="listid" default="0" />
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+
+        <definition>
+            <itemlayout height="40">
+                <include content="ItemForNormalListInDialog">
+                    <param name="textcolor" value="$VAR[MainColor]" />
+                    <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                    <param name="label" value="$PARAM[label]" />
+                    <param name="label2" value="$PARAM[label2]" />
+                </include>
+            </itemlayout>
+
+            <focusedlayout height="40">
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid])</visible>
+                    <include content="ItemForNormalListInDialog">
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="backgroundcolor" value="$VAR[MainColor]" />
+                        <param name="label" value="$PARAM[label]" />
+                        <param name="label2" value="$PARAM[label2]" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[listid])</visible>
+                    <include content="ItemForNormalListInDialog">
+                        <param name="textcolor" value="$VAR[MainColor]" />
+                        <param name="backgroundcolor" value="$VAR[SelectColor]" />
+                        <param name="label" value="$PARAM[label]" />
+                        <param name="label2" value="$PARAM[label2]" />
+                    </include>
+                </control>
+            </focusedlayout>
+        </definition>
+    </include>
+
+    <include name="NormalItemsForNormalListInDialog">
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+        
+        <definition>
+            <include content="ItemForNormalListInDialog">
+                <param name="textcolor" value="$VAR[MainColor]" />
+                <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+                <param name="label" value="$PARAM[label]" />
+                <param name="label2" value="$PARAM[label2]" />
+            </include>
+        </definition>
+    </include>
+    
+    <include name="FocusedItemsForNormalListInDialog">
+        <definition>
+            <include content="ItemForNormalListInDialog">
+                <param name="textcolor" value="$VAR[BackgroundColor]" />
+                <param name="backgroundcolor" value="$VAR[MainColor]" />
+                <param name="label" value="$PARAM[label]" />
+                <param name="label2" value="$PARAM[label2]" />
+            </include>
+        </definition>
+    </include>
+    
+    <include name="SelectedItemsForNormalListInDialog">
+        <definition>
+            <include content="ItemForNormalListInDialog">
+                <param name="textcolor" value="$VAR[MainColor]" />
+                <param name="backgroundcolor" value="$VAR[SelectColor]" />
+                <param name="label" value="$PARAM[label]" />
+                <param name="label2" value="$PARAM[label2]" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="ItemForNormalListInDialog">
+        <param name="textcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="label" default="$INFO[ListItem.Label]" />
+        <param name="label2" default="$INFO[ListItem.Label2]" />
+        
+        <definition>
+            <control type="image">
+                <width>$PARAM[width]</width>
+                <height>40</height>
+                <aspectratio>stretch</aspectratio>
+                <texture colordiffuse="$PARAM[backgroundcolor]" border="20">controls/rectangle-fill.png</texture>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <height>40</height>
+                <font>DialogTextFont</font>
+                <textcolor>$PARAM[textcolor]</textcolor>
+                <scroll>false</scroll>
+                <label>$PARAM[label]</label>
+            </control>
+            <control type="label">
+                <posx>20</posx>
+                <width>1200</width>
+                <font>DialogTextFont</font>
+                <textcolor>$PARAM[textcolor]</textcolor>
+                <align>right</align>
+                <scroll>false</scroll>
+                <label>$PARAM[label2]</label>
             </control>
         </definition>
     </include>
     
-    <include name="HalfListFrameForDialog">
-        <param name="posx" default="560" />
-        <param name="posy" default="80" />
-        <param name="height" default="80" />
-        <param name="bordercolor" default="$VAR[TextColor]" />
-    
-        <definition>
-            <control type="image">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-                <width>600</width>
-                <height>$PARAM[height]</height>
-                <fadetime>100</fadetime>
-                <texture colordiffuse="$PARAM[bordercolor]" border="20" >controls/rectangle-clear.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-        </definition>
-    </include>    
-    
+    <!-- Half List -->
+
     <include name="DefaultItemsForHalfListInDialog">
         <param name="listid" default="0" />
         <param name="texture" default="$INFO[ListItem.Icon]" />
@@ -1100,8 +1251,43 @@
                 <label>$INFO[ListItem.Label2]</label>
             </control>
         </definition>
-    </include>    
+    </include>
 
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- Half List Frame -->
+
+    <include name="HalfListFrameForDialog">
+        <param name="posx" default="560" />
+        <param name="posy" default="80" />
+        <param name="height" default="80" />
+        <param name="bordercolor" default="$VAR[TextColor]" />
+    
+        <definition>
+            <control type="image">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>600</width>
+                <height>$PARAM[height]</height>
+                <fadetime>100</fadetime>
+                <texture colordiffuse="$PARAM[bordercolor]" border="20" >controls/rectangle-clear.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+        </definition>
+    </include>    
+    
+
+<!--
     <include name="TitledFullListFrameForDialog">
         <definition>
             <control type="image">
@@ -1124,7 +1310,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="TitledHalfListFrameForDialog">
         <definition>
             <control type="image">
@@ -1156,7 +1342,8 @@
             </control>
         </definition>
     </include>
-    
+-->
+<!--
     <include name="ThumbnailElementForListForDialog">
         <param name="listid" default="0" />
         <param name="texture" default="$INFO[ListItem.Icon]" />
@@ -1294,57 +1481,7 @@
             </focusedlayout>
         </definition>
     </include>
-
-    <constant name="PosYForButtonMenuDialog">360</constant>
-    <constant name="HeightForButtonMenuDialog">360</constant>
-
-    <constant name="PosYForTwoLinesDialog">450</constant>
-    <constant name="HeightForTwoLinesDialog">180</constant>
-
-    <constant name="PosYForThreeLinesDialog">430</constant>
-    <constant name="HeightForThreeLinesDialog">220</constant>
-    
-    <constant name="PosYForFourLinesDialog">410</constant>
-    <constant name="HeightForFourLinesDialog">260</constant>
-
-    <constant name="PosYForSixLinesDialog">370</constant>
-    <constant name="HeightForSixLinesDialog">340</constant>
-
-    <constant name="PosYForEightLinesDialog">330</constant>
-    <constant name="HeightForEightLinesDialog">420</constant>
-
-    <constant name="PosYForNineLinesDialog">310</constant>
-    <constant name="HeightForNineLinesDialog">460</constant>
-
-    <constant name="PosYForTenLinesDialog">290</constant>
-    <constant name="HeightForTenLinesDialog">500</constant>
-
-    <constant name="PosYForElevenLinesDialog">270</constant>
-    <constant name="HeightForElevenLinesDialog">540</constant>
-
-    <constant name="PosYForTwelveLinesDialog">250</constant>
-    <constant name="HeightForTwelveLinesDialog">580</constant>
-
-    <constant name="PosYForThirteenLinesDialog">230</constant>
-    <constant name="HeightForThirteenLinesDialog">620</constant>
-
-    <constant name="PosYForFourteenLinesDialog">210</constant>
-    <constant name="HeightForFourteenLinesDialog">660</constant>
-
-    <constant name="PosYForFifteenLinesDialog">190</constant>
-    <constant name="HeightForFifteenLinesDialog">700</constant>
-
-    <constant name="PosYForFullWindowDialog">90</constant>
-    <constant name="HeightForFullWindowDialog">900</constant>
-
-    <constant name="PosYForProgressDialog">385</constant>
-    <constant name="HeightForProgressDialog">310</constant>
-    
-    <constant name="PosYForKeyboardDialog">270</constant>
-    <constant name="HeightForKeyboardDialog">540</constant>
-
-    <constant name="PosYForLoginDialog">385</constant>
-    <constant name="HeightForLoginDialog">310</constant>
+-->
 
     <include name="SmallIconForWindowForDialog">
         <param name="visible" default="true" />
