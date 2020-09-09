@@ -29,9 +29,8 @@
                 <include content="SortOrderButtonForSideMenu" />
                 <include content="NameForThumbnailsButtonForSideMenu" />
                 <include content="DescriptionForLandscapeButtonForSideMenu" />
-                <include content="MusicFilterActivateButtonForSideMenu" />
-                <include content="MusicFilterShowButtonForSideMenu" />
-                
+                <include content="MediaFilterButtonForSideMenu" />
+
                 <include content="MediaGroupLabelForSideMenu" />
                 <include content="MusicPlaylistButtonForSideMenu" />
                 <include content="PartyModeButtonForSideMenu" />
@@ -46,7 +45,7 @@
             
             <include content="PlayerControlsForSideMenu" />
         </control>
-        
+
         <include content="GlobalOverlay">
             <param name="buttonid" value="200" />
             <param name="controlid" value="52" />

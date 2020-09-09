@@ -621,30 +621,17 @@
         </definition>
     </include>
     
-    <include name="VideoFilterActivateButtonForSideMenu">
+    <include name="MediaFilterButtonForSideMenu">
         <definition>
             <control type="button" id="21">
-	        <visible>String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
-                <label>$LOCALIZE[587]</label>
-                <onclick>right</onclick>
+                <label>$LOCALIZE[587]$INFO[Window.Property(filter),: ]</label>
+                <onclick>Right</onclick>
                 <onclick>Filter</onclick>
             </control>
         </definition>
     </include>
-    
-    <include name="MusicFilterActivateButtonForSideMenu">
-        <definition>
-            <control type="button" id="21">
-                <visible>String.IsEmpty(Window.Property(filter))</visible>
-                <align>left</align>
-                <label>$LOCALIZE[587]</label>
-                <onclick>SendClick(music,19)</onclick>
-                <onclick>SetFocus(22)</onclick>
-            </control>
-        </definition>
-    </include>
-    
+
     <include name="EventLogLevelButtonForSideMenu">
         <definition>
             <control type="button" id="21">
@@ -661,31 +648,7 @@
             </control>
         </definition>
     </include>
-    
-    <include name="VideoFilterShowButtonForSideMenu">
-        <definition>
-            <control type="button" id="22">
-                <visible>!String.IsEmpty(Window.Property(filter))</visible>
-                <align>left</align>
-                <label>$INFO[Window.Property(filter)]</label>
-                <onclick>SendClick(videos,19)</onclick>
-                <onclick>SetFocus(21)</onclick>
-            </control>
-        </definition>
-    </include>
 
-    <include name="MusicFilterShowButtonForSideMenu">
-        <definition>
-            <control type="button" id="22">
-                <visible>!String.IsEmpty(Window.Property(filter))</visible>
-                <align>left</align>
-                <label>$LOCALIZE[587] - $INFO[Window.Property(filter)]</label>
-                <onclick>SendClick(music,19)</onclick>
-                <onclick>SetFocus(21)</onclick>
-            </control>
-        </definition>
-    </include>
-    
     <include name="EventLogLevelRadioButtonForSideMenu">
         <definition>
             <control type="radiobutton" id="22">
