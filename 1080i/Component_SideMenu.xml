@@ -624,11 +624,11 @@
     <include name="VideoFilterActivateButtonForSideMenu">
         <definition>
             <control type="button" id="21">
-                <visible>String.IsEmpty(Window.Property(filter))</visible>
+		<visible>String.IsEmpty(Window.Property(filter))</visible>
                 <align>left</align>
                 <label>$LOCALIZE[587]</label>
-                <onclick>SendClick(videos,19)</onclick>
-                <onclick>SetFocus(22)</onclick>
+                <onclick>right</onclick>
+                <onclick>Filter</onclick>
             </control>
         </definition>
     </include>
