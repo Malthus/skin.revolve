@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1110">
     <defaultcontrol always="true">100</defaultcontrol>
+    <onunload condition="!Window.Next(music) + !Window.Next(musicplaylist)">ClearProperty(ViewMode,music)</onunload>
+    <onunload condition="!Window.Next(music) + !Window.Next(musicplaylist)">ClearProperty(ViewMode,musicplaylist)</onunload>
 
     <controls>
         <include content="GlobalBackground" />
@@ -32,7 +34,11 @@
             <label></label>
             <onup>ActivateWindow(musicosd)</onup>
             <ondown>Noop</ondown>
+            <onleft>SetProperty(ViewMode,Jukebox,music)</onleft>
+            <onleft>SetProperty(ViewMode,Jukebox,musicplaylist)</onleft>
             <onleft>ActivateWindow(musicplaylist)</onleft>
+            <onright>SetProperty(ViewMode,Jukebox,music)</onright>
+            <onright>SetProperty(ViewMode,Jukebox,musicplaylist)</onright>
             <onright>ActivateWindow(music,musicdb://albums/,return)</onright>
         </control>
     </controls>

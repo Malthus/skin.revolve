@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="MyPlaylistWindow">
+        <definition>
+            <include content="DropListView" />
+            <include content="CircleListView" />
+            <include content="RevolveListView" />
+            <include content="RotateListView" />
+
+            <control type="group" id="9000">
+                <include content="SideMenu" />
+
+                <control type="grouplist" id="9001">
+                    <include content="BeginOfButtonListForSideMenu" />
+
+                    <include content="ViewGroupLabelForSideMenu" />
+                    <include content="ViewTypeButtonForSideMenu" />
+                    <include content="SortCriteriumButtonForSideMenu" />
+                    <include content="SortOrderButtonForSideMenu" />
+                    
+                    <include content="PlaylistLibraryGroupLabelForSideMenu" />
+                    <include content="ShuffleButtonForSideMenu" />
+                    <include content="SaveButtonForSideMenu" />
+                    <include content="ClearButtonForSideMenu" />
+                    <include content="PlayButtonForSideMenu" />
+                    
+                    <include content="EndOfButtonListForSideMenu" />
+                </control>
+
+                <include content="PlayerControlsForSideMenu" />
+            </control>
+            
+            <include content="GlobalOverlay">
+                <param name="buttonid" value="200" />
+                <param name="controlid" value="52" />
+            </include>
+        </definition>
+    </include>
+</includes>
