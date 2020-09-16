@@ -16,7 +16,7 @@
                 <param name="iconthumbnail" value="$INFO[Container(11).Listitem.Icon]" />
                 <param name="animate" value="true" />
             </include>
-            
+
             <include content="HeaderForDialog">
                 <param name="label" value="$LOCALIZE[14116]" />
             </include>
@@ -24,7 +24,7 @@
             <include content="InfoListForDialog">
                 <param name="id" value="20" />
                 <param name="scrollbarid" value="30" />
-                <param name="posy" value="120" />
+                <param name="height" value="200" />
 
                 <content>
                     <item>

@@ -22,22 +22,11 @@
                 <param name="label" value="$LOCALIZE[14116]" />
             </include>
 
-            <control type="list" id="5">
-                <include content="MarkupForInfoListForDialog">
-                    <param name="pagecontrol" value="6" />
-                </include>
-    
-                <include content="ItemsForInfoListInDialog" />
-            </control>
+            <include content="InfoListForDialog">
+                <param name="id" value="5" />
+                <param name="scrollbarid" value="6" />
+            </include>
 
-            <control type="scrollbar" id="6">
-                <include content="MarkupForScrollbarForDialog">
-                    <param name="posy" value="120" />
-                    <param name="height" value="480" />
-                </include>
-                <onleft>9000</onleft>
-            </control>
-            
             <include content="DialogListForFlag">
                 <param name="posx" value="560" />
                 <param name="posy" value="620" />

@@ -10,6 +10,9 @@
     <constant name="CenterXForDefaultIconFrameForDialog">280</constant>
     <constant name="CenterYForDefaultIconFrameForDialog">155</constant>
 
+    <constant name="PosXForFirstElementForDialog">560</constant>
+    <constant name="PosXForScrollbarForDialog">1840</constant>
+
     <constant name="PosYForButtonMenuDialog">360</constant>
     <constant name="HeightForButtonMenuDialog">360</constant>
 
@@ -60,7 +63,6 @@
 
     <constant name="PosYForLoginDialog">385</constant>
     <constant name="HeightForLoginDialog">310</constant>
-
 
     <include name="ButtonForDialog">
         <param name="id" default="0" />
@@ -281,7 +283,7 @@
         <param name="id" default="0" />
         <param name="visible" default="true" />
         <param name="posy" default="0" />
-        <param name="height" default="40" />
+        <param name="height" default="20" />
     
         <definition>
             <control type="label" id="$PARAM[id]">
@@ -299,8 +301,8 @@
         <param name="visible" default="true" />
         <param name="posx" default="560" />
         <param name="posy" default="80" />
-        <param name="width" default="1240" />
-        <param name="height" default="40" />
+        <param name="width" default="DialogElementWidth" />
+        <param name="height" default="DialogElementHeight" />
         <param name="textcolor" default="$VAR[TextColor]" />
         <param name="scroll" default="true" />
         <param name="scrollspeed" default="50" />
@@ -333,8 +335,8 @@
         <param name="id" default="0" />
         <param name="visible" default="true" />
         <param name="posy" default="80" />
-        <param name="width" default="1240" />
-        <param name="height" default="40" />
+        <param name="width" default="DialogElementWidth" />
+        <param name="height" default="DialogElementHeight" />
         <param name="textcolor" default="$VAR[SecondaryColor]" />
         <param name="scroll" default="false" />
         <param name="scrollspeed" default="50" />
@@ -427,7 +429,7 @@
                 <control type="textbox" id="$PARAM[textboxid]">
                     <posx>560</posx>
                     <posy>$PARAM[posy]</posy>
-                    <width>1240</width>
+                    <width>DialogElementWidth</width>
                     <height>$PARAM[height]</height>
                     <font>DialogDescriptionFont</font>
                     <textcolor>$VAR[SecondaryColor]</textcolor>
@@ -540,19 +542,19 @@
         <definition>
             <control type="button" id="$PARAM[buttonid]">
                 <visible>$PARAM[buttonvisible]</visible>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <align>left</align>
             </control>
 
             <control type="radiobutton" id="$PARAM[radiobuttonid]">
                 <visible>$PARAM[radiobuttonvisible]</visible>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <align>left</align>
             </control>
 
             <control type="spincontrolex" id="$PARAM[spincontrolexid]">
                 <visible>$PARAM[spincontrolexvisible]</visible>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <align>left</align>
                 <reverse>yes</reverse>
             </control>
@@ -564,19 +566,19 @@
 
             <control type="edit" id="$PARAM[editid]">
                 <visible>$PARAM[editvisible]</visible>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <align>left</align>
             </control>
 
             <control type="sliderex" id="$PARAM[sliderexid]">
                 <visible>$PARAM[sliderexvisible]</visible>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <align>left</align>
             </control>
 
             <control type="label" id="$PARAM[labelid]">
                 <visible>$PARAM[labelvisible]</visible>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <textcolor>$VAR[SelectColor]</textcolor>
             </control>
         </definition>
@@ -610,7 +612,7 @@
             </control>
         </definition>
     </include>
-
+    
     <include name="MarkupForButtonListForDialog">
         <param name="posx" default="20" />
         <param name="posy" default="320" />
@@ -627,8 +629,44 @@
             <usecontrolcoords>true</usecontrolcoords>
         </definition>
     </include>
-    
-    <include name="ItemsForButtonListForDialog">
+
+    <!-- Tab List -->
+
+    <include name="TabListForDialog">
+        <param name="id" default="9001" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="height" default="80" />
+        <param name="onup" default="9000" />
+        <param name="ondown" default="9000" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="list" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>500</width>
+                <height>$PARAM[height]</height>
+                <orientation>vertical</orientation>
+                <align>right</align>
+                <itemgap>0</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+
+                <include content="ItemsForTabListForDialog">
+                    <param name="listid" value="$PARAM[id]" />
+                </include>
+
+                <nested />
+            </control>
+        </definition>
+    </include>
+
+    <include name="ItemsForTabListForDialog">
         <param name="listid" default="0" />
 
         <definition>
@@ -700,7 +738,7 @@
         <definition>
             <posx>560</posx>
             <posy>$PARAM[posy]</posy>
-            <width>1240</width>
+            <width>DialogElementWidth</width>
             <height>$PARAM[height]</height>
             <orientation>vertical</orientation>
             <itemgap>0</itemgap>
@@ -714,8 +752,8 @@
     <include name="InfoListForDialog">
         <param name="id" default="0" />
         <param name="scrollbarid" default="0" />
-        <param name="posy" default="80" />
-        <param name="height" default="220" />
+        <param name="posy" default="120" />
+        <param name="height" default="480" />
         <param name="label" default="$INFO[ListItem.Label]" />
         <param name="label2" default="$INFO[ListItem.Label2]" />
         <param name="scrolltime" default="200" />
@@ -728,7 +766,7 @@
             <control type="list" id="$PARAM[id]">
                 <posx>560</posx>
                 <posy>$PARAM[posy]</posy>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <height>$PARAM[height]</height>
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
@@ -771,7 +809,7 @@
         <definition>
             <posx>560</posx>
             <posy>$PARAM[posy]</posy>
-            <width>1240</width>
+            <width>DialogElementWidth</width>
             <height>$PARAM[height]</height>
             <orientation>vertical</orientation>
             <itemgap>0</itemgap>
@@ -875,6 +913,7 @@
     <include name="NormalListForDialog">
         <param name="id" default="0" />
         <param name="scrollbarid" default="0" />
+        <param name="visible" default="true" />
         <param name="posy" default="80" />
         <param name="height" default="220" />
         <param name="label" default="$INFO[ListItem.Label]" />
@@ -887,9 +926,10 @@
         
         <definition>
             <control type="list" id="$PARAM[id]">
+                <visible>$PARAM[visible]</visible>
                 <posx>560</posx>
                 <posy>$PARAM[posy]</posy>
-                <width>1240</width>
+                <width>DialogElementWidth</width>
                 <height>$PARAM[height]</height>
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
@@ -902,7 +942,6 @@
 
                 <include content="ItemsForNormalListInDialog">
                     <param name="listid" value="$PARAM[id]" />
-                    <param name="width" value="$PARAM[width]" />
                     <param name="label" value="$PARAM[label]" />
                     <param name="label2" value="$PARAM[label2]" />
                 </include>
@@ -1744,8 +1783,8 @@
                 <control type="label" id="$PARAM[headerid]">
                     <posx>560</posx>
                     <posy>20</posy>
-                    <width>1240</width>
-                    <height>40</height>
+                    <width>DialogElementWidth</width>
+                    <height>DialogElementHeight</height>
                     <font>DialogTitleFont</font>
                     <textcolor>$VAR[SecondaryColor]</textcolor>
                     <align>left</align>
