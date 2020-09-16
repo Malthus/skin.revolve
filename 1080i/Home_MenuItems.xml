@@ -235,6 +235,19 @@
                     <onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
                 </item>
 
+                <item id="46">
+                    <description>Jukebox Option</description>
+                    <visible>Library.HasContent(Music) + Skin.HasSetting(JukeboxOption.Active)</visible>
+                    <label>$LOCALIZE[31007]</label>
+                    <label2>$INFO[Window(Home).Property(Music.ArtistsCount)] $LOCALIZE[133] | $INFO[Window(Home).Property(Music.AlbumsCount)] $LOCALIZE[132] | $INFO[Window(Home).Property(Music.SongsCount)] $LOCALIZE[134]</label2>
+                    <property name="Label3">$LOCALIZE[33057]</property>
+                    <property name="Circle">circle/albums.png</property>
+                    <property name="BackgroundImage">$INFO[Skin.String(JukeboxOption.BackgroundImage)]</property>
+                    <property name="FallbackImage">special://skin/backgrounds/albums.jpg</property>
+                    <thumb>$INFO[Skin.String(JukeboxOption.BackgroundFolder)]</thumb>
+                    <onclick>ActivateWindow(1110)</onclick>
+                </item>
+
                 <include content="CustomOptionForHomeMenuItems">
                     <param name="id" value="43" />
                     <param name="variable" value="CustomMusicOption" />
@@ -384,7 +397,7 @@
                     <property name="BackgroundImage">$INFO[Skin.String(ExitOption.BackgroundImage)]</property>
                     <property name="FallbackImage">special://skin/backgrounds/exit.jpg</property>
                     <thumb>$INFO[Skin.String(ExitOption.BackgroundFolder)]</thumb>
-                    <onclick>ActivateWindow(1150)</onclick>                
+                    <onclick>ActivateWindow(1150)</onclick>
                 </item>
             </content>
         </definition>

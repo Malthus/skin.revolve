@@ -242,7 +242,13 @@
                 <param name="label" value="$LOCALIZE[132]" />
                 <param name="variable" value="AlbumsOption" />
             </include>
-
+<!--
+            <include content="StandardButtonForHomeMenuSkinSettings">
+                <param name="id" value="276" />
+                <param name="label" value="$LOCALIZE[31007]" />
+                <param name="variable" value="JukeboxOption" />
+            </include>
+-->
             <include content="VisibleCustomButtonForHomeMenuSkinSettings">
                 <param name="id" value="242" />
                 <param name="variable" value="CustomMusicOption" />
