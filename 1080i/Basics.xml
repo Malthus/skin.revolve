@@ -22,6 +22,7 @@
         <param name="ondown" default="Noop" />
         <param name="onleft" default="Noop" />
         <param name="onright" default="Noop" />
+        <param name="onfocus" default="Noop" />
 
         <definition>
             <control type="button" id="$PARAM[id]">
@@ -38,6 +39,7 @@
                 <ondown>$PARAM[ondown]</ondown>
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
+                <onfocus>$PARAM[onfocus]</onfocus>
             </control>
         </definition>
     </include>
