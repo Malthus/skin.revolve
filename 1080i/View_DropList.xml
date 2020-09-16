@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="DropListView">
-        <definition>
-            <control type="fixedlist" id="51">
-                <viewtype label="31931">list</viewtype>
-                <animation effect="fade" start="100" end="0" time="200" condition="Container(51).Scrolling + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(songs)">conditional</animation>
+        <param name="onleft" default="9001" />
+        <param name="onright" default="Noop" />
 
-                <posx>720</posx>
-                <posy>-121</posy>
-                <width>1080</width>
-                <height>1250</height>
-                <onleft>9001</onleft>
-                <onright>61</onright>
-                <onup>51</onup>
-                <ondown>51</ondown>
-                <focusposition>1</focusposition>
-                <pagecontrol>61</pagecontrol>
-                <scrolltime>200</scrolltime>
-                
-                <include content="NormalListItemForDropListView" />
-                <include content="FocusedListItemForDropListView" />
-            </control>
-            
+        <definition>
+            <include content="DefaultListForDropListView">
+                <param name="onleft" value="$PARAM[onleft]" />
+            </include>
+
             <control type="group">
                 <visible>Control.IsVisible(51)</visible>
+
+                <include content="VerticalScrollbarForView">
+                    <param name="id" value="61" />
+                    <param name="viewid" value="51" />
+                    <param name="onright" value="$PARAM[onright]" />
+                </include>
 
                 <control type="group">
                     <include content="VisibilityForVerticalIcon" />
@@ -86,11 +79,6 @@
                     </control>
                 </control>
 
-                <include content="VerticalScrollbarForView">
-                    <param name="id" value="61" />
-                    <param name="viewid" value="51" />
-                </include>
-
                 <include content="ContentMediaFlagsForDropListView" />
                 <include content="ContentDescriptionForDropListView" />
                 
@@ -104,56 +92,73 @@
             </control>
         </definition>
     </include>
-    
-    <include name="NormalListItemForDropListView">
-        <definition>
-            <itemlayout width="1080" height="250">
-                <control type="group">
-                    <animation effect="zoom" end="80" center="auto" condition="true">Conditional</animation>
-                    
-                    <posx>40</posx>
-                    <posy>-10</posy>
-                    <width>310</width>
-                    <height>310</height>
-                    <include content="DefaultCircleThumbnailIcon" />
-                    <include content="FadeMaskForDefaultCircleThumbnailIcon" />
-                    <include content="OverlayForDefaultCircleThumbnailIcon" />
-                </control>
-            </itemlayout>
-        </definition>
-    </include>
 
-    <include name="FocusedListItemForDropListView">
+    <include name="DefaultListForDropListView">
+        <param name="id" default="51" />
+        <param name="scrollbarid" default="61" />
+        <param name="onleft" default="9001" />
+        
         <definition>
-            <focusedlayout width="1080" height="310">
-                <control type="group">
-                    <posx>40</posx>
-                    <posy>0</posy>
-                    <width>310</width>
-                    <height>310</height>
-                    <animation effect="zoom" center="auto" start="80" end="120" time="200" reversible="false">focus</animation>
-                    <animation effect="zoom" center="auto" start="120" end="80" time="200" reversible="false">unfocus</animation>
+            <control type="fixedlist" id="$PARAM[id]">
+                <viewtype label="31931">list</viewtype>
+                <animation effect="fade" start="100" end="0" time="200" condition="Container($PARAM[id]).Scrolling + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(songs)">conditional</animation>
 
+                <posx>720</posx>
+                <posy>-121</posy>
+                <width>1080</width>
+                <height>1250</height>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[scrollbarid]</onright>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <focusposition>1</focusposition>
+                <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
+                <scrolltime>200</scrolltime>
+
+                <itemlayout width="1080" height="250">
                     <control type="group">
-                        <animation effect="slide" start="0,30" end="0,0" time="200" reversible="false" condition="Container(51).OnScrollNext">focus</animation>
-                        <animation effect="slide" start="0,0" end="0,-30" time="200" reversible="false" condition="Container(51).OnScrollPrevious">unfocus</animation>
-                        <posy>20</posy>
+                        <animation effect="zoom" end="80" center="auto" condition="true">Conditional</animation>
+
+                        <posx>40</posx>
+                        <posy>-10</posy>
+                        <width>310</width>
+                        <height>310</height>
                         <include content="DefaultCircleThumbnailIcon" />
+                        <include content="FadeMaskForDefaultCircleThumbnailIcon" />
+                        <include content="OverlayForDefaultCircleThumbnailIcon" />
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="1080" height="310">
+                    <control type="group">
+                        <posx>40</posx>
+                        <posy>0</posy>
+                        <width>310</width>
+                        <height>310</height>
+                        <animation effect="zoom" center="auto" start="80" end="120" time="200" reversible="false">focus</animation>
+                        <animation effect="zoom" center="auto" start="120" end="80" time="200" reversible="false">unfocus</animation>
 
                         <control type="group">
-                            <animation effect="fade" center="auto" start="75" end="0" time="200" reversible="false">focus</animation>
-                            <animation effect="fade" center="auto" start="0" end="75" time="200" reversible="false">unfocus</animation>
-                            <include content="FadeMaskForDefaultCircleThumbnailIcon" />
-                        </control>
+                            <animation effect="slide" start="0,30" end="0,0" time="200" reversible="false" condition="Container($PARAM[id]).OnScrollNext">focus</animation>
+                            <animation effect="slide" start="0,0" end="0,-30" time="200" reversible="false" condition="Container($PARAM[id]).OnScrollPrevious">unfocus</animation>
+                            <posy>20</posy>
+                            <include content="DefaultCircleThumbnailIcon" />
 
-                        <control type="group">
-                            <animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">focus</animation>
-                            <animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">unfocus</animation>
-                            <include content="OverlayForDefaultCircleThumbnailIcon" />
+                            <control type="group">
+                                <animation effect="fade" center="auto" start="75" end="0" time="200" reversible="false">focus</animation>
+                                <animation effect="fade" center="auto" start="0" end="75" time="200" reversible="false">unfocus</animation>
+                                <include content="FadeMaskForDefaultCircleThumbnailIcon" />
+                            </control>
+
+                            <control type="group">
+                                <animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">focus</animation>
+                                <animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">unfocus</animation>
+                                <include content="OverlayForDefaultCircleThumbnailIcon" />
+                            </control>
                         </control>
                     </control>
-                </control>
-            </focusedlayout>
+                </focusedlayout>
+            </control>
         </definition>
     </include>
     
