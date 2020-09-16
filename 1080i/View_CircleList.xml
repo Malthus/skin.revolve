@@ -39,7 +39,7 @@
                 <control type="group">
                     <include content="VisibilityOfListIconInView" />
                     <posx>15</posx>
-                    <posy>255</posy>
+                    <posy>235</posy>
                     <include content="HugeCircleThumbnailIcon" />
                     <include content="OverlayForHugeCircleThumbnailIcon" />
                 </control>
@@ -47,7 +47,7 @@
                 <control type="group">
                     <include content="VisibilityOfSortLetterInView" />
                     <posx>15</posx>
-                    <posy>255</posy>
+                    <posy>235</posy>
                     <include content="HugeCircleSortLetterIcon" />
                 </control>
             </control>
@@ -72,15 +72,15 @@
                 <visible>Control.IsVisible(52)</visible>
                 
                 <animation type="WindowOpen">
-                    <effect type="rotate" tween="quadratic" easing="out" center="320,560" start="360" end="0" time="500" />
+                    <effect type="rotate" tween="quadratic" easing="out" center="320,540" start="360" end="0" time="500" />
                     <effect type="fade" start="0" end="100" time="500" />
                 </animation>
                 <animation type="WindowClose">
-                    <effect type="rotate" tween="quadratic" easing="in" center="320,560" start="0" end="-360" time="500" />
+                    <effect type="rotate" tween="quadratic" easing="in" center="320,540" start="0" end="-360" time="500" />
                     <effect type="fade" start="100" end="0" time="500" />
                 </animation>
-                <animation effect="rotate" center="320,560" start="0" end="-10" time="100" condition="Container(52).OnScrollPrevious">conditional</animation>
-                <animation effect="rotate" center="320,560" start="0" end="10" time="100" condition="Container(52).OnScrollNext">conditional</animation>
+                <animation effect="rotate" center="320,540" start="0" end="-10" time="100" condition="Container(52).OnScrollPrevious">conditional</animation>
+                <animation effect="rotate" center="320,540" start="0" end="10" time="100" condition="Container(52).OnScrollNext">conditional</animation>
 
                 <control type="group">
                     <include content="OtherElementForCircleListView">
@@ -247,7 +247,7 @@
                 <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),2)</visible>
                 <include content="OrbitCircle">
                     <param name="posx" value="320" />
-                    <param name="posy" value="560" />
+                    <param name="posy" value="540" />
                     <param name="size" value="30" />
                     <param name="radius" value="320" />
                     <param name="time" value="20000" />
@@ -258,7 +258,7 @@
                 <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),3)</visible>
                 <include content="OrbitCircle">
                     <param name="posx" value="320" />
-                    <param name="posy" value="560" />
+                    <param name="posy" value="540" />
                     <param name="size" value="15" />
                     <param name="radius" value="380" />
                     <param name="time" value="7500" />
@@ -267,7 +267,7 @@
 
                 <include content="OrbitCircle">
                     <param name="posx" value="320" />
-                    <param name="posy" value="560" />
+                    <param name="posy" value="540" />
                     <param name="size" value="25" />
                     <param name="radius" value="400" />
                     <param name="time" value="16000" />
@@ -276,7 +276,7 @@
 
                 <include content="OrbitCircle">
                     <param name="posx" value="320" />
-                    <param name="posy" value="560" />
+                    <param name="posy" value="540" />
                     <param name="size" value="20" />
                     <param name="radius" value="430" />
                     <param name="time" value="29000" />
@@ -284,7 +284,7 @@
 
                 <include content="OrbitCircle">
                     <param name="posx" value="320" />
-                    <param name="posy" value="560" />
+                    <param name="posy" value="540" />
                     <param name="size" value="35" />
                     <param name="radius" value="800" />
                     <param name="time" value="41000" />
@@ -293,7 +293,7 @@
                 
                 <include content="OrbitCircle">
                     <param name="posx" value="320" />
-                    <param name="posy" value="560" />
+                    <param name="posy" value="540" />
                     <param name="size" value="10" />
                     <param name="radius" value="840" />
                     <param name="time" value="32000" />
@@ -339,13 +339,13 @@
         
         <definition>
             <control type="group">
-                <animation effect="rotate" center="320,560" end="$PARAM[angle]" condition="true">Conditional</animation>
+                <animation effect="rotate" center="320,540" end="$PARAM[angle]" condition="true">Conditional</animation>
 
                 <control type="group">
                     <visible>$PARAM[highlightvisible]</visible>
                     <include content="OutlineLabel">
                         <param name="posx" value="680" />
-                        <param name="posy" value="540" />
+                        <param name="posy" value="520" />
                         <param name="width" value="1800" />
                         <param name="height" value="40" />
                         <param name="font" value="MediumViewFont" />
@@ -360,7 +360,7 @@
                     <visible>!$PARAM[highlightvisible]</visible>
                     <include content="OutlineLabel">
                         <param name="posx" value="680" />
-                        <param name="posy" value="540" />
+                        <param name="posy" value="520" />
                         <param name="width" value="1800" />
                         <param name="height" value="40" />
                         <param name="font" value="MediumViewFont" />
@@ -380,7 +380,7 @@
         <definition>
             <include content="ViewListForFlag">
                 <param name="posx" value="800" />
-                <param name="posy" value="480" />
+                <param name="posy" value="460" />
                 <param name="width" value="1040" />
                 <param name="flagcolor" value="$VAR[BackgroundColor]" />
                 <param name="backgroundcolor" value="$PARAM[textcolor]" />
@@ -388,7 +388,7 @@
         
             <include content="OutlineLabel">
                 <param name="posx" value="680" />
-                <param name="posy" value="540" />
+                <param name="posy" value="520" />
                 <param name="width" value="1160" />
                 <param name="height" value="40" />
                 <param name="font" value="BigViewFont" />
@@ -400,7 +400,7 @@
 
             <include content="OutlineLabel">
                 <param name="posx" value="680" />
-                <param name="posy" value="580" />
+                <param name="posy" value="560" />
                 <param name="width" value="1160" />
                 <param name="height" value="30" />
                 <param name="font" value="DetailViewFont" />
