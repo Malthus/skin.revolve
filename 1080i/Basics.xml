@@ -18,6 +18,10 @@
         <param name="posy" default="0" />
         <param name="width" default="0" />
         <param name="height" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
 
         <definition>
             <control type="button" id="$PARAM[id]">
@@ -30,6 +34,10 @@
                 <texturefocus></texturefocus>
                 <font></font>
                 <label></label>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
             </control>
         </definition>
     </include>
