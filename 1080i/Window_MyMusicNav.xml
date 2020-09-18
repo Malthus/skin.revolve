@@ -15,9 +15,7 @@
                 <visible>!String.IsEqual(Window.Property(ViewMode),Jukebox)</visible>
                 <include content="SideMenu" />
 
-                <control type="grouplist" id="9001">
-                    <include content="BeginOfButtonListForSideMenu" />
-
+                <include content="ButtonListForSideMenu">
                     <include content="ViewGroupLabelForSideMenu" />
                     <include content="ViewTypeButtonForSideMenu" />
                     <include content="SortCriteriumButtonForSideMenu" />
@@ -34,10 +32,8 @@
                     <include content="NavigationGroupLabelForSideMenu" />
                     <include content="LibrarySearchButtonForSideMenu" />
                     <include content="GlobalSearchButtonForSideMenu" />
+                </include>
 
-                    <include content="EndOfButtonListForSideMenu" />
-                </control>
-                
                 <include content="PlayerControlsForSideMenu" />
             </control>
 

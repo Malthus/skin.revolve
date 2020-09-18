@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="BeginOfButtonListForSideMenu">
-        <param name="onup" default="9010" />
-        <param name="ondown" default="9010" />
+    <include name="ButtonListForSideMenu">
+        <param name="onup" default="9404" />
+        <param name="ondown" default="9403" />
         <param name="onleft" default="Noop" />
         <param name="onright" default="52" />
         
         <definition>
-            <posx>20</posx>
-            <posy>380</posy>
-            <width>520</width>
-            <height>620</height>
-            <pagecontrol>9002</pagecontrol>
-            <orientation>vertical</orientation>
-            <itemgap>0</itemgap>
-            <onup>$PARAM[onup]</onup>
-            <ondown>$PARAM[ondown]</ondown>
-            <onleft>$PARAM[onleft]</onleft>
-            <onright>$PARAM[onright]</onright>
-
-            <control type="button" id="9003">
-                <visible>false</visible>
+            <control type="grouplist" id="9001">
+                <posx>20</posx>
+                <posy>380</posy>
+                <width>520</width>
+                <height>620</height>
+                <pagecontrol>9002</pagecontrol>
+                <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
                 <onup>$PARAM[onup]</onup>
-            </control>
-        </definition>
-    </include>
-
-    <include name="EndOfButtonListForSideMenu">
-        <param name="ondown" default="9010" />
-        
-        <definition>
-            <control type="button" id="9004">
-                <visible>false</visible>
                 <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+
+                <control type="button" id="9003">
+                    <visible>false</visible>
+                    <onup>$PARAM[onup]</onup>
+                </control>
+
+                <nested />
+                
+                <control type="button" id="9004">
+                    <visible>false</visible>
+                    <ondown>$PARAM[ondown]</ondown>
+                </control>
             </control>
         </definition>
     </include>

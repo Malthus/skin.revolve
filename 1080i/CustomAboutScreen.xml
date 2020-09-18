@@ -101,16 +101,12 @@
         <control type="group" id="9000">
             <include content="SideMenu" />
 
-            <control type="grouplist" id="9001">
-                <include content="BeginOfButtonListForSideMenu">
-                    <param name="onright" value="99" />
-                </include>
+            <include content="ButtonListForSideMenu">
+                <param name="onright" value="99" />
 
                 <include content="ViewGroupLabelForSideMenu" />
                 <include content="SettingsHelpButtonForSideMenu" />
-                
-                <include content="EndOfButtonListForSideMenu" />
-            </control>
+            </include>
 
             <include content="PlayerControlsForSideMenu">
                 <param name="onright" value="99" />

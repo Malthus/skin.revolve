@@ -539,6 +539,7 @@
             </control>
 
             <control type="button" id="$PARAM[id]">
+                <enable>PVR.CanRecordPlayingChannel</enable>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>80</width>
@@ -1442,83 +1443,83 @@
                     <visible>VideoPlayer.Content(LiveTV)</visible>
                     
                     <include content="PlayPauseButtonForPlayer">
-                        <param name="id" value="9423" />
+                        <param name="id" value="9403" />
                         <param name="posx" value="95" />
                         <param name="posy" value="0" />
                         <param name="onup" value="$PARAM[onup]" />
-                        <param name="ondown" value="9425" />
-                        <param name="onleft" value="9422" />
-                        <param name="onright" value="9425" />
+                        <param name="ondown" value="9405" />
+                        <param name="onleft" value="9402" />
+                        <param name="onright" value="9405" />
                     </include>
 
                     <include content="RewindButtonForPlayer">
-                        <param name="id" value="9422" />
+                        <param name="id" value="9402" />
                         <param name="posx" value="28" />
                         <param name="posy" value="28" />
-                        <param name="onup" value="9423" />
-                        <param name="ondown" value="9421" />
-                        <param name="onleft" value="9421" />
-                        <param name="onright" value="9423" />
+                        <param name="onup" value="9403" />
+                        <param name="ondown" value="9401" />
+                        <param name="onleft" value="9401" />
+                        <param name="onright" value="9403" />
                     </include>
 
                     <include content="FastForwardButtonForPlayer">
-                        <param name="id" value="9425" />
+                        <param name="id" value="9405" />
                         <param name="posx" value="162" />
                         <param name="posy" value="28" />
-                        <param name="onup" value="9423" />
-                        <param name="ondown" value="9426" />
-                        <param name="onleft" value="9423" />
-                        <param name="onright" value="9426" />
+                        <param name="onup" value="9403" />
+                        <param name="ondown" value="9406" />
+                        <param name="onleft" value="9403" />
+                        <param name="onright" value="9406" />
                     </include>
 
                     <include content="ChannelUpButtonForPlayer">
-                        <param name="id" value="9421" />
+                        <param name="id" value="9401" />
                         <param name="posx" value="0" />
                         <param name="posy" value="95" />
-                        <param name="onup" value="9422" />
-                        <param name="ondown" value="9427" />
+                        <param name="onup" value="9402" />
+                        <param name="ondown" value="9407" />
                         <param name="onleft" value="$PARAM[onleft]" />
-                        <param name="onright" value="9422" />
+                        <param name="onright" value="9402" />
                     </include>
 
                     <include content="ChannelDownButtonForPlayer">
-                        <param name="id" value="9426" />
+                        <param name="id" value="9406" />
                         <param name="posx" value="190" />
                         <param name="posy" value="95" />
-                        <param name="onup" value="9425" />
-                        <param name="ondown" value="9420" />
-                        <param name="onleft" value="9420" />
+                        <param name="onup" value="9405" />
+                        <param name="ondown" value="9400" />
+                        <param name="onleft" value="9400" />
                         <param name="onright" value="$PARAM[onright]" />
                     </include>
 
                     <include content="RecordButtonForPlayer">
-                        <param name="id" value="9427" />
+                        <param name="id" value="9407" />
                         <param name="posx" value="28" />
                         <param name="posy" value="162" />
-                        <param name="onup" value="9421" />
-                        <param name="ondown" value="9424" />
-                        <param name="onleft" value="9421" />
-                        <param name="onright" value="9424" />
+                        <param name="onup" value="9401" />
+                        <param name="ondown" value="9404" />
+                        <param name="onleft" value="9401" />
+                        <param name="onright" value="9404" />
                     </include>
 
                     <include content="RadioRDSButtonForPlayer">
-                        <param name="id" value="9420" />
+                        <param name="id" value="9400" />
                         <param name="posx" value="162" />
                         <param name="posy" value="162" />
-                        <param name="onup" value="9426" />
-                        <param name="ondown" value="9424" />
-                        <param name="onleft" value="9424" />
-                        <param name="onright" value="9426" />
+                        <param name="onup" value="9406" />
+                        <param name="ondown" value="9404" />
+                        <param name="onleft" value="9404" />
+                        <param name="onright" value="9406" />
                     </include>
 
                     <include content="StopButtonForPlayer">
-                        <param name="id" value="9424" />
+                        <param name="id" value="9404" />
                         <param name="posx" value="95" />
                         <param name="posy" value="190" />
-                        <param name="onup" value="9427" />
+                        <param name="onup" value="9407" />
                         <param name="ondown" value="$PARAM[ondown]" />
-                        <param name="onleft" value="9427" />
-                        <param name="onright" value="9420" />
+                        <param name="onleft" value="9407" />
+                        <param name="onright" value="9400" />
                     </include>
                 </control>
             </control>

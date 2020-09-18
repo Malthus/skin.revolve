@@ -20,9 +20,7 @@
         <control type="group" id="9000">
             <include content="SideMenu" />
 
-            <control type="grouplist" id="9001">
-                <include content="BeginOfButtonListForSideMenu" />
-
+            <include content="ButtonListForSideMenu">
                 <include content="ViewGroupLabelForSideMenu" />
                 <include content="ViewTypeButtonForSideMenu" />
                 <include content="SortCriteriumButtonForSideMenu" />
@@ -37,9 +35,7 @@
                 <include content="TimersButtonForSideMenu" />
                 <include content="PVRBackendInfoButtonForSideMenu" />
                 <include content="GlobalSearchButtonForSideMenu" />
-                
-                <include content="EndOfButtonListForSideMenu" />
-            </control>
+            </include>
 
             <include content="PlayerControlsForSideMenu" />
         </control>
