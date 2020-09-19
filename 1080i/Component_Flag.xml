@@ -100,7 +100,7 @@
     <include name="ColorForFlag">
         <param name="visible" default="true" />
         <param name="color" default="$VAR[HighlightColor]" />
-        <param name="fademaskcolor" default="$VAR[FadeMaskColor]" />
+        <param name="fademaskcolor" default="$VAR[FademaskColor]" />
 
         <definition>
             <control type="image">
