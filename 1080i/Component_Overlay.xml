@@ -23,6 +23,11 @@
         <value>$INFO[Player.Time]</value>
     </variable>
 
+    <variable name="WeatherLabelForOverlay">
+        <value condition="Weather.IsFetched">$INFO[Weather.Temperature]</value>
+        <value>$LOCALIZE[10006]</value>
+    </variable>
+
     <include name="GlobalOverlay">
         <param name="buttonid" default="200" />
         <param name="controlid" default="52" />
@@ -31,11 +36,34 @@
             <control type="group">
                 <include content="InformationBackgroundOverlay" />
                 <include content="BackButtonOverlay" />
+                <include content="WeatherOverlay" />
+                <include content="ClockOverlay" />
                 <include content="MediaPlayerOverlay" />
 
                 <include content="ValuesOverlay">
                     <param name="buttonid" value="$PARAM[buttonid]" />
                     <param name="controlid" value="$PARAM[controlid]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="InformationBackgroundOverlay">
+        <definition>
+            <control type="group">
+                <include content="BackgroundForOverlay">
+                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + Window.IsVisible(notification)" />
+                    <param name="posy" value="PosYForUpperBackgroundForOverlay" />
+                </include>
+
+                <include content="BackgroundForOverlay">
+                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + !Window.Is(home) + !Window.IsVisible(notification) + [Skin.HasSetting(ClockTime.Visible) | Skin.HasSetting(WeatherTemperature.Visible)]" />
+                    <param name="posy" value="PosYForUpperBackgroundForOverlay" />
+                </include>
+
+                <include content="BackgroundForOverlay">
+                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + [Window.IsVisible(extendedprogressdialog) | Window.IsVisible(volumebar) | Player.HasMedia | !$EXP[HasFinalSkinSettingsValues]]" />
+                    <param name="posy" value="PosYForLowerBackgroundForOverlay" />
                 </include>
             </control>
         </definition>
@@ -66,50 +94,106 @@
         </definition>
     </include>
 
-    <include name="InformationBackgroundOverlay">
+    <include name="ClockOverlay">
         <definition>
             <control type="group">
-                <include content="BackgroundForOverlay">
-                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + Window.IsVisible(notification)" />
-                    <param name="posy" value="PosYForUpperBackgroundForOverlay" />
+                <visible>Skin.HasSetting(ClockTime.Visible) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
+
+                <include content="LabelForOverlay">
+                    <param name="posx" value="1830" />
+                    <param name="posy" value="PosYForUpperLabelForOverlay" />
+                    <param name="width" value="200" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$INFO[System.Time(hh:mm)]" />
                 </include>
 
-                <include content="BackgroundForOverlay">
-                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + [Window.IsVisible(extendedprogressdialog) | Window.IsVisible(volumebar) | Player.HasMedia | !$EXP[HasFinalSkinSettingsValues]]" />
-                    <param name="posy" value="PosYForLowerBackgroundForOverlay" />
-                </include>
+                <control type="group">
+                    <posx>1840</posx>
+                    <posy>PosYForUpperIconForOverlay</posy>
+                    <include content="ClockFlag">
+                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
+                    </include>
+                </control>
             </control>
         </definition>
     </include>
-    
+
+    <include name="WeatherOverlay">
+        <definition>
+            <control type="group">
+                <visible>Skin.HasSetting(WeatherTemperature.Visible) + Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherOption.Active) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
+
+                <control type="group">
+                    <include content="LabelForOverlay">
+                        <param name="posx" value="1630" />
+                        <param name="posy" value="PosYForUpperLabelForOverlay" />
+                        <param name="width" value="200" />
+                        <param name="align" value="right" />
+                        <param name="label" value="$VAR[WeatherLabelForOverlay]" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible></visible>
+                    <posx>1640</posx>
+                    <posy>PosYForUpperIconForOverlay</posy>
+                    <include content="WeatherFlag">
+                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
+                    </include>
+                </control>
+            </control>
+
+            <control type="group">
+                <visible>Skin.HasSetting(WeatherTemperature.Visible) + !Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherOption.Active) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
+
+                <control type="group">
+                    <include content="LabelForOverlay">
+                        <param name="posx" value="1830" />
+                        <param name="posy" value="PosYForUpperLabelForOverlay" />
+                        <param name="width" value="200" />
+                        <param name="align" value="right" />
+                        <param name="label" value="$VAR[WeatherLabelForOverlay]" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible></visible>
+                    <posx>1840</posx>
+                    <posy>PosYForUpperIconForOverlay</posy>
+                    <include content="WeatherFlag">
+                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
+                    </include>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="MediaPlayerOverlay">
         <definition>
             <control type="group">
                 <visible>Player.HasMedia</visible>
                 <include content="ArtworkForOverlay" />
 
-                <control type="group">
-                    <include content="LabelForOverlay">
-                        <param name="posx" value="1380" />
-                        <param name="width" value="1360" />
-                        <param name="align" value="right" />
-                        <param name="label" value="$VAR[MediaLabelForOverlay]" />
-                    </include>
+                <include content="LabelForOverlay">
+                    <param name="posx" value="1380" />
+                    <param name="width" value="1360" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$VAR[MediaLabelForOverlay]" />
+                </include>
 
-                    <include content="LabelForOverlay">
-                        <param name="posx" value="1380" />
-                        <param name="width" value="40" />
-                        <param name="align" value="center" />
-                        <param name="label" value="|" />
-                    </include>
+                <include content="LabelForOverlay">
+                    <param name="posx" value="1380" />
+                    <param name="width" value="40" />
+                    <param name="align" value="center" />
+                    <param name="label" value="|" />
+                </include>
 
-                    <include content="LabelForOverlay">
-                        <param name="posx" value="1420" />
-                        <param name="width" value="480" />
-                        <param name="align" value="left" />
-                        <param name="label" value="$VAR[TimeLabelForOverlay]" />
-                    </include>
-                </control>
+                <include content="LabelForOverlay">
+                    <param name="posx" value="1420" />
+                    <param name="width" value="480" />
+                    <param name="align" value="left" />
+                    <param name="label" value="$VAR[TimeLabelForOverlay]" />
+                </include>
 
                 <include content="OverlayForPlayer" />
             </control>

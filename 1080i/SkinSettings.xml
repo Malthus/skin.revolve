@@ -448,7 +448,27 @@
                         <selected>Skin.HasSetting(BackButton.Visible)</selected>
                         <onclick>Skin.ToggleSetting(BackButton.Visible)</onclick>
                     </control>
-                    
+
+                    <control type="radiobutton" id="826">
+                        <description>Show Clock (Time) Option</description>
+                        <width>1100</width>
+                        <radioposx>1040</radioposx>
+                        <align>left</align>
+                        <label>$LOCALIZE[31147]</label>
+                        <selected>Skin.HasSetting(ClockTime.Visible)</selected>
+                        <onclick>Skin.ToggleSetting(ClockTime.Visible)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="827">
+                        <description>Show Weather (Temperature) Option</description>
+                        <width>1100</width>
+                        <radioposx>1040</radioposx>
+                        <align>left</align>
+                        <label>$LOCALIZE[31148]</label>
+                        <selected>Skin.HasSetting(WeatherTemperature.Visible)</selected>
+                        <onclick>Skin.ToggleSetting(WeatherTemperature.Visible)</onclick>
+                    </control>
+
                     <control type="button" id="807">
                         <description>Busy Animation Option</description>
                         <width>1100</width>
@@ -662,6 +682,30 @@
                         <label>$LOCALIZE[31422]</label>
                         <selected>Skin.HasSetting(Background.Visualiser.RunHidden)</selected>
                         <onclick>Skin.ToggleSetting(Background.Visualiser.RunHidden)</onclick>
+                    </control>
+
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="911" />
+                    </include>
+
+                    <control type="label" id="912">
+                        <description>Experimental Features Label</description>
+                        <width>1100</width>
+                        <height>40</height>
+                        <font>NormalButtonFont</font>
+                        <textcolor>$VAR[BackgroundColor]</textcolor>
+                        <align>left</align>
+                        <label>$LOCALIZE[31424]</label>
+                    </control>
+                    
+                    <control type="radiobutton" id="913">
+                        <description>Jukebox Home Menu Option Setting</description>
+                        <width>1100</width>
+                        <radioposx>1040</radioposx>
+                        <align>left</align>
+                        <label>$LOCALIZE[31425]</label>
+                        <selected>Skin.HasSetting(JukeboxOption.Active)</selected>
+                        <onclick>Skin.ToggleSetting(JukeboxOption.Active)</onclick>
                     </control>
 
                     <include content="SpacerForSkinSettings">
@@ -949,6 +993,16 @@
                         <label>$LOCALIZE[31256]</label>
                     </control>
                     <control type="textbox">
+                        <visible>Control.HasFocus(826)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31185]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(827)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31187]</label>
+                    </control>
+                    <control type="textbox">
                         <visible>Control.HasFocus(901)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31192]</label>
@@ -977,6 +1031,11 @@
                         <visible>Control.HasFocus(910)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31196]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(913)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31426]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(320) | Control.HasFocus(420) | Control.HasFocus(850) | Control.HasFocus(920)</visible>
