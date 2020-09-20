@@ -12,8 +12,9 @@
             <include content="EPGTimelineViewForPVR" />
         </control>
 
-        <include content="DefaultClock" />
-        <include content="ChannelGroupLabelForGuidePVR" />
+        <include content="ChannelGroupLabelForPVR">
+            <param name="id" value="30" />
+        </include>
 
         <control type="group" id="9000">
             <include content="SideMenu">

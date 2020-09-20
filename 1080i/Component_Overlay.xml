@@ -23,9 +23,12 @@
         <value>$INFO[Player.Time]</value>
     </variable>
 
-    <variable name="WeatherLabelForOverlay">
-        <value condition="Weather.IsFetched">$INFO[Weather.Temperature]</value>
-        <value>$LOCALIZE[10006]</value>
+    <variable name="ClockAndWeatherLabelForOverlay">
+        <value condition="Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + Weather.IsFetched">$INFO[Weather.Temperature] | $INFO[System.Time(hh:mm)]</value>
+        <value condition="Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + !Weather.IsFetched">$LOCALIZE[10006] | $INFO[System.Time(hh:mm)]</value>
+        <value condition="!Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + Weather.IsFetched">$INFO[Weather.Temperature]</value>
+        <value condition="!Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + !Weather.IsFetched">$LOCALIZE[10006]</value>
+        <value>$INFO[System.Time(hh:mm)]</value>
     </variable>
 
     <include name="GlobalOverlay">
@@ -36,8 +39,7 @@
             <control type="group">
                 <include content="InformationBackgroundOverlay" />
                 <include content="BackButtonOverlay" />
-                <include content="WeatherOverlay" />
-                <include content="ClockOverlay" />
+                <include content="ClockAndWeatherOverlay" />
                 <include content="MediaPlayerOverlay" />
 
                 <include content="ValuesOverlay">
@@ -94,76 +96,17 @@
         </definition>
     </include>
 
-    <include name="ClockOverlay">
+    <include name="ClockAndWeatherOverlay">
         <definition>
             <control type="group">
-                <visible>Skin.HasSetting(ClockTime.Visible) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
-
+                <visible>[Skin.HasSetting(ClockTime.Visible) | Skin.HasSetting(WeatherTemperature.Visible)] + !Window.Is(home) + !Window.IsVisible(notification)</visible>
                 <include content="LabelForOverlay">
-                    <param name="posx" value="1830" />
+                    <param name="posx" value="1900" />
                     <param name="posy" value="PosYForUpperLabelForOverlay" />
                     <param name="width" value="200" />
                     <param name="align" value="right" />
-                    <param name="label" value="$INFO[System.Time(hh:mm)]" />
+                    <param name="label" value="$VAR[ClockAndWeatherLabelForOverlay]" />
                 </include>
-
-                <control type="group">
-                    <posx>1840</posx>
-                    <posy>PosYForUpperIconForOverlay</posy>
-                    <include content="ClockFlag">
-                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
-                    </include>
-                </control>
-            </control>
-        </definition>
-    </include>
-
-    <include name="WeatherOverlay">
-        <definition>
-            <control type="group">
-                <visible>Skin.HasSetting(WeatherTemperature.Visible) + Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherOption.Active) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
-
-                <control type="group">
-                    <include content="LabelForOverlay">
-                        <param name="posx" value="1630" />
-                        <param name="posy" value="PosYForUpperLabelForOverlay" />
-                        <param name="width" value="200" />
-                        <param name="align" value="right" />
-                        <param name="label" value="$VAR[WeatherLabelForOverlay]" />
-                    </include>
-                </control>
-
-                <control type="group">
-                    <visible></visible>
-                    <posx>1640</posx>
-                    <posy>PosYForUpperIconForOverlay</posy>
-                    <include content="WeatherFlag">
-                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
-                    </include>
-                </control>
-            </control>
-
-            <control type="group">
-                <visible>Skin.HasSetting(WeatherTemperature.Visible) + !Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherOption.Active) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
-
-                <control type="group">
-                    <include content="LabelForOverlay">
-                        <param name="posx" value="1830" />
-                        <param name="posy" value="PosYForUpperLabelForOverlay" />
-                        <param name="width" value="200" />
-                        <param name="align" value="right" />
-                        <param name="label" value="$VAR[WeatherLabelForOverlay]" />
-                    </include>
-                </control>
-
-                <control type="group">
-                    <visible></visible>
-                    <posx>1840</posx>
-                    <posy>PosYForUpperIconForOverlay</posy>
-                    <include content="WeatherFlag">
-                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
-                    </include>
-                </control>
             </control>
         </definition>
     </include>
