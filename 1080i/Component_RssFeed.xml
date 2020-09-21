@@ -13,23 +13,15 @@
                 </include>
 
                 <control type="rss" id="1">
-                    <posx>20</posx>
+                    <posx>100</posx>
                     <posy>12</posy>
-                    <width>1835</width>
+                    <width>1820</width>
                     <height>30</height>
                     <font>MessageTextFont</font>
                     <titlecolor>$VAR[MainColor]</titlecolor>
                     <headlinecolor>$VAR[SecondaryColor]</headlinecolor>
                     <textcolor>$VAR[TextColor]</textcolor>
                     <urlset>1</urlset>
-                </control>
-
-                <control type="group">
-                    <posx>1840</posx>
-                    <posy>PosYForUpperIconForOverlay</posy>
-                    <include content="RssFeedFlag">
-                        <param name="flagcolor" value="$VAR[SecondaryColor]" />
-                    </include>
                 </control>
             </control>
         </definition>
