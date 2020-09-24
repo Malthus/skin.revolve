@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="CircleListView">
+        <param name="visible" default="true" />
+        <param name="onleft" default="9001" />
+        <param name="onright" default="Noop" />
+
         <definition>
             <control type="fixedlist" id="52">
                 <viewtype label="31932">list</viewtype>
-                <visible allowhiddenfocus="true">true</visible>
+                <visible allowhiddenfocus="true">$PARAM[visible]</visible>
                 <include content="InvisibleListDimensionsForView" />
                 <focusposition>1</focusposition>
                 <defaultcontrol>1</defaultcontrol>
@@ -12,17 +16,21 @@
                 <scrolltime>200</scrolltime>
                 <onup>52</onup>
                 <ondown>52</ondown>
-                <onleft>9001</onleft>
+                <onleft>$PARAM[onleft]</onleft>
                 <onright>62</onright>
 
                 <include content="InvisibleVerticalListItemsForView" />
             </control>
-        
-            <include content="MainCircleListView" />
+
+            <include content="MainCircleListView">
+                <param name="onright" value="$PARAM[onright]" />
+            </include>
         </definition>
     </include>
 
     <include name="MainCircleListView">
+        <param name="onright" default="Noop" />
+
         <definition>
             <control type="group">
                 <visible>Control.IsVisible(52)</visible>
@@ -65,6 +73,7 @@
                 <include content="VerticalScrollbarForView">
                     <param name="id" value="62" />
                     <param name="viewid" value="52" />
+                    <param name="onright" value="$PARAM[onright]" />
                 </include>
             </control>
 
