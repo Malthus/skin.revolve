@@ -2,23 +2,14 @@
 <includes>
     <include name="JukeboxPlaylistWindow">
         <definition>
-            <include content="DefaultListForDropListView">
+            <include content="CircleListView">
                 <param name="onleft" value="ReplaceWindow(music,musicdb://albums/,return)" />
+                <param name="onright" value="Close" />
             </include>
-
-            <control type="group">
-                <visible>Control.IsVisible(51)</visible>
-
-                <include content="VerticalScrollbarForView">
-                    <param name="id" value="61" />
-                    <param name="viewid" value="51" />
-                    <param name="onright" value="Close" />
-                </include>
-            </control>
 
             <include content="GlobalOverlay">
                 <param name="buttonid" value="200" />
-                <param name="controlid" value="51" />
+                <param name="controlid" value="52" />
             </include>
         </definition>
     </include>
