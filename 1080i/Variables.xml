@@ -66,6 +66,8 @@
     </variable>
 
     <variable name="ContentThumbnail">
+        <value condition="ListItem.IsParentFolder">defaultfolderback.png</value>
+        <value condition="Integer.IsEqual(Container.NumItems,0)">defaultempty.png</value>
         <value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
         <value condition="String.IsEqual(ListItem.FileExtension,jpg) | String.IsEqual(ListItem.FileExtension,jpeg)">$INFO[ListItem.FileNameAndPath]</value>
         <value condition="String.IsEqual(ListItem.FileExtension,png)">$INFO[ListItem.FileNameAndPath]</value>
