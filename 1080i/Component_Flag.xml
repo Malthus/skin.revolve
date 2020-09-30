@@ -1355,51 +1355,6 @@
         </definition>
     </include>
 
-    <include name="RssFeedFlag">
-        <param name="visible" default="System.GetBool(lookandfeel.enablerssfeeds)" />
-        <param name="flagcolor" default="$VAR[MainColor]" />
-        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
-
-        <definition>
-            <include content="BooleanFlag">
-                <param name="visible" value="$PARAM[visible]" />
-                <param name="flagcolor" value="$PARAM[flagcolor]" />
-                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="flags/property-rss.png" />
-            </include>
-        </definition>
-    </include>
-
-    <include name="ClockFlag">
-        <param name="visible" default="true" />
-        <param name="flagcolor" default="$VAR[MainColor]" />
-        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
-
-        <definition>
-            <include content="BooleanFlag">
-                <param name="visible" value="$PARAM[visible]" />
-                <param name="flagcolor" value="$PARAM[flagcolor]" />
-                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="flags/property-timer.png" />
-            </include>
-        </definition>
-    </include>
-
-    <include name="WeatherFlag">
-        <param name="visible" default="true" />
-        <param name="flagcolor" default="$VAR[MainColor]" />
-        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
-
-        <definition>
-            <include content="BooleanFlag">
-                <param name="visible" value="$PARAM[visible]" />
-                <param name="flagcolor" value="$PARAM[flagcolor]" />
-                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="flags/property-weather.png" />
-            </include>
-        </definition>
-    </include>
-
     <include name="NavigationFlag">
         <param name="visible" default="true" />
         <param name="flagcolor" default="$VAR[MainColor]" />
