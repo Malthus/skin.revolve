@@ -388,6 +388,138 @@
         </definition>
     </include>
 
+    <include name="CircleButton">
+        <param name="id" default="0" />
+        <param name="visible" default="true" />
+        <param name="enable" default="true" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="width" default="70" />
+        <param name="height" default="70" />
+        <param name="texturefocus" default="" />
+        <param name="colorfocus" default="$VAR[HighlightColor]" />
+        <param name="texturenofocus" default="" />
+        <param name="colornofocus" default="$VAR[BackgroundColor]" />
+        <param name="colorbackground" default="$VAR[MainColor]" />
+        <param name="colordisable" default="$VAR[SelectColor]" />
+        <param name="label" default="" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+        <param name="onclick" default="Noop" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="image">
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[colorbackground]">controls/button-background.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="button" id="$PARAM[id]">
+                    <enable>$PARAM[enable]</enable>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <texturefocus colordiffuse="$PARAM[colorfocus]">$PARAM[texturefocus]</texturefocus>
+                    <texturenofocus colordiffuse="$PARAM[colornofocus]">$PARAM[texturenofocus]</texturenofocus>
+                    <font></font>
+                    <label>$PARAM[label]</label>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                    <onclick>$PARAM[onclick]</onclick>
+                    
+                    <nested />
+                </control>
+
+                <control type="image">
+                    <visible>!$PARAM[enable]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[colordisable]">controls/button-background.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="CircleToggleButton">
+        <param name="id" default="0" />
+        <param name="visible" default="true" />
+        <param name="enable" default="true" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="width" default="70" />
+        <param name="height" default="70" />
+        <param name="usealttexture" default="false" />
+        <param name="texturefocus" default="" />
+        <param name="alttexturefocus" default="" />
+        <param name="colorfocus" default="$VAR[HighlightColor]" />
+        <param name="texturenofocus" default="" />
+        <param name="alttexturenofocus" default="" />
+        <param name="colornofocus" default="$VAR[BackgroundColor]" />
+        <param name="colorbackground" default="$VAR[MainColor]" />
+        <param name="colordisable" default="$VAR[SelectColor]" />
+        <param name="label" default="" />
+        <param name="altlabel" default="" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+        <param name="onclick" default="Noop" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="image">
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[colorbackground]">controls/button-background.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="togglebutton" id="$PARAM[id]">
+                    <enable>$PARAM[enable]</enable>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <usealttexture>$PARAM[usealttexture]</usealttexture>
+                    <texturefocus colordiffuse="$PARAM[colorfocus]">$PARAM[texturefocus]</texturefocus>
+                    <texturenofocus colordiffuse="$PARAM[colornofocus]">$PARAM[texturenofocus]</texturenofocus>
+                    <alttexturefocus colordiffuse="$PARAM[colorfocus]">$PARAM[alttexturefocus]</alttexturefocus>
+                    <alttexturenofocus colordiffuse="$PARAM[colornofocus]">$PARAM[alttexturenofocus]</alttexturenofocus>
+                    <font></font>
+                    <label>$PARAM[label]</label>
+                    <altlabel>$PARAM[altlabel]</altlabel>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                    <onclick>$PARAM[onclick]</onclick>
+                    
+                    <nested />
+                </control>
+
+                <control type="image">
+                    <visible>!$PARAM[enable]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>$PARAM[height]</height>
+                    <texture colordiffuse="$PARAM[colordisable]">controls/button-background.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="ColorLabel">
         <param name="visible" default="true" />
         <param name="posx" default="0" />

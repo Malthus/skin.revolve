@@ -312,12 +312,6 @@
         <value>$INFO[Player.Art(thumb)]</value>
     </variable>
     
-    <variable name="PlayerPlaylistPositionLabel">
-        <value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.SlideIndex]</value>
-        <value condition="Player.HasVideo">$INFO[VideoPlayer.PlaylistPosition]$INFO[VideoPlayer.PlaylistLength,/,]</value>
-        <value condition="Player.HasAudio">$INFO[MusicPlayer.PlaylistPosition]$INFO[MusicPlayer.PlaylistLength,/,]</value>
-    </variable>
-
     <variable name="PlayerTimeLabel">
         <value condition="Player.HasVideo">$INFO[VideoPlayer.Time]</value>
         <value condition="Player.HasAudio">$INFO[MusicPlayer.Time]</value>

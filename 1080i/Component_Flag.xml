@@ -44,6 +44,12 @@
         <value></value>
     </variable>
 
+    <variable name="PlaylistNumberForFlag">
+        <value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.SlideIndex]</value>
+        <value condition="Player.HasVideo">$INFO[VideoPlayer.PlaylistPosition]$INFO[VideoPlayer.PlaylistLength,/,]</value>
+        <value condition="Player.HasAudio">$INFO[MusicPlayer.PlaylistPosition]$INFO[MusicPlayer.PlaylistLength,/,]</value>
+    </variable>
+
     <variable name="EPGGenreTypeColorForFlag">
         <value condition="String.IsEqual(ListItem.Property(GenreType),16)">$INFO[Skin.String(View.EPGColors.MovieColor)]</value>
         <value condition="String.IsEqual(ListItem.Property(GenreType),32)">$INFO[Skin.String(View.EPGColors.NewsColor)]</value>
@@ -83,7 +89,7 @@
                 <visible>$PARAM[visible]</visible>
                 <width>SizeForFlag</width>
                 <height>SizeForFlag</height>
-                <texture colordiffuse="$PARAM[backgroundcolor]">elements/circle-mask.png</texture>
+                <texture colordiffuse="$PARAM[backgroundcolor]">flags/base-background.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
 
@@ -91,7 +97,7 @@
                 <visible>$PARAM[visible]</visible>
                 <width>SizeForFlag</width>
                 <height>SizeForFlag</height>
-                <texture colordiffuse="$PARAM[flagcolor]">flags/property-background.png</texture>
+                <texture colordiffuse="$PARAM[flagcolor]">flags/base-mask.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -107,7 +113,7 @@
                 <visible>$PARAM[visible]</visible>
                 <width>SizeForFlag</width>
                 <height>SizeForFlag</height>
-                <texture colordiffuse="$PARAM[color]">flags/property-background.png</texture>
+                <texture colordiffuse="$PARAM[color]">flags/base-mask.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
             
@@ -115,7 +121,7 @@
                 <visible>$PARAM[visible]</visible>
                 <width>SizeForFlag</width>
                 <height>SizeForFlag</height>
-                <texture colordiffuse="$PARAM[fademaskcolor]">flags/property-background.png</texture>
+                <texture colordiffuse="$PARAM[fademaskcolor]">flags/base-mask.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -131,7 +137,7 @@
                 <animation effect="fade" start="0" end="100" time="2000" delay="4000" tween="sine" condition="true" pulse="true">Conditional</animation>            
                 <width>SizeForFlag</width>
                 <height>SizeForFlag</height>
-                <texture colordiffuse="$PARAM[highlightcolor]">flags/property-background.png</texture>
+                <texture colordiffuse="$PARAM[highlightcolor]">flags/base-mask.png</texture>
                 <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
         </definition>
@@ -1355,18 +1361,36 @@
         </definition>
     </include>
 
-    <include name="NavigationFlag">
+    <include name="PlaylistNumberFlag">
         <param name="visible" default="true" />
         <param name="flagcolor" default="$VAR[MainColor]" />
         <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <include content="BooleanFlag">
-                <param name="visible" value="$PARAM[visible]" />
-                <param name="flagcolor" value="$PARAM[flagcolor]" />
-                <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
-                <param name="iconfilename" value="flags/state-back.png" />
-            </include>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <width>PlaceForFlag</width>
+                <height>SizeForFlag</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>SizeForFlag</width>
+                    <height>SizeForFlag</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/state-playlistnumber.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+
+                <include content="LabelForFlag">
+                    <param name="visible" value="!Player.Muted" />
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                    <param name="label" value="$VAR[PlaylistNumberForFlag]" />
+                </include>
+            </control>
         </definition>
     </include>
 

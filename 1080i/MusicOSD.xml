@@ -18,7 +18,7 @@
 
             <control type="grouplist" id="100">
                 <posx>0</posx>
-                <posy>0</posy>
+                <posy>10</posy>
                 <width>1920</width>
                 <height>90</height>
                 <itemgap>0</itemgap>
@@ -31,15 +31,11 @@
 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
                     
                     <include content="PlaylistButtonForPlayer">
                         <param name="id" value="412" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="419" />
                         <param name="onright" value="413" />
                     </include>
@@ -47,15 +43,11 @@
                 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="LyricsButtonForPlayer">
                         <param name="id" value="413" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="412" />
                         <param name="onright" value="421" />
                     </include>
@@ -63,35 +55,27 @@
                 
                 <control type="group">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="RadioRDSButtonForPlayer">
                         <param name="id" value="421" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="413" />
                         <param name="onright" value="407" />
                     </include>
                 </control>
 
                 <control type="label">
-                    <width>30</width>
+                    <width>20</width>
                 </control>
                 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="RepeatButtonForPlayer">
                         <param name="id" value="407" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="421" />
                         <param name="onright" value="400" />
                     </include>
@@ -99,15 +83,11 @@
 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="RandomButtonForPlayer">
                         <param name="id" value="400" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="407" />
                         <param name="onright" value="422" />
                     </include>
@@ -115,15 +95,11 @@
                 
                 <control type="group">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="ChannelUpButtonForPlayer">
                         <param name="id" value="422" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="400" />
                         <param name="onright" value="423" />
                     </include>
@@ -131,110 +107,82 @@
 
                 <control type="group">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="ChannelDownButtonForPlayer">
                         <param name="id" value="423" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="422" />
                         <param name="onright" value="401" />
                     </include>
                 </control>
                 
                 <control type="label">
-                    <width>30</width>
+                    <width>20</width>
                 </control>
                 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="PreviousButtonForPlayer">
                         <param name="id" value="401" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="423" />
                         <param name="onright" value="431" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="BigSkipBackwardButtonForPlayer">
                         <param name="id" value="431" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="401" />
                         <param name="onright" value="432" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="SmallSkipBackwardButtonForPlayer">
                         <param name="id" value="432" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="431" />
                         <param name="onright" value="402" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="RewindButtonForPlayer">
                         <param name="id" value="402" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="432" />
                         <param name="onright" value="403" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="PlayPauseButtonForPlayer">
                         <param name="id" value="403" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="402" />
                         <param name="onright" value="404" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="StopButtonForPlayer">
                         <param name="id" value="404" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="403" />
                         <param name="onright" value="424" />
                     </include>
@@ -242,60 +190,44 @@
 
                 <control type="group">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="RecordButtonForPlayer">
                         <param name="id" value="424" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="404" />
                         <param name="onright" value="405" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="FastForwardButtonForPlayer">
                         <param name="id" value="405" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="424" />
                         <param name="onright" value="433" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="SmallSkipForwardButtonForPlayer">
                         <param name="id" value="433" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="405" />
                         <param name="onright" value="434" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="BigSkipForwardButtonForPlayer">
                         <param name="id" value="434" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="433" />
                         <param name="onright" value="406" />
                     </include>
@@ -303,35 +235,27 @@
 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="NextButtonForPlayer">
                         <param name="id" value="406" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="434" />
                         <param name="onright" value="410" />
                     </include>
                 </control>
 
                 <control type="label">
-                    <width>30</width>
+                    <width>20</width>
                 </control>
                 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="HateButtonForPlayer">
                         <param name="id" value="410" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="406" />
                         <param name="onright" value="411" />
                     </include>
@@ -339,15 +263,11 @@
 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="LoveButtonForPlayer">
                         <param name="id" value="411" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="410" />
                         <param name="onright" value="500" />
                     </include>
@@ -355,49 +275,37 @@
 
                 <control type="label">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <width>30</width>
+                    <width>20</width>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="VisualisationButtonForPlayer">
                         <param name="id" value="500" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="411" />
                         <param name="onright" value="420" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="PresetsButtonForPlayer">
                         <param name="id" value="420" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="500" />
                         <param name="onright" value="419" />
                     </include>
                 </control>
 
                 <control type="group">
-                    <posx>1</posx>
-                    <posy>1</posy>
-                    <width>90</width>
-                    <include content="FrameForPlayer" />
+                    <width>74</width>
 
                     <include content="AddonButtonForPlayer">
                         <param name="id" value="419" />
-                        <param name="posx" value="4" />
-                        <param name="posy" value="4" />
+                        <param name="posx" value="2" />
                         <param name="onleft" value="420" />
                         <param name="onright" value="412" />
                     </include>

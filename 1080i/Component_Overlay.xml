@@ -5,6 +5,7 @@
     <constant name="PosYForUpperBackgroundForOverlay">12</constant>
     <constant name="PosYForUpperLabelForOverlay">17</constant>
     <constant name="PosYForUpperIconForOverlay">5</constant>
+    <constant name="PosYForUpperButtonForOverlay">5</constant>
 
     <constant name="PosYForLowerBackgroundForOverlay">1022</constant>
     <constant name="PosYForLowerLabelForOverlay">1027</constant>
@@ -50,16 +51,34 @@
         </definition>
     </include>
 
+    <include name="MediaOverlay">
+        <definition>
+            <control type="group">
+                <include content="ClockAndWeatherOverlay">
+                    <param name="textcolor" value="$VAR[BackgroundColor]" />
+                    <param name="outlinecolor" value="$VAR[MainColor]" />
+                </include>
+
+                <control type="group">
+                    <posx>1840</posx>
+                    <posy>PosYForLowerIconForOverlay</posy>
+
+                    <include content="PlaylistNumberFlag">
+                        <param name="flagcolor" value="$VAR[BackgroundColor]" />
+                        <param name="backgroundcolor" value="$VAR[MainColor]" />
+                    </include>
+                </control>
+
+                <include content="MediaFullScreenOverlay" />
+            </control>
+        </definition>
+    </include>
+
     <include name="InformationBackgroundOverlay">
         <definition>
             <control type="group">
                 <include content="BackgroundForOverlay">
                     <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + Window.IsVisible(notification)" />
-                    <param name="posy" value="PosYForUpperBackgroundForOverlay" />
-                </include>
-
-                <include content="BackgroundForOverlay">
-                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + !Window.Is(home) + !Window.IsVisible(notification) + [Skin.HasSetting(ClockTime.Visible) | Skin.HasSetting(WeatherTemperature.Visible)]" />
                     <param name="posy" value="PosYForUpperBackgroundForOverlay" />
                 </include>
 
@@ -73,30 +92,24 @@
 
     <include name="BackButtonOverlay">
         <definition>
-            <control type="group">
-                <visible>Skin.HasSetting(BackButton.Visible) + !Window.Is(home) + !Window.IsVisible(notification)</visible>
-                <posx>20</posx>
-                <posy>PosYForUpperIconForOverlay</posy>
-
-                <include content="NavigationFlag">
-                    <param name="flagcolor" value="$VAR[SecondaryColor]" />
-                </include>
-
-                <control type="button" id="9999">
-                    <description>Invisible Mouse Control For Player Control Button</description>
-                    <width>SizeForFlag</width>
-                    <height>SizeForFlag</height>
-                    <texturenofocus></texturenofocus>
-                    <texturefocus></texturefocus>
-                    <font></font>
-                    <label></label>
-                    <onclick>Close</onclick>
-                </control>
-            </control>
+            <include content="CircleButton">
+                <param name="visible" value="Skin.HasSetting(BackButton.Visible) + !Window.Is(home) + !Window.IsVisible(notification)" />
+                <param name="id" value="9999" />
+                <param name="posx" value="20" />
+                <param name="posy" value="PosYForUpperButtonForOverlay" />
+                <param name="width" value="60" />
+                <param name="height" value="60" />
+                <param name="texturefocus" value="controls/button-back.png" />
+                <param name="texturenofocus" value="controls/button-back.png" />
+                <param name="onclick" value="Close" />
+            </include>
         </definition>
     </include>
 
     <include name="ClockAndWeatherOverlay">
+        <param name="textcolor" default="$VAR[SecondaryColor]" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
+        
         <definition>
             <control type="group">
                 <visible>[Skin.HasSetting(ClockTime.Visible) | Skin.HasSetting(WeatherTemperature.Visible)] + !Window.Is(home) + !Window.IsVisible(notification)</visible>
@@ -104,6 +117,8 @@
                     <param name="posx" value="1900" />
                     <param name="posy" value="PosYForUpperLabelForOverlay" />
                     <param name="width" value="200" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                     <param name="align" value="right" />
                     <param name="label" value="$VAR[ClockAndWeatherLabelForOverlay]" />
                 </include>
@@ -139,6 +154,28 @@
                 </include>
 
                 <include content="OverlayForPlayer" />
+            </control>
+        </definition>
+    </include>
+
+    <include name="MediaFullScreenOverlay">
+        <definition>
+            <control type="group">
+                <visible>Player.ShowInfo</visible>
+                <include content="MediaThumbnailIconForOSD" />
+                <include content="MediaInformationLabelForOSD" />
+                <include content="MediaPlaylistPositionLabelForOSD" />
+                <include content="MediaNameLabelForOSD" />
+                <include content="MediaSeekBarForOSD" />
+
+                <control type="group">
+                    <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+                    <include content="DefaultAnimationForOSD" />
+                    <include content="MusicPlayerListForFlag">
+                        <param name="posx" value="PosXForContentForOSD" />
+                        <param name="posy" value="PosYForLowerIconForOverlay" />
+                    </include>
+                </control>
             </control>
         </definition>
     </include>
@@ -248,6 +285,7 @@
         <param name="width" default="1300" />
         <param name="height" default="30" />
         <param name="textcolor" default="$VAR[SecondaryColor]" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
         <param name="align" default="right" />
         <param name="label" default="" />
 
@@ -259,7 +297,7 @@
                 <param name="height" value="$PARAM[height]" />
                 <param name="font" value="MessageTextFont" />
                 <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+                <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                 <param name="outlinesize" value="2" />
                 <param name="align" value="$PARAM[align]" />
                 <param name="scroll" value="true" />
