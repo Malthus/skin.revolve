@@ -18,10 +18,13 @@
             <randomize>true</randomize>
         </control>        
 
-        <include content="MediaOverlay" />
-
         <control type="group">
             <visible>Player.ShowInfo</visible>
+            <control type="group">
+                <include content="DefaultAnimationForOSD" />
+                <include content="MediaOverlay" />
+            </control>
+
             <include content="MediaThumbnailIconForOSD" />
             <include content="MediaInformationLabelForOSD" />
             <include content="MediaPlaylistPositionLabelForOSD" />

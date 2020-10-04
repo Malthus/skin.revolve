@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2007">
     <controls>
-        <include content="MediaOverlay" />
-
         <control type="group">
             <visible>Player.ShowInfo</visible>
+            <control type="group">
+                <include content="DefaultAnimationForOSD" />
+                <include content="MediaOverlay" />
+            </control>
+
             <include content="MediaInformationLabelForOSD" />
             <include content="MediaPlaylistPositionLabelForOSD" />
             <include content="MediaNameLabelForOSD" />
