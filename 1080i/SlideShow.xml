@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2007">
     <controls>
+        <include content="MediaOverlay" />
+
         <control type="group">
             <visible>Player.ShowInfo</visible>
             <include content="MediaInformationLabelForOSD" />
             <include content="MediaPlaylistPositionLabelForOSD" />
             <include content="MediaNameLabelForOSD" />
             <include content="MediaBackgroundMusicLabelForOSD" />
-            
+            <include content="PlaylistNumberIconForOSD" />
+
             <control type="group">
                 <include content="DefaultAnimationForOSD" />
                 <include content="SlideshowListForFlag">
-                    <param name="posx" value="340" />
-                    <param name="posy" value="870" />
+                    <param name="posx" value="PosXForContentForOSD" />
+                    <param name="posy" value="PosYForLowerIconForOverlay" />
                 </include>
             </control>
             <include content="MediaThumbnailIconForOSD" />

@@ -19,5 +19,24 @@
         </control>        
 
         <include content="MediaOverlay" />
+
+        <control type="group">
+            <visible>Player.ShowInfo</visible>
+            <include content="MediaThumbnailIconForOSD" />
+            <include content="MediaInformationLabelForOSD" />
+            <include content="MediaPlaylistPositionLabelForOSD" />
+            <include content="MediaNameLabelForOSD" />
+            <include content="MediaSeekBarForOSD" />
+            <include content="PlaylistNumberIconForOSD" />
+
+            <control type="group">
+                <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+                <include content="DefaultAnimationForOSD" />
+                <include content="MusicPlayerListForFlag">
+                    <param name="posx" value="PosXForContentForOSD" />
+                    <param name="posy" value="PosYForLowerIconForOverlay" />
+                </include>
+            </control>
+        </control>
     </controls>
 </window>

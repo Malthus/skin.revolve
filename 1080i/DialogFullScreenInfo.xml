@@ -3,18 +3,22 @@
     <defaultcontrol always="true">603</defaultcontrol>
     
     <controls>
+        <include content="MediaOverlay" />
+
         <control type="group">
             <include content="MediaInformationLabelForOSD" />
             <include content="MediaNameLabelForOSD" />
             <include content="MediaSeekBarForOSD" />
-            
+            <include content="PlaylistNumberIconForOSD" />
+
             <control type="group">
                 <include content="DefaultAnimationForOSD" />
                 <include content="VideoPlayerListForFlag">
-                    <param name="posx" value="340" />
-                    <param name="posy" value="870" />
+                    <param name="posx" value="PosXForContentForOSD" />
+                    <param name="posy" value="PosYForLowerIconForOverlay" />
                 </include>
             </control>
+            
             <include content="MediaThumbnailIconForOSD" />
         </control>
     </controls>
