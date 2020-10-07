@@ -30,37 +30,34 @@
                 <onright>100</onright>
 
                 <control type="group">
-                    <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <width>74</width>
-                    
-                    <include content="PlaylistButtonForPlayer">
-                        <param name="id" value="412" />
+
+                    <include content="AddonButtonForPlayer">
+                        <param name="id" value="419" />
+                        <param name="posx" value="2" />
+                        <param name="onleft" value="425" />
+                        <param name="onright" value="420" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="PresetsButtonForPlayer">
+                        <param name="id" value="420" />
                         <param name="posx" value="2" />
                         <param name="onleft" value="419" />
-                        <param name="onright" value="413" />
+                        <param name="onright" value="500" />
                     </include>
                 </control>
-                
+
                 <control type="group">
-                    <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <width>74</width>
 
-                    <include content="LyricsButtonForPlayer">
-                        <param name="id" value="413" />
+                    <include content="VisualisationButtonForPlayer">
+                        <param name="id" value="500" />
                         <param name="posx" value="2" />
-                        <param name="onleft" value="412" />
-                        <param name="onright" value="421" />
-                    </include>
-                </control>
-                
-                <control type="group">
-                    <visible>VideoPlayer.Content(LiveTV)</visible>
-                    <width>74</width>
-
-                    <include content="RadioRDSButtonForPlayer">
-                        <param name="id" value="421" />
-                        <param name="posx" value="2" />
-                        <param name="onleft" value="413" />
+                        <param name="onleft" value="420" />
                         <param name="onright" value="407" />
                     </include>
                 </control>
@@ -76,7 +73,7 @@
                     <include content="RepeatButtonForPlayer">
                         <param name="id" value="407" />
                         <param name="posx" value="2" />
-                        <param name="onleft" value="421" />
+                        <param name="onleft" value="500" />
                         <param name="onright" value="400" />
                     </include>
                 </control>
@@ -269,7 +266,7 @@
                         <param name="id" value="411" />
                         <param name="posx" value="2" />
                         <param name="onleft" value="410" />
-                        <param name="onright" value="500" />
+                        <param name="onright" value="421" />
                     </include>
                 </control>
 
@@ -279,35 +276,49 @@
                 </control>
 
                 <control type="group">
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
                     <width>74</width>
 
-                    <include content="VisualisationButtonForPlayer">
-                        <param name="id" value="500" />
+                    <include content="RadioRDSButtonForPlayer">
+                        <param name="id" value="421" />
                         <param name="posx" value="2" />
                         <param name="onleft" value="411" />
-                        <param name="onright" value="420" />
+                        <param name="onright" value="413" />
                     </include>
                 </control>
 
                 <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
                     <width>74</width>
 
-                    <include content="PresetsButtonForPlayer">
-                        <param name="id" value="420" />
+                    <include content="LyricsButtonForPlayer">
+                        <param name="id" value="413" />
                         <param name="posx" value="2" />
-                        <param name="onleft" value="500" />
-                        <param name="onright" value="419" />
-                    </include>
-                </control>
-
-                <control type="group">
-                    <width>74</width>
-
-                    <include content="AddonButtonForPlayer">
-                        <param name="id" value="419" />
-                        <param name="posx" value="2" />
-                        <param name="onleft" value="420" />
+                        <param name="onleft" value="421" />
                         <param name="onright" value="412" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+                    
+                    <include content="PlaylistButtonForPlayer">
+                        <param name="id" value="412" />
+                        <param name="posx" value="2" />
+                        <param name="onleft" value="413" />
+                        <param name="onright" value="425" />
+                    </include>
+                </control>
+                
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="ClockButtonForPlayer">
+                        <param name="id" value="425" />
+                        <param name="posx" value="2" />
+                        <param name="onleft" value="412" />
+                        <param name="onright" value="419" />
                     </include>
                 </control>
             </control>

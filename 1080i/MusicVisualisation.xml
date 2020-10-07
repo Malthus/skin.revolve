@@ -19,11 +19,12 @@
         </control>        
 
         <control type="group">
+            <include content="DefaultAnimationForOSD" />
+            <include content="MediaOverlay" />
+        </control>
+
+        <control type="group">
             <visible>Player.ShowInfo</visible>
-            <control type="group">
-                <include content="DefaultAnimationForOSD" />
-                <include content="MediaOverlay" />
-            </control>
 
             <include content="MediaThumbnailIconForOSD" />
             <include content="MediaInformationLabelForOSD" />

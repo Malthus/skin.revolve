@@ -36,7 +36,7 @@
                     <include content="ColorButtonForPlayer">
                         <param name="id" value="426" />
                         <param name="posx" value="2" />
-                        <param name="onleft" value="416" />
+                        <param name="onleft" value="427" />
                         <param name="onright" value="420" />
                     </include>
                 </control>
@@ -258,6 +258,17 @@
                         <param name="id" value="416" />
                         <param name="posx" value="2" />
                         <param name="onleft" value="411" />
+                        <param name="onright" value="427" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="ClockButtonForPlayer">
+                        <param name="id" value="427" />
+                        <param name="posx" value="2" />
+                        <param name="onleft" value="416" />
                         <param name="onright" value="426" />
                     </include>
                 </control>

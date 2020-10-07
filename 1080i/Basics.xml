@@ -408,6 +408,7 @@
         <param name="onleft" default="Noop" />
         <param name="onright" default="Noop" />
         <param name="onclick" default="Noop" />
+        <param name="onclick2" default="Noop" />
 
         <definition>
             <control type="group">
@@ -435,6 +436,7 @@
                     <onleft>$PARAM[onleft]</onleft>
                     <onright>$PARAM[onright]</onright>
                     <onclick>$PARAM[onclick]</onclick>
+                    <onclick>$PARAM[onclick2]</onclick>
                 </control>
 
                 <control type="image">
@@ -472,6 +474,7 @@
         <param name="onleft" default="Noop" />
         <param name="onright" default="Noop" />
         <param name="onclick" default="Noop" />
+        <param name="onclick2" default="Noop" />
 
         <definition>
             <control type="group">
@@ -503,8 +506,7 @@
                     <onleft>$PARAM[onleft]</onleft>
                     <onright>$PARAM[onright]</onright>
                     <onclick>$PARAM[onclick]</onclick>
-                    
-                    <nested />
+                    <onclick>$PARAM[onclick2]</onclick>
                 </control>
 
                 <control type="image">

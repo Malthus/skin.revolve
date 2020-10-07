@@ -455,8 +455,8 @@
                         <radioposx>1040</radioposx>
                         <align>left</align>
                         <label>$LOCALIZE[31147]</label>
-                        <selected>Skin.HasSetting(ClockTime.Visible)</selected>
-                        <onclick>Skin.ToggleSetting(ClockTime.Visible)</onclick>
+                        <selected>Skin.HasSetting(Overlay.ClockTime.Visible)</selected>
+                        <onclick>Skin.ToggleSetting(Overlay.ClockTime.Visible)</onclick>
                     </control>
 
                     <control type="radiobutton" id="827">
@@ -465,8 +465,18 @@
                         <radioposx>1040</radioposx>
                         <align>left</align>
                         <label>$LOCALIZE[31148]</label>
-                        <selected>Skin.HasSetting(WeatherTemperature.Visible)</selected>
-                        <onclick>Skin.ToggleSetting(WeatherTemperature.Visible)</onclick>
+                        <selected>Skin.HasSetting(Overlay.WeatherTemperature.Visible)</selected>
+                        <onclick>Skin.ToggleSetting(Overlay.WeatherTemperature.Visible)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="828">
+                        <description>Show Media Overlay Option</description>
+                        <width>1100</width>
+                        <radioposx>1040</radioposx>
+                        <align>left</align>
+                        <label>$LOCALIZE[31291]</label>
+                        <selected>Skin.HasSetting(Overlay.MediaFullScreenClockTime.Visible)</selected>
+                        <onclick>Skin.ToggleSetting(Overlay.MediaFullScreenClockTime.Visible)</onclick>
                     </control>
 
                     <control type="button" id="807">
@@ -1001,6 +1011,11 @@
                         <visible>Control.HasFocus(827)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31187]</label>
+                    </control>
+                    <control type="textbox">
+                        <visible>Control.HasFocus(828)</visible>
+                        <font>DialogHelpFont</font>
+                        <label>$LOCALIZE[31292]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(901)</visible>

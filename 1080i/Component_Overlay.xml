@@ -53,12 +53,10 @@
 
     <include name="MediaOverlay">
         <definition>
-            <control type="group">
-                <include content="ClockAndWeatherOverlay">
-                    <param name="textcolor" value="$VAR[BackgroundColor]" />
-                    <param name="outlinecolor" value="$VAR[MainColor]" />
-                </include>
-            </control>
+            <include content="ClockOverlay">
+                <param name="textcolor" value="$VAR[BackgroundColor]" />
+                <param name="outlinecolor" value="$VAR[MainColor]" />
+            </include>
         </definition>
     </include>
 
@@ -100,7 +98,7 @@
         
         <definition>
             <control type="group">
-                <visible>[Skin.HasSetting(ClockTime.Visible) | Skin.HasSetting(WeatherTemperature.Visible)] + !Window.Is(home) + !Window.IsVisible(notification)</visible>
+                <visible>[Skin.HasSetting(Overlay.ClockTime.Visible) | Skin.HasSetting(Overlay.WeatherTemperature.Visible)] + !Window.Is(home)</visible>
                 <include content="LabelForOverlay">
                     <param name="posx" value="1900" />
                     <param name="posy" value="PosYForUpperLabelForOverlay" />
@@ -109,6 +107,27 @@
                     <param name="outlinecolor" value="$PARAM[outlinecolor]" />
                     <param name="align" value="right" />
                     <param name="label" value="$VAR[ClockAndWeatherLabelForOverlay]" />
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ClockOverlay">
+        <param name="textcolor" default="$VAR[SecondaryColor]" />
+        <param name="outlinecolor" default="$VAR[BackgroundColor]" />
+
+        <definition>
+            <control type="group">
+                <visible>Skin.HasSetting(Overlay.MediaFullScreenClockTime.Visible) + !Window.Is(home)</visible>
+                <include content="LabelForOverlay">
+                    <param name="id" value="2" />
+                    <param name="posx" value="1900" />
+                    <param name="posy" value="PosYForUpperLabelForOverlay" />
+                    <param name="width" value="200" />
+                    <param name="textcolor" value="$PARAM[textcolor]" />
+                    <param name="outlinecolor" value="$PARAM[outlinecolor]" />
+                    <param name="align" value="right" />
+                    <param name="label" value="$INFO[System.Time(hh:mm)]" />
                 </include>
             </control>
         </definition>

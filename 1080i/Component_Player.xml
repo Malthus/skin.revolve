@@ -686,7 +686,8 @@
                 <param name="ondown" value="$PARAM[ondown]" />
                 <param name="onleft" value="$PARAM[onleft]" />
                 <param name="onright" value="$PARAM[onright]" />
-                <param name="onclick" value="RunScript($INFO[Skin.String(Media.MusicLyricsAddon.Script)])" />
+                <param name="onclick" value="Close" />
+                <param name="onclick2" value="RunScript($INFO[Skin.String(Media.MusicLyricsAddon.Script)])" />
             </include>
         </definition>
     </include>
@@ -1105,6 +1106,32 @@
                 <param name="onleft" value="$PARAM[onleft]" />
                 <param name="onright" value="$PARAM[onright]" />
                 <param name="onclick" value="Addon.Default.OpenSettings(xbmc.player.musicviz)" />
+            </include>
+        </definition>
+    </include>
+
+    <include name="ClockButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <include content="CircleButton">
+                <param name="id" value="$PARAM[id]" />
+                <param name="posx" value="$PARAM[posx]" />
+                <param name="posy" value="$PARAM[posy]" />
+                <param name="texturefocus" value="controls/button-time.png" />
+                <param name="texturenofocus" value="controls/button-time.png" />
+                <param name="label" value="$LOCALIZE[31189]" />
+                <param name="onup" value="$PARAM[onup]" />
+                <param name="ondown" value="$PARAM[ondown]" />
+                <param name="onleft" value="$PARAM[onleft]" />
+                <param name="onright" value="$PARAM[onright]" />
+                <param name="onclick" value="Skin.ToggleSetting(Overlay.MediaFullScreenClockTime.Visible)" />
             </include>
         </definition>
     </include>
