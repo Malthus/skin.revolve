@@ -37,29 +37,11 @@
                 <param name="time" value="5000" />
             </include>
         </control>
-    
-        <control type="image">
-            <posx>815</posx>
-            <posy>395</posy>
-            <width>290</width>
-            <height>290</height>
-            <texture colordiffuse="$VAR[MainColor]" background="true">elements/circle-mask.png</texture>
-            <aspectratio>stretch</aspectratio>
-        </control>
-
-        <control type="image">
-            <posx>820</posx>
-            <posy>400</posy>
-            <width>280</width>
-            <height>280</height>
-            <texture colordiffuse="$VAR[BackgroundColor]">elements/circle-mask.png</texture>
-            <aspectratio>stretch</aspectratio>
-        </control>
 
         <control type="group" id="410">
             <include content="CircleControlsForPlayer">
-                <param name="posx" value="825" />
-                <param name="posy" value="405" />
+                <param name="posx" value="1646" />
+                <param name="posy" value="806" />
                 <param name="onup" value="9001" />
                 <param name="ondown" value="9001" />
                 <param name="onleft" value="9001" />
@@ -70,13 +52,13 @@
         <control type="group">
             <visible>String.IsEqual(Window.Property(DialogCloseButton),True)</visible>
             <include content="CloseButtonForPlayer">
-                <param name="id" value="408" />
-                <param name="posx" value="925" />
-                <param name="posy" value="505" />
-                <param name="onup" value="403" />
-                <param name="ondown" value="404" />
-                <param name="onleft" value="401" />
-                <param name="onright" value="406" />
+                <param name="id" value="508" />
+                <param name="posx" value="1746" />
+                <param name="posy" value="906" />
+                <param name="onup" value="9403" />
+                <param name="ondown" value="9404" />
+                <param name="onleft" value="9401" />
+                <param name="onright" value="9406" />
             </include>
         </control>
 

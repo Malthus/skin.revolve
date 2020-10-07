@@ -686,8 +686,7 @@
                 <param name="ondown" value="$PARAM[ondown]" />
                 <param name="onleft" value="$PARAM[onleft]" />
                 <param name="onright" value="$PARAM[onright]" />
-                <param name="onclick" value="Close" />
-                <onclick>RunScript($INFO[Skin.String(Media.MusicLyricsAddon.Script)])</onclick>
+                <param name="onclick" value="RunScript($INFO[Skin.String(Media.MusicLyricsAddon.Script)])" />
             </include>
         </definition>
     </include>
@@ -1155,13 +1154,6 @@
                 <ondown>$PARAM[ondown]</ondown>
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
-
-                <control type="image">
-                    <width>270</width>
-                    <height>270</height>
-                    <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
 
                 <control type="group">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
