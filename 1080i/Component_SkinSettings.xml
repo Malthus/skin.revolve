@@ -237,7 +237,7 @@
                 <posy>0</posy>
                 <width>40</width>
                 <height>40</height>
-                <texture colordiffuse="$PARAM[radiobuttoncolor]" border="20">controls/circle-dot.png</texture>
+                <texture colordiffuse="$PARAM[radiobuttoncolor]">controls/circle-dot.png</texture>
             </control>
             <control type="image">
                 <visible>!String.IsEqual(ListItem.Property(Active),True)</visible>
@@ -245,7 +245,7 @@
                 <posy>0</posy>
                 <width>40</width>
                 <height>40</height>
-                <texture colordiffuse="$PARAM[radiobuttoncolor]" border="20">controls/circle-clear.png</texture>
+                <texture colordiffuse="$PARAM[radiobuttoncolor]">controls/circle-clear.png</texture>
             </control>
         </definition>
     </include>
