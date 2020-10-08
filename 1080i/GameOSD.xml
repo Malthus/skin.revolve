@@ -88,7 +88,7 @@
                     <include content="GameVideoFilterButtonForPlayer">
                         <param name="id" value="15" />
                         <param name="posx" value="2" />
-                        <param name="onleft" value="16" />
+                        <param name="onleft" value="17" />
                         <param name="onright" value="14" />
                     </include>
                 </control>
@@ -196,6 +196,17 @@
                         <param name="id" value="16" />
                         <param name="posx" value="2" />
                         <param name="onleft" value="11" />
+                        <param name="onright" value="17" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="ClockButtonForPlayer">
+                        <param name="id" value="17" />
+                        <param name="posx" value="2" />
+                        <param name="onleft" value="16" />
                         <param name="onright" value="15" />
                     </include>
                 </control>

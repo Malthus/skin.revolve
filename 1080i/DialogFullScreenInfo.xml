@@ -4,11 +4,6 @@
     
     <controls>
         <control type="group">
-            <control type="group">
-                <include content="DefaultAnimationForOSD" />
-                <include content="MediaOverlay" />
-            </control>
-
             <include content="MediaInformationLabelForOSD" />
             <include content="MediaNameLabelForOSD" />
             <include content="MediaSeekBarForOSD" />

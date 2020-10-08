@@ -137,6 +137,7 @@
 
     <include name="OutlineLabel">
         <param name="id" default="0" />
+        <param name="backgroundid" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
         <param name="width" default="1240" />
@@ -156,6 +157,7 @@
 
         <definition>
             <include content="BackgroundForOutlineLabel">
+                <param name="id" value="$PARAM[backgroundid]" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />

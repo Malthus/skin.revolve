@@ -117,10 +117,10 @@
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <control type="group">
+            <control type="group" id="1">
                 <visible>Skin.HasSetting(Overlay.MediaFullScreenClockTime.Visible) + !Window.Is(home)</visible>
                 <include content="LabelForOverlay">
-                    <param name="id" value="2" />
+                    <param name="id" value="1" />
                     <param name="posx" value="1900" />
                     <param name="posy" value="PosYForUpperLabelForOverlay" />
                     <param name="width" value="200" />
@@ -265,6 +265,7 @@
     </include>
 
     <include name="LabelForOverlay">
+        <param name="id" default="0" />
         <param name="posx" default="1420" />
         <param name="posy" default="PosYForLowerLabelForOverlay" />
         <param name="width" default="1300" />
@@ -276,6 +277,8 @@
 
         <definition>
             <include content="OutlineLabel">
+                <param name="id" value="$PARAM[id]" />
+                <param name="backgroundid" value="$PARAM[id]" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />
