@@ -488,6 +488,11 @@
                 </include>
 
                 <include content="DialogNameForDebug">
+                    <param name="dialog" value="gameosd" />
+                    <param name="label" value="gameosd (GameOSD.xml)" />
+                </include>
+
+                <include content="DialogNameForDebug">
                     <param name="dialog" value="gamepadinput" />
                     <param name="label" value="gamepadinput (DialogSelect.xml)" />
                 </include>
