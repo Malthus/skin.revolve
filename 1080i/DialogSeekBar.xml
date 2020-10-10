@@ -110,9 +110,9 @@
                             <posy>40</posy>
                             <width>800</width>
                             <height>24</height>
-                            <texturesliderbar colordiffuse="$VAR[SelectColor]" border="20">controls/rectangle-fill.png</texturesliderbar>
-                            <textureslidernib colordiffuse="$VAR[BackgroundColor]">controls/circle-verticalhole-slider.png</textureslidernib>
-                            <textureslidernibfocus colordiffuse="$VAR[MainColor]">controls/circle-verticalhole-slider.png</textureslidernibfocus>
+                            <texturesliderbar colordiffuse="$VAR[SelectColor]" border="10">controls/rectangle-fill.png</texturesliderbar>
+                            <textureslidernib colordiffuse="$VAR[BackgroundColor]">controls/circle-verticalhole.png</textureslidernib>
+                            <textureslidernibfocus colordiffuse="$VAR[MainColor]">controls/circle-verticalhole.png</textureslidernibfocus>
                             <orientation>horizontal</orientation>
                             <action>seek</action>
                         </control>
