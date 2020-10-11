@@ -80,7 +80,7 @@
         <param name="playerdurationlabel" default="$VAR[PlayerDurationLabel]" />
         <param name="playercache" default="Player.ProgressCache" />
         <param name="playerprogress" default="Player.Progress" />
-    
+
         <definition>
             <control type="group">
                 <include content="DefaultAnimationForOSD" />
@@ -88,7 +88,7 @@
                 <control type="group">
                     <posx>PosXForContentForOSD</posx>
                     <posy>975</posy>
-                        
+
                     <include content="OutlineLabel">
                         <param name="width" value="200" />
                         <param name="font" value="MessageTextFont" />
@@ -100,6 +100,7 @@
                 </control>
 
                 <control type="group">
+                    <visible>Player.HasDuration</visible>
                     <posx>PosXForAdditionalContentForOSD</posx>
                     <posy>975</posy>
 
@@ -115,6 +116,7 @@
                 </control>
 
                 <control type="group">
+                    <visible>Player.HasDuration</visible>
                     <posx>500</posx>
                     <posy>985</posy>
 
