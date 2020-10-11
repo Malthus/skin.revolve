@@ -193,12 +193,6 @@
         </definition>
     </include>
 
-    <variable name="RepeatButtonIconForPlayer">
-        <value condition="Playlist.IsRepeatOne">controls/button-repeatone.png</value>
-        <value condition="Playlist.IsRepeat">controls/button-repeatall.png</value>
-        <value>controls/button-repeatoff.png</value>
-    </variable>
-
     <include name="RepeatButtonForPlayer">
         <param name="id" default="0" />
         <param name="posx" default="0" />
