@@ -218,7 +218,7 @@
             <control type="group">
                 <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),1)</visible>
                 <include content="OrbitCircle">
-                    <param name="posx" value="175" />
+                    <param name="posx" value="155" />
                     <param name="posy" value="941" />
                     <param name="size" value="25" />
                     <param name="radius" value="145" />
@@ -229,7 +229,7 @@
             <control type="group">
                 <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),3)</visible>
                 <include content="OrbitCircle">
-                    <param name="posx" value="175" />
+                    <param name="posx" value="155" />
                     <param name="posy" value="941" />
                     <param name="size" value="15" />
                     <param name="radius" value="180" />
@@ -237,7 +237,7 @@
                 </include>
                 
                 <include content="OrbitCircle">
-                    <param name="posx" value="175" />
+                    <param name="posx" value="155" />
                     <param name="posy" value="941" />
                     <param name="size" value="5" />
                     <param name="radius" value="200" />
@@ -246,7 +246,7 @@
                 </include>
                 
                 <include content="OrbitCircle">
-                    <param name="posx" value="175" />
+                    <param name="posx" value="155" />
                     <param name="posy" value="941" />
                     <param name="size" value="10" />
                     <param name="radius" value="210" />
@@ -254,7 +254,7 @@
                 </include>
 
                 <include content="OrbitCircle">
-                    <param name="posx" value="175" />
+                    <param name="posx" value="155" />
                     <param name="posy" value="941" />
                     <param name="size" value="10" />
                     <param name="radius" value="230" />
@@ -264,7 +264,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="MediaBackgroundMusicLabelForOSD">
         <definition>
             <control type="group">
