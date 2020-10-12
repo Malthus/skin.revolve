@@ -25,10 +25,10 @@
     </variable>
 
     <variable name="ClockAndWeatherLabelForOverlay">
-        <value condition="Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + Weather.IsFetched">$INFO[Weather.Temperature] | $INFO[System.Time(hh:mm)]</value>
-        <value condition="Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + !Weather.IsFetched">$LOCALIZE[10006] | $INFO[System.Time(hh:mm)]</value>
-        <value condition="!Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + Weather.IsFetched">$INFO[Weather.Temperature]</value>
-        <value condition="!Skin.HasSetting(ClockTime.Visible) + Skin.HasSetting(WeatherTemperature.Visible) + !Weather.IsFetched">$LOCALIZE[10006]</value>
+        <value condition="Skin.HasSetting(Overlay.ClockTime.Visible) + Skin.HasSetting(Overlay.WeatherTemperature.Visible) + Weather.IsFetched">$INFO[Weather.Temperature] | $INFO[System.Time(hh:mm)]</value>
+        <value condition="Skin.HasSetting(Overlay.ClockTime.Visible) + Skin.HasSetting(Overlay.WeatherTemperature.Visible) + !Weather.IsFetched">$LOCALIZE[10006] | $INFO[System.Time(hh:mm)]</value>
+        <value condition="!Skin.HasSetting(Overlay.ClockTime.Visible) + Skin.HasSetting(Overlay.WeatherTemperature.Visible) + Weather.IsFetched">$INFO[Weather.Temperature]</value>
+        <value condition="!Skin.HasSetting(Overlay.ClockTime.Visible) + Skin.HasSetting(Overlay.WeatherTemperature.Visible) + !Weather.IsFetched">$LOCALIZE[10006]</value>
         <value>$INFO[System.Time(hh:mm)]</value>
     </variable>
 
