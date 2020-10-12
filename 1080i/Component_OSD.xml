@@ -23,7 +23,7 @@
             <control type="group">
                 <include content="DefaultAnimationForOSD" />
                 <posx>PosXForContentForOSD</posx>
-                <posy>938</posy>
+                <posy>930</posy>
                 
                 <include content="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
@@ -44,7 +44,7 @@
             <control type="group">
                 <include content="DefaultAnimationForOSD" />
                 <posx>PosXForContentForOSD</posx>
-                <posy>900</posy>
+                <posy>890</posy>
                     
                 <include content="OutlineLabel">
                     <param name="width" value="WidthForContentForOSD" />
@@ -87,7 +87,7 @@
 
                 <control type="group">
                     <posx>PosXForContentForOSD</posx>
-                    <posy>975</posy>
+                    <posy>970</posy>
 
                     <include content="OutlineLabel">
                         <param name="width" value="200" />
@@ -102,7 +102,7 @@
                 <control type="group">
                     <visible>Player.HasDuration</visible>
                     <posx>PosXForAdditionalContentForOSD</posx>
-                    <posy>975</posy>
+                    <posy>970</posy>
 
                     <include content="OutlineLabel">
                         <param name="width" value="200" />
@@ -118,7 +118,7 @@
                 <control type="group">
                     <visible>Player.HasDuration</visible>
                     <posx>500</posx>
-                    <posy>985</posy>
+                    <posy>980</posy>
 
                     <control type="image">
                         <posx>-2</posx>
@@ -273,7 +273,7 @@
 
                 <control type="group">
                     <posx>PosXForContentForOSD</posx>
-                    <posy>977</posy>
+                    <posy>968</posy>
 
                     <control type="image">
                         <posx>0</posx>
@@ -294,7 +294,7 @@
 
                 <control type="group">
                     <posx>370</posx>
-                    <posy>975</posy>
+                    <posy>970</posy>
 
                     <include content="OutlineLabel">
                         <param name="width" value="1480" />
