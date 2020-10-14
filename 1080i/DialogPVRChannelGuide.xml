@@ -28,8 +28,29 @@
 
                 <content>
                     <item>
+                        <visible>!String.IsEmpty(Container(11).Listitem.Title)</visible>
                         <label>$LOCALIZE[369]</label>
                         <label2>$INFO[Container(11).Listitem.Title]</label2>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(Container(11).Listitem.TVShowTitle)</visible>
+                        <label>$LOCALIZE[21442]</label>
+                        <label2>$INFO[Container(11).Listitem.TVShowTitle]</label2>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(Container(11).Listitem.Season)</visible>
+                        <label>$LOCALIZE[20373]</label>
+                        <label2>$INFO[Container(11).ListItem.Season]</label2>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(Container(11).Listitem.Episode)</visible>
+                        <label>$LOCALIZE[20359]</label>
+                        <label2>$INFO[Container(11).ListItem.Episode]</label2>
+                    </item>
+                    <item>
+                        <visible>!String.IsEmpty(Container(11).Listitem.Genre)</visible>
+                        <label>$LOCALIZE[515]</label>
+                        <label2>$INFO[Container(11).ListItem.Genre]</label2>
                     </item>
                     <item>
                         <label>$LOCALIZE[552]</label>
@@ -57,7 +78,7 @@
                 <param name="posy" value="400" />
                 <param name="height" value="280" />
                 <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="label2" value="$INFO[ListItem.StartTime]" />
+                <param name="label2" value="$INFO[ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, - ,]" />
             </include>
 
             <include content="ButtonListForDialog">
