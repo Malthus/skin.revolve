@@ -16,7 +16,7 @@
                 <control type="group">
                     <visible>String.IsEqual(Skin.String(Debug.Info.AdditionalType),B) + !$EXP[HasSlideshowInBackground]</visible>
                     <include content="InformationForDebug">
-                        <param name="label" value="$VAR[ContentSingleImageBackground]$VAR[ContentMultiImageBackground, | ,]" />
+                        <param name="label" value="$VAR[SingleImageBackground]$VAR[MultiImageBackground, | ,]" />
                     </include>
                 </control>
 

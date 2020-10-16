@@ -243,7 +243,7 @@
                     <property name="Label3">$LOCALIZE[33057]</property>
                     <property name="Circle">circle/albums.png</property>
                     <property name="BackgroundImage">$INFO[Skin.String(JukeboxOption.BackgroundImage)]</property>
-                    <property name="FallbackImage">special://skin/backgrounds/albums.jpg</property>
+                    <property name="FallbackImage">special://skin/backgrounds/jukebox.jpg</property>
                     <thumb>$INFO[Skin.String(JukeboxOption.BackgroundFolder)]</thumb>
                     <onclick>ActivateWindow(1110)</onclick>
                 </item>
