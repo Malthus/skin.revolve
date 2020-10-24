@@ -1130,28 +1130,51 @@
         </definition>
     </include>
 
+    <include name="ExitButtonForPlayer">
+        <param name="id" default="0" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+        <param name="onleft" default="Noop" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <include content="CircleButton">
+                <param name="id" value="$PARAM[id]" />
+                <param name="posx" value="$PARAM[posx]" />
+                <param name="posy" value="$PARAM[posy]" />
+                <param name="texturefocus" value="controls/button-back.png" />
+                <param name="texturenofocus" value="controls/button-back.png" />
+                <param name="label" value="$LOCALIZE[13012]" />
+                <param name="onup" value="$PARAM[onup]" />
+                <param name="ondown" value="$PARAM[ondown]" />
+                <param name="onleft" value="$PARAM[onleft]" />
+                <param name="onright" value="$PARAM[onright]" />
+                <param name="onclick" value="Close" />
+            </include>
+        </definition>
+    </include>
+
     <include name="DescriptionForControlsForPlayer">
         <param name="posx" default="0" />
         <param name="posy" default="0" />
+        <param name="width" default="520" />
+        <param name="height" default="20" />
         
         <definition>
-            <control type="group">
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-                
-                <include content="OutlineLabel">
-                    <param name="posx" value="0" />
-                    <param name="posy" value="0" />
-                    <param name="width" value="520" />
-                    <param name="height" value="20" />
-                    <param name="font" value="MessageTextFont" />
-                    <param name="textcolor" value="$VAR[BackgroundColor]" />
-                    <param name="outlinecolor" value="$VAR[MainColor]" />
-                    <param name="outlinesize" value="2" />
-                    <param name="align" value="center" />
-                    <param name="label" value="$INFO[System.CurrentControl]" />
-                </include>
-            </control>
+            <include content="OutlineLabel">
+                <param name="posx" value="$PARAM[posx]" />
+                <param name="posy" value="$PARAM[posy]" />
+                <param name="width" value="$PARAM[width]" />
+                <param name="height" value="$PARAM[height]" />
+                <param name="font" value="MessageTextFont" />
+                <param name="textcolor" value="$VAR[BackgroundColor]" />
+                <param name="outlinecolor" value="$VAR[MainColor]" />
+                <param name="outlinesize" value="2" />
+                <param name="align" value="center" />
+                <param name="label" value="$INFO[System.CurrentControl]" />
+            </include>
         </definition>
     </include>
 
@@ -1341,6 +1364,387 @@
                         <param name="ondown" value="$PARAM[ondown]" />
                         <param name="onleft" value="9407" />
                         <param name="onright" value="9400" />
+                    </include>
+                </control>
+            </control>
+        </definition>
+    </include>
+    
+    <include name="TopControlsForPlayer">
+        <param name="id" default="100" />
+        <param name="posx" default="0" />
+        <param name="posy" default="10" />
+        <param name="onup" default="Noop" />
+        <param name="ondown" default="Noop" />
+
+        <definition>
+            <control type="grouplist" id="$PARAM[id]">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+                <width>1920</width>
+                <height>70</height>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <align>center</align>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+
+                <control type="group">
+                    <visible>!Window.Is(visualisation) + Skin.HasSetting(BackButton.Visible)</visible>
+                    <width>74</width>
+
+                    <include content="ExitButtonForPlayer">
+                        <param name="id" value="426" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="425" />
+                        <param name="onright" value="419" />
+                    </include>
+                </control>
+
+                <control type="label">
+                    <width>20</width>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="AddonButtonForPlayer">
+                        <param name="id" value="419" />
+                        <param name="posx" value="2" />
+                        <param name="onleft" value="426" />
+                        <param name="onright" value="420" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="PresetsButtonForPlayer">
+                        <param name="id" value="420" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="419" />
+                        <param name="onright" value="500" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="VisualisationButtonForPlayer">
+                        <param name="id" value="500" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="420" />
+                        <param name="onright" value="407" />
+                    </include>
+                </control>
+
+                <control type="label">
+                    <width>20</width>
+                </control>
+
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="RepeatButtonForPlayer">
+                        <param name="id" value="407" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="500" />
+                        <param name="onright" value="400" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="RandomButtonForPlayer">
+                        <param name="id" value="400" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="407" />
+                        <param name="onright" value="422" />
+                    </include>
+                </control>
+                
+                <control type="group">
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="ChannelUpButtonForPlayer">
+                        <param name="id" value="422" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="400" />
+                        <param name="onright" value="423" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="ChannelDownButtonForPlayer">
+                        <param name="id" value="423" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="422" />
+                        <param name="onright" value="401" />
+                    </include>
+                </control>
+                
+                <control type="label">
+                    <width>20</width>
+                </control>
+                
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="PreviousButtonForPlayer">
+                        <param name="id" value="401" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="423" />
+                        <param name="onright" value="431" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="BigSkipBackwardButtonForPlayer">
+                        <param name="id" value="431" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="401" />
+                        <param name="onright" value="432" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="SmallSkipBackwardButtonForPlayer">
+                        <param name="id" value="432" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="431" />
+                        <param name="onright" value="402" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="RewindButtonForPlayer">
+                        <param name="id" value="402" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="432" />
+                        <param name="onright" value="403" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="PlayPauseButtonForPlayer">
+                        <param name="id" value="403" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="402" />
+                        <param name="onright" value="404" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="StopButtonForPlayer">
+                        <param name="id" value="404" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="403" />
+                        <param name="onright" value="424" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="RecordButtonForPlayer">
+                        <param name="id" value="424" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="404" />
+                        <param name="onright" value="405" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="FastForwardButtonForPlayer">
+                        <param name="id" value="405" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="424" />
+                        <param name="onright" value="433" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="SmallSkipForwardButtonForPlayer">
+                        <param name="id" value="433" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="405" />
+                        <param name="onright" value="434" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="BigSkipForwardButtonForPlayer">
+                        <param name="id" value="434" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="433" />
+                        <param name="onright" value="406" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="NextButtonForPlayer">
+                        <param name="id" value="406" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="434" />
+                        <param name="onright" value="410" />
+                    </include>
+                </control>
+
+                <control type="label">
+                    <width>20</width>
+                </control>
+                
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="HateButtonForPlayer">
+                        <param name="id" value="410" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="406" />
+                        <param name="onright" value="411" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="LoveButtonForPlayer">
+                        <param name="id" value="411" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="410" />
+                        <param name="onright" value="421" />
+                    </include>
+                </control>
+
+                <control type="label">
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                    <width>20</width>
+                </control>
+
+                <control type="group">
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="RadioRDSButtonForPlayer">
+                        <param name="id" value="421" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="411" />
+                        <param name="onright" value="413" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>Window.Is(visualisation) + !VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+
+                    <include content="LyricsButtonForPlayer">
+                        <param name="id" value="413" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="421" />
+                        <param name="onright" value="412" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>Window.Is(visualisation) + !VideoPlayer.Content(LiveTV)</visible>
+                    <width>74</width>
+                    
+                    <include content="PlaylistButtonForPlayer">
+                        <param name="id" value="412" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="413" />
+                        <param name="onright" value="425" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+
+                    <include content="ClockButtonForPlayer">
+                        <param name="id" value="425" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="412" />
+                        <param name="onright" value="426" />
                     </include>
                 </control>
             </control>

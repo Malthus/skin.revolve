@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1110">
-    <defaultcontrol always="true">200</defaultcontrol>
+    <defaultcontrol always="true">100</defaultcontrol>
     <onunload condition="!Window.Next(music) + !Window.Next(musicplaylist)">ClearProperty(ViewMode,music)</onunload>
     <onunload condition="!Window.Next(music) + !Window.Next(musicplaylist)">ClearProperty(ViewMode,musicplaylist)</onunload>
 
@@ -20,7 +20,23 @@
             <param name="align" value="center" />
             <param name="wrapmultiline" value="false" />
             <param name="label" value="$LOCALIZE[31007]" />
-        </include>        
+        </include>
+        
+        <control type="group">
+            <animation type="conditional" condition="!ControlGroup(200).HasFocus()">
+                <effect type="slide" start="0,0" end="0,-120" time="200" />
+            </animation>
+        
+            <include content="TopControlsForPlayer">
+                <param name="id" value="200" />
+                <param name="ondown" value="100" />
+            </include>
+
+            <include content="DescriptionForControlsForPlayer">
+                <param name="posx" value="700" />
+                <param name="posy" value="92" />
+            </include>
+        </control>
 
         <control type="button" id="100">
             <visible allowhiddenfocus="true">true</visible>
@@ -32,8 +48,8 @@
             <texturefocus></texturefocus>
             <font></font>
             <label></label>
-            <onup>ActivateWindow(musicosd)</onup>
-            <ondown>Noop</ondown>
+            <onup>403</onup>
+            <ondown>9001</ondown>
             <onleft>SetProperty(ViewMode,Jukebox,music)</onleft>
             <onleft>SetProperty(ViewMode,Jukebox,musicplaylist)</onleft>
             <onleft>ActivateWindow(musicplaylist)</onleft>
@@ -41,10 +57,144 @@
             <onright>SetProperty(ViewMode,Jukebox,musicplaylist)</onright>
             <onright>ActivateWindow(music,musicdb://albums/,return)</onright>
         </control>
-        
-        <include content="GlobalOverlay">
-            <param name="buttonid" value="200" />
-            <param name="controlid" value="100" />
-        </include>
+
+        <control type="group">
+            <animation effect="slide" start="0,0" end="0,300" time="500" reversible="false">WindowClose</animation>
+            <animation type="conditional" condition="!ControlGroup(9001).HasFocus() + !ControlGroup(9002).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus()">
+                <effect type="slide" start="0,0" end="0,300" time="200" />
+            </animation>
+
+            <control type="group">
+<!--
+                <control type="group">
+                    <description>Left Side Menu Label</description>
+                    <visible>Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]</visible>
+
+                    <control type="image">
+                        <posx>180</posx>
+                        <posy>340</posy>
+                        <width>400</width>
+                        <height>400</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>elements/circle-mask.png</texture>
+                    </control>
+
+                    <control type="label">
+                        <posx>374</posx>
+                        <posy>530</posy>
+                        <width>360</width>
+                        <height>20</height>
+                        <font>SideMenuLabelFont</font>
+                        <textcolor>$VAR[SelectColor]</textcolor>
+                        <align>center</align>
+                        <angle>90</angle>
+                        <label>$LOCALIZE[31907]</label>
+                    </control>
+
+                    <include content="InvisibleButton">
+                        <param name="id" value="9021" />
+                        <param name="posx" value="540" />
+                        <param name="posy" value="390" />
+                        <param name="width" value="30" />
+                        <param name="height" value="300" />
+                    </include>
+                </control>
+-->
+<!--
+                <control type="group">
+                    <description>Top Side Menu Label</description>
+                    <visible>Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]</visible>
+
+                    <control type="image">
+                        <posx>70</posx>
+                        <posy>720</posy>
+                        <width>400</width>
+                        <height>400</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>elements/circle-mask.png</texture>
+                    </control>
+
+                    <control type="label">
+                        <posx>90</posx>
+                        <posy>1084</posy>
+                        <width>360</width>
+                        <height>20</height>
+                        <font>SideMenuLabelFont</font>
+                        <textcolor>$VAR[SelectColor]</textcolor>
+                        <align>center</align>
+                        <label>$LOCALIZE[31907]</label>
+                    </control>
+
+                    <include content="InvisibleButton">
+                        <param name="id" value="9021" />
+                        <param name="posx" value="130" />
+                        <param name="posy" value="1080" />
+                        <param name="width" value="300" />
+                        <param name="height" value="30" />
+                    </include>
+                </control>
+-->
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>800</posy>
+                    <width>1920</width>
+                    <height>280</height>
+                    <fadetime>100</fadetime>
+                    <texture colordiffuse="$VAR[BackgroundColor]">white.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="grouplist" id="9001">
+                    <posx>20</posx>
+                    <posy>820</posy>
+                    <width>930</width>
+                    <height>240</height>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <onup>100</onup>
+                    <ondown>Noop</ondown>
+                    <onleft>Noop</onleft>
+                    <onright>9002</onright>
+                    
+                    <control type="radiobutton" id="1">
+                        <description>Background Option</description>
+                        <width>930</width>
+                        <radioposx>870</radioposx>
+                        <align>left</align>
+                        <label>$LOCALIZE[31124]</label>
+                        <selected>Skin.HasSetting(Background.Video.Active)</selected>
+                        <onclick>Skin.ToggleSetting(Background.Video.Active)</onclick>
+                    </control>
+                </control>
+
+                <control type="grouplist" id="9002">
+                    <posx>970</posx>
+                    <posy>820</posy>
+                    <width>930</width>
+                    <height>240</height>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <onup>100</onup>
+                    <ondown>Noop</ondown>
+                    <onleft>9001</onleft>
+                    <onright>Noop</onright>
+                </control>
+
+                <include content="InvisibleButton">
+                    <param name="id" value="9020" />
+                    <param name="posx" value="0" />
+                    <param name="posy" value="8000" />
+                    <param name="width" value="1920" />
+                    <param name="height" value="280" />
+                </include>
+            </control>
+        </control>
+
+        <control type="group">
+            <include content="DefaultAnimationForOSD" />
+            <include content="MediaOverlay" />
+        </control>
     </controls>
 </window>
