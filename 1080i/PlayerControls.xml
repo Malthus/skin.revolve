@@ -62,12 +62,10 @@
             </include>
         </control>
 
-        <control type="group">
-            <visible>Window.IsActive(playercontrols)</visible>
-            <include content="DescriptionForControlsForPlayer">
-                <param name="posx" value="1521" />
-                <param name="posy" value="760" />
-            </include>
-        </control>
+        <include content="DescriptionForControlsForPlayer">
+            <param name="visible" value="Window.IsActive(playercontrols)" />
+            <param name="posx" value="1521" />
+            <param name="posy" value="780" />
+        </include>
     </controls>
 </window>

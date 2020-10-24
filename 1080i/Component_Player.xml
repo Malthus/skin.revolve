@@ -1157,13 +1157,15 @@
     </include>
 
     <include name="DescriptionForControlsForPlayer">
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
+        <param name="visible" default="true" />
+        <param name="posx" default="700" />
+        <param name="posy" default="92" />
         <param name="width" default="520" />
         <param name="height" default="20" />
         
         <definition>
             <include content="OutlineLabel">
+                <param name="visible" value="$PARAM[visible]" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="width" value="$PARAM[width]" />
@@ -1392,7 +1394,7 @@
                 <onright>$PARAM[id]</onright>
 
                 <control type="group">
-                    <visible>!Window.Is(visualisation) + Skin.HasSetting(BackButton.Visible)</visible>
+                    <visible>!Window.Is(musicosd) + Skin.HasSetting(BackButton.Visible)</visible>
                     <width>74</width>
 
                     <include content="ExitButtonForPlayer">
@@ -1708,7 +1710,7 @@
                 </control>
 
                 <control type="group">
-                    <visible>Window.Is(visualisation) + !VideoPlayer.Content(LiveTV)</visible>
+                    <visible>Window.Is(musicosd) + !VideoPlayer.Content(LiveTV)</visible>
                     <width>74</width>
 
                     <include content="LyricsButtonForPlayer">
@@ -1722,7 +1724,7 @@
                 </control>
 
                 <control type="group">
-                    <visible>Window.Is(visualisation) + !VideoPlayer.Content(LiveTV)</visible>
+                    <visible>Window.Is(musicosd) + !VideoPlayer.Content(LiveTV)</visible>
                     <width>74</width>
                     
                     <include content="PlaylistButtonForPlayer">

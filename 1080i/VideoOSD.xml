@@ -12,8 +12,6 @@
             <control type="group">
                 <description>Current Control Label</description>
                 <visible>Window.IsActive(videoosd) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks)</visible>
-                <posx>700</posx>
-                <posy>96</posy>
                 <include content="DescriptionForControlsForPlayer" />
             </control>
 

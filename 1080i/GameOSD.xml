@@ -64,8 +64,6 @@
 
             <control type="group">
                 <visible>!Window.IsActive(gamevideosettings) + !Window.IsVisible(gamecontrollers)</visible>
-                <posx>700</posx>
-                <posy>96</posy>
                 <include content="DescriptionForControlsForPlayer" />
             </control>
 
