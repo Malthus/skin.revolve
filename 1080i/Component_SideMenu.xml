@@ -107,24 +107,27 @@
                         <texture>elements/circle-mask.png</texture>
                     </control>
 
-                    <control type="label">
-                        <posx>374</posx>
-                        <posy>530</posy>
-                        <width>360</width>
-                        <height>20</height>
-                        <font>SideMenuLabelFont</font>
-                        <textcolor>$VAR[SelectColor]</textcolor>
-                        <align>center</align>
-                        <angle>90</angle>
-                        <label>$LOCALIZE[31907]</label>
+                    <control type="image">
+                        <posx>542</posx>
+                        <posy>520</posy>
+                        <width>60</width>
+                        <height>60</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>elements/circle-mask.png</texture>
                     </control>
 
-                    <include content="InvisibleButton">
+                    <include content="CircleButton">
                         <param name="id" value="9021" />
-                        <param name="posx" value="540" />
-                        <param name="posy" value="390" />
-                        <param name="width" value="30" />
-                        <param name="height" value="300" />
+                        <param name="posx" value="542" />
+                        <param name="posy" value="520" />
+                        <param name="width" value="60" />
+                        <param name="height" value="60" />
+                        <param name="texturefocus" value="controls/button-menu.png" />
+                        <param name="colorfocus" value="$VAR[BackgroundColor]" />
+                        <param name="texturenofocus" value="controls/button-menu.png" />
+                        <param name="colornofocus" value="$VAR[BackgroundColor]" />
+                        <param name="colorbackground" value="$VAR[SelectColor]" />
                     </include>
                 </control>
 
@@ -142,23 +145,27 @@
                         <texture>elements/circle-mask.png</texture>
                     </control>
 
-                    <control type="label">
-                        <posx>90</posx>
-                        <posy>1084</posy>
-                        <width>360</width>
-                        <height>20</height>
-                        <font>SideMenuLabelFont</font>
-                        <textcolor>$VAR[SelectColor]</textcolor>
-                        <align>center</align>
-                        <label>$LOCALIZE[31907]</label>
+                    <control type="image">
+                        <posx>240</posx>
+                        <posy>1082</posy>
+                        <width>60</width>
+                        <height>60</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>elements/circle-mask.png</texture>
                     </control>
 
-                    <include content="InvisibleButton">
+                    <include content="CircleButton">
                         <param name="id" value="9021" />
-                        <param name="posx" value="130" />
-                        <param name="posy" value="1080" />
-                        <param name="width" value="300" />
-                        <param name="height" value="30" />
+                        <param name="posx" value="240" />
+                        <param name="posy" value="1082" />
+                        <param name="width" value="60" />
+                        <param name="height" value="60" />
+                        <param name="texturefocus" value="controls/button-menu.png" />
+                        <param name="colorfocus" value="$VAR[BackgroundColor]" />
+                        <param name="texturenofocus" value="controls/button-menu.png" />
+                        <param name="colornofocus" value="$VAR[BackgroundColor]" />
+                        <param name="colorbackground" value="$VAR[SelectColor]" />
                     </include>
                 </control>
 

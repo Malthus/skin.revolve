@@ -344,11 +344,13 @@
     </include>
 
     <include name="UpDownButton">
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
         <param name="downbuttonid" default="" />
         <param name="upbuttonid" default="" />
         <param name="controlid" default="" />
+        <param name="posx" default="0" />
+        <param name="posy" default="0" />
+        <param name="colorfocus" default="$VAR[BackgroundColor]" />
+        <param name="colornofocus" default="$VAR[SecondaryColor]" />
         <param name="onup" default="Noop" />
         <param name="ondown" default="Noop" />
         <param name="onleft" default="Noop" />
@@ -364,8 +366,8 @@
                     <posy>0</posy>
                     <width>40</width>
                     <height>40</height>
-                    <texturenofocus colordiffuse="$VAR[SecondaryColor]">controls/circle-triangledown.png</texturenofocus>
-                    <texturefocus colordiffuse="$VAR[BackgroundColor]">controls/circle-triangledown.png</texturefocus>
+                    <texturenofocus colordiffuse="$PARAM[colornofocus]">controls/circle-triangledown.png</texturenofocus>
+                    <texturefocus colordiffuse="$PARAM[colorfocus]">controls/circle-triangledown.png</texturefocus>
                     <onup>$PARAM[onup]</onup>
                     <ondown>$PARAM[ondown]</ondown>
                     <onleft>$PARAM[onleft]</onleft>
@@ -378,8 +380,8 @@
                     <posy>0</posy>
                     <width>40</width>
                     <height>40</height>
-                    <texturenofocus colordiffuse="$VAR[SecondaryColor]">controls/circle-triangleup.png</texturenofocus>
-                    <texturefocus colordiffuse="$VAR[BackgroundColor]">controls/circle-triangleup.png</texturefocus>
+                    <texturenofocus colordiffuse="$PARAM[colornofocus]">controls/circle-triangleup.png</texturenofocus>
+                    <texturefocus colordiffuse="$PARAM[colorfocus]">controls/circle-triangleup.png</texturefocus>
                     <onup>$PARAM[onup]</onup>
                     <ondown>$PARAM[ondown]</ondown>
                     <onleft>$PARAM[downbuttonid]</onleft>
