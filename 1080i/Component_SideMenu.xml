@@ -88,86 +88,28 @@
             <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
                 <effect type="slide" start="0,0" end="-540,0" time="200" />
             </animation>
-            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
+            <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9022).HasFocus() + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
                 <effect type="slide" start="0,0" end="0,-1080" time="200" />
             </animation>
 
             <control type="group">
-                <control type="group">
-                    <description>Left Side Menu Label</description>
-                    <visible>Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]</visible>
+                <include content="LeftHandle">
+                    <param name="id" value="9021" />
+                    <param name="posx" value="540" />
+                    <param name="posy" value="340" />
+                    <param name="visible" value="Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]" />
+                    <param name="texturefocus" value="controls/button-menu.png" />
+                    <param name="texturenofocus" value="controls/button-menu.png" />
+                </include>
 
-                    <control type="image">
-                        <posx>180</posx>
-                        <posy>340</posy>
-                        <width>400</width>
-                        <height>400</height>
-                        <fadetime>100</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture>elements/circle-mask.png</texture>
-                    </control>
-
-                    <control type="image">
-                        <posx>542</posx>
-                        <posy>520</posy>
-                        <width>60</width>
-                        <height>60</height>
-                        <fadetime>100</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture>elements/circle-mask.png</texture>
-                    </control>
-
-                    <include content="CircleButton">
-                        <param name="id" value="9021" />
-                        <param name="posx" value="542" />
-                        <param name="posy" value="520" />
-                        <param name="width" value="60" />
-                        <param name="height" value="60" />
-                        <param name="texturefocus" value="controls/button-menu.png" />
-                        <param name="colorfocus" value="$VAR[BackgroundColor]" />
-                        <param name="texturenofocus" value="controls/button-menu.png" />
-                        <param name="colornofocus" value="$VAR[BackgroundColor]" />
-                        <param name="colorbackground" value="$VAR[SelectColor]" />
-                    </include>
-                </control>
-
-                <control type="group">
-                    <description>Top Side Menu Label</description>
-                    <visible>Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]</visible>
-
-                    <control type="image">
-                        <posx>70</posx>
-                        <posy>720</posy>
-                        <width>400</width>
-                        <height>400</height>
-                        <fadetime>100</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture>elements/circle-mask.png</texture>
-                    </control>
-
-                    <control type="image">
-                        <posx>240</posx>
-                        <posy>1082</posy>
-                        <width>60</width>
-                        <height>60</height>
-                        <fadetime>100</fadetime>
-                        <aspectratio>stretch</aspectratio>
-                        <texture>elements/circle-mask.png</texture>
-                    </control>
-
-                    <include content="CircleButton">
-                        <param name="id" value="9021" />
-                        <param name="posx" value="240" />
-                        <param name="posy" value="1082" />
-                        <param name="width" value="60" />
-                        <param name="height" value="60" />
-                        <param name="texturefocus" value="controls/button-menu.png" />
-                        <param name="colorfocus" value="$VAR[BackgroundColor]" />
-                        <param name="texturenofocus" value="controls/button-menu.png" />
-                        <param name="colornofocus" value="$VAR[BackgroundColor]" />
-                        <param name="colorbackground" value="$VAR[SelectColor]" />
-                    </include>
-                </control>
+                <include content="TopHandle">
+                    <param name="id" value="9022" />
+                    <param name="posx" value="70" />
+                    <param name="posy" value="1080" />
+                    <param name="visible" value="Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]" />
+                    <param name="texturefocus" value="controls/button-menu.png" />
+                    <param name="texturenofocus" value="controls/button-menu.png" />
+                </include>
 
                 <control type="image">
                     <posx>0</posx>
