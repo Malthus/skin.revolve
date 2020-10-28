@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2007">
-    <menucontrol>100</menucontrol>
-
     <controls>
         <control type="group">
             <include content="DefaultAnimationForFullScreenMedia" />
             <include content="MediaOverlay" />
         </control>
-<!--
+
         <control type="group">
-            <visible>Player.ShowInfo</visible>
+            <visible>Skin.HasSetting(Slideshow.PictureInformation.Visible)</visible>
             <control type="group">
                 <include content="DefaultAnimationForFullScreenMedia" />
                 <include content="MediaOverlay" />
@@ -29,6 +27,5 @@
                 </include>
             </control>
         </control>
--->
     </controls>
 </window>
