@@ -708,6 +708,15 @@
                         <label>$LOCALIZE[31424]</label>
                     </control>
 
+                    <control type="button" id="913">
+                        <description>Disabled Placeholder Button</description>
+                        <enable>false</enable>
+                        <width>1100</width>
+                        <align>left</align>
+                        <label>$LOCALIZE[231]</label>
+                        <onclick>Noop</onclick>
+                    </control>
+
                     <include content="SpacerForSkinSettings">
                         <param name="id" value="907" />
                     </include>
@@ -1036,11 +1045,6 @@
                         <visible>Control.HasFocus(910)</visible>
                         <font>DialogHelpFont</font>
                         <label>$LOCALIZE[31196]</label>
-                    </control>
-                    <control type="textbox">
-                        <visible>Control.HasFocus(913)</visible>
-                        <font>DialogHelpFont</font>
-                        <label>$LOCALIZE[31426]</label>
                     </control>
                     <control type="textbox">
                         <visible>Control.HasFocus(320) | Control.HasFocus(420) | Control.HasFocus(850) | Control.HasFocus(920)</visible>
