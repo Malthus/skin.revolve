@@ -2,17 +2,39 @@
 <window>
     <defaultcontrol always="false">200</defaultcontrol>
     <menucontrol>9001</menucontrol>
-    <views condition="!String.IsEqual(Window.Property(ViewMode),Jukebox)">52,51,54,58</views>
-    <views condition="String.IsEqual(Window.Property(ViewMode),Jukebox)">51</views>
-    <onload condition="String.IsEqual(Window.Property(ViewMode),Jukebox)">SetProperty(DefaultViewMode,$INFO[Container.Viewmode])</onload>
-    <onload condition="String.IsEqual(Window.Property(ViewMode),Jukebox)">Container.SetViewMode(55)</onload>
-    <onunload condition="String.IsEqual(Window.Property(ViewMode),Jukebox)">Container.SetViewMode($INFO[Window.Property(DefaultViewMode)])</onunload>
+    <views>52,51,54,58</views>
 
     <controls>
         <include content="FullscreenDimensions" />
         <include content="GlobalBackground" />
 
-        <include condition="!String.IsEqual(Window.Property(ViewMode),Jukebox)">MyPlaylistWindow</include>
-        <include condition="String.IsEqual(Window.Property(ViewMode),Jukebox)">JukeboxPlaylistWindow</include>
+        <include content="DropListView" />
+        <include content="CircleListView" />
+        <include content="RevolveListView" />
+        <include content="RotateListView" />
+
+        <control type="group" id="9000">
+            <include content="SideMenu" />
+
+            <include content="ButtonListForSideMenu">
+                <include content="ViewGroupLabelForSideMenu" />
+                <include content="ViewTypeButtonForSideMenu" />
+                <include content="SortCriteriumButtonForSideMenu" />
+                <include content="SortOrderButtonForSideMenu" />
+                
+                <include content="PlaylistLibraryGroupLabelForSideMenu" />
+                <include content="ShuffleButtonForSideMenu" />
+                <include content="SaveButtonForSideMenu" />
+                <include content="ClearButtonForSideMenu" />
+                <include content="PlayButtonForSideMenu" />
+            </include>
+
+            <include content="PlayerControlsForSideMenu" />
+        </control>
+        
+        <include content="GlobalOverlay">
+            <param name="buttonid" value="200" />
+            <param name="controlid" value="52" />
+        </include>
     </controls>
 </window>
