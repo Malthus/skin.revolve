@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2007">
+    <menucontrol>100</menucontrol>
+
     <controls>
+        <control type="group">
+            <include content="DefaultAnimationForFullScreenMedia" />
+            <include content="MediaOverlay" />
+        </control>
+<!--
         <control type="group">
             <visible>Player.ShowInfo</visible>
             <control type="group">
-                <include content="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForFullScreenMedia" />
                 <include content="MediaOverlay" />
             </control>
 
-            <include content="MediaInformationLabelForOSD" />
-            <include content="MediaPlaylistPositionLabelForOSD" />
-            <include content="MediaNameLabelForOSD" />
-            <include content="MediaBackgroundMusicLabelForOSD" />
-            <include content="PlaylistNumberIconForOSD" />
+            <include content="MediaThumbnailIconForFullScreenMedia" />
+            <include content="InformationLabelForFullScreenMedia" />
+            <include content="NameLabelForFullScreenMedia" />
+            <include content="BackgroundMusicLabelForFullScreenMedia" />
+            <include content="PlaylistNumberIconForFullScreenMedia" />
 
             <control type="group">
-                <include content="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForFullScreenMedia" />
                 <include content="SlideshowListForFlag">
-                    <param name="posx" value="PosXForContentForOSD" />
-                    <param name="posy" value="PosYForLowerIconForOverlay" />
+                    <param name="posx" value="PosXForContentForFullScreenMedia" />
+                    <param name="posy" value="PosYForMediaFlagsForFullScreenMedia" />
                 </include>
             </control>
-            <include content="MediaThumbnailIconForOSD" />
         </control>
+-->
     </controls>
 </window>

@@ -16,7 +16,7 @@
             </include>
 
             <include content="DescriptionForControlsForPlayer">
-                <param name="visible" value="Window.IsActive(musicosd) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(addonsettings) + !Window.IsVisible(selectdialog)" />
+                <param name="visible" value="Window.IsActive(musicosd) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(addonsettings) + !Window.IsVisible(selectdialog) + !Window.IsVisible(1183)" />
             </include>
         </control>
     </controls>

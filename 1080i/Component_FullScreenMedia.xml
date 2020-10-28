@@ -137,6 +137,68 @@
         </definition>
     </include>
 
+    <include name="BackgroundMusicLabelForFullScreenMedia">
+        <definition>
+            <control type="group">
+                <visible>Player.Playing</visible>
+                <include content="DefaultAnimationForFullScreenMedia" />
+
+                <control type="group">
+                    <posx>PosXForContentForFullScreenMedia</posx>
+                    <posy>PosYForLowerLabelForOverlay</posy>
+
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>-2</posy>
+                        <width>36</width>
+                        <height>36</height>
+                        <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
+                    </control>
+
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>6</posy>
+                        <width>22</width>
+                        <height>22</height>
+                        <texture colordiffuse="$VAR[BackgroundColor]">icons/player-play.png</texture>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <posx>370</posx>
+                    <posy>PosYForLowerLabelForOverlay</posy>
+
+                    <include content="OutlineLabel">
+                        <param name="width" value="1010" />
+                        <param name="height" value="30" />
+                        <param name="font" value="MessageTextFont" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[MainColor]" />
+                        <param name="outlinesize" value="2" />
+                        <param name="label" value="$VAR[PlayerBackgroundMusicLabel]" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <visible>Window.IsVisible(volumebar)</visible>
+                    <posx>1380</posx>
+                    <posy>PosYForLowerLabelForOverlay</posy>
+
+                    <include content="OutlineLabel">
+                        <param name="width" value="40" />
+                        <param name="height" value="30" />
+                        <param name="font" value="MessageTextFont" />
+                        <param name="textcolor" value="$VAR[BackgroundColor]" />
+                        <param name="outlinecolor" value="$VAR[MainColor]" />
+                        <param name="outlinesize" value="2" />
+                        <param name="align" value="center" />
+                        <param name="label" value="|" />
+                    </include>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="NameLabelForFullScreenMedia">
         <param name="label" default="$VAR[PlayerNameLabel]" />
     
@@ -267,50 +329,6 @@
                     <param name="time" value="13000" />
                     <param name="direction" value="false" />
                 </include>
-            </control>
-        </definition>
-    </include>
-
-    <include name="BackgroundMusicLabelForFullScreenMedia">
-        <definition>
-            <control type="group">
-                <visible>Player.Playing</visible>
-                <include content="DefaultAnimationForFullScreenMedia" />
-
-                <control type="group">
-                    <posx>PosXForContentForFullScreenMedia</posx>
-                    <posy>968</posy>
-
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>36</width>
-                        <height>36</height>
-                        <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
-                    </control>
-
-                    <control type="image">
-                        <posx>10</posx>
-                        <posy>8</posy>
-                        <width>22</width>
-                        <height>22</height>
-                        <texture colordiffuse="$VAR[BackgroundColor]">icons/player-play.png</texture>
-                    </control>
-                </control>
-
-                <control type="group">
-                    <posx>370</posx>
-                    <posy>970</posy>
-
-                    <include content="OutlineLabel">
-                        <param name="width" value="1480" />
-                        <param name="font" value="MessageTextFont" />
-                        <param name="textcolor" value="$VAR[BackgroundColor]" />
-                        <param name="outlinecolor" value="$VAR[MainColor]" />
-                        <param name="outlinesize" value="2" />
-                        <param name="label" value="$VAR[PlayerBackgroundMusicLabel]" />
-                    </include>
-                </control>
             </control>
         </definition>
     </include>
