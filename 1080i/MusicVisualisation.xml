@@ -19,26 +19,25 @@
         </control>        
 
         <control type="group">
-            <include content="DefaultAnimationForOSD" />
+            <include content="DefaultAnimationForFullScreenMedia" />
             <include content="MediaOverlay" />
         </control>
 
         <control type="group">
             <visible>Player.ShowInfo</visible>
 
-            <include content="MediaThumbnailIconForOSD" />
-            <include content="MediaInformationLabelForOSD" />
-            <include content="MediaPlaylistPositionLabelForOSD" />
-            <include content="MediaNameLabelForOSD" />
-            <include content="MediaSeekBarForOSD" />
-            <include content="PlaylistNumberIconForOSD" />
+            <include content="MediaThumbnailIconForFullScreenMedia" />
+            <include content="InformationLabelForFullScreenMedia" />
+            <include content="NameLabelForFullScreenMedia" />
+            <include content="SeekBarForFullScreenMedia" />
+            <include content="PlaylistNumberIconForFullScreenMedia" />
 
             <control type="group">
                 <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
-                <include content="DefaultAnimationForOSD" />
+                <include content="DefaultAnimationForFullScreenMedia" />
                 <include content="MusicPlayerListForFlag">
-                    <param name="posx" value="PosXForContentForOSD" />
-                    <param name="posy" value="PosYForLowerIconForOverlay" />
+                    <param name="posx" value="PosXForContentForFullScreenMedia" />
+                    <param name="posy" value="PosYForMediaFlagsForFullScreenMedia" />
                 </include>
             </control>
         </control>
