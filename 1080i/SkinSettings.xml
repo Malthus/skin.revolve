@@ -707,16 +707,6 @@
                         <align>left</align>
                         <label>$LOCALIZE[31424]</label>
                     </control>
-                    
-                    <control type="radiobutton" id="913">
-                        <description>Jukebox Home Menu Option Setting</description>
-                        <width>1100</width>
-                        <radioposx>1040</radioposx>
-                        <align>left</align>
-                        <label>$LOCALIZE[31425]</label>
-                        <selected>Skin.HasSetting(JukeboxOption.Active)</selected>
-                        <onclick>Skin.ToggleSetting(JukeboxOption.Active)</onclick>
-                    </control>
 
                     <include content="SpacerForSkinSettings">
                         <param name="id" value="907" />
