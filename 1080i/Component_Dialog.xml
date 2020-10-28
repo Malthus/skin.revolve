@@ -1072,6 +1072,44 @@
         </definition>
     </include>
     
+    <!-- Control List -->
+    
+    <include name="ControlListForDialog">
+        <param name="id" default="0" />
+        <param name="scrollbarid" default="0" />
+        <param name="visible" default="true" />
+        <param name="posy" default="80" />
+        <param name="height" default="220" />
+        <param name="scrolltime" default="200" />
+        <param name="onleft" default="9000" />
+        <param name="onright" default="Noop" />
+
+        <definition>
+            <control type="grouplist" id="$PARAM[id]">
+                <include content="MarkupForListForDialog">
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                    <param name="pagecontrol" value="$PARAM[scrollbarid]" />
+                </include>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[scrollbarid]</onright>
+
+                <nested />
+            </control>
+
+            <control type="scrollbar" id="$PARAM[scrollbarid]">
+                <include content="MarkupForScrollbarForDialog">
+                    <param name="posy" value="$PARAM[posy]" />
+                    <param name="height" value="$PARAM[height]" />
+                </include>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[onright]</onright>
+            </control>
+        </definition>
+    </include>
+    
     <!-- Half List -->
 
     <include name="DefaultItemsForHalfListInDialog">
