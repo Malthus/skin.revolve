@@ -189,14 +189,8 @@
 
     <include name="AnnotationsForBackgroundSkinSettings">
         <definition>
-            <control type="group">
-                <description>Settings Description Textbox</description>
-                <visible>ControlGroup(100).HasFocus</visible>
-
-                <posx>720</posx>
-                <posy>880</posy>
-                <width>880</width>
-                <height>90</height>
+            <include content="HelpTextGroupForSkinSettings">
+                <param name="visible" value="ControlGroup(100).HasFocus" />
 
                 <control type="textbox">
                     <visible>Control.HasFocus(101)</visible>
@@ -263,7 +257,7 @@
                     <font>DialogHelpFont</font>
                     <label>$LOCALIZE[31897]</label>
                 </control>
-            </control>
+            </include>
         </definition>
     </include>
 </includes>

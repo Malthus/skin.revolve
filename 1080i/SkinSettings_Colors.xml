@@ -180,20 +180,51 @@
                         <onclick>ActivateWindow(1189)</onclick>
                     </control>
                 </control>
+
+                <control type="group">
+                    <include content="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="80" />
+                        <param name="color" value="$VAR[MainColor]" />
+                        <param name="buttonid" value="403" />
+                    </include>
+
+                    <include content="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="120" />
+                        <param name="color" value="$VAR[HighlightColor]" />
+                        <param name="buttonid" value="404" />
+                    </include>
+
+                    <include content="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="260" />
+                        <param name="color" value="$VAR[BackgroundColor]" />
+                        <param name="buttonid" value="405" />
+                    </include>
+
+                    <include content="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="300" />
+                        <param name="color" value="$VAR[SecondaryColor]" />
+                        <param name="buttonid" value="406" />
+                    </include>
+
+                    <include content="ColorLabel">
+                        <param name="posx" value="1040" />
+                        <param name="posy" value="340" />
+                        <param name="color" value="$VAR[TextColor]" />
+                        <param name="buttonid" value="407" />
+                    </include>
+                </control>                
             </control>
         </definition>
     </include>
 
     <include name="AnnotationsForColorsSkinSettings">
         <definition>
-            <control type="group">
-                <description>Settings Description Textbox</description>
-                <visible>ControlGroup(400).HasFocus</visible>
-
-                <posx>720</posx>
-                <posy>880</posy>
-                <width>880</width>
-                <height>90</height>
+            <include content="HelpTextGroupForSkinSettings">
+                <param name="visible" value="ControlGroup(400).HasFocus" />
 
                 <control type="textbox">
                     <visible>Control.HasFocus(401)</visible>
@@ -250,7 +281,7 @@
                     <font>DialogHelpFont</font>
                     <label>$LOCALIZE[31897]</label>
                 </control>
-            </control>
+            </include>
         </definition>
     </include>
 </includes>
