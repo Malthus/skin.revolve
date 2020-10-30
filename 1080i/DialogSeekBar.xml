@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="115">
-    <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
-    <defaultcontrol always="true">401</defaultcontrol>
+    <visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + [Window.IsVisible(fullscreenvideo) | Window.IsVisible(visualisation)]</visible>
 
     <controls>
         <control type="group">
+            <posx>1840</posx>
+            <posy>PosYForLowerIconForOverlay</posy>
+
+            <include content="PlayerSpeedFlag">
+                <param name="flagcolor" value="$VAR[BackgroundColor]" />
+                <param name="backgroundcolor" value="$VAR[MainColor]" />
+            </include>
+
+<!--
             <include content="FullscreenDimensions" />
 
             <control type="group">
@@ -102,21 +110,6 @@
                             <midtexture colordiffuse="$VAR[MainColor]" border="6">controls/horizontalbar-thin.png</midtexture>
                             <info>Player.Progress</info>
                         </control>
-<!--
-                        <control type="slider" id="401">
-                            <description>Player Seek Slider</description>
-                            <visible>true</visible>
-                            <posx>780</posx>
-                            <posy>40</posy>
-                            <width>800</width>
-                            <height>24</height>
-                            <texturesliderbar colordiffuse="$VAR[SelectColor]" border="10">controls/rectangle-fill.png</texturesliderbar>
-                            <textureslidernib colordiffuse="$VAR[BackgroundColor]">controls/circle-verticalhole.png</textureslidernib>
-                            <textureslidernibfocus colordiffuse="$VAR[MainColor]">controls/circle-verticalhole.png</textureslidernibfocus>
-                            <orientation>horizontal</orientation>
-                            <action>seek</action>
-                        </control>
--->
                     </control>
 
                     <control type="group">
@@ -203,6 +196,7 @@
                     <include content="BigClock" />
                 </control>
             </control>
+-->
         </control>
     </controls>
 </window>
