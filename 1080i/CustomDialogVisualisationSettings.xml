@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1183">
-    <defaultcontrol always="true">10</defaultcontrol>
+    <defaultcontrol always="true">5</defaultcontrol>
     <menucontrol>9000</menucontrol>
 
     <controls>
@@ -14,7 +14,7 @@
             <include content="WindowForDialog">
                 <param name="headerid" value="100" />
                 <param name="height" value="HeightForTenLinesDialog" />
-                <param name="headerlabel" value="$LOCALIZE[31926]" />
+                <param name="headerlabel" value="$LOCALIZE[31940]" />
                 <param name="icontexture" value="icons/icon-settings.png" />
             </include>
 
@@ -22,6 +22,41 @@
                 <param name="id" value="5" />
                 <param name="scrollbarid" value="6" />
                 <param name="height" value="400" />
+
+                <control type="radiobutton" id="703">
+                    <description>Artist Slideshow Activation Radiobutton</description>
+                    <visible>System.HasAddon(script.artistslideshow)</visible>
+                    <width>DialogElementWidth</width>
+                    <align>left</align>
+                    <label>$INFO[System.AddonTitle(script.artistslideshow),$LOCALIZE[21480] ,]$INFO[System.AddonVersion(script.artistslideshow), ,]</label>
+                    <selected>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</selected>
+                    <onclick>Skin.ToggleSetting(Media.ArtistSlideshowVisualization.Active)</onclick>
+                </control>
+
+                <control type="button" id="704">
+                    <description>Artist Slideshow Settings Button</description>
+                    <visible>System.HasAddon(script.artistslideshow)</visible>
+                    <width>DialogElementWidth</width>
+                    <align>left</align>
+                    <label>- $LOCALIZE[5]</label>
+                    <onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
+                </control>
+
+                <control type="button" id="705">
+                    <description>Artist Slideshow Not Available Button</description>
+                    <visible>!System.HasAddon(script.artistslideshow)</visible>
+                    <enable>false</enable>
+                    <width>DialogElementWidth</width>
+                    <align>left</align>
+                    <label>$LOCALIZE[31262]</label>
+                    <label2>$LOCALIZE[10005]</label2>
+                </control>
+
+                <control type="label" id="706">
+                    <width>DialogElementWidth</width>
+                    <height>20</height>
+                    <label></label>
+                </control>
 
                 <control type="button" id="701">
                     <description>Lyrics Selection Button</description>
@@ -41,33 +76,52 @@
                     <onclick>Addon.OpenSettings($INFO[Skin.String(Media.MusicLyricsAddon.Script)])</onclick>
                 </control>
 
-                <control type="radiobutton" id="706">
-                    <description>Artist Slideshow Activation Radiobutton</description>
-                    <visible>System.HasAddon(script.artistslideshow)</visible>
+                <control type="label" id="707">
                     <width>DialogElementWidth</width>
-                    <align>left</align>
-                    <label>$INFO[System.AddonTitle(script.artistslideshow),$LOCALIZE[21480] ,]$INFO[System.AddonVersion(script.artistslideshow), ,]</label>
-                    <selected>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</selected>
-                    <onclick>Skin.ToggleSetting(Media.ArtistSlideshowVisualization.Active)</onclick>
+                    <height>20</height>
+                    <label></label>
                 </control>
 
-                <control type="button" id="707">
-                    <description>Artist Slideshow Settings Button</description>
-                    <visible>System.HasAddon(script.artistslideshow)</visible>
+                <control type="button" id="710">
+                    <description>Show Clock (Time) Select Button</description>
                     <width>DialogElementWidth</width>
                     <align>left</align>
-                    <label>- $LOCALIZE[5]</label>
-                    <onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
+                    <label>$LOCALIZE[31168]</label>
+                    <label2>$VAR[MusicVisualisationClockModeLabel]</label2>
+                    <onclick>SetProperty(DialogTitle,$LOCALIZE[31169],1188)</onclick>
+                    <onclick>SetProperty(DialogMessage,$LOCALIZE[31170],1188)</onclick>
+                    <onclick>SetProperty(DialogTarget,Media.MusicVisualisation.ClockMode,1188)</onclick>
+                    <onclick>SetProperty(List01Option.Name,$LOCALIZE[20422],1188)</onclick>
+                    <onclick>SetProperty(List01Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
+                    <onclick>SetProperty(List01Option.Action,A,1188)</onclick>
+                    <onclick>SetProperty(List02Option.Name,$LOCALIZE[31706],1188)</onclick>
+                    <onclick>SetProperty(List02Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
+                    <onclick>SetProperty(List02Option.Action,P,1188)</onclick>
+                    <onclick>SetProperty(List03Option.Name,$LOCALIZE[13170],1188)</onclick>
+                    <onclick>SetProperty(List03Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
+                    <onclick>SetProperty(List03Option.Action,N,1188)</onclick>
+                    <onclick>ActivateWindow(1188)</onclick>
                 </control>
 
-                <control type="button" id="708">
-                    <description>Artist Slideshow Not Available Button</description>
-                    <visible>!System.HasAddon(script.artistslideshow)</visible>
-                    <enable>false</enable>
+                <control type="radiobutton" id="709">
+                    <description>Show RSS Feed Option</description>
+                    <enable>System.GetBool(lookandfeel.enablerssfeeds)</enable>
                     <width>DialogElementWidth</width>
+                    <radioposx>1180</radioposx>
                     <align>left</align>
-                    <label>$LOCALIZE[31262]</label>
-                    <label2>$LOCALIZE[10005]</label2>
+                    <label>$LOCALIZE[13305]</label>
+                    <selected>Skin.HasSetting(Media.MusicVisualisation.RssFeedVisible)</selected>
+                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.RssFeedVisible)</onclick>
+                </control>
+
+                <control type="radiobutton" id="711">
+                    <description>Show Lower Overlay Background Option</description>
+                    <width>DialogElementWidth</width>
+                    <radioposx>1180</radioposx>
+                    <align>left</align>
+                    <label>$LOCALIZE[31167]</label>
+                    <selected>Skin.HasSetting(Media.MusicVisualisation.LowerBackgroundVisible)</selected>
+                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.LowerBackgroundVisible)</onclick>
                 </control>
             </include>
 

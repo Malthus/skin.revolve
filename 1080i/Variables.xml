@@ -213,6 +213,30 @@
         <value>$LOCALIZE[16018]</value>
     </variable>
 
+    <variable name="VideoFullScreenClockModeLabel">
+        <value condition="String.IsEqual(Skin.String(Media.VideoFullScreen.ClockMode),A)">$LOCALIZE[20422]</value>
+        <value condition="String.IsEqual(Skin.String(Media.VideoFullScreen.ClockMode),P)">$LOCALIZE[31706]</value>
+        <value>$LOCALIZE[13170]</value>
+    </variable>
+
+    <variable name="MusicVisualisationClockModeLabel">
+        <value condition="String.IsEqual(Skin.String(Media.MusicVisualisation.ClockMode),A)">$LOCALIZE[20422]</value>
+        <value condition="String.IsEqual(Skin.String(Media.MusicVisualisation.ClockMode),P)">$LOCALIZE[31706]</value>
+        <value>$LOCALIZE[13170]</value>
+    </variable>
+
+    <variable name="GameFullScreenClockModeLabel">
+        <value condition="String.IsEqual(Skin.String(Media.GameFullScreen.ClockMode),A)">$LOCALIZE[20422]</value>
+        <value condition="String.IsEqual(Skin.String(Media.GameFullScreen.ClockMode),P)">$LOCALIZE[31706]</value>
+        <value>$LOCALIZE[13170]</value>
+    </variable>
+
+    <variable name="SlideShowClockModeLabel">
+        <value condition="String.IsEqual(Skin.String(Media.SlideShow.ClockMode),A)">$LOCALIZE[20422]</value>
+        <value condition="String.IsEqual(Skin.String(Media.SlideShow.ClockMode),P)">$LOCALIZE[31706]</value>
+        <value>$LOCALIZE[13170]</value>
+    </variable>
+
     <variable name="PlayerNameLabel">
         <value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.Filename]</value>        
         <value condition="Player.HasVideo">$INFO[VideoPlayer.Title]</value>

@@ -2,12 +2,15 @@
 <includes>
     <constant name="PosXForBigClock">1900</constant>
     <constant name="PosYForBigClock">70</constant>
+
     <include name="BigClock">
         <param name="posx" default="PosXForBigClock" />
         <param name="posy" default="PosYForBigClock" />
     
         <definition>
             <control type="group">
+                <animation effect="fade" start="0" end="100" time="500" reversible="false">WindowOpen</animation>
+                <animation effect="fade" delay="500" start="100" end="0" time="500" reversible="false">WindowClose</animation>
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
 

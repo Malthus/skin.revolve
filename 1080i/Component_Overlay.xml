@@ -11,6 +11,21 @@
     <constant name="PosYForLowerLabelForOverlay">1027</constant>
     <constant name="PosYForLowerIconForOverlay">1015</constant>
 
+    <expression name="VideoFullScreenClockVisible">[Window.Is(fullscreenvideo) + [String.IsEqual(Skin.String(Media.VideoFullScreen.ClockMode),A) | [String.IsEqual(Skin.String(Media.VideoFullScreen.ClockMode),P) + Player.Paused]]]</expression>
+    <expression name="MusicVisualisationClockVisible">[Window.Is(visualisation) + [String.IsEqual(Skin.String(Media.MusicVisualisation.ClockMode),A) | [String.IsEqual(Skin.String(Media.MusicVisualisation.ClockMode),P) + Player.Paused]]]</expression>
+    <expression name="GameFullScreenClockVisible">[Window.Is(fullscreengame) + [String.IsEqual(Skin.String(Media.GameFullScreen.ClockMode),A) | [String.IsEqual(Skin.String(Media.GameFullScreen.ClockMode),P) + Player.Paused]]]</expression>
+    <expression name="SlideShowClockVisible">[Window.Is(slideshow) + [String.IsEqual(Skin.String(Media.SlideShowClockVisible.ClockMode),A) | [String.IsEqual(Skin.String(Media.SlideShowClockVisible.ClockMode),P) + Player.Paused]]]</expression>
+
+    <expression name="VideoFullScreenRssFeedVisible">[Window.Is(fullscreenvideo) + Skin.HasSetting(Media.VideoFullScreen.RssFeedVisible)]</expression>
+    <expression name="MusicVisualisationRssFeedVisible">[Window.Is(visualisation) + Skin.HasSetting(Media.MusicVisualisation.RssFeedVisible)]</expression>
+    <expression name="GameFullScreenRssFeedVisible">[Window.Is(fullscreengame) + Skin.HasSetting(Media.GameFullScreen.RssFeedVisible)]</expression>
+    <expression name="SlideShowRssFeedVisible">[Window.Is(slideshow) + Skin.HasSetting(Media.SlideShow.RssFeedVisible)]</expression>
+
+    <expression name="VideoFullScreenLowerBackgroundVisible">[Window.Is(fullscreenvideo) + Skin.HasSetting(Media.VideoFullScreen.LowerBackgroundVisible)]</expression>
+    <expression name="MusicVisualisationLowerBackgroundVisible">[Window.Is(visualisation) + Skin.HasSetting(Media.MusicVisualisation.LowerBackgroundVisible)]</expression>
+    <expression name="GameFullScreenLowerBackgroundVisible">[Window.Is(fullscreengame) + Skin.HasSetting(Media.GameFullScreen.LowerBackgroundVisible)]</expression>
+    <expression name="SlideShowLowerBackgroundVisible">[Window.Is(slideshow) + Skin.HasSetting(Media.SlideShow.LowerBackgroundVisible)]</expression>
+
     <variable name="MediaLabelForOverlay">
         <value condition="Window.IsVisible(extendedprogressdialog)"></value>
         <value condition="Player.HasVideo">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season,(,$INFO[VideoPlayer.Episode, /])] $INFO[VideoPlayer.Title]</value>
@@ -53,10 +68,23 @@
 
     <include name="MediaOverlay">
         <definition>
-            <include content="ClockOverlay">
-                <param name="textcolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinecolor" value="$VAR[MainColor]" />
+            <include content="BackgroundForOverlay">
+                <param name="visible" value="$EXP[VideoFullScreenLowerBackgroundVisible] | $EXP[MusicVisualisationLowerBackgroundVisible] | $EXP[GameFullScreenLowerBackgroundVisible] | $EXP[SlideShowLowerBackgroundVisible]" />
+                <param name="posy" value="PosYForLowerBackgroundForOverlay" />
             </include>
+
+            <control type="group">
+                <visible>$EXP[VideoFullScreenRssFeedVisible] | $EXP[MusicVisualisationRssFeedVisible] | $EXP[GameFullScreenRssFeedVisible] | $EXP[SlideShowRssFeedVisible]</visible>
+                <include content="FullScreenMediaRssFeed" />
+            </control>
+
+            <control type="group">
+                <visible>$EXP[VideoFullScreenClockVisible] | $EXP[MusicVisualisationClockVisible] | $EXP[GameFullScreenClockVisible] | $EXP[SlideShowClockVisible]</visible>
+                <include content="ClockOverlay">
+                    <param name="textcolor" value="$VAR[BackgroundColor]" />
+                    <param name="outlinecolor" value="$VAR[MainColor]" />
+                </include>
+            </control>
         </definition>
     </include>
 
@@ -117,19 +145,16 @@
         <param name="outlinecolor" default="$VAR[BackgroundColor]" />
 
         <definition>
-            <control type="group" id="1">
-                <visible>Skin.HasSetting(Overlay.MediaFullScreenClockTime.Visible) + !Window.Is(home)</visible>
-                <include content="LabelForOverlay">
-                    <param name="id" value="1" />
-                    <param name="posx" value="1900" />
-                    <param name="posy" value="PosYForUpperLabelForOverlay" />
-                    <param name="width" value="200" />
-                    <param name="textcolor" value="$PARAM[textcolor]" />
-                    <param name="outlinecolor" value="$PARAM[outlinecolor]" />
-                    <param name="align" value="right" />
-                    <param name="label" value="$INFO[System.Time(hh:mm)]" />
-                </include>
-            </control>
+            <include content="LabelForOverlay">
+                <param name="id" value="2" />
+                <param name="posx" value="1900" />
+                <param name="posy" value="PosYForUpperLabelForOverlay" />
+                <param name="width" value="200" />
+                <param name="textcolor" value="$PARAM[textcolor]" />
+                <param name="outlinecolor" value="$PARAM[outlinecolor]" />
+                <param name="align" value="right" />
+                <param name="label" value="$INFO[System.Time(hh:mm)]" />
+            </include>
         </definition>
     </include>
 

@@ -349,40 +349,40 @@
 
                 <control type="image">
                     <visible>Playlist.IsRepeat | Playlist.IsRepeatOne</visible>
-                    <width>70</width>
-                    <height>70</height>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
                     <texture colordiffuse="$VAR[MainColor]">controls/button-statemask.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeatOne + !Control.HasFocus($PARAM[id])</visible>
-                    <width>70</width>
-                    <height>70</height>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
                     <texture colordiffuse="$VAR[BackgroundColor]">controls/button-repeatone.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeatOne + Control.HasFocus($PARAM[id])</visible>
-                    <width>70</width>
-                    <height>70</height>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
                     <texture colordiffuse="$VAR[HighlightColor]">controls/button-repeatone.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeat + !Control.HasFocus($PARAM[id])</visible>
-                    <width>70</width>
-                    <height>70</height>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
                     <texture colordiffuse="$VAR[BackgroundColor]">controls/button-repeatall.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
 
                 <control type="image">
                     <visible>Playlist.IsRepeat + Control.HasFocus($PARAM[id])</visible>
-                    <width>70</width>
-                    <height>70</height>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
                     <texture colordiffuse="$VAR[HighlightColor]">controls/button-repeatall.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
@@ -406,8 +406,8 @@
 
                 <control type="image">
                     <visible>Playlist.IsRandom</visible>
-                    <width>70</width>
-                    <height>70</height>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
                     <texture colordiffuse="$VAR[MainColor]">controls/button-statemask.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
@@ -591,8 +591,8 @@
             
                 <control type="image">
                     <visible>Pvr.IsRecordingPlayingChannel</visible>
-                    <width>70</width>
-                    <height>70</height>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
                     <texture colordiffuse="FFFF0000">controls/button-recorddot.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
@@ -1248,7 +1248,7 @@
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="texturefocus" value="controls/button-settings.png" />
                 <param name="texturenofocus" value="controls/button-settings.png" />
-                <param name="label" value="$LOCALIZE[5]" />
+                <param name="label" value="$LOCALIZE[31940]" />
                 <param name="onup" value="$PARAM[onup]" />
                 <param name="ondown" value="$PARAM[ondown]" />
                 <param name="onleft" value="$PARAM[onleft]" />
@@ -1288,25 +1288,80 @@
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
+        <param name="clockmodesetting" default="" />
+        <param name="clockmodelabel" default="" />
         <param name="onup" default="Noop" />
         <param name="ondown" default="Noop" />
         <param name="onleft" default="Noop" />
         <param name="onright" default="Noop" />
 
         <definition>
-            <include content="CircleButton">
-                <param name="id" value="$PARAM[id]" />
-                <param name="posx" value="$PARAM[posx]" />
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="texturefocus" value="controls/button-time.png" />
-                <param name="texturenofocus" value="controls/button-time.png" />
-                <param name="label" value="$LOCALIZE[31189]" />
-                <param name="onup" value="$PARAM[onup]" />
-                <param name="ondown" value="$PARAM[ondown]" />
-                <param name="onleft" value="$PARAM[onleft]" />
-                <param name="onright" value="$PARAM[onright]" />
-                <param name="onclick" value="Skin.ToggleSetting(Overlay.MediaFullScreenClockTime.Visible)" />
-            </include>
+            <control type="group">
+                <posx>$PARAM[posx]</posx>
+                <posy>$PARAM[posy]</posy>
+
+                <control type="image">
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
+                    <texture colordiffuse="$VAR[MainColor]">controls/button-background.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="button" id="$PARAM[id]">
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]">controls/button-timeoff.png</texturefocus>
+                    <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/button-timeoff.png</texturenofocus>
+                    <font></font>
+                    <label>$LOCALIZE[31189]: $PARAM[clockmodelabel]</label>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                    <onclick condition="!String.IsEqual(Skin.String($PARAM[clockmodesetting]),A) + !String.IsEqual(Skin.String($PARAM[clockmodesetting]),P)">Skin.SetString($PARAM[clockmodesetting],A)</onclick>
+                    <onclick condition="String.IsEqual(Skin.String($PARAM[clockmodesetting]),A)">Skin.SetString($PARAM[clockmodesetting],P)</onclick>
+                    <onclick condition="String.IsEqual(Skin.String($PARAM[clockmodesetting]),P)">Skin.SetString($PARAM[clockmodesetting],N)</onclick>
+                </control>
+
+                <control type="image">
+                    <visible>String.IsEqual(Skin.String($PARAM[clockmodesetting]),A) | String.IsEqual(Skin.String($PARAM[clockmodesetting]),P)</visible>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
+                    <texture colordiffuse="$VAR[MainColor]">controls/button-statemask.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="image">
+                    <visible>String.IsEqual(Skin.String($PARAM[clockmodesetting]),P) + !Control.HasFocus($PARAM[id])</visible>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
+                    <texture colordiffuse="$VAR[BackgroundColor]">controls/button-timepause.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="image">
+                    <visible>String.IsEqual(Skin.String($PARAM[clockmodesetting]),P) + Control.HasFocus($PARAM[id])</visible>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">controls/button-timepause.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="image">
+                    <visible>String.IsEqual(Skin.String($PARAM[clockmodesetting]),A) + !Control.HasFocus($PARAM[id])</visible>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
+                    <texture colordiffuse="$VAR[BackgroundColor]">controls/button-timeon.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+
+                <control type="image">
+                    <visible>String.IsEqual(Skin.String($PARAM[clockmodesetting]),A) + Control.HasFocus($PARAM[id])</visible>
+                    <width>CircleButtonWidth</width>
+                    <height>CircleButtonHeight</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">controls/button-timeon.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>            </control>
         </definition>
     </include>
 
@@ -1572,7 +1627,7 @@
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>1920</width>
-                <height>70</height>
+                <height>CircleButtonHeight</height>
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
                 <align>center</align>
@@ -1823,6 +1878,8 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="427" />
                         <param name="posx" value="2" />
+                        <param name="clockmodesetting" value="Media.VideoFullScreen.ClockMode" />
+                        <param name="clockmodelabel" value="$VAR[VideoFullScreenClockModeLabel]" />
                         <param name="onleft" value="416" />
                         <param name="onright" value="428" />
                     </include>
@@ -1843,7 +1900,7 @@
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>1920</width>
-                <height>70</height>
+                <height>CircleButtonHeight</height>
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
                 <align>center</align>
@@ -2178,6 +2235,8 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="425" />
                         <param name="posx" value="2" />
+                        <param name="clockmodesetting" value="Media.MusicVisualisation.ClockMode" />
+                        <param name="clockmodelabel" value="$VAR[MusicVisualisationClockModeLabel]" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
                         <param name="onleft" value="412" />
@@ -2200,7 +2259,7 @@
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>1920</width>
-                <height>70</height>
+                <height>CircleButtonHeight</height>
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
                 <align>center</align>
@@ -2346,6 +2405,8 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="17" />
                         <param name="posx" value="2" />
+                        <param name="clockmodesetting" value="Media.GameFullScreen.ClockMode" />
+                        <param name="clockmodelabel" value="$VAR[GameFullScreenClockModeLabel]" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
                         <param name="onleft" value="16" />
@@ -2368,7 +2429,7 @@
                 <posx>$PARAM[posx]</posx>
                 <posy>$PARAM[posy]</posy>
                 <width>1920</width>
-                <height>70</height>
+                <height>CircleButtonHeight</height>
                 <itemgap>0</itemgap>
                 <orientation>horizontal</orientation>
                 <align>center</align>
@@ -2413,6 +2474,8 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="425" />
                         <param name="posx" value="2" />
+                        <param name="clockmodesetting" value="Media.SlideShow.ClockMode" />
+                        <param name="clockmodelabel" value="$VAR[SlideShowClockModeLabel]" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
                         <param name="onleft" value="403" />
