@@ -8,10 +8,6 @@
 
         <control type="group">
             <visible>Skin.HasSetting(Slideshow.PictureInformation.Visible)</visible>
-            <control type="group">
-                <include content="DefaultAnimationForFullScreenMedia" />
-                <include content="MediaOverlay" />
-            </control>
 
             <include content="MediaThumbnailIconForFullScreenMedia" />
             <include content="InformationLabelForFullScreenMedia" />

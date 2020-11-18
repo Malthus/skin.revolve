@@ -93,26 +93,13 @@
                 <include content="OutlineLabel">
                     <param name="posx" value="370" />
                     <param name="posy" value="PosYForLowerLabelForOverlay" />
-                    <param name="width" value="1010" />
+                    <param name="width" value="1210" />
                     <param name="height" value="30" />
                     <param name="font" value="MessageTextFont" />
                     <param name="textcolor" value="$VAR[BackgroundColor]" />
                     <param name="outlinecolor" value="$VAR[MainColor]" />
                     <param name="outlinesize" value="2" />
                     <param name="label" value="$VAR[PlayerBackgroundMusicLabel]" />
-                </include>
-
-                <include content="OutlineLabel">
-                    <param name="posx" value="1380" />
-                    <param name="posy" value="PosYForLowerLabelForOverlay" />
-                    <param name="width" value="40" />
-                    <param name="height" value="30" />
-                    <param name="font" value="MessageTextFont" />
-                    <param name="textcolor" value="$VAR[BackgroundColor]" />
-                    <param name="outlinecolor" value="$VAR[MainColor]" />
-                    <param name="outlinesize" value="2" />
-                    <param name="align" value="center" />
-                    <param name="label" value="|" />
                 </include>
             </control>
         </definition>
@@ -212,7 +199,7 @@
                     <param name="time" value="10000" />
                 </include>
             </control>
-            
+
             <control type="group">
                 <visible>Integer.IsGreater(Skin.String(Background.Animation.Level),3)</visible>
                 <include content="OrbitCircle">

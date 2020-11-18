@@ -1232,7 +1232,7 @@
         </definition>
     </include>
 
-    <include name="MusicSettingsButtonForPlayer">
+    <include name="SettingsButtonForPlayer">
         <param name="id" default="0" />
         <param name="posx" default="0" />
         <param name="posy" default="0" />
@@ -1240,6 +1240,7 @@
         <param name="ondown" default="Noop" />
         <param name="onleft" default="Noop" />
         <param name="onright" default="Noop" />
+        <param name="onclick" default="Noop" />
 
         <definition>
             <include content="CircleButton">
@@ -1253,7 +1254,7 @@
                 <param name="ondown" value="$PARAM[ondown]" />
                 <param name="onleft" value="$PARAM[onleft]" />
                 <param name="onright" value="$PARAM[onright]" />
-                <param name="onclick" value="ActivateWindow(1183)" />
+                <param name="onclick" value="$PARAM[onclick]" />
             </include>
         </definition>
     </include>
@@ -1398,9 +1399,9 @@
 
     <include name="DescriptionForControlsForPlayer">
         <param name="visible" default="true" />
-        <param name="posx" default="700" />
+        <param name="posx" default="20" />
         <param name="posy" default="92" />
-        <param name="width" default="520" />
+        <param name="width" default="1880" />
         <param name="height" default="20" />
         
         <definition>
@@ -2218,15 +2219,15 @@
                 </control>
 
                 <control type="group">
-                    <visible>Window.Is(musicosd) + !VideoPlayer.Content(LiveTV)</visible>
                     <width>74</width>
-                    <include content="MusicSettingsButtonForPlayer">
+                    <include content="SettingsButtonForPlayer">
                         <param name="id" value="412" />
                         <param name="posx" value="2" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
                         <param name="onleft" value="500" />
                         <param name="onright" value="425" />
+                        <param name="onclick" value="ActivateWindow(1183)" />
                     </include>
                 </control>
 
@@ -2465,7 +2466,20 @@
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
                         <param name="onleft" value="426" />
+                        <param name="onright" value="417" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+                    <include content="SettingsButtonForPlayer">
+                        <param name="id" value="417" />
+                        <param name="posx" value="2" />
+                        <param name="onup" value="$PARAM[onup]" />
+                        <param name="ondown" value="$PARAM[ondown]" />
+                        <param name="onleft" value="403" />
                         <param name="onright" value="425" />
+                        <param name="onclick" value="ActivateWindow(1182)" />
                     </include>
                 </control>
 
@@ -2478,7 +2492,7 @@
                         <param name="clockmodelabel" value="$VAR[SlideShowClockModeLabel]" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
-                        <param name="onleft" value="403" />
+                        <param name="onleft" value="417" />
                         <param name="onright" value="426" />
                     </include>
                 </control>

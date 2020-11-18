@@ -19,6 +19,31 @@
                     <onright>799</onright>
 
                     <include content="LabelForSkinSettings">
+                        <param name="id" value="757" />
+                        <param name="label" value="$LOCALIZE[31940]" />
+                    </include>
+
+                    <control type="button" id="721">
+                        <description>Music Visualisation Settings Button</description>
+                        <width>1100</width>
+                        <align>left</align>
+                        <label>$LOCALIZE[31941]</label>
+                        <onclick>ActivateWindow(1183)</onclick>
+                    </control>
+
+                    <control type="button" id="723">
+                        <description>Slideshow Settings Button</description>
+                        <width>1100</width>
+                        <align>left</align>
+                        <label>$LOCALIZE[31942]</label>
+                        <onclick>ActivateWindow(1182)</onclick>
+                    </control>
+
+                    <include content="SpacerForSkinSettings">
+                        <param name="id" value="758" />
+                    </include>
+
+                    <include content="LabelForSkinSettings">
                         <param name="id" value="754" />
                         <param name="label" value="$LOCALIZE[31079]" />
                     </include>
@@ -115,7 +140,7 @@
                     <include content="SpacerForSkinSettings">
                         <param name="id" value="751" />
                     </include>
-
+<!--
                     <include content="LabelForSkinSettings">
                         <param name="id" value="755" />
                         <param name="label" value="$LOCALIZE[24001]" />
@@ -171,7 +196,7 @@
                     <include content="SpacerForSkinSettings">
                         <param name="id" value="753" />
                     </include>
-
+-->
                     <include content="ResetPageButtonForSkinSettings">
                         <param name="id" value="750" />
                         <param name="resetbuttonid" value="57" />
@@ -255,6 +280,16 @@
                     <visible>Control.HasFocus(713)</visible>
                     <font>DialogHelpFont</font>
                     <label>$LOCALIZE[31284]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(721)</visible>
+                    <font>DialogHelpFont</font>
+                    <label>$LOCALIZE[31293]</label>
+                </control>
+                <control type="textbox">
+                    <visible>Control.HasFocus(723)</visible>
+                    <font>DialogHelpFont</font>
+                    <label>$LOCALIZE[31294]</label>
                 </control>
                 <control type="textbox">
                     <visible>Control.HasFocus(750)</visible>

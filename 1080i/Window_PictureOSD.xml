@@ -12,7 +12,9 @@
                     <param name="id" value="9000" />
                 </include>
 
-                <include content="DescriptionForControlsForPlayer" />
+                <include content="DescriptionForControlsForPlayer">
+                    <param name="visible" value="Window.IsActive(slideshow) + !Window.IsVisible(1182)" />
+                </include>
             </control>
         </definition>
     </include>
