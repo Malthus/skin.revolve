@@ -42,8 +42,9 @@
             <aspectratio>keep</aspectratio>
             <timeperimage>8000</timeperimage>
             <fadetime>WindowFadeDuration</fadetime>
-            <imagepath background="true">$INFO[Skin.String(Media.MusicVisualisation.SlideShowImagePath)]</imagepath>
+            <loop>yes</loop>
             <randomize>Skin.HasSetting(Media.MusicVisualisation.SlideShowRandom)</randomize>
+            <imagepath background="true">$INFO[Skin.String(Media.MusicVisualisation.SlideShowImagePath)]</imagepath>
         </control>        
 
         <control type="group">
