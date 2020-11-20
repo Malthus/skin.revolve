@@ -23,19 +23,57 @@
                 <param name="scrollbarid" value="6" />
                 <param name="height" value="400" />
 
+                <control type="radiobutton" id="712">
+                    <description>Photo Slideshow Radiobutton</description>
+                    <width>DialogElementWidth</width>
+                    <align>left</align>
+                    <label>Photo Slide Show</label>
+                    <selected>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</selected>
+                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.SlideShowActive)</onclick>
+                    <onclick>Skin.Reset(Media.ArtistSlideshowVisualization.Active)</onclick>
+                </control>
+
+                <control type="button" id="713">
+                    <description>Photo Slideshow Image Path Button</description>
+                    <enable>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</enable>
+                    <width>DialogElementWidth</width>
+                    <align>left</align>
+                    <label>- $LOCALIZE[31287]</label>
+                    <label2>$INFO[Skin.String(Media.MusicVisualisation.SlideShowImagePath)]</label2>
+                    <onclick>Skin.SetPath(Media.MusicVisualisation.SlideShowImagePath)</onclick>
+                </control>
+
+                <control type="radiobutton" id="714">
+                    <description>Random Photo Slideshow Radiobutton</description>
+                    <enable>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</enable>
+                    <width>DialogElementWidth</width>
+                    <align>left</align>
+                    <label>- Random Order</label>
+                    <selected>Skin.HasSetting(Media.MusicVisualisation.SlideShowRandom)</selected>
+                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.SlideShowRandom)</onclick>
+                </control>
+
+                <control type="label" id="715">
+                    <width>DialogElementWidth</width>
+                    <height>20</height>
+                    <label></label>
+                </control>
+
                 <control type="radiobutton" id="703">
                     <description>Artist Slideshow Activation Radiobutton</description>
                     <visible>System.HasAddon(script.artistslideshow)</visible>
                     <width>DialogElementWidth</width>
                     <align>left</align>
-                    <label>$INFO[System.AddonTitle(script.artistslideshow),$LOCALIZE[21480] ,]$INFO[System.AddonVersion(script.artistslideshow), ,]</label>
+                    <label>$INFO[System.AddonTitle(script.artistslideshow)]$INFO[System.AddonVersion(script.artistslideshow), ,]</label>
                     <selected>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</selected>
                     <onclick>Skin.ToggleSetting(Media.ArtistSlideshowVisualization.Active)</onclick>
+                    <onclick>Skin.Reset(Media.MusicVisualisation.SlideShowActive)</onclick>
                 </control>
 
                 <control type="button" id="704">
                     <description>Artist Slideshow Settings Button</description>
                     <visible>System.HasAddon(script.artistslideshow)</visible>
+                    <enable>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</enable>
                     <width>DialogElementWidth</width>
                     <align>left</align>
                     <label>- $LOCALIZE[5]</label>

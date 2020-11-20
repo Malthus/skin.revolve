@@ -5,17 +5,45 @@
 
     <controls>
         <control type="visualisation" id="2">
+            <visible>!Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</visible>
             <include content="FullscreenDimensions" />
         </control>
 
+        <control type="image">
+            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)</visible>
+            <include content="FullscreenDimensions" />
+            <aspectratio>keep</aspectratio>
+            <fadetime>WindowFadeDuration</fadetime>
+            <texture background="true">$INFO[Player.Art(fanart)]</texture>
+        </control>
+
+        <control type="image">
+            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+            <include content="FullscreenDimensions" />
+            <aspectratio>keep</aspectratio>
+            <fadetime>WindowFadeDuration</fadetime>
+            <texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+        </control>
+
         <control type="multiimage">
-            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</visible>
+            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)</visible>
             <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <timeperimage>8000</timeperimage>
-            <fadetime>500</fadetime>
-            <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+            <fadetime>WindowFadeDuration</fadetime>
+            <loop>yes</loop>
             <randomize>true</randomize>
+            <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+        </control>
+
+        <control type="multiimage">
+            <visible>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</visible>
+            <include content="FullscreenDimensions" />
+            <aspectratio>keep</aspectratio>
+            <timeperimage>8000</timeperimage>
+            <fadetime>WindowFadeDuration</fadetime>
+            <imagepath background="true">$INFO[Skin.String(Media.MusicVisualisation.SlideShowImagePath)]</imagepath>
+            <randomize>Skin.HasSetting(Media.MusicVisualisation.SlideShowRandom)</randomize>
         </control>        
 
         <control type="group">
