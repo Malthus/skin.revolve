@@ -2,8 +2,11 @@
 <includes>
     <include name="ChannelIconForPVR">
         <definition>
-            <include content="BackgroundForTinyCircleThumbnailIcon" />
-
+            <control type="image">
+                <width>70</width>
+                <height>70</height>
+                <texture colordiffuse="$VAR[MainColor]">elements/circle-mask.png</texture>
+            </control>
             <control type="image">
                 <posx>3</posx>
                 <posy>3</posy>
