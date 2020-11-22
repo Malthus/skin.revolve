@@ -43,8 +43,6 @@
         <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.String(FavouritesOption.BackgroundImage))">$INFO[Skin.String(FavouritesOption.BackgroundImage)]</value>
         <value condition="Window.IsVisible(1104)">special://skin/backgrounds/favourites.jpg</value>
 
-        <value condition="Window.IsVisible(1110)">special://skin/backgrounds/jukebox.jpg</value>
-
         <value condition="Window.IsVisible(1120)">black.png</value>
         <value condition="Window.IsVisible(1121)">black.png</value>
 
