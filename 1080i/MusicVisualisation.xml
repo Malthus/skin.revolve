@@ -10,7 +10,7 @@
         </control>
 
         <control type="image">
-            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)</visible>
+            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
             <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <fadetime>WindowFadeDuration</fadetime>
@@ -26,7 +26,7 @@
         </control>
 
         <control type="multiimage">
-            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)</visible>
+            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
             <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <timeperimage>8000</timeperimage>
