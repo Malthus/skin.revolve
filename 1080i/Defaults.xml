@@ -180,9 +180,9 @@
 
     <default type="scrollbar">
         <width>20</width>
-        <texturesliderbackground border="0,14,0,14" colordiffuse="$VAR[BackgroundColor]">controls/horizontalbar-thick.png</texturesliderbackground>
-        <texturesliderbar border="0,14,0,14" colordiffuse="$VAR[SelectColor]">controls/horizontalbar-thin.png</texturesliderbar>
-        <texturesliderbarfocus border="0,14,0,14" colordiffuse="$VAR[MainColor]">controls/horizontalbar-thin.png</texturesliderbarfocus>
+        <texturesliderbackground border="0,12,0,12" colordiffuse="$VAR[BackgroundColor]">controls/horizontalbar-thick.png</texturesliderbackground>
+        <texturesliderbar border="0,12,0,12" colordiffuse="$VAR[SelectColor]">controls/horizontalbar-thin.png</texturesliderbar>
+        <texturesliderbarfocus border="0,12,0,12" colordiffuse="$VAR[MainColor]">controls/horizontalbar-thin.png</texturesliderbarfocus>
         <showonepage>true</showonepage>
         <orientation>vertical</orientation>
     </default>
