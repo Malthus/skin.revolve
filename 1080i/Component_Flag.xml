@@ -25,9 +25,10 @@
     </variable>
 
     <variable name="PlayerDirectionImageForFlag">
-        <value condition="Player.Seeking | Player.DisplayAfterSeek | [Player.Playing + Player.IsTempo]">flags/state-playspeed.png</value>
-        <value condition="Player.Playing">flags/state-play.png</value>
         <value condition="Player.Paused">flags/state-pause.png</value>
+        <value condition="[Player.Seeking | Player.DisplayAfterSeek] + !String.IsEmpty(Player.SeekOffset)">flags/state-playspeed.png</value>
+        <value condition="[Player.Playing + Player.IsTempo] + !String.IsEmpty(Player.PlaySpeed)">flags/state-playspeed.png</value>
+        <value condition="Player.Playing">flags/state-play.png</value>
         <value condition="Player.Forwarding + [Player.Forwarding2x | Player.Forwarding4x | Player.Forwarding8x | Player.Forwarding16x | Player.Forwarding32x]">flags/state-fastforwardspeed.png</value>
         <value condition="Player.Forwarding">flags/state-fastforward.png</value>
         <value condition="Player.Rewinding + [Player.Rewinding2x | Player.Rewinding4x | Player.Rewinding8x | Player.Rewinding16x | Player.Rewinding32x]">flags/state-rewindspeed.png</value>
@@ -35,13 +36,14 @@
     </variable>
 
     <variable name="PlayerSpeedLabelForFlag">
-        <value condition="Player.Seeking | Player.DisplayAfterSeek">$INFO[Player.SeekOffset]</value>
+        <value condition="Player.Paused"></value>
+        <value condition="[Player.Seeking | Player.DisplayAfterSeek] + !String.IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>
+        <value condition="[Player.Playing + Player.IsTempo] + !String.IsEmpty(Player.PlaySpeed)">$INFO[Player.PlaySpeed]</value>
         <value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
         <value condition="Player.Forwarding4x | Player.Rewinding4x">4x</value>
         <value condition="Player.Forwarding8x | Player.Rewinding4x">8x</value>
         <value condition="Player.Forwarding16x | Player.Rewinding16x">16x</value>
         <value condition="Player.Forwarding32x | Player.Rewinding32x">32x</value>
-        <value condition="Player.IsTempo">$INFO[Player.PlaySpeed]</value>
         <value></value>
     </variable>
 
