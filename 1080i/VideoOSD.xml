@@ -6,17 +6,24 @@
     <controls>
         <control type="group">
             <visible>!Window.IsVisible(sliderdialog)</visible>
-            <animation effect="slide" start="0,-120" end="0,0" time="200">WindowOpen</animation>
-            <animation effect="slide" start="0,0" end="0,-120" time="200">WindowClose</animation>
-            <posx>0</posx>
-            <posy>0</posy>
 
-            <include content="TopVideoControlsForPlayer">
-                <param name="id" value="100" />
-            </include>
+            <control type="group">
+                <animation effect="slide" start="0,-120" end="0,0" time="200">WindowOpen</animation>
+                <animation effect="slide" start="0,0" end="0,-120" time="200">WindowClose</animation>
+                <posx>0</posx>
+                <posy>0</posy>
 
-            <include content="DescriptionForControlsForPlayer">
-                <param name="visible" value="Window.IsActive(videoosd) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks)" />
+                <include content="TopVideoControlsForPlayer">
+                    <param name="id" value="100" />
+                </include>
+
+                <include content="DescriptionForControlsForPlayer">
+                    <param name="visible" value="Window.IsActive(videoosd) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks)" />
+                </include>
+            </control>
+
+            <include content="SeekBarForFullScreenMedia">
+                <param name="id" value="499" />
             </include>
         </control>
     </controls>
