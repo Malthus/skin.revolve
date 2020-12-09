@@ -276,22 +276,6 @@
         <value>$INFO[Visualisation.Name] | $INFO[Visualisation.Preset]</value>
     </variable>
 
-    <variable name="PlayerDirectionIcon">
-        <value condition="Player.Paused">icons/player-pause.png</value>
-        <value condition="Player.Forwarding">icons/player-fastforward.png</value>
-        <value condition="Player.Rewinding">icons/player-rewind.png</value>
-    </variable>
-    
-    <variable name="PlayerSpeedLabel">
-        <value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
-        <value condition="Player.Forwarding4x | Player.Rewinding4x">4x</value>
-        <value condition="Player.Forwarding8x | Player.Rewinding4x">8x</value>
-        <value condition="Player.Forwarding16x | Player.Rewinding16x">16x</value>
-        <value condition="Player.Forwarding32x | Player.Rewinding32x">32x</value>
-        <value condition="Player.Paused">0x</value>
-        <value>1x</value>
-    </variable>
-
     <variable name="SystemBatteryLevelLabel">
         <value condition="Integer.IsGreater(System.BatteryLevel,0)">$LOCALIZE[12395]: $INFO[System.BatteryLevel]</value>
     </variable>
