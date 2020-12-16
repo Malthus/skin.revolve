@@ -1364,6 +1364,38 @@
         </definition>
     </include>
 
+    <include name="PausedFlag">
+        <param name="visible" default="Player.HasMedia" />
+        <param name="flagcolor" default="$VAR[MainColor]" />
+        <param name="backgroundcolor" default="$VAR[BackgroundColor]" />
+        <param name="highlightcolor" default="$VAR[HighlightColor]" />
+
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <width>PlaceForFlag</width>
+                <height>SizeForFlag</height>
+
+                <include content="BackgroundForFlag">
+                    <param name="flagcolor" value="$PARAM[flagcolor]" />
+                    <param name="backgroundcolor" value="$PARAM[backgroundcolor]" />
+                </include>
+
+                <include content="HighlightForFlag">
+                    <param name="visible" value="Player.Paused" />
+                    <param name="highlightcolor" value="$PARAM[highlightcolor]" />
+                </include>
+
+                <control type="image">
+                    <width>SizeForFlag</width>
+                    <height>SizeForFlag</height>
+                    <texture colordiffuse="$PARAM[backgroundcolor]">flags/state-pause.png</texture>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="PlaylistNumberFlag">
         <param name="visible" default="true" />
         <param name="flagcolor" default="$VAR[MainColor]" />

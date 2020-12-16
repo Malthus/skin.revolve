@@ -72,5 +72,15 @@
                 <param name="visible" value="!Window.IsActive(gamevideosettings) + !Window.IsVisible(gamecontrollers)" />
             </include>
         </control>
+
+        <control type="group" id="30">
+            <posx>1840</posx>
+            <posy>PosYForLowerIconForOverlay</posy>
+
+            <include content="PausedFlag">
+                <param name="flagcolor" value="$VAR[BackgroundColor]" />
+                <param name="backgroundcolor" value="$VAR[MainColor]" />
+            </include>
+        </control>
     </controls>
 </window>
