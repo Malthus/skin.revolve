@@ -247,16 +247,18 @@
         <value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.EXIFDate,, | ]$INFO[Slideshow.Filesize]</value>
         <value condition="Player.HasVideo + !String.IsEmpty(VideoPlayer.ChannelNumberLabel)">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]</value>
         <value condition="Player.HasVideo">$INFO[VideoPlayer.TVShowTitle,, | ]$INFO[VideoPlayer.Season, $LOCALIZE[20373] , | ]$INFO[VideoPlayer.Episode, $LOCALIZE[20359] , | ]$INFO[VideoPlayer.Artist, | ]$INFO[VideoPlayer.Year]</value>
+        <value condition="Player.HasAudio + !String.IsEmpty(MusicPlayer.ChannelNumberLabel)">$INFO[MusicPlayer.ChannelNumberLabel,,. ]$INFO[MusicPlayer.ChannelName]</value>
         <value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.Year, | ]</value>
     </variable>
-    
+
     <variable name="PlayerThumbnail">
         <value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.Path]$INFO[Slideshow.Filename]</value>
         <value condition="Player.HasVideo + !String.IsEmpty(VideoPlayer.Cover)">$INFO[VideoPlayer.Cover]</value>
         <value condition="Player.HasAudio + !String.IsEmpty(MusicPlayer.Cover)">$INFO[MusicPlayer.Cover]</value>
-        <value>$INFO[Player.Art(thumb)]</value>
+        <value condition="Player.HasMedia">$INFO[Player.Art(thumb)]</value>
+        <value>icons/icon-revolve.png</value>
     </variable>
-    
+
     <variable name="PlayerTimeLabel">
         <value condition="Player.HasVideo">$INFO[VideoPlayer.Time]</value>
         <value condition="Player.HasAudio">$INFO[MusicPlayer.Time]</value>
