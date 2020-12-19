@@ -22,9 +22,12 @@
                 </include>
             </control>    
 
-            <include content="SeekBarForFullScreenMedia">
-                <param name="id" value="499" />
-            </include>
+            <control type="group">
+                <visible>Player.HasDuration</visible>
+                <include content="SeekBarForFullScreenMedia">
+                    <param name="id" value="499" />
+                </include>
+            </control>    
         </control>    
     </controls>
 </window>
