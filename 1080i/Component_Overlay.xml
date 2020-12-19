@@ -11,20 +11,20 @@
     <constant name="PosYForLowerLabelForOverlay">1027</constant>
     <constant name="PosYForLowerIconForOverlay">1015</constant>
 
-    <expression name="VideoFullScreenClockVisible">[Window.Is(fullscreenvideo) + [String.IsEqual(Skin.String(Media.VideoFullScreen.ClockMode),A) | [String.IsEqual(Skin.String(Media.VideoFullScreen.ClockMode),P) + Player.Paused]]]</expression>
-    <expression name="MusicVisualisationClockVisible">[Window.Is(visualisation) + [String.IsEqual(Skin.String(Media.MusicVisualisation.ClockMode),A) | [String.IsEqual(Skin.String(Media.MusicVisualisation.ClockMode),P) + Player.Paused]]]</expression>
-    <expression name="GameFullScreenClockVisible">[Window.Is(fullscreengame) + [String.IsEqual(Skin.String(Media.GameFullScreen.ClockMode),A) | [String.IsEqual(Skin.String(Media.GameFullScreen.ClockMode),P) + Player.Paused]]]</expression>
-    <expression name="SlideShowClockVisible">[Window.Is(slideshow) + [String.IsEqual(Skin.String(Media.SlideShow.ClockMode),A) | [String.IsEqual(Skin.String(Media.SlideShow.ClockMode),P) + SlideShow.IsPaused]]]</expression>
+    <expression name="VideoFullScreenClockVisible">[Window.Is(fullscreenvideo) + [String.IsEqual(Skin.String(VideoFullScreen.Clock.Mode),A) | [String.IsEqual(Skin.String(VideoFullScreen.Clock.Mode),P) + Player.Paused]]]</expression>
+    <expression name="MusicVisualisationClockVisible">[Window.Is(visualisation) + [String.IsEqual(Skin.String(MusicVisualisation.Clock.Mode),A) | [String.IsEqual(Skin.String(MusicVisualisation.Clock.Mode),P) + Player.Paused]]]</expression>
+    <expression name="GameFullScreenClockVisible">[Window.Is(fullscreengame) + [String.IsEqual(Skin.String(GameFullScreen.Clock.Mode),A) | [String.IsEqual(Skin.String(GameFullScreen.Clock.Mode),P) + Player.Paused]]]</expression>
+    <expression name="SlideShowClockVisible">[Window.Is(slideshow) + [String.IsEqual(Skin.String(SlideShow.Clock.Mode),A) | [String.IsEqual(Skin.String(SlideShow.Clock.Mode),P) + SlideShow.IsPaused]]]</expression>
 
-    <expression name="VideoFullScreenRssFeedVisible">[Window.Is(fullscreenvideo) + Skin.HasSetting(Media.VideoFullScreen.RssFeedVisible)]</expression>
-    <expression name="MusicVisualisationRssFeedVisible">[Window.Is(visualisation) + Skin.HasSetting(Media.MusicVisualisation.RssFeedVisible)]</expression>
-    <expression name="GameFullScreenRssFeedVisible">[Window.Is(fullscreengame) + Skin.HasSetting(Media.GameFullScreen.RssFeedVisible)]</expression>
-    <expression name="SlideShowRssFeedVisible">[Window.Is(slideshow) + Skin.HasSetting(Media.SlideShow.RssFeedVisible)]</expression>
+    <expression name="VideoFullScreenRssFeedVisible">[Window.Is(fullscreenvideo) + Skin.HasSetting(VideoFullScreen.RssFeed.Visible)]</expression>
+    <expression name="MusicVisualisationRssFeedVisible">[Window.Is(visualisation) + Skin.HasSetting(MusicVisualisation.RssFeed.Visible)]</expression>
+    <expression name="GameFullScreenRssFeedVisible">[Window.Is(fullscreengame) + Skin.HasSetting(GameFullScreen.RssFeed.Visible)]</expression>
+    <expression name="SlideShowRssFeedVisible">[Window.Is(slideshow) + Skin.HasSetting(SlideShow.RssFeed.Visible)]</expression>
 
-    <expression name="VideoFullScreenLowerBackgroundVisible">[Window.Is(fullscreenvideo) + Skin.HasSetting(Media.VideoFullScreen.LowerBackgroundVisible)]</expression>
-    <expression name="MusicVisualisationLowerBackgroundVisible">[Window.Is(visualisation) + Skin.HasSetting(Media.MusicVisualisation.LowerBackgroundVisible)]</expression>
-    <expression name="GameFullScreenLowerBackgroundVisible">[Window.Is(fullscreengame) + Skin.HasSetting(Media.GameFullScreen.LowerBackgroundVisible)]</expression>
-    <expression name="SlideShowLowerBackgroundVisible">[Window.Is(slideshow) + Skin.HasSetting(Media.SlideShow.LowerBackgroundVisible)]</expression>
+    <expression name="VideoFullScreenLowerBackgroundVisible">[Window.Is(fullscreenvideo) + Skin.HasSetting(VideoFullScreen.LowerBackground.Visible)]</expression>
+    <expression name="MusicVisualisationLowerBackgroundVisible">[Window.Is(visualisation) + Skin.HasSetting(MusicVisualisation.LowerBackground.Visible)]</expression>
+    <expression name="GameFullScreenLowerBackgroundVisible">[Window.Is(fullscreengame) + Skin.HasSetting(GameFullScreen.LowerBackground.Visible)]</expression>
+    <expression name="SlideShowLowerBackgroundVisible">[Window.Is(slideshow) + Skin.HasSetting(SlideShow.LowerBackground.Visible)]</expression>
 
     <variable name="MediaLabelForOverlay">
         <value condition="Window.IsVisible(extendedprogressdialog)"></value>
@@ -92,12 +92,12 @@
         <definition>
             <control type="group">
                 <include content="BackgroundForOverlay">
-                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + Window.IsVisible(notification)" />
+                    <param name="visible" value="Skin.HasSetting(Overlay.MediaBackground.Visible) + Window.IsVisible(notification)" />
                     <param name="posy" value="PosYForUpperBackgroundForOverlay" />
                 </include>
 
                 <include content="BackgroundForOverlay">
-                    <param name="visible" value="Skin.HasSetting(Media.OverlayBackground.Visible) + [Window.IsVisible(extendedprogressdialog) | Window.IsVisible(volumebar) | Player.HasMedia | !$EXP[HasFinalSkinSettingsValues]]" />
+                    <param name="visible" value="Skin.HasSetting(Overlay.MediaBackground.Visible) + [Window.IsVisible(extendedprogressdialog) | Window.IsVisible(volumebar) | Player.HasMedia | !$EXP[HasFinalSkinSettingsValues]]" />
                     <param name="posy" value="PosYForLowerBackgroundForOverlay" />
                 </include>
             </control>
@@ -205,7 +205,7 @@
     </include>
 
     <include name="BackgroundForOverlay">
-        <param name="visible" default="Skin.HasSetting(Media.OverlayBackground.Visible)" />
+        <param name="visible" default="Skin.HasSetting(Overlay.MediaBackground.Visible)" />
         <param name="posy" default="PosYForLowerBackgroundForOverlay" />
 
         <definition>

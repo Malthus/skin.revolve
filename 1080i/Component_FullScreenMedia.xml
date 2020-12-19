@@ -20,6 +20,7 @@
     <include name="PlaylistNumberIconForFullScreenMedia">
         <definition>
             <control type="group">
+                <visible>!String.IsEmpty(MusicPlayer.PlaylistPosition)</visible>
                 <include content="DefaultAnimationForFullScreenMedia" />
                 <posx>1840</posx>
                 <posy>PosYForLowerIconForOverlay</posy>

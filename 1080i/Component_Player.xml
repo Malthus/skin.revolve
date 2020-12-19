@@ -826,7 +826,7 @@
         <definition>
             <include content="CircleButton">
                 <param name="id" value="$PARAM[id]" />
-                <param name="enable" value="VideoPlayer.Content(LiveTV) + RDS.HasRadiotextPlus" />
+                <param name="enable" value="RDS.HasRadiotextPlus" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="texturefocus" value="controls/button-rds.png" />
@@ -1853,7 +1853,7 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="427" />
                         <param name="posx" value="2" />
-                        <param name="clockmodesetting" value="Media.VideoFullScreen.ClockMode" />
+                        <param name="clockmodesetting" value="VideoFullScreen.Clock.Mode" />
                         <param name="clockmodelabel" value="$VAR[VideoFullScreenClockModeLabel]" />
                         <param name="onleft" value="416" />
                         <param name="onright" value="428" />
@@ -2210,7 +2210,7 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="425" />
                         <param name="posx" value="2" />
-                        <param name="clockmodesetting" value="Media.MusicVisualisation.ClockMode" />
+                        <param name="clockmodesetting" value="MusicVisualisation.Clock.Mode" />
                         <param name="clockmodelabel" value="$VAR[MusicVisualisationClockModeLabel]" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
@@ -2368,7 +2368,7 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="17" />
                         <param name="posx" value="2" />
-                        <param name="clockmodesetting" value="Media.GameFullScreen.ClockMode" />
+                        <param name="clockmodesetting" value="GameFullScreen.Clock.Mode" />
                         <param name="clockmodelabel" value="$VAR[GameFullScreenClockModeLabel]" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
@@ -2450,7 +2450,7 @@
                     <include content="ClockButtonForPlayer">
                         <param name="id" value="425" />
                         <param name="posx" value="2" />
-                        <param name="clockmodesetting" value="Media.SlideShow.ClockMode" />
+                        <param name="clockmodesetting" value="SlideShow.Clock.Mode" />
                         <param name="clockmodelabel" value="$VAR[SlideShowClockModeLabel]" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />

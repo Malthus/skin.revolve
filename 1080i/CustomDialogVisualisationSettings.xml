@@ -28,29 +28,29 @@
                     <width>DialogElementWidth</width>
                     <align>left</align>
                     <label>Photo Slide Show</label>
-                    <selected>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</selected>
-                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.SlideShowActive)</onclick>
-                    <onclick>Skin.Reset(Media.ArtistSlideshowVisualization.Active)</onclick>
+                    <selected>Skin.HasSetting(MusicVisualisation.SlideShow.Active)</selected>
+                    <onclick>Skin.ToggleSetting(MusicVisualisation.SlideShow.Active)</onclick>
+                    <onclick>Skin.Reset(MusicVisualisation.ArtistSlideShow.Active)</onclick>
                 </control>
 
                 <control type="button" id="713">
                     <description>Photo Slideshow Image Path Button</description>
-                    <enable>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</enable>
+                    <enable>Skin.HasSetting(MusicVisualisation.SlideShow.Active)</enable>
                     <width>DialogElementWidth</width>
                     <align>left</align>
                     <label>- $LOCALIZE[31287]</label>
-                    <label2>$INFO[Skin.String(Media.MusicVisualisation.SlideShowImagePath)]</label2>
-                    <onclick>Skin.SetPath(Media.MusicVisualisation.SlideShowImagePath)</onclick>
+                    <label2>$INFO[Skin.String(MusicVisualisation.SlideShow.ImagePath)]</label2>
+                    <onclick>Skin.SetPath(MusicVisualisation.SlideShow.ImagePath)</onclick>
                 </control>
 
                 <control type="radiobutton" id="714">
                     <description>Random Photo Slideshow Radiobutton</description>
-                    <enable>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</enable>
+                    <enable>Skin.HasSetting(MusicVisualisation.SlideShow.Active)</enable>
                     <width>DialogElementWidth</width>
                     <align>left</align>
                     <label>- Random Order</label>
-                    <selected>Skin.HasSetting(Media.MusicVisualisation.SlideShowRandom)</selected>
-                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.SlideShowRandom)</onclick>
+                    <selected>Skin.HasSetting(MusicVisualisation.SlideShow.Random)</selected>
+                    <onclick>Skin.ToggleSetting(MusicVisualisation.SlideShow.Random)</onclick>
                 </control>
 
                 <control type="label" id="715">
@@ -65,15 +65,15 @@
                     <width>DialogElementWidth</width>
                     <align>left</align>
                     <label>$INFO[System.AddonTitle(script.artistslideshow)]$INFO[System.AddonVersion(script.artistslideshow), ,]</label>
-                    <selected>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</selected>
-                    <onclick>Skin.ToggleSetting(Media.ArtistSlideshowVisualization.Active)</onclick>
-                    <onclick>Skin.Reset(Media.MusicVisualisation.SlideShowActive)</onclick>
+                    <selected>Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active)</selected>
+                    <onclick>Skin.ToggleSetting(MusicVisualisation.ArtistSlideShow.Active)</onclick>
+                    <onclick>Skin.Reset(MusicVisualisation.SlideShow.Active)</onclick>
                 </control>
 
                 <control type="button" id="704">
                     <description>Artist Slideshow Settings Button</description>
                     <visible>System.HasAddon(script.artistslideshow)</visible>
-                    <enable>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)</enable>
+                    <enable>Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active)</enable>
                     <width>DialogElementWidth</width>
                     <align>left</align>
                     <label>- $LOCALIZE[5]</label>
@@ -128,7 +128,7 @@
                     <label2>$VAR[MusicVisualisationClockModeLabel]</label2>
                     <onclick>SetProperty(DialogTitle,$LOCALIZE[31169],1188)</onclick>
                     <onclick>SetProperty(DialogMessage,$LOCALIZE[31170],1188)</onclick>
-                    <onclick>SetProperty(DialogTarget,Media.MusicVisualisation.ClockMode,1188)</onclick>
+                    <onclick>SetProperty(DialogTarget,MusicVisualisation.Clock.Mode,1188)</onclick>
                     <onclick>SetProperty(List01Option.Name,$LOCALIZE[20422],1188)</onclick>
                     <onclick>SetProperty(List01Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
                     <onclick>SetProperty(List01Option.Action,A,1188)</onclick>
@@ -148,8 +148,8 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[13305]</label>
-                    <selected>Skin.HasSetting(Media.MusicVisualisation.RssFeedVisible)</selected>
-                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.RssFeedVisible)</onclick>
+                    <selected>Skin.HasSetting(MusicVisualisation.RssFeed.Visible)</selected>
+                    <onclick>Skin.ToggleSetting(MusicVisualisation.RssFeed.Visible)</onclick>
                 </control>
 
                 <control type="radiobutton" id="711">
@@ -158,8 +158,8 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31167]</label>
-                    <selected>Skin.HasSetting(Media.MusicVisualisation.LowerBackgroundVisible)</selected>
-                    <onclick>Skin.ToggleSetting(Media.MusicVisualisation.LowerBackgroundVisible)</onclick>
+                    <selected>Skin.HasSetting(MusicVisualisation.LowerBackground.Visible)</selected>
+                    <onclick>Skin.ToggleSetting(MusicVisualisation.LowerBackground.Visible)</onclick>
                 </control>
             </include>
 

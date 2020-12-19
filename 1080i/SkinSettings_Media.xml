@@ -22,7 +22,15 @@
                         <param name="id" value="757" />
                         <param name="label" value="$LOCALIZE[31940]" />
                     </include>
-
+<!--
+                    <control type="button" id="720">
+                        <description>Video Full Screen Settings Button</description>
+                        <width>1100</width>
+                        <align>left</align>
+                        <label>$LOCALIZE[31941]</label>
+                        <onclick>ActivateWindow(1183)</onclick>
+                    </control>
+-->
                     <control type="button" id="721">
                         <description>Music Visualisation Settings Button</description>
                         <width>1100</width>
@@ -30,7 +38,15 @@
                         <label>$LOCALIZE[31941]</label>
                         <onclick>ActivateWindow(1183)</onclick>
                     </control>
-
+<!--
+                    <control type="button" id="722">
+                        <description>Game Full Screen Settings Button</description>
+                        <width>1100</width>
+                        <align>left</align>
+                        <label>$LOCALIZE[31941]</label>
+                        <onclick>ActivateWindow(1183)</onclick>
+                    </control>
+-->
                     <control type="button" id="723">
                         <description>Slideshow Settings Button</description>
                         <width>1100</width>
@@ -116,16 +132,6 @@
                         <selected>Skin.HasSetting(Media.PlayerArtwork.Visible)</selected>
                         <onclick>Skin.ToggleSetting(Media.PlayerArtwork.Visible)</onclick>
                     </control>
-                    
-                    <control type="radiobutton" id="704">
-                        <description>Seek Bar Background Option</description>
-                        <width>1100</width>
-                        <radioposx>1040</radioposx>
-                        <align>left</align>
-                        <label>$LOCALIZE[31261]</label>
-                        <selected>Skin.HasSetting(Media.PlayerSeekBar.Visible)</selected>
-                        <onclick>Skin.ToggleSetting(Media.PlayerSeekBar.Visible)</onclick>
-                    </control>
 
                     <control type="radiobutton" id="705">
                         <description>Overlay Background Option</description>
@@ -133,8 +139,8 @@
                         <radioposx>1040</radioposx>
                         <align>left</align>
                         <label>$LOCALIZE[31154]</label>
-                        <selected>Skin.HasSetting(Media.OverlayBackground.Visible)</selected>
-                        <onclick>Skin.ToggleSetting(Media.OverlayBackground.Visible)</onclick>
+                        <selected>Skin.HasSetting(Overlay.MediaBackground.Visible)</selected>
+                        <onclick>Skin.ToggleSetting(Overlay.MediaBackground.Visible)</onclick>
                     </control>
 
                     <include content="SpacerForSkinSettings">
@@ -159,7 +165,7 @@
             </control>
         </definition>
     </include>
-    
+
     <include name="AnnotationsForMediaSkinSettings">
         <definition>
             <include content="HelpTextGroupForSkinSettings">
@@ -169,11 +175,6 @@
                     <visible>Control.HasFocus(703)</visible>
                     <font>DialogHelpFont</font>
                     <label>$LOCALIZE[31191]</label>
-                </control>
-                <control type="textbox">
-                    <visible>Control.HasFocus(704)</visible>
-                    <font>DialogHelpFont</font>
-                    <label>$LOCALIZE[31252]</label>
                 </control>
                 <control type="textbox">
                     <visible>Control.HasFocus(705)</visible>

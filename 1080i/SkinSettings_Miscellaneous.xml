@@ -166,16 +166,6 @@
                         <onclick>Skin.ToggleSetting(Overlay.WeatherTemperature.Visible)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="828">
-                        <description>Show Media Overlay Option</description>
-                        <width>1100</width>
-                        <radioposx>1040</radioposx>
-                        <align>left</align>
-                        <label>$LOCALIZE[31291]</label>
-                        <selected>Skin.HasSetting(Overlay.MediaFullScreenClockTime.Visible)</selected>
-                        <onclick>Skin.ToggleSetting(Overlay.MediaFullScreenClockTime.Visible)</onclick>
-                    </control>
-
                     <control type="button" id="807">
                         <description>Busy Animation Option</description>
                         <width>1100</width>

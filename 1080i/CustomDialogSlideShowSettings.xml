@@ -33,7 +33,7 @@
                     <label2>$VAR[SlideShowClockModeLabel]</label2>
                     <onclick>SetProperty(DialogTitle,$LOCALIZE[31169],1188)</onclick>
                     <onclick>SetProperty(DialogMessage,$LOCALIZE[31170],1188)</onclick>
-                    <onclick>SetProperty(DialogTarget,Media.SlideShow.ClockMode,1188)</onclick>
+                    <onclick>SetProperty(DialogTarget,SlideShow.Clock.Mode,1188)</onclick>
                     <onclick>SetProperty(List01Option.Name,$LOCALIZE[20422],1188)</onclick>
                     <onclick>SetProperty(List01Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
                     <onclick>SetProperty(List01Option.Action,A,1188)</onclick>
@@ -53,8 +53,8 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[13305]</label>
-                    <selected>Skin.HasSetting(Media.SlideShow.RssFeedVisible)</selected>
-                    <onclick>Skin.ToggleSetting(Media.SlideShow.RssFeedVisible)</onclick>
+                    <selected>Skin.HasSetting(SlideShow.RssFeed.Visible)</selected>
+                    <onclick>Skin.ToggleSetting(SlideShow.RssFeed.Visible)</onclick>
                 </control>
 
                 <control type="radiobutton" id="711">
@@ -63,8 +63,8 @@
                     <radioposx>1180</radioposx>
                     <align>left</align>
                     <label>$LOCALIZE[31167]</label>
-                    <selected>Skin.HasSetting(Media.SlideShow.LowerBackgroundVisible)</selected>
-                    <onclick>Skin.ToggleSetting(Media.SlideShow.LowerBackgroundVisible)</onclick>
+                    <selected>Skin.HasSetting(SlideShow.LowerBackground.Visible)</selected>
+                    <onclick>Skin.ToggleSetting(SlideShow.LowerBackground.Visible)</onclick>
                 </control>
             </include>
 

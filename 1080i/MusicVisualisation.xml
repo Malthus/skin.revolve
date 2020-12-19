@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2006">
     <defaultcontrol always="true"></defaultcontrol>
-    <onload condition="Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)">RunScript(script.artistslideshow)</onload>
+    <onload condition="Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active)">RunScript(script.artistslideshow)</onload>
 
     <controls>
         <control type="visualisation" id="2">
-            <visible>!Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</visible>
+            <visible>!Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active) + !Skin.HasSetting(MusicVisualisation.SlideShow.Active)</visible>
             <include content="FullscreenDimensions" />
         </control>
 
         <control type="image">
-            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+            <visible>Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
             <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <fadetime>WindowFadeDuration</fadetime>
@@ -18,7 +18,7 @@
         </control>
 
         <control type="image">
-            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+            <visible>Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
             <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <fadetime>WindowFadeDuration</fadetime>
@@ -26,7 +26,7 @@
         </control>
 
         <control type="multiimage">
-            <visible>Skin.HasSetting(Media.ArtistSlideshowVisualization.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
+            <visible>Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
             <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <timeperimage>8000</timeperimage>
@@ -37,14 +37,14 @@
         </control>
 
         <control type="multiimage">
-            <visible>Skin.HasSetting(Media.MusicVisualisation.SlideShowActive)</visible>
+            <visible>Skin.HasSetting(MusicVisualisation.SlideShow.Active)</visible>
             <include content="FullscreenDimensions" />
             <aspectratio>keep</aspectratio>
             <timeperimage>8000</timeperimage>
             <fadetime>WindowFadeDuration</fadetime>
             <loop>yes</loop>
-            <randomize>Skin.HasSetting(Media.MusicVisualisation.SlideShowRandom)</randomize>
-            <imagepath background="true">$INFO[Skin.String(Media.MusicVisualisation.SlideShowImagePath)]</imagepath>
+            <randomize>Skin.HasSetting(MusicVisualisation.SlideShow.Random)</randomize>
+            <imagepath background="true">$INFO[Skin.String(MusicVisualisation.SlideShow.ImagePath)]</imagepath>
         </control>        
 
         <control type="group">
