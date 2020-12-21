@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="VisualisationPresetLabelForPlayer">
+        <value condition="Visualisation.HasPresets + Visualisation.Locked">$INFO[Visualisation.Preset] ($LOCALIZE[20166])</value>
+        <value condition="Visualisation.HasPresets">$INFO[Visualisation.Preset]</value>
+        <value></value>
+    </variable>
+
     <include name="OverlayForPlayer">
         <definition>
             <control type="group">
@@ -1145,7 +1151,7 @@
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="texturefocus" value="controls/button-visualisation.png" />
                 <param name="texturenofocus" value="controls/button-visualisation.png" />
-                <param name="label" value="$LOCALIZE[12006]" />
+                <param name="label" value="$LOCALIZE[12006]$INFO[Visualisation.Name,: ,]" />
                 <param name="onup" value="$PARAM[onup]" />
                 <param name="ondown" value="$PARAM[ondown]" />
                 <param name="onleft" value="$PARAM[onleft]" />
@@ -1166,11 +1172,12 @@
         <definition>
             <include content="CircleButton">
                 <param name="id" value="$PARAM[id]" />
+                <paran name="enable" value="Visualisation.HasPresets" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="texturefocus" value="controls/button-presets.png" />
                 <param name="texturenofocus" value="controls/button-presets.png" />
-                <param name="label" value="$LOCALIZE[31925]" />
+                <param name="label" value="$LOCALIZE[31925]$VAR[VisualisationPresetLabelForPlayer,: ,]" />
                 <param name="onup" value="$PARAM[onup]" />
                 <param name="ondown" value="$PARAM[ondown]" />
                 <param name="onleft" value="$PARAM[onleft]" />
@@ -1192,6 +1199,7 @@
         <definition>
             <include content="CircleButton">
                 <param name="id" value="$PARAM[id]" />
+                <paran name="enable" value="Visualisation.Enabled" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="texturefocus" value="controls/button-addon.png" />
@@ -2150,7 +2158,7 @@
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
                         <param name="onleft" value="434" />
-                        <param name="onright" value="419" />
+                        <param name="onright" value="420" />
                     </include>
                 </control>
 
@@ -2160,22 +2168,22 @@
 
                 <control type="group">
                     <width>74</width>
-                    <include content="AddonButtonForPlayer">
-                        <param name="id" value="419" />
-                        <param name="posx" value="2" />
-                        <param name="onleft" value="406" />
-                        <param name="onright" value="420" />
-                    </include>
-                </control>
-
-                <control type="group">
-                    <width>74</width>
                     <include content="PresetsButtonForPlayer">
                         <param name="id" value="420" />
                         <param name="posx" value="2" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
-                        <param name="onleft" value="419" />
+                        <param name="onleft" value="406" />
+                        <param name="onright" value="419" />
+                    </include>
+                </control>
+
+                <control type="group">
+                    <width>74</width>
+                    <include content="AddonButtonForPlayer">
+                        <param name="id" value="419" />
+                        <param name="posx" value="2" />
+                        <param name="onleft" value="420" />
                         <param name="onright" value="500" />
                     </include>
                 </control>
@@ -2187,7 +2195,7 @@
                         <param name="posx" value="2" />
                         <param name="onup" value="$PARAM[onup]" />
                         <param name="ondown" value="$PARAM[ondown]" />
-                        <param name="onleft" value="420" />
+                        <param name="onleft" value="419" />
                         <param name="onright" value="412" />
                     </include>
                 </control>
