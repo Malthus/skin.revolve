@@ -1172,7 +1172,7 @@
         <definition>
             <include content="CircleButton">
                 <param name="id" value="$PARAM[id]" />
-                <paran name="enable" value="Visualisation.HasPresets" />
+                <param name="enable" value="Visualisation.Enabled" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="texturefocus" value="controls/button-presets.png" />
@@ -1199,7 +1199,7 @@
         <definition>
             <include content="CircleButton">
                 <param name="id" value="$PARAM[id]" />
-                <paran name="enable" value="Visualisation.Enabled" />
+                <param name="enable" value="Visualisation.Enabled" />
                 <param name="posx" value="$PARAM[posx]" />
                 <param name="posy" value="$PARAM[posy]" />
                 <param name="texturefocus" value="controls/button-addon.png" />
