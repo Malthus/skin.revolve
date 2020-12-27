@@ -5,7 +5,7 @@
 
     <controls>
         <control type="visualisation" id="2">
-            <visible>[!Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active) + !Skin.HasSetting(MusicVisualisation.SlideShow.Active)] | Skin.HasSetting(Background.Visualiser.RunHidden)</visible>
+            <visible>!Skin.HasSetting(MusicVisualisation.ArtistSlideShow.Active) + !Skin.HasSetting(MusicVisualisation.SlideShow.Active)</visible>
             <include content="FullscreenDimensions" />
         </control>
 
