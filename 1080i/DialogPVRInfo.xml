@@ -148,8 +148,8 @@
 
             <control type="grouplist" id="9000">
                 <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="380" />
-                    <param name="height" value="300" />
+                    <param name="posy" value="340" />
+                    <param name="height" value="340" />
                 </include>
                 <onright condition="Container(9001).HasFocus(41)">60</onright>
                 <onright condition="Container(9001).HasFocus(42)">61</onright>
@@ -194,6 +194,11 @@
                     <description>Add Timer Button</description>
                     <visible>Window.Is(pvrguideinfo)</visible>
                     <label>$LOCALIZE[19061]</label>
+                </control>
+                <control type="button" id="11">
+                    <description>Set Reminder Button</description>
+                    <visible>Window.Is(pvrguideinfo)</visible>
+                    <label>$LOCALIZE[826]</label>
                 </control>
                 <control type="button" id="7">
                     <description>Ok/Close Button</description>
