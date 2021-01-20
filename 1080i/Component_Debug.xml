@@ -418,15 +418,10 @@
                 <!-- Dialog Labels -->
 
                 <include content="DialogNameForDebug">
-                    <param name="dialog" value="accesspoints" />
-                    <param name="label" value="accesspoints (DialogAccessPoints.xml)" />
-                </include>
-                
-                <include content="DialogNameForDebug">
                     <param name="dialog" value="addoninformation" />
                     <param name="label" value="addoninformation (DialogAddonInfo.xml)" />
                 </include>
-                
+
                 <include content="DialogNameForDebug">
                     <param name="dialog" value="addonsettings" />
                     <param name="label" value="addonsettings (DialogAddonSettings.xml)" />
