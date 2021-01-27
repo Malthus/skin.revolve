@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.revolve" version="6.3.0" name="Revolve" provider-name="ransomed, mKo, relyter, Malthus">
-	<requires>
-		<import addon="xbmc.gui" version="5.14.0"/>
-        <import addon="script.revolve.service" version="1.1.2" />
+<addon id="skin.revolve" version="7.0.0~beta1" name="Revolve" provider-name="ransomed, mKo, relyter, Malthus">
+    <requires>
+        <import addon="xbmc.gui" version="5.15.0"/>
+        <import addon="script.revolve.service" version="2.0.0~beta1" />
         <import addon="script.cu.lrclyrics" version="2.0.12" optional="true" />
         <import addon="script.favourites" version="7.1.1" optional="true" />
         <import addon="script.globalsearch" version="8.0.6" optional="true" />
@@ -12,13 +12,13 @@
         <import addon="service.library.data.provider" version="0.0.6" optional="true" />
         <import addon="service.scrobbler.lastfm" version="3.0.0" optional="true" />
         <import addon="service.skin.widgets" version="0.0.29" optional="true" />
-	</requires>
+    </requires>
 
-	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
-	</extension>
+    <extension point="xbmc.gui.skin" debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
 
-	<extension point="xbmc.addon.metadata">
+    <extension point="xbmc.addon.metadata">
         <summary lang="cs_CZ">Revolve je grafický vzhled založený na otáčení.</summary>
         <summary lang="en_GB">Revolve is a skin centered around revolution.</summary>
         <summary lang="en_NZ">Revolve is a skin centered around revolution.</summary>
@@ -58,5 +58,5 @@
             <screenshot>resources/screenshot8.jpg</screenshot>
             <screenshot>resources/screenshot9.jpg</screenshot>
         </assets>
-	</extension>
+    </extension>
 </addon>
