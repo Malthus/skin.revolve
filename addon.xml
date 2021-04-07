@@ -3,17 +3,12 @@
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.revolve.service" version="2.0.0~beta1" />
-<!--
         <import addon="script.cu.lrclyrics" version="6.3.7" optional="true" />
         <import addon="script.favourites" version="8.1.1" optional="true" />
         <import addon="script.globalsearch" version="9.0.5" optional="true" />
-        <import addon="script.grab.fanart" version="0.14.1" optional="true" />
-        <import addon="script.rss.editor" version="4.0.2" optional="true" />
-        <import addon="script.tv.show.next.aired" version="6.0.15" optional="true" />
-        <import addon="service.library.data.provider" version="0.3.2" optional="true" />
         <import addon="service.scrobbler.lastfm" version="4.0.3" optional="true" />
-        <import addon="service.skin.widgets" version="1.0.22" optional="true" />
--->
+        <import addon="script.tv.show.next.aired" version="6.0.15" optional="true" />
+        <import addon="script.rss.editor" version="4.0.2" optional="true" />
     </requires>
 
     <extension point="xbmc.gui.skin" debugging="false">
