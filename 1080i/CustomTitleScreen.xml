@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1120">
+    <defaultcontrol always="true">2</defaultcontrol>
     <onload>AlarmClock(StartupClock,ReplaceWindow($INFO[System.StartupWindow]),00:04,silent)</onload>
 
     <controls>
@@ -13,5 +14,13 @@
 
         <include content="EmptyBackground" />
         <include content="Title" />
+
+        <control type="button" id="2">
+            <visible allowhiddenfocus="true">!System.HasAlarm(StartupClock)</visible>
+            <posx>710</posx>
+            <posy>1000</posy>
+            <label>$LOCALIZE[186]</label>
+            <onclick>ReplaceWindow($INFO[System.StartupWindow])</onclick>
+        </control>
     </controls>
 </window>
