@@ -15,11 +15,17 @@
         <include content="EmptyBackground" />
         <include content="Title" />
 
+        <include content="DialogWindow">
+            <param name="visible" value="!System.HasAlarm(StartupClock)" />
+            <param name="posy" value="980" />
+            <param name="height" value="80" />
+        </include>
+        
         <control type="button" id="2">
             <visible allowhiddenfocus="true">!System.HasAlarm(StartupClock)</visible>
             <posx>710</posx>
             <posy>1000</posy>
-            <label>$LOCALIZE[186]</label>
+            <label>$LOCALIZE[335]</label>
             <onclick>ReplaceWindow($INFO[System.StartupWindow])</onclick>
         </control>
     </controls>
