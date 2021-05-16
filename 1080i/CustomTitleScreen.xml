@@ -2,6 +2,7 @@
 <window id="1120">
     <defaultcontrol always="true">2</defaultcontrol>
     <onload>AlarmClock(StartupClock,ReplaceWindow($INFO[System.StartupWindow]),00:04,silent)</onload>
+    <onload>SetProperty(StartupStatus,Running)</onload>
 
     <controls>
         <animation type="WindowOpen">
@@ -15,17 +16,16 @@
         <include content="EmptyBackground" />
         <include content="Title" />
 
-        <include content="DialogWindow">
-            <param name="visible" value="!System.HasAlarm(StartupClock)" />
-            <param name="posy" value="780" />
-            <param name="height" value="80" />
-        </include>
-        
         <control type="button" id="2">
             <visible allowhiddenfocus="true">!System.HasAlarm(StartupClock)</visible>
             <posx>710</posx>
-            <posy>800</posy>
+            <posy>760</posy>
+            <textcolor>$VAR[MainColor]</textcolor>
+            <focusedcolor>$VAR[MainColor]</focusedcolor>
+            <texturenofocus colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texturenofocus>
+            <texturefocus colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texturefocus>
             <label>$LOCALIZE[335]</label>
+            <onfocus condition="String.IsEqual(StartupStatus,Running) + !System.HasAlarm(StartupClock)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
             <onclick>ReplaceWindow($INFO[System.StartupWindow])</onclick>
         </control>
     </controls>
