@@ -17,7 +17,7 @@
         <include content="Title" />
 
         <control type="button" id="2">
-            <visible allowhiddenfocus="true">!System.HasAlarm(StartupClock)</visible>
+            <visible allowhiddenfocus="true">String.IsEqual(StartupStatus,Running) + !System.HasAlarm(StartupClock)</visible>
             <posx>710</posx>
             <posy>760</posy>
             <textcolor>$VAR[MainColor]</textcolor>

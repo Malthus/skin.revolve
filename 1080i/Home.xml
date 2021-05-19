@@ -6,14 +6,6 @@
         <include content="GlobalBackground" />
 
         <control type="button" id="210">
-            <description>Script and Plugin Initialisation</description>
-            <texturenofocus></texturenofocus>
-            <texturefocus></texturefocus>
-            <onfocus condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onfocus>
-            <onfocus>SetFocus(220)</onfocus>
-        </control>
-
-        <control type="button" id="220">
             <description>Circle Item Initialisation</description>
             <texturenofocus></texturenofocus>
             <texturefocus></texturefocus>
