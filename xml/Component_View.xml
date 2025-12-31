@@ -10,8 +10,8 @@
   <include file="View_RotateList.xml" />
   <include file="View_Banners.xml" />
   
-  <expression name="ListIconInViewVisible">!Container.Scrolling | Container.Content(Episodes) | Container.Content(Seasons) | Container.Content(Songs)</expression>
-  <expression name="SortLetterInViewVisible">Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</expression>
+  <expression name="VisibilityOfListIconInView">!Container.Scrolling | Container.Content(Episodes) | Container.Content(Seasons) | Container.Content(Songs)</expression>
+  <expression name="VisibilityOfSortLetterInView">Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</expression>
 
   <include name="VisibilityOfListIconInView">
     <definition>

@@ -2,7 +2,6 @@
 <includes>
   <include name="CircleListView">
     <param name="visible" default="true" />
-    <param name="fallback" default="" />
     <param name="onleft" default="9001" />
     <param name="onright" default="Noop" />
 
@@ -24,14 +23,12 @@
       </control>
 
       <include content="MainCircleListView">
-        <param name="fallback" value="$PARAM[fallback]" />
         <param name="onright" value="$PARAM[onright]" />
       </include>
     </definition>
   </include>
 
   <include name="MainCircleListView">
-    <param name="fallback" default="" />
     <param name="onright" default="Noop" />
 
     <definition>
@@ -51,9 +48,7 @@
           <include content="VisibilityOfListIconInView" />
           <posx>15</posx>
           <posy>235</posy>
-          <include content="HugeCircleThumbnailIcon">
-            <param name="fallback" value="$PARAM[fallback]" />
-          </include>
+          <include content="HugeCircleThumbnailIcon" />
           <include content="OverlayForHugeCircleThumbnailIcon" />
         </control>
           

@@ -131,20 +131,20 @@
       </control>
     </control>
     
-<!--
     <control type="group" id="9000">
-      <include content="SideMenu" />
+      <include content="BackgroundForSideMenu" />
 
+<!--
       <include content="ButtonListForSideMenu">
         <param name="onright" value="99" />
 
         <include content="ViewGroupLabelForSideMenu" />
       </include>
+-->
       <include content="PlayerControlsForSideMenu">
         <param name="onright" value="99" />
       </include>
     </control>
--->
 
     <include content="GlobalOverlay">
       <param name="buttonid" value="200" />

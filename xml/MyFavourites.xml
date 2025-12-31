@@ -8,9 +8,7 @@
     <include content="FullscreenDimensions" />
     <include content="GlobalBackground" />
 
-    <include content="CircleListView">
-       <param name="fallback" value="defaultfavourite.png" />
-    </include>
+    <include content="CircleListView" />
     <include content="DropListView" />
     <include content="LandscapeView" />
     <include content="ThumbnailsView" />
@@ -20,7 +18,7 @@
     <include content="RotateListView" />
 
     <control type="group" id="9000">
-      <include content="SideMenu" />
+      <include content="BackgroundForSideMenu" />
 
       <include content="ButtonListForSideMenu">
         <include content="ViewGroupLabelForSideMenu" />

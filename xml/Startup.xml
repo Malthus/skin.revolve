@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2999">
-    <onload condition="System.HasAddon(script.tv.show.next.aired) + System.AddonIsEnabled(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onload>
-    <onload condition="Skin.HasSetting(TitleScreen.Visible)">ReplaceWindow(1120)</onload>
-    <onload condition="!Skin.HasSetting(TitleScreen.Visible)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+  <onload condition="System.HasAddon(script.tv.show.next.aired) + System.AddonIsEnabled(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onload>
+  <onload condition="Skin.HasSetting(TitleScreen.Visible)">ReplaceWindow(1120)</onload>
+  <onload condition="!Skin.HasSetting(TitleScreen.Visible)">ReplaceWindow($INFO[System.StartupWindow])</onload>
 </window>

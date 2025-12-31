@@ -26,7 +26,7 @@
           <param name="movievisible" value="$EXP[MoviesInCircleItemsVisible]" />
           <param name="tvshowvisible" value="false" />
           <param name="albumvisible" value="false" />
-          <param name="contentpath" value="special://skin/playlists/unwatched_movies.xsp" />
+          <param name="contentpath" value="special://skin/playlists/movies_unwatched.xsp" />
         </include>
         <include content="ListOfHomeCircleItems">
           <param name="id" value="603" />
@@ -34,7 +34,7 @@
           <param name="movievisible" value="false" />
           <param name="tvshowvisible" value="$EXP[EpisodesInCircleItemsVisible]" />
           <param name="albumvisible" value="false" />
-          <param name="contentpath" value="special://skin/playlists/recent_unwatched_episodes.xsp" />
+          <param name="contentpath" value="special://skin/playlists/episodes_recent_unwatched.xsp" />
         </include>
         <include content="ListOfHomeCircleItems">
           <param name="id" value="604" />
@@ -42,7 +42,7 @@
           <param name="movievisible" value="false" />
           <param name="tvshowvisible" value="false" />
           <param name="albumvisible" value="$EXP[AlbumsInCircleItemsVisible]" />
-          <param name="contentpath" value="special://skin/playlists/unplayed_albums.xsp" />
+          <param name="contentpath" value="special://skin/playlists/albums_unplayed.xsp" />
         </include>
       </control>
     </control>
