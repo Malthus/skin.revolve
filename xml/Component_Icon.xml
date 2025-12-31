@@ -152,15 +152,16 @@
     </include>
 
     <include name="HugeCircleThumbnailIcon">
+        <param name="fallback" default="" />
         <definition>
             <include content="BackgroundForHugeCircleThumbnailIcon" />
-        
+
             <control type="image">
                 <posx>6</posx>
                 <posy>6</posy>
                 <width>598</width>
                 <height>598</height>
-                <texture diffuse="elements/circle-mask.png" background="true">$VAR[ContentThumbnail]</texture>
+                <texture diffuse="elements/circle-mask.png" fallback="$PARAM[fallback]" background="true">$VAR[ContentThumbnail]</texture>
                 <aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
             </control>
         </definition>

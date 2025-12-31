@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include file="View_RevolveList.xml" />
+  <include file="View_DropList.xml" />
+  <include file="View_CircleList.xml" />
+  <include file="View_Landscape.xml" />
+  <include file="View_Thumbnails.xml" />
+  <include file="View_Panels.xml" />
+  <include file="View_Gallery.xml" />
+  <include file="View_RotateList.xml" />
+  <include file="View_Banners.xml" />
+  
+  <expression name="ListIconInViewVisible">!Container.Scrolling | Container.Content(Episodes) | Container.Content(Seasons) | Container.Content(Songs)</expression>
+  <expression name="SortLetterInViewVisible">Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</expression>
+
+  <include name="VisibilityOfListIconInView">
+    <definition>
+      <visible>!Container.Scrolling | Container.Content(Episodes) | Container.Content(Seasons) | Container.Content(Songs)</visible>
+    </definition>
+  </include>
+
+  <include name="VisibilityOfSortLetterInView">
+    <definition>
+      <visible>Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</visible>
+    </definition>
+  </include>
+
+  <constant name="PosXForHorizontalScrollbarForView">570</constant>
+  <constant name="PosYForHorizontalScrollbarForView">990</constant>
+  <constant name="WidthForHorizontalScrollbarForView">780</constant>
+  <constant name="AdjustedWidthForHorizontalScrollbarForView">764</constant>
+  <constant name="HeightForHorizontalScrollbarForView">20</constant>
+
+  <constant name="PosXForVerticalScrollbarForView">1880</constant>
+  <constant name="PosYForVerticalScrollbarForView">100</constant>
+  <constant name="WidthForVerticalScrollbarForView">20</constant>
+  <constant name="HeightForVerticalScrollbarForView">780</constant>
+
+  <include name="VerticalScrollbarForView">
+    <param name="id" default="0" />
+    <param name="viewid" default="0" />
+    <param name="onright" default="Noop" />
+
+    <definition>
+      <control type="scrollbar" id="$PARAM[id]">
+        <visible allowhiddenfocus="true">Control.IsVisible($PARAM[viewid])</visible>
+        <animation type="Conditional" condition="!Control.HasFocus($PARAM[id]) + !Container($PARAM[viewid]).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
+          <effect type="slide" start="0,0" end="60,0" time="100" />
+        </animation>
+
+        <posx>PosXForVerticalScrollbarForView</posx>
+        <posy>PosYForVerticalScrollbarForView</posy>
+        <width>WidthForVerticalScrollbarForView</width>
+        <height>HeightForVerticalScrollbarForView</height>
+        <onleft>$PARAM[viewid]</onleft>
+        <onright>$PARAM[onright]</onright>
+      </control>
+    </definition>
+  </include>
+
+  <include name="HorizontalScrollbarForView">
+    <param name="id" default="0" />
+    <param name="viewid" default="0" />
+    <param name="ondown" default="Noop" />
+
+    <definition>
+      <control type="group">
+        <visible allowhiddenfocus="true">Control.IsVisible($PARAM[viewid])</visible>
+        <animation type="Conditional" condition="!Control.HasFocus($PARAM[id]) + !Container($PARAM[viewid]).Scrolling + !Skin.HasSetting(ViewScrollbar.Visible)">
+          <effect type="slide" start="0,0" end="0,100" time="100" />
+        </animation>
+        <posx>PosXForHorizontalScrollbarForView</posx>
+        <posy>PosYForHorizontalScrollbarForView</posy>
+
+        <control type="image">
+          <description>Background Image Fix For Horizontal Scrollbar</description>
+          <width>WidthForHorizontalScrollbarForView</width>
+          <height>HeightForHorizontalScrollbarForView</height>
+          <aspectratio>stretch</aspectratio>
+          <texture border="12,0,12,0" colordiffuse="$VAR[BackgroundColor]">controls/verticalbar-thick.png</texture>
+        </control>
+
+        <control type="scrollbar" id="$PARAM[id]">
+          <width>AdjustedWidthForHorizontalScrollbarForView</width>
+          <height>HeightForHorizontalScrollbarForView</height>
+          <orientation>horizontal</orientation>
+          <texturesliderbackground border="12,0,12,0" colordiffuse="$VAR[BackgroundColor]">controls/verticalbar-thick.png</texturesliderbackground>
+          <texturesliderbar border="12,0,12,0" colordiffuse="$VAR[SelectColor]">controls/verticalbar-thin.png</texturesliderbar>
+          <texturesliderbarfocus border="12,0,12,0" colordiffuse="$VAR[MainColor]">controls/verticalbar-thin.png</texturesliderbarfocus>
+          <onup>$PARAM[viewid]</onup>
+          <ondown>$PARAM[ondown]</ondown>
+        </control>
+      </control>
+    </definition>
+  </include>
+
+  <include name="BackgroundForNameInThumbnailOrPanelForView">
+    <param name="posy" default="200" />
+    <param name="outlinecolor" default="$VAR[TextColor]" />
+    <param name="label" default="$VAR[ContentNameLabel]" />
+  
+    <definition>
+      <include content="BackgroundForOutlineTextbox">
+        <param name="posx" value="15" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="width" value="250" />
+        <param name="height" value="70" />
+        <param name="font" value="ThumbnailViewFont" />
+        <param name="outlinecolor" value="$PARAM[outlinecolor]" />
+        <param name="outlinesize" value="2" />
+        <param name="autoscroll" value="false" />
+        <param name="align" value="center" />
+        <param name="label" value="$PARAM[label]" />
+      </include>
+    </definition>
+  </include>
+  
+  <include name="TextForNameInThumbnailOrPanelForView">
+    <param name="posy" default="200" />
+    <param name="label" default="$VAR[ContentNameLabel]" />
+  
+    <definition>
+      <control type="textbox">
+        <posx>15</posx>
+        <posy>$PARAM[posy]</posy>
+        <width>250</width>
+        <height>70</height>
+        <font>ThumbnailViewFont</font>
+        <textcolor>$VAR[BackgroundColor]</textcolor>
+        <autoscroll>false</autoscroll>
+        <align>center</align>
+        <label>$PARAM[label]</label>
+      </control>
+    </definition>
+  </include>
+
+  <include name="NameInThumbnailOrPanelForView">
+    <param name="posy" default="200" />
+    <param name="outlinecolor" default="$VAR[TextColor]" />
+    <param name="label" default="$VAR[ContentNameLabel]" />
+  
+    <definition>
+      <include content="OutlineTextbox">
+        <param name="posx" value="15" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="width" value="250" />
+        <param name="height" value="70" />
+        <param name="font" value="ThumbnailViewFont" />
+        <param name="textcolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinecolor" value="$PARAM[outlinecolor]" />
+        <param name="outlinesize" value="2" />
+        <param name="autoscroll" value="false" />
+        <param name="align" value="center" />
+        <param name="label" value="$PARAM[label]" />
+      </include>
+    </definition>
+  </include>
+
+  <include name="InvisibleListDimensionsForView">
+    <definition>
+      <posx>0</posx>
+      <posy>80</posy>
+      <width>1920</width>
+      <height>920</height>
+    </definition>
+  </include>
+
+  <include name="InvisibleVerticalListItemsForView">
+    <definition>
+      <itemlayout width="1920" height="160">
+        <control type="group">
+          <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+
+          <control type="image">
+            <width>1920</width>
+            <height>160</height>
+            <texture colordiffuse="$VAR[TextColor]" border="20">controls/rectangle-clear.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+
+          <include content="OutlineLabel">
+            <param name="width" value="1900" />
+            <param name="height" value="160" />
+            <param name="font" value="DebugFont" />
+            <param name="textcolor" value="$VAR[TextColor]" />
+            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+            <param name="outlinesize" value="2" />
+            <param name="align" value="right" />
+            <param name="label" value="$INFO[ListItem.Label]" />
+          </include>
+        </control>
+      </itemlayout>
+
+      <focusedlayout width="1920" height="600">
+        <control type="group">
+          <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+
+          <control type="image">
+            <width>1920</width>
+            <height>600</height>
+            <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+
+          <include content="OutlineLabel">
+            <param name="width" value="1900" />
+            <param name="height" value="600" />
+            <param name="font" value="DebugFont" />
+            <param name="textcolor" value="$VAR[MainColor]" />
+            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+            <param name="outlinesize" value="2" />
+            <param name="align" value="right" />
+            <param name="label" value="$INFO[ListItem.Label]" />
+          </include>
+        </control>
+      </focusedlayout>
+    </definition>
+  </include>
+
+  <include name="InvisibleHorizontalListItemsForView">
+    <definition>
+      <itemlayout width="300" height="1080">
+        <control type="group">
+          <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+
+          <control type="image">
+            <width>300</width>
+            <height>1080</height>
+            <texture colordiffuse="$VAR[TextColor]" border="20">controls/rectangle-clear.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+
+          <include content="OutlineLabel">
+            <param name="posy" value="20" />
+            <param name="width" value="300" />
+            <param name="height" value="40" />
+            <param name="font" value="DebugFont" />
+            <param name="textcolor" value="$VAR[TextColor]" />
+            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+            <param name="outlinesize" value="2" />
+            <param name="align" value="center" />
+            <param name="label" value="$INFO[ListItem.Label]" />
+          </include>
+        </control>
+      </itemlayout>
+
+      <focusedlayout width="720" height="1080">
+        <control type="group">
+          <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+
+          <control type="image">
+            <width>720</width>
+            <height>1080</height>
+            <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
+            <aspectratio>stretch</aspectratio>
+          </control>
+
+          <include content="OutlineLabel">
+            <param name="posy" value="20" />
+            <param name="width" value="720" />
+            <param name="height" value="40" />
+            <param name="font" value="DebugFont" />
+            <param name="textcolor" value="$VAR[MainColor]" />
+            <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+            <param name="outlinesize" value="2" />
+            <param name="align" value="center" />
+            <param name="label" value="$INFO[ListItem.Label]" />
+          </include>
+        </control>
+      </focusedlayout>      
+    </definition>
+  </include>
+</includes>

@@ -26,7 +26,7 @@
 
     <variable name="PlayerDirectionImageForFlag">
         <value condition="Player.Paused">flags/state-pause.png</value>
-        <value condition="[Player.Seeking | Player.DisplayAfterSeek] + !String.IsEmpty(Player.SeekOffset)">flags/state-playspeed.png</value>
+        <value condition="[Player.Seeking] + !String.IsEmpty(Player.SeekOffset)">flags/state-playspeed.png</value>
         <value condition="[Player.Playing + Player.IsTempo] + !String.IsEmpty(Player.PlaySpeed)">flags/state-playspeed.png</value>
         <value condition="Player.Playing">flags/state-play.png</value>
         <value condition="Player.Forwarding + [Player.Forwarding2x | Player.Forwarding4x | Player.Forwarding8x | Player.Forwarding16x | Player.Forwarding32x]">flags/state-fastforwardspeed.png</value>
@@ -37,7 +37,7 @@
 
     <variable name="PlayerSpeedLabelForFlag">
         <value condition="Player.Paused"></value>
-        <value condition="[Player.Seeking | Player.DisplayAfterSeek] + !String.IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>
+        <value condition="[Player.Seeking] + !String.IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>
         <value condition="[Player.Playing + Player.IsTempo] + !String.IsEmpty(Player.PlaySpeed)">$INFO[Player.PlaySpeed]</value>
         <value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
         <value condition="Player.Forwarding4x | Player.Rewinding4x">4x</value>

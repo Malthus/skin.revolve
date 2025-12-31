@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="12008">
+    <defaultcontrol always="true">3</defaultcontrol>
+    <menucontrol>9000</menucontrol>
+
+    <controls>
+        <include content="BackdropForDialog">
+            <param name="windowid" value="DialogColorPicker.xml" />
+        </include>
+
+        <control type="group">
+            <posy>PosYForThirteenLinesDialog</posy>
+            <include content="FadeAnimationForDialogWindow" />
+            <include content="WindowForDialog">
+                <param name="height" value="HeightForThirteenLinesDialog" />
+                <param name="headerid" value="2" />
+                <param name="icontexture" value="icons/icon-settings.png" />
+                <param name="iconthumbnail" value="$VAR[ContentThumbnail]" />
+            </include>
+<!-- DEBUG -->
+			<!-- Color picker panel -->
+			<control type="panel" id="6">
+				<left>20</left>
+				<top>100</top>
+				<width>880</width>
+				<bottom>26</bottom>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<onleft>9001</onleft>
+				<onright>61</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>61</pagecontrol>
+				<viewtype label="100">icon</viewtype>
+				<itemlayout height="80" width="146">
+					<control type="group">
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture>buttons/color-back.png</texture>
+						</control>
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture border="0">colors/white.png</texture>
+							<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80" width="146">
+					<control type="group">
+						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="124" center="auto">Focus</animation>
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture>buttons/color-back.png</texture>
+						</control>
+						<control type="image">
+							<top>3</top>
+							<left>8</left>
+							<width>138</width>
+							<height>74</height>
+							<texture border="0">colors/white.png</texture>
+							<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>910</left>
+				<top>100</top>
+				<width>12</width>
+				<bottom>26</bottom>
+				<onleft condition="Control.IsVisible(6)">6</onleft>
+				<onright>9001</onright>
+				<orientation>vertical</orientation>
+			</control>
+			<control type="label">
+				<left>28</left>
+				<top>740</top>
+				<width>880</width>
+				<height>35</height>
+				<align>left</align>
+				<label>[COLOR button_focus]$LOCALIZE[737]: [/COLOR]$INFO[Container(6).ListItem.Label,, - ]$INFO[Container(6).ListItem.Label2,#,]</label>
+			</control>
+			<control type="label">
+				<left>925</left>
+				<top>748</top>
+				<width>275</width>
+				<height>35</height>
+				<font>font12</font>
+				<align>right</align>
+				<textcolor>grey</textcolor>
+				<label>$VAR[SelectLabel]</label>
+			</control>
+			<control type="grouplist" id="9001">
+				<left>920</left>
+				<top>80</top>
+				<onleft>61</onleft>
+				<itemgap>dialogbuttons_itemgap</itemgap>
+				<onright>6</onright>
+				<include content="DefaultDialogButton">
+					<param name="id" value="7" />
+					<param name="label" value="$LOCALIZE[222]" />
+				</include>
+			</control>            
+            
+<!--
+            <control type="grouplist" id="5">
+                <description>Control Area</description>
+                <include content="MarkupForListForDialog">
+                    <param name="height" value="520" />
+                    <param name="pagecontrol" value="25" />
+                </include>
+                <onleft>3</onleft>
+                <onright>25</onright>
+            </control>
+
+            <include content="DefaultControlsForDialog">
+            </include>
+
+            <control type="scrollbar" id="25">
+                <include content="MarkupForScrollbarForDialog">
+                    <param name="posy" value="80" />
+                    <param name="height" value="520" />
+                </include>
+                <onleft>5</onleft>
+            </control>
+            
+            <control type="grouplist" id="3">
+                <include content="MarkupForButtonListForDialog">
+                    <param name="posy" value="340" />
+                    <param name="height" value="120" />
+                </include>
+                <pagecontrol>15</pagecontrol>
+                <onup>29</onup>
+                <ondown>30</ondown>
+                <onright>5</onright>
+            </control>
+
+            <control type="button" id="10">
+                <description>Default Category Button</description>
+            </control>
+
+            <control type="scrollbar" id="15">
+                <description>Invisible Scrollbar</description>
+                <enable>false</enable>
+                <posx>24</posx>
+                <posy>20</posy>
+                <width>20</width>
+                <height>480</height>
+                <showonepage>false</showonepage>
+                <texturesliderbackground></texturesliderbackground>
+                <texturesliderbar></texturesliderbar>
+                <texturesliderbarfocus></texturesliderbarfocus>
+            </control>
+
+            <control type="label">
+                <description>More Options Label</description>
+                <visible>Control.IsVisible(15)</visible>
+                <posx>520</posx>
+                <posy>460</posy>
+                <width>480</width>
+                <height>20</height>
+                <font>SideMenuGroupFont</font>
+                <textcolor>$VAR[MainColor]</textcolor>
+                <align>right</align>
+                <label>$LOCALIZE[31971]</label>
+            </control>
+            
+            <control type="grouplist" id="9000">
+                <include content="MarkupForButtonListForDialog">
+                    <param name="posy" value="480" />
+                    <param name="height" value="120" />
+                </include>
+                <onup>3</onup>
+                <ondown>3</ondown>
+                <onright>5</onright>
+
+                <include content="DefaultsButtonForDialog">
+                    <param name="id" value="30" />
+                </include>
+                <include content="OkButtonForDialog">
+                    <param name="id" value="28" />
+                </include>
+                <include content="CancelButtonForDialog">
+                    <param name="id" value="29" />
+                </include>
+            </control>
+-->            
+        </control>
+    </controls>
+</window>

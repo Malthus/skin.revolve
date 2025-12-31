@@ -67,7 +67,7 @@
 
                 <control type="image">
                     <description>Settings Description Background</description>
-                    <visible>Skin.HasSetting(Settings.HelpVisible) + !String.IsEmpty(Control.GetLabel(6))</visible>
+                    <visible>!String.IsEmpty(Control.GetLabel(6))</visible>
                     <animation effect="fade" start="0" end="100" time="200">Visible</animation>
                     <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                     <posx>700</posx>
@@ -111,16 +111,27 @@
 
             <include content="ButtonListForSideMenu">
                 <param name="onright" value="3" />
-
+<!--
                 <include content="ViewGroupLabelForSideMenu" />
                 <control type="label" id="998">
                     <width>482</width>
                     <height>30</height>
                     <textcolor>$VAR[MainColor]</textcolor>
-                    <label>$LOCALIZE[31139]</label>
+                    <label> $LOCALIZE[31139]</label>
                 </control>
                 <include content="SettingsLevelButtonForSideMenu" />
-                <include content="SettingsHelpButtonForSideMenu" />
+            </include>
+-->
+
+            <include content="SettingsLevelGroupLabelForSideMenu" />
+                <control type="label" id="998">
+                    <visible>!Skin.HasSetting(SideMenu.Grouped)</visible>
+                    <width>482</width>
+                    <height>30</height>
+                    <textcolor>$VAR[MainColor]</textcolor>
+                    <label> $LOCALIZE[31139]</label>
+                </control>
+                <include content="SettingsLevelButtonForSideMenu" />
             </include>
 
             <include content="PlayerControlsForSideMenu">

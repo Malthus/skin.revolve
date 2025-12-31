@@ -15,6 +15,12 @@
             <height>250</height>
             <texturefocus>elements/calibration-topleft.png</texturefocus>
             <texturenofocus></texturenofocus>
+		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+				<eventconfig type="up" />
+				<eventconfig type="down" />
+				<eventconfig type="left" />
+				<eventconfig type="right" />
+			</movingspeed>
         </control>
 
         <control type="mover" id="9">
@@ -25,6 +31,12 @@
             <height>250</height>
             <texturefocus>elements/calibration-bottomright.png</texturefocus>
             <texturenofocus></texturenofocus>
+		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+				<eventconfig type="up" />
+				<eventconfig type="down" />
+				<eventconfig type="left" />
+				<eventconfig type="right" />
+			</movingspeed>
         </control>
 
         <control type="mover" id="10">
@@ -35,6 +47,12 @@
             <height>50</height>
             <texturefocus>elements/calibration-subtitles.png</texturefocus>
             <texturenofocus></texturenofocus>
+		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+				<eventconfig type="up" />
+				<eventconfig type="down" />
+				<eventconfig type="left" />
+				<eventconfig type="right" />
+			</movingspeed>
         </control>
 
         <control type="resize" id="11">
@@ -45,6 +63,12 @@
             <height>250</height>
             <texturefocus>elements/calibration-center.png</texturefocus>
             <texturenofocus></texturenofocus>
+		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+				<eventconfig type="up" />
+				<eventconfig type="down" />
+				<eventconfig type="left" />
+				<eventconfig type="right" />
+			</movingspeed>
         </control>
 
         <control type="group">

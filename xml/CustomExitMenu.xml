@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1150">
+  <defaultcontrol always="false">200</defaultcontrol>
+
+  <controls>
+    <include content="GlobalBackground" />
+
+    <control type="wraplist" id="400">
+      <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+      <include content="InvisibleListDimensionsForView" />
+      <focusposition>1</focusposition>
+      <defaultcontrol>1</defaultcontrol>
+
+      <include content="InvisibleVerticalListItemsForView" />
+      <include content="OptionsForExitMenu" />
+    </control>
+    
+    <control type="group">
+      <include content="RevolveMenu">
+        <param name="iconvisible" value="false" />
+        <param name="texture" value="circle/exit.png" />
+        <param name="label" value="$LOCALIZE[31081]" />
+      </include>
+    </control>
+    
+    <include content="GlobalOverlay">
+      <param name="buttonid" value="200" />
+      <param name="controlid" value="400" />
+    </include>
+  </controls>
+</window>

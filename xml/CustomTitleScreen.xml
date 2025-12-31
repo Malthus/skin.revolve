@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1120">
+  <defaultcontrol always="true">2</defaultcontrol>
+  <onload>AlarmClock(StartupClock,ReplaceWindow($INFO[System.StartupWindow]),00:04,silent)</onload>
+  <onload>SetProperty(StartupStatus,Running)</onload>
+
+  <controls>
+    <animation type="WindowOpen">
+      <effect type="fade" start="0" end="100" time="400" />
+    </animation>
+
+    <animation type="WindowClose">
+      <effect type="fade" start="100" end="0" time="400" />
+    </animation>
+
+    <include content="EmptyBackground" />
+    <include content="Title" />
+
+    <control type="button" id="2">
+      <visible allowhiddenfocus="true">String.IsEqual(Window.Property(StartupStatus),Running) + !System.HasAlarm(StartupClock)</visible>
+      <posx>710</posx>
+      <posy>760</posy>
+      <textcolor>$VAR[MainColor]</textcolor>
+      <focusedcolor>$VAR[MainColor]</focusedcolor>
+      <texturenofocus colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texturenofocus>
+      <texturefocus colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texturefocus>
+      <label>$LOCALIZE[335]</label>
+      <onfocus condition="String.IsEqual(Window.Property(StartupStatus),Running) + !System.HasAlarm(StartupClock)">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+      <onclick>ReplaceWindow($INFO[System.StartupWindow])</onclick>
+    </control>
+  </controls>
+</window>
