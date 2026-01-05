@@ -55,28 +55,28 @@
 
                 <itemlayout height="280" width="280">
                     <control type="group">
-                        <visible>!String.IsEqual(Skin.String(Thumbnails.Type),S)</visible>
+                        <visible>!String.IsEqual(Skin.String(View.Thumbnails.Type),S)</visible>
                         <posx>5</posx>
                         <posy>5</posy>
                         <include content="DefaultCircleThumbnailIcon" />
                         <include content="OverlayForDefaultCircleThumbnailIcon" />
                     </control>
                     <control type="group">
-                        <visible>String.IsEqual(Skin.String(Thumbnails.Type),S)</visible>
+                        <visible>String.IsEqual(Skin.String(View.Thumbnails.Type),S)</visible>
                         <posx>5</posx>
                         <posy>5</posy>
                         <include content="DefaultSquareThumbnailIcon" />
                         <include content="OverlayForDefaultSquareThumbnailIcon" />
                     </control>
                     <control type="group">
-                        <visible>Skin.HasSetting(Thumbnails.NameVisible)</visible>
+                        <visible>Skin.HasSetting(View.Thumbnails.NameVisible)</visible>
                         <include content="NameInThumbnailOrPanelForView" />
                     </control>
                 </itemlayout>
                 
                 <focusedlayout height="280" width="280">
                     <control type="group">
-                        <visible>!String.IsEqual(Skin.String(Thumbnails.Type),S)</visible>
+                        <visible>!String.IsEqual(Skin.String(View.Thumbnails.Type),S)</visible>
                         <animation type="Focus">
                             <effect type="zoom" start="100" end="140" time="200" />
                             <effect type="slide" end="-38,-38" time="200" />
@@ -88,7 +88,7 @@
                         <include content="OverlayForDefaultCircleThumbnailIcon" />
                     </control>
                     <control type="group">
-                        <visible>String.IsEqual(Skin.String(Thumbnails.Type),S)</visible>
+                        <visible>String.IsEqual(Skin.String(View.Thumbnails.Type),S)</visible>
                         <animation type="Focus">
                             <effect type="zoom" start="100" end="140" time="200" />
                             <effect type="slide" end="-38,-38" time="200" />
@@ -100,7 +100,7 @@
                         <include content="OverlayForDefaultSquareThumbnailIcon" />
                     </control>
                     <control type="group">
-                        <visible>Skin.HasSetting(Thumbnails.NameVisible)</visible>
+                        <visible>Skin.HasSetting(View.Thumbnails.NameVisible)</visible>
 
                         <control type="group">
                             <animation type="Focus">

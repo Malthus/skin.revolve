@@ -48,8 +48,8 @@
             <radioposx>1040</radioposx>
             <align>left</align>
             <label>$LOCALIZE[31155]</label>
-            <selected>Skin.HasSetting(Thumbnails.NameVisible)</selected>
-            <onclick>Skin.ToggleSetting(Thumbnails.NameVisible)</onclick>
+            <selected>Skin.HasSetting(View.Thumbnails.NameVisible)</selected>
+            <onclick>Skin.ToggleSetting(View.Thumbnails.NameVisible)</onclick>
           </control>
           
           <control type="button" id="815">
@@ -60,7 +60,7 @@
             <label2>$VAR[ThumbnailsTypeLabel]</label2>
             <onclick>SetProperty(DialogTitle,$LOCALIZE[31799],1188)</onclick>
             <onclick>SetProperty(DialogMessage,$LOCALIZE[31220],1188)</onclick>
-            <onclick>SetProperty(DialogTarget,Thumbnails.Type,1188)</onclick>
+            <onclick>SetProperty(DialogTarget,View.Thumbnails.Type,1188)</onclick>
             <onclick>SetProperty(List01Option.Name,$LOCALIZE[31952],1188)</onclick>
             <onclick>SetProperty(List01Option.Action,C,1188)</onclick>
             <onclick>SetProperty(List02Option.Name,$LOCALIZE[31954],1188)</onclick>
@@ -74,8 +74,8 @@
             <radioposx>1040</radioposx>
             <align>left</align>
             <label>$LOCALIZE[31150]</label>
-            <selected>Skin.HasSetting(Landscape.DescriptionVisible)</selected>
-            <onclick>Skin.ToggleSetting(Landscape.DescriptionVisible)</onclick>
+            <selected>Skin.HasSetting(View.Landscape.DescriptionVisible)</selected>
+            <onclick>Skin.ToggleSetting(View.Landscape.DescriptionVisible)</onclick>
           </control>
           
           <control type="radiobutton" id="802">

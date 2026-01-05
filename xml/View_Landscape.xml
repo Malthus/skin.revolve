@@ -10,7 +10,7 @@
         <param name="descriptionwidth" default="1840" />
         <param name="descriptionheight" default="320" />
         <param name="descriptionlabel" default="$VAR[ContentDescription]" />
-        <param name="descriptionvisible" default="Skin.HasSetting(Landscape.DescriptionVisible)" />
+        <param name="descriptionvisible" default="Skin.HasSetting(View.Landscape.DescriptionVisible)" />
 
         <definition>
             <control type="group">
@@ -56,7 +56,7 @@
         <param name="descriptionwidth" default="1840" />
         <param name="descriptionheight" default="340" />
         <param name="descriptionlabel" default="$VAR[ContentDescription]" />
-        <param name="descriptionvisible" default="Skin.HasSetting(Landscape.DescriptionVisible)" />
+        <param name="descriptionvisible" default="Skin.HasSetting(View.Landscape.DescriptionVisible)" />
 
         <definition>
             <control type="group">
@@ -98,7 +98,7 @@
         <param name="width" default="1840" />
         <param name="height" default="340" />
         <param name="label" default="$VAR[ContentDescription]" />
-        <param name="visible" default="Skin.HasSetting(Landscape.DescriptionVisible)" />
+        <param name="visible" default="Skin.HasSetting(View.Landscape.DescriptionVisible)" />
         
         <definition>
             <control type="group">

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-  <expression name="HasFinalSkinSettingsValues">String.IsEqual(Skin.String(Revolve.Configuration),6.3.0)</expression>
+  <expression name="HasNoSkinSettingsValues">String.IsEmpty(Skin.String(Revolve.Configuration))</expression>
+  <expression name="HasFinalSkinSettingsValues">String.IsEqual(Skin.String(Revolve.Configuration),8.0.0)</expression>
 
   <variable name="OverlayMessageForValues">
     <value condition="!String.IsEmpty(Skin.String(Revolve.Configuration))">$LOCALIZE[31264]</value>
@@ -14,13 +15,13 @@
     <definition>
       <control type="button" id="$PARAM[buttonid]">
         <description>Skin Settings Initialisation</description>
-        <visible>String.IsEmpty(Skin.String(Revolve.Configuration))</visible>
+        <visible>!$EXP[HasFinalSkinSettingsValues]</visible>
         <texturenofocus></texturenofocus>
         <texturefocus></texturefocus>
         <include content="DefaultSettingsForValues" />
         <onfocus>SetFocus($PARAM[controlid])</onfocus>
       </control>
-
+<!--
       <control type="button" id="$PARAM[buttonid]">
         <description>Skin Settings Migration</description>
         <visible>String.IsEqual(Skin.String(Revolve.Configuration),3.0.2)</visible>
@@ -75,7 +76,7 @@
         <include content="RevolveLeia630MigratedValues" />
         <onfocus>SetFocus($PARAM[controlid])</onfocus>
       </control>
-
+-->
       <control type="button" id="$PARAM[buttonid]">
         <description>Skin Settings Evasion</description>
         <visible>$EXP[HasFinalSkinSettingsValues]</visible>
@@ -124,10 +125,10 @@
       <include content="MiscellaneousSettingsDefaultValues" />
       <include content="DebugSettingsDefaultValues" />
 
-      <onfocus>Skin.SetString(Revolve.Configuration,6.1.0)</onfocus>
+      <onfocus>Skin.SetString(Revolve.Configuration,8.0.0)</onfocus>
     </definition>
   </include>
-
+<!--
   <include name="RevolveJarvis411MigratedValues">
     <definition>
       <include content="ExitMenuItemsDefaultValues" />
@@ -180,7 +181,7 @@
       <onfocus>Skin.SetString(Revolve.Configuration,9.0.0)</onfocus>
     </definition>
   </include>
-
+-->
   <include name="BackgroundSettingsDefaultValues">
     <definition>
       <onfocus>Skin.SetBool(Background.Image.Active)</onfocus>
@@ -198,7 +199,7 @@
       <onfocus>Skin.SetString(Background.Animation.Level,2)</onfocus>
     </definition>
   </include>
-
+<!--
   <include name="BackgroundSettingsRevolveJarvisMigratedValues">
     <definition>
       <onfocus condition="Skin.HasSetting(Background.ImageActive)">Skin.SetBool(Background.Image.Active)</onfocus>
@@ -222,7 +223,7 @@
       <onfocus>Skin.SetString(Background.Animation.Level,$INFO[Skin.String(Background.AnimationLevel)])</onfocus>
     </definition>
   </include>
-  
+-->
   <include name="ColorsSettingsDefaultValues">
     <definition>
       <onfocus>Skin.Reset(Colors.PrimaryColorTheme)</onfocus>
@@ -244,7 +245,6 @@
       <onfocus>Skin.SetBool(PlayDiscOption.Active)</onfocus>
       <onfocus>Skin.Reset(PlayDiscOption.BackgroundImage)</onfocus>
       <onfocus>Skin.SetBool(FavouritesOption.Active)</onfocus>
-      <onfocus>Skin.Reset(FavouritesOption.CustomWindow)</onfocus>
       <onfocus>Skin.Reset(FavouritesOption.BackgroundImage)</onfocus>
       <onfocus>Skin.Reset(Custom01Option.Active)</onfocus>
       <onfocus>Skin.Reset(Custom02Option.Active)</onfocus>
@@ -315,37 +315,6 @@
     </definition>
   </include>
 
-  <include name="HomeMenuItemsSettingsRevolveJarvisMigratedValues">
-    <definition>
-      <onfocus condition="Skin.HasSetting(VideosOption.ImmutablePath)">Skin.Reset(VideosOption.ImmutablePath)</onfocus>
-      <onfocus condition="!Skin.HasSetting(VideosOption.ImmutablePath)">Skin.SetBool(VideosOption.ImmutablePath)</onfocus>
-      <onfocus condition="Skin.HasSetting(MusicOption.ImmutablePath)">Skin.Reset(MusicOption.ImmutablePath)</onfocus>
-      <onfocus condition="!Skin.HasSetting(MusicOption.ImmutablePath)">Skin.SetBool(MusicOption.ImmutablePath)</onfocus>
-    </definition>
-  </include>
-  
-  <include name="HomeMenuItemsSettingsRevolveLeiaMigratedValues">
-    <definition>
-      <onfocus condition="Skin.HasSetting(GamesOption.Active)">Skin.SetBool(CustomGamesOption.Active)</onfocus>
-      <onfocus condition="!Skin.HasSetting(GamesOption.Active)">Skin.Reset(CustomGamesOption.Active)</onfocus>
-      <onfocus condition="Skin.HasSetting(GamesOption.Active)">Skin.SetString(CustomGamesOption.Name,$LOCALIZE[31705])</onfocus>
-      <onfocus condition="Skin.HasSetting(GamesOption.Active)">Skin.SetString(CustomGamesOption.Subtitle,$LOCALIZE[208])</onfocus>
-      <onfocus>Skin.SetString(CustomGamesOption.BackgroundImage,$INFO[Skin.String(GamesOption.BackgroundImage)])</onfocus>
-      <onfocus>Skin.SetString(CustomGamesOption.Type,$INFO[Skin.String(GamesOption.Type)])</onfocus>
-      <onfocus>Skin.SetString(CustomGamesOption.MenuTitle,$INFO[Skin.String(GamesOption.MenuTitle)])</onfocus>
-      <onfocus>Skin.SetString(CustomGamesOption.SourceInfo,$INFO[Skin.String(GamesOption.SourceInfo)])</onfocus>
-      <onfocus>Skin.SetString(CustomGamesOption.Window,$INFO[Skin.String(GamesOption.Window)])</onfocus>
-      <onfocus>Skin.SetString(CustomGamesOption.Action,$INFO[Skin.String(GamesOption.Action)])</onfocus>
-      <onfocus>Skin.SetBool(GamesOption.Active)</onfocus>
-      <onfocus>Skin.Reset(GamesOption.BackgroundImage)</onfocus>
-      <onfocus>Skin.Reset(GamesOption.Type)</onfocus>
-      <onfocus>Skin.Reset(GamesOption.MenuTitle)</onfocus>
-      <onfocus>Skin.Reset(GamesOption.SourceInfo)</onfocus>
-      <onfocus>Skin.Reset(GamesOption.Window)</onfocus>
-      <onfocus>Skin.Reset(GamesOption.Action)</onfocus>
-    </definition>
-  </include>
-
   <include name="CircleItemsSettingsDefaultValues">
     <definition>
       <onfocus>Skin.Reset(CircleNextAired.Enable)</onfocus>
@@ -389,12 +358,15 @@
       <onfocus>Skin.SetBool(Media.TechnicalFlags.Visible)</onfocus>
       <onfocus>Skin.SetBool(Media.IconOverlays.Visible)</onfocus>
       <onfocus>Skin.SetBool(Media.PlayerArtwork.Visible)</onfocus>
+
       <onfocus>Skin.Reset(Overlay.MediaBackground.Visible)</onfocus>
       <onfocus>Skin.Reset(Overlay.ClockTime.Visible)</onfocus>
       <onfocus>Skin.Reset(Overlay.WeatherTemperature.Visible)</onfocus>
+
       <onfocus>Skin.Reset(VideoFullScreen.Clock.Mode)</onfocus>
       <onfocus>Skin.Reset(VideoFullScreen.RssFeed.Visible)</onfocus>
       <onfocus>Skin.Reset(VideoFullScreen.LowerBackground.Visible)</onfocus>
+
       <onfocus>Skin.Reset(MusicVisualisation.Clock.Mode)</onfocus>
       <onfocus>Skin.Reset(MusicVisualisation.RssFeed.Visible)</onfocus>
       <onfocus>Skin.Reset(MusicVisualisation.ArtistSlideShow.Active)</onfocus>
@@ -402,40 +374,14 @@
       <onfocus>Skin.Reset(MusicVisualisation.SlideShow.ImagePath)</onfocus>
       <onfocus>Skin.Reset(MusicVisualisation.SlideShow.Random)</onfocus>
       <onfocus>Skin.Reset(MusicVisualisation.LowerBackground.Visible)</onfocus>
+
       <onfocus>Skin.Reset(GameFullScreen.Clock.Mode)</onfocus>
       <onfocus>Skin.Reset(GameFullScreen.RssFeed.Visible)</onfocus>
       <onfocus>Skin.Reset(GameFullScreen.LowerBackground.Visible)</onfocus>
+
       <onfocus>Skin.Reset(SlideShow.Clock.Mode)</onfocus>
       <onfocus>Skin.Reset(SlideShow.RssFeed.Visible)</onfocus>
       <onfocus>Skin.Reset(SlideShow.LowerBackground.Visible)</onfocus>
-    </definition>
-  </include>
-
-  <include name="MediaSettingsRevolveJarvisMigratedValues">
-    <definition>
-      <onfocus condition="!String.IsEmpty(AddonLyrics)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(AddonLyrics)])</onfocus>
-      <onfocus condition="!String.IsEmpty(Music.LyricsAddon)">Skin.SetString(Media.MusicLyricsAddon.Script,$INFO[Skin.String(Music.LyricsAddon)])</onfocus>
-      <onfocus>Skin.Reset(MusicVisualisation.ArtistSlideShow.Active)</onfocus>
-      <onfocus condition="Skin.HasSetting(PlayerArtwork.Visible)">Skin.SetBool(Media.PlayerArtwork.Visible)</onfocus>
-      <onfocus condition="!Skin.HasSetting(PlayerArtwork.Visible)">Skin.Reset(Media.PlayerArtwork.Visible)</onfocus>
-      <onfocus condition="Skin.HasSetting(Overlay.BackgroundVisible)">Skin.SetBool(Overlay.MediaBackground.Visible)</onfocus>
-      <onfocus condition="!Skin.HasSetting(Overlay.BackgroundVisible)">Skin.Reset(Overlay.MediaBackground.Visible)</onfocus>
-    </definition>
-  </include>
-
-  <include name="MediaSettingsRevolveLeiaMigratedValues">
-    <definition>
-      <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.PersonalFlags.Visible)</onfocus>
-      <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.InformationFlags.Visible)</onfocus>
-      <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.RatingFlags.Visible)</onfocus>
-      <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.TechnicalFlags.Visible)</onfocus>
-      <onfocus condition="Skin.HasSetting(MediaIcons.Visible)">Skin.SetBool(Media.IconOverlays.Visible)</onfocus>
-    </definition>
-  </include>
-
-  <include name="MediaSettingsRevolveOmegaMigratedValues">
-    <definition>
-      <onfocus>Skin.Reset(FavouritesOption.CustomWindow)</onfocus>
     </definition>
   </include>
 
@@ -456,30 +402,27 @@
     </definition>
   </include>
 
-  <include name="FullScreenMediaSettingsRevolveLeiaMigratedValues">
-    <definition>
-      <onfocus condition="Skin.HasSetting(Media.OverlayBackground.Visible)">Skin.SetBool(Overlay.MediaBackground.Visible)</onfocus>
-      <onfocus condition="Skin.HasSetting(Media.ArtistSlideshowVisualization.Active)">Skin.SetBool(MusicVisualisation.ArtistSlideShow.Active)</onfocus>
-    </definition>
-  </include>
-
   <include name="MiscellaneousSettingsDefaultValues">
     <definition>
       <onfocus>Skin.SetBool(TitleScreen.Visible)</onfocus>
+
       <onfocus>Skin.SetBool(SideMenu.Grouped)</onfocus>
       <onfocus>Skin.SetBool(SideMenu.Visible)</onfocus>
       <onfocus>Skin.SetBool(SideMenu.GlobalSearch)</onfocus>
+
       <onfocus>Skin.SetBool(ViewScrollbar.Visible)</onfocus>
       <onfocus>Skin.SetBool(BackButton.Visible)</onfocus>
       <onfocus>Skin.SetBool(RSSFeed.BackgroundVisible)</onfocus>
       <onfocus>Skin.SetString(BusyAnimation.Type,A)</onfocus>
       <onfocus>Skin.SetBool(NoInformationLabel.Visible)</onfocus>
-      <onfocus>Skin.SetString(Thumbnails.Type,C)</onfocus>
-      <onfocus>Skin.Reset(Thumbnails.NameVisible)</onfocus>
-      <onfocus>Skin.SetBool(Landscape.DescriptionVisible)</onfocus>
+
+      <onfocus>Skin.SetString(View.Thumbnails.Type,C)</onfocus>
+      <onfocus>Skin.Reset(View.Thumbnails.NameVisible)</onfocus>
+      <onfocus>Skin.SetBool(View.Landscape.DescriptionVisible)</onfocus>
+
       <onfocus>Skin.Reset(Settings.DialogInfoAutoRefresh)</onfocus>
-      <onfocus>Skin.SetBool(Keyboard.AutoCompleteActive)</onfocus>
       <onfocus>Skin.Reset(Settings.HelpVisible)</onfocus>
+      <onfocus>Skin.SetBool(Keyboard.AutoCompleteActive)</onfocus>
     </definition>
   </include>
 

@@ -777,8 +777,8 @@
         <visible>Control.IsVisible(55) | Control.IsVisible(56)</visible>
         <align>left</align>
         <label>$LOCALIZE[31928]</label>
-        <selected>Skin.HasSetting(Thumbnails.NameVisible)</selected>
-        <onclick>Skin.ToggleSetting(Thumbnails.NameVisible)</onclick>
+        <selected>Skin.HasSetting(View.Thumbnails.NameVisible)</selected>
+        <onclick>Skin.ToggleSetting(View.Thumbnails.NameVisible)</onclick>
       </control>
     </definition>
   </include>
@@ -789,8 +789,8 @@
         <visible>Control.IsVisible(53)</visible>
         <align>left</align>
         <label>$LOCALIZE[21821]</label>
-        <selected>Skin.HasSetting(Landscape.DescriptionVisible)</selected>
-        <onclick>Skin.ToggleSetting(Landscape.DescriptionVisible)</onclick>
+        <selected>Skin.HasSetting(View.Landscape.DescriptionVisible)</selected>
+        <onclick>Skin.ToggleSetting(View.Landscape.DescriptionVisible)</onclick>
       </control>
     </definition>
   </include>
