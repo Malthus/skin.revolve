@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1102">
-    <defaultcontrol always="yes">200</defaultcontrol>
-    <menucontrol>9001</menucontrol>
-    <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyDynamicItems.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
-    <onload condition="!String.IsEmpty(Window.Property(SourceInfo))">Skin.SetString(MyDynamicItems.SourceInfo,$INFO[Window.Property(SourceInfo)])</onload>
-    <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyDynamicItems.MenuTitle)])</onload>
-    <onload condition="String.IsEmpty(Window.Property(SourceInfo))">SetProperty(SourceInfo,$INFO[Skin.String(MyDynamicItems.SourceInfo)])</onload>
-    <onload>Skin.SetString(ActiveCustomOption.BackgroundImage,$INFO[Window.Property(BackgroundImage)])</onload>
+  <defaultcontrol always="yes">200</defaultcontrol>
+  <menucontrol>9001</menucontrol>
+  <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyItems.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
+  <onload condition="!String.IsEmpty(Window.Property(CustomContentPath))">Skin.SetString(MyItems.ContentPath,$INFO[Window.Property(CustomContentPath)])</onload>
+  <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyItems.MenuTitle)])</onload>
+  <onload condition="String.IsEmpty(Window.Property(CustomContentPath))">SetProperty(CustomContentPath,$INFO[Skin.String(MyItems.ContentPath)])</onload>
+  <onload>Skin.SetString(ActiveCustomOption.BackgroundImage,$INFO[Window.Property(BackgroundImage)])</onload>
 
-    <controls>
-        <include content="FullscreenDimensions" />
-        <include content="GlobalBackground" />
+  <controls>
+    <include content="FullscreenDimensions" />
+    <include content="GlobalBackground" />
 
-        <control type="fixedlist" id="400">
-            <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
-            <include content="InvisibleListDimensionsForView" />
-            <focusposition>1</focusposition>
-            <defaultcontrol>1</defaultcontrol>
-            <onup>400</onup>
-            <ondown>400</ondown>
-            <onleft>9001</onleft>
+    <control type="fixedlist" id="400">
+      <visible allowhiddenfocus="true">Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+      <include content="InvisibleListDimensionsForView" />
+      <focusposition>1</focusposition>
+      <defaultcontrol>1</defaultcontrol>
+      <onup>400</onup>
+      <ondown>400</ondown>
+      <onleft>9001</onleft>
 
-            <include content="InvisibleVerticalListItemsForView" />
+      <include content="InvisibleVerticalListItemsForView" />
 
-            <content>plugin://$INFO[Window.Property(SourceInfo)]</content>
-        </control>
+      <content>$INFO[Window.Property(CustomContentPath)]</content>
+    </control>
 
-        <control type="group">
-            <visible>Skin.HasSetting(MyItemsMenu.Default)</visible>
-            <include content="RevolveMenu">
-                <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
-            </include>
-        </control>
-        
-        <control type="group">
-            <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
-            <include content="CircleMenu">
-                <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
-            </include>
-        </control>
-        
-        <control type="group" id="9000">
-            <include content="BackgroundForSideMenu" />
+    <control type="group">
+      <visible>Skin.HasSetting(MyItemsMenu.Default)</visible>
+      <include content="RevolveMenu">
+        <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
+      </include>
+    </control>
+    
+    <control type="group">
+      <visible>!Skin.HasSetting(MyItemsMenu.Default)</visible>
+      <include content="CircleMenu">
+        <param name="label" value="$INFO[Window.Property(MenuTitle)]" />
+      </include>
+    </control>
+    
+    <control type="group" id="9000">
+      <include content="BackgroundForSideMenu" />
 
-            <include content="ButtonListForSideMenu">
-                <param name="onright" value="400" />
+      <include content="ButtonListForSideMenu">
+        <param name="onright" value="400" />
 
-                <include content="ViewGroupLabelForSideMenu" />
-                <include content="MyItemsMenuTypeButtonForSideMenu" />
+        <include content="ViewGroupLabelForSideMenu" />
+        <include content="MyItemsMenuTypeButtonForSideMenu" />
 
-                <include content="PlaylistLibraryGroupLabelForSideMenu" />
-                <include content="GenericPlaylistButtonForSideMenu" />
-                <include content="ClearPlaylistButtonForSideMenu" />
+        <include content="PlaylistLibraryGroupLabelForSideMenu" />
+        <include content="GenericPlaylistButtonForSideMenu" />
+        <include content="ClearPlaylistButtonForSideMenu" />
 
-                <include content="NavigationGroupLabelForSideMenu">
-                    <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
-                </include>
-                <include content="GlobalSearchButtonForSideMenu" />
-            </include>
-
-            <include content="PlayerControlsForSideMenu">
-                <param name="onright" value="400" />
-            </include>
-        </control>
-        
-        <include content="GlobalOverlay">
-            <param name="buttonid" value="200" />
-            <param name="controlid" value="400" />
+        <include content="NavigationGroupLabelForSideMenu">
+          <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
         </include>
-    </controls>
+        <include content="GlobalSearchButtonForSideMenu" />
+      </include>
+
+      <include content="PlayerControlsForSideMenu">
+        <param name="onright" value="400" />
+      </include>
+    </control>
+    
+    <include content="GlobalOverlay">
+      <param name="buttonid" value="200" />
+      <param name="controlid" value="400" />
+    </include>
+  </controls>
 </window>

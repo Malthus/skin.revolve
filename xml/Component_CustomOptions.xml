@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <variable name="CommandForCustomOptions">
+    <value condition="String.IsEqual(Window.Property(CustomType),W)">$INFO[Window.Property(CustomWindow),ActivateWindow(,)]</value>
+    <value condition="String.IsEqual(Window.Property(CustomType),M)">ActivateWindow(1103)</value>
+    <value condition="String.IsEqual(Window.Property(CustomType),P)">ActivateWindow(1102)</value>
+    <value condition="String.IsEqual(Window.Property(CustomType),A)">$INFO[Window.Property(CustomAddon),RunScript(,)]</value>
+    <value condition="String.IsEqual(Window.Property(CustomType),E)">RunScript(script.revolve.service,ExecuteShellCommand,"$INFO[Window.Property(CustomExecutable)]" $INFO[Window.Property(CustomParameters)])</value>
+<!--    <value condition="String.IsEqual(Window.Property(CustomType),E)">System.Exec('"$INFO[Window.Property(CustomExecutable)]" $INFO[Window.Property(CustomParameters)]')</value> -->
+    <value condition="String.IsEqual(Window.Property(CustomType),C)">$INFO[Control.GetLabel(48)]</value>
+    <value></value>
+  </variable>
+
+  <include name="DialogContentForCustomOptions">
+    <param name="submenuenable" default="false" />
+  
+    <definition>
+      <include content="LabelForDialog">
+        <param name="posy" value="80" />
+        <param name="textcolor" value="$VAR[TextColor]" />
+        <param name="label" value="$LOCALIZE[480]:" />
+      </include>
+
+      <control type="radiobutton" id="27">
+        <description>Option Activation Radiobutton</description>
+        <posx>560</posx>
+        <posy>120</posy>
+        <width>1240</width>
+        <radioposx>1180</radioposx>
+        <align>left</align>
+        <label>$LOCALIZE[19074]</label>
+        <selected>String.IsEqual(Window.Property(CustomOptionActive),True)</selected>
+        <onup>48</onup>
+        <ondown>30</ondown>
+        <onleft>9000</onleft>
+        <onclick condition="!String.IsEqual(Window.Property(CustomOptionActive),True)">SetProperty(CustomOptionActive,True)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomOptionActive),True)">SetProperty(CustomOptionActive,False)</onclick>
+      </control>
+
+      <control type="button" id="30">
+        <enable>!String.IsEmpty(Window.Property(CustomizableOption)) | Window.Is(1195)</enable>
+        <posx>560</posx>
+        <posy>160</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>$LOCALIZE[551]: $INFO[Window.Property(CustomName)]</label>
+        <onup>27</onup>
+        <ondown>31</ondown>
+        <onleft>9000</onleft>
+        <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomName)])</onclick>
+        <onclick>Skin.SetString(Dialog.Input)</onclick>
+        <onclick>SetProperty(CustomName,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <control type="button" id="31">
+        <enable>!String.IsEmpty(Window.Property(CustomizableOption)) | Window.Is(1195)</enable>
+        <posx>560</posx>
+        <posy>200</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>$LOCALIZE[462]: $INFO[Window.Property(CustomSubtitle)]</label>
+        <onup>30</onup>
+        <ondown>32</ondown>
+        <onleft>9000</onleft>
+        <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomSubtitle)])</onclick>
+        <onclick>Skin.SetString(Dialog.Input)</onclick>
+        <onclick>SetProperty(CustomSubtitle,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <control type="button" id="32">
+        <posx>560</posx>
+        <posy>240</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>$LOCALIZE[31802]: $INFO[Window.Property(CustomBackgroundImage)]</label>
+        <onup>31</onup>
+        <ondown>34</ondown>
+        <onleft>9000</onleft>
+        <onclick>Skin.SetImage(Dialog.Input)</onclick>
+        <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <include content="LabelForDialog">
+        <param name="posy" value="320" />
+        <param name="textcolor" value="$VAR[TextColor]" />
+        <param name="label" value="$LOCALIZE[31906]:" />
+      </include>
+
+      <control type="group">
+        <posx>560</posx>
+        <posy>360</posy>
+        
+        <control type="image">
+          <visible>!Control.HasFocus(34) + !Control.HasFocus(35)</visible>
+          <width>1240</width>
+          <height>40</height>
+          <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
+        </control>
+        <control type="image">
+          <visible>Control.HasFocus(34) | Control.HasFocus(35)</visible>
+          <width>1240</width>
+          <height>40</height>
+          <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texture>
+        </control>
+      </control>
+
+      <include content="ActionForCustomOptions">
+        <param name="label" value="Action: Open Window" />
+        <param name="visible" value="!String.IsEqual(Window.Property(CustomType),M) + !String.IsEqual(Window.Property(CustomType),P) + !String.IsEqual(Window.Property(CustomType),A) + !String.IsEqual(Window.Property(CustomType),E) + !String.IsEqual(Window.Property(CustomType),C)" />
+      </include>
+      <include content="ActionForCustomOptions">
+        <param name="label" value="Action: Open $LOCALIZE[31803]" />
+        <param name="visible" value="String.IsEqual(Window.Property(CustomType),M) + $PARAM[submenuenable]" />
+      </include>
+      <include content="ActionForCustomOptions">
+        <param name="label" value="Action: Open Playlist" />
+        <param name="visible" value="String.IsEqual(Window.Property(CustomType),P)" />
+      </include>
+      <include content="ActionForCustomOptions">
+        <param name="label" value="Action: Run Add-on" />
+        <param name="visible" value="String.IsEqual(Window.Property(CustomType),A)" />
+      </include>
+      <include content="ActionForCustomOptions">
+        <param name="label" value="Action: Run External Program" />
+        <param name="visible" value="String.IsEqual(Window.Property(CustomType),E)" />
+      </include>
+      <include content="ActionForCustomOptions">
+        <param name="label" value="Action: Execute $LOCALIZE[31805]" />
+        <param name="visible" value="String.IsEqual(Window.Property(CustomType),C)" />
+      </include>
+
+      <control type="button" id="34">
+        <description>Next Predefined Option Type Button</description>
+        <posx>1700</posx>
+        <posy>360</posy>
+        <width>40</width>
+        <height>40</height>
+        <texturenofocus colordiffuse="$VAR[SecondaryColor]">controls/circle-triangledown.png</texturenofocus>
+        <texturefocus colordiffuse="$VAR[BackgroundColor]">controls/circle-triangledown.png</texturefocus>
+        <onup>32</onup>
+        <ondown>41</ondown>
+        <onleft>9000</onleft>
+        <onright>35</onright>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),C)">SetProperty(CustomType,W)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),E)">SetProperty(CustomType,C)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),A)">SetProperty(CustomType,E)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),P)">SetProperty(CustomType,A)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),M)">SetProperty(CustomType,P)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),W) + $PARAM[submenuenable]">SetProperty(CustomType,M)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),W) + !$PARAM[submenuenable]">SetProperty(CustomType,P)</onclick>
+      </control>
+      
+      <control type="button" id="35">
+        <description>Previous Predefined Option Type Button</description>
+        <posx>1740</posx>
+        <posy>360</posy>
+        <width>40</width>
+        <height>40</height>
+        <texturenofocus colordiffuse="$VAR[SecondaryColor]">controls/circle-triangleup.png</texturenofocus>
+        <texturefocus colordiffuse="$VAR[BackgroundColor]">controls/circle-triangleup.png</texturefocus>
+        <onup>32</onup>
+        <ondown>41</ondown>
+        <onleft>34</onleft>
+        <onright>Noop</onright>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),W)">SetProperty(CustomType,C)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),M)">SetProperty(CustomType,W)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),P) + $PARAM[submenuenable]">SetProperty(CustomType,M)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),P) + !$PARAM[submenuenable]">SetProperty(CustomType,W)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),A)">SetProperty(CustomType,P)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),E)">SetProperty(CustomType,A)</onclick>
+        <onclick condition="String.IsEqual(Window.Property(CustomType),C)">SetProperty(CustomType,E)</onclick>
+      </control>
+
+      <control type="button" id="41">
+        <description>Submenu Identifier For Custom Option Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),M)</visible>
+        <posx>560</posx>
+        <posy>400</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>$LOCALIZE[31896]: $INFO[Window.Property(CustomMenuIdentifier)]</label>
+        <onup>34</onup>
+        <ondown>42</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomMenuIdentifier)])</onclick>
+        <onclick>Skin.SetString(Dialog.Input)</onclick>
+        <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>SetProperty(CustomAction,ActivateWindow(1103))</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+      
+      <control type="button" id="42">
+        <description>Edit Submenu Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),M)</visible>
+        <posx>560</posx>
+        <posy>440</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>$LOCALIZE[31806]</label>
+        <onup>41</onup>
+        <ondown>44</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>SetProperty(CustomMenuTitle,$INFO[Window.Property(CustomName)],1192)</onclick>
+        <onclick>SetProperty(TargetOption,$INFO[Window.Property(CustomMenuIdentifier)],1192)</onclick>
+        <onclick>RunScript(script.revolve.service,PopulateSubmenuFromSkinVariables,$INFO[Window.Property(CustomMenuIdentifier)]%02dOption,CustomSubmenu%02dOption,1192)</onclick>
+        <onclick>ActivateWindow(1192)</onclick>
+        <onclick>SetProperty(CustomAction,ActivateWindow(1103))</onclick>
+      </control>
+
+      <!-- https://xbmc.github.io/docs.kodi.tv/master/kodi-base/d0/d3e/page__list_of_built_in_functions.html -->
+
+      <!-- Open Window ~ selection / enter inputs (43) > ActivateWindow > Action-property -->
+
+      <!-- Open Playlist ~ select playlist (44) > CustomContentPath-property -->
+      <control type="button" id="44">
+        <description>Select Playlist Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),P)</visible>
+        <posx>560</posx>
+        <posy>400</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>Playlist: $INFO[Window.Property(CustomContentPath)]</label>
+        <onup>42</onup>
+        <ondown>45</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>Skin.SetFile(Dialog.Input,,home://)</onclick>
+        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <!-- Run Add-on ~ select add-on (45) > RunScript > Action-property -->
+      <control type="button" id="45">
+        <description>Select Add-on Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),A)</visible>
+        <posx>560</posx>
+        <posy>400</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>Add-on: $INFO[Window.Property(CustomAddon)]</label>
+        <onup>44</onup>
+        <ondown>46</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>Skin.SetAddon(Dialog.Input,xbmc.addon.executable)</onclick>
+        <onclick>SetProperty(CustomAddon,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <!-- Run External Program ~ select program (46) > CustomShellCommand -->
+      <control type="button" id="46">
+        <description>Select Executable Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),E)</visible>
+        <posx>560</posx>
+        <posy>400</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>Program: $INFO[Window.Property(CustomExecutable)]</label>
+        <onup>45</onup>
+        <ondown>47</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>Skin.SetFile(Dialog.Input,,home://)</onclick>
+        <onclick>SetProperty(CustomExecutable,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <!-- Run External Program ~ enter command line arguments (47) > System.Exec > Action-property -->
+      <control type="button" id="47">
+        <description>Executable Arguments Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),E)</visible>
+        <posx>560</posx>
+        <posy>440</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>Arguments: $INFO[Window.Property(CustomParameters)]</label>
+        <onup>46</onup>
+        <ondown>48</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomParameters)])</onclick>
+        <onclick>Skin.SetString(Dialog.Input)</onclick>
+        <onclick>SetProperty(CustomParameters,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <control type="button" id="48">
+        <description>Custom Command Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),C)</visible>
+        <posx>560</posx>
+        <posy>400</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>Command: $INFO[Window.Property(CustomAction)]</label>
+        <onup>47</onup>
+        <ondown>27</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomAction)])</onclick>
+        <onclick>Skin.SetString(Dialog.Input)</onclick>
+        <onclick>SetProperty(CustomAction,$INFO[Skin.String(Dialog.Input)])</onclick>
+        <onclick>Skin.Reset(Dialog.Input)</onclick>
+      </control>
+
+      <include content="LabelForDialog">
+        <param name="posy" value="520" />
+        <param name="textcolor" value="$VAR[TextColor]" />
+        <param name="label" value="$LOCALIZE[31910]:" />
+      </include>
+
+      <include content="LabelForDialog">
+        <param name="posx" value="580" />
+        <param name="posy" value="560" />
+        <param name="textcolor" value="$VAR[TextColor]" />
+        <param name="label" value="$VAR[CommandForCustomOptions]" />
+      </include>
+    </definition>
+  </include>
+
+  <include name="ButtonListForCustomOptions">
+    <definition>
+      <control type="grouplist" id="9000">
+        <include content="MarkupForButtonListForDialog">
+          <param name="posy" value="360" />
+          <param name="height" value="240" />
+        </include>
+        <onright>34</onright>
+
+        <control type="button" id="25">
+          <description>Clear Button</description>
+          <posy>20</posy>
+          <label>$LOCALIZE[192]</label>
+          <onclick>ClearProperty(CustomOptionActive)</onclick>
+          <onclick>ClearProperty(CustomName)</onclick>
+          <onclick>ClearProperty(CustomSubtitle)</onclick>
+          <onclick>ClearProperty(CustomBackgroundImage)</onclick>
+          <onclick>SetProperty(CustomType,W)</onclick>
+          <onclick>ClearProperty(CustomWindow)</onclick>
+          <onclick>ClearProperty(CustomMenuIdentifier)</onclick>
+          <onclick>ClearProperty(CustomContentPath)</onclick>
+          <onclick>ClearProperty(CustomAddon)</onclick>
+          <onclick>ClearProperty(CustomExecutable)</onclick>
+          <onclick>ClearProperty(CustomParameters)</onclick>
+          <onclick>ClearProperty(CustomCommand)</onclick>
+          <onclick>ClearProperty(CustomAction)</onclick>
+        </control>
+        <control type="radiobutton" id="26">
+          <description>Help Radiobutton</description>
+          <label>$LOCALIZE[10043]</label>
+          <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
+          <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
+        </control>
+        <control type="button" id="20">
+          <description>Ok Button</description>
+          <posy>20</posy>
+          <label>$LOCALIZE[186]</label>
+          <onclick condition="!String.IsEqual(Window.Property(CustomOptionActive),True)">Skin.Reset($INFO[Window.Property(TargetOption)].Active)</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomOptionActive),True)">Skin.SetBool($INFO[Window.Property(TargetOption)].Active)</onclick>
+          <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Type,$INFO[Window.Property(CustomType)])</onclick>
+          <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Name,$INFO[Window.Property(CustomName)])</onclick>
+          <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Subtitle,$INFO[Window.Property(CustomSubtitle)])</onclick>
+          <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].BackgroundImage,$INFO[Window.Property(CustomBackgroundImage)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),W)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,$INFO[Window.Property(CustomWindow)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1103)</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),P)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1102)</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),A) | String.IsEqual(Window.Property(CustomType),E) | String.IsEqual(Window.Property(CustomType),C)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,0)</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].MenuIdentifier,$INFO[Window.Property(CustomMenuIdentifier)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),P)">Skin.SetString($INFO[Window.Property(TargetOption)].ContentPath,$INFO[Window.Property(CustomContentPath)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Addon,$INFO[Window.Property(CustomAddon)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),E)">Skin.SetString($INFO[Window.Property(TargetOption)].Executable,$INFO[Window.Property(CustomExecutable)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),E)">Skin.SetString($INFO[Window.Property(TargetOption)].Parameters,$INFO[Window.Property(CustomParameters)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),A) | String.IsEqual(Window.Property(CustomType),E) | String.IsEqual(Window.Property(CustomType),C)">Skin.SetString($INFO[Window.Property(TargetOption)].Action,$VAR[CommandForCustomOptions])</onclick>
+          <onclick>Close</onclick>
+        </control>
+        <control type="button" id="21">
+          <description>Cancel Button</description>
+          <label>$LOCALIZE[222]</label>
+          <onclick>Close</onclick>
+        </control>
+      </control>
+    </definition>
+  </include>
+  
+  <include name="HelpForCustomOptions">
+    <definition>
+      <control type="group">
+        <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
+        <posx>20</posx>
+        <posy>20</posy>
+      
+        <include>HelpFrameForDialog</include>
+      
+        <control type="group">
+          <posx>20</posx>
+          <posy>20</posy>
+          <width>440</width>
+          <height>240</height>
+      
+          <control type="textbox">
+            <visible>Control.HasFocus(20)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31759]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(21)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31760]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(22)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31761]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(23)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31762]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(24)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31763]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(25)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31764]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(26)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31765]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(27)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31632]</label>
+          </control>
+
+          <control type="textbox">
+            <visible>Control.HasFocus(30)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31750]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(31)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31751]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(32)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31752]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(34) | Control.HasFocus(35)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31753]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(36)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31754]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(37)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31755]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(38)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31756]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(39)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31757]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(40)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31758]</label>
+          </control>
+        </control>
+      </control>
+    </definition>
+  </include>
+  
+  <include name="ActionForCustomOptions">
+    <param name="posx" default="580" />
+    <param name="posy" default="360" />
+    <param name="label" default="" />
+    <param name="visible" default="true" />
+    <param name="upid" default="34" />
+    <param name="downid" default="35" />
+
+    <definition>
+      <control type="group">
+        <visible>$PARAM[visible]</visible>
+        <posx>$PARAM[posx]</posx>
+        <posy>$PARAM[posy]</posy>
+
+        <control type="label">
+          <visible>!Control.HasFocus($PARAM[upid]) + !Control.HasFocus($PARAM[downid])</visible>
+          <width>1100</width>
+          <font>DialogTextFont</font>
+          <textcolor>$VAR[MainColor]</textcolor>
+          <align>left</align>
+          <label>$PARAM[label]</label>
+        </control>
+        <control type="label">
+          <visible>Control.HasFocus($PARAM[upid]) | Control.HasFocus($PARAM[downid])</visible>
+          <width>1100</width>
+          <font>DialogTextFont</font>
+          <textcolor>$VAR[BackgroundColor]</textcolor>
+          <align>left</align>
+          <label>$PARAM[label]</label>
+        </control>
+      </control>
+    </definition>
+  </include>
+</includes>

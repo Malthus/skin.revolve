@@ -399,9 +399,10 @@
         <label>$INFO[Skin.String($PARAM[variable].Name)]</label>
         <property name="Label3">$INFO[Skin.String($PARAM[variable].Subtitle)]</property>
         <property name="BackgroundImage">$INFO[Skin.String($PARAM[variable].BackgroundImage)]</property>
-        <onclick>SetProperty(MenuTitle,$INFO[Skin.String($PARAM[variable].MenuTitle)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
-        <onclick>SetProperty(SourceInfo,$INFO[Skin.String($PARAM[variable].SourceInfo)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
-        <onclick>SetProperty(BackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
+        <onclick>SetProperty(CustomName,$INFO[Skin.String($PARAM[variable].Name)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
+        <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
+        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
+        <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
         <onclick>$INFO[Skin.String($PARAM[variable].Action)]</onclick>
       </item>
     </definition>

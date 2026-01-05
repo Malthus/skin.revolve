@@ -393,13 +393,17 @@
                 <selected>Skin.HasSetting($PARAM[variable].Active)</selected>
                 <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
                 <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
-                <onclick>SetProperty(CustomOptionType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
-                <onclick>SetProperty(CustomOptionName,$PARAM[label],1190)</onclick>
+                <onclick>SetProperty(CustomType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
+                <onclick>SetProperty(CustomName,$PARAM[label],1190)</onclick>
                 <onclick>SetProperty(CustomSubtitle,$PARAM[subtitle],1190)</onclick>
                 <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1190)</onclick>
-                <onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String($PARAM[variable].MenuTitle)],1190)</onclick>
-                <onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String($PARAM[variable].SourceInfo)],1190)</onclick>
                 <onclick>SetProperty(CustomWindow,$INFO[Skin.String($PARAM[variable].Window)],1190)</onclick>
+                <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],1190)</onclick>
+                <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],1190)</onclick>
+                <onclick>SetProperty(CustomAddon,$INFO[Skin.String($PARAM[variable].Addon)],1190)</onclick>
+                <onclick>SetProperty(CustomExecutable,$INFO[Skin.String($PARAM[variable].Executable)],1190)</onclick>
+                <onclick>SetProperty(CustomParameters,$INFO[Skin.String($PARAM[variable].Parameters)],1190)</onclick>
+                <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Command)],1190)</onclick>
                 <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Action)],1190)</onclick>
                 <onclick>SetProperty(TargetOption,$PARAM[variable],1190)</onclick>
                 <onclick>ClearProperty(CustomizableOption,1190)</onclick>
@@ -423,13 +427,17 @@
                 <selected>Skin.HasSetting($PARAM[variable].Active)</selected>
                 <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
                 <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
-                <onclick>SetProperty(CustomOptionType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
-                <onclick>SetProperty(CustomOptionName,$INFO[Skin.String($PARAM[variable].Name)],1190)</onclick>
+                <onclick>SetProperty(CustomType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
+                <onclick>SetProperty(CustomName,$INFO[Skin.String($PARAM[variable].Name)],1190)</onclick>
                 <onclick>SetProperty(CustomSubtitle,$INFO[Skin.String($PARAM[variable].Subtitle)],1190)</onclick>
                 <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1190)</onclick>
-                <onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String($PARAM[variable].MenuTitle)],1190)</onclick>
-                <onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String($PARAM[variable].SourceInfo)],1190)</onclick>
                 <onclick>SetProperty(CustomWindow,$INFO[Skin.String($PARAM[variable].Window)],1190)</onclick>
+                <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],1190)</onclick>
+                <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],1190)</onclick>
+                <onclick>SetProperty(CustomAddon,$INFO[Skin.String($PARAM[variable].Addon)],1190)</onclick>
+                <onclick>SetProperty(CustomExecutable,$INFO[Skin.String($PARAM[variable].Executable)],1190)</onclick>
+                <onclick>SetProperty(CustomParameters,$INFO[Skin.String($PARAM[variable].Parameters)],1190)</onclick>
+                <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Command)],1190)</onclick>
                 <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Action)],1190)</onclick>
                 <onclick>SetProperty(TargetOption, $PARAM[variable],1190)</onclick>
                 <onclick>SetProperty(CustomizableOption,true,1190)</onclick>
@@ -451,13 +459,17 @@
                 <selected>Skin.HasSetting($PARAM[variable].Active)</selected>
                 <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
                 <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
-                <onclick>SetProperty(CustomOptionType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
-                <onclick>SetProperty(CustomOptionName,$INFO[Skin.String($PARAM[variable].Name)],1190)</onclick>
+                <onclick>SetProperty(CustomType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
+                <onclick>SetProperty(CustomName,$INFO[Skin.String($PARAM[variable].Name)],1190)</onclick>
                 <onclick>SetProperty(CustomSubtitle,$INFO[Skin.String($PARAM[variable].Subtitle)],1190)</onclick>
                 <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1190)</onclick>
-                <onclick>SetProperty(CustomMenuTitle,$INFO[Skin.String($PARAM[variable].MenuTitle)],1190)</onclick>
-                <onclick>SetProperty(CustomSourceInfo,$INFO[Skin.String($PARAM[variable].SourceInfo)],1190)</onclick>
                 <onclick>SetProperty(CustomWindow,$INFO[Skin.String($PARAM[variable].Window)],1190)</onclick>
+                <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],1190)</onclick>
+                <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],1190)</onclick>
+                <onclick>SetProperty(CustomAddon,$INFO[Skin.String($PARAM[variable].Addon)],1190)</onclick>
+                <onclick>SetProperty(CustomExecutable,$INFO[Skin.String($PARAM[variable].Executable)],1190)</onclick>
+                <onclick>SetProperty(CustomParameters,$INFO[Skin.String($PARAM[variable].Parameters)],1190)</onclick>
+                <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Command)],1190)</onclick>
                 <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Action)],1190)</onclick>
                 <onclick>SetProperty(TargetOption, $PARAM[variable],1190)</onclick>
                 <onclick>SetProperty(CustomizableOption,true,1190)</onclick>
