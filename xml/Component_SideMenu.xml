@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+  <expression name="FocusOnSideMenu">ControlGroup(9000).HasFocus() | ControlGroup(9001).HasFocus() | ControlGroup(9010).HasFocus() | ControlGroup(9020).HasFocus() | ControlGroup(9021).HasFocus()</expression>
+  <expression name="ViewsForLeftSideMenu">Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(59)</expression>
+  <expression name="ViewsForTopSideMenu">Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)</expression>
+
+  <include name="SideMenu">
+    <param name="leftside" default="true" />
+    <param name="topside" default="false" />
+    <param name="rightside" default="false" />
+    <param name="onleft" default="Noop" />
+    <param name="onright" default="52" />
+
+    <definition>
+      <control type="group" id="9000">
+        <include content="BackgroundForSideMenu">
+          <param name="leftside" value="$PARAM[leftside]" />
+          <param name="topside" value="$PARAM[topside]" />
+          <param name="rightside" value="$PARAM[rightside]" />
+        </include>
+
+        <include content="PlayerControlsForSideMenu">
+          <param name="onleft" value="$PARAM[onleft]" />
+          <param name="onright" value="$PARAM[onright]" />
+        </include>
+
+        <include content="ButtonListForSideMenu">
+          <param name="onleft" value="$PARAM[onleft]" />
+          <param name="onright" value="$PARAM[onright]" />
+
+          <nested />
+        </include>
+      </control>
+    </definition>
+  </include>
+
   <include name="ButtonListForSideMenu">
     <param name="onup" default="9404" />
     <param name="ondown" default="9403" />
@@ -81,23 +115,28 @@
   </include>
 
   <include name="BackgroundForSideMenu">
-    <param name="topmenu" default="false" />
+    <param name="leftside" default="true" />
+    <param name="topside" default="false" />
+    <param name="rightside" default="false" />
 
     <definition>
       <animation effect="slide" start="0,0" end="-600,0" time="500" reversible="false">WindowClose</animation>
-      <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9021).HasFocus() + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]">
+      <animation effect="slide" start="-600,0" end="0,0" time="500" reversible="false">WindowOpen</animation>
+      
+      <animation type="conditional" condition="!$EXP[FocusOnSideMenu] + [$EXP[ViewsForLeftSideMenu] | $PARAM[leftside]]">
         <effect type="slide" start="0,0" end="-540,0" time="200" />
       </animation>
-      <animation type="conditional" condition="!ControlGroup(9000).HasFocus() + !ControlGroup(9001).HasFocus() + !ControlGroup(9010).HasFocus() + !ControlGroup(9020).HasFocus() + !ControlGroup(9022).HasFocus() + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]">
+      <animation type="conditional" condition="!$EXP[FocusOnSideMenu] + [$EXP[ViewsForTopSideMenu] | $PARAM[topside]]">
         <effect type="slide" start="0,0" end="0,-1080" time="200" />
+      </animation>
+      <animation type="conditional" condition="!$EXP[FocusOnSideMenu] + $PARAM[rightside]">
+        <effect type="slide" start="1380,0" end="1920,0" time="200" />
       </animation>
 
       <control type="group">
         <include content="LeftHandle">
           <param name="id" value="9021" />
           <param name="posx" value="540" />
-          <param name="posy" value="340" />
-          <param name="visible" value="Skin.HasSetting(SideMenu.Visible) + !Control.IsVisible(53) + !Control.IsVisible(56) + !Control.IsVisible(57) + !$PARAM[topmenu]" />
           <param name="texturefocus" value="controls/button-menu.png" />
           <param name="texturenofocus" value="controls/button-menu.png" />
         </include>
@@ -106,7 +145,13 @@
           <param name="id" value="9022" />
           <param name="posx" value="70" />
           <param name="posy" value="1080" />
-          <param name="visible" value="Skin.HasSetting(SideMenu.Visible) + [Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57) | $PARAM[topmenu]]" />
+          <param name="texturefocus" value="controls/button-menu.png" />
+          <param name="texturenofocus" value="controls/button-menu.png" />
+        </include>
+
+        <include content="RightHandle">
+          <param name="id" value="9022" />
+          <param name="posx" value="0" />
           <param name="texturefocus" value="controls/button-menu.png" />
           <param name="texturenofocus" value="controls/button-menu.png" />
         </include>
@@ -127,27 +172,6 @@
           <param name="posy" value="0" />
           <param name="width" value="MenuAreaWidth" />
           <param name="height" value="FullScreenHeight" />
-        </include>
-      </control>
-    </definition>
-  </include>
-
-  <include name="SideMenu">
-    <param name="id" default="9000" />
-    <param name="topmenu" default="false" />
-    <param name="onright" default="52" />
-
-    <definition>
-      <control type="group" id="9000">
-        <include content="BackgroundForSideMenu" />
-
-        <include content="PlayerControlsForSideMenu">
-          <param name="onright" value="$PARAM[onright]" />
-        </include>
-
-        <include content="ButtonListForSideMenu">
-          <param name="onright" value="99" />
-          <nested />
         </include>
       </control>
     </definition>
@@ -244,6 +268,32 @@
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
         <label>  [UPPERCASE]$LOCALIZE[31110][/UPPERCASE]</label>
+      </control>
+    </definition>
+  </include>
+
+  <include name="KodiControlGroupLabelForSideMenu">
+    <definition>
+      <control type="label" id="997">
+        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <height>20</height>
+        <align>left</align>
+        <font>SideMenuGroupFont</font>
+        <textcolor>$VAR[SelectColor]</textcolor>
+        <label>  [UPPERCASE]Kodi Control Options[/UPPERCASE]</label>
+      </control>
+    </definition>
+  </include>
+
+  <include name="SystemGroupLabelForSideMenu">
+    <definition>
+      <control type="label" id="998">
+        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <height>20</height>
+        <align>left</align>
+        <font>SideMenuGroupFont</font>
+        <textcolor>$VAR[SelectColor]</textcolor>
+        <label>  [UPPERCASE]System Options[/UPPERCASE]</label>
       </control>
     </definition>
   </include>
@@ -359,7 +409,7 @@
       </control>
     </definition>
   </include>
-  
+
   <include name="GroupByButtonForSideMenu">
     <definition>
       <control type="radiobutton" id="5">
@@ -724,6 +774,139 @@
         <label>$LOCALIZE[137]</label>
         <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(tvsearch)</onclick>
         <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ReplaceWindow(radiosearch)</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="SettingsButtonForSideMenu">
+    <definition>
+      <control type="button" id="37">
+        <align>left</align>
+        <label>$LOCALIZE[5]</label>
+        <onclick>ActivateWindow(settings)</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="ExitButtonForSideMenu">
+    <definition>
+      <control type="button" id="38">
+        <visible>System.ShowExitButton + Skin.HasSetting(ExitMenu.ExitOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[13012]</label>
+        <onclick>Quit</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="LogoffButtonForSideMenu">
+    <definition>
+      <control type="button" id="39">
+        <visible>System.IsLoggedOn + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + Skin.HasSetting(ExitMenu.LogOffOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[20126]</label>
+        <label2>$INFO[System.ProfileName]</label2>
+        <onclick>Dialog.Close(all,true)</onclick>
+        <onclick>System.LogOff()</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="RestartButtonForSideMenu">
+    <definition>
+      <control type="button" id="40">
+        <visible>[System.Platform.Windows | System.Platform.Linux] + Skin.HasSetting(ExitMenu.RestartOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[13313]</label>
+        <onclick>RestartApp</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="SuspendButtonForSideMenu">
+    <definition>
+      <control type="button" id="41">
+        <visible>System.CanSuspend + Skin.HasSetting(ExitMenu.SuspendOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[13011]</label>
+        <onclick>Suspend</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="HibernateButtonForSideMenu">
+    <definition>
+      <control type="button" id="42">
+        <visible>System.CanHibernate + Skin.HasSetting(ExitMenu.HibernateOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[13010]</label>
+        <onclick>Hibernate</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="RebootButtonForSideMenu">
+    <definition>
+      <control type="button" id="43">
+        <visible>System.CanReboot + Skin.HasSetting(ExitMenu.RebootOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[13013]</label>
+        <onclick>Reboot</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="PowerdownButtonForSideMenu">
+    <definition>
+      <control type="button" id="44">
+        <visible>System.CanPowerDown + Skin.HasSetting(ExitMenu.PowerdownOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[31082]</label>
+        <onclick>Powerdown</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="PowerdownStartTimerButtonForSideMenu">
+    <definition>
+      <control type="button" id="45">
+        <visible>System.CanPowerDown + !System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.PowerdownTimerOption.Active)</visible>
+        <align>left</align>
+        <label>Delayed Power Off</label>
+        <onclick>AlarmClock(shutdowntimer,Powerdown)</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="PowerdownCancelTimerButtonForSideMenu">
+    <definition>
+      <control type="button" id="46">
+        <visible>System.HasAlarm(shutdowntimer)</visible>
+        <align>left</align>
+        <label>Cancel: $INFO[System.Alarmpos]</label>
+        <onclick>CancelAlarm(shutdowntimer)</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="EnterMastermodeButtonForSideMenu">
+    <definition>
+      <control type="button" id="47">
+        <visible>System.HasLocks + !System.IsMaster + Skin.HasSetting(ExitMenu.MasterModeOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[20045]</label>
+        <onclick>Mastermode()</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="LeaveMastermodeButtonForSideMenu">
+    <definition>
+      <control type="button" id="48">
+        <visible>System.HasLocks + System.IsMaster + Skin.HasSetting(ExitMenu.MasterModeOption.Active)</visible>
+        <align>left</align>
+        <label>$LOCALIZE[20046]</label>
+        <onclick>Mastermode()</onclick>
       </control>
     </definition>
   </include>

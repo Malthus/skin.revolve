@@ -12,8 +12,9 @@
       <focusposition>1</focusposition>
       <onup>300</onup>
       <ondown>300</ondown>
-      <onleft condition="[Container(300).HasFocus(5) + !String.IsEmpty(Skin.String(CircleMovieOption.Source))] | [Container(300).HasFocus(6) + !String.IsEmpty(Skin.String(CircleEpisodeOption.Source))] | [Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable)] | [Container(300).HasFocus(16) + !String.IsEmpty(Skin.String(CircleAlbumOption.Source))]">600</onleft>
+      <onleft condition="$EXP[NextAiredInCircleItemsVisible] | $EXP[MoviesInCircleItemsVisible] | $EXP[EpisodesInCircleItemsVisible] | $EXP[AlbumsInCircleItemsVisible]">600</onleft>
       <onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)">900</onleft>
+      <onleft condition="!$EXP[NextAiredInCircleItemsVisible] + !$EXP[MoviesInCircleItemsVisible] + !$EXP[EpisodesInCircleItemsVisible] + !$EXP[AlbumsInCircleItemsVisible] + ![Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)]">9001</onleft>
       <onright>Noop</onright>
 
       <include content="InvisibleVerticalListItemsForView" />
@@ -25,6 +26,36 @@
     <include content="ListForHomeRevolveList" />
     <include content="RingForHomeRevolveList" />
     <include content="BigClock" />
+
+    <control type="group" id="9000">
+      <include content="BackgroundForSideMenu" />
+
+      <include content="ButtonListForSideMenu">
+        <param name="onright" value="300" />
+
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="GlobalSearchButtonForSideMenu" />
+        <include content="SettingsButtonForSideMenu" />
+        
+        <include content="KodiControlGroupLabelForSideMenu" />
+        <include content="LogoffButtonForSideMenu" />
+        <include content="EnterMastermodeButtonForSideMenu" />
+        <include content="LeaveMastermodeButtonForSideMenu" />
+        <include content="ExitButtonForSideMenu" />
+        
+        <include content="SystemGroupLabelForSideMenu" />
+        <include content="SuspendButtonForSideMenu" />
+        <include content="HibernateButtonForSideMenu" />
+        <include content="PowerdownButtonForSideMenu" />
+        <include content="PowerdownStartTimerButtonForSideMenu" />
+        <include content="PowerdownCancelTimerButtonForSideMenu" />
+        <include content="RestartButtonForSideMenu" />
+      </include>
+
+      <include content="PlayerControlsForSideMenu">
+        <param name="onright" value="300" />
+      </include>
+    </control>
 
     <include content="GlobalOverlay">
       <param name="buttonid" value="200" />

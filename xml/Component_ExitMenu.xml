@@ -69,14 +69,14 @@
         </item>
         <item id="9">
           <description>Custom Shutdown Timer Option</description>
-          <visible>!System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.CustomTimerOption.Active)</visible>
+          <visible>!System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.PowerdownTimerOption.Active)</visible>
           <label>$LOCALIZE[20150]</label>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>AlarmClock(shutdowntimer,ShutDown)</onclick>
         </item>
         <item id="10">
           <description>Custom Cancel Timer Option</description>
-          <visible>System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.CustomTimerOption.Active)</visible>
+          <visible>System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.PowerdownTimerOption.Active)</visible>
           <label>$LOCALIZE[20151]</label>
           <label2>$LOCALIZE[20145]: [B]$INFO[System.Alarmpos][/B]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
