@@ -136,6 +136,7 @@
       <control type="group">
         <include content="LeftHandle">
           <param name="id" value="9021" />
+          <param name="visible" value="Skin.HasSetting(SideMenu.Visible)" />
           <param name="posx" value="540" />
           <param name="texturefocus" value="controls/button-menu.png" />
           <param name="texturenofocus" value="controls/button-menu.png" />
@@ -143,6 +144,7 @@
 
         <include content="TopHandle">
           <param name="id" value="9022" />
+          <param name="visible" value="Skin.HasSetting(SideMenu.Visible)" />
           <param name="posx" value="70" />
           <param name="posy" value="1080" />
           <param name="texturefocus" value="controls/button-menu.png" />
@@ -151,6 +153,7 @@
 
         <include content="RightHandle">
           <param name="id" value="9022" />
+          <param name="visible" value="Skin.HasSetting(SideMenu.Visible)" />
           <param name="posx" value="0" />
           <param name="texturefocus" value="controls/button-menu.png" />
           <param name="texturenofocus" value="controls/button-menu.png" />
@@ -178,20 +181,22 @@
   </include>
 
   <include name="ViewGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="label" id="990">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]$LOCALIZE[14018][/UPPERCASE]</label>
+        <label>[UPPERCASE]$LOCALIZE[14018][/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="NavigationGroupLabelForSideMenu">
-    <param name="visible" default="Skin.HasSetting(SideMenu.Grouped)" />
+    <param name="visible" default="true" />
   
     <definition>
       <control type="label" id="991">
@@ -200,52 +205,58 @@
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]$LOCALIZE[31106][/UPPERCASE]</label>
+        <label>[UPPERCASE]$LOCALIZE[31106][/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="PlaylistLibraryGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="label" id="992">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]$LOCALIZE[31107][/UPPERCASE]</label>
+        <label>[UPPERCASE]$LOCALIZE[31107][/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="SlideshowGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="label" id="993">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]$LOCALIZE[31108][/UPPERCASE]</label>
+        <label>[UPPERCASE]$LOCALIZE[31108][/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="SettingsGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="label" id="994">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]$LOCALIZE[31109][/UPPERCASE]</label>
+        <label>[UPPERCASE]$LOCALIZE[31109][/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="ActionGroupLabelForSideMenu">
-    <param name="visible" default="Skin.HasSetting(SideMenu.Grouped)" />
+    <param name="visible" default="true" />
   
     <definition>
       <control type="label" id="995">
@@ -254,54 +265,62 @@
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]$LOCALIZE[31972][/UPPERCASE]</label>
+        <label>[UPPERCASE]$LOCALIZE[31972][/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="MediaGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="label" id="996">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]$LOCALIZE[31110][/UPPERCASE]</label>
+        <label>[UPPERCASE]$LOCALIZE[31110][/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="KodiControlGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="label" id="997">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]Kodi Control Options[/UPPERCASE]</label>
+        <label>[UPPERCASE]Kodi Control Options[/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="SystemGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="label" id="998">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
         <textcolor>$VAR[SelectColor]</textcolor>
-        <label>  [UPPERCASE]System Options[/UPPERCASE]</label>
+        <label>[UPPERCASE]System Options[/UPPERCASE]</label>
       </control>
     </definition>
   </include>
 
   <include name="SettingsLevelGroupLabelForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
-      <control type="label" id="990">
-        <visible>Skin.HasSetting(SideMenu.Grouped)</visible>
+      <control type="label" id="989">
+        <visible>$PARAM[visible]</visible>
         <height>20</height>
         <align>left</align>
         <font>SideMenuGroupFont</font>
@@ -418,7 +437,7 @@
       </control>
     </definition>
   </include>
-  
+
   <include name="AddonSettingsButtonForSideMenu">
     <definition>
       <control type="button" id="5">
@@ -907,6 +926,17 @@
         <align>left</align>
         <label>$LOCALIZE[20046]</label>
         <onclick>Mastermode()</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="SettingsHelpToggleButtonForSideMenu">
+    <definition>
+      <control type="radiobutton" id="49">
+        <align>left</align>
+        <label>Settings Help</label>
+        <selected>Skin.HasSetting(Settings.HelpVisible)</selected>
+        <onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
       </control>
     </definition>
   </include>

@@ -97,16 +97,6 @@
             <param name="label" value="$LOCALIZE[31907]" />
           </include>
 
-          <control type="radiobutton" id="810">
-            <description>Group Items In Side Menu Option</description>
-            <width>1100</width>
-            <radioposx>1040</radioposx>
-            <align>left</align>
-            <label>$LOCALIZE[31152]</label>
-            <selected>Skin.HasSetting(SideMenu.Grouped)</selected>
-            <onclick>Skin.ToggleSetting(SideMenu.Grouped)</onclick>
-          </control>
-          
           <control type="radiobutton" id="801">
             <description>Show Unfocused Side Menu Option</description>
             <width>1100</width>

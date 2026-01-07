@@ -237,7 +237,7 @@
         <param name="onright" value="400" />
 
         <include content="NavigationGroupLabelForSideMenu">
-          <param name="visible" value="Skin.HasSetting(SideMenu.Grouped) + Control.IsVisible(91)" />
+          <param name="visible" value="Control.IsVisible(91)" />
         </include>
         <include content="GlobalSearchButtonForSideMenu" />
       </include>
