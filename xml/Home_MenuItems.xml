@@ -359,7 +359,7 @@
           <thumb>$INFO[Skin.String(AddonsOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(addonbrowser)</onclick>
         </item>
-<!--
+
         <item id="11">
           <description>Settings Option</description>
           <visible>Skin.HasSetting(SettingsOption.Active)</visible>
@@ -385,7 +385,6 @@
           <thumb>$INFO[Skin.String(ExitOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(1150)</onclick>
         </item>
--->
       </content>
     </definition>
   </include>
