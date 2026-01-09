@@ -178,7 +178,7 @@
       </control>
 
       <control type="button" id="41">
-        <description>Submenu Identifier For Custom Option Button</description>
+        <description>Enter Submenu Identifier Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),M)</visible>
         <posx>560</posx>
         <posy>400</posy>
@@ -219,7 +219,7 @@
 
       <!-- https://xbmc.github.io/docs.kodi.tv/master/kodi-base/d0/d3e/page__list_of_built_in_functions.html -->
 
-      <!-- Open Window ~ selection / enter inputs (43) > ActivateWindow > Action-property -->
+      <!-- Open Window ~ selection (43) > Set Window + ActivateWindow > Action-property -->
 
       <!-- Open Playlist ~ select playlist (44) > CustomContentPath-property -->
       <control type="button" id="44">
@@ -232,16 +232,18 @@
         <align>left</align>
         <label>Playlist: $INFO[Window.Property(CustomContentPath)]</label>
         <onup>42</onup>
-        <ondown>45</ondown>
+        <ondown>46</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetFile(Dialog.Input,,home://)</onclick>
+        <onclick>Skin.SetFile(Dialog.Input,,special://profile/playlists/)</onclick>
         <onclick>SetProperty(CustomContentPath,$INFO[Skin.String(Dialog.Input)])</onclick>
         <onclick>Skin.Reset(Dialog.Input)</onclick>
       </control>
 
-      <!-- Run Add-on ~ select add-on (45) > RunScript > Action-property -->
-      <control type="button" id="45">
+      <!-- Run Add-on ~ select add-on type (45) > Property "xbmc.addon.executable" to set next control -->
+
+      <!-- Run Add-on ~ select add-on (46) > RunScript > Action-property -->
+      <control type="button" id="46">
         <description>Select Add-on Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),A)</visible>
         <posx>560</posx>
@@ -251,7 +253,7 @@
         <align>left</align>
         <label>Add-on: $INFO[Window.Property(CustomAddon)]</label>
         <onup>44</onup>
-        <ondown>46</ondown>
+        <ondown>47</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
         <onclick>Skin.SetAddon(Dialog.Input,xbmc.addon.executable)</onclick>
@@ -259,9 +261,9 @@
         <onclick>Skin.Reset(Dialog.Input)</onclick>
       </control>
 
-      <!-- Run External Program ~ select program (46) > CustomShellCommand -->
-      <control type="button" id="46">
-        <description>Select Executable Button</description>
+      <!-- Run External Program ~ select program (47) > CustomShellCommand -->
+      <control type="button" id="47">
+        <description>Select External Executable Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),E)</visible>
         <posx>560</posx>
         <posy>400</posy>
@@ -269,18 +271,18 @@
         <font>DialogTextFont</font>
         <align>left</align>
         <label>Program: $INFO[Window.Property(CustomExecutable)]</label>
-        <onup>45</onup>
-        <ondown>47</ondown>
+        <onup>46</onup>
+        <ondown>48</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetFile(Dialog.Input,,home://)</onclick>
+        <onclick>Skin.SetFile(Dialog.Input)</onclick>
         <onclick>SetProperty(CustomExecutable,$INFO[Skin.String(Dialog.Input)])</onclick>
         <onclick>Skin.Reset(Dialog.Input)</onclick>
       </control>
 
-      <!-- Run External Program ~ enter command line arguments (47) > System.Exec > Action-property -->
-      <control type="button" id="47">
-        <description>Executable Arguments Button</description>
+      <!-- Run External Program ~ enter command line arguments (48) > System.Exec > Action-property -->
+      <control type="button" id="48">
+        <description>Enter Executable Arguments Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),E)</visible>
         <posx>560</posx>
         <posy>440</posy>
@@ -288,8 +290,8 @@
         <font>DialogTextFont</font>
         <align>left</align>
         <label>Arguments: $INFO[Window.Property(CustomParameters)]</label>
-        <onup>46</onup>
-        <ondown>48</ondown>
+        <onup>47</onup>
+        <ondown>49</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
         <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomParameters)])</onclick>
@@ -298,8 +300,8 @@
         <onclick>Skin.Reset(Dialog.Input)</onclick>
       </control>
 
-      <control type="button" id="48">
-        <description>Custom Command Button</description>
+      <control type="button" id="49">
+        <description>Enter Custom Command Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),C)</visible>
         <posx>560</posx>
         <posy>400</posy>
@@ -307,7 +309,7 @@
         <font>DialogTextFont</font>
         <align>left</align>
         <label>Command: $INFO[Window.Property(CustomAction)]</label>
-        <onup>47</onup>
+        <onup>48</onup>
         <ondown>27</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
@@ -384,7 +386,7 @@
           <onclick condition="String.IsEqual(Window.Property(CustomType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Addon,$INFO[Window.Property(CustomAddon)])</onclick>
           <onclick condition="String.IsEqual(Window.Property(CustomType),E)">Skin.SetString($INFO[Window.Property(TargetOption)].Executable,$INFO[Window.Property(CustomExecutable)])</onclick>
           <onclick condition="String.IsEqual(Window.Property(CustomType),E)">Skin.SetString($INFO[Window.Property(TargetOption)].Parameters,$INFO[Window.Property(CustomParameters)])</onclick>
-          <onclick condition="String.IsEqual(Window.Property(CustomType),A) | String.IsEqual(Window.Property(CustomType),E) | String.IsEqual(Window.Property(CustomType),C)">Skin.SetString($INFO[Window.Property(TargetOption)].Action,$VAR[CommandForCustomOptions])</onclick>
+          <onclick>Skin.SetString($INFO[Window.Property(TargetOption)].Action,$VAR[CommandForCustomOptions])</onclick>
           <onclick>Close</onclick>
         </control>
         <control type="button" id="21">
