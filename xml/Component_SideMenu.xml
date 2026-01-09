@@ -286,7 +286,7 @@
   </include>
 
   <include name="KodiControlGroupLabelForSideMenu">
-    <param name="visible" default="true" />
+    <param name="visible" default="$EXP[VisibilityOfKodiControlOptionsInExitMenu]" />
 
     <definition>
       <control type="label" id="997">
@@ -301,7 +301,7 @@
   </include>
 
   <include name="SystemGroupLabelForSideMenu">
-    <param name="visible" default="true" />
+    <param name="visible" default="$EXP[VisibilityOfSystemOptionsInExitMenu]" />
 
     <definition>
       <control type="label" id="998">

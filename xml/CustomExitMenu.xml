@@ -10,6 +10,7 @@
       <include content="InvisibleListDimensionsForView" />
       <focusposition>1</focusposition>
       <defaultcontrol>1</defaultcontrol>
+      <onleft>9001</onleft>
 
       <include content="InvisibleVerticalListItemsForView" />
       <include content="OptionsForExitMenu" />
@@ -22,7 +23,23 @@
         <param name="label" value="$LOCALIZE[31081]" />
       </include>
     </control>
-    
+
+    <control type="group" id="9000">
+      <include content="BackgroundForSideMenu" />
+
+      <include content="ButtonListForSideMenu">
+        <param name="onright" value="400" />
+
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="GlobalSearchButtonForSideMenu" />
+        <include content="SettingsButtonForSideMenu" />
+      </include>
+        
+      <include content="PlayerControlsForSideMenu">
+        <param name="onright" value="400" />
+      </include>
+    </control>
+
     <include content="GlobalOverlay">
       <param name="buttonid" value="200" />
       <param name="controlid" value="400" />

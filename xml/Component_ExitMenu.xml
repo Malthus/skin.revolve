@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+  <expression name="VisibilityOfLogoffInExitMenu">System.IsLoggedOn + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + Skin.HasSetting(ExitMenu.LogOffOption.Active)</expression>
+  <expression name="VisibilityOfMastermodeInExitMenu">System.HasLocks + Skin.HasSetting(ExitMenu.MasterModeOption.Active)</expression>
+  <expression name="VisibilityOfExitInExitMenu">System.ShowExitButton + Skin.HasSetting(ExitMenu.ExitOption.Active)</expression>
+  <expression name="VisibilityOfRestartInExitMenu">[System.Platform.Windows | System.Platform.Linux] + Skin.HasSetting(ExitMenu.RestartOption.Active)</expression>
+  
+  <expression name="VisibilityOfSuspendInExitMenu">System.CanSuspend + Skin.HasSetting(ExitMenu.SuspendOption.Active)</expression>
+  <expression name="VisibilityOfHibernateInExitMenu">System.CanHibernate + Skin.HasSetting(ExitMenu.HibernateOption.Active)</expression>
+  <expression name="VisibilityOfPowerdownInExitMenu">System.CanPowerDown + Skin.HasSetting(ExitMenu.PowerdownOption.Active)</expression>
+  <expression name="VisibilityOfPowerdownTimerInExitMenu">System.CanPowerDown + Skin.HasSetting(ExitMenu.PowerdownTimerOption.Active)</expression>
+  <expression name="VisibilityOfRebootInExitMenu">System.CanReboot + Skin.HasSetting(ExitMenu.RebootOption.Active)</expression>
+  
+  <expression name="VisibilityOfKodiControlOptionsInExitMenu">$EXP[VisibilityOfLogoffInExitMenu] | $EXP[VisibilityOfMastermodeInExitMenu] | $EXP[VisibilityOfExitInExitMenu] | $EXP[VisibilityOfRestartInExitMenu]</expression>
+  <expression name="VisibilityOfSystemOptionsInExitMenu">$EXP[VisibilityOfSuspendInExitMenu] | $EXP[VisibilityOfHibernateInExitMenu] | $EXP[VisibilityOfPowerdownInExitMenu] | $EXP[VisibilityOfPowerdownTimerInExitMenu] | System.HasAlarm(shutdowntimer) | $EXP[VisibilityOfRebootInExitMenu]</expression>
+
   <include name="OptionsForExitMenu">
     <definition>
       <content>
+<!--
         <item id="1">
           <description>Shutdown Option</description>
           <visible>Skin.HasSetting(ExitMenu.ShutdownOption.Active)</visible>
@@ -10,99 +25,93 @@
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>ShutDown</onclick>
         </item>
+-->
         <item id="2">
-          <description>Exit Option</description>
-          <visible>System.ShowExitButton + Skin.HasSetting(ExitMenu.ExitOption.Active)</visible>
-          <label>$LOCALIZE[13012]</label>
-          <label2>$LOCALIZE[31002]</label2>
-          <icon>special://skin/backgrounds/exit.jpg</icon>
-          <onclick>Quit</onclick>
-        </item>
-        <item id="3">
           <description>Log Off Profile Option</description>
-          <visible>System.IsLoggedOn + [System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)] + Skin.HasSetting(ExitMenu.LogOffOption.Active)</visible>
+          <visible>$EXP[VisibilityOfLogoffInExitMenu]</visible>
           <label>$LOCALIZE[20126]</label>
           <label2>$INFO[System.ProfileName]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>Dialog.Close(all,true)</onclick>
           <onclick>System.LogOff()</onclick>
         </item>
+        <item id="3">
+          <description>Enter Master Mode Option</description>
+          <visible>$EXP[VisibilityOfMastermodeInExitMenu] + !System.IsMaster</visible>
+          <label>$LOCALIZE[20045]</label>
+          <icon>special://skin/backgrounds/exit.jpg</icon>
+          <onclick>Mastermode()</onclick>
+        </item>
         <item id="4">
+          <description>Leave Master Mode Option</description>
+          <visible>$EXP[VisibilityOfMastermodeInExitMenu] + System.IsMaster</visible>
+          <label>$LOCALIZE[20046]</label>
+          <icon>special://skin/backgrounds/exit.jpg</icon>
+          <onclick>Mastermode()</onclick>
+        </item>
+        <item id="5">
+          <description>Exit Option</description>
+          <visible>$EXP[VisibilityOfExitInExitMenu]</visible>
+          <label>$LOCALIZE[13012]</label>
+          <label2>$LOCALIZE[31002]</label2>
+          <icon>special://skin/backgrounds/exit.jpg</icon>
+          <onclick>Quit</onclick>
+        </item>
+        <item id="6">
           <description>Restart Kodi Option</description>
-          <visible>[System.Platform.Windows | System.Platform.Linux] + Skin.HasSetting(ExitMenu.RestartOption.Active)</visible>
+          <visible>$EXP[VisibilityOfRestartInExitMenu]</visible>
           <label>$LOCALIZE[13313]</label>
           <label2>$LOCALIZE[31002]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>RestartApp</onclick>
         </item>
-        <item id="5">
+
+        <item id="7">
           <description>Suspend Option</description>
-          <visible>System.CanSuspend + Skin.HasSetting(ExitMenu.SuspendOption.Active)</visible>
+          <visible>$EXP[VisibilityOfSuspendInExitMenu]</visible>
           <label>$LOCALIZE[13011]</label>
           <label2>$LOCALIZE[31031]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>Suspend</onclick>
         </item>
-        <item id="6">
+        <item id="8">
           <description>Hibernate Option</description>
-          <visible>System.CanHibernate + Skin.HasSetting(ExitMenu.HibernateOption.Active)</visible>
+          <visible>$EXP[VisibilityOfHibernateInExitMenu]</visible>
           <label>$LOCALIZE[13010]</label>
           <label2>$LOCALIZE[31031]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>Hibernate</onclick>
         </item>
-        <item id="7">
-          <description>Reboot Option</description>
-          <visible>System.CanReboot + Skin.HasSetting(ExitMenu.RebootOption.Active)</visible>
-          <label>$LOCALIZE[13013]</label>
-          <label2>$LOCALIZE[31031]</label2>
-          <icon>special://skin/backgrounds/exit.jpg</icon>
-          <onclick>Reboot</onclick>
-        </item>
-        <item id="8">
+        <item id="9">
           <description>Powerdown Option</description>
-          <visible>System.CanPowerDown + Skin.HasSetting(ExitMenu.PowerdownOption.Active)</visible>
+          <visible>$EXP[VisibilityOfPowerdownInExitMenu]</visible>
           <label>$LOCALIZE[31082]</label>
           <label2>$LOCALIZE[31031]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>Powerdown</onclick>
         </item>
-        <item id="9">
-          <description>Custom Shutdown Timer Option</description>
-          <visible>!System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.PowerdownTimerOption.Active)</visible>
+        <item id="10">
+          <description>Set Powerdown Timer Option</description>
+          <visible>$EXP[VisibilityOfPowerdownTimerInExitMenu] + !System.HasAlarm(shutdowntimer)</visible>
           <label>$LOCALIZE[20150]</label>
           <icon>special://skin/backgrounds/exit.jpg</icon>
-          <onclick>AlarmClock(shutdowntimer,ShutDown)</onclick>
+          <onclick>AlarmClock(shutdowntimer,Powerdown)</onclick>
         </item>
-        <item id="10">
-          <description>Custom Cancel Timer Option</description>
-          <visible>System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.PowerdownTimerOption.Active)</visible>
+        <item id="11">
+          <description>Cancel Powerdown Timer Option</description>
+          <visible>System.HasAlarm(shutdowntimer)</visible>
           <label>$LOCALIZE[20151]</label>
-          <label2>$LOCALIZE[20145]: [B]$INFO[System.Alarmpos][/B]</label2>
+          <label2>$LOCALIZE[20145]: $INFO[System.Alarmpos]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>CancelAlarm(shutdowntimer)</onclick>
         </item>
-        <item id="11">
-          <description>Enter Master Mode Option</description>
-          <visible>System.HasLocks + !System.IsMaster + Skin.HasSetting(ExitMenu.MasterModeOption.Active)</visible>
-          <label>$LOCALIZE[20045]</label>
-          <icon>special://skin/backgrounds/exit.jpg</icon>
-          <onclick>Mastermode()</onclick>
-        </item>
         <item id="12">
-          <description>Leave Master Mode Option</description>
-          <visible>System.HasLocks + System.IsMaster + Skin.HasSetting(ExitMenu.MasterModeOption.Active)</visible>
-          <label>$LOCALIZE[20046]</label>
+          <description>Reboot Option</description>
+          <visible>$EXP[VisibilityOfRebootInExitMenu]</visible>
+          <label>$LOCALIZE[13013]</label>
+          <label2>$LOCALIZE[31031]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
-          <onclick>Mastermode()</onclick>
-        </item>
-        <item id="13">
-          <description>Settings Option</description>
-          <visible>!Skin.HasSetting(SettingsOption.Active) | Skin.HasSetting(ExitMenu.SettingsOption.Active)</visible>
-          <label>$LOCALIZE[5]</label>
-          <property name="Label3">$LOCALIZE[31023]</property>
-          <icon>special://skin/backgrounds/exit.jpg</icon>
-          <onclick>ActivateWindow(settings)</onclick>
+          <onclick>Reboot</onclick>
         </item>
       </content>
     </definition>
