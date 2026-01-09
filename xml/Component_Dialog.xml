@@ -528,6 +528,8 @@
         <param name="buttonid" default="7" />
         <param name="radiobuttonvisible" default="true" />
         <param name="radiobuttonid" default="8" />
+        <param name="colorbuttonvisible" default="true" />
+        <param name="colorbuttonid" default="15" />
         <param name="spincontrolexvisible" default="true" />
         <param name="spincontrolexid" default="9" />
         <param name="imagevisible" default="true" />
@@ -548,6 +550,12 @@
 
             <control type="radiobutton" id="$PARAM[radiobuttonid]">
                 <visible>$PARAM[radiobuttonvisible]</visible>
+                <width>DialogElementWidth</width>
+                <align>left</align>
+            </control>
+
+            <control type="colorbutton" id="$PARAM[colorbuttonid]">
+                <visible>$PARAM[colorbuttonvisible]</visible>
                 <width>DialogElementWidth</width>
                 <align>left</align>
             </control>

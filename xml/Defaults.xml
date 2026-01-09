@@ -91,6 +91,26 @@
         <label></label>
     </default>
 
+    <default type="colorbutton">
+        <include content="DefaultButtonDimensions" />
+        <font>NormalButtonFont</font>
+        <textoffsetx>20</textoffsetx>
+        <textcolor>$VAR[MainColor]</textcolor>
+        <focusedcolor>$VAR[BackgroundColor]</focusedcolor>
+        <disabledcolor>$VAR[TextColor]</disabledcolor>
+        <pulseonselect>false</pulseonselect>
+        <texturenofocus colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texturenofocus>
+        <texturefocus colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-fill.png</texturefocus>
+        <colorwidth>40</colorwidth>
+        <colorheight>40</colorheight>
+        <colorposx>1040</colorposx>
+        <texturecolormask>controls/circle-fill.png</texturecolormask>
+        <texturecolordisabledmask colordiffuse="40FFFFFF">controls/circle-fill.png</texturecolordisabledmask>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label></label>
+    </default>
+
     <default type="spincontrol">
         <posx>0</posx>
         <posy>0</posy>

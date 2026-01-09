@@ -17,13 +17,13 @@
           <posy>100</posy>
           <width>1100</width>
           <height>740</height>
-          <pagecontrol>15</pagecontrol>
+          <pagecontrol>25</pagecontrol>
           <orientation>vertical</orientation>
           <itemgap>0</itemgap>
           <onup>5</onup>
           <ondown>5</ondown>
           <onleft>3</onleft>
-          <onright>15</onright>
+          <onright>25</onright>
         </control>
 
         <control type="button" id="7">
@@ -32,6 +32,10 @@
 
         <control type="radiobutton" id="8">
           <radioposx>1040</radioposx>
+          <align>left</align>
+        </control>
+
+        <control type="colorbutton" id="15">
           <align>left</align>
         </control>
 
@@ -55,7 +59,7 @@
           <textcolor>$VAR[BackgroundColor]</textcolor>
         </control>
 
-        <control type="scrollbar" id="15">
+        <control type="scrollbar" id="25">
           <posx>1840</posx>
           <posy>100</posy>
           <height>740</height>
