@@ -6,7 +6,6 @@
     <value condition="String.IsEqual(Window.Property(CustomType),P)">ActivateWindow(1102)</value>
     <value condition="String.IsEqual(Window.Property(CustomType),A)">$INFO[Window.Property(CustomAddon),RunScript(,)]</value>
     <value condition="String.IsEqual(Window.Property(CustomType),E)">RunScript(script.revolve.service,ExecuteShellCommand,"$INFO[Window.Property(CustomExecutable)]" $INFO[Window.Property(CustomParameters)])</value>
-<!--    <value condition="String.IsEqual(Window.Property(CustomType),E)">System.Exec('"$INFO[Window.Property(CustomExecutable)]" $INFO[Window.Property(CustomParameters)]')</value> -->
     <value condition="String.IsEqual(Window.Property(CustomType),C)">$INFO[Control.GetLabel(48)]</value>
     <value></value>
   </variable>
@@ -207,7 +206,7 @@
         <align>left</align>
         <label>$LOCALIZE[31806]</label>
         <onup>41</onup>
-        <ondown>44</ondown>
+        <ondown>43</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
         <onclick>SetProperty(CustomMenuTitle,$INFO[Window.Property(CustomName)],1192)</onclick>
@@ -217,11 +216,27 @@
         <onclick>SetProperty(CustomAction,ActivateWindow(1103))</onclick>
       </control>
 
-      <!-- https://xbmc.github.io/docs.kodi.tv/master/kodi-base/d0/d3e/page__list_of_built_in_functions.html -->
+      <control type="button" id="43">
+        <description>Select Window Option</description>
+        <visible>String.IsEqual(Window.Property(CustomType),W)</visible>
+        <posx>560</posx>
+        <posy>400</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>Window: $INFO[Window.Property(CustomWindow)]</label>
+        <onup>42</onup>
+        <ondown>44</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>SetProperty(DialogTitle,Select Window,1188)</onclick>
+        <onclick>SetProperty(DialogTarget,Dialog.Result,1188)</onclick>
+        <include content="OpenWindowOptionsForCustomOptions" />
+        <onclick>ActivateWindow(1188)</onclick>
+        <onclick>SetProperty(CustomWindow,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.Reset(Dialog.Result)</onclick>
+      </control>
 
-      <!-- Open Window ~ selection (43) > Set Window + ActivateWindow > Action-property -->
-
-      <!-- Open Playlist ~ select playlist (44) > CustomContentPath-property -->
       <control type="button" id="44">
         <description>Select Playlist Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),P)</visible>
@@ -231,37 +246,55 @@
         <font>DialogTextFont</font>
         <align>left</align>
         <label>Playlist: $INFO[Window.Property(CustomContentPath)]</label>
-        <onup>42</onup>
-        <ondown>46</ondown>
+        <onup>43</onup>
+        <ondown>45</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetFile(Dialog.Input,,special://profile/playlists/)</onclick>
-        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String(Dialog.Input)])</onclick>
-        <onclick>Skin.Reset(Dialog.Input)</onclick>
+        <onclick>Skin.SetFile(Dialog.Result,,special://profile/playlists/)</onclick>
+        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.Reset(Dialog.Result)</onclick>
       </control>
 
-      <!-- Run Add-on ~ select add-on type (45) > Property "xbmc.addon.executable" to set next control -->
-
-      <!-- Run Add-on ~ select add-on (46) > RunScript > Action-property -->
-      <control type="button" id="46">
-        <description>Select Add-on Button</description>
+      <control type="button" id="45">
+        <description>Select Addon Type Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),A)</visible>
         <posx>560</posx>
         <posy>400</posy>
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Add-on: $INFO[Window.Property(CustomAddon)]</label>
+        <label>Type: $INFO[Window.Property(CustomAddonType)]</label>
         <onup>44</onup>
+        <ondown>46</ondown>
+        <onleft>9000</onleft>
+        <onright>Noop</onright>
+        <onclick>SetProperty(DialogTitle,Select Window,1188)</onclick>
+        <onclick>SetProperty(DialogTarget,Dialog.Result,1188)</onclick>
+        <include content="AddonTypeOptionsForCustomOptions" />
+        <onclick>ActivateWindow(1188)</onclick>
+        <onclick>SetProperty(CustomAddonType,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.Reset(Dialog.Result)</onclick>
+      </control>
+
+      <control type="button" id="46">
+        <description>Select Add-on Button</description>
+        <visible>String.IsEqual(Window.Property(CustomType),A)</visible>
+        <enable>!String.IsEmpty(Window.Property(CustomAddonType))</enable>
+        <posx>560</posx>
+        <posy>440</posy>
+        <width>1240</width>
+        <font>DialogTextFont</font>
+        <align>left</align>
+        <label>Add-on: $INFO[Window.Property(CustomAddon)]</label>
+        <onup>45</onup>
         <ondown>47</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetAddon(Dialog.Input,xbmc.addon.executable)</onclick>
-        <onclick>SetProperty(CustomAddon,$INFO[Skin.String(Dialog.Input)])</onclick>
-        <onclick>Skin.Reset(Dialog.Input)</onclick>
+        <onclick>Skin.SetAddon(Dialog.Result,$INFO[Window.Property(CustomAddonType)])</onclick>
+        <onclick>SetProperty(CustomAddon,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.Reset(Dialog.Result)</onclick>
       </control>
 
-      <!-- Run External Program ~ select program (47) > CustomShellCommand -->
       <control type="button" id="47">
         <description>Select External Executable Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),E)</visible>
@@ -275,12 +308,11 @@
         <ondown>48</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetFile(Dialog.Input)</onclick>
-        <onclick>SetProperty(CustomExecutable,$INFO[Skin.String(Dialog.Input)])</onclick>
-        <onclick>Skin.Reset(Dialog.Input)</onclick>
+        <onclick>Skin.SetFile(Dialog.Result)</onclick>
+        <onclick>SetProperty(CustomExecutable,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.Reset(Dialog.Result)</onclick>
       </control>
 
-      <!-- Run External Program ~ enter command line arguments (48) > System.Exec > Action-property -->
       <control type="button" id="48">
         <description>Enter Executable Arguments Button</description>
         <visible>String.IsEqual(Window.Property(CustomType),E)</visible>
@@ -294,10 +326,10 @@
         <ondown>49</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomParameters)])</onclick>
-        <onclick>Skin.SetString(Dialog.Input)</onclick>
-        <onclick>SetProperty(CustomParameters,$INFO[Skin.String(Dialog.Input)])</onclick>
-        <onclick>Skin.Reset(Dialog.Input)</onclick>
+        <onclick>Skin.SetString(Dialog.Result,$INFO[Window.Property(CustomParameters)])</onclick>
+        <onclick>Skin.SetString(Dialog.Result)</onclick>
+        <onclick>SetProperty(CustomParameters,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.Reset(Dialog.Result)</onclick>
       </control>
 
       <control type="button" id="49">
@@ -355,6 +387,7 @@
           <onclick>ClearProperty(CustomWindow)</onclick>
           <onclick>ClearProperty(CustomMenuIdentifier)</onclick>
           <onclick>ClearProperty(CustomContentPath)</onclick>
+          <onclick>ClearProperty(CustomAddonType)</onclick>
           <onclick>ClearProperty(CustomAddon)</onclick>
           <onclick>ClearProperty(CustomExecutable)</onclick>
           <onclick>ClearProperty(CustomParameters)</onclick>
@@ -535,6 +568,32 @@
           <label>$PARAM[label]</label>
         </control>
       </control>
+    </definition>
+  </include>
+
+  <include name="OpenWindowOptionsForCustomOptions">
+    <definition>
+      <onclick>SetProperty(List01Option.Name,Favourites,1188)</onclick>
+      <onclick>SetProperty(List01Option.Action,favouritesbrowser,1188)</onclick>
+      <onclick>SetProperty(List02Option.Name,Settings,1188)</onclick>
+      <onclick>SetProperty(List02Option.Action,settings,1188)</onclick>
+    </definition>
+  </include>
+
+  <include name="AddonTypeOptionsForCustomOptions">
+    <definition>
+      <onclick>SetProperty(List01Option.Name,Video Add-ons,1188)</onclick>
+      <onclick>SetProperty(List01Option.Action,xbmc.addon.video,1188)</onclick>
+      <onclick>SetProperty(List02Option.Name,Audio Add-ons,1188)</onclick>
+      <onclick>SetProperty(List02Option.Action,xbmc.addon.audio,1188)</onclick>
+      <onclick>SetProperty(List03Option.Name,Picture Add-ons,1188)</onclick>
+      <onclick>SetProperty(List03Option.Action,xbmc.addon.image,1188)</onclick>
+      <onclick>SetProperty(List04Option.Name,Game Client Add-ons,1188)</onclick>
+      <onclick>SetProperty(List04Option.Action,kodi.gameclient,1188)</onclick>
+      <onclick>SetProperty(List05Option.Name,Executable Add-ons,1188)</onclick>
+      <onclick>SetProperty(List05Option.Action,xbmc.addon.executable,1188)</onclick>
+      <onclick>SetProperty(List06Option.Name,Script Add-ons,1188)</onclick>
+      <onclick>SetProperty(List06Option.Action,xbmc.python.script,1188)</onclick>
     </definition>
   </include>
 </includes>
