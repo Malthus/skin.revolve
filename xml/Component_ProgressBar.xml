@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="DefaultBusyAnimationForProgressBar">
-        <param name="visible" default="true" />
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-        
-        <definition>
-            <control type="group">
-                <visible>$PARAM[visible]</visible>
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
+  <include name="DefaultBusyAnimationForProgressBar">
+    <param name="visible" default="true" />
+    <param name="posx" default="0" />
+    <param name="posy" default="0" />
+    
+    <definition>
+      <control type="group">
+        <visible>$PARAM[visible]</visible>
+        <posx>$PARAM[posx]</posx>
+        <posy>$PARAM[posy]</posy>
 
-                <control type="image">
-                    <posx>15</posx>
-                    <posy>15</posy>
-                    <width>240</width>
-                    <height>240</height>
-                    <texture colordiffuse="$VAR[BackgroundColor]">$VAR[BusyAnimationThumbnail]</texture>
-                    <aspectratio>keep</aspectratio>
-                    <animation effect="rotate" start="360" end="0" center="135,135" time="1200" loop="true" condition="true">conditional</animation>
-                </control>
-            </control>
-        </definition>
-    </include>
+        <control type="image">
+          <posx>15</posx>
+          <posy>15</posy>
+          <width>240</width>
+          <height>240</height>
+          <texture colordiffuse="$VAR[BackgroundColor]">$VAR[BusyAnimationThumbnail]</texture>
+          <aspectratio>keep</aspectratio>
+          <animation effect="rotate" start="360" end="0" center="135,135" time="1200" loop="true" condition="true">conditional</animation>
+        </control>
+      </control>
+    </definition>
+  </include>
 
-    <include name="ProgressBar">
-        <param name="id" default="0" />
-        <param name="visible" default="true" />
-        <param name="posx" default="0" />
-        <param name="posy" default="0" />
-        <param name="width" default="1240" />
-        <param name="progressbarcolor" default="$VAR[BackgroundColor]" />
-        <param name="backgroundcolor" default="$VAR[MainColor]" />
+  <include name="ProgressBar">
+    <param name="id" default="0" />
+    <param name="visible" default="true" />
+    <param name="posx" default="0" />
+    <param name="posy" default="0" />
+    <param name="width" default="1240" />
+    <param name="progressbarcolor" default="$VAR[BackgroundColor]" />
+    <param name="backgroundcolor" default="$VAR[MainColor]" />
+    
+    <definition>
+      <control type="group">
+        <visible>$PARAM[visible]</visible>
+        <posx>$PARAM[posx]</posx>
+        <posy>$PARAM[posy]</posy>
         
-        <definition>
-            <control type="group">
-                <visible>$PARAM[visible]</visible>
-                <posx>$PARAM[posx]</posx>
-                <posy>$PARAM[posy]</posy>
-                
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>12</posy>
-                    <width>$PARAM[width]</width>
-                    <height>24</height>
-                    <texture colordiffuse="$PARAM[backgroundcolor]" border="6">controls/horizontalbar-thick.png</texture>
-                    <aspectratio>stretch</aspectratio>
-                </control>
-                <control type="progress" id="$PARAM[id]">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>$PARAM[width]</width>
-                    <height>24</height>
-                    <texturebg border="6"></texturebg>
-                    <midtexture colordiffuse="$PARAM[progressbarcolor]" border="6">controls/horizontalbar-thin.png</midtexture>
-                    <info></info>
-                </control>
-            </control>
-        </definition>
-    </include>
+        <control type="image">
+          <posx>0</posx>
+          <posy>12</posy>
+          <width>$PARAM[width]</width>
+          <height>24</height>
+          <texture colordiffuse="$PARAM[backgroundcolor]" border="6">controls/horizontalbar-thick.png</texture>
+          <aspectratio>stretch</aspectratio>
+        </control>
+        <control type="progress" id="$PARAM[id]">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>$PARAM[width]</width>
+          <height>24</height>
+          <texturebg border="6"></texturebg>
+          <midtexture colordiffuse="$PARAM[progressbarcolor]" border="6">controls/horizontalbar-thin.png</midtexture>
+          <info></info>
+        </control>
+      </control>
+    </definition>
+  </include>
 </includes>
