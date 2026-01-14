@@ -386,13 +386,8 @@
         </include>
 
         <include content="WindowNameForDebug">
-          <param name="window" value="CustomMyStaticItems.xml" />
-          <param name="label" value="CustomMyStaticItems.xml" />
-        </include>
-
-        <include content="WindowNameForDebug">
-          <param name="window" value="CustomMyDynamicItems.xml" />
-          <param name="label" value="CustomMyDynamicItems.xml" />
+          <param name="window" value="CustomMyItems.xml" />
+          <param name="label" value="CustomMyItems.xml" />
         </include>
 
         <include content="WindowNameForDebug">
@@ -419,7 +414,7 @@
           <param name="window" value="CustomExitMenu.xml" />
           <param name="label" value="CustomExitMenu.xml" />
         </include>
-        
+
         <!-- Dialog Labels -->
 
         <include content="DialogNameForDebug">
@@ -443,11 +438,6 @@
         </include>
 
         <include content="DialogNameForDebug">
-          <param name="dialog" value="colorbutton" />
-          <param name="label" value="colorbutton (DialogColorPicker.xml)" />
-        </include>
-
-        <include content="DialogNameForDebug">
           <param name="dialog" value="contentsettings" />
           <param name="label" value="contentsettings (DialogSettings.xml)" />
         </include>
@@ -458,10 +448,10 @@
         </include>
 
         <include content="DialogNameForDebug">
-          <param name="dialog" value="pvrradiordsinfo" />
-          <param name="label" value="pvrradiordsinfo (DialogPVRRadioRDSInfo.xml)" />
+          <param name="dialog" value="dialogcolorpicker" />
+          <param name="label" value="dialogcolorpicker (DialogColorPicker.xml)" />
         </include>
-        
+
         <include content="DialogNameForDebug">
           <param name="dialog" value="extendedprogressdialog" />
           <param name="label" value="extendedprogressdialog (DialogExtendedProgressBar.xml)" />
@@ -483,6 +473,11 @@
         </include>
 
         <include content="DialogNameForDebug">
+          <param name="dialog" value="gameagents" />
+          <param name="label" value="gameagents (DialogGameControllers.xml)" />
+        </include>
+
+        <include content="DialogNameForDebug">
           <param name="dialog" value="gamecontrollers" />
           <param name="label" value="gamecontrollers (DialogGameControllers.xml)" />
         </include>
@@ -495,6 +490,16 @@
         <include content="DialogNameForDebug">
           <param name="dialog" value="gamepadinput" />
           <param name="label" value="gamepadinput (DialogSelect.xml)" />
+        </include>
+
+        <include content="DialogNameForDebug">
+          <param name="dialog" value="gameports" />
+          <param name="label" value="gameports (DialogGameControllers.xml)" />
+        </include>
+
+        <include content="DialogNameForDebug">
+          <param name="dialog" value="gamesaves" />
+          <param name="label" value="gamesaves (DialogSelect.xml)" />
         </include>
 
         <include content="DialogNameForDebug">
@@ -520,6 +525,11 @@
         <include content="DialogNameForDebug">
           <param name="dialog" value="infoprovidersettings" />
           <param name="label" value="infoprovidersettings (DialogSettings.xml)" />
+        </include>
+
+        <include content="DialogNameForDebug">
+          <param name="dialog" value="ingamesaves" />
+          <param name="label" value="ingamesaves (DialogSelect.xml)" />
         </include>
 
         <include content="DialogNameForDebug">
@@ -655,6 +665,11 @@
         <include content="DialogNameForDebug">
           <param name="dialog" value="pvrosdchannels" />
           <param name="label" value="pvrosdchannels (DialogPVRChannelsOSD.xml)" />
+        </include>
+
+        <include content="DialogNameForDebug">
+          <param name="dialog" value="pvrradiordsinfo" />
+          <param name="label" value="pvrradiordsinfo (DialogPVRRadioRDSInfo.xml)" />
         </include>
 
         <include content="DialogNameForDebug">
