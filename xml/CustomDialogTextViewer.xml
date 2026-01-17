@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1187">
-    <defaultcontrol>21</defaultcontrol>
-    <menucontrol>9000</menucontrol>
-    <onload>RunScript(script.revolve.service,FillPropertyFromTextFile,$INFO[Window.Property(DialogTextFile)],DialogText,1187)</onload>
-    <onunload>ClearProperty(DialogText,1187)</onunload>
+  <defaultcontrol>21</defaultcontrol>
+  <menucontrol>9000</menucontrol>
+  <onload>RunScript(script.revolve.service,FillPropertyFromTextFile,$INFO[Window.Property(DialogTextFile)],DialogText,1187)</onload>
+  <onunload>ClearProperty(DialogText,1187)</onunload>
 
-    <controls>
-        <include content="BackdropForDialog">
-            <param name="windowid" value="CustomDialogTextViewer.xml" />
+  <controls>
+    <include content="BackdropForDialog">
+      <param name="windowid" value="CustomDialogTextViewer.xml" />
+    </include>
+
+    <control type="group">
+      <posy>PosYForFifteenLinesDialog</posy>
+      <include content="FadeAnimationForDialogWindow" />
+      <include content="WindowForDialog">
+        <param name="height" value="HeightForFifteenLinesDialog" />
+        <param name="headerlabel" value="$INFO[Window.Property(DialogTitle)]" />
+        <param name="icontexture" value="icons/icon-textfile.png" />
+      </include>
+
+      <include content="TextboxForDialog">
+        <param name="height" value="600" />
+        <param name="textboxid" value="5" />
+        <param name="label" value="$INFO[Window.Property(DialogText)]" />
+        <param name="scrollbarid" value="61" />
+        <param name="onleft" value="9000" />
+      </include>
+
+      <control type="grouplist" id="9000">
+        <include content="MarkupForButtonListForDialog">
+          <param name="posy" value="640" />
+          <param name="height" value="40" />
         </include>
+        <onright>61</onright>
 
-        <control type="group">
-            <posy>PosYForFifteenLinesDialog</posy>
-            <include content="FadeAnimationForDialogWindow" />
-            <include content="WindowForDialog">
-                <param name="height" value="HeightForFifteenLinesDialog" />
-                <param name="headerlabel" value="$INFO[Window.Property(DialogTitle)]" />
-                <param name="icontexture" value="icons/icon-textfile.png" />
-            </include>
-
-            <include content="TextboxForDialog">
-                <param name="height" value="600" />
-                <param name="textboxid" value="5" />
-                <param name="label" value="$INFO[Window.Property(DialogText)]" />
-                <param name="scrollbarid" value="61" />
-                <param name="onleft" value="9000" />
-            </include>
-
-            <control type="grouplist" id="9000">
-                <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="640" />
-                    <param name="height" value="40" />
-                </include>
-                <onright>61</onright>
-
-                <control type="button" id="21">
-                    <description>Close Button</description>
-                    <label>$LOCALIZE[15067]</label>
-                    <onclick>Close</onclick>
-                </control>
-            </control>
+        <control type="button" id="21">
+          <description>Close Button</description>
+          <label>$LOCALIZE[15067]</label>
+          <onclick>Close</onclick>
         </control>
-    </controls>
+      </control>
+    </control>
+  </controls>
 </window>

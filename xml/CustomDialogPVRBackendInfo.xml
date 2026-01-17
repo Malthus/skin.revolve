@@ -1,124 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1170" type="dialog">
-    <defaultcontrol always="true">7</defaultcontrol>
-    <menucontrol>9000</menucontrol>
+  <defaultcontrol always="true">7</defaultcontrol>
+  <menucontrol>9000</menucontrol>
 
-    <controls>
-        <include content="BackdropForDialog">
-            <param name="windowid" value="CustomDialogPVRBackendInfo.xml" />
+  <controls>
+    <include content="BackdropForDialog">
+      <param name="windowid" value="CustomDialogPVRBackendInfo.xml" />
+    </include>
+
+    <control type="group">
+      <posy>PosYForFifteenLinesDialog</posy>
+      <include content="FadeAnimationForDialogWindow" />
+      <include content="WindowForDialog">
+        <param name="height" value="HeightForFifteenLinesDialog" />
+        <param name="headerlabel" value ="$LOCALIZE[31401]" />
+        <param name="icontexture" value ="icons/icon-television.png" />
+        <param name="animate" value="true" />
+      </include>
+
+      <include content="HeaderForDialog">
+        <param name="label" value="$LOCALIZE[19012]" />
+      </include>
+
+      <control type="list" id="5">
+        <include content="MarkupForInfoListForDialog">
+          <param name="pagecontrol" value="6" />
         </include>
 
-        <control type="group">
-            <posy>PosYForFifteenLinesDialog</posy>
-            <include content="FadeAnimationForDialogWindow" />
-            <include content="WindowForDialog">
-                <param name="height" value="HeightForFifteenLinesDialog" />
-                <param name="headerlabel" value ="$LOCALIZE[31401]" />
-                <param name="icontexture" value ="icons/icon-television.png" />
-                <param name="animate" value="true" />
-            </include>
+        <include content="ItemsForInfoListInDialog" />
 
-            <include content="HeaderForDialog">
-                <param name="label" value="$LOCALIZE[19012]" />
-            </include>
+        <content>
+          <item>
+            <visible>!String.IsEmpty(Pvr.BackendName)</visible>
+            <label>$LOCALIZE[551]</label>
+            <label2>$INFO[Pvr.BackendName]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.BackendHost)</visible>
+            <label>$LOCALIZE[31976]</label>
+            <label2>$INFO[Pvr.BackendHost]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.BackendVersion)</visible>
+            <label>$LOCALIZE[19114]</label>
+            <label2>$INFO[Pvr.BackendVersion]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.BackendChannels)</visible>
+            <label>$LOCALIZE[19019]</label>
+            <label2>$INFO[Pvr.BackendChannels]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.BackendTimers)</visible>
+            <label>$LOCALIZE[19040]</label>
+            <label2>$INFO[Pvr.BackendTimers]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.BackendRecordings)</visible>
+            <label>$LOCALIZE[19163]</label>
+            <label2>$INFO[Pvr.BackendRecordings]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.BackendDiskspace)</visible>
+            <label>$LOCALIZE[31995]</label>
+            <label2>$INFO[Pvr.BackendDiskspace]</label2>
+          </item>
 
-            <control type="list" id="5">
-                <include content="MarkupForInfoListForDialog">
-                    <param name="pagecontrol" value="6" />
-                </include>
+          <item>
+            <visible>!String.IsEmpty(Pvr.NowRecordingTitle)</visible>
+            <label>$LOCALIZE[369]</label>
+            <label2>$INFO[Pvr.NowRecordingTitle]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.NowRecordingDateTime)</visible>
+            <label>$LOCALIZE[14063]</label>
+            <label2>$INFO[Pvr.NowRecordingDateTime]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.NowRecordingChannel)</visible>
+            <label>$LOCALIZE[19029]</label>
+            <label2>$INFO[Pvr.NowRecordingChannel]</label2>
+          </item>
 
-                <include content="ItemsForInfoListInDialog" />
+          <item>
+            <visible>!String.IsEmpty(Pvr.NextRecordingTitle)</visible>
+            <label>$LOCALIZE[369]</label>
+            <label2>$INFO[Pvr.NextRecordingTitle]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.NextRecordingDateTime)</visible>
+            <label>$LOCALIZE[14063]</label>
+            <label2>$INFO[Pvr.NextRecordingDateTime]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Pvr.NextRecordingChannel)</visible>
+            <label>$LOCALIZE[19029]</label>
+            <label2>$INFO[Pvr.NextRecordingChannel]</label2>
+          </item>
+        </content>
+      </control>
 
-                <content>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.BackendName)</visible>
-                        <label>$LOCALIZE[551]</label>
-                        <label2>$INFO[Pvr.BackendName]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.BackendHost)</visible>
-                        <label>$LOCALIZE[31976]</label>
-                        <label2>$INFO[Pvr.BackendHost]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.BackendVersion)</visible>
-                        <label>$LOCALIZE[19114]</label>
-                        <label2>$INFO[Pvr.BackendVersion]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.BackendChannels)</visible>
-                        <label>$LOCALIZE[19019]</label>
-                        <label2>$INFO[Pvr.BackendChannels]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.BackendTimers)</visible>
-                        <label>$LOCALIZE[19040]</label>
-                        <label2>$INFO[Pvr.BackendTimers]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.BackendRecordings)</visible>
-                        <label>$LOCALIZE[19163]</label>
-                        <label2>$INFO[Pvr.BackendRecordings]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.BackendDiskspace)</visible>
-                        <label>$LOCALIZE[31995]</label>
-                        <label2>$INFO[Pvr.BackendDiskspace]</label2>
-                    </item>
+      <control type="scrollbar" id="6">
+        <include content="MarkupForScrollbarForDialog">
+          <param name="posy" value="80" />
+          <param name="height" value="600" />
+        </include>
+        <onleft>9000</onleft>
+      </control>
 
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.NowRecordingTitle)</visible>
-                        <label>$LOCALIZE[369]</label>
-                        <label2>$INFO[Pvr.NowRecordingTitle]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.NowRecordingDateTime)</visible>
-                        <label>$LOCALIZE[14063]</label>
-                        <label2>$INFO[Pvr.NowRecordingDateTime]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.NowRecordingChannel)</visible>
-                        <label>$LOCALIZE[19029]</label>
-                        <label2>$INFO[Pvr.NowRecordingChannel]</label2>
-                    </item>
+      <control type="grouplist" id="9000">
+        <include content="MarkupForButtonListForDialog">
+          <param name="posy" value="640" />
+          <param name="height" value="40" />
+        </include>
+        <onright>6</onright>
 
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.NextRecordingTitle)</visible>
-                        <label>$LOCALIZE[369]</label>
-                        <label2>$INFO[Pvr.NextRecordingTitle]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.NextRecordingDateTime)</visible>
-                        <label>$LOCALIZE[14063]</label>
-                        <label2>$INFO[Pvr.NextRecordingDateTime]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Pvr.NextRecordingChannel)</visible>
-                        <label>$LOCALIZE[19029]</label>
-                        <label2>$INFO[Pvr.NextRecordingChannel]</label2>
-                    </item>
-                </content>
-            </control>
-
-            <control type="scrollbar" id="6">
-                <include content="MarkupForScrollbarForDialog">
-                    <param name="posy" value="80" />
-                    <param name="height" value="600" />
-                </include>
-                <onleft>9000</onleft>
-            </control>
-
-            <control type="grouplist" id="9000">
-                <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="640" />
-                    <param name="height" value="40" />
-                </include>
-                <onright>6</onright>
-
-                <include content="CloseButtonForDialog">
-                    <param name="id" value="7" />
-                </include>
-            </control>
-        </control>
-    </controls>
+        <include content="CloseButtonForDialog">
+          <param name="id" value="7" />
+        </include>
+      </control>
+    </control>
+  </controls>
 </window>
