@@ -100,7 +100,7 @@
 
         <definition>
             <control type="fixedlist" id="$PARAM[id]">
-                <viewtype label="31931">list</viewtype>
+                <viewtype label="$LOCALIZE[31931]">list</viewtype>
                 <animation effect="fade" start="100" end="0" time="200" condition="Container($PARAM[id]).Scrolling + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(songs)">conditional</animation>
 
                 <posx>720</posx>

@@ -19,7 +19,7 @@
             </control>
 
             <control type="fixedlist" id="$PARAM[listid]">
-                <viewtype label="31933">list</viewtype>
+                <viewtype label="$LOCALIZE[31933]">list</viewtype>
                 <visible allowhiddenfocus="true">true</visible>
                 <include content="InvisibleListDimensionsForView" />
                 <pagecontrol>$PARAM[scrollbarid]</pagecontrol>

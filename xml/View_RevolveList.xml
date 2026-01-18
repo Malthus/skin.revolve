@@ -9,7 +9,7 @@
 
             <control type="fixedlist" id="54">
                 <description>Invisible Revolve List (for mouse control)</description>
-                <viewtype label="31934">list</viewtype>
+                <viewtype label="$LOCALIZE[31934]">list</viewtype>
                 <visible allowhiddenfocus="true">true</visible>
                 <animation effect="fade" start="100" end="0" time="200" condition="Container(54).Scrolling">Conditional</animation>
 
