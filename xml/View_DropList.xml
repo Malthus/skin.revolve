@@ -1,297 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="DropListView">
-        <param name="onleft" default="9001" />
-        <param name="onright" default="Noop" />
+  <include name="DropListView">
+    <param name="onleft" default="9001" />
+    <param name="onright" default="Noop" />
 
-        <definition>
-            <include content="ListForDropListView">
-                <param name="onleft" value="$PARAM[onleft]" />
+    <definition>
+      <include content="ListForDropListView">
+        <param name="onleft" value="$PARAM[onleft]" />
+      </include>
+
+      <control type="group">
+        <visible>Control.IsVisible(51)</visible>
+
+        <include content="VerticalScrollbarForView">
+          <param name="id" value="61" />
+          <param name="viewid" value="51" />
+          <param name="onright" value="$PARAM[onright]" />
+        </include>
+
+        <control type="group">
+          <include content="VisibilityForVerticalIcon" />
+          <posx>120</posx>
+          <posy>150</posy>
+          <include content="VerticalPosterIcon" />
+          <include content="OverlayForVerticalPosterIcon" />
+        </control>
+
+        <control type="group">
+          <include content="VisibilityForSquareIcon" />
+          <posx>120</posx>
+          <posy>150</posy>
+          <include content="SquarePosterIcon" />
+          <include content="OverlayForSquarePosterIcon" />
+        </control>
+
+        <control type="group">
+          <include content="VisibilityForBanner" />
+
+          <control type="group">
+            <posx>1080</posx>
+            <posy>200</posy>
+            <include content="DefaultBannerIcon" />
+          </control>
+          
+          <control type="group">
+            <visible>ListItem.IsPlaying</visible>
+            <include content="ContentInformationForDropListView">
+              <param name="textcolor" value="$VAR[HighlightColor]" />
             </include>
+          </control>
+          <control type="group">
+            <visible>!ListItem.IsPlaying</visible>
+            <include content="ContentInformationForDropListView" />
+          </control>
+        </control>
 
+        <control type="group">
+          <include content="VisibilityForNoBanner" />
+
+          <control type="group">
+            <visible>ListItem.IsPlaying</visible>
+            <include content="ContentCategoryForDropListView">
+              <param name="textcolor" value="$VAR[HighlightColor]" />
+            </include>
+            <include content="ContentNameForDropListView">
+              <param name="textcolor" value="$VAR[HighlightColor]" />
+            </include>
+            <include content="ContentDetailForDropListView">
+              <param name="textcolor" value="$VAR[HighlightColor]" />
+            </include>
+          </control>
+
+          <control type="group">
+            <visible>!ListItem.IsPlaying</visible>
+            <include content="ContentCategoryForDropListView" />
+            <include content="ContentNameForDropListView" />
+            <include content="ContentDetailForDropListView" />
+          </control>
+        </control>
+
+        <include content="ContentMediaFlagsForDropListView" />
+        <include content="ContentDescriptionForDropListView" />
+
+        <control type="group">
+          <include content="VisibilityOfSortLetterInView" />
+          <posx>840</posx>
+          <posy>210</posy>
+          <animation effect="zoom" end="120" center="auto" condition="true">Conditional</animation>
+          <include content="DefaultCircleSortLetterIcon" />
+        </control>
+      </control>
+    </definition>
+  </include>
+
+  <include name="ListForDropListView">
+    <param name="id" default="51" />
+    <param name="scrollbarid" default="61" />
+    <param name="onleft" default="9001" />
+
+    <definition>
+      <control type="fixedlist" id="$PARAM[id]">
+        <viewtype label="$LOCALIZE[31931]">list</viewtype>
+        <animation effect="fade" start="100" end="0" time="200" condition="Container($PARAM[id]).Scrolling + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(songs)">conditional</animation>
+
+        <posx>720</posx>
+        <posy>-121</posy>
+        <width>1080</width>
+        <height>1250</height>
+        <onleft>$PARAM[onleft]</onleft>
+        <onright>$PARAM[scrollbarid]</onright>
+        <onup>$PARAM[id]</onup>
+        <ondown>$PARAM[id]</ondown>
+        <focusposition>1</focusposition>
+        <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
+        <scrolltime>200</scrolltime>
+
+        <itemlayout width="1080" height="240">
+          <control type="group">
+            <posx>40</posx>
+            <posy>0</posy>
             <control type="group">
-                <visible>Control.IsVisible(51)</visible>
+              <animation effect="zoom" end="80" center="131,131" condition="true">Conditional</animation>
 
-                <include content="VerticalScrollbarForView">
-                    <param name="id" value="61" />
-                    <param name="viewid" value="51" />
-                    <param name="onright" value="$PARAM[onright]" />
-                </include>
-
-                <control type="group">
-                    <include content="VisibilityForVerticalIcon" />
-                    <posx>120</posx>
-                    <posy>150</posy>
-                    <include content="VerticalPosterIcon" />
-                    <include content="OverlayForVerticalPosterIcon" />
-                </control>
-
-                <control type="group">
-                    <include content="VisibilityForSquareIcon" />
-                    <posx>120</posx>
-                    <posy>150</posy>
-                    <include content="SquarePosterIcon" />
-                    <include content="OverlayForSquarePosterIcon" />
-                </control>
-
-                <control type="group">
-                    <include content="VisibilityForBanner" />
-
-                    <control type="group">
-                        <posx>1080</posx>
-                        <posy>200</posy>
-                        <include content="DefaultBannerIcon" />
-                    </control>
-                    
-                    <control type="group">
-                        <visible>ListItem.IsPlaying</visible>
-                        <include content="ContentInformationForDropListView">
-                            <param name="textcolor" value="$VAR[HighlightColor]" />
-                        </include>
-                    </control>
-                    <control type="group">
-                        <visible>!ListItem.IsPlaying</visible>
-                        <include content="ContentInformationForDropListView" />
-                    </control>
-                </control>
-
-                <control type="group">
-                    <include content="VisibilityForNoBanner" />
-
-                    <control type="group">
-                        <visible>ListItem.IsPlaying</visible>
-                        <include content="ContentCategoryForDropListView">
-                            <param name="textcolor" value="$VAR[HighlightColor]" />
-                        </include>
-                        <include content="ContentNameForDropListView">
-                            <param name="textcolor" value="$VAR[HighlightColor]" />
-                        </include>
-                        <include content="ContentDetailForDropListView">
-                            <param name="textcolor" value="$VAR[HighlightColor]" />
-                        </include>
-                    </control>
-
-                    <control type="group">
-                        <visible>!ListItem.IsPlaying</visible>
-                        <include content="ContentCategoryForDropListView" />
-                        <include content="ContentNameForDropListView" />
-                        <include content="ContentDetailForDropListView" />
-                    </control>
-                </control>
-
-                <include content="ContentMediaFlagsForDropListView" />
-                <include content="ContentDescriptionForDropListView" />
-
-                <control type="group">
-                    <include content="VisibilityOfSortLetterInView" />
-                    <posx>840</posx>
-                    <posy>210</posy>
-                    <animation effect="zoom" end="120" center="auto" condition="true">Conditional</animation>
-                    <include content="DefaultCircleSortLetterIcon" />
-                </control>
+              <include content="DefaultCircleThumbnailIcon" />
+              <include content="FadeMaskForDefaultCircleThumbnailIcon" />
+              <include content="OverlayForDefaultCircleThumbnailIcon" />
             </control>
-        </definition>
-    </include>
+          </control>
+        </itemlayout>
 
-    <include name="ListForDropListView">
-        <param name="id" default="51" />
-        <param name="scrollbarid" default="61" />
-        <param name="onleft" default="9001" />
+        <focusedlayout width="1080" height="320">
+          <control type="group">
+            <posx>40</posx>
+            <posy>18</posy>
+            <control type="group">
+              <animation effect="zoom" center="131,151" start="80" end="120" time="200" reversible="false">focus</animation>
+              <animation effect="zoom" center="131,151" start="120" end="80" time="200" reversible="false">unfocus</animation>
 
-        <definition>
-            <control type="fixedlist" id="$PARAM[id]">
-                <viewtype label="$LOCALIZE[31931]">list</viewtype>
-                <animation effect="fade" start="100" end="0" time="200" condition="Container($PARAM[id]).Scrolling + !Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(songs)">conditional</animation>
+              <control type="group">
+                <animation effect="slide" start="0,30" end="0,0" time="200" reversible="false" condition="Container($PARAM[id]).OnScrollNext">focus</animation>
+                <animation effect="slide" start="0,0" end="0,-30" time="200" reversible="false" condition="Container($PARAM[id]).OnScrollPrevious">unfocus</animation>
+                <posy>20</posy>
+                <include content="DefaultCircleThumbnailIcon" />
 
-                <posx>720</posx>
-                <posy>-121</posy>
-                <width>1080</width>
-                <height>1250</height>
-                <onleft>$PARAM[onleft]</onleft>
-                <onright>$PARAM[scrollbarid]</onright>
-                <onup>$PARAM[id]</onup>
-                <ondown>$PARAM[id]</ondown>
-                <focusposition>1</focusposition>
-                <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
-                <scrolltime>200</scrolltime>
+                <control type="group">
+                  <animation effect="fade" center="auto" start="75" end="0" time="200" reversible="false">focus</animation>
+                  <animation effect="fade" center="auto" start="0" end="75" time="200" reversible="false">unfocus</animation>
+                  <include content="FadeMaskForDefaultCircleThumbnailIcon" />
+                </control>
 
-                <itemlayout width="1080" height="240">
-                    <control type="group">
-                        <posx>40</posx>
-                        <posy>0</posy>
-                        <control type="group">
-                            <animation effect="zoom" end="80" center="131,131" condition="true">Conditional</animation>
-
-                            <include content="DefaultCircleThumbnailIcon" />
-                            <include content="FadeMaskForDefaultCircleThumbnailIcon" />
-                            <include content="OverlayForDefaultCircleThumbnailIcon" />
-                        </control>
-                    </control>
-                </itemlayout>
-
-                <focusedlayout width="1080" height="320">
-                    <control type="group">
-                        <posx>40</posx>
-                        <posy>18</posy>
-                        <control type="group">
-                            <animation effect="zoom" center="131,151" start="80" end="120" time="200" reversible="false">focus</animation>
-                            <animation effect="zoom" center="131,151" start="120" end="80" time="200" reversible="false">unfocus</animation>
-
-                            <control type="group">
-                                <animation effect="slide" start="0,30" end="0,0" time="200" reversible="false" condition="Container($PARAM[id]).OnScrollNext">focus</animation>
-                                <animation effect="slide" start="0,0" end="0,-30" time="200" reversible="false" condition="Container($PARAM[id]).OnScrollPrevious">unfocus</animation>
-                                <posy>20</posy>
-                                <include content="DefaultCircleThumbnailIcon" />
-
-                                <control type="group">
-                                    <animation effect="fade" center="auto" start="75" end="0" time="200" reversible="false">focus</animation>
-                                    <animation effect="fade" center="auto" start="0" end="75" time="200" reversible="false">unfocus</animation>
-                                    <include content="FadeMaskForDefaultCircleThumbnailIcon" />
-                                </control>
-
-                                <control type="group">
-                                    <animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">focus</animation>
-                                    <animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">unfocus</animation>
-                                    <include content="OverlayForDefaultCircleThumbnailIcon" />
-                                </control>
-                            </control>
-                        </control>
-                    </control>
-                </focusedlayout>
+                <control type="group">
+                  <animation effect="fade" center="auto" start="100" end="0" time="200" reversible="false">focus</animation>
+                  <animation effect="fade" center="auto" start="0" end="100" time="200" reversible="false">unfocus</animation>
+                  <include content="OverlayForDefaultCircleThumbnailIcon" />
+                </control>
+              </control>
             </control>
-        </definition>
-    </include>
+          </control>
+        </focusedlayout>
+      </control>
+    </definition>
+  </include>
 
-    <include name="ContentCategoryForDropListView">
-        <param name="posx" default="1080" />
-        <param name="posy" default="235" />
-        <param name="width" default="780" />
-        <param name="height" default="30" />
-        <param name="textcolor" default="$VAR[MainColor]" />
-    
-        <definition>
-            <include content="OutlineLabel">
-                <param name="posx" value="$PARAM[posx]" />
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="width" value="$PARAM[width]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="font" value="DetailViewFont" />
-                <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="left" />
-                <param name="scroll" value="true" />
-                <param name="label" value="$VAR[ContentCategoryLabel]" />
-            </include>
-        </definition>
-    </include>
-    
-    <include name="ContentDetailForDropListView">
-        <param name="posx" default="1080" />
-        <param name="posy" default="312" />
-        <param name="width" default="780" />
-        <param name="height" default="30" />
-        <param name="textcolor" default="$VAR[MainColor]" />
+  <include name="ContentCategoryForDropListView">
+    <param name="posx" default="1080" />
+    <param name="posy" default="235" />
+    <param name="width" default="780" />
+    <param name="height" default="30" />
+    <param name="textcolor" default="$VAR[MainColor]" />
+  
+    <definition>
+      <include content="OutlineLabel">
+        <param name="posx" value="$PARAM[posx]" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="width" value="$PARAM[width]" />
+        <param name="height" value="$PARAM[height]" />
+        <param name="font" value="DetailViewFont" />
+        <param name="textcolor" value="$PARAM[textcolor]" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="left" />
+        <param name="scroll" value="true" />
+        <param name="label" value="$VAR[ContentCategoryLabel]" />
+      </include>
+    </definition>
+  </include>
+  
+  <include name="ContentDetailForDropListView">
+    <param name="posx" default="1080" />
+    <param name="posy" default="312" />
+    <param name="width" default="780" />
+    <param name="height" default="30" />
+    <param name="textcolor" default="$VAR[MainColor]" />
 
-        <definition>
-            <include content="OutlineLabel">
-                <param name="posx" value="$PARAM[posx]" />
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="width" value="$PARAM[width]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="font" value="DetailViewFont" />
-                <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="left" />
-                <param name="scroll" value="true" />
-                <param name="label" value="$VAR[ContentDetailLabel]" />
-            </include>
-        </definition>
-    </include>
-    
-    <include name="ContentInformationForDropListView">
-        <param name="posx" default="1080" />
-        <param name="posy" default="160" />
-        <param name="width" default="780" />
-        <param name="height" default="30" />
-        <param name="textcolor" default="$VAR[MainColor]" />
-    
-        <definition>
-            <include content="OutlineLabel">
-                <param name="posx" value="$PARAM[posx]" />
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="width" value="$PARAM[width]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="font" value="DetailViewFont" />
-                <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="left" />
-                <param name="scroll" value="true" />
-                <param name="label" value="$VAR[ContentInformationLabel]" />
-            </include>
-        </definition>
-    </include>
-    
-    <include name="ContentNameForDropListView">
-        <param name="posx" default="1080" />
-        <param name="posy" default="260" />
-        <param name="width" default="780" />
-        <param name="height" default="40" />
-        <param name="textcolor" default="$VAR[MainColor]" />
+    <definition>
+      <include content="OutlineLabel">
+        <param name="posx" value="$PARAM[posx]" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="width" value="$PARAM[width]" />
+        <param name="height" value="$PARAM[height]" />
+        <param name="font" value="DetailViewFont" />
+        <param name="textcolor" value="$PARAM[textcolor]" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="left" />
+        <param name="scroll" value="true" />
+        <param name="label" value="$VAR[ContentDetailLabel]" />
+      </include>
+    </definition>
+  </include>
+  
+  <include name="ContentInformationForDropListView">
+    <param name="posx" default="1080" />
+    <param name="posy" default="160" />
+    <param name="width" default="780" />
+    <param name="height" default="30" />
+    <param name="textcolor" default="$VAR[MainColor]" />
+  
+    <definition>
+      <include content="OutlineLabel">
+        <param name="posx" value="$PARAM[posx]" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="width" value="$PARAM[width]" />
+        <param name="height" value="$PARAM[height]" />
+        <param name="font" value="DetailViewFont" />
+        <param name="textcolor" value="$PARAM[textcolor]" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="left" />
+        <param name="scroll" value="true" />
+        <param name="label" value="$VAR[ContentInformationLabel]" />
+      </include>
+    </definition>
+  </include>
+  
+  <include name="ContentNameForDropListView">
+    <param name="posx" default="1080" />
+    <param name="posy" default="260" />
+    <param name="width" default="780" />
+    <param name="height" default="40" />
+    <param name="textcolor" default="$VAR[MainColor]" />
 
-        <definition>
-            <include content="OutlineLabel">
-                <param name="posx" value="$PARAM[posx]" />
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="width" value="$PARAM[width]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="font" value="BigViewFont" />
-                <param name="textcolor" value="$PARAM[textcolor]" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="left" />
-                <param name="aligny" value="top" />
-                <param name="scroll" value="true" />
-                <param name="label" value="$VAR[ContentNameLabel]" />
-            </include>
-        </definition>
-    </include>
+    <definition>
+      <include content="OutlineLabel">
+        <param name="posx" value="$PARAM[posx]" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="width" value="$PARAM[width]" />
+        <param name="height" value="$PARAM[height]" />
+        <param name="font" value="BigViewFont" />
+        <param name="textcolor" value="$PARAM[textcolor]" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="left" />
+        <param name="aligny" value="top" />
+        <param name="scroll" value="true" />
+        <param name="label" value="$VAR[ContentNameLabel]" />
+      </include>
+    </definition>
+  </include>
 
-    <include name="ContentMediaFlagsForDropListView">
-        <param name="posx" default="1080" />
-        <param name="posy" default="350" />
+  <include name="ContentMediaFlagsForDropListView">
+    <param name="posx" default="1080" />
+    <param name="posy" default="350" />
 
-        <definition>
-            <include content="ViewListForFlag">
-                <param name="posx" value="$PARAM[posx]" />
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="flagcolor" value="$VAR[BackgroundColor]" />
-                <param name="backgroundcolor" value="$VAR[TextColor]" />
-            </include>
-        </definition>
-    </include>
+    <definition>
+      <include content="ViewListForFlag">
+        <param name="posx" value="$PARAM[posx]" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="flagcolor" value="$VAR[BackgroundColor]" />
+        <param name="backgroundcolor" value="$VAR[TextColor]" />
+      </include>
+    </definition>
+  </include>
+  
+  <include name="ContentDescriptionForDropListView">
+    <param name="posx" default="1080" />
+    <param name="posy" default="420" />
+    <param name="width" default="780" />
+    <param name="height" default="410" />
     
-    <include name="ContentDescriptionForDropListView">
-        <param name="posx" default="1080" />
-        <param name="posy" default="420" />
-        <param name="width" default="780" />
-        <param name="height" default="410" />
-        
-        <definition>
-            <include content="OutlineTextbox">
-                <param name="posx" value="$PARAM[posx]" />
-                <param name="posy" value="$PARAM[posy]" />
-                <param name="width" value="$PARAM[width]" />
-                <param name="height" value="$PARAM[height]" />
-                <param name="font" value="DescriptionViewFont" />
-                <param name="textcolor" value="$VAR[TextColor]" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="left" />
-                <param name="label" value="$VAR[ContentDescription]" />
-            </include>
-        </definition>
-    </include>
+    <definition>
+      <include content="OutlineTextbox">
+        <param name="posx" value="$PARAM[posx]" />
+        <param name="posy" value="$PARAM[posy]" />
+        <param name="width" value="$PARAM[width]" />
+        <param name="height" value="$PARAM[height]" />
+        <param name="font" value="DescriptionViewFont" />
+        <param name="textcolor" value="$VAR[TextColor]" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="left" />
+        <param name="label" value="$VAR[ContentDescription]" />
+      </include>
+    </definition>
+  </include>
 </includes>
