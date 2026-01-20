@@ -151,6 +151,8 @@
 
   <variable name="ContentAction">
     <value condition="String.IsEqual(ListItem.DBTYPE,album)">PlayMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">PlayMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,resume)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,movieset)">PlayMedia(videodb://movies/sets/$INFO[ListItem.DBID]/,resume)</value>
     <value></value>
   </variable>
 
