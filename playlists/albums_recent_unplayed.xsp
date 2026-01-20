@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<smartplaylist type="movies">
-  <name>Recent Unwatched Movies</name>
+<smartplaylist type="albums">
+  <name>Recent Unplayed Albums</name>
   <match>all</match>
   <rule field="dateadded" operator="inthelast">
-    <value>1 YEARS</value>
+      <value>1 YEARS</value>
   </rule>
   <rule field="playcount" operator="lessthan">
     <value>1</value>
   </rule>
   <order direction="descending">dateadded</order>
-  <limit>10</limit>
 </smartplaylist>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+  <name>Unplayed Songs</name>
+  <match>all</match>
+  <rule field="playcount" operator="lessthan">
+    <value>1</value>
+  </rule>
+  <order direction="descending">random</order>
+  <limit>10</limit>
+</smartplaylist>
