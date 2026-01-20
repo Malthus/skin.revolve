@@ -6,7 +6,7 @@
     <value condition="String.IsEqual(Window.Property(CustomType),P)">ActivateWindow(1102)</value>
     <value condition="String.IsEqual(Window.Property(CustomType),A)">$INFO[Window.Property(CustomAddon),RunScript(,)]</value>
     <value condition="String.IsEqual(Window.Property(CustomType),E)">RunScript(script.revolve.service,ExecuteShellCommand,"$INFO[Window.Property(CustomExecutable)]" $INFO[Window.Property(CustomParameters)])</value>
-    <value condition="String.IsEqual(Window.Property(CustomType),C)">$INFO[Control.GetLabel(48)]</value>
+    <value condition="String.IsEqual(Window.Property(CustomType),C)">$INFO[Window.Property(CustomAction)]</value>
     <value></value>
   </variable>
 
@@ -345,10 +345,10 @@
         <ondown>27</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetString(Dialog.Input,$INFO[Window.Property(CustomAction)])</onclick>
-        <onclick>Skin.SetString(Dialog.Input)</onclick>
-        <onclick>SetProperty(CustomAction,$INFO[Skin.String(Dialog.Input)])</onclick>
-        <onclick>Skin.Reset(Dialog.Input)</onclick>
+        <onclick>Skin.SetString(Dialog.Result,$INFO[Window.Property(CustomAction)])</onclick>
+        <onclick>Skin.SetString(Dialog.Result)</onclick>
+        <onclick>SetProperty(CustomAction,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.Reset(Dialog.Result)</onclick>
       </control>
 
       <include content="LabelForDialog">
