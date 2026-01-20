@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="DialogGamePortsWindow">
+    <definition>
+      <include content="BackdropForDialog">
+        <param name="windowid" value="DialogGamePorts.xml" />
+      </include>
+
+      <control type="group">
+        <posy>PosYForFullWindowDialog</posy>
+        <include content="FadeAnimationForDialogWindow" />
+        <include content="WindowForDialog">
+          <param name="height" value="HeightForFullWindowDialog" />
+          <param name="headerlabel" value="$LOCALIZE[35058]" />
+          <param name="icontexture" value="icons/icon-gamepad.png" />
+        </include>
+
+        <control type="list" id="3">
+          <description>Port item list</description>
+          <onup>3</onup>
+          <ondown>3</ondown>
+          <onleft>9000</onleft>
+          <onright>62</onright>
+          <pagecontrol>62</pagecontrol>
+          <orientation>vertical</orientation>
+
+          <itemlayout width="1440" height="100">
+            <control type="group">
+              <control type="label">
+                <top>20</top>
+                <left>20</left>
+                <label>$INFO[ListItem.Label]</label>
+                <font>DialogTextFont</font>
+                <align>left</align>
+              </control>
+              <control type="label">
+                <top>20</top>
+                <right>132</right>
+                <label>$INFO[ListItem.Label2]</label>
+                <font>DialogTextFont</font>
+                <align>right</align>
+              </control>
+              <control type="gamecontroller">
+                <right>12</right>
+                <width>100</width>
+                <texture>$INFO[ListItem.Icon]</texture>
+                <portaddress>$INFO[ListItem.FilenameAndPath]</portaddress>
+              </control>
+            </control>
+          </itemlayout>
+
+          <focusedlayout width="1440" height="100">
+            <control type="group">
+              <control type="image">
+                <top>-20</top>
+                <bottom>-20</bottom>
+                <left>-20</left>
+                <right>-20</right>
+                <!-- <texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture> -->
+                <visible>Control.HasFocus(3)</visible>
+              </control>
+              <control type="label">
+                <top>20</top>
+                <left>20</left>
+                <label>$INFO[ListItem.Label]</label>
+                <font>DialogTextFont</font>
+                <align>left</align>
+              </control>
+              <control type="label">
+                <top>20</top>
+                <right>132</right>
+                <label>$INFO[ListItem.Label2]</label>
+                <font>DialogTextFont</font>
+                <align>right</align>
+              </control>
+              <control type="gamecontroller">
+                <right>12</right>
+                <width>100</width>
+                <texture>$INFO[ListItem.Icon]</texture>
+                <portaddress>$INFO[ListItem.FilenameAndPath]</portaddress>
+              </control>
+            </control>
+          </focusedlayout>
+        </control>
+      
+        <include content="ScrollbarForDialog">
+          <param name="id" value="62" />
+          <param name="posy" value="260" />
+          <param name="height" value="620" />
+          <param name="onleft" value="3" />
+        </include>
+      
+        <control type="grouplist" id="9000">
+          <include content="MarkupForButtonListForDialog">
+            <param name="posy" value="800" />
+            <param name="height" value="80" />
+          </include>
+          <onup>9000</onup>
+          <ondown>9000</ondown>
+          <onright>3</onright>
+  
+          <include content="ResetButtonForDialog">
+            <param name="id" value="19" />
+          </include>
+          <include content="OkButtonForDialog">
+            <param name="id" value="18" />
+          </include>
+        </control>
+     
+      </control>
+    </definition>
+  </include>
+</includes>
