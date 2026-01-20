@@ -245,13 +245,13 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Playlist: $INFO[Window.Property(CustomContentPath)]</label>
+        <label>Playlist: $INFO[Window.Property(CustomPlaylist)]</label>
         <onup>43</onup>
         <ondown>45</ondown>
         <onleft>9000</onleft>
         <onright>Noop</onright>
-        <onclick>Skin.SetFile(Dialog.Result,,special://profile/playlists/)</onclick>
-        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick>Skin.SetFile(Dialog.Result,,special://skin/playlists/)</onclick>
+        <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String(Dialog.Result)])</onclick>
         <onclick>Skin.Reset(Dialog.Result)</onclick>
       </control>
 
@@ -386,7 +386,7 @@
           <onclick>SetProperty(CustomType,W)</onclick>
           <onclick>ClearProperty(CustomWindow)</onclick>
           <onclick>ClearProperty(CustomMenuIdentifier)</onclick>
-          <onclick>ClearProperty(CustomContentPath)</onclick>
+          <onclick>ClearProperty(CustomPlaylist)</onclick>
           <onclick>ClearProperty(CustomAddonType)</onclick>
           <onclick>ClearProperty(CustomAddon)</onclick>
           <onclick>ClearProperty(CustomExecutable)</onclick>
@@ -415,7 +415,7 @@
           <onclick condition="String.IsEqual(Window.Property(CustomType),P)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,1102)</onclick>
           <onclick condition="String.IsEqual(Window.Property(CustomType),A) | String.IsEqual(Window.Property(CustomType),E) | String.IsEqual(Window.Property(CustomType),C)">Skin.SetString($INFO[Window.Property(TargetOption)].Window,0)</onclick>
           <onclick condition="String.IsEqual(Window.Property(CustomType),M)">Skin.SetString($INFO[Window.Property(TargetOption)].MenuIdentifier,$INFO[Window.Property(CustomMenuIdentifier)])</onclick>
-          <onclick condition="String.IsEqual(Window.Property(CustomType),P)">Skin.SetString($INFO[Window.Property(TargetOption)].ContentPath,$INFO[Window.Property(CustomContentPath)])</onclick>
+          <onclick condition="String.IsEqual(Window.Property(CustomType),P)">Skin.SetString($INFO[Window.Property(TargetOption)].Playlist,$INFO[Window.Property(CustomPlaylist)])</onclick>
           <onclick condition="String.IsEqual(Window.Property(CustomType),A)">Skin.SetString($INFO[Window.Property(TargetOption)].Addon,$INFO[Window.Property(CustomAddon)])</onclick>
           <onclick condition="String.IsEqual(Window.Property(CustomType),E)">Skin.SetString($INFO[Window.Property(TargetOption)].Executable,$INFO[Window.Property(CustomExecutable)])</onclick>
           <onclick condition="String.IsEqual(Window.Property(CustomType),E)">Skin.SetString($INFO[Window.Property(TargetOption)].Parameters,$INFO[Window.Property(CustomParameters)])</onclick>

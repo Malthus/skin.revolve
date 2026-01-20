@@ -69,15 +69,18 @@
         <param name="id" value="281" />
         <param name="label" value="$LOCALIZE[1036]" />
         <param name="variable" value="FavouritesOption" />
+        <param name="playlistvisible" value="True" />
       </include>
 
-      <include content="VisibleCustomButtonForHomeMenuSkinSettings">
+      <include content="CustomButtonForHomeMenuSkinSettings">
         <param name="id" value="201" />
+        <param name="alwaysvisible" value="true" />
         <param name="variable" value="Custom01Option" />
       </include>
 
-      <include content="VisibleCustomButtonForHomeMenuSkinSettings">
+      <include content="CustomButtonForHomeMenuSkinSettings">
         <param name="id" value="202" />
+        <param name="alwaysvisible" value="true" />
         <param name="variable" value="Custom02Option" />
       </include>
 
@@ -193,41 +196,48 @@
         <param name="id" value="293" />
         <param name="label" value="$LOCALIZE[19020]" />
         <param name="variable" value="TVOption" />
+        <param name="playlistvisible" value="True" />
       </include>
 
       <include content="StandardButtonForHomeMenuSkinSettings">
         <param name="id" value="269" />
         <param name="label" value="$LOCALIZE[19021]" />
         <param name="variable" value="RadioOption" />
+        <param name="playlistvisible" value="True" />
       </include>
 
       <include content="StandardButtonForHomeMenuSkinSettings">
         <param name="id" value="282" />
         <param name="label" value="$LOCALIZE[3]" />
         <param name="variable" value="VideosOption" />
-        <param name="immutablepath" value="True" />
+        <param name="playlistvisible" value="True" />
+        <param name="immutablepathvisible" value="True" />
       </include>
 
       <include content="StandardButtonForHomeMenuSkinSettings">
         <param name="id" value="283" />
         <param name="label" value="$LOCALIZE[342]" />
         <param name="variable" value="MoviesOption" />
+        <param name="playlistvisible" value="True" />
       </include>
 
       <include content="StandardButtonForHomeMenuSkinSettings">
         <param name="id" value="284" />
         <param name="label" value="$LOCALIZE[31003]" />
         <param name="variable" value="TVShowsOption" />
+        <param name="playlistvisible" value="True" />
       </include>
 
       <include content="StandardButtonForHomeMenuSkinSettings">
         <param name="id" value="270" />
         <param name="label" value="$LOCALIZE[20389]" />
         <param name="variable" value="MusicVideosOption" />
+        <param name="playlistvisible" value="True" />
       </include>
 
-      <include content="VisibleCustomButtonForHomeMenuSkinSettings">
+      <include content="CustomButtonForHomeMenuSkinSettings">
         <param name="id" value="241" />
+        <param name="alwaysvisible" value="true" />
         <param name="variable" value="CustomVideosOption" />
       </include>
 
@@ -235,17 +245,20 @@
         <param name="id" value="285" />
         <param name="label" value="$LOCALIZE[2]" />
         <param name="variable" value="MusicOption" />
-        <param name="immutablepath" value="True" />
+        <param name="playlistvisible" value="True" />
+        <param name="immutablepathvisible" value="True" />
       </include>
 
       <include content="StandardButtonForHomeMenuSkinSettings">
         <param name="id" value="275" />
         <param name="label" value="$LOCALIZE[132]" />
         <param name="variable" value="AlbumsOption" />
+        <param name="playlistvisible" value="True" />
       </include>
 
-      <include content="VisibleCustomButtonForHomeMenuSkinSettings">
+      <include content="CustomButtonForHomeMenuSkinSettings">
         <param name="id" value="242" />
+        <param name="alwaysvisible" value="true" />
         <param name="variable" value="CustomMusicOption" />
       </include>
 
@@ -269,8 +282,9 @@
         <param name="variable" value="PicturesOption" />
       </include>
 
-      <include content="VisibleCustomButtonForHomeMenuSkinSettings">
+      <include content="CustomButtonForHomeMenuSkinSettings">
         <param name="id" value="243" />
+        <param name="alwaysvisible" value="true" />
         <param name="variable" value="CustomPicturesOption" />
       </include>
 
@@ -278,11 +292,12 @@
         <param name="id" value="272" />
         <param name="label" value="$LOCALIZE[15016]" />
         <param name="variable" value="GamesOption" />
-        <param name="immutablepath" value="True" />
+        <param name="immutablepathvisible" value="True" />
       </include>
 
-      <include content="VisibleCustomButtonForHomeMenuSkinSettings">
+      <include content="CustomButtonForHomeMenuSkinSettings">
         <param name="id" value="295" />
+        <param name="alwaysvisible" value="true" />
         <param name="variable" value="CustomGamesOption" />
       </include>
 
@@ -320,6 +335,7 @@
         <param name="id" value="292" />
         <param name="label" value="$LOCALIZE[13012]" />
         <param name="variable" value="ExitOption" />
+        <param name="circlemenuvisible" value="True" />
       </include>
      </definition>
   </include>
@@ -352,9 +368,10 @@
     <param name="id" default="0" />
     <param name="label" default="" />
     <param name="variable" default="Option" />
-    <param name="immutablepath" default="False" />
-    <param name="customwindow" default="False" />
-  
+    <param name="playlistvisible" default="False" />
+    <param name="immutablepathvisible" default="False" />
+    <param name="circlemenuvisible" default="False" />
+
     <definition>
       <control type="radiobutton" id="$PARAM[id]">
         <width>1100</width>
@@ -366,13 +383,15 @@
         <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1196)</onclick>
         <onclick>SetProperty(CustomOptionName,$PARAM[label],1196)</onclick>
         <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1196)</onclick>
+        <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String($PARAM[variable].Playlist)],1196)</onclick>
         <onclick condition="!Skin.HasSetting($PARAM[variable].ImmutablePath)">ClearProperty(CustomOptionImmutablePath,1196)</onclick>
         <onclick condition="Skin.HasSetting($PARAM[variable].ImmutablePath)">SetProperty(CustomOptionImmutablePath,True,1196)</onclick>
-        <onclick condition="!Skin.HasSetting($PARAM[variable].CustomWindow)">ClearProperty(CustomOptionCustomWindow,1196)</onclick>
-        <onclick condition="Skin.HasSetting($PARAM[variable].CustomWindow)">SetProperty(CustomOptionCustomWindow,True,1196)</onclick>
+        <onclick condition="!Skin.HasSetting($PARAM[variable].CircleMenu)">ClearProperty(CustomOptionCircleMenu,1196)</onclick>
+        <onclick condition="Skin.HasSetting($PARAM[variable].CircleMenu)">SetProperty(CustomOptionCircleMenu,True,1196)</onclick>
         <onclick>SetProperty(TargetOption,$PARAM[variable],1196)</onclick>
-        <onclick>SetProperty(Dialog.ImmutablePathVisible,$PARAM[immutablepath],1196)</onclick>
-        <onclick>SetProperty(Dialog.CustomWindowVisible,$PARAM[customwindow],1196)</onclick>
+        <onclick>SetProperty(Dialog.PlaylistVisible,$PARAM[playlistvisible],1196)</onclick>
+        <onclick>SetProperty(Dialog.ImmutablePathVisible,$PARAM[immutablepathvisible],1196)</onclick>
+        <onclick>SetProperty(Dialog.CircleMenuVisible,$PARAM[circlemenuvisible],1196)</onclick>
         <onclick>ActivateWindow(1196)</onclick>
       </control>
     </definition>
@@ -399,7 +418,7 @@
         <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1190)</onclick>
         <onclick>SetProperty(CustomWindow,$INFO[Skin.String($PARAM[variable].Window)],1190)</onclick>
         <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],1190)</onclick>
-        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],1190)</onclick>
+        <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String($PARAM[variable].Playlist)],1190)</onclick>
         <onclick>SetProperty(CustomAddon,$INFO[Skin.String($PARAM[variable].Addon)],1190)</onclick>
         <onclick>SetProperty(CustomExecutable,$INFO[Skin.String($PARAM[variable].Executable)],1190)</onclick>
         <onclick>SetProperty(CustomParameters,$INFO[Skin.String($PARAM[variable].Parameters)],1190)</onclick>
@@ -414,12 +433,13 @@
 
   <include name="CustomButtonForHomeMenuSkinSettings">
     <param name="id" default="0" />
+    <param name="alwaysvisible" default="false" />
     <param name="variable" default="Option" />
-    <param name="lastitem" default="Option" />
+    <param name="lastitem" default="none" />
 
     <definition>
       <control type="radiobutton" id="$PARAM[id]">
-        <visible>Skin.HasSetting($PARAM[lastitem].Active) | !String.IsEmpty(Skin.String($PARAM[lastitem].Name)) | Skin.HasSetting($PARAM[variable].Active) | !String.IsEmpty(Skin.String($PARAM[variable].Name))</visible>
+        <visible>$PARAM[alwaysvisible] | Skin.HasSetting($PARAM[lastitem].Active) | !String.IsEmpty(Skin.String($PARAM[lastitem].Name)) | Skin.HasSetting($PARAM[variable].Active) | !String.IsEmpty(Skin.String($PARAM[variable].Name))</visible>
         <width>1100</width>
         <radioposx>1040</radioposx>
         <align>left</align>
@@ -433,39 +453,7 @@
         <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1190)</onclick>
         <onclick>SetProperty(CustomWindow,$INFO[Skin.String($PARAM[variable].Window)],1190)</onclick>
         <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],1190)</onclick>
-        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],1190)</onclick>
-        <onclick>SetProperty(CustomAddon,$INFO[Skin.String($PARAM[variable].Addon)],1190)</onclick>
-        <onclick>SetProperty(CustomExecutable,$INFO[Skin.String($PARAM[variable].Executable)],1190)</onclick>
-        <onclick>SetProperty(CustomParameters,$INFO[Skin.String($PARAM[variable].Parameters)],1190)</onclick>
-        <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Command)],1190)</onclick>
-        <onclick>SetProperty(CustomAction,$INFO[Skin.String($PARAM[variable].Action)],1190)</onclick>
-        <onclick>SetProperty(TargetOption, $PARAM[variable],1190)</onclick>
-        <onclick>SetProperty(CustomizableOption,true,1190)</onclick>
-        <onclick>ActivateWindow(1190)</onclick>
-      </control>
-    </definition>
-  </include>
-
-  <include name="VisibleCustomButtonForHomeMenuSkinSettings">
-    <param name="id" default="0" />
-    <param name="variable" default="Option" />
-
-    <definition>
-      <control type="radiobutton" id="$PARAM[id]">
-        <width>1100</width>
-        <radioposx>1040</radioposx>
-        <align>left</align>
-        <label>$LOCALIZE[31140]: $INFO[Skin.String($PARAM[variable].Name)]</label>
-        <selected>Skin.HasSetting($PARAM[variable].Active)</selected>
-        <onclick condition="!Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,False,1190)</onclick>
-        <onclick condition="Skin.HasSetting($PARAM[variable].Active)">SetProperty(CustomOptionActive,True,1190)</onclick>
-        <onclick>SetProperty(CustomType,$INFO[Skin.String($PARAM[variable].Type)],1190)</onclick>
-        <onclick>SetProperty(CustomName,$INFO[Skin.String($PARAM[variable].Name)],1190)</onclick>
-        <onclick>SetProperty(CustomSubtitle,$INFO[Skin.String($PARAM[variable].Subtitle)],1190)</onclick>
-        <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],1190)</onclick>
-        <onclick>SetProperty(CustomWindow,$INFO[Skin.String($PARAM[variable].Window)],1190)</onclick>
-        <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],1190)</onclick>
-        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],1190)</onclick>
+        <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String($PARAM[variable].Playlist)],1190)</onclick>
         <onclick>SetProperty(CustomAddon,$INFO[Skin.String($PARAM[variable].Addon)],1190)</onclick>
         <onclick>SetProperty(CustomExecutable,$INFO[Skin.String($PARAM[variable].Executable)],1190)</onclick>
         <onclick>SetProperty(CustomParameters,$INFO[Skin.String($PARAM[variable].Parameters)],1190)</onclick>

@@ -130,13 +130,13 @@
           <onclick>SetProperty(DialogMessage,$LOCALIZE[31170],1188)</onclick>
           <onclick>SetProperty(DialogTarget,MusicVisualisation.Clock.Mode,1188)</onclick>
           <onclick>SetProperty(List01Option.Name,$LOCALIZE[20422],1188)</onclick>
-          <onclick>SetProperty(List01Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
+          <onclick>SetProperty(List01Option.Icon,icons/icon-settings.png,1188)</onclick>
           <onclick>SetProperty(List01Option.Action,A,1188)</onclick>
           <onclick>SetProperty(List02Option.Name,$LOCALIZE[31706],1188)</onclick>
-          <onclick>SetProperty(List02Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
+          <onclick>SetProperty(List02Option.Icon,icons/icon-settings.png,1188)</onclick>
           <onclick>SetProperty(List02Option.Action,P,1188)</onclick>
           <onclick>SetProperty(List03Option.Name,$LOCALIZE[13170],1188)</onclick>
-          <onclick>SetProperty(List03Option.Thumbnail,icons/icon-settings.png,1188)</onclick>
+          <onclick>SetProperty(List03Option.Icon,icons/icon-settings.png,1188)</onclick>
           <onclick>SetProperty(List03Option.Action,N,1188)</onclick>
           <onclick>ActivateWindow(1188)</onclick>
         </control>

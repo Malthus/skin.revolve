@@ -3,9 +3,9 @@
   <defaultcontrol always="yes">200</defaultcontrol>
   <menucontrol>9001</menucontrol>
   <onload condition="!String.IsEmpty(Window.Property(MenuTitle))">Skin.SetString(MyItems.MenuTitle,$INFO[Window.Property(MenuTitle)])</onload>
-  <onload condition="!String.IsEmpty(Window.Property(CustomContentPath))">Skin.SetString(MyItems.ContentPath,$INFO[Window.Property(CustomContentPath)])</onload>
+  <onload condition="!String.IsEmpty(Window.Property(CustomPlaylist))">Skin.SetString(MyItems.Playlist,$INFO[Window.Property(CustomPlaylist)])</onload>
   <onload condition="String.IsEmpty(Window.Property(MenuTitle))">SetProperty(MenuTitle,$INFO[Skin.String(MyItems.MenuTitle)])</onload>
-  <onload condition="String.IsEmpty(Window.Property(CustomContentPath))">SetProperty(CustomContentPath,$INFO[Skin.String(MyItems.ContentPath)])</onload>
+  <onload condition="String.IsEmpty(Window.Property(CustomPlaylist))">SetProperty(CustomPlaylist,$INFO[Skin.String(MyItems.Playlist)])</onload>
   <onload>Skin.SetString(ActiveCustomOption.BackgroundImage,$INFO[Window.Property(BackgroundImage)])</onload>
 
   <controls>
@@ -23,7 +23,7 @@
 
       <include content="InvisibleVerticalListItemsForView" />
 
-      <content>$INFO[Window.Property(CustomContentPath)]</content>
+      <content>$INFO[Window.Property(CustomPlaylist)]</content>
     </control>
 
     <control type="group">

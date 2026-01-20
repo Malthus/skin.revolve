@@ -166,16 +166,16 @@
             <onclick>SetProperty(DialogMessage,$LOCALIZE[31208],1188)</onclick>
             <onclick>SetProperty(DialogTarget,BusyAnimation.Type,1188)</onclick>
             <onclick>SetProperty(List01Option.Name,$LOCALIZE[31951],1188)</onclick>
-            <onclick>SetProperty(List01Option.Thumbnail,icons/busy-arrows.png,1188)</onclick>
+            <onclick>SetProperty(List01Option.Icon,icons/busy-arrows.png,1188)</onclick>
             <onclick>SetProperty(List01Option.Action,A,1188)</onclick>
             <onclick>SetProperty(List02Option.Name,$LOCALIZE[31952],1188)</onclick>
-            <onclick>SetProperty(List02Option.Thumbnail,icons/busy-circles.png,1188)</onclick>
+            <onclick>SetProperty(List02Option.Icon,icons/busy-circles.png,1188)</onclick>
             <onclick>SetProperty(List02Option.Action,C,1188)</onclick>
             <onclick>SetProperty(List03Option.Name,$LOCALIZE[31953],1188)</onclick>
-            <onclick>SetProperty(List03Option.Thumbnail,icons/busy-spiral.png,1188)</onclick>
+            <onclick>SetProperty(List03Option.Icon,icons/busy-spiral.png,1188)</onclick>
             <onclick>SetProperty(List03Option.Action,S,1188)</onclick>
             <onclick>SetProperty(List04Option.Name,$LOCALIZE[31955],1188)</onclick>
-            <onclick>SetProperty(List04Option.Thumbnail,icons/busy-yinyang.png,1188)</onclick>
+            <onclick>SetProperty(List04Option.Icon,icons/busy-yinyang.png,1188)</onclick>
             <onclick>SetProperty(List04Option.Action,Y,1188)</onclick>
             <onclick>ActivateWindow(1188)</onclick>
           </control>
