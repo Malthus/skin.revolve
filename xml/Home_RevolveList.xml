@@ -545,9 +545,9 @@
                 </control>
                 
                 <control type="group">
-                    <visible>!Control.HasFocus(900)</visible>
-                    <animation effect="fade" start="0" end="100" time="500" reversible="false" condition="!Control.HasFocus(900)">Visible</animation>
-                    <animation effect="fade" start="100" end="0" time="500" reversible="false" condition="Control.HasFocus(900)">Hidden</animation>
+                    <visible>!$EXP[CircleItemsVisible] + !$EXP[ExitItemsVisible]</visible>
+                    <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Control.HasFocus(900)">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="200" reversible="false" condition="Control.HasFocus(900)">Hidden</animation>
                     
                     <control type="image">
                         <posx>-100</posx>

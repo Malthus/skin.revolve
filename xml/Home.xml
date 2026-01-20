@@ -12,9 +12,8 @@
       <focusposition>1</focusposition>
       <onup>300</onup>
       <ondown>300</ondown>
-      <onleft condition="$EXP[NextAiredInCircleItemsVisible] | $EXP[MoviesInCircleItemsVisible] | $EXP[EpisodesInCircleItemsVisible] | $EXP[AlbumsInCircleItemsVisible]">600</onleft>
-      <onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)">900</onleft>
-      <onleft condition="!$EXP[NextAiredInCircleItemsVisible] + !$EXP[MoviesInCircleItemsVisible] + !$EXP[EpisodesInCircleItemsVisible] + !$EXP[AlbumsInCircleItemsVisible] + ![Container(300).HasFocus(20) + Skin.HasSetting(CircleExitMenu.Enable)]">9001</onleft>
+      <onleft condition="!Container(300).HasFocus(20) | !Skin.HasSetting(ExitOption.CircleMenu)">600</onleft>
+      <onleft condition="Container(300).HasFocus(20) + Skin.HasSetting(ExitOption.CircleMenu)">900</onleft>
       <onright>Noop</onright>
 
       <include content="InvisibleVerticalListItemsForView" />
@@ -31,7 +30,7 @@
       <include content="BackgroundForSideMenu" />
 
       <include content="ButtonListForSideMenu">
-        <param name="onright" value="300" />
+        <param name="onright" value="600" />
 
         <include content="NavigationGroupLabelForSideMenu" />
         <include content="GlobalSearchButtonForSideMenu" />
@@ -54,7 +53,7 @@
       </include>
 
       <include content="PlayerControlsForSideMenu">
-        <param name="onright" value="300" />
+        <param name="onright" value="600" />
       </include>
     </control>
 

@@ -1,229 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-  <expression name="NextAiredInCircleItemsVisible">Container(300).HasFocus(15) + System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(CircleNextAired.Enable) + Skin.HasSetting(CircleNextAired.NotInvisible)</expression>
-  <expression name="MoviesInCircleItemsVisible">Container(300).HasFocus(5) + !String.IsEmpty(Skin.String(CircleMovieOption.Source)) + Skin.HasSetting(CircleMovieOption.NotInvisible)</expression>
-  <expression name="EpisodesInCircleItemsVisible">Container(300).HasFocus(6) + !String.IsEmpty(Skin.String(CircleEpisodeOption.Source)) + Skin.HasSetting(CircleEpisodeOption.NotInvisible)</expression>
-  <expression name="AlbumsInCircleItemsVisible">Container(300).HasFocus(16) + !String.IsEmpty(Skin.String(CircleAlbumOption.Source)) + Skin.HasSetting(CircleAlbumOption.NotInvisible)</expression>
-  <expression name="CircleItemsVisible">Control.HasFocus(600) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | $EXP[MoviesInCircleItemsVisible] | $EXP[EpisodesInCircleItemsVisible] | $EXP[AlbumsInCircleItemsVisible] | $EXP[NextAiredInCircleItemsVisible]</expression>
+  <expression name="CircleItemsVisible">!String.IsEmpty(Container(300).ListItem.Property(Playlist))</expression>
 
   <include name="HomeCircleItems">
     <control type="group">
-      <control type="grouplist" id="600">
-        <posx>-100</posx>
-        <posy>330</posy>
+      <visible>$EXP[CircleItemsVisible]</visible>
+      <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+      <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      <posx>20</posx>
+      <posy>370</posy>
 
-        <include content="ListOfHomeCircleItems">
-          <param name="id" value="601" />
-          <param name="visible" value="$EXP[NextAiredInCircleItemsVisible]" />
-          <param name="movievisible" value="false" />
-          <param name="tvshowvisible" value="$EXP[NextAiredInCircleItemsVisible]" />
-          <param name="albumvisible" value="false" />
-          <param name="contentpath" value="pvr://channels/tv/*?view=lastplayed" />
-        </include>
-        <include content="ListOfHomeCircleItems">
-          <param name="id" value="602" />
-          <param name="visible" value="$EXP[MoviesInCircleItemsVisible]" />
-          <param name="movievisible" value="$EXP[MoviesInCircleItemsVisible]" />
-          <param name="tvshowvisible" value="false" />
-          <param name="albumvisible" value="false" />
-          <param name="contentpath" value="special://skin/playlists/movies_unwatched.xsp" />
-        </include>
-        <include content="ListOfHomeCircleItems">
-          <param name="id" value="603" />
-          <param name="visible" value="$EXP[EpisodesInCircleItemsVisible]" />
-          <param name="movievisible" value="false" />
-          <param name="tvshowvisible" value="$EXP[EpisodesInCircleItemsVisible]" />
-          <param name="albumvisible" value="false" />
-          <param name="contentpath" value="special://skin/playlists/episodes_recent_unwatched.xsp" />
-        </include>
-        <include content="ListOfHomeCircleItems">
-          <param name="id" value="604" />
-          <param name="visible" value="$EXP[AlbumsInCircleItemsVisible]" />
-          <param name="movievisible" value="false" />
-          <param name="tvshowvisible" value="false" />
-          <param name="albumvisible" value="$EXP[AlbumsInCircleItemsVisible]" />
-          <param name="contentpath" value="special://skin/playlists/albums_unplayed.xsp" />
-        </include>
-      </control>
-    </control>
-  </include>
-
-  <include name="ListOfHomeCircleItems">
-    <param name="id" default="0" />
-    <param name="visible" default="false" />
-    <param name="movievisible" default="false" />
-    <param name="tvshowvisible" default="false" />
-    <param name="albumvisible" default="false" />
-    <param name="contentpath" default="" />
-
-    <definition>
-      <control type="fixedlist" id="$PARAM[id]">
+      <control type="fixedlist" id="600">
         <description>Items In Circle Within Home Menu</description>
-        <visible allowhiddenfocus="true">$PARAM[visible]</visible>
-        <enable>$PARAM[visible]</enable>
-        <animation effect="fade" start="0" end="100" time="500">Visible</animation>
-        <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
-
         <width>812</width>
         <height>662</height>
         <scrolltime>0</scrolltime>
-        <onup>$PARAM[id]</onup>
-        <ondown>$PARAM[id]</ondown>
-        <onleft>Noop</onleft>
+        <onup>600</onup>
+        <ondown>600</ondown>
+        <onleft>9001</onleft>
         <onright>300</onright>
-        
+        <onclick>$VAR[ContentAction]</onclick>
+
         <itemlayout width="800" height="0">
         </itemlayout>
-        
+
         <focusedlayout width="800" height="662">
-          <control type="group">
-            <description>Movies In Circle List</description>
-            <visible allowhiddenfocus="true">$PARAM[movievisible]</visible>
-            
-            <control type="image">
-              <width>662</width>
-              <height>662</height>
-              <texture background="true">circle/movies-focus.png</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-            
-            <control type="image">
-              <posx>66</posx>
-              <posy>186</posy>
-              <width>527</width>
-              <height>294</height>
-              <fadetime>200</fadetime>
-              <texture diffuse="circle/movies-mask.png" background="true">$INFO[ListItem.Icon]</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-
-            <control type="image">
-              <visible>!Control.HasFocus(600)</visible>
-              <animation effect="fade" start="0" end="100" time="200">Visible</animation>
-              <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-              <posx>66</posx>
-              <posy>186</posy>
-              <width>527</width>
-              <height>294</height>
-              <texture colordiffuse="$VAR[SelectColor]">circle/movies-mask.png</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-          </control>
-      
-          <control type="group">
-            <description>TV Shows In Circle List</description>
-            <visible allowhiddenfocus="true">$PARAM[tvshowvisible]</visible>
-
-            <control type="image">
-              <width>662</width>
-              <height>662</height>
-              <texture background="true">circle/tvshows-focus.png</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-            
-            <control type="image">
-              <posx>39</posx>
-              <posy>119</posy>
-              <width>485</width>
-              <height>385</height>
-              <texture diffuse="circle/tvshows-mask.png" background="true">$INFO[ListItem.Icon]</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-            
-            <control type="image">
-              <visible>!Control.HasFocus(600)</visible>
-              <animation effect="fade" start="0" end="100" time="200">Visible</animation>
-              <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-              <posx>39</posx>
-              <posy>119</posy>
-              <width>485</width>
-              <height>385</height>
-              <texture colordiffuse="$VAR[SelectColor]">circle/tvshows-mask.png</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-          </control>
+          <description>Items In Circle List</description>
 
           <control type="group">
-            <description>Albums In Circle List</description>
-            <visible allowhiddenfocus="true">$PARAM[albumvisible]</visible>
-            
-            <control type="image">
-              <width>662</width>
-              <height>662</height>
-              <texture background="true">circle/albums-focus.png</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-            
-            <control type="image">
-              <posx>118</posx>
-              <posy>58</posy>
-              <width>467</width>
-              <height>467</height>
-              <texture diffuse="circle/albums-mask.png" background="true">$INFO[ListItem.Icon]</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-            
-            <control type="image">
-              <visible>!Control.HasFocus(600)</visible>
-              <animation effect="fade" start="0" end="100" time="200">Visible</animation>
-              <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-              <posx>118</posx>
-              <posy>58</posy>
-              <width>467</width>
-              <height>467</height>
-              <texture colordiffuse="$VAR[SelectColor]">circle/albums-mask.png</texture>
-              <aspectratio scalediffuse="false">stretch</aspectratio>
-            </control>
-          </control>
+            <posx>80</posx>
+            <posy>25</posy>
 
-          <control type="label">
-            <posx>120</posx>
-            <posy>550</posy>
-            <width>690</width>
-            <height>40</height>
-            <font>BigViewFont</font>
-            <textcolor>$VAR[BackgroundColor]</textcolor>
-            <align>left</align>
-            <scroll>true</scroll>
-            <label>$INFO[ListItem.Label]</label>
-          </control>
-      
-          <control type="label">
-            <posx>120</posx>
-            <posy>590</posy>
-            <width>802</width>
-            <height>30</height>
-            <font>HomeMenuSpecialFont</font>
-            <textcolor>$VAR[BackgroundColor]</textcolor>
-            <align>left</align>
-            <scroll>true</scroll>
-            <label>$INFO[ListItem.Label2]</label>
-          </control>
-          
-          <control type="image">
-            <visible>!String.IsEmpty(ListItem.Property(Number))</visible>
-            <posx>120</posx>
-            <posy>625</posy>
-            <width>30</width>
-            <height>30</height>
-            <texture colordiffuse="$VAR[BackgroundColor]">elements/circle-mask.png</texture>
-          </control>
-
-          <control type="label">
-            <posx>120</posx>
-            <posy>630</posy>
-            <width>30</width>
-            <height>20</height>
-            <font>HomeMenuCircleCounterFont</font>
-            <textcolor>$VAR[MainColor]</textcolor>
-            <align>center</align>
-            <scroll>false</scroll>
-            <label>$INFO[ListItem.Property(Number)]</label>
+            <include content="CircleIcon">
+              <param name="icontexture" value="$VAR[ContentThumbnail]" />
+              <param name="iconsize" value="468" />
+              <param name="iconoffset" value="6" />
+              <param name="backgroundcolor" value="$VAR[BackgroundColor]" />
+              <param name="backgroundsize" value="480" />
+              <param name="fademaskvisible" value="!Control.HasFocus(600)" />
+            </include>
           </control>
         </focusedlayout>
 
-        <content limit="10">$PARAM[contentpath]</content>
-      </control>  
-    </definition>
+        <content limit="10">$INFO[Container(300).ListItem.Property(Playlist)]</content>
+      </control>
+      
+      <control type="group">
+        <visible>Control.HasFocus(600)</visible>
+        <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+
+        <control type="label">
+          <posx>0</posx>
+          <posy>540</posy>
+          <width>740</width>
+          <height>40</height>
+          <font>BigViewFont</font>
+          <textcolor>$VAR[BackgroundColor]</textcolor>
+          <align>left</align>
+          <scroll>true</scroll>
+          <label>$INFO[Container(600).ListItem.Label]</label>
+        </control>
+
+        <control type="label">
+          <posx>0</posx>
+          <posy>580</posy>
+          <width>720</width>
+          <height>30</height>
+          <font>HomeMenuSpecialFont</font>
+          <textcolor>$VAR[BackgroundColor]</textcolor>
+          <align>left</align>
+          <scroll>true</scroll>
+          <label>$INFO[Container(600).ListItem.Label2]</label>
+        </control>
+
+        <include content="CircleButton">
+          <param name="id" value="601" />
+          <param name="posx" value="290" />
+          <param name="posy" value="0" />
+          <param name="width" value="60" />
+          <param name="height" value="60" />
+          <param name="texturefocus" value="controls/button-channelup.png" />
+          <param name="colorfocus" value="$VAR[BackgroundColor]" />
+          <param name="texturenofocus" value="controls/button-channelup.png" />
+          <param name="colornofocus" value="$VAR[BackgroundColor]" />
+          <param name="colorbackground" value="$VAR[TextColor]" />
+          <param name="ondown" value="600" />
+          <param name="onclick" value="Control.Move(600,-1)" />
+        </include>
+
+        <include content="CircleButton">
+          <param name="id" value="602" />
+          <param name="posx" value="290" />
+          <param name="posy" value="470" />
+          <param name="width" value="60" />
+          <param name="height" value="60" />
+          <param name="texturefocus" value="controls/button-channeldown.png" />
+          <param name="colorfocus" value="$VAR[BackgroundColor]" />
+          <param name="texturenofocus" value="controls/button-channeldown.png" />
+          <param name="colornofocus" value="$VAR[BackgroundColor]" />
+          <param name="colorbackground" value="$VAR[TextColor]" />
+          <param name="onup" value="600" />
+          <param name="onclick" value="Control.Move(600,1)" />
+        </include>
+      </control>
+    </control>
   </include>
 </includes>

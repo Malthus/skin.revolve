@@ -23,6 +23,7 @@
           <property name="Circle">circle/favourites.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(FavouritesOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/favourites.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(FavouritesOption.Playlist)]</property>
           <onclick>ActivateWindowAndFocus(favouritesbrowser)</onclick>
         </item>
 
@@ -135,6 +136,7 @@
           <property name="Circle">circle/tvshows.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(TVOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/tv.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(TVOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(TVOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindowAndFocus(tvchannels)</onclick>
         </item>
@@ -148,6 +150,7 @@
           <property name="Circle">circle/radio.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(RadioOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/radio.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(RadioOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(RadioOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindowAndFocus(radiochannels)</onclick>
         </item>
@@ -161,6 +164,7 @@
           <property name="Circle">circle/videos.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(VideosOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/videos.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(VideosOption.Playlist)]</property>
           <onclick condition="Skin.HasSetting(VideosOption.ImmutablePath)">ActivateWindow(videos,root)</onclick>
           <onclick condition="!Skin.HasSetting(VideosOption.ImmutablePath)">ActivateWindow(videos)</onclick>
         </item>
@@ -174,6 +178,7 @@
           <property name="Circle">circle/movies.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(MoviesOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/movies.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(MoviesOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(MoviesOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(videos,videodb://movies/titles/,return)</onclick>
         </item>
@@ -187,6 +192,7 @@
           <property name="Circle">circle/tvshows.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(TVShowsOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/tvshows.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(TVShowsOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(TVShowsOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(videos,videodb://tvshows/titles/,return)</onclick>
         </item>
@@ -199,6 +205,7 @@
           <property name="Label3">$LOCALIZE[33056]</property>
           <property name="BackgroundImage">$INFO[Skin.String(MusicVideosOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/musicvideos.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(MusicVideosOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(MusicVideosOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(videos,videodb://musicvideos/titles/,return)</onclick>
         </item>
@@ -217,6 +224,7 @@
           <property name="Circle">circle/music.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(MusicOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/music.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(MusicOption.Playlist)]</property>
           <onclick condition="Skin.HasSetting(MusicOption.ImmutablePath)">ActivateWindow(music,root)</onclick>
           <onclick condition="!Skin.HasSetting(MusicOption.ImmutablePath)">ActivateWindow(music)</onclick>
         </item>
@@ -230,6 +238,7 @@
           <property name="Circle">circle/albums.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(AlbumsOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/albums.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(AlbumsOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(AlbumsOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(music,musicdb://albums/,return)</onclick>
         </item>
@@ -273,6 +282,7 @@
           <property name="Circle">circle/pictures.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(PicturesOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/pictures.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(PicturesOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(PicturesOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(pictures)</onclick>
         </item>
@@ -290,6 +300,7 @@
           <property name="Circle">circle/games.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(GamesOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/games.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(GamesOption.Playlist)]</property>
           <onclick>ActivateWindow(games)</onclick>
         </item>
 
@@ -306,6 +317,7 @@
           <property name="Circle">circle/programs.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(ProgramsOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/programs.jpg</property>
+          <property name="Playlist">$INFO[Skin.String(ProgramsOption.Playlist)]</property>
           <thumb>$INFO[Skin.String(ProgramsOption.BackgroundFolder)]</thumb>
           <onclick>ActivateWindow(programs,addons)</onclick>
         </item>
@@ -401,7 +413,7 @@
         <property name="BackgroundImage">$INFO[Skin.String($PARAM[variable].BackgroundImage)]</property>
         <onclick>SetProperty(CustomName,$INFO[Skin.String($PARAM[variable].Name)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
         <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String($PARAM[variable].MenuIdentifier)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
-        <onclick>SetProperty(CustomContentPath,$INFO[Skin.String($PARAM[variable].ContentPath)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
+        <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String($PARAM[variable].Playlist)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
         <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String($PARAM[variable].BackgroundImage)],$INFO[Skin.String($PARAM[variable].Window)])</onclick>
         <onclick>$INFO[Skin.String($PARAM[variable].Action)]</onclick>
       </item>
