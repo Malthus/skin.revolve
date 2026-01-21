@@ -62,7 +62,7 @@
       <include content="PlaylistNumberIconForFullScreenMedia" />
 
       <control type="group">
-        <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+        <visible>$EXP[MediaFlagsVisible]</visible>
         <include content="DefaultAnimationForFullScreenMedia" />
         <include content="MusicPlayerListForFlag">
           <param name="posx" value="PosXForContentForFullScreenMedia" />

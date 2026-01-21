@@ -8,7 +8,8 @@
   <constant name="LabelPosXForFlag">5</constant>
   <constant name="LabelPosYForFlag">28</constant>
   <constant name="BusyIconSizeForFlag">50</constant>
-  
+
+  <expression name="MediaFlagsVisible">Skin.HasSetting(Media.PersonalFlags.Visible) | Skin.HasSetting(Media.InformationFlags.Visible) | Skin.HasSetting(Media.RatingFlags.Visible) | Skin.HasSetting(Media.TechnicalFlags.Visible) | Skin.HasSetting(Media.IconOverlays.Visible) | Skin.HasSetting(Media.PlayerArtwork.Visible)</expression>
   <expression name="EPGGenreTypeVisible">[String.IsEqual(ListItem.Property(GenreType),16) | String.IsEqual(ListItem.Property(GenreType),32) | String.IsEqual(ListItem.Property(GenreType),48) | String.IsEqual(ListItem.Property(GenreType),64) | String.IsEqual(ListItem.Property(GenreType),80) | String.IsEqual(ListItem.Property(GenreType),96) | String.IsEqual(ListItem.Property(GenreType),112) | String.IsEqual(ListItem.Property(GenreType),128) | String.IsEqual(ListItem.Property(GenreType),144) | String.IsEqual(ListItem.Property(GenreType),160) | String.IsEqual(ListItem.Property(GenreType),176)]</expression>
 
   <variable name="ImageForOverlayFlag">
@@ -1605,7 +1606,7 @@
 
     <definition>
       <control type="grouplist">
-        <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+        <visible>$EXP[MediaFlagsVisible]</visible>
         <left>$PARAM[posx]</left>
         <top>$PARAM[posy]</top>
         <width>$PARAM[width]</width>
@@ -1775,7 +1776,7 @@
 
     <definition>
       <control type="grouplist">
-        <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+        <visible>$EXP[MediaFlagsVisible]</visible>
         <left>$PARAM[posx]</left>
         <top>$PARAM[posy]</top>
         <width>$PARAM[width]</width>
@@ -1898,7 +1899,7 @@
 
     <definition>
       <control type="grouplist">
-        <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+        <visible>$EXP[MediaFlagsVisible]</visible>
         <left>$PARAM[posx]</left>
         <top>$PARAM[posy]</top>
         <width>$PARAM[width]</width>
@@ -1983,7 +1984,7 @@
 
     <definition>
       <control type="grouplist">
-        <visible>Skin.HasSetting(MediaIcons.Visible)</visible>
+        <visible>$EXP[MediaFlagsVisible]</visible>
         <left>$PARAM[posx]</left>
         <top>$PARAM[posy]</top>
         <width>$PARAM[width]</width>
