@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">11</defaultcontrol>
+  <defaultcontrol always="true">11</defaultcontrol>
 
-    <controls>
-        <include content="BackdropForDialog">
-            <param name="windowid" value="DialogPVRChannelGuide.xml" />
+  <controls>
+    <include content="BackdropForDialog">
+      <param name="windowid" value="DialogPVRChannelGuide.xml" />
+    </include>
+
+    <control type="group">
+      <posy>PosYForFifteenLinesDialog</posy>
+      <include content="FadeAnimationForDialogWindow" />
+      <include content="WindowForDialog">
+        <param name="height" value="HeightForFifteenLinesDialog" />
+        <param name="headerlabel" value="$LOCALIZE[19686]" />
+        <param name="iconthumbnail" value="$INFO[Container(11).Listitem.Icon]" />
+        <param name="animate" value="true" />
+      </include>
+
+      <include content="HeaderForDialog">
+        <param name="label" value="$LOCALIZE[19047]" />
+      </include>
+
+      <include content="InfoListForDialog">
+        <param name="id" value="20" />
+        <param name="scrollbarid" value="30" />
+        <param name="height" value="200" />
+
+        <content>
+          <item>
+            <visible>!String.IsEmpty(Container(11).Listitem.Title)</visible>
+            <label>$LOCALIZE[369]</label>
+            <label2>$INFO[Container(11).Listitem.Title]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Container(11).Listitem.TVShowTitle)</visible>
+            <label>$LOCALIZE[21442]</label>
+            <label2>$INFO[Container(11).Listitem.TVShowTitle]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Container(11).Listitem.Season)</visible>
+            <label>$LOCALIZE[20373]</label>
+            <label2>$INFO[Container(11).ListItem.Season]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Container(11).Listitem.Episode)</visible>
+            <label>$LOCALIZE[20359]</label>
+            <label2>$INFO[Container(11).ListItem.Episode]</label2>
+          </item>
+          <item>
+            <visible>!String.IsEmpty(Container(11).Listitem.Genre)</visible>
+            <label>$LOCALIZE[515]</label>
+            <label2>$INFO[Container(11).ListItem.Genre]</label2>
+          </item>
+          <item>
+            <label>$LOCALIZE[552]</label>
+            <label2>$INFO[Container(11).ListItem.StartDate]</label2>
+          </item>
+          <item>
+            <label>$LOCALIZE[555]</label>
+            <label2>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, - ,]</label2>
+          </item>
+          <item>
+            <label>$LOCALIZE[180]</label>
+            <label2>$INFO[Container(11).ListItem.Duration]</label2>
+          </item>
+        </content>
+      </include>
+
+      <include content="HeaderForDialog">
+        <param name="posy" value="360" />
+        <param name="label" value="$LOCALIZE[19069]" />
+      </include>
+
+      <include content="NormalListForDialog">
+        <param name="id" value="11" />
+        <param name="scrollbarid" value="60" />
+        <param name="posy" value="400" />
+        <param name="height" value="280" />
+        <param name="label" value="$INFO[ListItem.Label]" />
+        <param name="label2" value="$INFO[ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, - ,]" />
+      </include>
+
+      <include content="ButtonListForDialog">
+        <param name="posy" value="340" />
+        <param name="height" value="340" />
+        <param name="onright" value="11" />
+
+        <include content="CloseButtonForDialog">
+          <param name="id" value="21" />
         </include>
-
-        <control type="group">
-            <posy>PosYForFifteenLinesDialog</posy>
-            <include content="FadeAnimationForDialogWindow" />
-            <include content="WindowForDialog">
-                <param name="height" value="HeightForFifteenLinesDialog" />
-                <param name="headerlabel" value="$LOCALIZE[19686]" />
-                <param name="iconthumbnail" value="$INFO[Container(11).Listitem.Icon]" />
-                <param name="animate" value="true" />
-            </include>
-
-            <include content="HeaderForDialog">
-                <param name="label" value="$LOCALIZE[19047]" />
-            </include>
-
-            <include content="InfoListForDialog">
-                <param name="id" value="20" />
-                <param name="scrollbarid" value="30" />
-                <param name="height" value="200" />
-
-                <content>
-                    <item>
-                        <visible>!String.IsEmpty(Container(11).Listitem.Title)</visible>
-                        <label>$LOCALIZE[369]</label>
-                        <label2>$INFO[Container(11).Listitem.Title]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Container(11).Listitem.TVShowTitle)</visible>
-                        <label>$LOCALIZE[21442]</label>
-                        <label2>$INFO[Container(11).Listitem.TVShowTitle]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Container(11).Listitem.Season)</visible>
-                        <label>$LOCALIZE[20373]</label>
-                        <label2>$INFO[Container(11).ListItem.Season]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Container(11).Listitem.Episode)</visible>
-                        <label>$LOCALIZE[20359]</label>
-                        <label2>$INFO[Container(11).ListItem.Episode]</label2>
-                    </item>
-                    <item>
-                        <visible>!String.IsEmpty(Container(11).Listitem.Genre)</visible>
-                        <label>$LOCALIZE[515]</label>
-                        <label2>$INFO[Container(11).ListItem.Genre]</label2>
-                    </item>
-                    <item>
-                        <label>$LOCALIZE[552]</label>
-                        <label2>$INFO[Container(11).ListItem.StartDate]</label2>
-                    </item>
-                    <item>
-                        <label>$LOCALIZE[555]</label>
-                        <label2>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, - ,]</label2>
-                    </item>
-                    <item>
-                        <label>$LOCALIZE[180]</label>
-                        <label2>$INFO[Container(11).ListItem.Duration]</label2>
-                    </item>
-                </content>
-            </include>
-
-            <include content="HeaderForDialog">
-                <param name="posy" value="360" />
-                <param name="label" value="$LOCALIZE[19069]" />
-            </include>
-
-            <include content="NormalListForDialog">
-                <param name="id" value="11" />
-                <param name="scrollbarid" value="60" />
-                <param name="posy" value="400" />
-                <param name="height" value="280" />
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="label2" value="$INFO[ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, - ,]" />
-            </include>
-
-            <include content="ButtonListForDialog">
-                <param name="posy" value="340" />
-                <param name="height" value="340" />
-                <param name="onright" value="11" />
-
-                <include content="CloseButtonForDialog">
-                    <param name="id" value="21" />
-                </include>
-            </include>
-        </control>
-    </controls>
+      </include>
+    </control>
+  </controls>
 </window>

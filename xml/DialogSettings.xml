@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="123">
-    <defaultcontrol always="true">5</defaultcontrol>
-    <menucontrol>9000</menucontrol>
+  <defaultcontrol always="true">5</defaultcontrol>
+  <menucontrol>9000</menucontrol>
 
-    <controls>
-        <include content="BackdropForDialog">
-            <param name="windowid" value="DialogSettings.xml" />
+  <controls>
+    <include content="BackdropForDialog">
+      <param name="windowid" value="DialogSettings.xml" />
+    </include>
+
+    <control type="group">
+      <visible>!Window.IsVisible(sliderdialog)</visible>
+
+      <posy>PosYForThirteenLinesDialog</posy>
+      <include content="FadeAnimationForDialogWindow" />
+      <include content="WindowForDialog">
+        <param name="height" value="HeightForThirteenLinesDialog" />
+        <param name="headerid" value="2" />
+        <param name="icontexture" value="icons/icon-settings.png" />
+      </include>
+
+      <include content="DefaultIconForWindowForDialog">
+        <param name="visible" value="Window.Is(osdaudiosettings)" />
+        <param name="icontexture" value="icons/icon-audio.png" />
+      </include>
+    
+      <include content="DefaultIconForWindowForDialog">
+        <param name="visible" value="Window.Is(osdvideosettings)" />
+        <param name="icontexture" value="icons/icon-projector.png" />
+      </include>
+    
+      <control type="grouplist" id="5">
+        <include content="MarkupForListForDialog">
+          <param name="posy" value="80" />
+          <param name="height" value="520" />
+          <param name="pagecontrol" value="6" />
         </include>
+        <onleft>9000</onleft>
+        <onright>6</onright>
+      </control>
 
-        <control type="group">
-            <visible>!Window.IsVisible(sliderdialog)</visible>
+      <include content="DefaultControlsForDialog" />
+      
+      <control type="scrollbar" id="6">
+        <include content="MarkupForScrollbarForDialog">
+          <param name="posy" value="80" />
+          <param name="height" value="520" />
+        </include>
+        <onleft>5</onleft>
+      </control>
 
-            <posy>PosYForThirteenLinesDialog</posy>
-            <include content="FadeAnimationForDialogWindow" />
-            <include content="WindowForDialog">
-                <param name="height" value="HeightForThirteenLinesDialog" />
-                <param name="headerid" value="2" />
-                <param name="icontexture" value="icons/icon-settings.png" />
-            </include>
-
-            <include content="DefaultIconForWindowForDialog">
-                <param name="visible" value="Window.Is(osdaudiosettings)" />
-                <param name="icontexture" value="icons/icon-audio.png" />
-            </include>
+      <control type="grouplist" id="9000">
+        <include content="MarkupForButtonListForDialog">
+          <param name="posy" value="460" />
+          <param name="height" value="140" />
+        </include>
+        <onright>5</onright>
         
-            <include content="DefaultIconForWindowForDialog">
-                <param name="visible" value="Window.Is(osdvideosettings)" />
-                <param name="icontexture" value="icons/icon-projector.png" />
-            </include>
-        
-            <control type="grouplist" id="5">
-                <include content="MarkupForListForDialog">
-                    <param name="posy" value="80" />
-                    <param name="height" value="520" />
-                    <param name="pagecontrol" value="6" />
-                </include>
-                <onleft>9000</onleft>
-                <onright>6</onright>
-            </control>
-
-            <include content="DefaultControlsForDialog" />
-            
-            <control type="scrollbar" id="6">
-                <include content="MarkupForScrollbarForDialog">
-                    <param name="posy" value="80" />
-                    <param name="height" value="520" />
-                </include>
-                <onleft>5</onleft>
-            </control>
-
-            <control type="grouplist" id="9000">
-                <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="460" />
-                    <param name="height" value="140" />
-                </include>
-                <onright>5</onright>
-                
-                <control type="button" id="30">
-                    <description>Settings/Clear Button</description>
-                </control>
-                <include content="SpacerForButtonListForDialog">
-                    <param name="id" value="34" />
-                </include>
-                <control type="button" id="28">
-                    <description>Ok Button</description>
-                </control>
-                <control type="button" id="29">
-                    <description>Cancel/Close Button</description>
-                </control>
-            </control>
+        <control type="button" id="30">
+          <description>Settings/Clear Button</description>
         </control>
-    </controls>
+        <include content="SpacerForButtonListForDialog">
+          <param name="id" value="34" />
+        </include>
+        <control type="button" id="28">
+          <description>Ok Button</description>
+        </control>
+        <control type="button" id="29">
+          <description>Cancel/Close Button</description>
+        </control>
+      </control>
+    </control>
+  </controls>
 </window>

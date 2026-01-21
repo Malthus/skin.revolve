@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="11">
-    <defaultcontrol always="true">8</defaultcontrol>
+  <defaultcontrol always="true">8</defaultcontrol>
 
-    <controls>
-        <control type="videowindow" id="20">
-            <include content="FullscreenDimensions" />
-        </control>
+  <controls>
+    <control type="videowindow" id="20">
+      <include content="FullscreenDimensions" />
+    </control>
 
-        <control type="mover" id="8">
-            <description>Top Left Mover</description>
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>128</width>
-            <height>128</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-topleft.png</texturefocus>
-            <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-topleft.png</texturenofocus>
-		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
-				<eventconfig type="up" />
-				<eventconfig type="down" />
-				<eventconfig type="left" />
-				<eventconfig type="right" />
-			</movingspeed>
-        </control>
+    <control type="mover" id="8">
+      <description>Top Left Mover</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>128</width>
+      <height>128</height>
+      <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-topleft.png</texturefocus>
+      <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-topleft.png</texturenofocus>
+      <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+        <eventconfig type="up" />
+        <eventconfig type="down" />
+        <eventconfig type="left" />
+        <eventconfig type="right" />
+      </movingspeed>
+    </control>
 
-        <control type="mover" id="9">
-            <description>Bottom Right Mover</description>
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>128</width>
-            <height>128</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-bottomright.png</texturefocus>
-            <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-bottomright.png</texturenofocus>
-		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
-				<eventconfig type="up" />
-				<eventconfig type="down" />
-				<eventconfig type="left" />
-				<eventconfig type="right" />
-			</movingspeed>
-        </control>
+    <control type="mover" id="9">
+      <description>Bottom Right Mover</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>128</width>
+      <height>128</height>
+      <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-bottomright.png</texturefocus>
+      <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-bottomright.png</texturenofocus>
+      <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+        <eventconfig type="up" />
+        <eventconfig type="down" />
+        <eventconfig type="left" />
+        <eventconfig type="right" />
+      </movingspeed>
+    </control>
 
-        <control type="mover" id="10">
-            <description>Subtitle Position Mover</description>
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>320</width>
-            <height>83</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-subtitles.png</texturefocus>
-            <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-subtitles.png</texturenofocus>
-		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
-				<eventconfig type="up" />
-				<eventconfig type="down" />
-				<eventconfig type="left" />
-				<eventconfig type="right" />
-			</movingspeed>
-        </control>
+    <control type="mover" id="10">
+      <description>Subtitle Position Mover</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>320</width>
+      <height>83</height>
+      <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-subtitles.png</texturefocus>
+      <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-subtitles.png</texturenofocus>
+      <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+        <eventconfig type="up" />
+        <eventconfig type="down" />
+        <eventconfig type="left" />
+        <eventconfig type="right" />
+      </movingspeed>
+    </control>
 
-        <control type="resize" id="11">
-            <description>Pixel Aspect Ratio Box Resizer</description>
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>512</width>
-            <height>512</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-center.png</texturefocus>
-            <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-center.png</texturenofocus>
-		    <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
-				<eventconfig type="up" />
-				<eventconfig type="down" />
-				<eventconfig type="left" />
-				<eventconfig type="right" />
-			</movingspeed>
-        </control>
+    <control type="resize" id="11">
+      <description>Pixel Aspect Ratio Box Resizer</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>512</height>
+      <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-center.png</texturefocus>
+      <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-center.png</texturenofocus>
+      <movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+        <eventconfig type="up" />
+        <eventconfig type="down" />
+        <eventconfig type="left" />
+        <eventconfig type="right" />
+      </movingspeed>
+    </control>
 
-        <control type="mover" id="12">
-            <description>Reset Calibration Control</description>
-            <posx>0</posx>
-            <posy>952</posy>
-            <width>128</width>
-            <height>128</height>
-            <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-reset.png</texturefocus>
-            <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-reset.png</texturenofocus>
-        </control>
+    <control type="mover" id="12">
+      <description>Reset Calibration Control</description>
+      <posx>0</posx>
+      <posy>952</posy>
+      <width>128</width>
+      <height>128</height>
+      <texturefocus colordiffuse="$VAR[HighlightColor]">controls/mover-reset.png</texturefocus>
+      <texturenofocus colordiffuse="$VAR[BackgroundColor]">controls/mover-reset.png</texturenofocus>
+    </control>
 
-        <control type="group">
-            <description>Coordinates Label</description>
-            <posx>30</posx>
-            <posy>120</posy>
-            
-            <include content="BackgroundForOutlineLabel">
-                <param name="width" value="1860" />
-                <param name="height" value="30" />
-                <param name="font" value="DialogTextFont" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="center" />
-                <param name="label" value="$INFO[Control.GetLabel(2)]" />
-            </include>
-            <control type="label" id="2">
-                <width>1860</width>
-                <height>30</height>
-                <font>DialogTextFont</font>
-                <align>center</align>
-                <textcolor>$VAR[MainColor]</textcolor>
-            </control>
-        </control>
+    <control type="group">
+      <description>Coordinates Label</description>
+      <posx>30</posx>
+      <posy>120</posy>
+      
+      <include content="BackgroundForOutlineLabel">
+        <param name="width" value="1860" />
+        <param name="height" value="30" />
+        <param name="font" value="DialogTextFont" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="center" />
+        <param name="label" value="$INFO[Control.GetLabel(2)]" />
+      </include>
+      <control type="label" id="2">
+        <width>1860</width>
+        <height>30</height>
+        <font>DialogTextFont</font>
+        <align>center</align>
+        <textcolor>$VAR[MainColor]</textcolor>
+      </control>
+    </control>
 
-        <control type="group">
-            <description>Help Information Label</description>
-            <posx>30</posx>
-            <posy>160</posy>
-            
-            <include content="BackgroundForOutlineLabel">
-                <param name="width" value="1860" />
-                <param name="height" value="30" />
-                <param name="font" value="DialogTextFont" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="center" />
-                <param name="label" value="$INFO[Control.GetLabel(3)]" />
-            </include>
-            <control type="label" id="3">
-                <width>1860</width>
-                <height>30</height>
-                <font>DialogTextFont</font>
-                <align>center</align>
-                <textcolor>$VAR[MainColor]</textcolor>
-            </control>
-        </control>
+    <control type="group">
+      <description>Help Information Label</description>
+      <posx>30</posx>
+      <posy>160</posy>
+      
+      <include content="BackgroundForOutlineLabel">
+        <param name="width" value="1860" />
+        <param name="height" value="30" />
+        <param name="font" value="DialogTextFont" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="center" />
+        <param name="label" value="$INFO[Control.GetLabel(3)]" />
+      </include>
+      <control type="label" id="3">
+        <width>1860</width>
+        <height>30</height>
+        <font>DialogTextFont</font>
+        <align>center</align>
+        <textcolor>$VAR[MainColor]</textcolor>
+      </control>
+    </control>
 
-        <control type="group">
-            <description>Calibration Information Label</description>
-            <posx>30</posx>
-            <posy>200</posy>
-            
-            <include content="BackgroundForOutlineLabel">
-                <param name="width" value="1860" />
-                <param name="height" value="30" />
-                <param name="font" value="DialogTextFont" />
-                <param name="outlinecolor" value="$VAR[BackgroundColor]" />
-                <param name="outlinesize" value="2" />
-                <param name="align" value="center" />
-                <param name="label" value="$INFO[Control.GetLabel(4)]" />
-            </include>
-            <control type="label" id="4">
-                <width>1860</width>
-                <height>30</height>
-                <font>DialogTextFont</font>
-                <align>center</align>
-                <textcolor>$VAR[MainColor]</textcolor>
-            </control>
-        </control>
-    </controls>
+    <control type="group">
+      <description>Calibration Information Label</description>
+      <posx>30</posx>
+      <posy>200</posy>
+      
+      <include content="BackgroundForOutlineLabel">
+        <param name="width" value="1860" />
+        <param name="height" value="30" />
+        <param name="font" value="DialogTextFont" />
+        <param name="outlinecolor" value="$VAR[BackgroundColor]" />
+        <param name="outlinesize" value="2" />
+        <param name="align" value="center" />
+        <param name="label" value="$INFO[Control.GetLabel(4)]" />
+      </include>
+      <control type="label" id="4">
+        <width>1860</width>
+        <height>30</height>
+        <font>DialogTextFont</font>
+        <align>center</align>
+        <textcolor>$VAR[MainColor]</textcolor>
+      </control>
+    </control>
+  </controls>
 </window>

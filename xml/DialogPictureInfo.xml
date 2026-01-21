@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="139">
-    <defaultcontrol always="true">9000</defaultcontrol>
-    <menucontrol>9000</menucontrol>
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <menucontrol>9000</menucontrol>
 
-    <controls>
-        <include condition="!Window.IsVisible(slideshow)">DialogPictureInfoWindow</include>
-        <include condition="Window.IsVisible(slideshow)">PictureOSDWindow</include>
-    </controls>
+  <controls>
+    <include condition="!Window.IsVisible(slideshow)">DialogPictureInfoWindow</include>
+    <include condition="Window.IsVisible(slideshow)">PictureOSDWindow</include>
+  </controls>
 </window>

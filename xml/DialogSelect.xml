@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2000">
-    <defaultcontrol always="true">3</defaultcontrol>
-    <menucontrol>9000</menucontrol>
+  <defaultcontrol always="true">3</defaultcontrol>
+  <menucontrol>9000</menucontrol>
 
-    <controls>
-        <include content="BackdropForDialog">
-            <param name="windowid" value="DialogSelect.xml" />
-        </include>
+  <controls>
+    <include content="BackdropForDialog">
+      <param name="windowid" value="DialogSelect.xml" />
+    </include>
 
-        <include condition="![Window.Is(gamestretchmode) | Window.Is(gamevideofilter) | Window.Is(gamevideorotation)]">DialogSelectWindow</include>
-        <include condition="Window.Is(gamestretchmode) | Window.Is(gamevideofilter) | Window.Is(gamevideorotation)">DialogGameVideoSelectWindow</include>
-    </controls>
+    <include condition="![Window.Is(gamestretchmode) | Window.Is(gamevideofilter) | Window.Is(gamevideorotation)]">DialogSelectWindow</include>
+    <include condition="Window.Is(gamestretchmode) | Window.Is(gamevideofilter) | Window.Is(gamevideorotation)">DialogGameVideoSelectWindow</include>
+  </controls>
 </window>

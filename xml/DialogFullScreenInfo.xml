@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="142">
-    <defaultcontrol always="true">603</defaultcontrol>
+  <defaultcontrol always="true">603</defaultcontrol>
 
-    <controls>
-        <control type="group">
-            <include content="MediaThumbnailIconForFullScreenMedia" />
-            <include content="InformationLabelForFullScreenMedia" />
-            <include content="NameLabelForFullScreenMedia" />
-            <include content="SeekBarForFullScreenMedia" />
-            <include content="PlaylistNumberIconForFullScreenMedia" />
+  <controls>
+    <control type="group">
+      <include content="MediaThumbnailIconForFullScreenMedia" />
+      <include content="InformationLabelForFullScreenMedia" />
+      <include content="NameLabelForFullScreenMedia" />
+      <include content="SeekBarForFullScreenMedia" />
+      <include content="PlaylistNumberIconForFullScreenMedia" />
 
-            <control type="group">
-                <include content="DefaultAnimationForFullScreenMedia" />
-                <include content="VideoPlayerListForFlag">
-                    <param name="posx" value="PosXForContentForFullScreenMedia" />
-                    <param name="posy" value="PosYForMediaFlagsForFullScreenMedia" />
-                </include>
-            </control>
-        </control>
-    </controls>
+      <control type="group">
+        <include content="DefaultAnimationForFullScreenMedia" />
+        <include content="VideoPlayerListForFlag">
+          <param name="posx" value="PosXForContentForFullScreenMedia" />
+          <param name="posy" value="PosYForMediaFlagsForFullScreenMedia" />
+        </include>
+      </control>
+    </control>
+  </controls>
 </window>
