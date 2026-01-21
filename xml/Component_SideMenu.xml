@@ -891,7 +891,7 @@
       <control type="button" id="45">
         <visible>System.CanPowerDown + !System.HasAlarm(shutdowntimer) + Skin.HasSetting(ExitMenu.PowerdownTimerOption.Active)</visible>
         <align>left</align>
-        <label>Delayed Power Off</label>
+        <label>$LOCALIZE[31889]</label>
         <onclick>AlarmClock(shutdowntimer,Powerdown)</onclick>
       </control>
     </definition>
@@ -902,7 +902,7 @@
       <control type="button" id="46">
         <visible>System.HasAlarm(shutdowntimer)</visible>
         <align>left</align>
-        <label>Cancel: $INFO[System.Alarmpos]</label>
+        <label>$LOCALIZE[222]$INFO[System.Alarmpos,: ]</label>
         <onclick>CancelAlarm(shutdowntimer)</onclick>
       </control>
     </definition>
@@ -934,7 +934,7 @@
     <definition>
       <control type="radiobutton" id="49">
         <align>left</align>
-        <label>Settings Help</label>
+        <label>$LOCALIZE[31890]</label>
         <selected>Skin.HasSetting(Settings.HelpVisible)</selected>
         <onclick>Skin.ToggleSetting(Settings.HelpVisible)</onclick>
       </control>

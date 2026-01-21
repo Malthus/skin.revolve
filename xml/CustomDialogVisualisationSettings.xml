@@ -27,7 +27,7 @@
           <description>Photo Slideshow Radiobutton</description>
           <width>DialogElementWidth</width>
           <align>left</align>
-          <label>Photo Slide Show</label>
+          <label>$LOCALIZE[31125]</label>
           <selected>Skin.HasSetting(MusicVisualisation.SlideShow.Active)</selected>
           <onclick>Skin.ToggleSetting(MusicVisualisation.SlideShow.Active)</onclick>
           <onclick>Skin.Reset(MusicVisualisation.ArtistSlideShow.Active)</onclick>
@@ -48,7 +48,7 @@
           <enable>Skin.HasSetting(MusicVisualisation.SlideShow.Active)</enable>
           <width>DialogElementWidth</width>
           <align>left</align>
-          <label>- Random Order</label>
+          <label>- $LOCALIZE[31291]</label>
           <selected>Skin.HasSetting(MusicVisualisation.SlideShow.Random)</selected>
           <onclick>Skin.ToggleSetting(MusicVisualisation.SlideShow.Random)</onclick>
         </control>

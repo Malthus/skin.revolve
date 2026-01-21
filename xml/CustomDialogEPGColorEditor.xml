@@ -34,7 +34,7 @@
       <include content="LabelForDialog">
         <param name="posy" value="140" />
         <param name="textcolor" value="$VAR[TextColor]" />
-        <param name="label" value="Set color for each genre:" />
+        <param name="label" value="$LOCALIZE[31892]" />
       </include>
 
       <control type="grouplist" id="40">

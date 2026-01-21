@@ -53,7 +53,7 @@
           <width>1240</width>
           <font>DialogTextFont</font>
           <align>left</align>
-          <label>$LOCALIZE[31802]: $INFO[Window.Property(CustomBackgroundImage)]</label>
+          <label>$LOCALIZE[31802]$INFO[Window.Property(CustomBackgroundImage),: ]</label>
           <onclick>Skin.SetImage(Dialog.Result)</onclick>
           <onclick>SetProperty(CustomBackgroundImage,$INFO[Skin.String(Dialog.Result)])</onclick>
           <onclick>Skin.Reset(Dialog.Result)</onclick>
@@ -65,7 +65,7 @@
           <width>1240</width>
           <font>DialogTextFont</font>
           <align>left</align>
-          <label>Playlist: $INFO[Window.Property(CustomPlaylist)]</label>
+          <label>$LOCALIZE[559]$INFO[Window.Property(CustomPlaylist),: ]</label>
           <onclick>Skin.SetFile(Dialog.Result,,special://skin/playlists/)</onclick>
           <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String(Dialog.Result)])</onclick>
           <onclick>Skin.Reset(Dialog.Result)</onclick>
