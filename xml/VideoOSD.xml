@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="2901">
-    <defaultcontrol always="true">403</defaultcontrol>
-    <menucontrol>100</menucontrol>
+  <defaultcontrol always="true">403</defaultcontrol>
+  <menucontrol>100</menucontrol>
 
-    <controls>
-        <control type="group">
-            <visible>!Window.IsVisible(sliderdialog)</visible>
+  <controls>
+    <control type="group">
+      <visible>!Window.IsVisible(sliderdialog)</visible>
 
-            <control type="group">
-                <animation effect="slide" start="0,-120" end="0,0" time="200">WindowOpen</animation>
-                <animation effect="slide" start="0,0" end="0,-120" time="200">WindowClose</animation>
-                <posx>0</posx>
-                <posy>0</posy>
+      <control type="group">
+        <animation effect="slide" start="0,-120" end="0,0" time="200">WindowOpen</animation>
+        <animation effect="slide" start="0,0" end="0,-120" time="200">WindowClose</animation>
+        <posx>0</posx>
+        <posy>0</posy>
 
-                <include content="TopVideoControlsForPlayer">
-                    <param name="id" value="100" />
-                </include>
+        <include content="TopVideoControlsForPlayer">
+          <param name="id" value="100" />
+        </include>
 
-                <include content="DescriptionForControlsForPlayer">
-                    <param name="visible" value="Window.IsActive(videoosd) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks)" />
-                </include>
-            </control>
+        <include content="DescriptionForControlsForPlayer">
+          <param name="visible" value="Window.IsActive(videoosd) + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks)" />
+        </include>
+      </control>
 
-            <control type="group">
-                <visible>Player.HasDuration</visible>
-                <include content="SeekBarForFullScreenMedia">
-                    <param name="id" value="499" />
-                </include>
-            </control>
-        </control>
-    </controls>
+      <control type="group">
+        <visible>Player.HasDuration</visible>
+        <include content="SeekBarForFullScreenMedia">
+          <param name="id" value="499" />
+        </include>
+      </control>
+    </control>
+  </controls>
 </window>

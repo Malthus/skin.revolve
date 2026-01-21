@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="114">
-    <visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
-    <defaultcontrol>410</defaultcontrol>
-    <onunload>SetProperty(DialogCloseButton,False,114)</onunload>
+  <visible>Player.HasMedia + Window.IsActive(PlayerControls) + !VideoPlayer.IsFullscreen + !Window.IsActive(Visualisation)</visible>
+  <defaultcontrol>410</defaultcontrol>
+  <onunload>SetProperty(DialogCloseButton,False,114)</onunload>
 
-    <controls>
-        <control type="group">
-            <visible>String.IsEqual(Skin.String(Background.Animation.Level),3) | String.IsEqual(Skin.String(Background.Animation.Level),4)</visible>
-            
-            <include content="OrbitCircle">
-                <param name="posx" value="960" />
-                <param name="posy" value="540" />
-                <param name="size" value="60" />
-                <param name="radius" value="150" />
-                <param name="time" value="8000" />
-            </include>
-        </control>
-    
-        <control type="group">
-            <visible>String.IsEqual(Skin.String(Background.Animation.Level),4)</visible>
-            
-            <include content="OrbitCircle">
-                <param name="posx" value="960" />
-                <param name="posy" value="540" />
-                <param name="size" value="20" />
-                <param name="radius" value="220" />
-                <param name="time" value="3000" />
-                <param name="direction" value="false" />
-            </include>
-            
-            <include content="OrbitCircle">
-                <param name="posx" value="960" />
-                <param name="posy" value="540" />
-                <param name="size" value="30" />
-                <param name="radius" value="250" />
-                <param name="time" value="5000" />
-            </include>
-        </control>
+  <controls>
+    <control type="group">
+      <visible>String.IsEqual(Skin.String(Background.Animation.Level),3) | String.IsEqual(Skin.String(Background.Animation.Level),4)</visible>
+      
+      <include content="OrbitCircle">
+        <param name="posx" value="960" />
+        <param name="posy" value="540" />
+        <param name="size" value="60" />
+        <param name="radius" value="150" />
+        <param name="time" value="8000" />
+      </include>
+    </control>
+  
+    <control type="group">
+      <visible>String.IsEqual(Skin.String(Background.Animation.Level),4)</visible>
+      
+      <include content="OrbitCircle">
+        <param name="posx" value="960" />
+        <param name="posy" value="540" />
+        <param name="size" value="20" />
+        <param name="radius" value="220" />
+        <param name="time" value="3000" />
+        <param name="direction" value="false" />
+      </include>
+      
+      <include content="OrbitCircle">
+        <param name="posx" value="960" />
+        <param name="posy" value="540" />
+        <param name="size" value="30" />
+        <param name="radius" value="250" />
+        <param name="time" value="5000" />
+      </include>
+    </control>
 
-        <control type="group" id="410">
-            <include content="CircleControlsForPlayer">
-                <param name="posx" value="1646" />
-                <param name="posy" value="806" />
-                <param name="onup" value="9001" />
-                <param name="ondown" value="9001" />
-                <param name="onleft" value="9001" />
-                <param name="onright" value="9001" />
-            </include>
-        </control>
+    <control type="group" id="410">
+      <include content="CircleControlsForPlayer">
+        <param name="posx" value="1646" />
+        <param name="posy" value="806" />
+        <param name="onup" value="9001" />
+        <param name="ondown" value="9001" />
+        <param name="onleft" value="9001" />
+        <param name="onright" value="9001" />
+      </include>
+    </control>
 
-        <control type="group">
-            <visible>String.IsEqual(Window.Property(DialogCloseButton),True)</visible>
-            <include content="CloseButtonForPlayer">
-                <param name="id" value="508" />
-                <param name="posx" value="1746" />
-                <param name="posy" value="906" />
-                <param name="onup" value="9403" />
-                <param name="ondown" value="9404" />
-                <param name="onleft" value="9401" />
-                <param name="onright" value="9406" />
-            </include>
-        </control>
+    <control type="group">
+      <visible>String.IsEqual(Window.Property(DialogCloseButton),True)</visible>
+      <include content="CloseButtonForPlayer">
+        <param name="id" value="508" />
+        <param name="posx" value="1746" />
+        <param name="posy" value="906" />
+        <param name="onup" value="9403" />
+        <param name="ondown" value="9404" />
+        <param name="onleft" value="9401" />
+        <param name="onright" value="9406" />
+      </include>
+    </control>
 
-        <include content="DescriptionForControlsForPlayer">
-            <param name="visible" value="Window.IsActive(playercontrols)" />
-            <param name="posx" value="1521" />
-            <param name="posy" value="780" />
-            <param name="width" value="520" />
-        </include>
-    </controls>
+    <include content="DescriptionForControlsForPlayer">
+      <param name="visible" value="Window.IsActive(playercontrols)" />
+      <param name="posx" value="1521" />
+      <param name="posy" value="780" />
+      <param name="width" value="520" />
+    </include>
+  </controls>
 </window>

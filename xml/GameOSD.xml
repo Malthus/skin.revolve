@@ -1,86 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="822">
-    <defaultcontrol always="true">2</defaultcontrol>
-    <menucontrol>100</menucontrol>
-    <onload condition="System.GetBool(gamesgeneral.showosdhelp)">SetFocus(22)</onload>
+  <defaultcontrol always="true">2</defaultcontrol>
+  <menucontrol>100</menucontrol>
+  <onload condition="System.GetBool(gamesgeneral.showosdhelp)">SetFocus(22)</onload>
 
-    <controls>
-        <control type="group" id="10">
-            <visible>System.GetBool(gamesgeneral.showosdhelp)</visible>
-            <defaultcontrol always="true">22</defaultcontrol>
-            <posy>PosYForTwelveLinesDialog</posy>
+  <controls>
+    <control type="group" id="10">
+      <visible>System.GetBool(gamesgeneral.showosdhelp)</visible>
+      <defaultcontrol always="true">22</defaultcontrol>
+      <posy>PosYForTwelveLinesDialog</posy>
 
-            <include content="WindowForDialog">
-                <param name="height" value="HeightForTwelveLinesDialog" />
-                <param name="headerlabel" value="$LOCALIZE[35221]" />
-                <param name="iconthumbnail" value="icons/icon-gamepad.png" />
-                <param name="animate" value="true" />
-            </include>
-            
-            <control type="gamecontroller" id="1102">
-                <description>Game Controller</description>
-                <posx>600</posx>
-                <posy>80</posy>
-                <width>500</width>
-                <height>500</height>
-            </control>            
+      <include content="WindowForDialog">
+        <param name="height" value="HeightForTwelveLinesDialog" />
+        <param name="headerlabel" value="$LOCALIZE[35221]" />
+        <param name="iconthumbnail" value="icons/icon-gamepad.png" />
+        <param name="animate" value="true" />
+      </include>
+      
+      <control type="gamecontroller" id="1102">
+        <description>Game Controller</description>
+        <posx>600</posx>
+        <posy>80</posy>
+        <width>500</width>
+        <height>500</height>
+      </control>      
 
-            <control type="textbox" id="1101"> 
-                <description>Help Text</description>
-                <posx>1140</posx>
-                <posy>80</posy>
-                <width>720</width>
-                <height>160</height>
-            </control>
+      <control type="textbox" id="1101"> 
+        <description>Help Text</description>
+        <posx>1140</posx>
+        <posy>80</posy>
+        <width>720</width>
+        <height>160</height>
+      </control>
 
-            <control type="textbox">
-                <description>Additional Help Text</description>
-                <posx>1140</posx>
-                <posy>280</posy>
-                <width>720</width>
-                <height>160</height>
-                <label>$LOCALIZE[35236]</label>
-            </control>
+      <control type="textbox">
+        <description>Additional Help Text</description>
+        <posx>1140</posx>
+        <posy>280</posy>
+        <width>720</width>
+        <height>160</height>
+        <label>$LOCALIZE[35236]</label>
+      </control>
 
-            <control type="grouplist" id="9000">
-                <include content="MarkupForButtonListForDialog">
-                    <param name="posy" value="520" />
-                    <param name="height" value="40" />
-                </include>
+      <control type="grouplist" id="9000">
+        <include content="MarkupForButtonListForDialog">
+          <param name="posy" value="520" />
+          <param name="height" value="40" />
+        </include>
 
-                <control type="button" id="22">
-                    <label>$LOCALIZE[15067]</label>
-                    <onclick>Close</onclick>
-                    <onclick>SetFocus(2)</onclick>
-                </control>
-            </control>
+        <control type="button" id="22">
+          <label>$LOCALIZE[15067]</label>
+          <onclick>Close</onclick>
+          <onclick>SetFocus(2)</onclick>
         </control>
+      </control>
+    </control>
 
-        <control type="group" id="20">
-            <visible>!System.GetBool(gamesgeneral.showosdhelp)</visible>
-            <defaultcontrol always="true">2</defaultcontrol>
-            <animation effect="slide" start="0,-120" end="0,0" time="200">WindowOpen</animation>
-            <animation effect="slide" start="0,0" end="0,-120" time="200">WindowClose</animation>
-            <posx>0</posx>
-            <posy>0</posy>
+    <control type="group" id="20">
+      <visible>!System.GetBool(gamesgeneral.showosdhelp)</visible>
+      <defaultcontrol always="true">2</defaultcontrol>
+      <animation effect="slide" start="0,-120" end="0,0" time="200">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="0,-120" time="200">WindowClose</animation>
+      <posx>0</posx>
+      <posy>0</posy>
 
-            <include content="TopGameControlsForPlayer">
-                <param name="id" value="100" />
-            </include>
+      <include content="TopGameControlsForPlayer">
+        <param name="id" value="100" />
+      </include>
 
-            <include content="DescriptionForControlsForPlayer">
-                <param name="visible" value="!Window.IsActive(gamevideosettings) + !Window.IsVisible(gamecontrollers)" />
-            </include>
-        </control>
+      <include content="DescriptionForControlsForPlayer">
+        <param name="visible" value="!Window.IsActive(gamevideosettings) + !Window.IsVisible(gamecontrollers)" />
+      </include>
+    </control>
 
-        <control type="group" id="30">
-            <posx>1840</posx>
-            <posy>PosYForLowerIconForOverlay</posy>
+    <control type="group" id="30">
+      <posx>1840</posx>
+      <posy>PosYForLowerIconForOverlay</posy>
 
-            <include content="PausedFlag">
-                <param name="flagcolor" value="$VAR[BackgroundColor]" />
-                <param name="backgroundcolor" value="$VAR[MainColor]" />
-            </include>
-        </control>
-    </controls>
+      <include content="PausedFlag">
+        <param name="flagcolor" value="$VAR[BackgroundColor]" />
+        <param name="backgroundcolor" value="$VAR[MainColor]" />
+      </include>
+    </control>
+  </controls>
 </window>
