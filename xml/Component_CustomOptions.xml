@@ -43,7 +43,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>$LOCALIZE[551]: $INFO[Window.Property(CustomName)]</label>
+        <label>$LOCALIZE[551]$INFO[Window.Property(CustomName),: ]</label>
         <onup>27</onup>
         <ondown>31</ondown>
         <onleft>9000</onleft>
@@ -60,7 +60,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>$LOCALIZE[462]: $INFO[Window.Property(CustomSubtitle)]</label>
+        <label>$LOCALIZE[462]$INFO[Window.Property(CustomSubtitle),: ]</label>
         <onup>30</onup>
         <ondown>32</ondown>
         <onleft>9000</onleft>
@@ -76,7 +76,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>$LOCALIZE[31802]: $INFO[Window.Property(CustomBackgroundImage)]</label>
+        <label>$LOCALIZE[31802]$INFO[Window.Property(CustomBackgroundImage),: ]</label>
         <onup>31</onup>
         <ondown>34</ondown>
         <onleft>9000</onleft>
@@ -110,27 +110,27 @@
       </control>
 
       <include content="ActionForCustomOptions">
-        <param name="label" value="Action: Open Window" />
+        <param name="label" value="$LOCALIZE[15217]: $LOCALIZE[31808]" />
         <param name="visible" value="!String.IsEqual(Window.Property(CustomType),M) + !String.IsEqual(Window.Property(CustomType),P) + !String.IsEqual(Window.Property(CustomType),A) + !String.IsEqual(Window.Property(CustomType),E) + !String.IsEqual(Window.Property(CustomType),C)" />
       </include>
       <include content="ActionForCustomOptions">
-        <param name="label" value="Action: Open $LOCALIZE[31803]" />
+        <param name="label" value="$LOCALIZE[15217]: $LOCALIZE[31809]" />
         <param name="visible" value="String.IsEqual(Window.Property(CustomType),M) + $PARAM[submenuenable]" />
       </include>
       <include content="ActionForCustomOptions">
-        <param name="label" value="Action: Open Playlist" />
+        <param name="label" value="$LOCALIZE[15217]: $LOCALIZE[31810]" />
         <param name="visible" value="String.IsEqual(Window.Property(CustomType),P)" />
       </include>
       <include content="ActionForCustomOptions">
-        <param name="label" value="Action: Run Add-on" />
+        <param name="label" value="$LOCALIZE[15217]: $LOCALIZE[15223]" />
         <param name="visible" value="String.IsEqual(Window.Property(CustomType),A)" />
       </include>
       <include content="ActionForCustomOptions">
-        <param name="label" value="Action: Run External Program" />
+        <param name="label" value="$LOCALIZE[15217]: $LOCALIZE[31818]" />
         <param name="visible" value="String.IsEqual(Window.Property(CustomType),E)" />
       </include>
       <include content="ActionForCustomOptions">
-        <param name="label" value="Action: Execute $LOCALIZE[31805]" />
+        <param name="label" value="$LOCALIZE[15217]: $LOCALIZE[31819]" />
         <param name="visible" value="String.IsEqual(Window.Property(CustomType),C)" />
       </include>
 
@@ -184,7 +184,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>$LOCALIZE[31896]: $INFO[Window.Property(CustomMenuIdentifier)]</label>
+        <label>$LOCALIZE[31896]$INFO[Window.Property(CustomMenuIdentifier),: ]</label>
         <onup>34</onup>
         <ondown>42</ondown>
         <onleft>9000</onleft>
@@ -224,7 +224,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Window: $INFO[Window.Property(CustomWindow)]</label>
+        <label>$LOCALIZE[31820]$INFO[Window.Property(CustomWindow),: ]</label>
         <onup>42</onup>
         <ondown>44</ondown>
         <onleft>9000</onleft>
@@ -245,7 +245,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Playlist: $INFO[Window.Property(CustomPlaylist)]</label>
+        <label>$LOCALIZE[559]$INFO[Window.Property(CustomPlaylist),: ]</label>
         <onup>43</onup>
         <ondown>45</ondown>
         <onleft>9000</onleft>
@@ -263,7 +263,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Type: $INFO[Window.Property(CustomAddonType)]</label>
+        <label>$LOCALIZE[803]$INFO[Window.Property(CustomAddonType),: ]</label>
         <onup>44</onup>
         <ondown>46</ondown>
         <onleft>9000</onleft>
@@ -285,7 +285,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Add-on: $INFO[Window.Property(CustomAddon)]</label>
+        <label>$LOCALIZE[24000]$INFO[Window.Property(CustomAddon),: ]</label>
         <onup>45</onup>
         <ondown>47</ondown>
         <onleft>9000</onleft>
@@ -303,7 +303,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Program: $INFO[Window.Property(CustomExecutable)]</label>
+        <label>$LOCALIZE[29908]$INFO[Window.Property(CustomExecutable),: ]</label>
         <onup>46</onup>
         <ondown>48</ondown>
         <onleft>9000</onleft>
@@ -321,7 +321,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Arguments: $INFO[Window.Property(CustomParameters)]</label>
+        <label>$LOCALIZE[31915]$INFO[Window.Property(CustomParameters),: ]</label>
         <onup>47</onup>
         <ondown>49</ondown>
         <onleft>9000</onleft>
@@ -340,7 +340,7 @@
         <width>1240</width>
         <font>DialogTextFont</font>
         <align>left</align>
-        <label>Command: $INFO[Window.Property(CustomAction)]</label>
+        <label>$LOCALIZE[31910]$INFO[Window.Property(CustomAction),: ]</label>
         <onup>48</onup>
         <ondown>27</ondown>
         <onleft>9000</onleft>
