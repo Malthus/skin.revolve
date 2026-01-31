@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="false">200</defaultcontrol>
-    <menucontrol>9001</menucontrol>
-    <views>52,55,51,54,56,58</views>
+  <defaultcontrol always="false">200</defaultcontrol>
+  <menucontrol>9001</menucontrol>
+  <views>52,55,51,54,56,58</views>
 
-    <controls>
-        <include content="FullscreenDimensions" />
-        <include content="GlobalBackground" />
+  <controls>
+    <include content="FullscreenDimensions" />
+    <include content="GlobalBackground" />
 
-        <include content="DropListView" />
-        <include content="CircleListView" />
-        <include content="ThumbnailsView" />
-        <include content="RevolveListView" />
-        <include content="PanelsView" />
-        <include content="RotateListView" />
+    <include content="DropListView" />
+    <include content="CircleListView" />
+    <include content="ThumbnailsView" />
+    <include content="RevolveListView" />
+    <include content="PanelsView" />
+    <include content="RotateListView" />
 
-        <include content="ChannelGroupLabelForPVR" />
+    <include content="ChannelGroupLabelForPVR" />
 
-        <control type="group" id="9000">
-            <include content="BackgroundForSideMenu" />
+    <control type="group" id="9000">
+      <include content="BackgroundForSideMenu" />
 
-            <include content="ButtonListForSideMenu">
-                <include content="ViewGroupLabelForSideMenu" />
-                <include content="ViewTypeButtonForSideMenu" />
-                <include content="SortCriteriumButtonForSideMenu" />
-                <include content="SortOrderButtonForSideMenu" />
-                <include content="ChannelGroupButtonForSideMenu" />
-                <include content="HiddenChannelsButtonForSideMenu" />
-                <include content="PVRFilterButtonForSideMenu" />
-                <include content="NameForThumbnailsButtonForSideMenu" />
+      <include content="ButtonListForSideMenu">
+        <include content="ViewGroupLabelForSideMenu" />
+        <include content="ViewTypeButtonForSideMenu" />
+        <include content="SortCriteriumButtonForSideMenu" />
+        <include content="SortOrderButtonForSideMenu" />
+        <include content="ChannelGroupButtonForSideMenu" />
+        <include content="HiddenChannelsButtonForSideMenu" />
+        <include content="PVRFilterButtonForSideMenu" />
+        <include content="NameForThumbnailsButtonForSideMenu" />
 
-                <include content="NavigationGroupLabelForSideMenu" />
-                <include content="GuideButtonForSideMenu" />
-                <include content="RecordingsButtonForSideMenu" />
-                <include content="TimersButtonForSideMenu" />
-                <include content="PVRSearchButtonForSideMenu" />
-                <include content="PVRBackendInfoButtonForSideMenu" />
-                <include content="GlobalSearchButtonForSideMenu" />
-            </include>
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="GuideButtonForSideMenu" />
+        <include content="RecordingsButtonForSideMenu" />
+        <include content="TimersButtonForSideMenu" />
+        <include content="PVRSearchButtonForSideMenu" />
+        <include content="PVRBackendInfoButtonForSideMenu" />
+        <include content="GlobalSearchButtonForSideMenu" />
+      </include>
 
-            <include content="PlayerControlsForSideMenu" />
-        </control>
-        
-        <include content="GlobalOverlay">
-            <param name="buttonid" value="200" />
-            <param name="controlid" value="52" />
-        </include>
-    </controls>
+      <include content="PlayerControlsForSideMenu" />
+    </control>
+    
+    <include content="GlobalOverlay">
+      <param name="buttonid" value="200" />
+      <param name="controlid" value="52" />
+    </include>
+  </controls>
 </window>

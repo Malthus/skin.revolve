@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="6">
-    <defaultcontrol always="false">200</defaultcontrol>
-    <menucontrol>9001</menucontrol>
-    <views>52,55,51,53,54,56,57,58</views>
+  <defaultcontrol always="false">200</defaultcontrol>
+  <menucontrol>9001</menucontrol>
+  <views>52,55,51,53,54,56,57,58</views>
 
-    <controls>
-        <include content="FullscreenDimensions" />
-        <include content="GlobalBackground" />
+  <controls>
+    <include content="FullscreenDimensions" />
+    <include content="GlobalBackground" />
 
-        <include content="CircleListView" />
-        <include content="DropListView" />
-         <include content="LandscapeView" />
-        <include content="ThumbnailsView" />
-        <include content="RevolveListView" />
-        <include content="PanelsView" />
-        <include content="GalleryView" />
-        <include content="RotateListView" />
-        <include content="BannersView" />
+    <include content="CircleListView" />
+    <include content="DropListView" />
+    <include content="LandscapeView" />
+    <include content="ThumbnailsView" />
+    <include content="RevolveListView" />
+    <include content="PanelsView" />
+    <include content="GalleryView" />
+    <include content="RotateListView" />
+    <include content="BannersView" />
 
-        <control type="group" id="9000">
-            <include content="BackgroundForSideMenu" />
+    <control type="group" id="9000">
+      <include content="BackgroundForSideMenu" />
 
-            <include content="ButtonListForSideMenu">
-                <include content="ViewGroupLabelForSideMenu" />
-                <include content="ViewTypeButtonForSideMenu" />
-                <include content="SortCriteriumButtonForSideMenu" />
-                <include content="SortOrderButtonForSideMenu" />
-                <include content="WatchedFilterButtonForSideMenu" />
-                <include content="NameForThumbnailsButtonForSideMenu" />
-                <include content="DescriptionForLandscapeButtonForSideMenu" />
-                <include content="LibrarySearchButtonForSideMenu" />
-                <include content="MediaFilterButtonForSideMenu" />
+      <include content="ButtonListForSideMenu">
+        <include content="ViewGroupLabelForSideMenu" />
+        <include content="ViewTypeButtonForSideMenu" />
+        <include content="SortCriteriumButtonForSideMenu" />
+        <include content="SortOrderButtonForSideMenu" />
+        <include content="WatchedFilterButtonForSideMenu" />
+        <include content="NameForThumbnailsButtonForSideMenu" />
+        <include content="DescriptionForLandscapeButtonForSideMenu" />
+        <include content="LibrarySearchButtonForSideMenu" />
+        <include content="MediaFilterButtonForSideMenu" />
 
-                <include content="NavigationGroupLabelForSideMenu" />
-                <include content="VideoPlaylistButtonForSideMenu" />
-                <include content="GlobalSearchButtonForSideMenu" />
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="VideoPlaylistButtonForSideMenu" />
+        <include content="GlobalSearchButtonForSideMenu" />
 
-                <include content="PlaylistLibraryGroupLabelForSideMenu" />
-                <include content="PartyModeButtonForSideMenu" />
-                <include content="UnlockSharesButtonForSideMenu" />
-                <include content="LibraryUpdateButtonForSideMenu" />
-            </include>
-            
-            <include content="PlayerControlsForSideMenu" />
-        </control>
-        
-        <include content="GlobalOverlay">
-            <param name="buttonid" value="200" />
-            <param name="controlid" value="52" />
-        </include>
-    </controls>
+        <include content="PlaylistLibraryGroupLabelForSideMenu" />
+        <include content="PartyModeButtonForSideMenu" />
+        <include content="UnlockSharesButtonForSideMenu" />
+        <include content="LibraryUpdateButtonForSideMenu" />
+      </include>
+      
+      <include content="PlayerControlsForSideMenu" />
+    </control>
+    
+    <include content="GlobalOverlay">
+      <param name="buttonid" value="200" />
+      <param name="controlid" value="52" />
+    </include>
+  </controls>
 </window>

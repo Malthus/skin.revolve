@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1">
-    <defaultcontrol always="false">200</defaultcontrol>
-    <menucontrol>9001</menucontrol>
-    <views>52,55,51,53,56,58</views>
+  <defaultcontrol always="false">200</defaultcontrol>
+  <menucontrol>9001</menucontrol>
+  <views>52,55,51,53,56,58</views>
 
-    <controls>
-        <include content="FullscreenDimensions" />
-        <include content="GlobalBackground" />
+  <controls>
+    <include content="FullscreenDimensions" />
+    <include content="GlobalBackground" />
 
-        <include content="DropListView" />
-        <include content="CircleListView" />
-        <include content="LandscapeView" />
-        <include content="ThumbnailsView" />
-        <include content="PanelsView" />
-        <include content="RotateListView" />
+    <include content="DropListView" />
+    <include content="CircleListView" />
+    <include content="LandscapeView" />
+    <include content="ThumbnailsView" />
+    <include content="PanelsView" />
+    <include content="RotateListView" />
 
-        <control type="group" id="9000">
-            <include content="BackgroundForSideMenu" />
+    <control type="group" id="9000">
+      <include content="BackgroundForSideMenu" />
 
-            <include content="ButtonListForSideMenu">
-                <include content="ViewGroupLabelForSideMenu" />
-                <include content="ViewTypeButtonForSideMenu" />
-                <include content="SortCriteriumButtonForSideMenu" />
-                <include content="SortOrderButtonForSideMenu" />
-                <include content="NameForThumbnailsButtonForSideMenu" />
-                <include content="DescriptionForLandscapeButtonForSideMenu" />
-                
-                <include content="NavigationGroupLabelForSideMenu">
-                    <param name="visible" value="Control.IsVisible(91)" />
-                </include>
-                <include content="GlobalSearchButtonForSideMenu" />
-            </include>
-
-            <include content="PlayerControlsForSideMenu" />
-        </control>
+      <include content="ButtonListForSideMenu">
+        <include content="ViewGroupLabelForSideMenu" />
+        <include content="ViewTypeButtonForSideMenu" />
+        <include content="SortCriteriumButtonForSideMenu" />
+        <include content="SortOrderButtonForSideMenu" />
+        <include content="NameForThumbnailsButtonForSideMenu" />
+        <include content="DescriptionForLandscapeButtonForSideMenu" />
         
-        <include content="GlobalOverlay">
-            <param name="buttonid" value="200" />
-            <param name="controlid" value="52" />
+        <include content="NavigationGroupLabelForSideMenu">
+          <param name="visible" value="Control.IsVisible(91)" />
         </include>
-    </controls>
+        <include content="GlobalSearchButtonForSideMenu" />
+      </include>
+
+      <include content="PlayerControlsForSideMenu" />
+    </control>
+    
+    <include content="GlobalOverlay">
+      <param name="buttonid" value="200" />
+      <param name="controlid" value="52" />
+    </include>
+  </controls>
 </window>

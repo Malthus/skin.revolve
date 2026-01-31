@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="false">200</defaultcontrol>
-    <menucontrol>9001</menucontrol>
-    <views>10</views>
+  <defaultcontrol always="false">200</defaultcontrol>
+  <menucontrol>9001</menucontrol>
+  <views>10</views>
 
-    <controls>
-        <include content="FullscreenDimensions" />
-        <include content="GlobalBackground" />
+  <controls>
+    <include content="FullscreenDimensions" />
+    <include content="GlobalBackground" />
 
-        <control type="group" id="42">
-            <include content="EPGTimelineViewForPVR" />
-        </control>
+    <control type="group" id="42">
+      <include content="EPGTimelineViewForPVR" />
+    </control>
 
-        <include content="ChannelGroupLabelForPVR">
-            <param name="id" value="30" />
-        </include>
+    <include content="ChannelGroupLabelForPVR">
+      <param name="id" value="30" />
+    </include>
 
-        <control type="group" id="9000">
-            <include content="BackgroundForSideMenu">
-                <param name="leftside" value="false" />
-                <param name="topside" value="true" />
-            </include>
+    <control type="group" id="9000">
+      <include content="BackgroundForSideMenu">
+        <param name="leftside" value="false" />
+        <param name="topside" value="true" />
+      </include>
 
-            <include content="ButtonListForSideMenu">
-                <param name="onright" value="42" />
+      <include content="ButtonListForSideMenu">
+        <param name="onright" value="42" />
 
-                <include content="ViewGroupLabelForSideMenu" />
-                <include content="ViewTypeButtonForSideMenu" />
-                <include content="SortCriteriumButtonForSideMenu" />
-                <include content="SortOrderButtonForSideMenu" />
-                <include content="ChannelGroupButtonForSideMenu" />
-                <include content="EPGColorsButtonForSideMenu" />
-                <include content="EPGGridWrapRadioButtonForSideMenu" />
+        <include content="ViewGroupLabelForSideMenu" />
+        <include content="ViewTypeButtonForSideMenu" />
+        <include content="SortCriteriumButtonForSideMenu" />
+        <include content="SortOrderButtonForSideMenu" />
+        <include content="ChannelGroupButtonForSideMenu" />
+        <include content="EPGColorsButtonForSideMenu" />
+        <include content="EPGGridWrapRadioButtonForSideMenu" />
 
-                <include content="NavigationGroupLabelForSideMenu" />
-                <include content="ChannelsButtonForSideMenu" />
-                <include content="RecordingsButtonForSideMenu" />
-                <include content="TimersButtonForSideMenu" />
-                <include content="PVRSearchButtonForSideMenu" />
-                <include content="PVRBackendInfoButtonForSideMenu" />
-                <include content="GlobalSearchButtonForSideMenu" />
-            </include>
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="ChannelsButtonForSideMenu" />
+        <include content="RecordingsButtonForSideMenu" />
+        <include content="TimersButtonForSideMenu" />
+        <include content="PVRSearchButtonForSideMenu" />
+        <include content="PVRBackendInfoButtonForSideMenu" />
+        <include content="GlobalSearchButtonForSideMenu" />
+      </include>
 
-            <include content="PlayerControlsForSideMenu">
-                <param name="onright" value="42" />
-            </include>
-        </control>
+      <include content="PlayerControlsForSideMenu">
+        <param name="onright" value="42" />
+      </include>
+    </control>
 
-        <include content="GlobalOverlay">
-            <param name="buttonid" value="200" />
-            <param name="controlid" value="10" />
-        </include>
-    </controls>
+    <include content="GlobalOverlay">
+      <param name="buttonid" value="200" />
+      <param name="controlid" value="10" />
+    </include>
+  </controls>
 </window>
