@@ -17,8 +17,10 @@
       <control type="fixedlist" id="58">
         <viewtype label="$LOCALIZE[31938]">list</viewtype>
         <visible allowhiddenfocus="true">true</visible>
-        
-        <include content="InvisibleListDimensionsForView" />
+        <posx>0</posx>
+        <posy>-90</posy>
+        <width>1920</width>
+        <height>1170</height>
         <focusposition>1</focusposition>
         <defaultcontrol>1</defaultcontrol>
         <pagecontrol>68</pagecontrol>
@@ -28,7 +30,12 @@
         <onleft>9001</onleft>
         <onright>68</onright>
 
-        <include content="InvisibleVerticalListItemsForView" />
+        <include content="InvisibleVerticalListItemsForView">
+          <param name="width" value="1600" />
+          <param name="height" value="150" />
+          <param name="focusheight" value="200" />
+          <param name="align" value="left" />
+        </include>
       </control>
 
       <control type="group">

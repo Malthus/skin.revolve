@@ -9,8 +9,11 @@
       <control type="fixedlist" id="52">
         <viewtype label="$LOCALIZE[31932]">list</viewtype>
         <visible allowhiddenfocus="true">$PARAM[visible]</visible>
-        <include content="InvisibleListDimensionsForView" />
-        <focusposition>1</focusposition>
+        <left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+        <focusposition>3</focusposition>
         <defaultcontrol>1</defaultcontrol>
         <pagecontrol>62</pagecontrol>
         <scrolltime>200</scrolltime>
@@ -19,7 +22,11 @@
         <onleft>$PARAM[onleft]</onleft>
         <onright>62</onright>
 
-        <include content="InvisibleVerticalListItemsForView" />
+        <include content="InvisibleVerticalListItemsForView">
+          <param name="width" value="1920" />
+          <param name="height" value="140" />
+          <param name="focusheight" value="240" />
+        </include>
       </control>
 
       <include content="MainCircleListView">

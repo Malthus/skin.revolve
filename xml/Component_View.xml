@@ -15,13 +15,13 @@
 
   <include name="VisibilityOfListIconInView">
     <definition>
-      <visible>!Container.Scrolling | Container.Content(Episodes) | Container.Content(Seasons) | Container.Content(Songs)</visible>
+      <visible>$EXP[VisibilityOfListIconInView]</visible>
     </definition>
   </include>
 
   <include name="VisibilityOfSortLetterInView">
     <definition>
-      <visible>Container.Scrolling + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(Songs)</visible>
+      <visible>$EXP[VisibilityOfSortLetterInView]</visible>
     </definition>
   </include>
 
@@ -166,50 +166,57 @@
   </include>
 
   <include name="InvisibleVerticalListItemsForView">
+    <param name="width" default="1920" />
+    <param name="height" default="160" />
+    <param name="focusheight" default="600" />
+    <param name="align" default="right" />
+
     <definition>
-      <itemlayout width="1920" height="160">
+      <itemlayout width="$PARAM[width]" height="$PARAM[height]">
         <control type="group">
           <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
+          <left>$PARAM[left]</left>
+          <top>$PARAM[top]</top>
 
           <control type="image">
-            <width>1920</width>
-            <height>160</height>
+            <width>$PARAM[width]</width>
+            <height>$PARAM[height]</height>
             <texture colordiffuse="$VAR[TextColor]" border="20">controls/rectangle-clear.png</texture>
             <aspectratio>stretch</aspectratio>
           </control>
 
           <include content="OutlineLabel">
-            <param name="width" value="1900" />
-            <param name="height" value="160" />
+            <param name="width" value="$PARAM[width]" />
+            <param name="height" value="$PARAM[height]" />
             <param name="font" value="DebugFont" />
             <param name="textcolor" value="$VAR[TextColor]" />
             <param name="outlinecolor" value="$VAR[BackgroundColor]" />
             <param name="outlinesize" value="2" />
-            <param name="align" value="right" />
+            <param name="align" value="$PARAM[align]" />
             <param name="label" value="$INFO[ListItem.Label]" />
           </include>
         </control>
       </itemlayout>
 
-      <focusedlayout width="1920" height="600">
+      <focusedlayout width="$PARAM[width]" height="$PARAM[focusheight]">
         <control type="group">
           <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
 
           <control type="image">
-            <width>1920</width>
-            <height>600</height>
+            <width>$PARAM[width]</width>
+            <height>$PARAM[focusheight]</height>
             <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
             <aspectratio>stretch</aspectratio>
           </control>
 
           <include content="OutlineLabel">
-            <param name="width" value="1900" />
-            <param name="height" value="600" />
+            <param name="width" value="$PARAM[width]" />
+            <param name="height" value="$PARAM[focusheight]" />
             <param name="font" value="DebugFont" />
             <param name="textcolor" value="$VAR[MainColor]" />
             <param name="outlinecolor" value="$VAR[BackgroundColor]" />
             <param name="outlinesize" value="2" />
-            <param name="align" value="right" />
+            <param name="align" value="$PARAM[align]" />
             <param name="label" value="$INFO[ListItem.Label]" />
           </include>
         </control>
@@ -218,21 +225,25 @@
   </include>
 
   <include name="InvisibleHorizontalListItemsForView">
+    <param name="width" default="300" />
+    <param name="height" default="1080" />
+    <param name="focuswidth" default="720" />
+    
     <definition>
-      <itemlayout width="300" height="1080">
+      <itemlayout width="$PARAM[width]" height="$PARAM[height]">
         <control type="group">
           <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
 
           <control type="image">
-            <width>300</width>
-            <height>1080</height>
+            <width>$PARAM[width]</width>
+            <height>$PARAM[height]</height>
             <texture colordiffuse="$VAR[TextColor]" border="20">controls/rectangle-clear.png</texture>
             <aspectratio>stretch</aspectratio>
           </control>
 
           <include content="OutlineLabel">
             <param name="posy" value="20" />
-            <param name="width" value="300" />
+            <param name="width" value="$PARAM[width]" />
             <param name="height" value="40" />
             <param name="font" value="DebugFont" />
             <param name="textcolor" value="$VAR[TextColor]" />
@@ -244,20 +255,20 @@
         </control>
       </itemlayout>
 
-      <focusedlayout width="720" height="1080">
+      <focusedlayout width="$PARAM[focuswidth]" height="$PARAM[height]">
         <control type="group">
           <visible>Skin.HasSetting(Debug.ListBorder.Visible)</visible>
 
           <control type="image">
-            <width>720</width>
-            <height>1080</height>
+            <width>$PARAM[focuswidth]</width>
+            <height>$PARAM[height]</height>
             <texture colordiffuse="$VAR[MainColor]" border="20">controls/rectangle-clear.png</texture>
             <aspectratio>stretch</aspectratio>
           </control>
 
           <include content="OutlineLabel">
             <param name="posy" value="20" />
-            <param name="width" value="720" />
+            <param name="width" value="$PARAM[focuswidth]" />
             <param name="height" value="40" />
             <param name="font" value="DebugFont" />
             <param name="textcolor" value="$VAR[MainColor]" />

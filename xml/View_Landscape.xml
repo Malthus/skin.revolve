@@ -21,16 +21,23 @@
       <control type="fixedlist" id="$PARAM[listid]">
         <viewtype label="$LOCALIZE[31933]">list</viewtype>
         <visible allowhiddenfocus="true">true</visible>
-        <include content="InvisibleListDimensionsForView" />
+        <left>-230</left>
+        <top>0</top>
+        <width>2380</width>
+        <height>1000</height>
         <pagecontrol>$PARAM[scrollbarid]</pagecontrol>
         <orientation>horizontal</orientation>
-        <focusposition>2</focusposition>
+        <focusposition>3</focusposition>
         <onup>$PARAM[sidemenuid]</onup>
         <ondown>$PARAM[scrollbarid]</ondown>
         <onleft>$PARAM[listid]</onleft>
         <onright>$PARAM[listid]</onright>
 
-        <include content="InvisibleHorizontalListItemsForView" />
+        <include content="InvisibleHorizontalListItemsForView">
+          <param name="height" value="1000" />
+          <param name="width" value="330" />
+          <param name="focuswidth" value="400" />
+        </include>
       </control>
 
       <control type="group">

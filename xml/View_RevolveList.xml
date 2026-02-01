@@ -12,9 +12,11 @@
         <viewtype label="$LOCALIZE[31934]">list</viewtype>
         <visible allowhiddenfocus="true">true</visible>
         <animation effect="fade" start="100" end="0" time="200" condition="Container(54).Scrolling">Conditional</animation>
-
-        <include content="InvisibleListDimensionsForView" />
-        <focusposition>1</focusposition>
+        <left>320</left>
+        <top>0</top>
+        <width>1600</width>
+        <height>1080</height>
+        <focusposition>4</focusposition>
         <defaultcontrol>1</defaultcontrol>
         <pagecontrol>64</pagecontrol>
         <scrolltime>200</scrolltime>
@@ -23,7 +25,11 @@
         <onleft>9001</onleft>
         <onright>64</onright>
 
-        <include content="InvisibleVerticalListItemsForView" />
+        <include content="InvisibleVerticalListItemsForView">
+          <param name="width" value="1600" />
+          <param name="height" value="150" />
+          <param name="focusheight" value="300" />
+        </include>
       </control>
 
       <control type="group">
