@@ -4,7 +4,8 @@
   <expression name="VisibilityOfSquareIcon">!Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons)</expression>
   <expression name="VisibilityOfHorizontalIcon">false</expression>
   <expression name="VisibilityOfVerticalIcon">Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)</expression>
-
+  <expression name="VisibilityOfBanner">!String.IsEmpty(ListItem.Art(banner))</expression>
+  <expression name="VisibilityOfNoBanner">String.IsEmpty(ListItem.Art(banner))</expression>
 
   <include name="CircleIcon">
     <param name="icontexture" default="$VAR[ContentThumbnail]" />
@@ -136,18 +137,6 @@
     </definition>
   </include>
   
-  <include name="VisibilityForBanner">
-    <definition>
-      <visible>!String.IsEmpty(ListItem.Art(banner))</visible>
-    </definition>
-  </include>
-  
-  <include name="VisibilityForNoBanner">
-    <definition>
-      <visible>String.IsEmpty(ListItem.Art(banner))</visible>
-    </definition>
-  </include>
-
   <include name="SmallCircleThumbnailIcon">
     <param name="icontexture" default="$VAR[ContentThumbnail]" />
   
@@ -509,7 +498,7 @@
       </control>
 
       <control type="group">
-        <include content="VisibilityForNoBanner" />
+        <visible>$EXP[VisibilityOfNoBanner]</visible>
         <include content="OutlineLabel">
           <param name="posx" value="22" />
           <param name="posy" value="110" />

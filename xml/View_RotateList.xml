@@ -86,8 +86,7 @@
               </include>
             </control>
             <control type="group">
-              <visible>Container(58).OnNext</visible>
-              <include content="VisibilityForNoBanner" />
+              <visible>Container(58).OnNext + $EXP[VisibilityOfNoBanner]</visible>
               <animation type="Visible" reversible="false">
                 <effect type="rotate" center="1100,200" end="8" />
                 <effect type="slide" end="0,20" />
@@ -192,8 +191,7 @@
               </include>
             </control>
             <control type="group">
-              <visible>Container(58).OnPrevious</visible>
-              <include content="VisibilityForNoBanner" />
+              <visible>Container(58).OnPrevious + $EXP[VisibilityOfNoBanner]</visible>
               <animation type="Visible" reversible="false">
                 <effect type="rotate" center="1100,200" end="-8" />
                 <effect type="slide" end="0,20" />
@@ -392,7 +390,7 @@
   <include name="BannerOnOriginForRotateListView">
     <definition>
       <control type="group">
-        <include content="VisibilityForBanner" />
+        <visible>$EXP[VisibilityOfBanner]</visible>
         <left>-764</left>
         <top>70</top>
 

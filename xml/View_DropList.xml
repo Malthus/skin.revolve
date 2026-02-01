@@ -42,7 +42,7 @@
         </control>
 
         <control type="group">
-          <include content="VisibilityForBanner" />
+          <visible>$EXP[VisibilityOfBanner]</visible>
 
           <control type="group">
             <left>DropListInformationLeftPosition</left>
@@ -52,7 +52,7 @@
         </control>
 
         <control type="group">
-          <include content="VisibilityForNoBanner" />
+          <visible>$EXP[VisibilityOfNoBanner]</visible>
 
           <control type="group">
             <visible>ListItem.IsPlaying</visible>
