@@ -33,32 +33,6 @@
         <include content="InvisibleHorizontalListItemsForView" />
       </control>
 
-      <include content="MainLandscapeView">
-        <param name="listid" value="$PARAM[listid]" />
-        <param name="scrollbarid" value="$PARAM[scrollbarid]" />
-        <param name="labelsvisible" value="$PARAM[labelsvisible]" />
-        <param name="descriptionposx" value="$PARAM[descriptionposx]" />
-        <param name="descriptionposy" value="$PARAM[descriptionposy]" />
-        <param name="descriptionwidth" value="$PARAM[descriptionwidth]" />
-        <param name="descriptionheight" value="$PARAM[descriptionheight]" />
-        <param name="descriptionlabel" value="$PARAM[descriptionlabel]" />
-        <param name="descriptionvisible" value="$PARAM[descriptionvisible]" />
-      </include>
-    </definition>
-  </include>
-
-  <include name="MainLandscapeView">
-    <param name="listid" default="53" />
-    <param name="scrollbarid" default="63" />
-    <param name="labelsvisible" default="true" />
-    <param name="descriptionposx" default="40" />
-    <param name="descriptionposy" default="40" />
-    <param name="descriptionwidth" default="1840" />
-    <param name="descriptionheight" default="340" />
-    <param name="descriptionlabel" default="$VAR[ContentDescription]" />
-    <param name="descriptionvisible" default="Skin.HasSetting(View.Landscape.DescriptionVisible)" />
-
-    <definition>
       <control type="group">
         <visible>Control.IsVisible($PARAM[listid])</visible>
         <animation effect="slide" start="0,1080" end="0,0" time="500">WindowOpen</animation>
@@ -80,44 +54,24 @@
           <param name="listid" value="$PARAM[listid]" />
         </include>
 
-        <include content="ContentDescriptionForLandscapeView">
-          <param name="posx" value="$PARAM[descriptionposx]" />
-          <param name="posy" value="$PARAM[descriptionposy]" />
-          <param name="width" value="$PARAM[descriptionwidth]" />
-          <param name="height" value="$PARAM[descriptionheight]" />
-          <param name="label" value="$PARAM[descriptionlabel]" />
-          <param name="visible" value="$PARAM[descriptionvisible]" />
-        </include>
+        <control type="group">
+          <visible>$PARAM[descriptionvisible]</visible>
+          <include content="OutlineTextbox">
+            <param name="posx" value="$PARAM[descriptionposx]" />
+            <param name="posy" value="$PARAM[descriptionposy]" />
+            <param name="width" value="$PARAM[descriptionwidth]" />
+            <param name="height" value="$PARAM[descriptionheight]" />
+            <param name="font" value="DescriptionViewFont" />
+            <param name="textcolor" value="$VAR[BackgroundColor]" />
+            <param name="outlinecolor" value="$VAR[TextColor]" />
+            <param name="outlinesize" value="2" />
+            <param name="label" value="$PARAM[descriptionlabel]" />
+          </include>
+        </control>
       </control>
     </definition>
   </include>
 
-  <include name="ContentDescriptionForLandscapeView">
-    <param name="posx" default="40" />
-    <param name="posy" default="40" />
-    <param name="width" default="1840" />
-    <param name="height" default="340" />
-    <param name="label" default="$VAR[ContentDescription]" />
-    <param name="visible" default="Skin.HasSetting(View.Landscape.DescriptionVisible)" />
-    
-    <definition>
-      <control type="group">
-        <visible>$PARAM[visible]</visible>
-        <include content="OutlineTextbox">
-          <param name="posx" value="$PARAM[posx]" />
-          <param name="posy" value="$PARAM[posy]" />
-          <param name="width" value="$PARAM[width]" />
-          <param name="height" value="$PARAM[height]" />
-          <param name="font" value="DescriptionViewFont" />
-          <param name="textcolor" value="$VAR[BackgroundColor]" />
-          <param name="outlinecolor" value="$VAR[TextColor]" />
-          <param name="outlinesize" value="2" />
-          <param name="label" value="$PARAM[label]" />
-        </include>
-      </control>
-    </definition>
-  </include>
-  
   <include name="ItemsForLandscapeView">
     <param name="listid" default="53" />
 
@@ -152,8 +106,8 @@
       
         <control type="group">
           <control type="group">
-            <posx>795</posx>
-            <posy>380</posy>
+            <left>795</left>
+            <top>380</top>
             <width>330</width>
             <height>646</height>
 
@@ -162,8 +116,8 @@
             </include>
 
             <control type="group">
-              <posx>65</posx>
-              <posy>226</posy>
+              <left>65</left>
+              <top>226</top>
               <include content="ListItemOverlayFlag" />
             </control>
           </control>
@@ -230,8 +184,8 @@
           <control type="group">
             <visible>Container($PARAM[listid]).OnNext</visible>
             <animation effect="zoom" center="960,724" start="100" end="80" time="200" reversible="false">Hidden</animation>
-            <posx>795</posx>
-            <posy>380</posy>
+            <left>795</left>
+            <top>380</top>
             <width>330</width>
             <height>646</height>
 
@@ -251,8 +205,8 @@
               <effect type="zoom" center="960,724" end="80" />
             </animation>
             <animation effect="zoom" center="960,724" start="100" end="125" time="200" reversible="false">Hidden</animation>
-            <posx>795</posx>
-            <posy>380</posy>
+            <left>795</left>
+            <top>380</top>
             <width>330</width>
             <height>646</height>
 
@@ -310,8 +264,8 @@
             <animation type="Conditional" condition="true">
               <effect type="zoom" center="960,724" end="80" />
             </animation>
-            <posx>795</posx>
-            <posy>380</posy>
+            <left>795</left>
+            <top>380</top>
             <width>330</width>
             <height>646</height>
 
@@ -327,8 +281,8 @@
           <control type="group">
             <visible>Container($PARAM[listid]).OnPrevious</visible>
             <animation effect="zoom" center="960,724" start="100" end="80" time="200" reversible="false">Hidden</animation>
-            <posx>795</posx>
-            <posy>380</posy>
+            <left>795</left>
+            <top>380</top>
             <width>330</width>
             <height>646</height>
 
@@ -368,51 +322,34 @@
 
   <include name="MainElementForLandscapeView">
     <param name="listid" default="53" />
-    
+
     <definition>
       <control type="group">
         <include content="VisibilityForVerticalIcon" />
+        <left>20</left>
+        <top>20</top>
 
-        <control type="image">
-          <posx>20</posx>
-          <posy>20</posy>
-          <width>290</width>
-          <height>424</height>
-          <texture colordiffuse="$VAR[MainColor]">elements/poster-mask.png</texture>
-          <aspectratio>stretch</aspectratio>
-        </control>
-          
-        <control type="image">
-          <posx>26</posx>
-          <posy>26</posy>
-          <width>278</width>
-          <height>412</height>
-          <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-          <aspectratio>stretch</aspectratio>
-        </control>
+        <include content="RectangleIcon">
+          <param name="iconwidth" value="282" />
+          <param name="iconheight" value="420" />
+          <param name="iconoffset" value="4" />
+          <param name="backgroundwidth" value="290" />
+          <param name="backgroundheight" value="428" />
+        </include>
       </control>
       
       <control type="group">
         <include content="VisibilityForSquareIcon" />
-        <posy>134</posy>
+        <left>20</left>
+        <top>154</top>
         
-        <control type="image">
-          <posx>20</posx>
-          <posy>20</posy>
-          <width>290</width>
-          <height>290</height>
-          <texture colordiffuse="$VAR[MainColor]">elements/poster-mask.png</texture>
-          <aspectratio>stretch</aspectratio>
-        </control>
-            
-        <control type="image">
-          <posx>26</posx>
-          <posy>26</posy>
-          <width>278</width>
-          <height>278</height>
-          <texture diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
-          <aspectratio>stretch</aspectratio>
-        </control>
+        <include content="RectangleIcon">
+          <param name="iconwidth" value="282" />
+          <param name="iconheight" value="282" />
+          <param name="iconoffset" value="4" />
+          <param name="backgroundwidth" value="290" />
+          <param name="backgroundheight" value="290" />
+        </include>
       </control>
     </definition>
   </include>
@@ -428,8 +365,8 @@
           <effect type="zoom" center="960,724" end="80" />
           <effect type="rotate" center="auto" end="0" />
         </animation>
-        <posx>795</posx>
-        <posy>380</posy>
+        <left>795</left>
+        <top>380</top>
         <width>330</width>
         <height>646</height>
         <include content="IconForOtherElementForLandscapeView">
@@ -449,8 +386,8 @@
         <include content="VisibilityForVerticalIcon" />
 
         <control type="image">
-          <posx>20</posx>
-          <posy>20</posy>
+          <left>20</left>
+          <top>20</top>
           <width>290</width>
           <height>424</height>
           <texture colordiffuse="$VAR[MainColor]">elements/poster-mask.png</texture>
@@ -467,8 +404,8 @@
         <include content="VisibilityForSquareIcon" />
 
         <control type="image">
-          <posx>20</posx>
-          <posy>154</posy>
+          <left>20</left>
+          <top>154</top>
           <width>290</width>
           <height>290</height>
           <texture colordiffuse="$VAR[MainColor]">elements/poster-mask.png</texture>
@@ -493,8 +430,8 @@
     <definition>
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],-4)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapMinusFourThumbnail]</texture>
@@ -502,8 +439,8 @@
       </control>
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],-3)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapMinusThreeThumbnail]</texture>
@@ -511,8 +448,8 @@
       </control>
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],-2)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapMinusTwoThumbnail]</texture>
@@ -520,8 +457,8 @@
       </control>
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],-1)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapMinusOneThumbnail]</texture>
@@ -530,8 +467,8 @@
 
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],0)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentThumbnail]</texture>
@@ -540,8 +477,8 @@
 
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],1)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapPlusOneThumbnail]</texture>
@@ -549,8 +486,8 @@
       </control>
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],2)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapPlusTwoThumbnail]</texture>
@@ -558,8 +495,8 @@
       </control>
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],3)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapPlusThreeThumbnail]</texture>
@@ -567,8 +504,8 @@
       </control>
       <control type="image">
         <visible>Integer.IsEqual($PARAM[listindex],4)</visible>
-        <posx>$PARAM[left]</posx>
-        <posy>$PARAM[top]</posy>
+        <left>$PARAM[left]</left>
+        <top>$PARAM[top]</top>
         <width>$PARAM[width]</width>
         <height>$PARAM[height]</height>
         <texture condition="false" diffuse="elements/poster-mask.png" background="true">$VAR[ContentNoWrapPlusFourThumbnail]</texture>
