@@ -114,7 +114,10 @@
         <param name="width" value="60" />
         <param name="height" value="60" />
         <param name="texturefocus" value="controls/button-back.png" />
+        <param name="colorfocus" value="$VAR[HighlightColor]" />
         <param name="texturenofocus" value="controls/button-back.png" />
+        <param name="colornofocus" value="$VAR[BackgroundColor]" />
+        <param name="colorbackground" value="$VAR[TextColor]" />
         <param name="onclick" value="Close" />
       </include>
     </definition>

@@ -7,12 +7,12 @@
       <visible>$EXP[CircleItemsVisible]</visible>
       <animation effect="fade" start="0" end="100" time="200">Visible</animation>
       <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-      <posx>20</posx>
-      <posy>370</posy>
+      <left>0</left>
+      <top>270</top>
 
       <control type="fixedlist" id="600">
         <description>Items In Circle Within Home Menu</description>
-        <width>812</width>
+        <width>800</width>
         <height>662</height>
         <scrolltime>0</scrolltime>
         <onup>600</onup>
@@ -28,7 +28,7 @@
           <description>Items In Circle List</description>
 
           <control type="group">
-            <posx>80</posx>
+            <posx>120</posx>
             <posy>25</posy>
 
             <include content="CircleIcon">
@@ -44,44 +44,44 @@
 
         <content limit="10">$INFO[Container(300).ListItem.Property(Playlist)]</content>
       </control>
-      
+
       <control type="group">
-        <visible>Control.HasFocus(600)</visible>
+        <visible>Control.HasFocus(600) | Control.HasFocus(601) | Control.HasFocus(602)</visible>
         <animation effect="fade" start="0" end="100" time="200">Visible</animation>
         <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 
         <control type="label">
-          <posx>0</posx>
-          <posy>540</posy>
-          <width>740</width>
+          <left>40</left>
+          <top>540</top>
+          <width>640</width>
           <height>40</height>
           <font>BigViewFont</font>
           <textcolor>$VAR[BackgroundColor]</textcolor>
-          <align>left</align>
+          <align>center</align>
           <scroll>true</scroll>
           <label>$INFO[Container(600).ListItem.Label]</label>
         </control>
 
         <control type="label">
-          <posx>0</posx>
-          <posy>580</posy>
-          <width>720</width>
+          <left>40</left>
+          <top>580</top>
+          <width>640</width>
           <height>30</height>
           <font>HomeMenuSpecialFont</font>
           <textcolor>$VAR[BackgroundColor]</textcolor>
-          <align>left</align>
+          <align>center</align>
           <scroll>true</scroll>
           <label>$INFO[Container(600).ListItem.Label2]</label>
         </control>
 
         <include content="CircleButton">
           <param name="id" value="601" />
-          <param name="posx" value="290" />
+          <param name="posx" value="330" />
           <param name="posy" value="0" />
           <param name="width" value="60" />
           <param name="height" value="60" />
           <param name="texturefocus" value="controls/button-channelup.png" />
-          <param name="colorfocus" value="$VAR[BackgroundColor]" />
+          <param name="colorfocus" value="$VAR[HighlightColor]" />
           <param name="texturenofocus" value="controls/button-channelup.png" />
           <param name="colornofocus" value="$VAR[BackgroundColor]" />
           <param name="colorbackground" value="$VAR[TextColor]" />
@@ -91,12 +91,12 @@
 
         <include content="CircleButton">
           <param name="id" value="602" />
-          <param name="posx" value="290" />
+          <param name="posx" value="330" />
           <param name="posy" value="470" />
           <param name="width" value="60" />
           <param name="height" value="60" />
           <param name="texturefocus" value="controls/button-channeldown.png" />
-          <param name="colorfocus" value="$VAR[BackgroundColor]" />
+          <param name="colorfocus" value="$VAR[HighlightColor]" />
           <param name="texturenofocus" value="controls/button-channeldown.png" />
           <param name="colornofocus" value="$VAR[BackgroundColor]" />
           <param name="colorbackground" value="$VAR[TextColor]" />
