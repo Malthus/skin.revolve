@@ -144,8 +144,8 @@
             <animation effect="zoom" center="860,750" start="20" end="0" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-5).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-5).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-5).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-5).Label]" />
             </include>
           </control>
         </control>
@@ -158,8 +158,8 @@
             <animation effect="zoom" center="860,750" start="34" end="20" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-4).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-4).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-4).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-4).Label]" />
             </include>
           </control>
         </control>
@@ -172,8 +172,8 @@
             <animation effect="zoom" center="860,750" start="52" end="34" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-3).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-3).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-3).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-3).Label]" />
             </include>
           </control>
         </control>
@@ -186,8 +186,8 @@
             <animation effect="zoom" center="860,750" start="80" end="52" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-2).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-2).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-2).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-2).Label]" />
             </include>
           </control>
         </control>
@@ -203,8 +203,8 @@
             </animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
             </include>
           </control>
           
@@ -220,8 +220,8 @@
             </animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="MainElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
             </include>
           </control>
         </control>
@@ -269,8 +269,8 @@
             <animation effect="zoom" center="860,750" start="52" end="80" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
             </include>
           </control>
         </control>
@@ -290,8 +290,8 @@
             <animation effect="zoom" center="860,750" start="0" end="20" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-4).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-4).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-4).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-4).Label]" />
             </include>
           </control>
         </control>
@@ -304,8 +304,8 @@
             <animation effect="zoom" center="860,750" start="20" end="34" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-3).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-3).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-3).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-3).Label]" />
             </include>
           </control>
         </control>
@@ -318,8 +318,8 @@
             <animation effect="zoom" center="860,750" start="34" end="52" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-2).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-2).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-2).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-2).Label]" />
             </include>
           </control>
         </control>
@@ -332,8 +332,8 @@
             <animation effect="zoom" center="860,750" start="52" end="80" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
             </include>
           </control>
         </control>
@@ -384,8 +384,8 @@
             </animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
             </include>
           </control>
 
@@ -401,8 +401,8 @@
             </animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="MainElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
             </include>
           </control>
         </control>
@@ -415,8 +415,8 @@
             <animation effect="zoom" center="860,750" start="80" end="52" time="200" reversible="false">Hidden</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(2).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(2).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(2).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(2).Label]" />
             </include>
           </control>
         </control>
@@ -431,8 +431,8 @@
             <animation effect="zoom" center="860,750" end="20" condition="true">Conditional</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-4).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-4).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-4).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-4).Label]" />
             </include>
           </control>
         </control>
@@ -443,8 +443,8 @@
             <animation effect="zoom" center="860,750" end="34" condition="true">Conditional</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-3).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-3).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-3).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-3).Label]" />
             </include>
           </control>
         </control>
@@ -455,8 +455,8 @@
             <animation effect="zoom" center="860,750" end="52" condition="true">Conditional</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-2).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-2).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-2).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-2).Label]" />
             </include>
           </control>
         </control>
@@ -467,8 +467,8 @@
             <animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(-1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(-1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(-1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(-1).Label]" />
             </include>
           </control>
         </control>
@@ -487,8 +487,8 @@
             <animation effect="zoom" center="860,750" end="80" condition="true">Conditional</animation>
             <include content="PositionForElementForRevolveListView" />
             <include content="OtherElementForRevolveListView">
-              <param name="highlightvisible" value="ListItem(1).IsPlaying" />
-              <param name="label" value="$INFO[ListItem(1).Label]" />
+              <param name="highlightvisible" value="ListItemNoWrap(1).IsPlaying" />
+              <param name="label" value="$INFO[ListItemNoWrap(1).Label]" />
             </include>
           </control>
         </control>
