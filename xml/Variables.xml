@@ -203,8 +203,120 @@
     <value>DefaultFile.png</value>
   </variable>
 
+  <variable name="ContentNoWrapMinusFourThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(-4).Art(poster))">$INFO[ListItemNoWrap(-4).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-4).Art(thumb))">$INFO[ListItemNoWrap(-4).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-4).Icon)">$INFO[ListItemNoWrap(-4).Icon]</value>
+
+    <value condition="ListItemNoWrap(-4).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(-4).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(-4).FileExtension,jpeg)">$INFO[ListItemNoWrap(-4).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-4).FileExtension,png)">$INFO[ListItemNoWrap(-4).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-4).FileExtension,gif)">$INFO[ListItemNoWrap(-4).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+
+  <variable name="ContentNoWrapMinusThreeThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(-3).Art(poster))">$INFO[ListItemNoWrap(-3).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-3).Art(thumb))">$INFO[ListItemNoWrap(-3).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-3).Icon)">$INFO[ListItemNoWrap(-3).Icon]</value>
+
+    <value condition="ListItemNoWrap(-3).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(-3).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(-3).FileExtension,jpeg)">$INFO[ListItemNoWrap(-3).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-3).FileExtension,png)">$INFO[ListItemNoWrap(-3).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-3).FileExtension,gif)">$INFO[ListItemNoWrap(-3).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+
+  <variable name="ContentNoWrapMinusTwoThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(-2).Art(poster))">$INFO[ListItemNoWrap(-2).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-2).Art(thumb))">$INFO[ListItemNoWrap(-2).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-2).Icon)">$INFO[ListItemNoWrap(-2).Icon]</value>
+
+    <value condition="ListItemNoWrap(-2).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(-2).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(-2).FileExtension,jpeg)">$INFO[ListItemNoWrap(-2).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-2).FileExtension,png)">$INFO[ListItemNoWrap(-2).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-2).FileExtension,gif)">$INFO[ListItemNoWrap(-2).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+
+  <variable name="ContentNoWrapMinusOneThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(-1).Art(poster))">$INFO[ListItemNoWrap(-1).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-1).Art(thumb))">$INFO[ListItemNoWrap(-1).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(-1).Icon)">$INFO[ListItemNoWrap(-1).Icon]</value>
+
+    <value condition="ListItemNoWrap(-1).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(-1).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(-1).FileExtension,jpeg)">$INFO[ListItemNoWrap(-1).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-1).FileExtension,png)">$INFO[ListItemNoWrap(-1).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(-1).FileExtension,gif)">$INFO[ListItemNoWrap(-1).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+
+  <variable name="ContentNoWrapPlusOneThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(1).Art(poster))">$INFO[ListItemNoWrap(1).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(1).Art(thumb))">$INFO[ListItemNoWrap(1).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(1).Icon)">$INFO[ListItemNoWrap(1).Icon]</value>
+
+    <value condition="ListItemNoWrap(1).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(1).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(1).FileExtension,jpeg)">$INFO[ListItemNoWrap(1).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(1).FileExtension,png)">$INFO[ListItemNoWrap(1).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(1).FileExtension,gif)">$INFO[ListItemNoWrap(1).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+
+  <variable name="ContentNoWrapPlusTwoThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(2).Art(poster))">$INFO[ListItemNoWrap(2).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(2).Art(thumb))">$INFO[ListItemNoWrap(2).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(2).Icon)">$INFO[ListItemNoWrap(2).Icon]</value>
+
+    <value condition="ListItemNoWrap(2).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(2).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(2).FileExtension,jpeg)">$INFO[ListItemNoWrap(2).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(2).FileExtension,png)">$INFO[ListItemNoWrap(2).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(2).FileExtension,gif)">$INFO[ListItemNoWrap(2).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+  
+  <variable name="ContentNoWrapPlusThreeThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(3).Art(poster))">$INFO[ListItemNoWrap(3).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(3).Art(thumb))">$INFO[ListItemNoWrap(3).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(3).Icon)">$INFO[ListItemNoWrap(3).Icon]</value>
+
+    <value condition="ListItemNoWrap(3).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(3).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(3).FileExtension,jpeg)">$INFO[ListItemNoWrap(3).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(3).FileExtension,png)">$INFO[ListItemNoWrap(3).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(3).FileExtension,gif)">$INFO[ListItemNoWrap(3).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+
+  <variable name="ContentNoWrapPlusFourThumbnail">
+    <value condition="!String.IsEmpty(ListItemNoWrap(4).Art(poster))">$INFO[ListItemNoWrap(4).Art(poster)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(4).Art(thumb))">$INFO[ListItemNoWrap(4).Art(thumb)]</value>
+    <value condition="!String.IsEmpty(ListItemNoWrap(4).Icon)">$INFO[ListItemNoWrap(4).Icon]</value>
+
+    <value condition="ListItemNoWrap(4).IsParentFolder">DefaultFolderBack.png</value>
+    <value condition="Integer.IsEqual(Container.NumItems,0)">DefaultEmpty.png</value>
+
+    <value condition="String.IsEqual(ListItemNoWrap(4).FileExtension,jpg) | String.IsEqual(ListItemNoWrap(4).FileExtension,jpeg)">$INFO[ListItemNoWrap(4).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(4).FileExtension,png)">$INFO[ListItemNoWrap(4).FileNameAndPath]</value>
+    <value condition="String.IsEqual(ListItemNoWrap(4).FileExtension,gif)">$INFO[ListItemNoWrap(4).FileNameAndPath]</value>
+    <value>DefaultFile.png</value>
+  </variable>
+
   <variable name="ContentAction">
-    <value condition="String.IsEqual(ListItem.DBTYPE,album)">PlayMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,album)">QueueMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">PlayMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,resume)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,movieset)">PlayMedia(videodb://movies/sets/$INFO[ListItem.DBID]/,resume)</value>
     <value></value>
