@@ -110,7 +110,7 @@
       
       <include content="ViewListForFlag">
         <param name="posx" value="40" />
-        <param name="posy" value="615" />
+        <param name="posy" value="610" />
         <param name="flagcolor" value="$VAR[BackgroundColor]" />
         <param name="backgroundcolor" value="$VAR[MainColor]" />
       </include>
@@ -256,7 +256,7 @@
         <control type="group">
           <include content="VisibilityForSquareIcon" />
           <left>1500</left>
-          <top>460</top>
+          <top>450</top>
           <include content="SquareThumbnailIcon" />
           <include content="OverlayForSquareThumbnailIcon" />
         </control>
@@ -264,7 +264,7 @@
         <control type="group">
           <include content="VisibilityForVerticalIcon" />
           <left>1550</left>
-          <top>460</top>
+          <top>450</top>
           <include content="VerticalThumbnailIcon" />
           <include content="OverlayForVerticalThumbnailIcon" />
         </control>
@@ -272,7 +272,7 @@
         <control type="group">
           <include content="VisibilityForHorizontalIcon" />
           <left>1400</left>
-          <top>460</top>
+          <top>450</top>
           <include content="HorizontalThumbnailIcon" />
           <include content="OverlayForHorizontalThumbnailIcon" />
         </control>
