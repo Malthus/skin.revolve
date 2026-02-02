@@ -316,9 +316,15 @@
   </variable>
 
   <variable name="ContentAction">
-    <value condition="String.IsEqual(ListItem.DBTYPE,album)">QueueMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,movie)">PlayMedia(videodb://movies/titles/$INFO[ListItem.DBID]/,resume)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,set)">PlayMedia(videodb://movies/sets/$INFO[ListItem.DBID]/,resume)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">PlayMedia(videodb://musicvideos/$INFO[ListItem.DBID]/)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">PlayMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,resume)</value>
-    <value condition="String.IsEqual(ListItem.DBTYPE,movieset)">PlayMedia(videodb://movies/sets/$INFO[ListItem.DBID]/,resume)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,artist)">ActivateWindow(music,musicdb://artists/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,album) + Player.HasAudio">QueueMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,album)">PlayMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,song + Player.HasAudio)">QueueMedia(musicdb://songs/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,song)">PlayMedia(musicdb://songs/$INFO[ListItem.DBID]/)</value>
     <value></value>
   </variable>
 
