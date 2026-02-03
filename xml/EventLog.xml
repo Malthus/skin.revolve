@@ -13,42 +13,34 @@
       <include content="BackgroundAnimationForBottomRing" />
     </control>
 
-    <control type="fixedlist" id="570">
-      <viewtype label="$LOCALIZE[31933]">list</viewtype>
-      <visible allowhiddenfocus="true">true</visible>
-      <include content="InvisibleListDimensionsForView" />
-      <pagecontrol>580</pagecontrol>
-      <orientation>horizontal</orientation>
-      <focusposition>2</focusposition>
-      <defaultcontrol>99</defaultcontrol>
-      <onup>9001</onup>
-      <ondown>580</ondown>
-      <onleft>570</onleft>
-      <onright>570</onright>
-
-      <include content="InvisibleHorizontalListItemsForView" />
-    </control>
-
-    <include content="LandscapeView">
-      <param name="listid" value="570" />
+    <include content="ListForDropListView">
+      <param name="id" value="570" />
       <param name="scrollbarid" value="580" />
-      <param name="labelsvisible" value="false" />
-      <param name="descriptionposx" value="330" />
-      <param name="descriptionwidth" value="1510" />
-      <param name="descriptionheight" value="460" />
-      <param name="descriptionlabel" value="$INFO[ListItem.Property(Event.Description)]" />
-      <param name="descriptionvisible" value="true" />
+      <param name="onleft" value="9001" />
     </include>
 
-    <include content="ContentLabelForBottomRing">
-      <param name="highlightvisible" value="false" />
-      <param name="namelabel" value="$INFO[Container(570).ListItem.Label]" />
-      <param name="informationlabel" value="$INFO[Container(570).ListItem.Label2]" />
+    <include content="VerticalScrollbarForView">
+      <param name="id" value="580" />
+      <param name="viewid" value="570" />
     </include>
 
+    <include content="ContentCategoryForDropListView">
+      <param name="label" value="$INFO[Container(570).ListItem.Label2]" />
+    </include>
+
+    <include content="ContentNameForDropListView">
+      <param name="label" value="$INFO[Container(570).ListItem.Label]" />
+    </include>
+
+    <include content="ContentDescriptionForDropListView">
+      <param name="top" value="312" />
+      <param name="height" value="518" />
+      <param name="label" value="$INFO[ListItem.Property(Event.Description)]" />
+    </include>
+    
     <control type="group" id="9000">
       <include content="BackgroundForSideMenu">
-        <param name="topside" value="true" />
+        <param name="leftside" value="true" />
       </include>
 
       <include content="ButtonListForSideMenu">
