@@ -3,7 +3,7 @@
   <variable name="ContentNameLabel">
     <value>$INFO[ListItem.Label]</value>
   </variable>
-  
+
   <variable name="ContentSortLetterLabel">
     <value>$INFO[ListItem.SortLetter]</value>
   </variable>
@@ -188,7 +188,7 @@
     <value condition="String.IsEqual(ListItem(2).FileExtension,gif)">$INFO[ListItem(2).FileNameAndPath]</value>
     <value>DefaultFile.png</value>
   </variable>
-  
+
   <variable name="ContentWrapPlusThreeThumbnail">
     <value condition="!String.IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
     <value condition="!String.IsEmpty(ListItem(3).Art(thumb))">$INFO[ListItem(3).Art(thumb)]</value>
@@ -286,7 +286,7 @@
     <value condition="String.IsEqual(ListItemNoWrap(2).FileExtension,gif)">$INFO[ListItemNoWrap(2).FileNameAndPath]</value>
     <value>DefaultFile.png</value>
   </variable>
-  
+
   <variable name="ContentNoWrapPlusThreeThumbnail">
     <value condition="!String.IsEmpty(ListItemNoWrap(3).Art(poster))">$INFO[ListItemNoWrap(3).Art(poster)]</value>
     <value condition="!String.IsEmpty(ListItemNoWrap(3).Art(thumb))">$INFO[ListItemNoWrap(3).Art(thumb)]</value>
@@ -320,10 +320,10 @@
     <value condition="String.IsEqual(ListItem.DBTYPE,set)">PlayMedia(videodb://movies/sets/$INFO[ListItem.DBID]/,resume)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">PlayMedia(videodb://musicvideos/$INFO[ListItem.DBID]/)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">PlayMedia(videodb://tvshows/titles/$INFO[ListItem.DBID]/,resume)</value>
-    <value condition="String.IsEqual(ListItem.DBTYPE,artist)">ActivateWindow(music,musicdb://artists/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,artist)">ActivateWindow(music,musicdb://artists/$INFO[ListItem.DBID]/,return)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,album) + Player.HasAudio">QueueMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,album)">PlayMedia(musicdb://albums/$INFO[ListItem.DBID]/)</value>
-    <value condition="String.IsEqual(ListItem.DBTYPE,song + Player.HasAudio)">QueueMedia(musicdb://songs/$INFO[ListItem.DBID]/)</value>
+    <value condition="String.IsEqual(ListItem.DBTYPE,song) + Player.HasAudio">QueueMedia(musicdb://songs/$INFO[ListItem.DBID]/)</value>
     <value condition="String.IsEqual(ListItem.DBTYPE,song)">PlayMedia(musicdb://songs/$INFO[ListItem.DBID]/)</value>
     <value></value>
   </variable>
@@ -341,7 +341,7 @@
     <value condition="!String.IsEmpty(Container(400).ListItem.Album)">$INFO[Container(400).ListItem.Artist]$INFO[Container(400).ListItem.Album, | ,]</value>
     <value condition="!String.IsEmpty(Container(400).ListItem.Artist)">$INFO[Container(400).ListItem.Artist]</value>
   </variable>
-  
+
   <variable name="MenuDetailLabel">
     <value condition="!String.IsEmpty(Container(400).ListItem.Label2)">$INFO[Container(400).ListItem.Label2]</value>
     <value condition="Container.Content(episodes)">$INFO[Container(400).ListItem.Season,$LOCALIZE[20373] ,]</value>
@@ -351,7 +351,7 @@
     <value condition="!String.IsEmpty(Container(400).ListItem.Duration)">$INFO[Container(400).ListItem.Year,, | ]$INFO[Container(400).ListItem.Duration]$INFO[Container(400).ListItem.Genre, | ,]</value>
     <value>$INFO[Container(400).ListItem.Year]</value>
   </variable>
-  
+
   <variable name="MenuThumbnail">
     <value condition="!String.IsEmpty(Container(400).ListItem.Art(thumb))">$INFO[Container(400).ListItem.Art(thumb)]</value>
     <value condition="!String.IsEmpty(Container(400).ListItem.Icon)">$INFO[Container(400).ListItem.Icon]</value>
@@ -384,7 +384,7 @@
     <value condition="Window.Is(musicinformation) + String.IsEmpty(ListItem.Label)">$INFO[ListItem.Album]</value>
     <value>$INFO[ListItem.Label]</value>
   </variable>
-  
+
   <variable name="ThumbnailsTypeLabel">
     <value condition="String.IsEqual(Skin.String(Thumbnails.Type),S)">$LOCALIZE[31954]</value>
     <value>$LOCALIZE[31952]</value>
@@ -425,7 +425,7 @@
     <value condition="Player.HasVideo">$INFO[VideoPlayer.Title]</value>
     <value condition="Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title]</value>
   </variable>
-  
+
   <variable name="PlayerInformationLabel">
     <value condition="Window.IsVisible(slideshow) + !Slideshow.IsVideo">$INFO[Slideshow.EXIFDate,, | ]$INFO[Slideshow.Filesize]</value>
     <value condition="Player.HasVideo + !String.IsEmpty(VideoPlayer.ChannelNumberLabel)">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]</value>
@@ -446,16 +446,16 @@
     <value condition="Player.HasVideo">$INFO[VideoPlayer.Time]</value>
     <value condition="Player.HasAudio">$INFO[MusicPlayer.Time]</value>
   </variable>
-  
+
   <variable name="PlayerDurationLabel">
     <value condition="Player.HasVideo">$INFO[VideoPlayer.Duration]</value>
     <value condition="Player.HasAudio">$INFO[MusicPlayer.Duration]</value>
   </variable>
-  
+
   <variable name="PlayerBackgroundMusicLabel">
     <value condition="Player.HasAudio">$INFO[MusicPlayer.Artist,, | ]$INFO[MusicPlayer.Album,, | ]$INFO[MusicPlayer.Title]$INFO[MusicPlayer.Year, | ]</value>
   </variable>
-  
+
   <variable name="PlayerVisualisationLabel">
     <value condition="Visualisation.Locked">$INFO[Visualisation.Name] | $INFO[Visualisation.Preset] | $LOCALIZE[20166]</value>
     <value>$INFO[Visualisation.Name] | $INFO[Visualisation.Preset]</value>
@@ -464,11 +464,11 @@
   <variable name="SystemBatteryLevelLabel">
     <value condition="Integer.IsGreater(System.BatteryLevel,0)">$LOCALIZE[12395]: $INFO[System.BatteryLevel]</value>
   </variable>
-  
+
   <variable name="SystemShutdownTimerLabel">
     <value condition="System.HasAlarm(shutdowntimer)">$LOCALIZE[20144]: $INFO[System.AlarmPos]</value>
   </variable>
-  
+
   <variable name="MainColor">
     <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),y)">MainColor</value>
     <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),R)">FF7D0000</value>
@@ -498,7 +498,7 @@
     <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),X) + !String.IsEmpty(Skin.String(Colors.HighlightColorCustomValue))">$INFO[Skin.String(Colors.HighlightColorCustomValue)]</value>
     <value>HighlightColor</value>
   </variable>
-  
+
   <variable name="SecondaryColor">
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),Y)">SecondaryColor</value>
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),W)">FF000000</value>
@@ -507,7 +507,7 @@
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),X) + !String.IsEmpty(Skin.String(Colors.SecondaryColorCustomValue))">$INFO[Skin.String(Colors.SecondaryColorCustomValue)]</value>
     <value>SecondaryColor</value>
   </variable>
-  
+
   <variable name="BackgroundColor">
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),Y)">BackgroundColor</value>
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),W)">FFFFFFFF</value>
@@ -534,7 +534,7 @@
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),X) + !String.IsEmpty(Skin.String(Colors.TextColorCustomValue))">$INFO[Skin.String(Colors.TextColorCustomValue)]</value>
     <value>TextColor</value>
   </variable>
-  
+
   <variable name="ShadowmaskColor">
     <value>55000000</value>
   </variable>
@@ -548,7 +548,7 @@
     <value condition="String.IsEqual(Skin.String(Colors.PrimaryColorTheme),X)">$LOCALIZE[31244]</value>
     <value>$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
   </variable>
-  
+
   <variable name="BackgroundColorThemeLabel">
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),Y)">$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),W)">$LOCALIZE[742]</value>
@@ -557,7 +557,7 @@
     <value condition="String.IsEqual(Skin.String(Colors.BackgroundColorTheme),X)">$LOCALIZE[31244]</value>
     <value>$LOCALIZE[31245]: $INFO[Skin.CurrentTheme]</value>
   </variable>
-  
+
   <variable name="AutoCompletionAddon">
     <value condition="!System.HasHiddenInput + System.HasAddon(plugin.program.autocompletion) + Skin.HasSetting(Keyboard.AutoCompleteActive)">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=8</value>
     <value></value>
