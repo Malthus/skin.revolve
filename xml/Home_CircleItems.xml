@@ -8,7 +8,7 @@
       <animation effect="fade" start="0" end="100" time="200">Visible</animation>
       <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
       <left>0</left>
-      <top>270</top>
+      <top>400</top>
 
       <control type="fixedlist" id="600">
         <description>Items In Circle Within Home Menu</description>
@@ -29,7 +29,7 @@
 
           <control type="group">
             <posx>120</posx>
-            <posy>25</posy>
+            <posy>110</posy>
 
             <include content="CircleIcon">
               <param name="icontexture" value="$VAR[ContentThumbnail]" />
@@ -52,7 +52,19 @@
 
         <control type="label">
           <left>40</left>
-          <top>540</top>
+          <top>5</top>
+          <width>640</width>
+          <height>30</height>
+          <font>HomeMenuSpecialFont</font>
+          <textcolor>$VAR[BackgroundColor]</textcolor>
+          <align>center</align>
+          <scroll>true</scroll>
+          <label>$INFO[Container(600).ListItem.Label2]</label>
+        </control>
+
+        <control type="label">
+          <left>40</left>
+          <top>35</top>
           <width>640</width>
           <height>40</height>
           <font>BigViewFont</font>
@@ -64,20 +76,20 @@
 
         <control type="label">
           <left>40</left>
-          <top>580</top>
+          <top>600</top>
           <width>640</width>
           <height>30</height>
           <font>HomeMenuSpecialFont</font>
           <textcolor>$VAR[BackgroundColor]</textcolor>
           <align>center</align>
           <scroll>true</scroll>
-          <label>$INFO[Container(600).ListItem.Label2]</label>
+          <label>$VAR[ContentAction]</label>
         </control>
 
         <include content="CircleButton">
           <param name="id" value="601" />
           <param name="posx" value="330" />
-          <param name="posy" value="0" />
+          <param name="posy" value="85" />
           <param name="width" value="60" />
           <param name="height" value="60" />
           <param name="texturefocus" value="controls/button-channelup.png" />
@@ -92,7 +104,7 @@
         <include content="CircleButton">
           <param name="id" value="602" />
           <param name="posx" value="330" />
-          <param name="posy" value="470" />
+          <param name="posy" value="555" />
           <param name="width" value="60" />
           <param name="height" value="60" />
           <param name="texturefocus" value="controls/button-channeldown.png" />

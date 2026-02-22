@@ -3,6 +3,8 @@
   <expression name="FocusOnSideMenu">ControlGroup(9000).HasFocus() | ControlGroup(9001).HasFocus() | ControlGroup(9010).HasFocus() | ControlGroup(9020).HasFocus() | ControlGroup(9021).HasFocus()</expression>
   <expression name="ViewsForLeftSideMenu">Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(59)</expression>
   <expression name="ViewsForTopSideMenu">Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(57)</expression>
+  <expression name="NormalLeftHandleForSideMenu">!Window.IsVisible(home) + !Window.IsVisible(settings) + !Window.IsVisible(1103) + !Window.IsVisible(1150)</expression>
+  <expression name="LowLeftHandleForSideMenu">Window.IsVisible(home) | Window.IsVisible(settings) | Window.IsVisible(1103) | Window.IsVisible(1150)</expression>
 
   <include name="SideMenu">
     <param name="leftside" default="true" />
@@ -136,8 +138,17 @@
       <control type="group">
         <include content="LeftHandle">
           <param name="id" value="9021" />
-          <param name="visible" value="Skin.HasSetting(SideMenu.Visible)" />
+          <param name="visible" value="Skin.HasSetting(SideMenu.Visible) + $EXP[NormalLeftHandleForSideMenu]" />
           <param name="posx" value="540" />
+          <param name="texturefocus" value="controls/button-menu.png" />
+          <param name="texturenofocus" value="controls/button-menu.png" />
+        </include>
+
+        <include content="LeftHandle">
+          <param name="id" value="9021" />
+          <param name="visible" value="Skin.HasSetting(SideMenu.Visible) + $EXP[LowLeftHandleForSideMenu]" />
+          <param name="posx" value="540" />
+          <param name="posy" value="550" />
           <param name="texturefocus" value="controls/button-menu.png" />
           <param name="texturenofocus" value="controls/button-menu.png" />
         </include>
