@@ -231,6 +231,7 @@
     </control>
 
     <control type="group" id="9000">
+      <visible>Player.HasMedia | $EXP[GlobalSearchInSideMenu]</visible>
       <include content="BackgroundForSideMenu">
         <param name="leftside" value="true" />
       </include>
@@ -239,7 +240,7 @@
         <param name="onright" value="400" />
 
         <include content="NavigationGroupLabelForSideMenu">
-          <param name="visible" value="Control.IsVisible(91)" />
+          <param name="visible" value="$EXP[GlobalSearchInSideMenu]" />
         </include>
         <include content="GlobalSearchButtonForSideMenu" />
       </include>

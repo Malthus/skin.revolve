@@ -29,7 +29,7 @@
         <include content="DescriptionForLandscapeButtonForSideMenu" />
         
         <include content="NavigationGroupLabelForSideMenu">
-          <param name="visible" value="Control.IsVisible(91)" />
+          <param name="visible" value="$EXP[GlobalSearchInSideMenu]" />
         </include>
         <include content="GlobalSearchButtonForSideMenu" />
       </include>
