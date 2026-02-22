@@ -19,7 +19,8 @@
       <defaultcontrol>1</defaultcontrol>
       <onup>400</onup>
       <ondown>400</ondown>
-      <onleft>9001</onleft>
+      <onleft condition="$EXP[GlobalSearchInSideMenu]">9001</onleft>
+      <onleft condition="!$EXP[GlobalSearchInSideMenu]">9403</onleft>
 
       <include content="InvisibleVerticalListItemsForView" />
 
