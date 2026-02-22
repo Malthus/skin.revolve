@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1151">
   <defaultcontrol always="false">200</defaultcontrol>
+  <menucontrol>9001</menucontrol>
   <onload>SetProperty(RevolveWindowTitle,$LOCALIZE[24036],1151)</onload>
   <onload>RunScript(script.revolve.service,FillPropertyFromTextFile,special://skin/changelog.txt,RevolveWindowText,1151)</onload>
   <onunload>ClearProperty(RevolveWindowText,1151)</onunload>
@@ -68,7 +69,7 @@
           <scrolltime>0</scrolltime>
           <onup>99</onup>
           <ondown>99</ondown>
-          <onleft>9001</onleft>
+          <onleft>9403</onleft>
           <onright>98</onright>
 
           <control type="button" id="1">
@@ -99,14 +100,9 @@
     </control>
 
     <control type="group" id="9000">
+      <visible>Player.HasMedia</visible>
       <include content="BackgroundForSideMenu">
         <param name="leftside" value="true" />
-      </include>
-
-      <include content="ButtonListForSideMenu">
-        <param name="onright" value="99" />
-
-        <include content="ViewGroupLabelForSideMenu" />
       </include>
 
       <include content="PlayerControlsForSideMenu">
