@@ -19,8 +19,7 @@
       <defaultcontrol>1</defaultcontrol>
       <onup>400</onup>
       <ondown>400</ondown>
-      <onleft condition="$EXP[GlobalSearchInSideMenu]">9001</onleft>
-      <onleft condition="!$EXP[GlobalSearchInSideMenu]">9403</onleft>
+      <onleft>9001</onleft>
 
       <include content="InvisibleVerticalListItemsForView" />
 
@@ -240,9 +239,8 @@
       <include content="ButtonListForSideMenu">
         <param name="onright" value="400" />
 
-        <include content="NavigationGroupLabelForSideMenu">
-          <param name="visible" value="$EXP[GlobalSearchInSideMenu]" />
-        </include>
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="GenericPlaylistButtonForSideMenu" />
         <include content="GlobalSearchButtonForSideMenu" />
       </include>
 

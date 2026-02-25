@@ -33,6 +33,12 @@
         <include content="SettingsGroupLabelForSideMenu" />
         <include content="AddonUpdateButtonForSideMenu" />
         <include content="AddonSettingsButtonForSideMenu" />
+
+        <include content="NavigationGroupLabelForSideMenu">
+          <param name="visible" value="Player.HasMedia | $EXP[GlobalSearchInSideMenu]" />
+        </include>
+        <include content="GenericPlaylistButtonForSideMenu" />
+        <include content="GlobalSearchButtonForSideMenu" />
       </include>
 
       <include content="PlayerControlsForSideMenu" />

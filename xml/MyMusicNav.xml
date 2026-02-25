@@ -31,11 +31,14 @@
         <include content="MediaFilterButtonForSideMenu" />
 
         <include content="MediaGroupLabelForSideMenu" />
-        <include content="MusicPlaylistButtonForSideMenu" />
         <include content="PartyModeButtonForSideMenu" />
         <include content="MusicRipCDButtonForSideMenu" />
 
         <include content="NavigationGroupLabelForSideMenu" />
+        <include content="MusicPlaylistButtonForSideMenu" />
+        <include content="GenericPlaylistButtonForSideMenu">
+          <param name="visible" value="Player.HasVideo" />
+        </include>
         <include content="LibrarySearchButtonForSideMenu" />
         <include content="GlobalSearchButtonForSideMenu" />
       </include>

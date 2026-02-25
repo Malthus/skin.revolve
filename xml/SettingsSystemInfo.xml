@@ -16,7 +16,7 @@
         <width>480</width>
         <height>400</height>
         <itemgap>0</itemgap>
-        <onleft>9403</onleft>
+        <onleft>9001</onleft>
         <onright>31</onright>
 
         <control type="button" id="95">
@@ -233,6 +233,11 @@
 
       <include content="ButtonListForSideMenu">
         <param name="onright" value="8000" />
+
+        <include content="NavigationGroupLabelForSideMenu">
+          <param name="visible" value="Player.HasMedia" />
+        </include>
+        <include content="GenericPlaylistButtonForSideMenu" />
       </include>
 
       <include content="PlayerControlsForSideMenu">

@@ -34,6 +34,9 @@
 
         <include content="NavigationGroupLabelForSideMenu" />
         <include content="VideoPlaylistButtonForSideMenu" />
+        <include content="GenericPlaylistButtonForSideMenu">
+          <param name="visible" value="Player.HasAudio" />
+        </include>
         <include content="GlobalSearchButtonForSideMenu" />
 
         <include content="PlaylistLibraryGroupLabelForSideMenu" />

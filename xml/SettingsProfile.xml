@@ -21,7 +21,7 @@
           <label>$LOCALIZE[20096]</label>
           <onup>2</onup>
           <ondown>5</ondown>
-          <onleft>9403</onleft>
+          <onleft>9001</onleft>
         </control>
 
         <control type="button" id="5">
@@ -33,7 +33,7 @@
           <label>$LOCALIZE[33084] $INFO[System.ProfileAutoLogin]</label>
           <onup>4</onup>
           <ondown>2</ondown>
-          <onleft>9403</onleft>
+          <onleft>9001</onleft>
         </control>
 
         <control type="list" id="2">
@@ -44,12 +44,12 @@
           <height>800</height>
           <onup>5</onup>
           <ondown>4</ondown>
-          <onleft>9403</onleft>
+          <onleft>9001</onleft>
 
           <itemlayout height="70">
             <include content="ItemForProfileListForSettings" />
           </itemlayout>
-            
+
           <focusedlayout height="70">
             <control type="group">
               <visible>Control.HasFocus(2)</visible>
@@ -65,10 +65,10 @@
           </focusedlayout>
         </control>
       </control>
-      
+
       <include content="CleanLeftRingForSettings" />
     </control>
-    
+
     <control type="group" id="9000">
       <visible>Player.HasMedia</visible>
       <include content="BackgroundForSideMenu">
@@ -77,6 +77,9 @@
 
       <include content="ButtonListForSideMenu">
         <param name="onright" value="4" />
+
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="GenericPlaylistButtonForSideMenu" />
       </include>
 
       <include content="PlayerControlsForSideMenu">

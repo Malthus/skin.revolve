@@ -123,7 +123,7 @@
         </item>
       </content>
     </control>
-    
+
     <control type="group">
       <include content="RevolveMenu">
         <param name="iconvisible" value="false" />
@@ -142,6 +142,11 @@
 
         <include content="ViewGroupLabelForSideMenu" />
         <include content="SettingsHelpToggleButtonForSideMenu" />
+
+        <include content="NavigationGroupLabelForSideMenu">
+          <param name="visible" value="Player.HasMedia" />
+        </include>
+        <include content="GenericPlaylistButtonForSideMenu" />
       </include>
 
       <include content="PlayerControlsForSideMenu">

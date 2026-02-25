@@ -342,35 +342,28 @@
     </definition>
   </include>
 
-
   <include name="MusicPlaylistButtonForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="button" id="1">
+        <visible>$PARAM[visible]</visible>
         <align>left</align>
-        <label>$LOCALIZE[13350]</label>
+        <label>$LOCALIZE[31038]</label>
         <onclick>ActivateWindow(musicplaylist)</onclick>
       </control>
     </definition>
   </include>
 
   <include name="VideoPlaylistButtonForSideMenu">
+    <param name="visible" default="true" />
+
     <definition>
       <control type="button" id="1">
+        <visible>$PARAM[visible]</visible>
         <align>left</align>
-        <label>$LOCALIZE[13350]</label>
+        <label>$LOCALIZE[31037]</label>
         <onclick>ActivateWindow(videoplaylist)</onclick>
-      </control>
-    </definition>
-  </include>
-  
-  <include name="GenericPlaylistButtonForSideMenu">
-    <definition>
-      <control type="button" id="1">
-        <visible>Player.HasVideo | Player.HasAudio</visible>
-        <align>left</align>
-        <label>$LOCALIZE[13350]</label>
-        <onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
-        <onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
       </control>
     </definition>
   </include>
@@ -960,6 +953,20 @@
         <label>$LOCALIZE[31144]</label>
         <selected>Skin.HasSetting(View.EPGGrid.WrapAround)</selected>
         <onclick>Skin.ToggleSetting(View.EPGGrid.WrapAround)</onclick>
+      </control>
+    </definition>
+  </include>
+
+  <include name="GenericPlaylistButtonForSideMenu">
+    <param name="visible" default="Player.HasVideo | Player.HasAudio" />
+    
+    <definition>
+      <control type="button" id="89">
+        <visible>$PARAM[visible]</visible>
+        <align>left</align>
+        <label>$LOCALIZE[13350]</label>
+        <onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
+        <onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
       </control>
     </definition>
   </include>

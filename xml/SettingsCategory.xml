@@ -84,7 +84,7 @@
             <aspectratio>stretch</aspectratio>
             <texture colordiffuse="$VAR[BackgroundColor]" border="20">controls/rectangle-fill.png</texture>
           </control>
-  
+
           <control type="textbox" id="6">
             <description>Settings Description Textbox</description>
             <posx>720</posx>
@@ -127,6 +127,11 @@
 
         <include content="ViewGroupLabelForSideMenu" />
         <include content="SettingsHelpToggleButtonForSideMenu" />
+
+        <include content="NavigationGroupLabelForSideMenu">
+          <param name="visible" value="Player.HasMedia" />
+        </include>
+        <include content="GenericPlaylistButtonForSideMenu" />
       </include>
 
       <include content="PlayerControlsForSideMenu">

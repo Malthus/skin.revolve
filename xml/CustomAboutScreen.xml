@@ -69,7 +69,7 @@
           <scrolltime>0</scrolltime>
           <onup>99</onup>
           <ondown>99</ondown>
-          <onleft>9403</onleft>
+          <onleft>9001</onleft>
           <onright>98</onright>
 
           <control type="button" id="1">
@@ -107,6 +107,9 @@
 
       <include content="PlayerControlsForSideMenu">
         <param name="onright" value="99" />
+        
+        <include content="NavigationGroupLabelForSideMenu" />
+        <include content="GenericPlaylistButtonForSideMenu" />
       </include>
     </control>
 
