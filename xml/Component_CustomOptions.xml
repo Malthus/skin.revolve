@@ -309,7 +309,7 @@
         <onleft>9000</onleft>
         <onright>Noop</onright>
         <onclick>Skin.SetFile(Dialog.Result)</onclick>
-        <onclick>SetProperty(CustomExecutable,$INFO[Skin.String(Dialog.Result)])</onclick>
+        <onclick condition="!String.IsEmpty(Dialog.Result)">SetProperty(CustomExecutable,$INFO[Skin.String(Dialog.Result)])</onclick>
         <onclick>Skin.Reset(Dialog.Result)</onclick>
       </control>
 
@@ -370,14 +370,19 @@
     <definition>
       <control type="grouplist" id="9000">
         <include content="MarkupForButtonListForDialog">
-          <param name="posy" value="360" />
-          <param name="height" value="240" />
+          <param name="posy" value="380" />
+          <param name="height" value="220" />
         </include>
         <onright>34</onright>
 
+        <control type="radiobutton" id="26">
+          <description>Help Radiobutton</description>
+          <label>$LOCALIZE[10043]</label>
+          <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
+          <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
+        </control>
         <control type="button" id="25">
           <description>Clear Button</description>
-          <posy>20</posy>
           <label>$LOCALIZE[192]</label>
           <onclick>ClearProperty(CustomOptionActive)</onclick>
           <onclick>ClearProperty(CustomName)</onclick>
@@ -393,12 +398,6 @@
           <onclick>ClearProperty(CustomParameters)</onclick>
           <onclick>ClearProperty(CustomCommand)</onclick>
           <onclick>ClearProperty(CustomAction)</onclick>
-        </control>
-        <control type="radiobutton" id="26">
-          <description>Help Radiobutton</description>
-          <label>$LOCALIZE[10043]</label>
-          <selected>Skin.HasSetting(DialogHelp.Visible)</selected>
-          <onclick>Skin.ToggleSetting(DialogHelp.Visible)</onclick>
         </control>
         <control type="button" id="20">
           <description>Ok Button</description>
@@ -430,16 +429,16 @@
       </control>
     </definition>
   </include>
-  
+
   <include name="HelpForCustomOptions">
     <definition>
       <control type="group">
         <visible>Skin.HasSetting(DialogHelp.Visible)</visible>
         <posx>20</posx>
         <posy>20</posy>
-      
+
         <include>HelpFrameForDialog</include>
-      
+
         <control type="group">
           <posx>20</posx>
           <posy>20</posy>
@@ -457,29 +456,14 @@
             <label>$LOCALIZE[31760]</label>
           </control>
           <control type="textbox">
-            <visible>Control.HasFocus(22)</visible>
-            <font>DialogHelpFont</font>
-            <label>$LOCALIZE[31761]</label>
-          </control>
-          <control type="textbox">
-            <visible>Control.HasFocus(23)</visible>
+            <visible>Control.HasFocus(25)</visible>
             <font>DialogHelpFont</font>
             <label>$LOCALIZE[31762]</label>
           </control>
           <control type="textbox">
-            <visible>Control.HasFocus(24)</visible>
-            <font>DialogHelpFont</font>
-            <label>$LOCALIZE[31763]</label>
-          </control>
-          <control type="textbox">
-            <visible>Control.HasFocus(25)</visible>
-            <font>DialogHelpFont</font>
-            <label>$LOCALIZE[31764]</label>
-          </control>
-          <control type="textbox">
             <visible>Control.HasFocus(26)</visible>
             <font>DialogHelpFont</font>
-            <label>$LOCALIZE[31765]</label>
+            <label>$LOCALIZE[31763]</label>
           </control>
           <control type="textbox">
             <visible>Control.HasFocus(27)</visible>
@@ -507,28 +491,49 @@
             <font>DialogHelpFont</font>
             <label>$LOCALIZE[31753]</label>
           </control>
+
           <control type="textbox">
-            <visible>Control.HasFocus(36)</visible>
-            <font>DialogHelpFont</font>
-            <label>$LOCALIZE[31754]</label>
-          </control>
-          <control type="textbox">
-            <visible>Control.HasFocus(37)</visible>
-            <font>DialogHelpFont</font>
-            <label>$LOCALIZE[31755]</label>
-          </control>
-          <control type="textbox">
-            <visible>Control.HasFocus(38)</visible>
-            <font>DialogHelpFont</font>
-            <label>$LOCALIZE[31756]</label>
-          </control>
-          <control type="textbox">
-            <visible>Control.HasFocus(39)</visible>
+            <visible>Control.HasFocus(41)</visible>
             <font>DialogHelpFont</font>
             <label>$LOCALIZE[31757]</label>
           </control>
           <control type="textbox">
-            <visible>Control.HasFocus(40)</visible>
+            <visible>Control.HasFocus(42)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31754]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(43)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31755]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(44)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31756]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(45)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31765]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(46)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31766]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(47)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31767]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(48)</visible>
+            <font>DialogHelpFont</font>
+            <label>$LOCALIZE[31768]</label>
+          </control>
+          <control type="textbox">
+            <visible>Control.HasFocus(49)</visible>
             <font>DialogHelpFont</font>
             <label>$LOCALIZE[31758]</label>
           </control>
@@ -536,7 +541,7 @@
       </control>
     </definition>
   </include>
-  
+
   <include name="ActionForCustomOptions">
     <param name="posx" default="580" />
     <param name="posy" default="360" />

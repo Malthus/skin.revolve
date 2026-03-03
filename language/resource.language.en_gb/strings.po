@@ -1028,9 +1028,7 @@ msgctxt "#31628"
 msgid "Set the text colour of the Revolve skin. The text colour is mostly used to write texts in dialogs, and to paint the menu options in the Home Menu. The text colour should be different from the background colour."
 msgstr ""
 
-msgctxt "#31629"
-msgid "Execute default shut down action"
-msgstr ""
+#empty string with id 31629
 
 msgctxt "#31630"
 msgid "Reset the colours of the Revolve skin. This skin is hard to navigate if the skin colours are similar. This panic button (which has a fixed colour) can be used to reset the skin colours to their default values."
@@ -1039,12 +1037,10 @@ msgstr ""
 #empty string with id 31631
 
 msgctxt "#31632"
-msgid "Activate or deactivate this option in the Home Menu. Active options are shown in the Home Menu, although some options might have additional requirements. Deactivated options are hidden and unusable."
+msgid "Activate or deactivate this option in the menu. Active options are shown in the menu (although some options might have additional requirements), deactivated options are hidden."
 msgstr ""
 
-msgctxt "#31633"
-msgid "Open in progress TV shows"
-msgstr ""
+#empty string with id 31633
 
 msgctxt "#31634"
 msgid "Genre Colour Editor"
@@ -1107,132 +1103,82 @@ msgstr ""
 #empty strings from id 31721 to 31749
 
 msgctxt "#31750"
-msgid "Set the name of the custom option that will appear in the menu."
+msgid "Set the name of the option that will be visible in the menu."
 msgstr ""
 
 msgctxt "#31751"
-msgid "Set the subtitle that will appear over the custom option in the menu."
+msgid "Set the subtitle that will appear over the option in the menu."
 msgstr ""
 
 msgctxt "#31752"
-msgid "Set the background image for the custom option in the menu."
+msgid "Set the background image for the option in the menu."
 msgstr ""
 
 msgctxt "#31753"
-msgid "Set the type of custom option that you want to create, the action associated with this custom option:[CR]- Custom submenu opens another menu, which you can fill with custom options. You can use the 'Edit Submenu' button to manage this submenu.[CR]- Custom items opens a window with items (such as movies, music albums) form a selected source, so you can fill a view with random albums or recommended episodes. You can use the 'Choose Items' button to select different sources for these items.[CR]- Custom action allows you to execute built-in functions from Kodi. You can use the 'Create Command' button to create these actions."
+msgid "Set the type of option that you want to create, the action associated with this option:[CR]- Open Window: You can select a Kodi window (from a limited selection of windows) that this option will open.[CR]- Open Custom Submenu: You can create a submenu, which you can fill with custom options. You can use the 'Edit Submenu' button to manage this submenu.[CR]- Open Playlist: You can select a playlist that this option will open in the appropriate window.[CR]- Execute Add-on: You can select an add-on that this option will execute.[CR]- Run External Program: You can select an executable on your device (and add arguments) that this option will open and execute.[CR]- Execute Custom Command: You can enter any valid Kodi built-in function that this option will execute."
 msgstr ""
 
 msgctxt "#31754"
-msgid "Set the name of the window that is opened by this custom option."
+msgid "Click this option to open another dialog where you can manage the options in the custom submenu."
 msgstr ""
 
 msgctxt "#31755"
-msgid "Set the source pattern that defines the properties that provide the items. The number in this pattern should be represented by '%d', so Revolve can extract the item-information from the properties and display them in a window."
+msgid "Choose the window that you want to open with this option."
 msgstr ""
 
 msgctxt "#31756"
-msgid "Set the plug-in that provides the items. You should write down the complete call to the plug-in, including arguments, but you should exclude the 'plug-in://' part of the call."
+msgid "Choose the playlist that you want to open with this option."
 msgstr ""
 
 msgctxt "#31757"
-msgid "Set the unique identifier of the submenu. The whole submenu is linked to this identifier. You can link an option to an existing submenu by copying the submenu's identifier, or you can loose a submenu by removing this identifier. An identifier should consist only of alphanumeric characters (so no spaces, no punctuation marks, no strange characters)."
+msgid "Set the unique identifier of the submenu. The whole submenu is linked to this identifier. You can link a new submenu to an existing submenu by copying the submenu's identifier, or you can forget a submenu by removing this identifier. An identifier should consist only of alphanumeric characters (so no spaces, no punctuation marks, no strange characters)."
 msgstr ""
 
 msgctxt "#31758"
-msgid "Set the Kodi built-in function that should be executed when this custom option is selected. You can edit this command or use the 'Create Command' button to create a new custom command."
+msgid "Enter the Kodi built-in function that should be executed with this option. You can search online for valid functions."
 msgstr ""
 
 msgctxt "#31759"
-msgid "Confirm the settings of this custom option and return to the Skin Settings menu."
+msgid "Confirm the settings of this option and close this dialog."
 msgstr ""
 
 msgctxt "#31760"
-msgid "Discard the changes made in the settings of this custom option and return to the Skin Settings menu."
+msgid "Discard the changes made in the settings of this option and close this dialog."
 msgstr ""
 
 msgctxt "#31761"
-msgid "Open the Custom Action Editor to create a new action for this custom option."
-msgstr ""
-
-msgctxt "#31762"
-msgid "Open the Custom Items Editor to select a source to provide items for this custom option."
-msgstr ""
-
-msgctxt "#31763"
-msgid "Open the Custom Submenu Editor to create or edit the submenu that is accessible through this custom command."
-msgstr ""
-
-msgctxt "#31764"
-msgid "Clear all the settings for this custom command."
-msgstr ""
-
-msgctxt "#31765"
-msgid "Enable or disable this help text."
-msgstr ""
-
-msgctxt "#31766"
-msgid "Close the Custom Submenu Editor and return to the Custom Option Editor."
-msgstr ""
-
-msgctxt "#31767"
 msgid "Close this dialog."
 msgstr ""
 
-#empty string with id 31768
+msgctxt "#31762"
+msgid "Clear all the settings for this option."
+msgstr ""
 
-msgctxt "#31769"
+msgctxt "#31763"
+msgid "Show or hide this help text."
+msgstr ""
+
+msgctxt "#31764"
 msgid "Use the scrollbar to quickly move through the list of options."
 msgstr ""
 
-#empty string with id 31770
-
-msgctxt "#31771"
-msgid "Confirm the settings in this window and return to the Custom Option Editor."
+msgctxt "#31765"
+msgid "Select a type of add-on that you want to execute."
 msgstr ""
 
-msgctxt "#31772"
-msgid "Discard the changes made in this window and return to the Custom Option Editor."
+msgctxt "#31766"
+msgid "Choose the add-on that you want to execute. You can only choose add-ons of the selected type."
 msgstr ""
 
-msgctxt "#31773"
-msgid "Select the custom action that you want to connect to your custom option, or select the 'Custom Command' option in the list so you can enter a command."
+msgctxt "#31767"
+msgid "Select the external program on your device that you want to run."
 msgstr ""
 
-#empty string with id 31774
-
-#empty string with id 31775
-
-msgctxt "#31776"
-msgid "Select the playlist that is used in the highlighted action."
+msgctxt "#31768"
+msgid "Enter arguments to pass to the external program. You can leave this empty if you do not want to pass any arguments to the program."
 msgstr ""
 
-msgctxt "#31777"
-msgid "Select the image that is used in the highlighted action."
-msgstr ""
-
-msgctxt "#31778"
-msgid "Select the file that is used in the highlighted action."
-msgstr ""
-
-msgctxt "#31779"
-msgid "Select the path that is used in the highlighted action."
-msgstr ""
-
-msgctxt "#31780"
-msgid "Select the addon that is used in the highlighted action."
-msgstr ""
-
-msgctxt "#31781"
-msgid "Enter the string that is used in the highlighted action."
-msgstr ""
-
-msgctxt "#31782"
-msgid "Filter the list of actions by the kind of action that you want to create."
-msgstr ""
-
-msgctxt "#31783"
-msgid "Enter a custom built-in command for this custom action."
-msgstr ""
+#empty strings from id 31769 to 31783
 
 msgctxt "#31784"
 msgid "Enable Exit Menu in the Home Menu circle"
