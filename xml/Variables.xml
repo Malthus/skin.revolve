@@ -398,25 +398,25 @@
 
   <variable name="VideoFullScreenClockModeLabel">
     <value condition="String.IsEqual(Skin.String(VideoFullScreen.Clock.Mode),A)">$LOCALIZE[20422]</value>
-    <value condition="String.IsEqual(Skin.String(VideoFullScreen.Clock.Mode),P)">$LOCALIZE[31706]</value>
+    <value condition="String.IsEqual(Skin.String(VideoFullScreen.Clock.Mode),P)">$LOCALIZE[31994]</value>
     <value>$LOCALIZE[13170]</value>
   </variable>
 
   <variable name="MusicVisualisationClockModeLabel">
     <value condition="String.IsEqual(Skin.String(MusicVisualisation.Clock.Mode),A)">$LOCALIZE[20422]</value>
-    <value condition="String.IsEqual(Skin.String(MusicVisualisation.Clock.Mode),P)">$LOCALIZE[31706]</value>
+    <value condition="String.IsEqual(Skin.String(MusicVisualisation.Clock.Mode),P)">$LOCALIZE[31994]</value>
     <value>$LOCALIZE[13170]</value>
   </variable>
 
   <variable name="GameFullScreenClockModeLabel">
     <value condition="String.IsEqual(Skin.String(GameFullScreen.Clock.Mode),A)">$LOCALIZE[20422]</value>
-    <value condition="String.IsEqual(Skin.String(GameFullScreen.Clock.Mode),P)">$LOCALIZE[31706]</value>
+    <value condition="String.IsEqual(Skin.String(GameFullScreen.Clock.Mode),P)">$LOCALIZE[31994]</value>
     <value>$LOCALIZE[13170]</value>
   </variable>
 
   <variable name="SlideShowClockModeLabel">
     <value condition="String.IsEqual(Skin.String(SlideShow.Clock.Mode),A)">$LOCALIZE[20422]</value>
-    <value condition="String.IsEqual(Skin.String(SlideShow.Clock.Mode),P)">$LOCALIZE[31706]</value>
+    <value condition="String.IsEqual(Skin.String(SlideShow.Clock.Mode),P)">$LOCALIZE[31994]</value>
     <value>$LOCALIZE[13170]</value>
   </variable>
 
