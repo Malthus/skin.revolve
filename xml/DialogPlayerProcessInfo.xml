@@ -48,7 +48,7 @@
           <item>
             <visible>Integer.IsGreater(Player.Process(videowidth),0)</visible>
             <label>$LOCALIZE[38031]</label>
-            <label2>$INFO[Player.Process(videowidth)] x $INFO[Player.Process(videoheight)] $LOCALIZE[31035]</label2>
+            <label2>$INFO[Player.Process(videowidth)] x $INFO[Player.Process(videoheight)] $LOCALIZE[31909]</label2>
           </item>
           <item>
             <visible>!String.IsEmpty(Player.Process(videodar))</visible>
@@ -58,7 +58,7 @@
           <item>
             <visible>Integer.IsGreater(Player.Process(videofps),0)</visible>
             <label>$LOCALIZE[31268]</label>
-            <label2>$INFO[Player.Process(videofps)] $LOCALIZE[31034]</label2>
+            <label2>$INFO[Player.Process(videofps)] $LOCALIZE[31908]</label2>
           </item>
           <item>
             <visible>!String.IsEmpty(Player.Process(audiochannels))</visible>
@@ -78,7 +78,7 @@
           <item>
             <visible>!String.IsEmpty(Player.Process(audiosamplerate))</visible>
             <label>$LOCALIZE[613]</label>
-            <label2>$INFO[Player.Process(audiosamplerate)] $LOCALIZE[31033]</label2>
+            <label2>$INFO[Player.Process(audiosamplerate)] $LOCALIZE[31907]</label2>
           </item>
           <item>
             <visible>!String.IsEmpty(PVR.ActStreamServiceName)</visible>

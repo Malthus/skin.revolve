@@ -53,7 +53,7 @@
           <description>Exit Option</description>
           <visible>$EXP[VisibilityOfExitInExitMenu]</visible>
           <label>$LOCALIZE[13012]</label>
-          <label2>$LOCALIZE[31002]</label2>
+          <label2>$LOCALIZE[31001]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>Quit</onclick>
         </item>
@@ -61,7 +61,7 @@
           <description>Restart Kodi Option</description>
           <visible>$EXP[VisibilityOfRestartInExitMenu]</visible>
           <label>$LOCALIZE[13313]</label>
-          <label2>$LOCALIZE[31002]</label2>
+          <label2>$LOCALIZE[31001]</label2>
           <icon>special://skin/backgrounds/exit.jpg</icon>
           <onclick>RestartApp</onclick>
         </item>
