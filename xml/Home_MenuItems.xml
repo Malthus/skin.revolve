@@ -256,8 +256,9 @@
           <property name="Circle">circle/books.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(BooksOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/books.jpg</property>
-          <onclick>SetProperty(MenuTitle,$INFO[Skin.String(BooksOption.MenuTitle)],$INFO[Skin.String(BooksOption.Window)])</onclick>
-          <onclick>SetProperty(SourceInfo,$INFO[Skin.String(BooksOption.SourceInfo)],$INFO[Skin.String(BooksOption.Window)])</onclick>
+          <onclick>SetProperty(CustomName,$LOCALIZE[31004],$INFO[Skin.String(BooksOption.Window)])</onclick>
+          <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String(BooksOption.MenuIdentifier)],$INFO[Skin.String(BooksOption.Window)])</onclick>
+          <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String(BooksOption.Playlist)],$INFO[Skin.String(BooksOption.Window)])</onclick>
           <onclick>$INFO[Skin.String(BooksOption.Action)]</onclick>
         </item>
 
@@ -269,8 +270,9 @@
           <property name="Circle">circle/books.png</property>
           <property name="BackgroundImage">$INFO[Skin.String(ComicsOption.BackgroundImage)]</property>
           <property name="FallbackImage">special://skin/backgrounds/books.jpg</property>
-          <onclick>SetProperty(MenuTitle,$INFO[Skin.String(ComicsOption.MenuTitle)],$INFO[Skin.String(ComicsOption.Window)])</onclick>
-          <onclick>SetProperty(SourceInfo,$INFO[Skin.String(ComicsOption.SourceInfo)],$INFO[Skin.String(ComicsOption.Window)])</onclick>
+          <onclick>SetProperty(CustomName,$LOCALIZE[31006],$INFO[Skin.String(ComicsOption.Window)])</onclick>
+          <onclick>SetProperty(CustomMenuIdentifier,$INFO[Skin.String(ComicsOption.MenuIdentifier)],$INFO[Skin.String(ComicsOption.Window)])</onclick>
+          <onclick>SetProperty(CustomPlaylist,$INFO[Skin.String(ComicsOption.Playlist)],$INFO[Skin.String(ComicsOption.Window)])</onclick>
           <onclick>$INFO[Skin.String(ComicsOption.Action)]</onclick>
         </item>
 
